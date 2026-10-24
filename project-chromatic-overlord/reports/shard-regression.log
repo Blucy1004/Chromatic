@@ -1,0 +1,10 @@
+..................sssssss.......................................                                                             [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_pipeline.py:154: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:185: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:188: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:191: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:194: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:210: opt-in bounded process integration suite
+SKIPPED [1] tests/test_powershell.py:14: Windows PowerShell 5.1 integration
+57 passed, 7 skipped, 20 subtests passed in 12.82s

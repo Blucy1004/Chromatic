@@ -1,0 +1,57 @@
+....s...F................................................sss [ 38%]
+ssss.............................................................. [ 80%]
+...............................                                    [100%]
+=================================== FAILURES ===================================
+________ test_process_tree_follows_allocating_child_and_retains_its_io _________
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-4/test_process_tree_follows_allo0')
+
+    def test_process_tree_follows_allocating_child_and_retains_its_io(tmp_path):
+        """The launcher stays alive after its real worker exits, like a redirector."""
+        marker=tmp_path/'child-ready.json';release=tmp_path/'release-worker';finished=tmp_path/'child-finished'
+        worker=tmp_path/'worker.py';launcher=tmp_path/'launcher.py';payload=tmp_path/'written.bin'
+        worker.write_text('''from pathlib import Path
+    import json,os,sys,time
+    marker,release,payload=map(Path,sys.argv[1:])
+    allocation=bytearray(48*1024*1024)
+    for i in range(0,len(allocation),4096):allocation[i]=1
+    with payload.open('wb') as f:
+        f.write(bytes(2*1024*1024));f.flush();os.fsync(f.fileno())
+    marker.write_text(json.dumps({'pid':os.getpid()}))
+    while not release.exists():time.sleep(.01)
+    ''',encoding='utf-8')
+        launcher.write_text('''from pathlib import Path
+    import subprocess,sys,time
+    worker,marker,release,payload,finished=sys.argv[1:]
+    child=subprocess.Popen([sys.executable,worker,marker,release,payload])
+    child.wait();Path(finished).touch()
+    time.sleep(1)
+    ''',encoding='utf-8')
+        process=subprocess.Popen([sys.executable,str(launcher),str(worker),str(marker),str(release),str(payload),str(finished)])
+        sampler=module.ProcessTreeSampler(process.pid);seen=[]
+        try:
+            deadline=time.monotonic()+8
+            while not marker.exists() and time.monotonic()<deadline:
+                seen.append(sampler.sample());time.sleep(.03)
+            assert marker.exists()
+            child_pid=json.loads(marker.read_text())['pid']
+            for _ in range(3):seen.append(sampler.sample());time.sleep(.03)
+            assert any(child_pid in row['live_pids'] for row in seen)
+            assert max(row['rss_bytes'] for row in seen)>48*1024*1024
+            assert sampler.snapshot()['tracked_processes']>=2
+            before=max(row['io_write_bytes'] for row in seen)
+>           assert before>=2*1024*1024
+E           assert 0 >= ((2 * 1024) * 1024)
+
+tests/test_benchmark_pipeline.py:76: AssertionError
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_arc_recovery.py:63: explicit actual XPU regression
+SKIPPED [1] tests/test_pipeline.py:154: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:185: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:188: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:191: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:194: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:210: opt-in bounded process integration suite
+SKIPPED [1] tests/test_powershell.py:14: Windows PowerShell 5.1 integration
+FAILED tests/test_benchmark_pipeline.py::test_process_tree_follows_allocating_child_and_retains_its_io
+1 failed, 148 passed, 8 skipped, 24 subtests passed in 25.08s

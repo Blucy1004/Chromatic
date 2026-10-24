@@ -1,0 +1,15 @@
+Test project /tmp/chromatic-baseline
+    Start 1: core
+1/5 Test #1: core .............................   Passed    0.78 sec
+    Start 2: depth_uniform
+2/5 Test #2: depth_uniform ....................   Passed    0.06 sec
+    Start 3: depth_deployed_model
+3/5 Test #3: depth_deployed_model .............   Passed    0.42 sec
+    Start 4: memory_uniform
+4/5 Test #4: memory_uniform ...................   Passed    0.05 sec
+    Start 5: memory_deployed_model
+5/5 Test #5: memory_deployed_model ............   Passed    0.42 sec
+
+100% tests passed, 0 tests failed out of 5
+
+Total Test time (real) =   1.74 sec
