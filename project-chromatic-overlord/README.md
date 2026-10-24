@@ -36,7 +36,7 @@ go movetime 100
 | AdaptiveBudget | false | Laugh Tale-style: root policy entropy and WDL uncertainty adjust root exploration and release time on confident/simple roots; requested time remains a hard ceiling |
 | ForcingSearch | false | Bounded quiescence over captures, promotions, checks and all check evasions |
 | TacticalVerify | false | Capture/evasion quiescence with bounded material cross-check mixed with unchanged neural WDL |
-| Threads | 1 | 1–32; shared-tree synchronous leaf waves, thread-local inference workspace |
+| Threads | 1 | 1–32 including coordinator; shared-tree synchronous leaf waves, thread-local workspace |
 | SharedTree | true | false with Threads>1 selects the independent legacy-tree control; verification/telemetry disabled in that control |
 | VerificationNodes | 2048 | Total verification node allowance, divided equally among shortlisted candidates |
 | VerificationDepth | 4 | 1–8; finite horizon, not a proof depth |

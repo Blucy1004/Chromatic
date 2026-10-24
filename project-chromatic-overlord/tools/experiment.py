@@ -29,6 +29,12 @@ OPENINGS=[
  {'name':'RookEnding','fen':'8/5pk1/6p1/3R4/8/5KP1/7P/5r2 w - - 0 1','moves':[]},
  {'name':'PawnEnding','fen':'8/5pk1/6p1/3p4/3P4/5KP1/5P1P/8 w - - 0 1','moves':[]},
 ]
+HOLDOUT_OPENINGS=[
+ {'name':'Sicilian','fen':chess.STARTING_FEN,'moves':'e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6'.split()},
+ {'name':'French','fen':chess.STARTING_FEN,'moves':'e2e4 e7e6 d2d4 d7d5 b1c3 g8f6'.split()},
+ {'name':'English','fen':chess.STARTING_FEN,'moves':'c2c4 e7e5 b1c3 g8f6 g2g3 d7d5'.split()},
+ {'name':'Slav','fen':chess.STARTING_FEN,'moves':'d2d4 d7d5 c2c4 c7c6 g1f3 g8f6'.split()},
+]
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def save(path,data):
  path=Path(path);content=json.dumps(data,indent=2,allow_nan=False)+'\n'
@@ -118,9 +124,11 @@ def game(candidate,reference,opening,color,ms,maxplies):
 def main():
  if hasattr(os,'sched_getaffinity'):
   os.sched_setaffinity(0,sorted(os.sched_getaffinity(0))[:2])
- p=argparse.ArgumentParser();p.add_argument('--engine',type=Path,required=True);p.add_argument('--baseline',type=Path,required=True)
+ global OPENINGS
+ p=argparse.ArgumentParser();p.add_argument('--suite',choices=['main','holdout'],default='main');p.add_argument('--engine',type=Path,required=True);p.add_argument('--baseline',type=Path,required=True)
  p.add_argument('--out',type=Path,required=True);p.add_argument('--ms',type=int,default=30);p.add_argument('--max-plies',type=int,default=240)
  p.add_argument('--configs',nargs='+',default=list(CONFIGS));p.add_argument('--skip-matches',action='store_true');a=p.parse_args();a.out.mkdir(parents=True,exist_ok=True)
+ if a.suite=='holdout':OPENINGS=HOLDOUT_OPENINGS
  metadata={'driver_sha256':sha(Path(__file__)), 'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'cpu_affinity':sorted(os.sched_getaffinity(0)) if hasattr(os,'sched_getaffinity') else None,'search_seed':1,'platform':platform.platform(),'python':platform.python_version(),'model':str(MODEL),'model_sha256':sha(MODEL),
   'engine_sha256':sha(a.engine),'baseline_sha256':sha(a.baseline),'time_control':f'{a.ms}ms per move','max_plies':a.max_plies,'proof_nodes':0,'configs':CONFIGS,'openings':OPENINGS,'tactics':TACTICS}
  save(a.out/'metadata.json',metadata)

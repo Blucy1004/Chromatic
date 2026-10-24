@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "100 seeded legal/history differential positions",
+      "passed": true
+    },
+    {
+      "name": "existing model sparse exactness / scalar-SIMD",
+      "passed": true,
+      "max_logit_error": 2.8600000003820014e-06
+    },
+    {
+      "name": "parallel all modules movetime 1",
+      "passed": true,
+      "elapsed_ms": 1.3479429999279091
+    },
+    {
+      "name": "parallel all modules movetime 5",
+      "passed": true,
+      "elapsed_ms": 5.20751600015501
+    },
+    {
+      "name": "parallel all modules movetime 25",
+      "passed": true,
+      "elapsed_ms": 21.177048000026844
+    },
+    {
+      "name": "parallel all modules movetime 100",
+      "passed": true,
+      "elapsed_ms": 78.26786399982666
+    },
+    {
+      "name": "parallel go infinite / stop",
+      "passed": true,
+      "elapsed_ms": 30.401214999983495
+    },
+    {
+      "name": "two-worker independent reference exact aggregate N",
+      "passed": true
+    },
+    {
+      "name": "UCI history threefold terminal",
+      "passed": true
+    }
+  ]
+}

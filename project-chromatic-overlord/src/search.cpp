@@ -4,6 +4,7 @@
 #include "zero/leaf_pool.hpp"
 #include <unordered_map>
 #include <unordered_set>
+#include <optional>
 #include <algorithm>
 #include <cmath>
 #include <limits>
@@ -292,11 +293,14 @@ void finish_telemetry(Arena<Measured>& tree,SearchResult& result,DepthHistogram&
 template<bool Measured, class Cancelled>
 void parallel_simulations(Arena<Measured>& tree,const Board& board,const Network& network,
     const SearchLimits& limits,SearchResult& result,DepthHistogram& window,Cancelled cancelled) {
-    LeafPool pool(limits.threads);
+    // Threads includes the coordinator. It evaluates one leaf itself while
+    // Threads-1 workers process the other reservations; no hidden extra CPU.
+    LeafPool pool(limits.threads-1);
+    Network::Workspace coordinator_workspace;
     struct Pending {
         uint32_t node;std::vector<uint32_t> nodes,edges;
         std::vector<Move> moves;float value=0;bool terminal=false,neural=false;
-        std::future<Evaluation> future;
+        std::future<Evaluation> future;std::optional<Board> deferred;
     };
     while(!cancelled()&&(limits.simulations<=0||result.simulations<limits.simulations)) {
         std::vector<Pending> wave;wave.reserve(size_t(limits.threads));
@@ -348,7 +352,8 @@ void parallel_simulations(Arena<Measured>& tree,const Board& board,const Network
                         if(tree.evaluated[task.node])++tree.telemetry->counters.resident_unexpanded_repeat;
                         tree.evaluated[task.node]=1;
                     }
-                    task.future=pool.submit(network,std::move(b),task.moves);
+                    if(worker+1==limits.threads)task.deferred=std::move(b);
+                    else task.future=pool.submit(network,std::move(b),task.moves);
                 }
             } else {task.value=tree.nodes[task.node].value;task.terminal=tree.nodes[task.node].terminal;}
             for(auto edge:task.edges)++virtual_visits[edge];
@@ -356,6 +361,12 @@ void parallel_simulations(Arena<Measured>& tree,const Board& board,const Network
         }
         if(!wave.empty())++result.parallel_batches;
         result.peak_inflight=std::max(result.peak_inflight,int(pending.size()));
+        // Run the coordinator's leaf before waiting for worker futures.
+        for(auto& task:wave)if(task.deferred) {
+            std::promise<Evaluation> ready;task.future=ready.get_future();
+            try {ready.set_value(network.evaluate_legal(*task.deferred,task.moves,coordinator_workspace));}
+            catch(...) {ready.set_exception(std::current_exception());}
+        }
         for(auto& task:wave) {
             if(task.neural) {
                 auto eval=task.future.get();task.value=eval.wdl[0]-eval.wdl[2];

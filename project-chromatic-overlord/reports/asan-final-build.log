@@ -1,0 +1,7 @@
+[1/7] Building CXX object CMakeFiles/zero_core.dir/src/search.cpp.o
+[2/7] Linking CXX static library libzero_core.a
+[3/7] Linking CXX executable depth_telemetry_tests
+[4/7] Linking CXX executable core_tests
+[5/7] Linking CXX executable chromatic_overlord
+[6/7] Linking CXX executable memory_recycling_tests
+[7/7] Linking CXX executable overlord_tests
