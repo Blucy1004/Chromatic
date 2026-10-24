@@ -1,0 +1,8 @@
+combination Sicilian white 1-0 CHECKMATE
+combination Sicilian black * ply_limit_unfinished
+combination French white 1-0 CHECKMATE
+combination French black 0-1 CHECKMATE
+combination English white 1/2-1/2 THREEFOLD_REPETITION
+combination English black 0-1 CHECKMATE
+combination Slav white 1/2-1/2 THREEFOLD_REPETITION
+combination Slav black 0-1 CHECKMATE

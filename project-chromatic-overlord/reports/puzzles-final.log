@@ -1,0 +1,10 @@
+{'config': 'disabled', 'ms': 30, 'hits': 21, 'positions': 100, 'wilson_95_lower': 0.14165654017044627, 'wilson_95_upper': 0.2997996891155716}
+{'config': 'counterexample', 'ms': 30, 'hits': 25, 'positions': 100, 'wilson_95_lower': 0.17545211311910353, 'wilson_95_upper': 0.34304463626539466}
+{'config': 'adaptive', 'ms': 30, 'hits': 23, 'positions': 100, 'wilson_95_lower': 0.15843265832598313, 'wilson_95_upper': 0.3215438310092749}
+{'config': 'forcing', 'ms': 30, 'hits': 47, 'positions': 100, 'wilson_95_lower': 0.37510817888094034, 'wilson_95_upper': 0.5671114310451995}
+{'config': 'tactical', 'ms': 30, 'hits': 46, 'positions': 100, 'wilson_95_lower': 0.3656080823843, 'wilson_95_upper': 0.5573513975172198}
+{'config': 'parallel', 'ms': 30, 'hits': 21, 'positions': 100, 'wilson_95_lower': 0.14165654017044627, 'wilson_95_upper': 0.2997996891155716}
+{'config': 'combination', 'ms': 30, 'hits': 36, 'positions': 100, 'wilson_95_lower': 0.2727122033881362, 'wilson_95_upper': 0.45764597626718284}
+{'config': 'disabled', 'ms': 100, 'hits': 22, 'positions': 100, 'wilson_95_lower': 0.15001282338296418, 'wilson_95_upper': 0.3107035359276738}
+{'config': 'tactical', 'ms': 100, 'hits': 45, 'positions': 100, 'wilson_95_lower': 0.3561453790959721, 'wilson_95_upper': 0.5475539707809276}
+{'config': 'combination', 'ms': 100, 'hits': 56, 'positions': 100, 'wilson_95_lower': 0.46228104575723733, 'wilson_95_upper': 0.6532797343904831}

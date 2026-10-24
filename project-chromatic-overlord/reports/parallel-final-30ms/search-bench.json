@@ -1,0 +1,5360 @@
+[
+  {
+    "config": "disabled",
+    "opening": "Italian",
+    "repeat": 0,
+    "move": "c4f7",
+    "elapsed_ms": 30.337892999796168,
+    "detail": {
+      "bestmove": "c4f7",
+      "terminal": false,
+      "simulations": 1366,
+      "value": 0.204367056489,
+      "neural_evals": 1363,
+      "memory_bytes": 2138112,
+      "arena_nodes": 1367,
+      "max_depth": 17,
+      "peak_memory_bytes": 2138112,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1366,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 4,
+          "q": -0.490277826786,
+          "prior": 0.0674406513572
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.792563974857,
+          "prior": 0.000201943475986
+        },
+        {
+          "uci": "d1e2",
+          "action": 204,
+          "n": 1,
+          "q": -0.844503104687,
+          "prior": 3.69212648366e-06
+        },
+        {
+          "uci": "e1f1",
+          "action": 261,
+          "n": 1,
+          "q": -0.985897243023,
+          "prior": 4.20192700403e-05
+        },
+        {
+          "uci": "e1e2",
+          "action": 268,
+          "n": 1,
+          "q": -0.993589043617,
+          "prior": 4.64863705929e-06
+        },
+        {
+          "uci": "e1g1",
+          "action": 262,
+          "n": 1,
+          "q": -0.985817313194,
+          "prior": 2.56094281212e-05
+        },
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 22,
+          "q": -0.164482086897,
+          "prior": 2.19485968955e-06
+        },
+        {
+          "uci": "h1f1",
+          "action": 453,
+          "n": 150,
+          "q": -0.024760870263,
+          "prior": 7.64872766013e-07
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 1,
+          "q": -0.723591566086,
+          "prior": 0.0266790948808
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 1,
+          "q": -0.393638432026,
+          "prior": 6.07337096881e-06
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 1,
+          "q": -0.674404501915,
+          "prior": 4.00568069381e-07
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 1,
+          "q": -0.702596604824,
+          "prior": 2.02048636311e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 1,
+          "q": -0.618505954742,
+          "prior": 0.0152946421877
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 1,
+          "q": -0.741127490997,
+          "prior": 0.0120711615309
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 1,
+          "q": -0.848040759563,
+          "prior": 0.00956268515438
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 1,
+          "q": -0.766962110996,
+          "prior": 3.02324724544e-06
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.896086096764,
+          "prior": 0.000693918962497
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 1,
+          "q": -0.657569169998,
+          "prior": 2.56291714322e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 1,
+          "q": -0.777768731117,
+          "prior": 3.16592286254e-06
+        },
+        {
+          "uci": "f3g5",
+          "action": 1382,
+          "n": 1,
+          "q": -0.859190821648,
+          "prior": 7.54736083763e-06
+        },
+        {
+          "uci": "f3h4",
+          "action": 1375,
+          "n": 1,
+          "q": -0.911862254143,
+          "prior": 0.0428879633546
+        },
+        {
+          "uci": "f3e5",
+          "action": 1380,
+          "n": 1,
+          "q": -0.917309641838,
+          "prior": 2.93557550322e-05
+        },
+        {
+          "uci": "f3d4",
+          "action": 1371,
+          "n": 1,
+          "q": -0.905432939529,
+          "prior": 5.34698801857e-06
+        },
+        {
+          "uci": "f3g1",
+          "action": 1350,
+          "n": 1,
+          "q": -0.843329548836,
+          "prior": 7.23716875655e-05
+        },
+        {
+          "uci": "c4b3",
+          "action": 1681,
+          "n": 1,
+          "q": -0.858174562454,
+          "prior": 2.36592040892e-05
+        },
+        {
+          "uci": "c4d3",
+          "action": 1683,
+          "n": 1,
+          "q": -0.914039850235,
+          "prior": 3.3759217331e-05
+        },
+        {
+          "uci": "c4e2",
+          "action": 1676,
+          "n": 1,
+          "q": -0.866931557655,
+          "prior": 2.20930405703e-06
+        },
+        {
+          "uci": "c4f1",
+          "action": 1669,
+          "n": 1,
+          "q": -0.785037219524,
+          "prior": 5.17212720297e-05
+        },
+        {
+          "uci": "c4b5",
+          "action": 1697,
+          "n": 1,
+          "q": -0.912630021572,
+          "prior": 0.000424243829912
+        },
+        {
+          "uci": "c4a6",
+          "action": 1704,
+          "n": 1,
+          "q": -0.806780397892,
+          "prior": 5.74881369175e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 107,
+          "q": -0.104926049709,
+          "prior": 0.0973085016012
+        },
+        {
+          "uci": "c4e6",
+          "action": 1708,
+          "n": 1,
+          "q": -0.849747538567,
+          "prior": 0.000409958825912
+        },
+        {
+          "uci": "c4f7",
+          "action": 1717,
+          "n": 1055,
+          "q": 0.305705666542,
+          "prior": 0.726674258709
+        }
+      ],
+      "selected": {
+        "uci": "c4f7",
+        "action": 1717,
+        "n": 1055,
+        "q": 0.305705666542,
+        "prior": 0.726674258709
+      },
+      "top5": [
+        {
+          "uci": "c4f7",
+          "action": 1717,
+          "n": 1055,
+          "q": 0.305705666542,
+          "prior": 0.726674258709
+        },
+        {
+          "uci": "h1f1",
+          "action": 453,
+          "n": 150,
+          "q": -0.024760870263,
+          "prior": 7.64872766013e-07
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 107,
+          "q": -0.104926049709,
+          "prior": 0.0973085016012
+        },
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 22,
+          "q": -0.164482086897,
+          "prior": 2.19485968955e-06
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 4,
+          "q": -0.490277826786,
+          "prior": 0.0674406513572
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1366 time 30 nps 45533 score cp 81 pv c4f7"
+  },
+  {
+    "config": "disabled",
+    "opening": "Italian",
+    "repeat": 1,
+    "move": "c4f7",
+    "elapsed_ms": 30.245574000218767,
+    "detail": {
+      "bestmove": "c4f7",
+      "terminal": false,
+      "simulations": 1330,
+      "value": 0.193745434284,
+      "neural_evals": 1327,
+      "memory_bytes": 2138112,
+      "arena_nodes": 1331,
+      "max_depth": 17,
+      "peak_memory_bytes": 2138112,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1330,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 4,
+          "q": -0.490277826786,
+          "prior": 0.0674406513572
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.792563974857,
+          "prior": 0.000201943475986
+        },
+        {
+          "uci": "d1e2",
+          "action": 204,
+          "n": 1,
+          "q": -0.844503104687,
+          "prior": 3.69212648366e-06
+        },
+        {
+          "uci": "e1f1",
+          "action": 261,
+          "n": 1,
+          "q": -0.985897243023,
+          "prior": 4.20192700403e-05
+        },
+        {
+          "uci": "e1e2",
+          "action": 268,
+          "n": 1,
+          "q": -0.993589043617,
+          "prior": 4.64863705929e-06
+        },
+        {
+          "uci": "e1g1",
+          "action": 262,
+          "n": 1,
+          "q": -0.985817313194,
+          "prior": 2.56094281212e-05
+        },
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 22,
+          "q": -0.164482086897,
+          "prior": 2.19485968955e-06
+        },
+        {
+          "uci": "h1f1",
+          "action": 453,
+          "n": 150,
+          "q": -0.024760870263,
+          "prior": 7.64872766013e-07
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 1,
+          "q": -0.723591566086,
+          "prior": 0.0266790948808
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 1,
+          "q": -0.393638432026,
+          "prior": 6.07337096881e-06
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 1,
+          "q": -0.674404501915,
+          "prior": 4.00568069381e-07
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 1,
+          "q": -0.702596604824,
+          "prior": 2.02048636311e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 1,
+          "q": -0.618505954742,
+          "prior": 0.0152946421877
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 1,
+          "q": -0.741127490997,
+          "prior": 0.0120711615309
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 1,
+          "q": -0.848040759563,
+          "prior": 0.00956268515438
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 1,
+          "q": -0.766962110996,
+          "prior": 3.02324724544e-06
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.896086096764,
+          "prior": 0.000693918962497
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 1,
+          "q": -0.657569169998,
+          "prior": 2.56291714322e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 1,
+          "q": -0.777768731117,
+          "prior": 3.16592286254e-06
+        },
+        {
+          "uci": "f3g5",
+          "action": 1382,
+          "n": 1,
+          "q": -0.859190821648,
+          "prior": 7.54736083763e-06
+        },
+        {
+          "uci": "f3h4",
+          "action": 1375,
+          "n": 1,
+          "q": -0.911862254143,
+          "prior": 0.0428879633546
+        },
+        {
+          "uci": "f3e5",
+          "action": 1380,
+          "n": 1,
+          "q": -0.917309641838,
+          "prior": 2.93557550322e-05
+        },
+        {
+          "uci": "f3d4",
+          "action": 1371,
+          "n": 1,
+          "q": -0.905432939529,
+          "prior": 5.34698801857e-06
+        },
+        {
+          "uci": "f3g1",
+          "action": 1350,
+          "n": 1,
+          "q": -0.843329548836,
+          "prior": 7.23716875655e-05
+        },
+        {
+          "uci": "c4b3",
+          "action": 1681,
+          "n": 1,
+          "q": -0.858174562454,
+          "prior": 2.36592040892e-05
+        },
+        {
+          "uci": "c4d3",
+          "action": 1683,
+          "n": 1,
+          "q": -0.914039850235,
+          "prior": 3.3759217331e-05
+        },
+        {
+          "uci": "c4e2",
+          "action": 1676,
+          "n": 1,
+          "q": -0.866931557655,
+          "prior": 2.20930405703e-06
+        },
+        {
+          "uci": "c4f1",
+          "action": 1669,
+          "n": 1,
+          "q": -0.785037219524,
+          "prior": 5.17212720297e-05
+        },
+        {
+          "uci": "c4b5",
+          "action": 1697,
+          "n": 1,
+          "q": -0.912630021572,
+          "prior": 0.000424243829912
+        },
+        {
+          "uci": "c4a6",
+          "action": 1704,
+          "n": 1,
+          "q": -0.806780397892,
+          "prior": 5.74881369175e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 107,
+          "q": -0.104926049709,
+          "prior": 0.0973085016012
+        },
+        {
+          "uci": "c4e6",
+          "action": 1708,
+          "n": 1,
+          "q": -0.849747538567,
+          "prior": 0.000409958825912
+        },
+        {
+          "uci": "c4f7",
+          "action": 1717,
+          "n": 1019,
+          "q": 0.295422464609,
+          "prior": 0.726674258709
+        }
+      ],
+      "selected": {
+        "uci": "c4f7",
+        "action": 1717,
+        "n": 1019,
+        "q": 0.295422464609,
+        "prior": 0.726674258709
+      },
+      "top5": [
+        {
+          "uci": "c4f7",
+          "action": 1717,
+          "n": 1019,
+          "q": 0.295422464609,
+          "prior": 0.726674258709
+        },
+        {
+          "uci": "h1f1",
+          "action": 453,
+          "n": 150,
+          "q": -0.024760870263,
+          "prior": 7.64872766013e-07
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 107,
+          "q": -0.104926049709,
+          "prior": 0.0973085016012
+        },
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 22,
+          "q": -0.164482086897,
+          "prior": 2.19485968955e-06
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 4,
+          "q": -0.490277826786,
+          "prior": 0.0674406513572
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1330 time 30 nps 44333 score cp 77 pv c4f7"
+  },
+  {
+    "config": "disabled",
+    "opening": "Italian",
+    "repeat": 2,
+    "move": "c4f7",
+    "elapsed_ms": 30.250842999976157,
+    "detail": {
+      "bestmove": "c4f7",
+      "terminal": false,
+      "simulations": 1396,
+      "value": 0.193741723895,
+      "neural_evals": 1393,
+      "memory_bytes": 2138112,
+      "arena_nodes": 1397,
+      "max_depth": 17,
+      "peak_memory_bytes": 2138112,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1396,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 4,
+          "q": -0.490277826786,
+          "prior": 0.0674406513572
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.792563974857,
+          "prior": 0.000201943475986
+        },
+        {
+          "uci": "d1e2",
+          "action": 204,
+          "n": 1,
+          "q": -0.844503104687,
+          "prior": 3.69212648366e-06
+        },
+        {
+          "uci": "e1f1",
+          "action": 261,
+          "n": 1,
+          "q": -0.985897243023,
+          "prior": 4.20192700403e-05
+        },
+        {
+          "uci": "e1e2",
+          "action": 268,
+          "n": 1,
+          "q": -0.993589043617,
+          "prior": 4.64863705929e-06
+        },
+        {
+          "uci": "e1g1",
+          "action": 262,
+          "n": 1,
+          "q": -0.985817313194,
+          "prior": 2.56094281212e-05
+        },
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 22,
+          "q": -0.164482086897,
+          "prior": 2.19485968955e-06
+        },
+        {
+          "uci": "h1f1",
+          "action": 453,
+          "n": 150,
+          "q": -0.024760870263,
+          "prior": 7.64872766013e-07
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 1,
+          "q": -0.723591566086,
+          "prior": 0.0266790948808
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 1,
+          "q": -0.393638432026,
+          "prior": 6.07337096881e-06
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 1,
+          "q": -0.674404501915,
+          "prior": 4.00568069381e-07
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 1,
+          "q": -0.702596604824,
+          "prior": 2.02048636311e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 1,
+          "q": -0.618505954742,
+          "prior": 0.0152946421877
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 1,
+          "q": -0.741127490997,
+          "prior": 0.0120711615309
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 1,
+          "q": -0.848040759563,
+          "prior": 0.00956268515438
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 1,
+          "q": -0.766962110996,
+          "prior": 3.02324724544e-06
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.896086096764,
+          "prior": 0.000693918962497
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 1,
+          "q": -0.657569169998,
+          "prior": 2.56291714322e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 1,
+          "q": -0.777768731117,
+          "prior": 3.16592286254e-06
+        },
+        {
+          "uci": "f3g5",
+          "action": 1382,
+          "n": 1,
+          "q": -0.859190821648,
+          "prior": 7.54736083763e-06
+        },
+        {
+          "uci": "f3h4",
+          "action": 1375,
+          "n": 1,
+          "q": -0.911862254143,
+          "prior": 0.0428879633546
+        },
+        {
+          "uci": "f3e5",
+          "action": 1380,
+          "n": 1,
+          "q": -0.917309641838,
+          "prior": 2.93557550322e-05
+        },
+        {
+          "uci": "f3d4",
+          "action": 1371,
+          "n": 1,
+          "q": -0.905432939529,
+          "prior": 5.34698801857e-06
+        },
+        {
+          "uci": "f3g1",
+          "action": 1350,
+          "n": 1,
+          "q": -0.843329548836,
+          "prior": 7.23716875655e-05
+        },
+        {
+          "uci": "c4b3",
+          "action": 1681,
+          "n": 1,
+          "q": -0.858174562454,
+          "prior": 2.36592040892e-05
+        },
+        {
+          "uci": "c4d3",
+          "action": 1683,
+          "n": 1,
+          "q": -0.914039850235,
+          "prior": 3.3759217331e-05
+        },
+        {
+          "uci": "c4e2",
+          "action": 1676,
+          "n": 1,
+          "q": -0.866931557655,
+          "prior": 2.20930405703e-06
+        },
+        {
+          "uci": "c4f1",
+          "action": 1669,
+          "n": 1,
+          "q": -0.785037219524,
+          "prior": 5.17212720297e-05
+        },
+        {
+          "uci": "c4b5",
+          "action": 1697,
+          "n": 1,
+          "q": -0.912630021572,
+          "prior": 0.000424243829912
+        },
+        {
+          "uci": "c4a6",
+          "action": 1704,
+          "n": 1,
+          "q": -0.806780397892,
+          "prior": 5.74881369175e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 107,
+          "q": -0.104926049709,
+          "prior": 0.0973085016012
+        },
+        {
+          "uci": "c4e6",
+          "action": 1708,
+          "n": 1,
+          "q": -0.849747538567,
+          "prior": 0.000409958825912
+        },
+        {
+          "uci": "c4f7",
+          "action": 1717,
+          "n": 1085,
+          "q": 0.289232730865,
+          "prior": 0.726674258709
+        }
+      ],
+      "selected": {
+        "uci": "c4f7",
+        "action": 1717,
+        "n": 1085,
+        "q": 0.289232730865,
+        "prior": 0.726674258709
+      },
+      "top5": [
+        {
+          "uci": "c4f7",
+          "action": 1717,
+          "n": 1085,
+          "q": 0.289232730865,
+          "prior": 0.726674258709
+        },
+        {
+          "uci": "h1f1",
+          "action": 453,
+          "n": 150,
+          "q": -0.024760870263,
+          "prior": 7.64872766013e-07
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 107,
+          "q": -0.104926049709,
+          "prior": 0.0973085016012
+        },
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 22,
+          "q": -0.164482086897,
+          "prior": 2.19485968955e-06
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 4,
+          "q": -0.490277826786,
+          "prior": 0.0674406513572
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1396 time 30 nps 46533 score cp 77 pv c4f7"
+  },
+  {
+    "config": "disabled",
+    "opening": "QueensGambit",
+    "repeat": 0,
+    "move": "a2a3",
+    "elapsed_ms": 30.235439000080078,
+    "detail": {
+      "bestmove": "a2a3",
+      "terminal": false,
+      "simulations": 1386,
+      "value": -0.159679740667,
+      "neural_evals": 1387,
+      "memory_bytes": 2138112,
+      "arena_nodes": 1387,
+      "max_depth": 13,
+      "peak_memory_bytes": 2138112,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1386,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "a1b1",
+          "action": 1,
+          "n": 1,
+          "q": -0.998356938362,
+          "prior": 3.74829642169e-06
+        },
+        {
+          "uci": "c1d2",
+          "action": 139,
+          "n": 1,
+          "q": -0.960764348507,
+          "prior": 3.56633950105e-06
+        },
+        {
+          "uci": "c1e3",
+          "action": 148,
+          "n": 1,
+          "q": -0.943477571011,
+          "prior": 2.21395976041e-06
+        },
+        {
+          "uci": "c1f4",
+          "action": 157,
+          "n": 238,
+          "q": -0.245803996921,
+          "prior": 0.533501803875
+        },
+        {
+          "uci": "c1g5",
+          "action": 166,
+          "n": 1,
+          "q": -0.980128347874,
+          "prior": 0.000657709490042
+        },
+        {
+          "uci": "c1h6",
+          "action": 175,
+          "n": 13,
+          "q": -0.386971890926,
+          "prior": 0.0698307454586
+        },
+        {
+          "uci": "d1c2",
+          "action": 202,
+          "n": 1,
+          "q": -0.969068527222,
+          "prior": 0.000274213467492
+        },
+        {
+          "uci": "d1b3",
+          "action": 209,
+          "n": 1,
+          "q": -0.961581885815,
+          "prior": 1.99940501489e-07
+        },
+        {
+          "uci": "d1a4",
+          "action": 216,
+          "n": 1,
+          "q": -0.976658761501,
+          "prior": 3.47702552972e-07
+        },
+        {
+          "uci": "d1d2",
+          "action": 203,
+          "n": 1,
+          "q": -0.989908695221,
+          "prior": 1.40515758176e-05
+        },
+        {
+          "uci": "d1d3",
+          "action": 211,
+          "n": 1,
+          "q": -0.984103381634,
+          "prior": 1.63419354067e-05
+        },
+        {
+          "uci": "e1d2",
+          "action": 267,
+          "n": 1,
+          "q": -0.999415099621,
+          "prior": 0.00337470928207
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.980233132839,
+          "prior": 9.99074545689e-05
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 166,
+          "q": -0.152534887195,
+          "prior": 0.075762681663
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 644,
+          "q": -0.0857377201319,
+          "prior": 0.0438680276275
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 1,
+          "q": -0.91754335165,
+          "prior": 6.86781186232e-06
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 1,
+          "q": -0.95863622427,
+          "prior": 3.51907203822e-07
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 1,
+          "q": -0.963079214096,
+          "prior": 2.07897005566e-06
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 1,
+          "q": -0.991600096226,
+          "prior": 0.00745154265314
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 230,
+          "q": -0.158722639084,
+          "prior": 0.130216181278
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 1,
+          "q": -0.965277612209,
+          "prior": 9.11046299734e-07
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 1,
+          "q": -0.969866037369,
+          "prior": 2.08221521802e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 1,
+          "q": -0.972713708878,
+          "prior": 2.21895243158e-06
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.988089978695,
+          "prior": 0.000596018217038
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 1,
+          "q": -0.965590059757,
+          "prior": 4.17446062784e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 1,
+          "q": -0.976520359516,
+          "prior": 3.29308227265e-06
+        },
+        {
+          "uci": "c3d5",
+          "action": 1187,
+          "n": 1,
+          "q": -0.96319258213,
+          "prior": 9.94351739791e-06
+        },
+        {
+          "uci": "c3e4",
+          "action": 1180,
+          "n": 1,
+          "q": -0.904392898083,
+          "prior": 0.000150117077283
+        },
+        {
+          "uci": "c3b5",
+          "action": 1185,
+          "n": 1,
+          "q": -0.957513988018,
+          "prior": 0.0310876499861
+        },
+        {
+          "uci": "c3a4",
+          "action": 1176,
+          "n": 1,
+          "q": -0.956914246082,
+          "prior": 1.74230376615e-06
+        },
+        {
+          "uci": "c3b1",
+          "action": 1153,
+          "n": 1,
+          "q": -0.911060452461,
+          "prior": 6.34940420241e-08
+        },
+        {
+          "uci": "c4c5",
+          "action": 1698,
+          "n": 1,
+          "q": -0.981296658516,
+          "prior": 4.01847137255e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 68,
+          "q": -0.215515509248,
+          "prior": 0.103014715016
+        }
+      ],
+      "selected": {
+        "uci": "a2a3",
+        "action": 528,
+        "n": 644,
+        "q": -0.0857377201319,
+        "prior": 0.0438680276275
+      },
+      "top5": [
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 644,
+          "q": -0.0857377201319,
+          "prior": 0.0438680276275
+        },
+        {
+          "uci": "c1f4",
+          "action": 157,
+          "n": 238,
+          "q": -0.245803996921,
+          "prior": 0.533501803875
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 230,
+          "q": -0.158722639084,
+          "prior": 0.130216181278
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 166,
+          "q": -0.152534887195,
+          "prior": 0.075762681663
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 68,
+          "q": -0.215515509248,
+          "prior": 0.103014715016
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1386 time 30 nps 46200 score cp -63 pv a2a3"
+  },
+  {
+    "config": "disabled",
+    "opening": "QueensGambit",
+    "repeat": 1,
+    "move": "a2a3",
+    "elapsed_ms": 30.300226000235853,
+    "detail": {
+      "bestmove": "a2a3",
+      "terminal": false,
+      "simulations": 1389,
+      "value": -0.161367461085,
+      "neural_evals": 1390,
+      "memory_bytes": 2138112,
+      "arena_nodes": 1390,
+      "max_depth": 13,
+      "peak_memory_bytes": 2138112,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1389,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "a1b1",
+          "action": 1,
+          "n": 1,
+          "q": -0.998356938362,
+          "prior": 3.74829642169e-06
+        },
+        {
+          "uci": "c1d2",
+          "action": 139,
+          "n": 1,
+          "q": -0.960764348507,
+          "prior": 3.56633950105e-06
+        },
+        {
+          "uci": "c1e3",
+          "action": 148,
+          "n": 1,
+          "q": -0.943477571011,
+          "prior": 2.21395976041e-06
+        },
+        {
+          "uci": "c1f4",
+          "action": 157,
+          "n": 238,
+          "q": -0.245803996921,
+          "prior": 0.533501803875
+        },
+        {
+          "uci": "c1g5",
+          "action": 166,
+          "n": 1,
+          "q": -0.980128347874,
+          "prior": 0.000657709490042
+        },
+        {
+          "uci": "c1h6",
+          "action": 175,
+          "n": 13,
+          "q": -0.386971890926,
+          "prior": 0.0698307454586
+        },
+        {
+          "uci": "d1c2",
+          "action": 202,
+          "n": 1,
+          "q": -0.969068527222,
+          "prior": 0.000274213467492
+        },
+        {
+          "uci": "d1b3",
+          "action": 209,
+          "n": 1,
+          "q": -0.961581885815,
+          "prior": 1.99940501489e-07
+        },
+        {
+          "uci": "d1a4",
+          "action": 216,
+          "n": 1,
+          "q": -0.976658761501,
+          "prior": 3.47702552972e-07
+        },
+        {
+          "uci": "d1d2",
+          "action": 203,
+          "n": 1,
+          "q": -0.989908695221,
+          "prior": 1.40515758176e-05
+        },
+        {
+          "uci": "d1d3",
+          "action": 211,
+          "n": 1,
+          "q": -0.984103381634,
+          "prior": 1.63419354067e-05
+        },
+        {
+          "uci": "e1d2",
+          "action": 267,
+          "n": 1,
+          "q": -0.999415099621,
+          "prior": 0.00337470928207
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.980233132839,
+          "prior": 9.99074545689e-05
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 166,
+          "q": -0.152534887195,
+          "prior": 0.075762681663
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 647,
+          "q": -0.089703835547,
+          "prior": 0.0438680276275
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 1,
+          "q": -0.91754335165,
+          "prior": 6.86781186232e-06
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 1,
+          "q": -0.95863622427,
+          "prior": 3.51907203822e-07
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 1,
+          "q": -0.963079214096,
+          "prior": 2.07897005566e-06
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 1,
+          "q": -0.991600096226,
+          "prior": 0.00745154265314
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 230,
+          "q": -0.158722639084,
+          "prior": 0.130216181278
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 1,
+          "q": -0.965277612209,
+          "prior": 9.11046299734e-07
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 1,
+          "q": -0.969866037369,
+          "prior": 2.08221521802e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 1,
+          "q": -0.972713708878,
+          "prior": 2.21895243158e-06
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.988089978695,
+          "prior": 0.000596018217038
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 1,
+          "q": -0.965590059757,
+          "prior": 4.17446062784e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 1,
+          "q": -0.976520359516,
+          "prior": 3.29308227265e-06
+        },
+        {
+          "uci": "c3d5",
+          "action": 1187,
+          "n": 1,
+          "q": -0.96319258213,
+          "prior": 9.94351739791e-06
+        },
+        {
+          "uci": "c3e4",
+          "action": 1180,
+          "n": 1,
+          "q": -0.904392898083,
+          "prior": 0.000150117077283
+        },
+        {
+          "uci": "c3b5",
+          "action": 1185,
+          "n": 1,
+          "q": -0.957513988018,
+          "prior": 0.0310876499861
+        },
+        {
+          "uci": "c3a4",
+          "action": 1176,
+          "n": 1,
+          "q": -0.956914246082,
+          "prior": 1.74230376615e-06
+        },
+        {
+          "uci": "c3b1",
+          "action": 1153,
+          "n": 1,
+          "q": -0.911060452461,
+          "prior": 6.34940420241e-08
+        },
+        {
+          "uci": "c4c5",
+          "action": 1698,
+          "n": 1,
+          "q": -0.981296658516,
+          "prior": 4.01847137255e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 68,
+          "q": -0.215515509248,
+          "prior": 0.103014715016
+        }
+      ],
+      "selected": {
+        "uci": "a2a3",
+        "action": 528,
+        "n": 647,
+        "q": -0.089703835547,
+        "prior": 0.0438680276275
+      },
+      "top5": [
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 647,
+          "q": -0.089703835547,
+          "prior": 0.0438680276275
+        },
+        {
+          "uci": "c1f4",
+          "action": 157,
+          "n": 238,
+          "q": -0.245803996921,
+          "prior": 0.533501803875
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 230,
+          "q": -0.158722639084,
+          "prior": 0.130216181278
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 166,
+          "q": -0.152534887195,
+          "prior": 0.075762681663
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 68,
+          "q": -0.215515509248,
+          "prior": 0.103014715016
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1389 time 30 nps 46300 score cp -64 pv a2a3"
+  },
+  {
+    "config": "disabled",
+    "opening": "QueensGambit",
+    "repeat": 2,
+    "move": "a2a3",
+    "elapsed_ms": 30.241418999594316,
+    "detail": {
+      "bestmove": "a2a3",
+      "terminal": false,
+      "simulations": 1391,
+      "value": -0.162482336164,
+      "neural_evals": 1392,
+      "memory_bytes": 2138112,
+      "arena_nodes": 1392,
+      "max_depth": 13,
+      "peak_memory_bytes": 2138112,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1391,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "a1b1",
+          "action": 1,
+          "n": 1,
+          "q": -0.998356938362,
+          "prior": 3.74829642169e-06
+        },
+        {
+          "uci": "c1d2",
+          "action": 139,
+          "n": 1,
+          "q": -0.960764348507,
+          "prior": 3.56633950105e-06
+        },
+        {
+          "uci": "c1e3",
+          "action": 148,
+          "n": 1,
+          "q": -0.943477571011,
+          "prior": 2.21395976041e-06
+        },
+        {
+          "uci": "c1f4",
+          "action": 157,
+          "n": 238,
+          "q": -0.245803996921,
+          "prior": 0.533501803875
+        },
+        {
+          "uci": "c1g5",
+          "action": 166,
+          "n": 1,
+          "q": -0.980128347874,
+          "prior": 0.000657709490042
+        },
+        {
+          "uci": "c1h6",
+          "action": 175,
+          "n": 13,
+          "q": -0.386971890926,
+          "prior": 0.0698307454586
+        },
+        {
+          "uci": "d1c2",
+          "action": 202,
+          "n": 1,
+          "q": -0.969068527222,
+          "prior": 0.000274213467492
+        },
+        {
+          "uci": "d1b3",
+          "action": 209,
+          "n": 1,
+          "q": -0.961581885815,
+          "prior": 1.99940501489e-07
+        },
+        {
+          "uci": "d1a4",
+          "action": 216,
+          "n": 1,
+          "q": -0.976658761501,
+          "prior": 3.47702552972e-07
+        },
+        {
+          "uci": "d1d2",
+          "action": 203,
+          "n": 1,
+          "q": -0.989908695221,
+          "prior": 1.40515758176e-05
+        },
+        {
+          "uci": "d1d3",
+          "action": 211,
+          "n": 1,
+          "q": -0.984103381634,
+          "prior": 1.63419354067e-05
+        },
+        {
+          "uci": "e1d2",
+          "action": 267,
+          "n": 1,
+          "q": -0.999415099621,
+          "prior": 0.00337470928207
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.980233132839,
+          "prior": 9.99074545689e-05
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 166,
+          "q": -0.152534887195,
+          "prior": 0.075762681663
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 649,
+          "q": -0.0923141911626,
+          "prior": 0.0438680276275
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 1,
+          "q": -0.91754335165,
+          "prior": 6.86781186232e-06
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 1,
+          "q": -0.95863622427,
+          "prior": 3.51907203822e-07
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 1,
+          "q": -0.963079214096,
+          "prior": 2.07897005566e-06
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 1,
+          "q": -0.991600096226,
+          "prior": 0.00745154265314
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 230,
+          "q": -0.158722639084,
+          "prior": 0.130216181278
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 1,
+          "q": -0.965277612209,
+          "prior": 9.11046299734e-07
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 1,
+          "q": -0.969866037369,
+          "prior": 2.08221521802e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 1,
+          "q": -0.972713708878,
+          "prior": 2.21895243158e-06
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.988089978695,
+          "prior": 0.000596018217038
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 1,
+          "q": -0.965590059757,
+          "prior": 4.17446062784e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 1,
+          "q": -0.976520359516,
+          "prior": 3.29308227265e-06
+        },
+        {
+          "uci": "c3d5",
+          "action": 1187,
+          "n": 1,
+          "q": -0.96319258213,
+          "prior": 9.94351739791e-06
+        },
+        {
+          "uci": "c3e4",
+          "action": 1180,
+          "n": 1,
+          "q": -0.904392898083,
+          "prior": 0.000150117077283
+        },
+        {
+          "uci": "c3b5",
+          "action": 1185,
+          "n": 1,
+          "q": -0.957513988018,
+          "prior": 0.0310876499861
+        },
+        {
+          "uci": "c3a4",
+          "action": 1176,
+          "n": 1,
+          "q": -0.956914246082,
+          "prior": 1.74230376615e-06
+        },
+        {
+          "uci": "c3b1",
+          "action": 1153,
+          "n": 1,
+          "q": -0.911060452461,
+          "prior": 6.34940420241e-08
+        },
+        {
+          "uci": "c4c5",
+          "action": 1698,
+          "n": 1,
+          "q": -0.981296658516,
+          "prior": 4.01847137255e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 68,
+          "q": -0.215515509248,
+          "prior": 0.103014715016
+        }
+      ],
+      "selected": {
+        "uci": "a2a3",
+        "action": 528,
+        "n": 649,
+        "q": -0.0923141911626,
+        "prior": 0.0438680276275
+      },
+      "top5": [
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 649,
+          "q": -0.0923141911626,
+          "prior": 0.0438680276275
+        },
+        {
+          "uci": "c1f4",
+          "action": 157,
+          "n": 238,
+          "q": -0.245803996921,
+          "prior": 0.533501803875
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 230,
+          "q": -0.158722639084,
+          "prior": 0.130216181278
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 166,
+          "q": -0.152534887195,
+          "prior": 0.075762681663
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 68,
+          "q": -0.215515509248,
+          "prior": 0.103014715016
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1391 time 30 nps 46366 score cp -64 pv a2a3"
+  },
+  {
+    "config": "disabled",
+    "opening": "RookEnding",
+    "repeat": 0,
+    "move": "f3e4",
+    "elapsed_ms": 30.317643000216776,
+    "detail": {
+      "bestmove": "f3e4",
+      "terminal": false,
+      "simulations": 1467,
+      "value": 0.382335007191,
+      "neural_evals": 1468,
+      "memory_bytes": 1089536,
+      "arena_nodes": 1468,
+      "max_depth": 13,
+      "peak_memory_bytes": 1089536,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1467,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00235529174097
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 213,
+          "q": 0.299358129501,
+          "prior": 0.45626142621
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 1,
+          "q": -0.826753735542,
+          "prior": 0.0370036326349
+        },
+        {
+          "uci": "f3e4",
+          "action": 1372,
+          "n": 1031,
+          "q": 0.408304482698,
+          "prior": 0.27929520607
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 222,
+          "q": 0.346788287163,
+          "prior": 0.225084528327
+        }
+      ],
+      "selected": {
+        "uci": "f3e4",
+        "action": 1372,
+        "n": 1031,
+        "q": 0.408304482698,
+        "prior": 0.27929520607
+      },
+      "top5": [
+        {
+          "uci": "f3e4",
+          "action": 1372,
+          "n": 1031,
+          "q": 0.408304482698,
+          "prior": 0.27929520607
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 222,
+          "q": 0.346788287163,
+          "prior": 0.225084528327
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 213,
+          "q": 0.299358129501,
+          "prior": 0.45626142621
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 1,
+          "q": -0.826753735542,
+          "prior": 0.0370036326349
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00235529174097
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1467 time 30 nps 48900 score cp 152 pv f3e4"
+  },
+  {
+    "config": "disabled",
+    "opening": "RookEnding",
+    "repeat": 1,
+    "move": "f3e4",
+    "elapsed_ms": 30.17388700027368,
+    "detail": {
+      "bestmove": "f3e4",
+      "terminal": false,
+      "simulations": 1473,
+      "value": 0.381614714861,
+      "neural_evals": 1474,
+      "memory_bytes": 1089536,
+      "arena_nodes": 1474,
+      "max_depth": 13,
+      "peak_memory_bytes": 1089536,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1473,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00235529174097
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 213,
+          "q": 0.299358129501,
+          "prior": 0.45626142621
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 1,
+          "q": -0.826753735542,
+          "prior": 0.0370036326349
+        },
+        {
+          "uci": "f3e4",
+          "action": 1372,
+          "n": 1037,
+          "q": 0.407131075859,
+          "prior": 0.27929520607
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 222,
+          "q": 0.346788287163,
+          "prior": 0.225084528327
+        }
+      ],
+      "selected": {
+        "uci": "f3e4",
+        "action": 1372,
+        "n": 1037,
+        "q": 0.407131075859,
+        "prior": 0.27929520607
+      },
+      "top5": [
+        {
+          "uci": "f3e4",
+          "action": 1372,
+          "n": 1037,
+          "q": 0.407131075859,
+          "prior": 0.27929520607
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 222,
+          "q": 0.346788287163,
+          "prior": 0.225084528327
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 213,
+          "q": 0.299358129501,
+          "prior": 0.45626142621
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 1,
+          "q": -0.826753735542,
+          "prior": 0.0370036326349
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00235529174097
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1473 time 30 nps 49100 score cp 152 pv f3e4"
+  },
+  {
+    "config": "disabled",
+    "opening": "RookEnding",
+    "repeat": 2,
+    "move": "f3e4",
+    "elapsed_ms": 30.220536999877368,
+    "detail": {
+      "bestmove": "f3e4",
+      "terminal": false,
+      "simulations": 1475,
+      "value": 0.38123318553,
+      "neural_evals": 1476,
+      "memory_bytes": 1089536,
+      "arena_nodes": 1476,
+      "max_depth": 13,
+      "peak_memory_bytes": 1089536,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1475,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00235529174097
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 214,
+          "q": 0.300570845604,
+          "prior": 0.45626142621
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 1,
+          "q": -0.826753735542,
+          "prior": 0.0370036326349
+        },
+        {
+          "uci": "f3e4",
+          "action": 1372,
+          "n": 1038,
+          "q": 0.406393557787,
+          "prior": 0.27929520607
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 222,
+          "q": 0.346788287163,
+          "prior": 0.225084528327
+        }
+      ],
+      "selected": {
+        "uci": "f3e4",
+        "action": 1372,
+        "n": 1038,
+        "q": 0.406393557787,
+        "prior": 0.27929520607
+      },
+      "top5": [
+        {
+          "uci": "f3e4",
+          "action": 1372,
+          "n": 1038,
+          "q": 0.406393557787,
+          "prior": 0.27929520607
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 222,
+          "q": 0.346788287163,
+          "prior": 0.225084528327
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 214,
+          "q": 0.300570845604,
+          "prior": 0.45626142621
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 1,
+          "q": -0.826753735542,
+          "prior": 0.0370036326349
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00235529174097
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1475 time 30 nps 49166 score cp 152 pv f3e4"
+  },
+  {
+    "config": "disabled",
+    "opening": "PawnEnding",
+    "repeat": 0,
+    "move": "f3g2",
+    "elapsed_ms": 30.218734000300174,
+    "detail": {
+      "bestmove": "f3g2",
+      "terminal": false,
+      "simulations": 1551,
+      "value": 0.311478734016,
+      "neural_evals": 1537,
+      "memory_bytes": 565248,
+      "arena_nodes": 1538,
+      "max_depth": 19,
+      "peak_memory_bytes": 565248,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1551,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00290861027315
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00102880538907
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00261701922864
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 1462,
+          "q": 0.32506531477,
+          "prior": 0.600304722786
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 12,
+          "q": 0.0489370375872,
+          "prior": 0.0524449683726
+        },
+        {
+          "uci": "f3f4",
+          "action": 1373,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00156575313304
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 77,
+          "q": 0.0944253206253,
+          "prior": 0.336815834045
+        },
+        {
+          "uci": "g3g4",
+          "action": 1438,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00231422297657
+        }
+      ],
+      "selected": {
+        "uci": "f3g2",
+        "action": 1358,
+        "n": 1462,
+        "q": 0.32506531477,
+        "prior": 0.600304722786
+      },
+      "top5": [
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 1462,
+          "q": 0.32506531477,
+          "prior": 0.600304722786
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 77,
+          "q": 0.0944253206253,
+          "prior": 0.336815834045
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 12,
+          "q": 0.0489370375872,
+          "prior": 0.0524449683726
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00290861027315
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00261701922864
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1551 time 30 nps 51700 score cp 124 pv f3g2"
+  },
+  {
+    "config": "disabled",
+    "opening": "PawnEnding",
+    "repeat": 1,
+    "move": "f3g2",
+    "elapsed_ms": 30.237463000048592,
+    "detail": {
+      "bestmove": "f3g2",
+      "terminal": false,
+      "simulations": 1567,
+      "value": 0.309513807297,
+      "neural_evals": 1553,
+      "memory_bytes": 565248,
+      "arena_nodes": 1554,
+      "max_depth": 19,
+      "peak_memory_bytes": 565248,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1567,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00290861027315
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00102880538907
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00261701922864
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 1477,
+          "q": 0.323476284742,
+          "prior": 0.600304722786
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 12,
+          "q": 0.0489370375872,
+          "prior": 0.0524449683726
+        },
+        {
+          "uci": "f3f4",
+          "action": 1373,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00156575313304
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 78,
+          "q": 0.0852102190256,
+          "prior": 0.336815834045
+        },
+        {
+          "uci": "g3g4",
+          "action": 1438,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00231422297657
+        }
+      ],
+      "selected": {
+        "uci": "f3g2",
+        "action": 1358,
+        "n": 1477,
+        "q": 0.323476284742,
+        "prior": 0.600304722786
+      },
+      "top5": [
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 1477,
+          "q": 0.323476284742,
+          "prior": 0.600304722786
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 78,
+          "q": 0.0852102190256,
+          "prior": 0.336815834045
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 12,
+          "q": 0.0489370375872,
+          "prior": 0.0524449683726
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00290861027315
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00261701922864
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1567 time 30 nps 52233 score cp 123 pv f3g2"
+  },
+  {
+    "config": "disabled",
+    "opening": "PawnEnding",
+    "repeat": 2,
+    "move": "f3g2",
+    "elapsed_ms": 30.2630810001574,
+    "detail": {
+      "bestmove": "f3g2",
+      "terminal": false,
+      "simulations": 1571,
+      "value": 0.309584915638,
+      "neural_evals": 1557,
+      "memory_bytes": 565248,
+      "arena_nodes": 1558,
+      "max_depth": 19,
+      "peak_memory_bytes": 565248,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1571,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00290861027315
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00102880538907
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00261701922864
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 1481,
+          "q": 0.323514014482,
+          "prior": 0.600304722786
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 12,
+          "q": 0.0489370375872,
+          "prior": 0.0524449683726
+        },
+        {
+          "uci": "f3f4",
+          "action": 1373,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00156575313304
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 78,
+          "q": 0.0852102190256,
+          "prior": 0.336815834045
+        },
+        {
+          "uci": "g3g4",
+          "action": 1438,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00231422297657
+        }
+      ],
+      "selected": {
+        "uci": "f3g2",
+        "action": 1358,
+        "n": 1481,
+        "q": 0.323514014482,
+        "prior": 0.600304722786
+      },
+      "top5": [
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 1481,
+          "q": 0.323514014482,
+          "prior": 0.600304722786
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 78,
+          "q": 0.0852102190256,
+          "prior": 0.336815834045
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 12,
+          "q": 0.0489370375872,
+          "prior": 0.0524449683726
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00290861027315
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00261701922864
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1571 time 30 nps 52366 score cp 123 pv f3g2"
+  },
+  {
+    "config": "parallel",
+    "opening": "Italian",
+    "repeat": 0,
+    "move": "c4f7",
+    "elapsed_ms": 30.31760400017447,
+    "detail": {
+      "bestmove": "c4f7",
+      "terminal": false,
+      "simulations": 1592,
+      "value": 0.0957879796624,
+      "neural_evals": 1587,
+      "memory_bytes": 2138112,
+      "arena_nodes": 1589,
+      "max_depth": 16,
+      "peak_memory_bytes": 2138112,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1592,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 796,
+      "parallel_leaves": 1586,
+      "peak_inflight": 2,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 11,
+          "q": -0.274698615074,
+          "prior": 0.0674406513572
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.792563974857,
+          "prior": 0.000201943475986
+        },
+        {
+          "uci": "d1e2",
+          "action": 204,
+          "n": 1,
+          "q": -0.844503104687,
+          "prior": 3.69212648366e-06
+        },
+        {
+          "uci": "e1f1",
+          "action": 261,
+          "n": 1,
+          "q": -0.985897243023,
+          "prior": 4.20192700403e-05
+        },
+        {
+          "uci": "e1e2",
+          "action": 268,
+          "n": 1,
+          "q": -0.993589043617,
+          "prior": 4.64863705929e-06
+        },
+        {
+          "uci": "e1g1",
+          "action": 262,
+          "n": 1,
+          "q": -0.985817313194,
+          "prior": 2.56094281212e-05
+        },
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 597,
+          "q": 0.0120544210076,
+          "prior": 2.19485968955e-06
+        },
+        {
+          "uci": "h1f1",
+          "action": 453,
+          "n": 22,
+          "q": -0.160561606288,
+          "prior": 7.64872766013e-07
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 1,
+          "q": -0.723591566086,
+          "prior": 0.0266790948808
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 1,
+          "q": -0.393638432026,
+          "prior": 6.07337096881e-06
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 1,
+          "q": -0.674404501915,
+          "prior": 4.00568069381e-07
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 1,
+          "q": -0.702596604824,
+          "prior": 2.02048636311e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 1,
+          "q": -0.618505954742,
+          "prior": 0.0152946421877
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 1,
+          "q": -0.741127490997,
+          "prior": 0.0120711615309
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 1,
+          "q": -0.848040759563,
+          "prior": 0.00956268515438
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 1,
+          "q": -0.766962110996,
+          "prior": 3.02324724544e-06
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.896086096764,
+          "prior": 0.000693918962497
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 1,
+          "q": -0.657569169998,
+          "prior": 2.56291714322e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 1,
+          "q": -0.777768731117,
+          "prior": 3.16592286254e-06
+        },
+        {
+          "uci": "f3g5",
+          "action": 1382,
+          "n": 1,
+          "q": -0.859190821648,
+          "prior": 7.54736083763e-06
+        },
+        {
+          "uci": "f3h4",
+          "action": 1375,
+          "n": 6,
+          "q": -0.335458219051,
+          "prior": 0.0428879633546
+        },
+        {
+          "uci": "f3e5",
+          "action": 1380,
+          "n": 1,
+          "q": -0.917309641838,
+          "prior": 2.93557550322e-05
+        },
+        {
+          "uci": "f3d4",
+          "action": 1371,
+          "n": 1,
+          "q": -0.905432939529,
+          "prior": 5.34698801857e-06
+        },
+        {
+          "uci": "f3g1",
+          "action": 1350,
+          "n": 1,
+          "q": -0.843329548836,
+          "prior": 7.23716875655e-05
+        },
+        {
+          "uci": "c4b3",
+          "action": 1681,
+          "n": 1,
+          "q": -0.858174562454,
+          "prior": 2.36592040892e-05
+        },
+        {
+          "uci": "c4d3",
+          "action": 1683,
+          "n": 1,
+          "q": -0.914039850235,
+          "prior": 3.3759217331e-05
+        },
+        {
+          "uci": "c4e2",
+          "action": 1676,
+          "n": 1,
+          "q": -0.866931557655,
+          "prior": 2.20930405703e-06
+        },
+        {
+          "uci": "c4f1",
+          "action": 1669,
+          "n": 1,
+          "q": -0.785037219524,
+          "prior": 5.17212720297e-05
+        },
+        {
+          "uci": "c4b5",
+          "action": 1697,
+          "n": 1,
+          "q": -0.912630021572,
+          "prior": 0.000424243829912
+        },
+        {
+          "uci": "c4a6",
+          "action": 1704,
+          "n": 1,
+          "q": -0.806780397892,
+          "prior": 5.74881369175e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 120,
+          "q": -0.144223511219,
+          "prior": 0.0973085016012
+        },
+        {
+          "uci": "c4e6",
+          "action": 1708,
+          "n": 1,
+          "q": -0.849747538567,
+          "prior": 0.000409958825912
+        },
+        {
+          "uci": "c4f7",
+          "action": 1717,
+          "n": 809,
+          "q": 0.238680914044,
+          "prior": 0.726674258709
+        }
+      ],
+      "selected": {
+        "uci": "c4f7",
+        "action": 1717,
+        "n": 809,
+        "q": 0.238680914044,
+        "prior": 0.726674258709
+      },
+      "top5": [
+        {
+          "uci": "c4f7",
+          "action": 1717,
+          "n": 809,
+          "q": 0.238680914044,
+          "prior": 0.726674258709
+        },
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 597,
+          "q": 0.0120544210076,
+          "prior": 2.19485968955e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 120,
+          "q": -0.144223511219,
+          "prior": 0.0973085016012
+        },
+        {
+          "uci": "h1f1",
+          "action": 453,
+          "n": 22,
+          "q": -0.160561606288,
+          "prior": 7.64872766013e-07
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 11,
+          "q": -0.274698615074,
+          "prior": 0.0674406513572
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1592 time 30 nps 53066 score cp 38 pv c4f7"
+  },
+  {
+    "config": "parallel",
+    "opening": "Italian",
+    "repeat": 1,
+    "move": "c4f7",
+    "elapsed_ms": 30.23693099976299,
+    "detail": {
+      "bestmove": "c4f7",
+      "terminal": false,
+      "simulations": 1606,
+      "value": 0.0870436578989,
+      "neural_evals": 1601,
+      "memory_bytes": 2138112,
+      "arena_nodes": 1603,
+      "max_depth": 16,
+      "peak_memory_bytes": 2138112,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1606,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 803,
+      "parallel_leaves": 1600,
+      "peak_inflight": 2,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 11,
+          "q": -0.274698615074,
+          "prior": 0.0674406513572
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.792563974857,
+          "prior": 0.000201943475986
+        },
+        {
+          "uci": "d1e2",
+          "action": 204,
+          "n": 1,
+          "q": -0.844503104687,
+          "prior": 3.69212648366e-06
+        },
+        {
+          "uci": "e1f1",
+          "action": 261,
+          "n": 1,
+          "q": -0.985897243023,
+          "prior": 4.20192700403e-05
+        },
+        {
+          "uci": "e1e2",
+          "action": 268,
+          "n": 1,
+          "q": -0.993589043617,
+          "prior": 4.64863705929e-06
+        },
+        {
+          "uci": "e1g1",
+          "action": 262,
+          "n": 1,
+          "q": -0.985817313194,
+          "prior": 2.56094281212e-05
+        },
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 597,
+          "q": 0.0120544210076,
+          "prior": 2.19485968955e-06
+        },
+        {
+          "uci": "h1f1",
+          "action": 453,
+          "n": 22,
+          "q": -0.160561606288,
+          "prior": 7.64872766013e-07
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 1,
+          "q": -0.723591566086,
+          "prior": 0.0266790948808
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 1,
+          "q": -0.393638432026,
+          "prior": 6.07337096881e-06
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 1,
+          "q": -0.674404501915,
+          "prior": 4.00568069381e-07
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 1,
+          "q": -0.702596604824,
+          "prior": 2.02048636311e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 1,
+          "q": -0.618505954742,
+          "prior": 0.0152946421877
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 1,
+          "q": -0.741127490997,
+          "prior": 0.0120711615309
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 1,
+          "q": -0.848040759563,
+          "prior": 0.00956268515438
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 1,
+          "q": -0.766962110996,
+          "prior": 3.02324724544e-06
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.896086096764,
+          "prior": 0.000693918962497
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 1,
+          "q": -0.657569169998,
+          "prior": 2.56291714322e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 1,
+          "q": -0.777768731117,
+          "prior": 3.16592286254e-06
+        },
+        {
+          "uci": "f3g5",
+          "action": 1382,
+          "n": 1,
+          "q": -0.859190821648,
+          "prior": 7.54736083763e-06
+        },
+        {
+          "uci": "f3h4",
+          "action": 1375,
+          "n": 6,
+          "q": -0.335458219051,
+          "prior": 0.0428879633546
+        },
+        {
+          "uci": "f3e5",
+          "action": 1380,
+          "n": 1,
+          "q": -0.917309641838,
+          "prior": 2.93557550322e-05
+        },
+        {
+          "uci": "f3d4",
+          "action": 1371,
+          "n": 1,
+          "q": -0.905432939529,
+          "prior": 5.34698801857e-06
+        },
+        {
+          "uci": "f3g1",
+          "action": 1350,
+          "n": 1,
+          "q": -0.843329548836,
+          "prior": 7.23716875655e-05
+        },
+        {
+          "uci": "c4b3",
+          "action": 1681,
+          "n": 1,
+          "q": -0.858174562454,
+          "prior": 2.36592040892e-05
+        },
+        {
+          "uci": "c4d3",
+          "action": 1683,
+          "n": 1,
+          "q": -0.914039850235,
+          "prior": 3.3759217331e-05
+        },
+        {
+          "uci": "c4e2",
+          "action": 1676,
+          "n": 1,
+          "q": -0.866931557655,
+          "prior": 2.20930405703e-06
+        },
+        {
+          "uci": "c4f1",
+          "action": 1669,
+          "n": 1,
+          "q": -0.785037219524,
+          "prior": 5.17212720297e-05
+        },
+        {
+          "uci": "c4b5",
+          "action": 1697,
+          "n": 1,
+          "q": -0.912630021572,
+          "prior": 0.000424243829912
+        },
+        {
+          "uci": "c4a6",
+          "action": 1704,
+          "n": 1,
+          "q": -0.806780397892,
+          "prior": 5.74881369175e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 120,
+          "q": -0.144223511219,
+          "prior": 0.0973085016012
+        },
+        {
+          "uci": "c4e6",
+          "action": 1708,
+          "n": 1,
+          "q": -0.849747538567,
+          "prior": 0.000409958825912
+        },
+        {
+          "uci": "c4f7",
+          "action": 1717,
+          "n": 823,
+          "q": 0.219186529517,
+          "prior": 0.726674258709
+        }
+      ],
+      "selected": {
+        "uci": "c4f7",
+        "action": 1717,
+        "n": 823,
+        "q": 0.219186529517,
+        "prior": 0.726674258709
+      },
+      "top5": [
+        {
+          "uci": "c4f7",
+          "action": 1717,
+          "n": 823,
+          "q": 0.219186529517,
+          "prior": 0.726674258709
+        },
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 597,
+          "q": 0.0120544210076,
+          "prior": 2.19485968955e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 120,
+          "q": -0.144223511219,
+          "prior": 0.0973085016012
+        },
+        {
+          "uci": "h1f1",
+          "action": 453,
+          "n": 22,
+          "q": -0.160561606288,
+          "prior": 7.64872766013e-07
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 11,
+          "q": -0.274698615074,
+          "prior": 0.0674406513572
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1606 time 30 nps 53533 score cp 34 pv c4f7"
+  },
+  {
+    "config": "parallel",
+    "opening": "Italian",
+    "repeat": 2,
+    "move": "c4f7",
+    "elapsed_ms": 30.2585409999665,
+    "detail": {
+      "bestmove": "c4f7",
+      "terminal": false,
+      "simulations": 1614,
+      "value": 0.0853046327829,
+      "neural_evals": 1609,
+      "memory_bytes": 2138112,
+      "arena_nodes": 1611,
+      "max_depth": 16,
+      "peak_memory_bytes": 2138112,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1614,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 807,
+      "parallel_leaves": 1608,
+      "peak_inflight": 2,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 11,
+          "q": -0.274698615074,
+          "prior": 0.0674406513572
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.792563974857,
+          "prior": 0.000201943475986
+        },
+        {
+          "uci": "d1e2",
+          "action": 204,
+          "n": 1,
+          "q": -0.844503104687,
+          "prior": 3.69212648366e-06
+        },
+        {
+          "uci": "e1f1",
+          "action": 261,
+          "n": 1,
+          "q": -0.985897243023,
+          "prior": 4.20192700403e-05
+        },
+        {
+          "uci": "e1e2",
+          "action": 268,
+          "n": 1,
+          "q": -0.993589043617,
+          "prior": 4.64863705929e-06
+        },
+        {
+          "uci": "e1g1",
+          "action": 262,
+          "n": 1,
+          "q": -0.985817313194,
+          "prior": 2.56094281212e-05
+        },
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 597,
+          "q": 0.0120544210076,
+          "prior": 2.19485968955e-06
+        },
+        {
+          "uci": "h1f1",
+          "action": 453,
+          "n": 22,
+          "q": -0.160561606288,
+          "prior": 7.64872766013e-07
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 1,
+          "q": -0.723591566086,
+          "prior": 0.0266790948808
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 1,
+          "q": -0.393638432026,
+          "prior": 6.07337096881e-06
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 1,
+          "q": -0.674404501915,
+          "prior": 4.00568069381e-07
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 1,
+          "q": -0.702596604824,
+          "prior": 2.02048636311e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 1,
+          "q": -0.618505954742,
+          "prior": 0.0152946421877
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 1,
+          "q": -0.741127490997,
+          "prior": 0.0120711615309
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 1,
+          "q": -0.848040759563,
+          "prior": 0.00956268515438
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 1,
+          "q": -0.766962110996,
+          "prior": 3.02324724544e-06
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.896086096764,
+          "prior": 0.000693918962497
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 1,
+          "q": -0.657569169998,
+          "prior": 2.56291714322e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 1,
+          "q": -0.777768731117,
+          "prior": 3.16592286254e-06
+        },
+        {
+          "uci": "f3g5",
+          "action": 1382,
+          "n": 1,
+          "q": -0.859190821648,
+          "prior": 7.54736083763e-06
+        },
+        {
+          "uci": "f3h4",
+          "action": 1375,
+          "n": 6,
+          "q": -0.335458219051,
+          "prior": 0.0428879633546
+        },
+        {
+          "uci": "f3e5",
+          "action": 1380,
+          "n": 1,
+          "q": -0.917309641838,
+          "prior": 2.93557550322e-05
+        },
+        {
+          "uci": "f3d4",
+          "action": 1371,
+          "n": 1,
+          "q": -0.905432939529,
+          "prior": 5.34698801857e-06
+        },
+        {
+          "uci": "f3g1",
+          "action": 1350,
+          "n": 1,
+          "q": -0.843329548836,
+          "prior": 7.23716875655e-05
+        },
+        {
+          "uci": "c4b3",
+          "action": 1681,
+          "n": 1,
+          "q": -0.858174562454,
+          "prior": 2.36592040892e-05
+        },
+        {
+          "uci": "c4d3",
+          "action": 1683,
+          "n": 1,
+          "q": -0.914039850235,
+          "prior": 3.3759217331e-05
+        },
+        {
+          "uci": "c4e2",
+          "action": 1676,
+          "n": 1,
+          "q": -0.866931557655,
+          "prior": 2.20930405703e-06
+        },
+        {
+          "uci": "c4f1",
+          "action": 1669,
+          "n": 1,
+          "q": -0.785037219524,
+          "prior": 5.17212720297e-05
+        },
+        {
+          "uci": "c4b5",
+          "action": 1697,
+          "n": 1,
+          "q": -0.912630021572,
+          "prior": 0.000424243829912
+        },
+        {
+          "uci": "c4a6",
+          "action": 1704,
+          "n": 1,
+          "q": -0.806780397892,
+          "prior": 5.74881369175e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 120,
+          "q": -0.144223511219,
+          "prior": 0.0973085016012
+        },
+        {
+          "uci": "c4e6",
+          "action": 1708,
+          "n": 1,
+          "q": -0.849747538567,
+          "prior": 0.000409958825912
+        },
+        {
+          "uci": "c4f7",
+          "action": 1717,
+          "n": 831,
+          "q": 0.214536786079,
+          "prior": 0.726674258709
+        }
+      ],
+      "selected": {
+        "uci": "c4f7",
+        "action": 1717,
+        "n": 831,
+        "q": 0.214536786079,
+        "prior": 0.726674258709
+      },
+      "top5": [
+        {
+          "uci": "c4f7",
+          "action": 1717,
+          "n": 831,
+          "q": 0.214536786079,
+          "prior": 0.726674258709
+        },
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 597,
+          "q": 0.0120544210076,
+          "prior": 2.19485968955e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 120,
+          "q": -0.144223511219,
+          "prior": 0.0973085016012
+        },
+        {
+          "uci": "h1f1",
+          "action": 453,
+          "n": 22,
+          "q": -0.160561606288,
+          "prior": 7.64872766013e-07
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 11,
+          "q": -0.274698615074,
+          "prior": 0.0674406513572
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1614 time 30 nps 53800 score cp 34 pv c4f7"
+  },
+  {
+    "config": "parallel",
+    "opening": "QueensGambit",
+    "repeat": 0,
+    "move": "a2a3",
+    "elapsed_ms": 30.246264000197698,
+    "detail": {
+      "bestmove": "a2a3",
+      "terminal": false,
+      "simulations": 1635,
+      "value": -0.118164137006,
+      "neural_evals": 1636,
+      "memory_bytes": 2138112,
+      "arena_nodes": 1636,
+      "max_depth": 9,
+      "peak_memory_bytes": 2138112,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1635,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 818,
+      "parallel_leaves": 1635,
+      "peak_inflight": 2,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "a1b1",
+          "action": 1,
+          "n": 1,
+          "q": -0.998356938362,
+          "prior": 3.74829642169e-06
+        },
+        {
+          "uci": "c1d2",
+          "action": 139,
+          "n": 1,
+          "q": -0.960764348507,
+          "prior": 3.56633950105e-06
+        },
+        {
+          "uci": "c1e3",
+          "action": 148,
+          "n": 1,
+          "q": -0.943477571011,
+          "prior": 2.21395976041e-06
+        },
+        {
+          "uci": "c1f4",
+          "action": 157,
+          "n": 245,
+          "q": -0.210906967521,
+          "prior": 0.533501803875
+        },
+        {
+          "uci": "c1g5",
+          "action": 166,
+          "n": 1,
+          "q": -0.980128347874,
+          "prior": 0.000657709490042
+        },
+        {
+          "uci": "c1h6",
+          "action": 175,
+          "n": 438,
+          "q": -0.089044816792,
+          "prior": 0.0698307454586
+        },
+        {
+          "uci": "d1c2",
+          "action": 202,
+          "n": 1,
+          "q": -0.969068527222,
+          "prior": 0.000274213467492
+        },
+        {
+          "uci": "d1b3",
+          "action": 209,
+          "n": 1,
+          "q": -0.961581885815,
+          "prior": 1.99940501489e-07
+        },
+        {
+          "uci": "d1a4",
+          "action": 216,
+          "n": 1,
+          "q": -0.976658761501,
+          "prior": 3.47702552972e-07
+        },
+        {
+          "uci": "d1d2",
+          "action": 203,
+          "n": 1,
+          "q": -0.989908695221,
+          "prior": 1.40515758176e-05
+        },
+        {
+          "uci": "d1d3",
+          "action": 211,
+          "n": 1,
+          "q": -0.984103381634,
+          "prior": 1.63419354067e-05
+        },
+        {
+          "uci": "e1d2",
+          "action": 267,
+          "n": 1,
+          "q": -0.999415099621,
+          "prior": 0.00337470928207
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.980233132839,
+          "prior": 9.99074545689e-05
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 161,
+          "q": -0.111763641238,
+          "prior": 0.075762681663
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 441,
+          "q": -0.0406356155872,
+          "prior": 0.0438680276275
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 1,
+          "q": -0.91754335165,
+          "prior": 6.86781186232e-06
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 1,
+          "q": -0.95863622427,
+          "prior": 3.51907203822e-07
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 1,
+          "q": -0.963079214096,
+          "prior": 2.07897005566e-06
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 1,
+          "q": -0.991600096226,
+          "prior": 0.00745154265314
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 238,
+          "q": -0.112083487213,
+          "prior": 0.130216181278
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 1,
+          "q": -0.965277612209,
+          "prior": 9.11046299734e-07
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 1,
+          "q": -0.969866037369,
+          "prior": 2.08221521802e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 1,
+          "q": -0.972713708878,
+          "prior": 2.21895243158e-06
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.988089978695,
+          "prior": 0.000596018217038
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 1,
+          "q": -0.965590059757,
+          "prior": 4.17446062784e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 1,
+          "q": -0.976520359516,
+          "prior": 3.29308227265e-06
+        },
+        {
+          "uci": "c3d5",
+          "action": 1187,
+          "n": 1,
+          "q": -0.96319258213,
+          "prior": 9.94351739791e-06
+        },
+        {
+          "uci": "c3e4",
+          "action": 1180,
+          "n": 1,
+          "q": -0.904392898083,
+          "prior": 0.000150117077283
+        },
+        {
+          "uci": "c3b5",
+          "action": 1185,
+          "n": 15,
+          "q": -0.205719396472,
+          "prior": 0.0310876499861
+        },
+        {
+          "uci": "c3a4",
+          "action": 1176,
+          "n": 1,
+          "q": -0.956914246082,
+          "prior": 1.74230376615e-06
+        },
+        {
+          "uci": "c3b1",
+          "action": 1153,
+          "n": 1,
+          "q": -0.911060452461,
+          "prior": 6.34940420241e-08
+        },
+        {
+          "uci": "c4c5",
+          "action": 1698,
+          "n": 1,
+          "q": -0.981296658516,
+          "prior": 4.01847137255e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 71,
+          "q": -0.165058404207,
+          "prior": 0.103014715016
+        }
+      ],
+      "selected": {
+        "uci": "a2a3",
+        "action": 528,
+        "n": 441,
+        "q": -0.0406356155872,
+        "prior": 0.0438680276275
+      },
+      "top5": [
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 441,
+          "q": -0.0406356155872,
+          "prior": 0.0438680276275
+        },
+        {
+          "uci": "c1h6",
+          "action": 175,
+          "n": 438,
+          "q": -0.089044816792,
+          "prior": 0.0698307454586
+        },
+        {
+          "uci": "c1f4",
+          "action": 157,
+          "n": 245,
+          "q": -0.210906967521,
+          "prior": 0.533501803875
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 238,
+          "q": -0.112083487213,
+          "prior": 0.130216181278
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 161,
+          "q": -0.111763641238,
+          "prior": 0.075762681663
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1635 time 30 nps 54500 score cp -47 pv a2a3"
+  },
+  {
+    "config": "parallel",
+    "opening": "QueensGambit",
+    "repeat": 1,
+    "move": "a2a3",
+    "elapsed_ms": 30.22611300002609,
+    "detail": {
+      "bestmove": "a2a3",
+      "terminal": false,
+      "simulations": 1454,
+      "value": -0.0949167981744,
+      "neural_evals": 1455,
+      "memory_bytes": 2138112,
+      "arena_nodes": 1455,
+      "max_depth": 9,
+      "peak_memory_bytes": 2138112,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1454,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 727,
+      "parallel_leaves": 1454,
+      "peak_inflight": 2,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "a1b1",
+          "action": 1,
+          "n": 1,
+          "q": -0.998356938362,
+          "prior": 3.74829642169e-06
+        },
+        {
+          "uci": "c1d2",
+          "action": 139,
+          "n": 1,
+          "q": -0.960764348507,
+          "prior": 3.56633950105e-06
+        },
+        {
+          "uci": "c1e3",
+          "action": 148,
+          "n": 1,
+          "q": -0.943477571011,
+          "prior": 2.21395976041e-06
+        },
+        {
+          "uci": "c1f4",
+          "action": 157,
+          "n": 217,
+          "q": -0.182118490338,
+          "prior": 0.533501803875
+        },
+        {
+          "uci": "c1g5",
+          "action": 166,
+          "n": 1,
+          "q": -0.980128347874,
+          "prior": 0.000657709490042
+        },
+        {
+          "uci": "c1h6",
+          "action": 175,
+          "n": 357,
+          "q": 0.00296002975665,
+          "prior": 0.0698307454586
+        },
+        {
+          "uci": "d1c2",
+          "action": 202,
+          "n": 1,
+          "q": -0.969068527222,
+          "prior": 0.000274213467492
+        },
+        {
+          "uci": "d1b3",
+          "action": 209,
+          "n": 1,
+          "q": -0.961581885815,
+          "prior": 1.99940501489e-07
+        },
+        {
+          "uci": "d1a4",
+          "action": 216,
+          "n": 1,
+          "q": -0.976658761501,
+          "prior": 3.47702552972e-07
+        },
+        {
+          "uci": "d1d2",
+          "action": 203,
+          "n": 1,
+          "q": -0.989908695221,
+          "prior": 1.40515758176e-05
+        },
+        {
+          "uci": "d1d3",
+          "action": 211,
+          "n": 1,
+          "q": -0.984103381634,
+          "prior": 1.63419354067e-05
+        },
+        {
+          "uci": "e1d2",
+          "action": 267,
+          "n": 1,
+          "q": -0.999415099621,
+          "prior": 0.00337470928207
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.980233132839,
+          "prior": 9.99074545689e-05
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 159,
+          "q": -0.101102717221,
+          "prior": 0.075762681663
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 389,
+          "q": -0.05896955356,
+          "prior": 0.0438680276275
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 1,
+          "q": -0.91754335165,
+          "prior": 6.86781186232e-06
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 1,
+          "q": -0.95863622427,
+          "prior": 3.51907203822e-07
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 1,
+          "q": -0.963079214096,
+          "prior": 2.07897005566e-06
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 1,
+          "q": -0.991600096226,
+          "prior": 0.00745154265314
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 236,
+          "q": -0.104616045952,
+          "prior": 0.130216181278
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 1,
+          "q": -0.965277612209,
+          "prior": 9.11046299734e-07
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 1,
+          "q": -0.969866037369,
+          "prior": 2.08221521802e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 1,
+          "q": -0.972713708878,
+          "prior": 2.21895243158e-06
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.988089978695,
+          "prior": 0.000596018217038
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 1,
+          "q": -0.965590059757,
+          "prior": 4.17446062784e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 1,
+          "q": -0.976520359516,
+          "prior": 3.29308227265e-06
+        },
+        {
+          "uci": "c3d5",
+          "action": 1187,
+          "n": 1,
+          "q": -0.96319258213,
+          "prior": 9.94351739791e-06
+        },
+        {
+          "uci": "c3e4",
+          "action": 1180,
+          "n": 1,
+          "q": -0.904392898083,
+          "prior": 0.000150117077283
+        },
+        {
+          "uci": "c3b5",
+          "action": 1185,
+          "n": 1,
+          "q": -0.957513988018,
+          "prior": 0.0310876499861
+        },
+        {
+          "uci": "c3a4",
+          "action": 1176,
+          "n": 1,
+          "q": -0.956914246082,
+          "prior": 1.74230376615e-06
+        },
+        {
+          "uci": "c3b1",
+          "action": 1153,
+          "n": 1,
+          "q": -0.911060452461,
+          "prior": 6.34940420241e-08
+        },
+        {
+          "uci": "c4c5",
+          "action": 1698,
+          "n": 1,
+          "q": -0.981296658516,
+          "prior": 4.01847137255e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 69,
+          "q": -0.141379475594,
+          "prior": 0.103014715016
+        }
+      ],
+      "selected": {
+        "uci": "a2a3",
+        "action": 528,
+        "n": 389,
+        "q": -0.05896955356,
+        "prior": 0.0438680276275
+      },
+      "top5": [
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 389,
+          "q": -0.05896955356,
+          "prior": 0.0438680276275
+        },
+        {
+          "uci": "c1h6",
+          "action": 175,
+          "n": 357,
+          "q": 0.00296002975665,
+          "prior": 0.0698307454586
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 236,
+          "q": -0.104616045952,
+          "prior": 0.130216181278
+        },
+        {
+          "uci": "c1f4",
+          "action": 157,
+          "n": 217,
+          "q": -0.182118490338,
+          "prior": 0.533501803875
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 159,
+          "q": -0.101102717221,
+          "prior": 0.075762681663
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1454 time 30 nps 48466 score cp -37 pv a2a3"
+  },
+  {
+    "config": "parallel",
+    "opening": "QueensGambit",
+    "repeat": 2,
+    "move": "a2a3",
+    "elapsed_ms": 30.24931799973274,
+    "detail": {
+      "bestmove": "a2a3",
+      "terminal": false,
+      "simulations": 1638,
+      "value": -0.119736164808,
+      "neural_evals": 1639,
+      "memory_bytes": 2138112,
+      "arena_nodes": 1639,
+      "max_depth": 9,
+      "peak_memory_bytes": 2138112,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1638,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 819,
+      "parallel_leaves": 1638,
+      "peak_inflight": 2,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "a1b1",
+          "action": 1,
+          "n": 1,
+          "q": -0.998356938362,
+          "prior": 3.74829642169e-06
+        },
+        {
+          "uci": "c1d2",
+          "action": 139,
+          "n": 1,
+          "q": -0.960764348507,
+          "prior": 3.56633950105e-06
+        },
+        {
+          "uci": "c1e3",
+          "action": 148,
+          "n": 1,
+          "q": -0.943477571011,
+          "prior": 2.21395976041e-06
+        },
+        {
+          "uci": "c1f4",
+          "action": 157,
+          "n": 245,
+          "q": -0.210906967521,
+          "prior": 0.533501803875
+        },
+        {
+          "uci": "c1g5",
+          "action": 166,
+          "n": 1,
+          "q": -0.980128347874,
+          "prior": 0.000657709490042
+        },
+        {
+          "uci": "c1h6",
+          "action": 175,
+          "n": 438,
+          "q": -0.089044816792,
+          "prior": 0.0698307454586
+        },
+        {
+          "uci": "d1c2",
+          "action": 202,
+          "n": 1,
+          "q": -0.969068527222,
+          "prior": 0.000274213467492
+        },
+        {
+          "uci": "d1b3",
+          "action": 209,
+          "n": 1,
+          "q": -0.961581885815,
+          "prior": 1.99940501489e-07
+        },
+        {
+          "uci": "d1a4",
+          "action": 216,
+          "n": 1,
+          "q": -0.976658761501,
+          "prior": 3.47702552972e-07
+        },
+        {
+          "uci": "d1d2",
+          "action": 203,
+          "n": 1,
+          "q": -0.989908695221,
+          "prior": 1.40515758176e-05
+        },
+        {
+          "uci": "d1d3",
+          "action": 211,
+          "n": 1,
+          "q": -0.984103381634,
+          "prior": 1.63419354067e-05
+        },
+        {
+          "uci": "e1d2",
+          "action": 267,
+          "n": 1,
+          "q": -0.999415099621,
+          "prior": 0.00337470928207
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.980233132839,
+          "prior": 9.99074545689e-05
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 161,
+          "q": -0.111763641238,
+          "prior": 0.075762681663
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 444,
+          "q": -0.046958964318,
+          "prior": 0.0438680276275
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 1,
+          "q": -0.91754335165,
+          "prior": 6.86781186232e-06
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 1,
+          "q": -0.95863622427,
+          "prior": 3.51907203822e-07
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 1,
+          "q": -0.963079214096,
+          "prior": 2.07897005566e-06
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 1,
+          "q": -0.991600096226,
+          "prior": 0.00745154265314
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 238,
+          "q": -0.112083487213,
+          "prior": 0.130216181278
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 1,
+          "q": -0.965277612209,
+          "prior": 9.11046299734e-07
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 1,
+          "q": -0.969866037369,
+          "prior": 2.08221521802e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 1,
+          "q": -0.972713708878,
+          "prior": 2.21895243158e-06
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.988089978695,
+          "prior": 0.000596018217038
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 1,
+          "q": -0.965590059757,
+          "prior": 4.17446062784e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 1,
+          "q": -0.976520359516,
+          "prior": 3.29308227265e-06
+        },
+        {
+          "uci": "c3d5",
+          "action": 1187,
+          "n": 1,
+          "q": -0.96319258213,
+          "prior": 9.94351739791e-06
+        },
+        {
+          "uci": "c3e4",
+          "action": 1180,
+          "n": 1,
+          "q": -0.904392898083,
+          "prior": 0.000150117077283
+        },
+        {
+          "uci": "c3b5",
+          "action": 1185,
+          "n": 15,
+          "q": -0.205719396472,
+          "prior": 0.0310876499861
+        },
+        {
+          "uci": "c3a4",
+          "action": 1176,
+          "n": 1,
+          "q": -0.956914246082,
+          "prior": 1.74230376615e-06
+        },
+        {
+          "uci": "c3b1",
+          "action": 1153,
+          "n": 1,
+          "q": -0.911060452461,
+          "prior": 6.34940420241e-08
+        },
+        {
+          "uci": "c4c5",
+          "action": 1698,
+          "n": 1,
+          "q": -0.981296658516,
+          "prior": 4.01847137255e-06
+        },
+        {
+          "uci": "c4d5",
+          "action": 1699,
+          "n": 71,
+          "q": -0.165058404207,
+          "prior": 0.103014715016
+        }
+      ],
+      "selected": {
+        "uci": "a2a3",
+        "action": 528,
+        "n": 444,
+        "q": -0.046958964318,
+        "prior": 0.0438680276275
+      },
+      "top5": [
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 444,
+          "q": -0.046958964318,
+          "prior": 0.0438680276275
+        },
+        {
+          "uci": "c1h6",
+          "action": 175,
+          "n": 438,
+          "q": -0.089044816792,
+          "prior": 0.0698307454586
+        },
+        {
+          "uci": "c1f4",
+          "action": 157,
+          "n": 245,
+          "q": -0.210906967521,
+          "prior": 0.533501803875
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 238,
+          "q": -0.112083487213,
+          "prior": 0.130216181278
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 161,
+          "q": -0.111763641238,
+          "prior": 0.075762681663
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1638 time 30 nps 54600 score cp -47 pv a2a3"
+  },
+  {
+    "config": "parallel",
+    "opening": "RookEnding",
+    "repeat": 0,
+    "move": "f3e4",
+    "elapsed_ms": 30.181485999946744,
+    "detail": {
+      "bestmove": "f3e4",
+      "terminal": false,
+      "simulations": 1636,
+      "value": 0.360037386417,
+      "neural_evals": 1637,
+      "memory_bytes": 1089536,
+      "arena_nodes": 1637,
+      "max_depth": 13,
+      "peak_memory_bytes": 1089536,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1636,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 818,
+      "parallel_leaves": 1636,
+      "peak_inflight": 2,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 1,
+          "q": -0.884562909603,
+          "prior": 0.00235529174097
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 290,
+          "q": 0.291808575392,
+          "prior": 0.45626142621
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 1,
+          "q": -0.826753735542,
+          "prior": 0.0370036326349
+        },
+        {
+          "uci": "f3e4",
+          "action": 1372,
+          "n": 1134,
+          "q": 0.38692715764,
+          "prior": 0.27929520607
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 210,
+          "q": 0.320631533861,
+          "prior": 0.225084528327
+        }
+      ],
+      "selected": {
+        "uci": "f3e4",
+        "action": 1372,
+        "n": 1134,
+        "q": 0.38692715764,
+        "prior": 0.27929520607
+      },
+      "top5": [
+        {
+          "uci": "f3e4",
+          "action": 1372,
+          "n": 1134,
+          "q": 0.38692715764,
+          "prior": 0.27929520607
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 290,
+          "q": 0.291808575392,
+          "prior": 0.45626142621
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 210,
+          "q": 0.320631533861,
+          "prior": 0.225084528327
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 1,
+          "q": -0.826753735542,
+          "prior": 0.0370036326349
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 1,
+          "q": -0.884562909603,
+          "prior": 0.00235529174097
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1636 time 30 nps 54533 score cp 144 pv f3e4"
+  },
+  {
+    "config": "parallel",
+    "opening": "RookEnding",
+    "repeat": 1,
+    "move": "f3e4",
+    "elapsed_ms": 30.20310800002335,
+    "detail": {
+      "bestmove": "f3e4",
+      "terminal": false,
+      "simulations": 1651,
+      "value": 0.357476145029,
+      "neural_evals": 1652,
+      "memory_bytes": 1089536,
+      "arena_nodes": 1652,
+      "max_depth": 13,
+      "peak_memory_bytes": 1089536,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1651,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 826,
+      "parallel_leaves": 1651,
+      "peak_inflight": 2,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 1,
+          "q": -0.884562909603,
+          "prior": 0.00235529174097
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 290,
+          "q": 0.291808575392,
+          "prior": 0.45626142621
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 1,
+          "q": -0.826753735542,
+          "prior": 0.0370036326349
+        },
+        {
+          "uci": "f3e4",
+          "action": 1372,
+          "n": 1149,
+          "q": 0.382895857096,
+          "prior": 0.27929520607
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 210,
+          "q": 0.320631533861,
+          "prior": 0.225084528327
+        }
+      ],
+      "selected": {
+        "uci": "f3e4",
+        "action": 1372,
+        "n": 1149,
+        "q": 0.382895857096,
+        "prior": 0.27929520607
+      },
+      "top5": [
+        {
+          "uci": "f3e4",
+          "action": 1372,
+          "n": 1149,
+          "q": 0.382895857096,
+          "prior": 0.27929520607
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 290,
+          "q": 0.291808575392,
+          "prior": 0.45626142621
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 210,
+          "q": 0.320631533861,
+          "prior": 0.225084528327
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 1,
+          "q": -0.826753735542,
+          "prior": 0.0370036326349
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 1,
+          "q": -0.884562909603,
+          "prior": 0.00235529174097
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1651 time 30 nps 55033 score cp 142 pv f3e4"
+  },
+  {
+    "config": "parallel",
+    "opening": "RookEnding",
+    "repeat": 2,
+    "move": "f3e4",
+    "elapsed_ms": 30.211280999992596,
+    "detail": {
+      "bestmove": "f3e4",
+      "terminal": false,
+      "simulations": 1594,
+      "value": 0.361734390259,
+      "neural_evals": 1595,
+      "memory_bytes": 1089536,
+      "arena_nodes": 1595,
+      "max_depth": 11,
+      "peak_memory_bytes": 1089536,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1594,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 797,
+      "parallel_leaves": 1594,
+      "peak_inflight": 2,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 1,
+          "q": -0.884562909603,
+          "prior": 0.00235529174097
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 290,
+          "q": 0.291808575392,
+          "prior": 0.45626142621
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 1,
+          "q": -0.826753735542,
+          "prior": 0.0370036326349
+        },
+        {
+          "uci": "f3e4",
+          "action": 1372,
+          "n": 1092,
+          "q": 0.390438497066,
+          "prior": 0.27929520607
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 210,
+          "q": 0.320631533861,
+          "prior": 0.225084528327
+        }
+      ],
+      "selected": {
+        "uci": "f3e4",
+        "action": 1372,
+        "n": 1092,
+        "q": 0.390438497066,
+        "prior": 0.27929520607
+      },
+      "top5": [
+        {
+          "uci": "f3e4",
+          "action": 1372,
+          "n": 1092,
+          "q": 0.390438497066,
+          "prior": 0.27929520607
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 290,
+          "q": 0.291808575392,
+          "prior": 0.45626142621
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 210,
+          "q": 0.320631533861,
+          "prior": 0.225084528327
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 1,
+          "q": -0.826753735542,
+          "prior": 0.0370036326349
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 1,
+          "q": -0.884562909603,
+          "prior": 0.00235529174097
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1594 time 30 nps 53133 score cp 144 pv f3e4"
+  },
+  {
+    "config": "parallel",
+    "opening": "PawnEnding",
+    "repeat": 0,
+    "move": "f3g2",
+    "elapsed_ms": 30.1947250000012,
+    "detail": {
+      "bestmove": "f3g2",
+      "terminal": false,
+      "simulations": 1584,
+      "value": 0.305827111006,
+      "neural_evals": 1582,
+      "memory_bytes": 565248,
+      "arena_nodes": 1583,
+      "max_depth": 19,
+      "peak_memory_bytes": 565248,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1584,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 792,
+      "parallel_leaves": 1581,
+      "peak_inflight": 2,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00290861027315
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00102880538907
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00261701922864
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 1410,
+          "q": 0.328497081995,
+          "prior": 0.600304722786
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 89,
+          "q": 0.158708021045,
+          "prior": 0.0524449683726
+        },
+        {
+          "uci": "f3f4",
+          "action": 1373,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00156575313304
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 85,
+          "q": 0.0838147103786,
+          "prior": 0.336815834045
+        },
+        {
+          "uci": "g3g4",
+          "action": 1438,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00231422297657
+        }
+      ],
+      "selected": {
+        "uci": "f3g2",
+        "action": 1358,
+        "n": 1410,
+        "q": 0.328497081995,
+        "prior": 0.600304722786
+      },
+      "top5": [
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 1410,
+          "q": 0.328497081995,
+          "prior": 0.600304722786
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 89,
+          "q": 0.158708021045,
+          "prior": 0.0524449683726
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 85,
+          "q": 0.0838147103786,
+          "prior": 0.336815834045
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00290861027315
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00261701922864
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1584 time 30 nps 52800 score cp 122 pv f3g2"
+  },
+  {
+    "config": "parallel",
+    "opening": "PawnEnding",
+    "repeat": 1,
+    "move": "f3g2",
+    "elapsed_ms": 30.238682000344852,
+    "detail": {
+      "bestmove": "f3g2",
+      "terminal": false,
+      "simulations": 1490,
+      "value": 0.308221280575,
+      "neural_evals": 1491,
+      "memory_bytes": 565248,
+      "arena_nodes": 1491,
+      "max_depth": 19,
+      "peak_memory_bytes": 565248,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1490,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 745,
+      "parallel_leaves": 1490,
+      "peak_inflight": 2,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00290861027315
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00102880538907
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00261701922864
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 1316,
+          "q": 0.332827091217,
+          "prior": 0.600304722786
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 89,
+          "q": 0.158708021045,
+          "prior": 0.0524449683726
+        },
+        {
+          "uci": "f3f4",
+          "action": 1373,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00156575313304
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 85,
+          "q": 0.0838147103786,
+          "prior": 0.336815834045
+        },
+        {
+          "uci": "g3g4",
+          "action": 1438,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00231422297657
+        }
+      ],
+      "selected": {
+        "uci": "f3g2",
+        "action": 1358,
+        "n": 1316,
+        "q": 0.332827091217,
+        "prior": 0.600304722786
+      },
+      "top5": [
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 1316,
+          "q": 0.332827091217,
+          "prior": 0.600304722786
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 89,
+          "q": 0.158708021045,
+          "prior": 0.0524449683726
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 85,
+          "q": 0.0838147103786,
+          "prior": 0.336815834045
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00290861027315
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00261701922864
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1490 time 30 nps 49666 score cp 123 pv f3g2"
+  },
+  {
+    "config": "parallel",
+    "opening": "PawnEnding",
+    "repeat": 2,
+    "move": "f3g2",
+    "elapsed_ms": 30.25522699999783,
+    "detail": {
+      "bestmove": "f3g2",
+      "terminal": false,
+      "simulations": 1616,
+      "value": 0.303333818913,
+      "neural_evals": 1614,
+      "memory_bytes": 565248,
+      "arena_nodes": 1615,
+      "max_depth": 19,
+      "peak_memory_bytes": 565248,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 1616,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 0,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 808,
+      "parallel_leaves": 1613,
+      "peak_inflight": 2,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00290861027315
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00102880538907
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00261701922864
+        },
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 1442,
+          "q": 0.325199842453,
+          "prior": 0.600304722786
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 89,
+          "q": 0.158708021045,
+          "prior": 0.0524449683726
+        },
+        {
+          "uci": "f3f4",
+          "action": 1373,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00156575313304
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 85,
+          "q": 0.0838147103786,
+          "prior": 0.336815834045
+        },
+        {
+          "uci": "g3g4",
+          "action": 1438,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00231422297657
+        }
+      ],
+      "selected": {
+        "uci": "f3g2",
+        "action": 1358,
+        "n": 1442,
+        "q": 0.325199842453,
+        "prior": 0.600304722786
+      },
+      "top5": [
+        {
+          "uci": "f3g2",
+          "action": 1358,
+          "n": 1442,
+          "q": 0.325199842453,
+          "prior": 0.600304722786
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 89,
+          "q": 0.158708021045,
+          "prior": 0.0524449683726
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 85,
+          "q": 0.0838147103786,
+          "prior": 0.336815834045
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00290861027315
+        },
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00261701922864
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 1616 time 30 nps 53866 score cp 121 pv f3g2"
+  }
+]

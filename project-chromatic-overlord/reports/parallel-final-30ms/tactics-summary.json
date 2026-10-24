@@ -1,0 +1,10 @@
+{
+  "disabled": {
+    "passed": 3,
+    "total": 8
+  },
+  "parallel": {
+    "passed": 3,
+    "total": 8
+  }
+}

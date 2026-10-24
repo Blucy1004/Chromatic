@@ -39,8 +39,12 @@ def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def save(path,data):
  path=Path(path);content=json.dumps(data,indent=2,allow_nan=False)+'\n'
  if path.name.endswith('-games.json'):
-  path.with_suffix('.json.gz').write_bytes(gzip.compress(content.encode(),compresslevel=3,mtime=0))
- else:path.write_text(content)
+  path=path.with_suffix('.json.gz');payload=gzip.compress(content.encode(),compresslevel=3,mtime=0)
+ else:payload=content.encode()
+ temporary=path.with_name(path.name+'.tmp')
+ with temporary.open('wb') as stream:stream.write(payload);stream.flush();os.fsync(stream.fileno())
+ os.replace(temporary,path)
+
 class Engine:
  def __init__(self,path,options=None,model=MODEL):
   self.p=subprocess.Popen([str(path),'--model',str(model)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,bufsize=1)
@@ -128,6 +132,7 @@ def main():
  p=argparse.ArgumentParser();p.add_argument('--suite',choices=['main','holdout'],default='main');p.add_argument('--engine',type=Path,required=True);p.add_argument('--baseline',type=Path,required=True)
  p.add_argument('--out',type=Path,required=True);p.add_argument('--ms',type=int,default=30);p.add_argument('--max-plies',type=int,default=240)
  p.add_argument('--configs',nargs='+',default=list(CONFIGS));p.add_argument('--skip-matches',action='store_true');a=p.parse_args();a.out.mkdir(parents=True,exist_ok=True)
+ if any(a.out.iterdir()):raise FileExistsError('Choose a fresh output directory; previous experiments are preserved')
  if a.suite=='holdout':OPENINGS=HOLDOUT_OPENINGS
  metadata={'driver_sha256':sha(Path(__file__)), 'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'cpu_affinity':sorted(os.sched_getaffinity(0)) if hasattr(os,'sched_getaffinity') else None,'search_seed':1,'platform':platform.platform(),'python':platform.python_version(),'model':str(MODEL),'model_sha256':sha(MODEL),
   'engine_sha256':sha(a.engine),'baseline_sha256':sha(a.baseline),'time_control':f'{a.ms}ms per move','max_plies':a.max_plies,'proof_nodes':0,'configs':CONFIGS,'openings':OPENINGS,'tactics':TACTICS}
@@ -169,7 +174,7 @@ def main():
   summaries[name]=stats(games);save(a.out/'summary.json',summaries)
  with (a.out/'summary.csv').open('w',newline='') as f:
   fields=['config','games','finished','unfinished','wins','draws','losses','score','complete_opening_pairs','promote']
-  writer=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore');writer.writeheader()
+  writer=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore',lineterminator='\n');writer.writeheader()
   for k,v in summaries.items():writer.writerow({'config':k,**v})
  save(a.out/'tactics-summary.json',{name:{'passed':sum(r['passed'] for r in tactics if r['config']==name),'total':sum(r['config']==name for r in tactics)} for name in a.configs})
 if __name__=='__main__':main()

@@ -1,0 +1,42 @@
+{
+  "rows": [
+    {
+      "config": "disabled",
+      "wins": 0,
+      "draws": 8,
+      "losses": 0,
+      "unfinished": 0,
+      "score": 0.5,
+      "tactics_passed": 3,
+      "tactics_total": 8,
+      "median_search_nodes": 1431.5,
+      "median_wall_ms": 30.24349649990654,
+      "max_wall_ms": 30.337892999796168,
+      "median_verification_nodes": 0.0,
+      "fully_compared_searches": 0,
+      "changed_search_choices": 0,
+      "max_concurrent_leaves": 0,
+      "median_parallel_batches": 0.0
+    },
+    {
+      "config": "parallel",
+      "wins": 0,
+      "draws": 8,
+      "losses": 0,
+      "unfinished": 0,
+      "score": 0.5,
+      "tactics_passed": 3,
+      "tactics_total": 8,
+      "median_search_nodes": 1610.0,
+      "median_wall_ms": 30.23780650005392,
+      "max_wall_ms": 30.31760400017447,
+      "median_verification_nodes": 0.0,
+      "fully_compared_searches": 0,
+      "changed_search_choices": 0,
+      "max_concurrent_leaves": 2,
+      "median_parallel_batches": 805.0
+    }
+  ],
+  "validated_pgn_games": 16,
+  "method": "12 timed position searches per configuration; 8 paired diagnostic tactics; not a rating benchmark"
+}

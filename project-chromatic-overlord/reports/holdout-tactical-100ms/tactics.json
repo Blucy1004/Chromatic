@@ -1,0 +1,1459 @@
+[
+  {
+    "config": "tactical",
+    "label": "mate_white",
+    "passed": true,
+    "move": "g6g7",
+    "elapsed_ms": 75.60984700012341,
+    "detail": {
+      "bestmove": "g6g7",
+      "terminal": false,
+      "simulations": 3454,
+      "value": 1,
+      "neural_evals": 3039,
+      "memory_bytes": 2179072,
+      "arena_nodes": 3075,
+      "max_depth": 22,
+      "peak_memory_bytes": 2179072,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 3454,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 21,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": true,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": true,
+      "proof_plies": 1,
+      "visits": [
+        {
+          "uci": "f6e5",
+          "action": 2916,
+          "n": 34,
+          "q": 0,
+          "prior": 0.271967619658
+        },
+        {
+          "uci": "f6f5",
+          "action": 2917,
+          "n": 4,
+          "q": 0,
+          "prior": 0.0385226756334
+        },
+        {
+          "uci": "f6g5",
+          "action": 2918,
+          "n": 0,
+          "q": 0,
+          "prior": 0.0001307343191
+        },
+        {
+          "uci": "f6e6",
+          "action": 2924,
+          "n": 0,
+          "q": 0,
+          "prior": 3.11033072649e-05
+        },
+        {
+          "uci": "f6e7",
+          "action": 2932,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00727524282411
+        },
+        {
+          "uci": "f6f7",
+          "action": 2933,
+          "n": 6,
+          "q": 0,
+          "prior": 0.0517144687474
+        },
+        {
+          "uci": "g6f5",
+          "action": 2981,
+          "n": 1,
+          "q": -0.197183519602,
+          "prior": 0.0155894337222
+        },
+        {
+          "uci": "g6e4",
+          "action": 2972,
+          "n": 10,
+          "q": 0.0976854860783,
+          "prior": 0.0698145851493
+        },
+        {
+          "uci": "g6d3",
+          "action": 2963,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00218345643952
+        },
+        {
+          "uci": "g6c2",
+          "action": 2954,
+          "n": 48,
+          "q": 0.35759562254,
+          "prior": 0.183224692941
+        },
+        {
+          "uci": "g6b1",
+          "action": 2945,
+          "n": 3267,
+          "q": 0.684612512589,
+          "prior": 0.118866965175
+        },
+        {
+          "uci": "g6g5",
+          "action": 2982,
+          "n": 0,
+          "q": 0,
+          "prior": 7.491697761e-05
+        },
+        {
+          "uci": "g6g4",
+          "action": 2974,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000102565914858
+        },
+        {
+          "uci": "g6g3",
+          "action": 2966,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000278188468656
+        },
+        {
+          "uci": "g6g2",
+          "action": 2958,
+          "n": 0,
+          "q": 0,
+          "prior": 3.77345895686e-05
+        },
+        {
+          "uci": "g6g1",
+          "action": 2950,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00110381003469
+        },
+        {
+          "uci": "g6h5",
+          "action": 2983,
+          "n": 61,
+          "q": 0.474532276392,
+          "prior": 0.148097634315
+        },
+        {
+          "uci": "g6h6",
+          "action": 2991,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000152729306137
+        },
+        {
+          "uci": "g6f7",
+          "action": 2997,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000489216821734
+        },
+        {
+          "uci": "g6e8",
+          "action": 3004,
+          "n": 23,
+          "q": 0.351918131113,
+          "prior": 0.0881554856896
+        },
+        {
+          "uci": "g6g7",
+          "action": 2998,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000814925704617
+        },
+        {
+          "uci": "g6g8",
+          "action": 3006,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000944898172747
+        },
+        {
+          "uci": "g6h7",
+          "action": 2999,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000427001505159
+        }
+      ],
+      "selected": {
+        "uci": "g6g7",
+        "action": 2998,
+        "n": 0,
+        "q": 0,
+        "prior": 0.000814925704617
+      },
+      "top5": [
+        {
+          "uci": "g6b1",
+          "action": 2945,
+          "n": 3267,
+          "q": 0.684612512589,
+          "prior": 0.118866965175
+        },
+        {
+          "uci": "g6h5",
+          "action": 2983,
+          "n": 61,
+          "q": 0.474532276392,
+          "prior": 0.148097634315
+        },
+        {
+          "uci": "g6c2",
+          "action": 2954,
+          "n": 48,
+          "q": 0.35759562254,
+          "prior": 0.183224692941
+        },
+        {
+          "uci": "f6e5",
+          "action": 2916,
+          "n": 34,
+          "q": 0,
+          "prior": 0.271967619658
+        },
+        {
+          "uci": "g6e8",
+          "action": 3004,
+          "n": 23,
+          "q": 0.351918131113,
+          "prior": 0.0881554856896
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 3454 time 75 nps 46053 score cp 400 pv g6g7"
+  },
+  {
+    "config": "tactical",
+    "label": "mate_black",
+    "passed": true,
+    "move": "g3g2",
+    "elapsed_ms": 75.38321599986375,
+    "detail": {
+      "bestmove": "g3g2",
+      "terminal": false,
+      "simulations": 358925,
+      "value": 1,
+      "neural_evals": 347,
+      "memory_bytes": 141312,
+      "arena_nodes": 366,
+      "max_depth": 7,
+      "peak_memory_bytes": 141312,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 358925,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 9,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": true,
+      "proof_plies": 1,
+      "visits": [
+        {
+          "uci": "f3e2",
+          "action": 1356,
+          "n": 1,
+          "q": 0,
+          "prior": 0.00194637663662
+        },
+        {
+          "uci": "f3f2",
+          "action": 1357,
+          "n": 11,
+          "q": 0,
+          "prior": 0.0133436396718
+        },
+        {
+          "uci": "f3e3",
+          "action": 1364,
+          "n": 21,
+          "q": 0,
+          "prior": 0.0235136821866
+        },
+        {
+          "uci": "f3e4",
+          "action": 1372,
+          "n": 29,
+          "q": 0,
+          "prior": 0.0324161462486
+        },
+        {
+          "uci": "f3f4",
+          "action": 1373,
+          "n": 2,
+          "q": 0,
+          "prior": 0.00223989202641
+        },
+        {
+          "uci": "f3g4",
+          "action": 1374,
+          "n": 206,
+          "q": 0,
+          "prior": 0.230146959424
+        },
+        {
+          "uci": "g3f2",
+          "action": 1421,
+          "n": 13,
+          "q": 0,
+          "prior": 0.0150424567983
+        },
+        {
+          "uci": "g3e1",
+          "action": 1412,
+          "n": 7,
+          "q": -0.552785933018,
+          "prior": 0.0128676798195
+        },
+        {
+          "uci": "g3g2",
+          "action": 1422,
+          "n": 326999,
+          "q": 1,
+          "prior": 0.00786449108273
+        },
+        {
+          "uci": "g3g1",
+          "action": 1414,
+          "n": 1,
+          "q": -0.744243264198,
+          "prior": 0.00340818311088
+        },
+        {
+          "uci": "g3h2",
+          "action": 1423,
+          "n": 10,
+          "q": -0.0505306199193,
+          "prior": 0.0123117724434
+        },
+        {
+          "uci": "g3h3",
+          "action": 1431,
+          "n": 9,
+          "q": -0.692458152771,
+          "prior": 0.0179118756205
+        },
+        {
+          "uci": "g3f4",
+          "action": 1437,
+          "n": 3,
+          "q": -0.557934165001,
+          "prior": 0.00609157374129
+        },
+        {
+          "uci": "g3e5",
+          "action": 1444,
+          "n": 4,
+          "q": -0.450660735369,
+          "prior": 0.0072816722095
+        },
+        {
+          "uci": "g3d6",
+          "action": 1451,
+          "n": 5,
+          "q": -0.557910919189,
+          "prior": 0.00922685582191
+        },
+        {
+          "uci": "g3c7",
+          "action": 1458,
+          "n": 3,
+          "q": -0.31428745389,
+          "prior": 0.00481394259259
+        },
+        {
+          "uci": "g3b8",
+          "action": 1465,
+          "n": 4,
+          "q": -0.474617958069,
+          "prior": 0.00742287095636
+        },
+        {
+          "uci": "g3g4",
+          "action": 1438,
+          "n": 6,
+          "q": -0.502946376801,
+          "prior": 0.009765422903
+        },
+        {
+          "uci": "g3g5",
+          "action": 1446,
+          "n": 10665,
+          "q": 0.986493289471,
+          "prior": 0.160485222936
+        },
+        {
+          "uci": "g3g6",
+          "action": 1454,
+          "n": 2837,
+          "q": 0.96436214447,
+          "prior": 0.110838748515
+        },
+        {
+          "uci": "g3g7",
+          "action": 1462,
+          "n": 7335,
+          "q": 0.984197735786,
+          "prior": 0.128745138645
+        },
+        {
+          "uci": "g3g8",
+          "action": 1470,
+          "n": 10749,
+          "q": 0.985553920269,
+          "prior": 0.173082888126
+        },
+        {
+          "uci": "g3h4",
+          "action": 1439,
+          "n": 5,
+          "q": -0.668971598148,
+          "prior": 0.00923256482929
+        }
+      ],
+      "selected": {
+        "uci": "g3g2",
+        "action": 1422,
+        "n": 326999,
+        "q": 1,
+        "prior": 0.00786449108273
+      },
+      "top5": [
+        {
+          "uci": "g3g2",
+          "action": 1422,
+          "n": 326999,
+          "q": 1,
+          "prior": 0.00786449108273
+        },
+        {
+          "uci": "g3g8",
+          "action": 1470,
+          "n": 10749,
+          "q": 0.985553920269,
+          "prior": 0.173082888126
+        },
+        {
+          "uci": "g3g5",
+          "action": 1446,
+          "n": 10665,
+          "q": 0.986493289471,
+          "prior": 0.160485222936
+        },
+        {
+          "uci": "g3g7",
+          "action": 1462,
+          "n": 7335,
+          "q": 0.984197735786,
+          "prior": 0.128745138645
+        },
+        {
+          "uci": "g3g6",
+          "action": 1454,
+          "n": 2837,
+          "q": 0.96436214447,
+          "prior": 0.110838748515
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 358925 time 75 nps 4785666 score cp 400 pv g3g2"
+  },
+  {
+    "config": "tactical",
+    "label": "back_rank",
+    "passed": true,
+    "move": "e1e8",
+    "elapsed_ms": 75.41059699997277,
+    "detail": {
+      "bestmove": "e1e8",
+      "terminal": false,
+      "simulations": 315750,
+      "value": 1,
+      "neural_evals": 1193,
+      "memory_bytes": 1089536,
+      "arena_nodes": 1195,
+      "max_depth": 23,
+      "peak_memory_bytes": 1089536,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 315750,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 12,
+      "verification_evals": 0,
+      "verified_candidates": 0,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": true,
+      "proof_plies": 1,
+      "visits": [
+        {
+          "uci": "e1d1",
+          "action": 259,
+          "n": 1,
+          "q": -0.663195014,
+          "prior": 0.0022583284881
+        },
+        {
+          "uci": "e1c1",
+          "action": 258,
+          "n": 1,
+          "q": -0.48123139143,
+          "prior": 0.0013053790899
+        },
+        {
+          "uci": "e1b1",
+          "action": 257,
+          "n": 1,
+          "q": -0.951682209969,
+          "prior": 0.00387911358848
+        },
+        {
+          "uci": "e1a1",
+          "action": 256,
+          "n": 788,
+          "q": 0.386804550886,
+          "prior": 0.574030101299
+        },
+        {
+          "uci": "e1f1",
+          "action": 261,
+          "n": 0,
+          "q": 0,
+          "prior": 2.09571226151e-05
+        },
+        {
+          "uci": "e1e2",
+          "action": 268,
+          "n": 0,
+          "q": 0,
+          "prior": 4.25450562034e-05
+        },
+        {
+          "uci": "e1e3",
+          "action": 276,
+          "n": 17,
+          "q": 0.326720416546,
+          "prior": 0.0124296564609
+        },
+        {
+          "uci": "e1e4",
+          "action": 284,
+          "n": 33,
+          "q": -0.232487127185,
+          "prior": 0.0487279854715
+        },
+        {
+          "uci": "e1e5",
+          "action": 292,
+          "n": 166,
+          "q": 0.237492740154,
+          "prior": 0.150273472071
+        },
+        {
+          "uci": "e1e6",
+          "action": 300,
+          "n": 178,
+          "q": 0.154027625918,
+          "prior": 0.178086355329
+        },
+        {
+          "uci": "e1e7",
+          "action": 308,
+          "n": 8,
+          "q": 0.0664812251925,
+          "prior": 0.0098017686978
+        },
+        {
+          "uci": "e1e8",
+          "action": 316,
+          "n": 314557,
+          "q": 1,
+          "prior": 0.0176097415388
+        },
+        {
+          "uci": "g1f1",
+          "action": 389,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00018228670524
+        },
+        {
+          "uci": "g1h1",
+          "action": 391,
+          "n": 0,
+          "q": 0,
+          "prior": 3.50945665559e-05
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 3.35763070325e-05
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 3.77900469175e-05
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 2.38647262449e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00115947530139
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 4.74582302559e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 1.50175574163e-05
+        }
+      ],
+      "selected": {
+        "uci": "e1e8",
+        "action": 316,
+        "n": 314557,
+        "q": 1,
+        "prior": 0.0176097415388
+      },
+      "top5": [
+        {
+          "uci": "e1e8",
+          "action": 316,
+          "n": 314557,
+          "q": 1,
+          "prior": 0.0176097415388
+        },
+        {
+          "uci": "e1a1",
+          "action": 256,
+          "n": 788,
+          "q": 0.386804550886,
+          "prior": 0.574030101299
+        },
+        {
+          "uci": "e1e6",
+          "action": 300,
+          "n": 178,
+          "q": 0.154027625918,
+          "prior": 0.178086355329
+        },
+        {
+          "uci": "e1e5",
+          "action": 292,
+          "n": 166,
+          "q": 0.237492740154,
+          "prior": 0.150273472071
+        },
+        {
+          "uci": "e1e4",
+          "action": 284,
+          "n": 33,
+          "q": -0.232487127185,
+          "prior": 0.0487279854715
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 315750 time 75 nps 4210000 score cp 400 pv e1e8"
+  },
+  {
+    "config": "tactical",
+    "label": "win_queen_white",
+    "passed": true,
+    "move": "d1d2",
+    "elapsed_ms": 75.54917600009503,
+    "detail": {
+      "bestmove": "d1d2",
+      "terminal": false,
+      "simulations": 3673,
+      "value": 0.46770426631,
+      "neural_evals": 3599,
+      "memory_bytes": 2179072,
+      "arena_nodes": 3622,
+      "max_depth": 18,
+      "peak_memory_bytes": 2179072,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 3673,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 20,
+      "verification_evals": 5,
+      "verified_candidates": 4,
+      "verification_changed": true,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "d1c1",
+          "action": 194,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000790510850493
+        },
+        {
+          "uci": "d1b1",
+          "action": 193,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00112366524991
+        },
+        {
+          "uci": "d1a1",
+          "action": 192,
+          "n": 94,
+          "q": 0.384818226099,
+          "prior": 0.109363004565
+        },
+        {
+          "uci": "d1e1",
+          "action": 196,
+          "n": 25,
+          "q": 0.262239992619,
+          "prior": 0.0655607879162
+        },
+        {
+          "uci": "d1f1",
+          "action": 197,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00131006632
+        },
+        {
+          "uci": "d1c2",
+          "action": 202,
+          "n": 128,
+          "q": 0.175127804279,
+          "prior": 0.447360396385
+        },
+        {
+          "uci": "d1b3",
+          "action": 209,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000393944530515
+        },
+        {
+          "uci": "d1a4",
+          "action": 216,
+          "n": 0,
+          "q": 0,
+          "prior": 9.3397560704e-05
+        },
+        {
+          "uci": "d1d2",
+          "action": 203,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00157736288384
+        },
+        {
+          "uci": "d1e2",
+          "action": 204,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000648588931654
+        },
+        {
+          "uci": "d1f3",
+          "action": 213,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00218704505824
+        },
+        {
+          "uci": "d1g4",
+          "action": 222,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00168245926034
+        },
+        {
+          "uci": "d1h5",
+          "action": 231,
+          "n": 3426,
+          "q": 0.48240879178,
+          "prior": 0.366798639297
+        },
+        {
+          "uci": "g1f1",
+          "action": 389,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000932070135605
+        },
+        {
+          "uci": "g1h1",
+          "action": 391,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000177986352355
+        }
+      ],
+      "selected": {
+        "uci": "d1d2",
+        "action": 203,
+        "n": 0,
+        "q": 0,
+        "prior": 0.00157736288384
+      },
+      "top5": [
+        {
+          "uci": "d1h5",
+          "action": 231,
+          "n": 3426,
+          "q": 0.48240879178,
+          "prior": 0.366798639297
+        },
+        {
+          "uci": "d1c2",
+          "action": 202,
+          "n": 128,
+          "q": 0.175127804279,
+          "prior": 0.447360396385
+        },
+        {
+          "uci": "d1a1",
+          "action": 192,
+          "n": 94,
+          "q": 0.384818226099,
+          "prior": 0.109363004565
+        },
+        {
+          "uci": "d1e1",
+          "action": 196,
+          "n": 25,
+          "q": 0.262239992619,
+          "prior": 0.0655607879162
+        },
+        {
+          "uci": "d1f3",
+          "action": 213,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00218704505824
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 3673 time 75 nps 48973 score cp 187 pv d1d2"
+  },
+  {
+    "config": "tactical",
+    "label": "win_queen_black",
+    "passed": true,
+    "move": "d8d7",
+    "elapsed_ms": 75.46605000015916,
+    "detail": {
+      "bestmove": "d8d7",
+      "terminal": false,
+      "simulations": 3708,
+      "value": -0.513317286968,
+      "neural_evals": 3644,
+      "memory_bytes": 2179072,
+      "arena_nodes": 3661,
+      "max_depth": 17,
+      "peak_memory_bytes": 2179072,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 3708,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 20,
+      "verification_evals": 5,
+      "verified_candidates": 4,
+      "verification_changed": true,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "d8c7",
+          "action": 3826,
+          "n": 1,
+          "q": -0.903669178486,
+          "prior": 0.00903381966054
+        },
+        {
+          "uci": "d8b6",
+          "action": 3817,
+          "n": 1,
+          "q": -0.838021576405,
+          "prior": 0.00143446342554
+        },
+        {
+          "uci": "d8a5",
+          "action": 3808,
+          "n": 180,
+          "q": -0.602699279785,
+          "prior": 0.227128177881
+        },
+        {
+          "uci": "d8d7",
+          "action": 3827,
+          "n": 1,
+          "q": -0.822928607464,
+          "prior": 0.00474861217663
+        },
+        {
+          "uci": "d8e7",
+          "action": 3828,
+          "n": 686,
+          "q": -0.513559758663,
+          "prior": 0.0568774864078
+        },
+        {
+          "uci": "d8f6",
+          "action": 3821,
+          "n": 1,
+          "q": -0.937530934811,
+          "prior": 0.00808745063841
+        },
+        {
+          "uci": "d8g5",
+          "action": 3814,
+          "n": 1,
+          "q": -0.830965638161,
+          "prior": 0.00277431262657
+        },
+        {
+          "uci": "d8h4",
+          "action": 3807,
+          "n": 138,
+          "q": -0.614744246006,
+          "prior": 0.193388819695
+        },
+        {
+          "uci": "d8c8",
+          "action": 3834,
+          "n": 1,
+          "q": -0.838513851166,
+          "prior": 0.00334963831119
+        },
+        {
+          "uci": "d8b8",
+          "action": 3833,
+          "n": 2310,
+          "q": -0.496287673712,
+          "prior": 0.372858852148
+        },
+        {
+          "uci": "d8a8",
+          "action": 3832,
+          "n": 70,
+          "q": -0.564603388309,
+          "prior": 0.0580962300301
+        },
+        {
+          "uci": "d8e8",
+          "action": 3836,
+          "n": 1,
+          "q": -0.954629778862,
+          "prior": 0.00257970811799
+        },
+        {
+          "uci": "d8f8",
+          "action": 3837,
+          "n": 252,
+          "q": -0.51197385788,
+          "prior": 0.0119174765423
+        },
+        {
+          "uci": "g8f8",
+          "action": 4029,
+          "n": 1,
+          "q": -0.873694241047,
+          "prior": 0.00255043315701
+        },
+        {
+          "uci": "g8h8",
+          "action": 4031,
+          "n": 64,
+          "q": -0.559277534485,
+          "prior": 0.045174613595
+        }
+      ],
+      "selected": {
+        "uci": "d8d7",
+        "action": 3827,
+        "n": 1,
+        "q": -0.822928607464,
+        "prior": 0.00474861217663
+      },
+      "top5": [
+        {
+          "uci": "d8b8",
+          "action": 3833,
+          "n": 2310,
+          "q": -0.496287673712,
+          "prior": 0.372858852148
+        },
+        {
+          "uci": "d8e7",
+          "action": 3828,
+          "n": 686,
+          "q": -0.513559758663,
+          "prior": 0.0568774864078
+        },
+        {
+          "uci": "d8f8",
+          "action": 3837,
+          "n": 252,
+          "q": -0.51197385788,
+          "prior": 0.0119174765423
+        },
+        {
+          "uci": "d8a5",
+          "action": 3808,
+          "n": 180,
+          "q": -0.602699279785,
+          "prior": 0.227128177881
+        },
+        {
+          "uci": "d8h4",
+          "action": 3807,
+          "n": 138,
+          "q": -0.614744246006,
+          "prior": 0.193388819695
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 3708 time 75 nps 49440 score cp -205 pv d8d7"
+  },
+  {
+    "config": "tactical",
+    "label": "promotion",
+    "passed": true,
+    "move": "a7a8q",
+    "elapsed_ms": 75.44304499970167,
+    "detail": {
+      "bestmove": "a7a8q",
+      "terminal": false,
+      "simulations": 3785,
+      "value": 0.559177696705,
+      "neural_evals": 3636,
+      "memory_bytes": 2179072,
+      "arena_nodes": 3692,
+      "max_depth": 17,
+      "peak_memory_bytes": 2179072,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 3785,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 11,
+      "verification_evals": 2,
+      "verified_candidates": 4,
+      "verification_changed": true,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000465008226456
+        },
+        {
+          "uci": "h1g2",
+          "action": 462,
+          "n": 220,
+          "q": 0.472900688648,
+          "prior": 0.158884882927
+        },
+        {
+          "uci": "h1h2",
+          "action": 463,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000110467248305
+        },
+        {
+          "uci": "a7a8n",
+          "action": 4531,
+          "n": 26,
+          "q": 0,
+          "prior": 0.167328119278
+        },
+        {
+          "uci": "a7a8b",
+          "action": 4532,
+          "n": 32,
+          "q": 0,
+          "prior": 0.204608216882
+        },
+        {
+          "uci": "a7a8r",
+          "action": 4533,
+          "n": 3507,
+          "q": 0.57383787632,
+          "prior": 0.468360692263
+        },
+        {
+          "uci": "a7a8q",
+          "action": 3128,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00024254208256
+        }
+      ],
+      "selected": {
+        "uci": "a7a8q",
+        "action": 3128,
+        "n": 0,
+        "q": 0,
+        "prior": 0.00024254208256
+      },
+      "top5": [
+        {
+          "uci": "a7a8r",
+          "action": 4533,
+          "n": 3507,
+          "q": 0.57383787632,
+          "prior": 0.468360692263
+        },
+        {
+          "uci": "h1g2",
+          "action": 462,
+          "n": 220,
+          "q": 0.472900688648,
+          "prior": 0.158884882927
+        },
+        {
+          "uci": "a7a8b",
+          "action": 4532,
+          "n": 32,
+          "q": 0,
+          "prior": 0.204608216882
+        },
+        {
+          "uci": "a7a8n",
+          "action": 4531,
+          "n": 26,
+          "q": 0,
+          "prior": 0.167328119278
+        },
+        {
+          "uci": "h1g1",
+          "action": 454,
+          "n": 0,
+          "q": 0,
+          "prior": 0.000465008226456
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 3785 time 75 nps 50466 score cp 223 pv a7a8q"
+  },
+  {
+    "config": "tactical",
+    "label": "ep",
+    "passed": false,
+    "move": "e5e6",
+    "elapsed_ms": 75.44052200000806,
+    "detail": {
+      "bestmove": "e5e6",
+      "terminal": false,
+      "simulations": 4175,
+      "value": 0.425626784563,
+      "neural_evals": 3742,
+      "memory_bytes": 1130496,
+      "arena_nodes": 3799,
+      "max_depth": 19,
+      "peak_memory_bytes": 1130496,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 4175,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 11,
+      "verification_evals": 4,
+      "verified_candidates": 4,
+      "verification_changed": false,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "e1d1",
+          "action": 259,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00347964675166
+        },
+        {
+          "uci": "e1f1",
+          "action": 261,
+          "n": 0,
+          "q": 0,
+          "prior": 3.6980585719e-05
+        },
+        {
+          "uci": "e1d2",
+          "action": 267,
+          "n": 1,
+          "q": -0.470869749784,
+          "prior": 0.00465041911229
+        },
+        {
+          "uci": "e1e2",
+          "action": 268,
+          "n": 0,
+          "q": 0,
+          "prior": 6.88909203745e-05
+        },
+        {
+          "uci": "e1f2",
+          "action": 269,
+          "n": 1,
+          "q": -0.638196647167,
+          "prior": 0.00662987492979
+        },
+        {
+          "uci": "e5e6",
+          "action": 2348,
+          "n": 4044,
+          "q": 0.43560013175,
+          "prior": 0.555114746094
+        },
+        {
+          "uci": "e5d6",
+          "action": 2347,
+          "n": 129,
+          "q": 0.128170564771,
+          "prior": 0.430019468069
+        }
+      ],
+      "selected": {
+        "uci": "e5e6",
+        "action": 2348,
+        "n": 4044,
+        "q": 0.43560013175,
+        "prior": 0.555114746094
+      },
+      "top5": [
+        {
+          "uci": "e5e6",
+          "action": 2348,
+          "n": 4044,
+          "q": 0.43560013175,
+          "prior": 0.555114746094
+        },
+        {
+          "uci": "e5d6",
+          "action": 2347,
+          "n": 129,
+          "q": 0.128170564771,
+          "prior": 0.430019468069
+        },
+        {
+          "uci": "e1f2",
+          "action": 269,
+          "n": 1,
+          "q": -0.638196647167,
+          "prior": 0.00662987492979
+        },
+        {
+          "uci": "e1d2",
+          "action": 267,
+          "n": 1,
+          "q": -0.470869749784,
+          "prior": 0.00465041911229
+        },
+        {
+          "uci": "e1d1",
+          "action": 259,
+          "n": 0,
+          "q": 0,
+          "prior": 0.00347964675166
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 4175 time 75 nps 55666 score cp 170 pv e5e6"
+  },
+  {
+    "config": "tactical",
+    "label": "in_check",
+    "passed": true,
+    "move": "e1e2",
+    "elapsed_ms": 75.40120300018316,
+    "detail": {
+      "bestmove": "e1e2",
+      "terminal": false,
+      "simulations": 26283,
+      "value": 0.065395116806,
+      "neural_evals": 2601,
+      "memory_bytes": 1130496,
+      "arena_nodes": 2657,
+      "max_depth": 20,
+      "peak_memory_bytes": 1130496,
+      "peak_auxiliary_bytes": 0,
+      "attempted_simulations": 26283,
+      "aborted_simulations": 0,
+      "prune_count": 0,
+      "nodes_evicted": 0,
+      "edges_evicted": 0,
+      "discarded_neural_evaluations": 0,
+      "memory_exhausted": false,
+      "verification_nodes": 6,
+      "verification_evals": 2,
+      "verified_candidates": 3,
+      "verification_changed": true,
+      "parallel_batches": 0,
+      "parallel_leaves": 0,
+      "peak_inflight": 0,
+      "importance": 1,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "e1d1",
+          "action": 259,
+          "n": 23318,
+          "q": 0.0645217597485,
+          "prior": 0.970993936062
+        },
+        {
+          "uci": "e1f1",
+          "action": 261,
+          "n": 2903,
+          "q": 0.0738069266081,
+          "prior": 0.00985601264983
+        },
+        {
+          "uci": "e1e2",
+          "action": 268,
+          "n": 62,
+          "q": 0,
+          "prior": 0.0191500317305
+        }
+      ],
+      "selected": {
+        "uci": "e1e2",
+        "action": 268,
+        "n": 62,
+        "q": 0,
+        "prior": 0.0191500317305
+      },
+      "top5": [
+        {
+          "uci": "e1d1",
+          "action": 259,
+          "n": 23318,
+          "q": 0.0645217597485,
+          "prior": 0.970993936062
+        },
+        {
+          "uci": "e1f1",
+          "action": 261,
+          "n": 2903,
+          "q": 0.0738069266081,
+          "prior": 0.00985601264983
+        },
+        {
+          "uci": "e1e2",
+          "action": 268,
+          "n": 62,
+          "q": 0,
+          "prior": 0.0191500317305
+        }
+      ],
+      "telemetry_enabled": false
+    },
+    "info": "info nodes 26283 time 75 nps 350440 score cp 26 pv e1e2"
+  }
+]

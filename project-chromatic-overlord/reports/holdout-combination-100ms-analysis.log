@@ -1,0 +1,20 @@
+[
+  {
+    "config": "combination",
+    "wins": 5,
+    "draws": 2,
+    "losses": 0,
+    "unfinished": 1,
+    "score": 0.8571428571428571,
+    "tactics_passed": 8,
+    "tactics_total": 8,
+    "median_search_nodes": 3297.5,
+    "median_wall_ms": 93.34705549986211,
+    "max_wall_ms": 96.62181500016231,
+    "median_verification_nodes": 819.0,
+    "fully_compared_searches": 12,
+    "changed_search_choices": 9,
+    "max_concurrent_leaves": 0,
+    "median_parallel_batches": 0.0
+  }
+]

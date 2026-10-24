@@ -1,0 +1,20 @@
+{
+  "tactical": {
+    "games": 8,
+    "finished": 8,
+    "unfinished": 0,
+    "wins": 1,
+    "draws": 7,
+    "losses": 0,
+    "score": 0.5625,
+    "complete_opening_pairs": 4,
+    "paired_score_interval_95_conservative": [
+      0,
+      1
+    ],
+    "interval_method": "Hoeffding bound on complete opening pairs; assumes independent units; no population generalization from this fixed suite",
+    "elo_claim": null,
+    "promote": false,
+    "decision": "insufficient_evidence"
+  }
+}

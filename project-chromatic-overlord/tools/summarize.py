@@ -37,7 +37,7 @@ def main():
    'median_parallel_batches':statistics.median(r['parallel_batches'] for r in details)}
   rows.append(row)
  with (root/'performance.csv').open('w',newline='') as f:
-  w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+  w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\n');w.writeheader();w.writerows(rows)
  (root/'performance.json').write_text(json.dumps({'rows':rows,'validated_pgn_games':validated,'method':'12 timed position searches per configuration; 8 paired diagnostic tactics; not a rating benchmark'},indent=2)+'\n')
  print(json.dumps(rows,indent=2))
 if __name__=='__main__':main()

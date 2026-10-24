@@ -1,0 +1,16 @@
+disabled Italian white 1/2-1/2 THREEFOLD_REPETITION
+disabled Italian black 1/2-1/2 THREEFOLD_REPETITION
+disabled QueensGambit white 1/2-1/2 THREEFOLD_REPETITION
+disabled QueensGambit black 1/2-1/2 THREEFOLD_REPETITION
+disabled RookEnding white 1/2-1/2 THREEFOLD_REPETITION
+disabled RookEnding black 1/2-1/2 THREEFOLD_REPETITION
+disabled PawnEnding white 1/2-1/2 THREEFOLD_REPETITION
+disabled PawnEnding black 1/2-1/2 THREEFOLD_REPETITION
+parallel Italian white 1/2-1/2 THREEFOLD_REPETITION
+parallel Italian black 1/2-1/2 THREEFOLD_REPETITION
+parallel QueensGambit white 1/2-1/2 THREEFOLD_REPETITION
+parallel QueensGambit black 1/2-1/2 INSUFFICIENT_MATERIAL
+parallel RookEnding white 1/2-1/2 THREEFOLD_REPETITION
+parallel RookEnding black 1/2-1/2 THREEFOLD_REPETITION
+parallel PawnEnding white 1/2-1/2 THREEFOLD_REPETITION
+parallel PawnEnding black 1/2-1/2 THREEFOLD_REPETITION

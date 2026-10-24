@@ -1,4 +1,4 @@
-import importlib.util,sys,unittest
+import importlib.util,sys,unittest,tempfile,subprocess
 from pathlib import Path
 p=Path(__file__).resolve().parents[1]/'tools/experiment.py'
 spec=importlib.util.spec_from_file_location('overlord_experiment',p);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
@@ -12,6 +12,12 @@ class Results(unittest.TestCase):
   r=module.stats([{'pair':i//2,'score':1} for i in range(8)])
   self.assertLess(r['paired_score_interval_95_conservative'][0],.5)
   self.assertFalse(r['promote'])
+ def test_existing_experiment_is_preserved_on_restart(self):
+  with tempfile.TemporaryDirectory() as directory:
+   marker=Path(directory)/'metadata.json';marker.write_text('preserved interrupted run')
+   r=subprocess.run([sys.executable,str(p),'--out',directory,'--engine','missing-engine','--baseline','missing-baseline'],capture_output=True,text=True)
+   self.assertNotEqual(r.returncode,0);self.assertIn('fresh output directory',r.stderr)
+   self.assertEqual(marker.read_text(),'preserved interrupted run')
  def test_color_pair_is_the_unit(self):
   r=module.stats([{'pair':0,'score':1},{'pair':0,'score':0}])
   self.assertEqual(r['score'],.5);self.assertEqual(r['complete_opening_pairs'],1)

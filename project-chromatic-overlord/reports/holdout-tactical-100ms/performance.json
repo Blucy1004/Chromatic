@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "config": "tactical",
+      "wins": 1,
+      "draws": 7,
+      "losses": 0,
+      "unfinished": 0,
+      "score": 0.5625,
+      "tactics_passed": 7,
+      "tactics_total": 8,
+      "median_search_nodes": 3338.0,
+      "median_wall_ms": 75.78728699991188,
+      "max_wall_ms": 77.1084980001433,
+      "median_verification_nodes": 47.0,
+      "fully_compared_searches": 12,
+      "changed_search_choices": 6,
+      "max_concurrent_leaves": 0,
+      "median_parallel_batches": 0.0
+    }
+  ],
+  "validated_pgn_games": 8,
+  "method": "12 timed position searches per configuration; 8 paired diagnostic tactics; not a rating benchmark"
+}

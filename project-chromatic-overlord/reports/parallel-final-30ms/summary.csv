@@ -1,0 +1,3 @@
+config,games,finished,unfinished,wins,draws,losses,score,complete_opening_pairs,promote
+disabled,8,8,0,0,8,0,0.5,4,False
+parallel,8,8,0,0,8,0,0.5,4,False

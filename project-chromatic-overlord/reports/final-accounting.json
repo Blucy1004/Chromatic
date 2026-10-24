@@ -1,0 +1,51 @@
+{
+  "preserved_original_files": 308,
+  "preserved_hashes_match": true,
+  "protected_tracked_files_unchanged": true,
+  "engine_sha256": "b2bff565c06df56f9496ceb2186d557f282c66e1c6fb84ecbcbb9c690b810053",
+  "games": [
+    {
+      "directory": "ablation-30ms",
+      "games": 56,
+      "finished": 56,
+      "unfinished": 0,
+      "validated_pgn_games": 56
+    },
+    {
+      "directory": "ablation-v2-30ms",
+      "games": 56,
+      "finished": 54,
+      "unfinished": 2,
+      "validated_pgn_games": 56
+    },
+    {
+      "directory": "holdout-combination-100ms",
+      "games": 8,
+      "finished": 7,
+      "unfinished": 1,
+      "validated_pgn_games": 8
+    },
+    {
+      "directory": "holdout-tactical-100ms",
+      "games": 8,
+      "finished": 8,
+      "unfinished": 0,
+      "validated_pgn_games": 8
+    },
+    {
+      "directory": "parallel-final-30ms",
+      "games": 16,
+      "finished": 16,
+      "unfinished": 0,
+      "validated_pgn_games": 16
+    }
+  ],
+  "total_games": 144,
+  "total_finished": 141,
+  "total_unfinished": 3,
+  "official_puzzle_positions": 100,
+  "official_puzzle_searches": 1000,
+  "all_puzzle_moves_legal": true,
+  "windows_runtime_verified": false,
+  "promotion": false
+}

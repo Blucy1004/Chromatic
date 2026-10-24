@@ -21,7 +21,7 @@ Python 3.12 / PyTorch 2.9.1+cpu run the existing integration/trainer checks.
 | ARC trainer existing regression, disk-backed temp | 149 passed, 24 subtests; 8 skipped | reports/arc-disk-regression.log |
 | ARC actual kill/resume suite on isolated copy | 6 passed | reports/arc-recovery.log, arc-recovery.json |
 | Preserved CPU shard trainer regression | 57 passed, 20 subtests; 7 skipped | reports/shard-regression.log |
-| Experiment accounting tests | 3 passed | reports/experiment-tests.log |
+| Experiment accounting/history preservation tests | 4 passed | reports/experiment-tests.log |
 
 The eight ARC skips are six opt-in process tests (executed separately above), one
 real XPU test and one Windows PowerShell test. The older CPU trainer's six opt-in

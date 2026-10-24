@@ -7,6 +7,7 @@ from experiment import Engine,CONFIGS,ROOT,MODEL,sha,save
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--engine',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args()
+ if a.out.exists():raise FileExistsError('Choose a new result file; previous puzzles remain preserved')
  if hasattr(os,'sched_getaffinity'):os.sched_setaffinity(0,sorted(os.sched_getaffinity(0))[:2])
  fixture=ROOT.parent/'chromatic-arc-trainer/fixtures/official-puzzles.csv'
  fixtures=[]
@@ -31,5 +32,5 @@ def main():
      'summary':summary,'results':results})
    print(summary[-1],flush=True)
  with a.out.with_suffix('.csv').open('w',newline='') as stream:
-  w=csv.DictWriter(stream,fieldnames=list(summary[0]));w.writeheader();w.writerows(summary)
+  w=csv.DictWriter(stream,fieldnames=list(summary[0]),lineterminator='\n');w.writeheader();w.writerows(summary)
 if __name__=='__main__':main()

@@ -1,0 +1,2 @@
+config,games,finished,unfinished,wins,draws,losses,score,complete_opening_pairs,promote
+tactical,8,8,0,1,7,0,0.5625,4,False

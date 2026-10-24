@@ -15,6 +15,9 @@ ctest --test-dir /tmp/overlord --output-on-failure
 /tmp/overlord/chromatic_overlord --model project-chromatic-memory/dist/default.zero
 ```
 
+The engine also builds in a Visual Studio C++20 developer shell using the same
+CMake commands. Windows compilation/runtime validation remains outstanding.
+
 The original `default.zero` stays in its existing location. Pass `--model` or
 set UCI ModelFile explicitly; the candidate has no bundled new model.
 
@@ -68,6 +71,10 @@ Dependencies for the runner are python-chess==1.999 (chess==1.10.0 in this run).
 python project-chromatic-overlord/tests/uci_validation.py --engine /tmp/overlord/chromatic_overlord --report /tmp/uci.json
 python project-chromatic-overlord/tools/experiment.py --engine /tmp/overlord/chromatic_overlord --baseline /tmp/chromatic-baseline/chromatic_depth --out /tmp/overlord-experiment --ms 30
 ```
+
+Use a fresh output directory for each run; existing experiments are protected
+from overwrite. JSON checkpoints are written atomically. Interrupted experiments
+remain inspectable; automatic mid-game resume is not provided.
 
 Build the baseline from the unmodified `project-chromatic-memory` CMake project.
 The runner saves model/binary hashes, exact settings, root statistics, per-move

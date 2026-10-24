@@ -1,0 +1,2 @@
+config,wins,draws,losses,unfinished,score,tactics_passed,tactics_total,median_search_nodes,median_wall_ms,max_wall_ms,median_verification_nodes,fully_compared_searches,changed_search_choices,max_concurrent_leaves,median_parallel_batches
+combination,5,2,0,1,0.8571428571428571,8,8,3297.5,93.34705549986211,96.62181500016231,819.0,12,9,0,0.0
