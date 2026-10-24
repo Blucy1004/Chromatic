@@ -1,0 +1,22 @@
+{
+  "date_seoul": "2026-10-24T13:42:24.327551+09:00",
+  "release_engine_sha256": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d",
+  "compilation": true,
+  "core_perft": true,
+  "integration": true,
+  "reliability": true,
+  "arena_tests": true,
+  "safety": true,
+  "neural_parity": true,
+  "sign_mutation_caught": true,
+  "asan_core_perft": true,
+  "asan_safety": true,
+  "thread_sanitizer": "not run; MSVC environment; no shared-tree parallel MCTS added",
+  "legacy_checkpoint_continuation": true,
+  "original_v01_unchanged": true,
+  "bounded_experiments_complete": true,
+  "python_test_cases": 15,
+  "cpp_test_executables": 1,
+  "perft_reference_positions": 5,
+  "passed": true
+}

@@ -1,0 +1,32 @@
+{
+  "100": {
+    "logged_rss_max_bytes": 313102336,
+    "logged_owned_disk_max_bytes": 70146430,
+    "committed_event_count": 9,
+    "resource_policy": {
+      "bytes": 2147483648,
+      "hard_limit": true,
+      "method": "Windows Job Object process committed-memory limit"
+    }
+  },
+  "1000": {
+    "logged_rss_max_bytes": 324018176,
+    "logged_owned_disk_max_bytes": 89593378,
+    "committed_event_count": 12,
+    "resource_policy": {
+      "bytes": 2147483648,
+      "hard_limit": true,
+      "method": "Windows Job Object process committed-memory limit"
+    }
+  },
+  "10000": {
+    "logged_rss_max_bytes": 348672000,
+    "logged_owned_disk_max_bytes": 118327427,
+    "committed_event_count": 56,
+    "resource_policy": {
+      "bytes": 2147483648,
+      "hard_limit": true,
+      "method": "Windows Job Object process committed-memory limit"
+    }
+  }
+}

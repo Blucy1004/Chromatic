@@ -1,0 +1,517 @@
+{
+  "engine": "CHROMATIC 1.0",
+  "executable_sha256": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d",
+  "model_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+  "requested_plies": 10,
+  "completed_plies": 10,
+  "movetime_ms": 1000,
+  "moves": [
+    {
+      "ply": 1,
+      "move_number": 1,
+      "side": "white",
+      "fen_before": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "position_command": "position startpos",
+      "go_command": "go movetime 1000",
+      "response": "bestmove c2c3",
+      "uci": "c2c3",
+      "san": "c3",
+      "elapsed_seconds": 1.0067423000000417,
+      "info": {
+        "nodes": 58152,
+        "time": 1004,
+        "nps": 57920
+      },
+      "info_lines": [
+        "info nodes 58152 time 1004 nps 57920 score cp 16 pv c2c3"
+      ]
+    },
+    {
+      "ply": 2,
+      "move_number": 1,
+      "side": "black",
+      "fen_before": "rnbqkbnr/pppppppp/8/8/8/2P5/PP1PPPPP/RNBQKBNR b KQkq - 0 1",
+      "position_command": "position startpos moves c2c3",
+      "go_command": "go movetime 1000",
+      "response": "bestmove g8f6",
+      "uci": "g8f6",
+      "san": "Nf6",
+      "elapsed_seconds": 1.002829600009136,
+      "info": {
+        "nodes": 59314,
+        "time": 1002,
+        "nps": 59195
+      },
+      "info_lines": [
+        "info nodes 59314 time 1002 nps 59195 score cp -17 pv g8f6"
+      ]
+    },
+    {
+      "ply": 3,
+      "move_number": 2,
+      "side": "white",
+      "fen_before": "rnbqkb1r/pppppppp/5n2/8/8/2P5/PP1PPPPP/RNBQKBNR w KQkq - 1 2",
+      "position_command": "position startpos moves c2c3 g8f6",
+      "go_command": "go movetime 1000",
+      "response": "bestmove a2a3",
+      "uci": "a2a3",
+      "san": "a3",
+      "elapsed_seconds": 1.0028019999735989,
+      "info": {
+        "nodes": 58892,
+        "time": 1002,
+        "nps": 58774
+      },
+      "info_lines": [
+        "info nodes 58892 time 1002 nps 58774 score cp 8 pv a2a3"
+      ]
+    },
+    {
+      "ply": 4,
+      "move_number": 2,
+      "side": "black",
+      "fen_before": "rnbqkb1r/pppppppp/5n2/8/8/P1P5/1P1PPPPP/RNBQKBNR b KQkq - 0 2",
+      "position_command": "position startpos moves c2c3 g8f6 a2a3",
+      "go_command": "go movetime 1000",
+      "response": "bestmove d7d6",
+      "uci": "d7d6",
+      "san": "d6",
+      "elapsed_seconds": 1.0035776000004262,
+      "info": {
+        "nodes": 61418,
+        "time": 1002,
+        "nps": 61295
+      },
+      "info_lines": [
+        "info nodes 61418 time 1002 nps 61295 score cp -17 pv d7d6"
+      ]
+    },
+    {
+      "ply": 5,
+      "move_number": 3,
+      "side": "white",
+      "fen_before": "rnbqkb1r/ppp1pppp/3p1n2/8/8/P1P5/1P1PPPPP/RNBQKBNR w KQkq - 0 3",
+      "position_command": "position startpos moves c2c3 g8f6 a2a3 d7d6",
+      "go_command": "go movetime 1000",
+      "response": "bestmove g1f3",
+      "uci": "g1f3",
+      "san": "Nf3",
+      "elapsed_seconds": 1.0031940000480972,
+      "info": {
+        "nodes": 59582,
+        "time": 1002,
+        "nps": 59463
+      },
+      "info_lines": [
+        "info nodes 59582 time 1002 nps 59463 score cp 16 pv g1f3"
+      ]
+    },
+    {
+      "ply": 6,
+      "move_number": 3,
+      "side": "black",
+      "fen_before": "rnbqkb1r/ppp1pppp/3p1n2/8/8/P1P2N2/1P1PPPPP/RNBQKB1R b KQkq - 1 3",
+      "position_command": "position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3",
+      "go_command": "go movetime 1000",
+      "response": "bestmove e7e6",
+      "uci": "e7e6",
+      "san": "e6",
+      "elapsed_seconds": 1.0031714999931864,
+      "info": {
+        "nodes": 62132,
+        "time": 1002,
+        "nps": 62007
+      },
+      "info_lines": [
+        "info nodes 62132 time 1002 nps 62007 score cp -29 pv e7e6"
+      ]
+    },
+    {
+      "ply": 7,
+      "move_number": 4,
+      "side": "white",
+      "fen_before": "rnbqkb1r/ppp2ppp/3ppn2/8/8/P1P2N2/1P1PPPPP/RNBQKB1R w KQkq - 0 4",
+      "position_command": "position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3 e7e6",
+      "go_command": "go movetime 1000",
+      "response": "bestmove h1g1",
+      "uci": "h1g1",
+      "san": "Rg1",
+      "elapsed_seconds": 1.0026709999656305,
+      "info": {
+        "nodes": 52995,
+        "time": 1002,
+        "nps": 52889
+      },
+      "info_lines": [
+        "info nodes 52995 time 1002 nps 52889 score cp 27 pv h1g1"
+      ]
+    },
+    {
+      "ply": 8,
+      "move_number": 4,
+      "side": "black",
+      "fen_before": "rnbqkb1r/ppp2ppp/3ppn2/8/8/P1P2N2/1P1PPPPP/RNBQKBR1 b Qkq - 1 4",
+      "position_command": "position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3 e7e6 h1g1",
+      "go_command": "go movetime 1000",
+      "response": "bestmove e6e5",
+      "uci": "e6e5",
+      "san": "e5",
+      "elapsed_seconds": 1.002804699994158,
+      "info": {
+        "nodes": 58039,
+        "time": 1002,
+        "nps": 57923
+      },
+      "info_lines": [
+        "info nodes 58039 time 1002 nps 57923 score cp -40 pv e6e5"
+      ]
+    },
+    {
+      "ply": 9,
+      "move_number": 5,
+      "side": "white",
+      "fen_before": "rnbqkb1r/ppp2ppp/3p1n2/4p3/8/P1P2N2/1P1PPPPP/RNBQKBR1 w Qkq - 0 5",
+      "position_command": "position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3 e7e6 h1g1 e6e5",
+      "go_command": "go movetime 1000",
+      "response": "bestmove f3h4",
+      "uci": "f3h4",
+      "san": "Nh4",
+      "elapsed_seconds": 1.0054749000119045,
+      "info": {
+        "nodes": 55196,
+        "time": 1004,
+        "nps": 54976
+      },
+      "info_lines": [
+        "info nodes 55196 time 1004 nps 54976 score cp 33 pv f3h4"
+      ]
+    },
+    {
+      "ply": 10,
+      "move_number": 5,
+      "side": "black",
+      "fen_before": "rnbqkb1r/ppp2ppp/3p1n2/4p3/7N/P1P5/1P1PPPPP/RNBQKBR1 b Qkq - 1 5",
+      "position_command": "position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3 e7e6 h1g1 e6e5 f3h4",
+      "go_command": "go movetime 1000",
+      "response": "bestmove g7g6",
+      "uci": "g7g6",
+      "san": "g6",
+      "elapsed_seconds": 1.003452599979937,
+      "info": {
+        "nodes": 58001,
+        "time": 1002,
+        "nps": 57885
+      },
+      "info_lines": [
+        "info nodes 58001 time 1002 nps 57885 score cp -34 pv g7g6"
+      ]
+    }
+  ],
+  "final_fen": "rnbqkb1r/ppp2p1p/3p1np1/4p3/7N/P1P5/1P1PPPPP/RNBQKBR1 w Qkq - 0 6",
+  "all_moves_legal": true,
+  "transcript": [
+    {
+      "direction": "send",
+      "seconds": 0.011814699973911047,
+      "line": "uci"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.02238529996247962,
+      "line": "id name CHROMATIC 1.0"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.022425799979828298,
+      "line": "id author PROJECT CHROMATIC"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.022430699958931655,
+      "line": "option name ModelFile type string default C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\dist\\default.zero"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.02243459998862818,
+      "line": "option name CPuct type string default 1.5"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.02243720000842586,
+      "line": "option name FPUReduction type string default 0"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.022438199957832694,
+      "line": "option name InferenceBackend type combo default SIMD var Scalar var SIMD"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.02244029997382313,
+      "line": "option name SparsePolicyHead type check default true"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.02244169998448342,
+      "line": "option name MateProofNodes type spin default 256 min 0 max 50000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.022443800000473857,
+      "line": "option name MateProofPlies type combo default 1 var 1 var 3 var 5"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.02244480000808835,
+      "line": "option name TreeMemoryMB type spin default 64 min 1 max 2048"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.022446699964348227,
+      "line": "option name Simulations type spin default 800 min 1 max 10000000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.02244769997196272,
+      "line": "option name MaxNodes type spin default 100000 min 16 max 1000000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.02244929998414591,
+      "line": "uciok"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.022520900005474687,
+      "line": "isready"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.022579999989829957,
+      "line": "readyok"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.022608299972489476,
+      "line": "ucinewgame"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.02261809998890385,
+      "line": "isready"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.02264939999440685,
+      "line": "readyok"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.0227545999805443,
+      "line": "position startpos"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.022765400004573166,
+      "line": "go movetime 1000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 1.0289680999703705,
+      "line": "info nodes 58152 time 1004 nps 57920 score cp 16 pv c2c3"
+    },
+    {
+      "direction": "receive",
+      "seconds": 1.0294736999785528,
+      "line": "bestmove c2c3"
+    },
+    {
+      "direction": "send",
+      "seconds": 1.0299967000028118,
+      "line": "position startpos moves c2c3"
+    },
+    {
+      "direction": "send",
+      "seconds": 1.0300263999961317,
+      "line": "go movetime 1000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 2.0326876000035554,
+      "line": "info nodes 59314 time 1002 nps 59195 score cp -17 pv g8f6"
+    },
+    {
+      "direction": "receive",
+      "seconds": 2.0327302999794483,
+      "line": "bestmove g8f6"
+    },
+    {
+      "direction": "send",
+      "seconds": 2.0331437999848276,
+      "line": "position startpos moves c2c3 g8f6"
+    },
+    {
+      "direction": "send",
+      "seconds": 2.03315949998796,
+      "line": "go movetime 1000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 3.0358201999915764,
+      "line": "info nodes 58892 time 1002 nps 58774 score cp 8 pv a2a3"
+    },
+    {
+      "direction": "receive",
+      "seconds": 3.0358617999590933,
+      "line": "bestmove a2a3"
+    },
+    {
+      "direction": "send",
+      "seconds": 3.036229299963452,
+      "line": "position startpos moves c2c3 g8f6 a2a3"
+    },
+    {
+      "direction": "send",
+      "seconds": 3.036247899988666,
+      "line": "go movetime 1000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 4.039661899965722,
+      "line": "info nodes 61418 time 1002 nps 61295 score cp -17 pv d7d6"
+    },
+    {
+      "direction": "receive",
+      "seconds": 4.03970650001429,
+      "line": "bestmove d7d6"
+    },
+    {
+      "direction": "send",
+      "seconds": 4.040263100003358,
+      "line": "position startpos moves c2c3 g8f6 a2a3 d7d6"
+    },
+    {
+      "direction": "send",
+      "seconds": 4.040413599985186,
+      "line": "go movetime 1000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 5.04344310000306,
+      "line": "info nodes 59582 time 1002 nps 59463 score cp 16 pv g1f3"
+    },
+    {
+      "direction": "receive",
+      "seconds": 5.043580099998508,
+      "line": "bestmove g1f3"
+    },
+    {
+      "direction": "send",
+      "seconds": 5.0438501999597065,
+      "line": "position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3"
+    },
+    {
+      "direction": "send",
+      "seconds": 5.0438648000126705,
+      "line": "go movetime 1000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 6.046878099965397,
+      "line": "info nodes 62132 time 1002 nps 62007 score cp -29 pv e7e6"
+    },
+    {
+      "direction": "receive",
+      "seconds": 6.0469291000044905,
+      "line": "bestmove e7e6"
+    },
+    {
+      "direction": "send",
+      "seconds": 6.047281000006478,
+      "line": "position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3 e7e6"
+    },
+    {
+      "direction": "send",
+      "seconds": 6.047294899995904,
+      "line": "go movetime 1000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 7.0498060999671,
+      "line": "info nodes 52995 time 1002 nps 52889 score cp 27 pv h1g1"
+    },
+    {
+      "direction": "receive",
+      "seconds": 7.049870099988766,
+      "line": "bestmove h1g1"
+    },
+    {
+      "direction": "send",
+      "seconds": 7.050402399967425,
+      "line": "position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3 e7e6 h1g1"
+    },
+    {
+      "direction": "send",
+      "seconds": 7.050428799993824,
+      "line": "go movetime 1000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 8.053105500002857,
+      "line": "info nodes 58039 time 1002 nps 57923 score cp -40 pv e6e5"
+    },
+    {
+      "direction": "receive",
+      "seconds": 8.053155999979936,
+      "line": "bestmove e6e5"
+    },
+    {
+      "direction": "send",
+      "seconds": 8.053764899959788,
+      "line": "position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3 e7e6 h1g1 e6e5"
+    },
+    {
+      "direction": "send",
+      "seconds": 8.053782999981195,
+      "line": "go movetime 1000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 9.059094299969729,
+      "line": "info nodes 55196 time 1004 nps 54976 score cp 33 pv f3h4"
+    },
+    {
+      "direction": "receive",
+      "seconds": 9.059222799958661,
+      "line": "bestmove f3h4"
+    },
+    {
+      "direction": "send",
+      "seconds": 9.059531399980187,
+      "line": "position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3 e7e6 h1g1 e6e5 f3h4"
+    },
+    {
+      "direction": "send",
+      "seconds": 9.059548399993218,
+      "line": "go movetime 1000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 10.062905500002671,
+      "line": "info nodes 58001 time 1002 nps 57885 score cp -34 pv g7g6"
+    },
+    {
+      "direction": "receive",
+      "seconds": 10.062988899997436,
+      "line": "bestmove g7g6"
+    },
+    {
+      "direction": "send",
+      "seconds": 10.063176599971484,
+      "line": "quit"
+    }
+  ],
+  "start_fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "separate_fresh_process": true,
+  "overlap_with_other_engine_runs": false
+}

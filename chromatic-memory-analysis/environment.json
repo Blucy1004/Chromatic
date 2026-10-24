@@ -1,0 +1,18 @@
+{
+  "cpu_name": "Intel(R) Core(TM) Ultra 7 255H",
+  "logical_processors": 16,
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "physical_memory_bytes": 33820106752,
+  "python_packages": {
+    "python-chess": "1.999",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2"
+  },
+  "compiler": "MSVC 19.51.36248.0; CMake Release /O2 /Ob2 /DNDEBUG; /fp:precise; C++20",
+  "search_threads": 1,
+  "affinity_mask": 2,
+  "search_logical_processor_zero_based": 1,
+  "cim_inventory_unavailable": "read-only registry and Windows memory API used instead",
+  "note": "Static machine description inherited from the prior run; current package versions below."
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "positions": 100,
+  "seed": 2026,
+  "step": 200,
+  "backend": "SIMD",
+  "architecture": {
+    "width": 64,
+    "blocks": 4
+  },
+  "checkpoint": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\reports\\model-scaling\\tiny\\model.pt",
+  "binary_sha256": "427276b4446b9521b6147cd074b81939e66bc2cbf30e74478c02bd678690183a",
+  "engine_sha256": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d",
+  "tolerance": 2e-05,
+  "max_abs_error": {
+    "policy": 3.8407592768407994e-06,
+    "wdl": 4.4681401062396375e-07
+  }
+}

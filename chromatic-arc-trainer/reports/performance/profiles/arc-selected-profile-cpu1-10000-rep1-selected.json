@@ -1,0 +1,193 @@
+{
+  "elapsed_seconds": 56.763342699967325,
+  "enabled": true,
+  "events": 171782,
+  "stages": {
+    "backward": {
+      "bytes": 0,
+      "calls": 1149,
+      "errors": 0,
+      "inclusive_seconds": 1.4183034028392285,
+      "items": 0,
+      "seconds": 1.4183034028392285
+    },
+    "binary_cache_prepare": {
+      "bytes": 0,
+      "calls": 12,
+      "errors": 0,
+      "inclusive_seconds": 3.3871405998943374,
+      "items": 14304,
+      "seconds": 0.6402996004326269
+    },
+    "binary_encode": {
+      "bytes": 0,
+      "calls": 114,
+      "errors": 0,
+      "inclusive_seconds": 2.7468409994617105,
+      "items": 14304,
+      "seconds": 2.7468409994617105
+    },
+    "checkpoint_housekeeping": {
+      "bytes": 0,
+      "calls": 56,
+      "errors": 0,
+      "inclusive_seconds": 1.0173933998448774,
+      "items": 0,
+      "seconds": 1.0173933998448774
+    },
+    "checkpoint_save": {
+      "bytes": 0,
+      "calls": 56,
+      "errors": 0,
+      "inclusive_seconds": 13.221097000292502,
+      "items": 0,
+      "seconds": 13.221097000292502
+    },
+    "data_loading": {
+      "bytes": 0,
+      "calls": 2356,
+      "errors": 0,
+      "inclusive_seconds": 4.4676172971958295,
+      "items": 48318,
+      "seconds": 1.161980899516493
+    },
+    "data_preparation": {
+      "bytes": 0,
+      "calls": 11,
+      "errors": 0,
+      "inclusive_seconds": 24.49070229998324,
+      "items": 0,
+      "seconds": 6.604172680177726
+    },
+    "dedup_sampling": {
+      "bytes": 0,
+      "calls": 27381,
+      "errors": 0,
+      "inclusive_seconds": 2.4565655060578138,
+      "items": 0,
+      "seconds": 2.4565655060578138
+    },
+    "fen_validation": {
+      "bytes": 0,
+      "calls": 25941,
+      "errors": 263,
+      "inclusive_seconds": 1.1704531052382663,
+      "items": 0,
+      "seconds": 1.1704531052382663
+    },
+    "finite_check": {
+      "bytes": 0,
+      "calls": 1149,
+      "errors": 0,
+      "inclusive_seconds": 4.497008996433578,
+      "items": 0,
+      "seconds": 4.497008996433578
+    },
+    "forward": {
+      "bytes": 0,
+      "calls": 1149,
+      "errors": 0,
+      "inclusive_seconds": 1.2468126976164058,
+      "items": 0,
+      "seconds": 1.2468126976164058
+    },
+    "gradient_clip": {
+      "bytes": 0,
+      "calls": 1149,
+      "errors": 0,
+      "inclusive_seconds": 0.41956090240273625,
+      "items": 0,
+      "seconds": 0.41956090240273625
+    },
+    "json_parse": {
+      "bytes": 0,
+      "calls": 25728,
+      "errors": 0,
+      "inclusive_seconds": 0.20937141054309905,
+      "items": 25728,
+      "seconds": 0.20937141054309905
+    },
+    "label_conversion": {
+      "bytes": 0,
+      "calls": 25941,
+      "errors": 572,
+      "inclusive_seconds": 14.864344298141077,
+      "items": 0,
+      "seconds": 5.725077478215098
+    },
+    "optimizer": {
+      "bytes": 0,
+      "calls": 1149,
+      "errors": 0,
+      "inclusive_seconds": 2.2833398045040667,
+      "items": 0,
+      "seconds": 2.2833398045040667
+    },
+    "pv_validation": {
+      "bytes": 0,
+      "calls": 56552,
+      "errors": 0,
+      "inclusive_seconds": 7.9688137146877125,
+      "items": 0,
+      "seconds": 7.9688137146877125
+    },
+    "shard_deserialize": {
+      "bytes": 0,
+      "calls": 2,
+      "errors": 0,
+      "inclusive_seconds": 0.04670060006901622,
+      "items": 0,
+      "seconds": 0.04670060006901622
+    },
+    "shard_serialize": {
+      "bytes": 0,
+      "calls": 12,
+      "errors": 0,
+      "inclusive_seconds": 0.33564359974116087,
+      "items": 0,
+      "seconds": 0.33564359974116087
+    },
+    "source_read": {
+      "bytes": 0,
+      "calls": 542,
+      "errors": 0,
+      "inclusive_seconds": 0.013788401032797992,
+      "items": 0,
+      "seconds": 0.013788401032797992
+    },
+    "source_spool_read": {
+      "bytes": 0,
+      "calls": 247,
+      "errors": 0,
+      "inclusive_seconds": 0.012652301113121212,
+      "items": 0,
+      "seconds": 0.012652301113121212
+    },
+    "source_spool_write": {
+      "bytes": 35180453,
+      "calls": 537,
+      "errors": 0,
+      "inclusive_seconds": 0.017937602126039565,
+      "items": 0,
+      "seconds": 0.017937602126039565
+    },
+    "validation": {
+      "bytes": 0,
+      "calls": 11,
+      "errors": 0,
+      "inclusive_seconds": 0.5428643999621272,
+      "items": 0,
+      "seconds": 0.36857659986708313
+    },
+    "zstd_decompress": {
+      "bytes": 0,
+      "calls": 538,
+      "errors": 0,
+      "inclusive_seconds": 0.06305329955648631,
+      "items": 0,
+      "seconds": 0.04935189860407263
+    }
+  },
+  "timing_contract": "seconds are exclusive wall time; inclusive_seconds include nested spans; concurrent thread sums may exceed elapsed wall time",
+  "xpu_synchronized_spans": true
+}

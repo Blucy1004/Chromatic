@@ -1,0 +1,18 @@
+{
+  "gradient_clipping": {
+    "implementation": "devices.clip_gradients",
+    "xpu_foreach": false,
+    "cpu_foreach": null,
+    "diagnostic": "../clip-diagnostic.json",
+    "old_results": "pre-clip-fix/DIAGNOSTIC_ONLY.json"
+  },
+  "canonical_measurement": "microbenchmark.json",
+  "source_sha256": {
+    "shardtrain/devices.py": "55e687cf733826672fb33b199ee53f84a652f0b4a5d5af8a53744be3a2ba7c90",
+    "shardtrain/benchmarks.py": "e6e901a3407ece388647facf6d291aa886640118a26e95cc47b3a8dfa2dac749",
+    "shardtrain/model_adapter.py": "62c29d3954e40f450f0c409e9f69a016edd3a302c26040c95e4cd88a44d78ee5",
+    "tools/benchmark_device.py": "74c1cfd876f889642805d454874e96b86e8862bb52f313b36fcd32210e6a26fc"
+  },
+  "microbenchmark_sha256": "f8e82ad56d1c1a6f0bcf963c3d09b28453d29f6a3a3c36626388926e00dfcde4",
+  "all_57_cases_corrected": true
+}

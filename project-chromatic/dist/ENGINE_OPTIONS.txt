@@ -1,0 +1,34 @@
+CHROMATIC 1.0 — Windows x64 UCI
+
+Register chromatic.exe in a UCI chess GUI. Keep default.zero beside it.
+The engine does not call Python, PyTorch or another chess engine.
+Standard Microsoft Visual C++ runtime is required.
+
+Default model: original 128-position / 200-step bootstrap weights.
+No newly trained candidate has passed the promotion gate.
+
+Default options:
+  InferenceBackend = SIMD (FP32 SSE2, no quantization)
+  SparsePolicyHead = true
+  CPuct = 1.5
+  FPUReduction = 0
+  MateProofNodes = 256
+  MateProofPlies = 1
+  Simulations = 800
+  MaxNodes = 100000
+  TreeMemoryMB = 64
+
+Diagnostic deep proof: MateProofNodes=12000, MateProofPlies=5.
+This spends additional time and is not the default.
+
+v0.1 arithmetic/search trace comparison:
+  InferenceBackend=Scalar, MateProofNodes=0
+
+Supported: uci, isready, ucinewgame, position, go, stop, quit.
+Use go nodes N or go movetime MS for measurements.
+go depth N is a compatibility mapping to N*100 root updates.
+No ponder, Chess960, shared-tree parallel search or MultiPV.
+
+UCI nodes counts root updates, including proof-backed updates.
+Proof traversal work is recorded separately by the JSON extension.
+See README.md, PERFORMANCE.md and STRENGTH_REPORT.md in the source package.

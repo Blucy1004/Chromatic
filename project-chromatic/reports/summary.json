@@ -1,0 +1,57 @@
+{
+  "performance": {
+    "baseline_nps": 8309.43559133,
+    "default_nps": 66164.4030343,
+    "ratio": 7.962562836799099,
+    "baseline_inference_us": 118.8154,
+    "selected_simd_inference_us": 10.8338,
+    "memory_reduction": 0.08043158410985773
+  },
+  "selfplay": {
+    "games": 4,
+    "accepted": 4,
+    "truncated": 0,
+    "records": 173
+  },
+  "draw_rate": 0.5,
+  "matches": {
+    "engine-match": {
+      "wdl": {
+        "wins": 1,
+        "draws": 5,
+        "losses": 0,
+        "unfinished": 2
+      },
+      "decision": "insufficient_evidence",
+      "elo": null
+    },
+    "model-match": {
+      "wdl": {
+        "wins": 0,
+        "draws": 2,
+        "losses": 0,
+        "unfinished": 2
+      },
+      "decision": "insufficient_evidence",
+      "elo": null
+    },
+    "generation-match": {
+      "wdl": {
+        "wins": 0,
+        "draws": 3,
+        "losses": 0,
+        "unfinished": 1
+      },
+      "decision": "insufficient_evidence",
+      "elo": null
+    }
+  },
+  "tactical": {
+    "baseline": 5,
+    "default": 6,
+    "deep-proof": 8,
+    "fpu-025": 6
+  },
+  "gates_passed": true,
+  "baseline_preserved": true
+}

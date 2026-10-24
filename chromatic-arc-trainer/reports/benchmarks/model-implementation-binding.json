@@ -1,0 +1,8 @@
+{
+  "matrix_sha256": "f8e82ad56d1c1a6f0bcf963c3d09b28453d29f6a3a3c36626388926e00dfcde4",
+  "model_implementation_sha256": {
+    "vendor/zero/model.py": "c7e33894b6b96978e3717b713291e8260faa8d2400c0e516189b9f30d0bf78ef",
+    "vendor/zero/encoding.py": "3f805b2814e360d689f30f47bbe0c81907074befc8fa34136c5f813f0561ef76"
+  },
+  "evidence": "Model and encoding files match the initial preserved source copies; corrected measured matrix bytes match measurement-code.json."
+}

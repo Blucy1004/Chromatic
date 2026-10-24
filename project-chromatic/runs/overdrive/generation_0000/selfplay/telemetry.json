@@ -1,0 +1,10 @@
+{
+  "seconds": 0.5397238000296056,
+  "new_positions_generated": 173,
+  "new_positions_per_minute": 19232.05906322942,
+  "completed_draws": 2,
+  "draw_rate_of_completed": 0.5,
+  "completion_rate": 1.0,
+  "crashes_observed": 0,
+  "unfinished_trajectories_directory": "pending"
+}

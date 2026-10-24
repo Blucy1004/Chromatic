@@ -1,0 +1,8 @@
+{
+  "bundle": "chromatic-depth-telemetry-complete.zip",
+  "bytes": 12212443,
+  "sha256": "7994d553ff8f9bb08f9dc5ed93bf62df5ccdf98eacf2fbd7fee0ac5217f75bf1",
+  "archive_entries": 373,
+  "zip_crc_test_passed": true,
+  "note": "package-verification.json is intentionally outside its own checked archive"
+}

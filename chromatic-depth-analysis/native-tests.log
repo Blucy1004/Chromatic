@@ -1,0 +1,56 @@
+Start testing: Oct 24 15:29 대한민국 표준시
+----------------------------------------------------------
+1/3 Testing: core
+1/3 Test: core
+Command: "C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-depth/build/zero_tests.exe"
+Directory: C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-depth/build
+"core" start time: Oct 24 15:29 대한민국 표준시
+Output:
+----------------------------------------------------------
+perft 5 4865609
+perft 4 4085603
+perft 5 674624
+perft 4 422333
+perft 4 2103487
+all core tests passed
+<end of output>
+Test time =   0.85 sec
+----------------------------------------------------------
+Test Passed.
+"core" end time: Oct 24 15:29 대한민국 표준시
+"core" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: depth_uniform
+2/3 Test: depth_uniform
+Command: "C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-depth/build/depth_telemetry_tests.exe"
+Directory: C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-depth/build
+"depth_uniform" start time: Oct 24 15:29 대한민국 표준시
+Output:
+----------------------------------------------------------
+depth telemetry tests passed; model=uniform
+<end of output>
+Test time =   0.15 sec
+----------------------------------------------------------
+Test Passed.
+"depth_uniform" end time: Oct 24 15:29 대한민국 표준시
+"depth_uniform" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: depth_deployed_model
+3/3 Test: depth_deployed_model
+Command: "C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-depth/build/depth_telemetry_tests.exe" "C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-depth/dist/default.zero"
+Directory: C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-depth/build
+"depth_deployed_model" start time: Oct 24 15:29 대한민국 표준시
+Output:
+----------------------------------------------------------
+depth telemetry tests passed; model=loaded
+<end of output>
+Test time =   0.40 sec
+----------------------------------------------------------
+Test Passed.
+"depth_deployed_model" end time: Oct 24 15:29 대한민국 표준시
+"depth_deployed_model" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 24 15:29 대한민국 표준시

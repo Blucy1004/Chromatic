@@ -1,0 +1,85 @@
+{
+  "integrity_before": {
+    "original_release_files": 225,
+    "changed": [],
+    "original_engine_sha256": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d",
+    "model_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "pristine_probe_sha256": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001"
+  },
+  "cases": {
+    "start": {
+      "moves": [],
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "anchor_simulations": 722781,
+      "label": "1.g4 직전"
+    },
+    "before_Rg1_100ms": {
+      "moves": [
+        "c2c3",
+        "d7d6",
+        "a2a3",
+        "g8f6",
+        "g1f3",
+        "b7b6",
+        "e2e4",
+        "e7e6"
+      ],
+      "fen": "rnbqkb1r/p1p2ppp/1p1ppn2/8/4P3/P1P2N2/1P1P1PPP/RNBQKB1R w KQkq - 0 5",
+      "anchor_simulations": 6363,
+      "label": "5.Rg1 직전"
+    },
+    "before_Rg1_1s": {
+      "moves": [
+        "c2c3",
+        "g8f6",
+        "a2a3",
+        "d7d6",
+        "g1f3",
+        "e7e6"
+      ],
+      "fen": "rnbqkb1r/ppp2ppp/3ppn2/8/8/P1P2N2/1P1PPPPP/RNBQKB1R w KQkq - 0 4",
+      "anchor_simulations": 52995,
+      "label": "4.Rg1 직전(1초 기보)"
+    },
+    "before_Ra6_10s": {
+      "moves": [
+        "g2g4",
+        "a7a5",
+        "c2c3"
+      ],
+      "fen": "rnbqkbnr/1ppppppp/8/p7/6P1/2P5/PP1PPP1P/RNBQKBNR b KQkq - 0 2",
+      "anchor_simulations": 717076,
+      "label": "2...Ra6 직전"
+    }
+  },
+  "settings": {
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "backend": "SIMD",
+    "sparse": true,
+    "cpuct": 1.5,
+    "fpu_reduction": 0,
+    "noise": 0,
+    "temperature": 0,
+    "proof_nodes": 0,
+    "max_nodes": 1000000,
+    "telemetry_interval": 4096,
+    "warmup_evaluations": 32
+  },
+  "time_repeats": 3,
+  "matched_repeats": 1,
+  "performance_rounds": 9,
+  "time_comparison_has_instrumentation_overhead": true,
+  "search_elapsed_excludes_model_load_and_json_serialization": true,
+  "integrity_after": {
+    "original_release_files": 225,
+    "changed": [],
+    "original_engine_sha256": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d",
+    "model_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "pristine_probe_sha256": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001"
+  },
+  "run_count": 131
+}

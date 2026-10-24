@@ -1,0 +1,85 @@
+{
+  "candidate_only": true,
+  "champion_overwritten": false,
+  "candidates": {
+    "100": {
+      "additional_updates": 12,
+      "source_manifest": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-e4354ee1423f4060ab079a815ee5a6dc.manifest.json",
+      "files": {
+        "model": {
+          "path": "candidates/positions-100.zero",
+          "sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+        },
+        "checkpoint": {
+          "path": "candidates/positions-100.pt",
+          "sha256": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf"
+        }
+      },
+      "promotion": {
+        "automatic_overwrite": false,
+        "eligible": false,
+        "meaning": "manual review only even if all independent gates pass; champion files are never written",
+        "performed": false,
+        "reasons": [
+          "validation_fewer_than_1000_fixed_positions",
+          "test_fewer_than_1000_fixed_positions",
+          "fewer_than_64_completed_paired_games",
+          "match_incomplete_or_engine_error",
+          "95_percent_score_lower_bound_not_above_half"
+        ]
+      }
+    },
+    "1000": {
+      "additional_updates": 114,
+      "source_manifest": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoints\\bundle-6bbfd686b2254f12a54b75dc242e1a8a.manifest.json",
+      "files": {
+        "model": {
+          "path": "candidates/positions-1000.zero",
+          "sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+        },
+        "checkpoint": {
+          "path": "candidates/positions-1000.pt",
+          "sha256": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867"
+        }
+      },
+      "promotion": {
+        "automatic_overwrite": false,
+        "eligible": false,
+        "meaning": "manual review only even if all independent gates pass; champion files are never written",
+        "performed": false,
+        "reasons": [
+          "validation_fewer_than_1000_fixed_positions",
+          "test_fewer_than_1000_fixed_positions",
+          "fewer_than_64_completed_paired_games",
+          "match_incomplete_or_engine_error",
+          "95_percent_score_lower_bound_not_above_half"
+        ]
+      }
+    },
+    "10000": {
+      "additional_updates": 1149,
+      "source_manifest": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-a181d36c81b94b22aa786094e626b6b8.manifest.json",
+      "files": {
+        "model": {
+          "path": "candidates/positions-10000.zero",
+          "sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+        },
+        "checkpoint": {
+          "path": "candidates/positions-10000.pt",
+          "sha256": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143"
+        }
+      },
+      "promotion": {
+        "automatic_overwrite": false,
+        "eligible": false,
+        "meaning": "manual review only even if all independent gates pass; champion files are never written",
+        "performed": false,
+        "reasons": [
+          "fewer_than_64_completed_paired_games",
+          "match_incomplete_or_engine_error",
+          "95_percent_score_lower_bound_not_above_half"
+        ]
+      }
+    }
+  }
+}

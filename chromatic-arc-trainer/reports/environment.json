@@ -1,0 +1,58 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\Users\\fly_t\\chromatic-xpu\\Scripts\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": {
+      "available": true
+    },
+    "numpy": {
+      "available": false
+    },
+    "chess": {
+      "available": false
+    },
+    "zstandard": {
+      "available": false
+    },
+    "psutil": {
+      "available": false
+    },
+    "pytest": {
+      "available": false
+    }
+  },
+  "torch": "2.14.1+xpu",
+  "xpu_available": true,
+  "xpu_count": 1,
+  "threads": 16,
+  "device_name": "Intel(R) Arc(TM) 140T GPU (16GB)",
+  "device_properties": "_XpuDeviceProperties(name='Intel(R) Arc(TM) 140T GPU (16GB)', platform_name='Intel(R) oneAPI Unified Runtime over Level-Zero', type='gpu', device_id=0x7D51, uuid=8680517d-0300-0000-0002-000000000000, driver_version='1.6.34938', total_memory=16831MB, local_mem_size=64KB, last_level_cache_size=8192KB, max_compute_units=128, memory_clock_rate=0MHz, memory_bus_width=64-bit, gpu_eu_count=128, gpu_subslice_count=16, max_work_group_size=1024, max_num_sub_groups=128, sub_group_sizes=[8 16 32], has_fp16=1, has_fp64=1, has_atomic64=1, is_integrated_gpu=1)",
+  "tensor_backward": {
+    "loss": 261.1329345703125,
+    "finite_gradient": true,
+    "seconds": 0.9599402999738231
+  },
+  "memory": {
+    "memory_allocated": 131584,
+    "memory_reserved": 2097152,
+    "max_memory_allocated": 394240,
+    "max_memory_reserved": 2097152
+  },
+  "bf16": {
+    "ok": true,
+    "output_dtype": "torch.float32",
+    "loss": 0.33416521549224854,
+    "finite": true
+  },
+  "installed_package_versions": {
+    "torch": "2.14.1+xpu",
+    "numpy": "2.4.6",
+    "python-chess": "1.999",
+    "chess": "1.11.2",
+    "zstandard": "0.25.0",
+    "psutil": "7.2.2",
+    "pytest": "9.1.1"
+  },
+  "package_installation_note": "Initial torch-only environment was supplemented with data/test dependencies; original torch installation was retained."
+}

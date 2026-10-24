@@ -1,0 +1,588 @@
+{
+  "format": "chromatic-arc-selected-validation-summary-v1",
+  "devices": {
+    "cpu": {
+      "passed": true,
+      "scenarios": 5,
+      "validation_mode": "selected",
+      "precision": "fp32",
+      "baseline_step": 8,
+      "baseline_export_sha256": "799eb2432c3f007487f0b777ff40b0a86f766714163d68c50b7f20025b583816",
+      "full_vs_selected_export_equal": true,
+      "same_device_full_training_state_exact": true,
+      "checkpoint_tensors_cpu": true,
+      "prefetch": 2,
+      "cache_mode": "auto",
+      "recovery_spans": 6,
+      "recovery_exclusive_seconds_median": 0.02537390001816675,
+      "recovery_exclusive_seconds_min": 0.014386599999852479,
+      "recovery_exclusive_seconds_max": 0.04478590004146099
+    },
+    "xpu": {
+      "passed": true,
+      "scenarios": 5,
+      "validation_mode": "selected",
+      "precision": "fp32",
+      "baseline_step": 8,
+      "baseline_export_sha256": "63aeeb2a8ecf84d5d3230378502a3351591933be772dcc451cbd1d32321bc7b2",
+      "full_vs_selected_export_equal": true,
+      "same_device_full_training_state_exact": true,
+      "checkpoint_tensors_cpu": true,
+      "prefetch": 2,
+      "cache_mode": "auto",
+      "recovery_spans": 6,
+      "recovery_exclusive_seconds_median": 0.027652949967887253,
+      "recovery_exclusive_seconds_min": 0.01329900010023266,
+      "recovery_exclusive_seconds_max": 0.03325129998847842
+    }
+  },
+  "logs": [
+    {
+      "device": "cpu",
+      "file": "recovery-selected-logs/cpu/corruption/process-1792843080305584900.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-selected\\corruption\\process-1792843080305584900.log",
+      "sha256": "f254772399d9ded1f31f9c3fc62b6d204729c0a29e77662d7badf436d2bd868b",
+      "bytes": 16762
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-logs/cpu/corruption/process-1792843091073207500.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-selected\\corruption\\process-1792843091073207500.log",
+      "sha256": "bd282d1172b83c23189fd3dc2477d7a6da72cad073db29c6803809cf90c528ae",
+      "bytes": 4806
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-logs/cpu/corruption/process-1792843099178167500.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-selected\\corruption\\process-1792843099178167500.log",
+      "sha256": "8d2df8c378500395764771a19fb07d5f937096486043bc1fb215b4e5a71ad934",
+      "bytes": 6490
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-logs/cpu/kill-before_delete/killed-process.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-selected\\kill-before_delete\\killed-process.log",
+      "sha256": "31b16ddf07dea691a791f673e7a70a181ffa6f8ec4653a8bdb801cd1705c91da",
+      "bytes": 3920
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-logs/cpu/kill-before_delete/process-1792843072127796300.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-selected\\kill-before_delete\\process-1792843072127796300.log",
+      "sha256": "e5be18ab7ad450c7a38a684a95bab45aff30ed639de813cc997c58ac0abcd1d8",
+      "bytes": 7776
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-logs/cpu/kill-checkpoint_written/killed-process.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-selected\\kill-checkpoint_written\\killed-process.log",
+      "sha256": "427f1e4617f84e6c355cb1a1bc72b7ac86c6eadb7e2a187695454a824f735d57",
+      "bytes": 763
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-logs/cpu/kill-checkpoint_written/process-1792843033740059400.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-selected\\kill-checkpoint_written\\process-1792843033740059400.log",
+      "sha256": "c9df455b3a4c486287e3dea4a9d8915507b4e7746258033ad38837aceebc284e",
+      "bytes": 14906
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-logs/cpu/kill-ledger_committed/killed-process.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-selected\\kill-ledger_committed\\killed-process.log",
+      "sha256": "ff44352ae0466a3d1071e4c62b24a807f7d72409230653c3619f860327193379",
+      "bytes": 759
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-logs/cpu/kill-ledger_committed/process-1792843052958992200.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-selected\\kill-ledger_committed\\process-1792843052958992200.log",
+      "sha256": "16ab2f97f2a04510f2e70687f8e4440bf027a826be1dcfa7512b25681ef91837",
+      "bytes": 14056
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-logs/cpu/uninterrupted/process-1792842999004103100.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-selected\\uninterrupted\\process-1792842999004103100.log",
+      "sha256": "1fedc8f0a71f87a80dbcc7c89b74bb8e2b4ffd26b793ce8a32d0f54b92ef082c",
+      "bytes": 19762
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-logs/cpu/uninterrupted/process-1792843016413452100.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-selected\\uninterrupted\\process-1792843016413452100.log",
+      "sha256": "96b53cc58f697029585206c8c9485759487713620504f836876b47d611d50143",
+      "bytes": 4811
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-logs/xpu/corruption/process-1792843239616983500.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-selected\\corruption\\process-1792843239616983500.log",
+      "sha256": "1e22188e74099c35ff79c0e5b1d37a70b09b171de456544ffa4fe231ed79ecca",
+      "bytes": 22682
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-logs/xpu/corruption/process-1792843254244514000.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-selected\\corruption\\process-1792843254244514000.log",
+      "sha256": "0fd6fd21e78200dc5822ad69731d89bc9be2423d0ac93e3a601d19faa22c8820",
+      "bytes": 7073
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-logs/xpu/corruption/process-1792843263751139000.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-selected\\corruption\\process-1792843263751139000.log",
+      "sha256": "f7f279f0acb6a22ab7ae4ef1b99faaf33732ff515cb7d98607a6db276b0663bd",
+      "bytes": 7963
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-logs/xpu/kill-before_delete/killed-process.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-selected\\kill-before_delete\\killed-process.log",
+      "sha256": "6fbc459b90a46da6db8dc36fbb054c2f0a8c3333e6fc726dfcc498300db7434b",
+      "bytes": 3928
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-logs/xpu/kill-before_delete/process-1792843227120466400.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-selected\\kill-before_delete\\process-1792843227120466400.log",
+      "sha256": "13b7dc2e63ae88878a5393e40345546946a98e0aa9cbb6ed2518786c9a92bb26",
+      "bytes": 13319
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-logs/xpu/kill-checkpoint_written/killed-process.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-selected\\kill-checkpoint_written\\killed-process.log",
+      "sha256": "63cabfb732cf1525195d304ae1e136ba905c69d10fe990b5ee77a4784061e8c7",
+      "bytes": 765
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-logs/xpu/kill-checkpoint_written/process-1792843171474546400.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-selected\\kill-checkpoint_written\\process-1792843171474546400.log",
+      "sha256": "c54637044a662dd002c5341988bf0d59eb067693cddb0dc15e4a8ae027fe53c1",
+      "bytes": 21586
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-logs/xpu/kill-ledger_committed/killed-process.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-selected\\kill-ledger_committed\\killed-process.log",
+      "sha256": "4798623cd0bd12e31c1fda8561d4ce3f6475dc1480c1cee6ac909d5215da9fcb",
+      "bytes": 761
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-logs/xpu/kill-ledger_committed/process-1792843200544001900.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-selected\\kill-ledger_committed\\process-1792843200544001900.log",
+      "sha256": "4084f797fa4fa595e1698d9386fd33236fee4f000a75433734b71d664c8e8ac4",
+      "bytes": 20236
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-logs/xpu/uninterrupted/process-1792843133831796600.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-selected\\uninterrupted\\process-1792843133831796600.log",
+      "sha256": "782aa3ee1591968f9b074421d8e9de339279c3b228bf2d8937848be5d6b0ac1e",
+      "bytes": 22692
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-logs/xpu/uninterrupted/process-1792843149998626900.log",
+      "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-selected\\uninterrupted\\process-1792843149998626900.log",
+      "sha256": "bd455f92a8795a51538a1eabd4be5a97d706732544cbfc23265bede534e154d1",
+      "bytes": 7052
+    }
+  ],
+  "profiles": [
+    {
+      "device": "cpu",
+      "file": "recovery-selected-profiles/cpu/uninterrupted/resume-profile-1792843016413452100.json",
+      "sha256": "269a55b1c230d1810da4eef828d2eb0bb73b0296533072f9fa7faf6595798af0",
+      "scenario": "completed_resume",
+      "phase": "resume",
+      "wall_seconds": 8.239915500045754
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-profiles/cpu/kill-checkpoint_written/resume-profile-1792843033740059400.json",
+      "sha256": "0063919ac28becf3ffb881ee124edd7733c701a67f7c4910930fdb4efbb73c12",
+      "scenario": "kill_checkpoint_written",
+      "phase": "resume",
+      "wall_seconds": 10.932768300059251
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-profiles/cpu/kill-ledger_committed/resume-profile-1792843052958992200.json",
+      "sha256": "bfa890baa7a33803b3ee5772a717160b39d92546bf75f71dce1d6ff4a819332f",
+      "scenario": "kill_ledger_committed",
+      "phase": "resume",
+      "wall_seconds": 9.97930849995464
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-profiles/cpu/kill-before_delete/resume-profile-1792843072127796300.json",
+      "sha256": "97260ca7f1852de066e2ffda3aa52c12b488b14d0aefccccb145635fc3e8046a",
+      "scenario": "kill_before_delete",
+      "phase": "resume",
+      "wall_seconds": 8.116238999995403
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-profiles/cpu/corruption/resume-profile-1792843091073207500.json",
+      "sha256": "bb933fc491c3e76f5e245bc3b8ae67f98df27405cd620fbe11b593e6dcf575d6",
+      "scenario": "mirror_and_previous_checkpoint",
+      "phase": "mirror_resume",
+      "wall_seconds": 8.045451599988155
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-selected-profiles/cpu/corruption/resume-profile-1792843099178167500.json",
+      "sha256": "45f044517e124dbbcdda910fd3b2e0632c29bbaf40105607e87bb9a1c557f4e8",
+      "scenario": "mirror_and_previous_checkpoint",
+      "phase": "previous_resume",
+      "wall_seconds": 10.117346300045028
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-profiles/xpu/uninterrupted/resume-profile-1792843149998626900.json",
+      "sha256": "defaafe5462d6c4082040bc4ae75e04c588c2f9f4519a386c29a43e8bef4bf26",
+      "scenario": "completed_resume",
+      "phase": "resume",
+      "wall_seconds": 9.699262900045142
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-profiles/xpu/kill-checkpoint_written/resume-profile-1792843171474546400.json",
+      "sha256": "9d172e607bd5c25fdd4d2421c3de561b4288524670712b88ffb042899b3cd8c0",
+      "scenario": "kill_checkpoint_written",
+      "phase": "resume",
+      "wall_seconds": 14.91848300001584
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-profiles/xpu/kill-ledger_committed/resume-profile-1792843200544001900.json",
+      "sha256": "e486392653a8ab8ebd9f4a8c5601ca1c28c045e23e2a338784e5f6511da033cb",
+      "scenario": "kill_ledger_committed",
+      "phase": "resume",
+      "wall_seconds": 13.857125699985772
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-profiles/xpu/kill-before_delete/resume-profile-1792843227120466400.json",
+      "sha256": "0be7ff917ed63b60b1c09265f494420203e3f03f406ba1fbff899147c7637785",
+      "scenario": "kill_before_delete",
+      "phase": "resume",
+      "wall_seconds": 12.423891799990088
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-profiles/xpu/corruption/resume-profile-1792843254244514000.json",
+      "sha256": "91c80231f8ed1ac698804bc188704ed5ebb8e3574f59c92e6c6674c0f9b997c3",
+      "scenario": "mirror_and_previous_checkpoint",
+      "phase": "mirror_resume",
+      "wall_seconds": 9.442933200043626
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-selected-profiles/xpu/corruption/resume-profile-1792843263751139000.json",
+      "sha256": "6d56a9c489651cf7a64a44b3672da4faa62f707d21298934375e01f481f20f13",
+      "scenario": "mirror_and_previous_checkpoint",
+      "phase": "previous_resume",
+      "wall_seconds": 9.491802199976519
+    }
+  ],
+  "numeric": {
+    "cpu-fp32": {
+      "passed": true,
+      "both_heads_gradients_exercised": true,
+      "head_raw_gradient_norm_float64": {
+        "cpu_fp32": {
+          "policy": 1.147978287797705,
+          "wdl": 1.127067105272613
+        },
+        "tested": {
+          "policy": 1.147978287797705,
+          "wdl": 1.127067105272613
+        }
+      },
+      "head_update_norm_float64": {
+        "cpu_fp32": {
+          "policy": 0.13727061025986492,
+          "wdl": 0.013747229191891605
+        },
+        "tested": {
+          "policy": 0.13727061025986492,
+          "wdl": 0.013747229191891605
+        }
+      },
+      "errors": {
+        "gradient": 0.0,
+        "policy_logits": 0.0,
+        "relative_loss": 0.0,
+        "updated_weights": 0.0,
+        "wdl_probability": 0.0
+      },
+      "gradient_norm_checks": {
+        "cpu_fp32": {
+          "absolute_error": 1.4938532904018587e-06,
+          "allowed_absolute_error": 2.5949416794001657e-05,
+          "clipped_cpu_float64_norm": 1.0000001881737581,
+          "expected_clipped_norm": 0.999999614635033,
+          "foreach": null,
+          "passed": true,
+          "reference_cpu_float64": 2.5949416794001654,
+          "returned_norm": 2.594940185546875
+        },
+        "tested": {
+          "absolute_error": 1.4938532904018587e-06,
+          "allowed_absolute_error": 2.5949416794001657e-05,
+          "clipped_cpu_float64_norm": 1.0000001881737581,
+          "expected_clipped_norm": 0.999999614635033,
+          "foreach": null,
+          "passed": true,
+          "reference_cpu_float64": 2.5949416794001654,
+          "returned_norm": 2.594940185546875
+        }
+      },
+      "input_coverage": {
+        "identities": [
+          "4a3b624659e82dadbaa6acb292e9e72f6f4a964bf948f21047b55e2b157c2fff",
+          "5fce524b1782650d96b6b1fb92c4ed3bde5076cb1758eaa222aee10d38c66e95",
+          "0e0e617287f6ca3a4866efc33a07b4e50e63557e4a187908c1ddc38d28bae042",
+          "65278229b9335b34220b49aafb220333a9c417116730994e6d92ae36b76d9f03",
+          "3caa74cc9aff023bca178229fd227bf3add972cda2481e5011ec47e3f047e49e",
+          "ecd0d0e86bbcedb45a54341a2ac62ab5dd07f714294da899b74066bf9cee6cb1",
+          "6876800db8520c1bdb374d6a71178f94ec7a78da61a52afbb58bf0428f12be4b",
+          "a6bb2b4bf5e72cadfeb8201086d615db76055d93acbdce3a1578ded6cf91438c",
+          "b8094a6ecc57e5f3026293dfc7e3b0984c43098ea52b925985eecd267c528aee",
+          "94e12e82fb3525dd748965e2f016ce41ae0654efe0346911c0797504652ac3cd",
+          "8fe15c4f1337f9aa65fd90828d0e67f0e6deeac378b328ad6ade2fc66ba20f30",
+          "d8b37035b23cf4ed8a9d5d36e8298bf5d41cfd46a1102c9581eebecbb82a3fed",
+          "f22b3de21713bacf32f0cf2689c9e9d7974a16036755640a9b85faf10e35fc55",
+          "2450d5b515c7d6964cdb15d80661498e4e031edffeed59a5e26f350ade309212",
+          "f3723591753dfaf84020960a871fc7278285174bdd8960bb4b3aa9a85f9162db",
+          "d118e7d024d16f8c22d2d1dd42a1b88b87e40d384a7e4f14c5ad3b24905e9fbf",
+          "e110a65e8b272577caa00d051da0cf54d3b1afbb15350e2a73cdaa8d2de53d77",
+          "8931cc59759a839399e2481e687e82e0bfffa9e0f48f5533154039b76df874f6",
+          "9630ee93e50538f6b76fa3773c2237cb3d4e983d71edfb0dcee85baffa4a6d0b",
+          "4aa26380bd1efab24dd3ac88fbfd985c08590d78a94e07b4e789682e2930569f",
+          "d0cbd36a291c6e112671cb71bec6bca33ba644999e068100eef67029c72fa775",
+          "f7fed44572a2edcb74d68e9f35516a3e7762c4ea612f8f727fd8ac16122232c4",
+          "1cb407c79f4de7e3a874c970d414d8545d786401c2e6718a1273e4ca0b0f84f4",
+          "da6a785ff443dbba3e027af1c29302aba3a4c9e1456242a6e759aea5ee064f07",
+          "5f77c5b4bf7f119e3d8721e580819584dddd8bdc3be8bc5b1e06cea8cf834664",
+          "8a52a2b8475b86a1047f1d243e644670a48507410a3f0fa59aac557e2ef1063c",
+          "de166ee7f2258ab8961256019f13842866eea77932d53089ef51a9baf57e6445",
+          "3eda9634089008eaecebde717590000700ab27b5529e69c3c2f07c743b7f5506",
+          "ac94942f44d30e89491d98df0b58e23704907cc1f7ee806d48239bb07cb245cd",
+          "c6da2d29c72c6dc938662db0a6da5f0fd36064276c9a77b0ab0cceb87a378eeb",
+          "b6950ac304716d19f9a05f409e9c23164eb699ea7c5da51701eb17e2bb91141b",
+          "778159d3601d60be5277a8f1bfb1601381218f9bc423c95be35250224153151e"
+        ],
+        "policy_weight_sum": 7.1468275779090344,
+        "positive_policy_weight_rows": 32,
+        "positive_value_weight_rows": 16,
+        "value_weight_sum": 3.1155165140550727
+      },
+      "portable_file_loaded_on_cpu": true,
+      "xpu_rng": null
+    },
+    "xpu-fp32": {
+      "passed": true,
+      "both_heads_gradients_exercised": true,
+      "head_raw_gradient_norm_float64": {
+        "cpu_fp32": {
+          "policy": 1.147978287797705,
+          "wdl": 1.127067105272613
+        },
+        "tested": {
+          "policy": 1.1479784865283675,
+          "wdl": 1.1270671848624654
+        }
+      },
+      "head_update_norm_float64": {
+        "cpu_fp32": {
+          "policy": 0.13727061025986492,
+          "wdl": 0.013747229191891605
+        },
+        "tested": {
+          "policy": 0.1372706077024156,
+          "wdl": 0.013747229177072134
+        }
+      },
+      "errors": {
+        "gradient": 1.043081283569336e-07,
+        "policy_logits": 4.76837158203125e-06,
+        "relative_loss": 7.651757497746749e-08,
+        "updated_weights": 1.564621925354004e-07,
+        "wdl_probability": 2.384185791015625e-07
+      },
+      "gradient_norm_checks": {
+        "cpu_fp32": {
+          "absolute_error": 1.4938532904018587e-06,
+          "allowed_absolute_error": 2.5949416794001657e-05,
+          "clipped_cpu_float64_norm": 1.0000001881737581,
+          "expected_clipped_norm": 0.999999614635033,
+          "foreach": null,
+          "passed": true,
+          "reference_cpu_float64": 2.5949416794001654,
+          "returned_norm": 2.594940185546875
+        },
+        "tested": {
+          "absolute_error": 5.8916378886664234e-08,
+          "allowed_absolute_error": 2.5949419133933078e-05,
+          "clipped_cpu_float64_norm": 0.9999996602043352,
+          "expected_clipped_norm": 0.9999996146350677,
+          "foreach": false,
+          "passed": true,
+          "reference_cpu_float64": 2.5949419133933076,
+          "returned_norm": 2.5949418544769287
+        }
+      },
+      "input_coverage": {
+        "identities": [
+          "4a3b624659e82dadbaa6acb292e9e72f6f4a964bf948f21047b55e2b157c2fff",
+          "5fce524b1782650d96b6b1fb92c4ed3bde5076cb1758eaa222aee10d38c66e95",
+          "0e0e617287f6ca3a4866efc33a07b4e50e63557e4a187908c1ddc38d28bae042",
+          "65278229b9335b34220b49aafb220333a9c417116730994e6d92ae36b76d9f03",
+          "3caa74cc9aff023bca178229fd227bf3add972cda2481e5011ec47e3f047e49e",
+          "ecd0d0e86bbcedb45a54341a2ac62ab5dd07f714294da899b74066bf9cee6cb1",
+          "6876800db8520c1bdb374d6a71178f94ec7a78da61a52afbb58bf0428f12be4b",
+          "a6bb2b4bf5e72cadfeb8201086d615db76055d93acbdce3a1578ded6cf91438c",
+          "b8094a6ecc57e5f3026293dfc7e3b0984c43098ea52b925985eecd267c528aee",
+          "94e12e82fb3525dd748965e2f016ce41ae0654efe0346911c0797504652ac3cd",
+          "8fe15c4f1337f9aa65fd90828d0e67f0e6deeac378b328ad6ade2fc66ba20f30",
+          "d8b37035b23cf4ed8a9d5d36e8298bf5d41cfd46a1102c9581eebecbb82a3fed",
+          "f22b3de21713bacf32f0cf2689c9e9d7974a16036755640a9b85faf10e35fc55",
+          "2450d5b515c7d6964cdb15d80661498e4e031edffeed59a5e26f350ade309212",
+          "f3723591753dfaf84020960a871fc7278285174bdd8960bb4b3aa9a85f9162db",
+          "d118e7d024d16f8c22d2d1dd42a1b88b87e40d384a7e4f14c5ad3b24905e9fbf",
+          "e110a65e8b272577caa00d051da0cf54d3b1afbb15350e2a73cdaa8d2de53d77",
+          "8931cc59759a839399e2481e687e82e0bfffa9e0f48f5533154039b76df874f6",
+          "9630ee93e50538f6b76fa3773c2237cb3d4e983d71edfb0dcee85baffa4a6d0b",
+          "4aa26380bd1efab24dd3ac88fbfd985c08590d78a94e07b4e789682e2930569f",
+          "d0cbd36a291c6e112671cb71bec6bca33ba644999e068100eef67029c72fa775",
+          "f7fed44572a2edcb74d68e9f35516a3e7762c4ea612f8f727fd8ac16122232c4",
+          "1cb407c79f4de7e3a874c970d414d8545d786401c2e6718a1273e4ca0b0f84f4",
+          "da6a785ff443dbba3e027af1c29302aba3a4c9e1456242a6e759aea5ee064f07",
+          "5f77c5b4bf7f119e3d8721e580819584dddd8bdc3be8bc5b1e06cea8cf834664",
+          "8a52a2b8475b86a1047f1d243e644670a48507410a3f0fa59aac557e2ef1063c",
+          "de166ee7f2258ab8961256019f13842866eea77932d53089ef51a9baf57e6445",
+          "3eda9634089008eaecebde717590000700ab27b5529e69c3c2f07c743b7f5506",
+          "ac94942f44d30e89491d98df0b58e23704907cc1f7ee806d48239bb07cb245cd",
+          "c6da2d29c72c6dc938662db0a6da5f0fd36064276c9a77b0ab0cceb87a378eeb",
+          "b6950ac304716d19f9a05f409e9c23164eb699ea7c5da51701eb17e2bb91141b",
+          "778159d3601d60be5277a8f1bfb1601381218f9bc423c95be35250224153151e"
+        ],
+        "policy_weight_sum": 7.1468275779090344,
+        "positive_policy_weight_rows": 32,
+        "positive_value_weight_rows": 16,
+        "value_weight_sum": 3.1155165140550727
+      },
+      "portable_file_loaded_on_cpu": true,
+      "xpu_rng": {
+        "exact_restore": true,
+        "saved_cpu_uint8": true
+      }
+    },
+    "xpu-bf16": {
+      "passed": true,
+      "both_heads_gradients_exercised": true,
+      "head_raw_gradient_norm_float64": {
+        "cpu_fp32": {
+          "policy": 1.147978287797705,
+          "wdl": 1.127067105272613
+        },
+        "tested": {
+          "policy": 1.1492100474687015,
+          "wdl": 1.1279305273541136
+        }
+      },
+      "head_update_norm_float64": {
+        "cpu_fp32": {
+          "policy": 0.13727061025986492,
+          "wdl": 0.013747229191891605
+        },
+        "tested": {
+          "policy": 0.13725787175539658,
+          "wdl": 0.013747633130950438
+        }
+      },
+      "errors": {
+        "gradient": 0.0018311738967895508,
+        "policy_logits": 0.06542110443115234,
+        "relative_loss": 3.994217413823803e-05,
+        "updated_weights": 0.001998230814933777,
+        "wdl_probability": 0.00669783353805542
+      },
+      "gradient_norm_checks": {
+        "cpu_fp32": {
+          "absolute_error": 1.4938532904018587e-06,
+          "allowed_absolute_error": 2.5949416794001657e-05,
+          "clipped_cpu_float64_norm": 1.0000001881737581,
+          "expected_clipped_norm": 0.999999614635033,
+          "foreach": null,
+          "passed": true,
+          "reference_cpu_float64": 2.5949416794001654,
+          "returned_norm": 2.594940185546875
+        },
+        "tested": {
+          "absolute_error": 4.2274259204333475e-08,
+          "allowed_absolute_error": 2.5955760056230798e-05,
+          "clipped_cpu_float64_norm": 0.9999996534413694,
+          "expected_clipped_norm": 0.9999996147292113,
+          "foreach": false,
+          "passed": true,
+          "reference_cpu_float64": 2.5955760056230797,
+          "returned_norm": 2.595576047897339
+        }
+      },
+      "input_coverage": {
+        "identities": [
+          "4a3b624659e82dadbaa6acb292e9e72f6f4a964bf948f21047b55e2b157c2fff",
+          "5fce524b1782650d96b6b1fb92c4ed3bde5076cb1758eaa222aee10d38c66e95",
+          "0e0e617287f6ca3a4866efc33a07b4e50e63557e4a187908c1ddc38d28bae042",
+          "65278229b9335b34220b49aafb220333a9c417116730994e6d92ae36b76d9f03",
+          "3caa74cc9aff023bca178229fd227bf3add972cda2481e5011ec47e3f047e49e",
+          "ecd0d0e86bbcedb45a54341a2ac62ab5dd07f714294da899b74066bf9cee6cb1",
+          "6876800db8520c1bdb374d6a71178f94ec7a78da61a52afbb58bf0428f12be4b",
+          "a6bb2b4bf5e72cadfeb8201086d615db76055d93acbdce3a1578ded6cf91438c",
+          "b8094a6ecc57e5f3026293dfc7e3b0984c43098ea52b925985eecd267c528aee",
+          "94e12e82fb3525dd748965e2f016ce41ae0654efe0346911c0797504652ac3cd",
+          "8fe15c4f1337f9aa65fd90828d0e67f0e6deeac378b328ad6ade2fc66ba20f30",
+          "d8b37035b23cf4ed8a9d5d36e8298bf5d41cfd46a1102c9581eebecbb82a3fed",
+          "f22b3de21713bacf32f0cf2689c9e9d7974a16036755640a9b85faf10e35fc55",
+          "2450d5b515c7d6964cdb15d80661498e4e031edffeed59a5e26f350ade309212",
+          "f3723591753dfaf84020960a871fc7278285174bdd8960bb4b3aa9a85f9162db",
+          "d118e7d024d16f8c22d2d1dd42a1b88b87e40d384a7e4f14c5ad3b24905e9fbf",
+          "e110a65e8b272577caa00d051da0cf54d3b1afbb15350e2a73cdaa8d2de53d77",
+          "8931cc59759a839399e2481e687e82e0bfffa9e0f48f5533154039b76df874f6",
+          "9630ee93e50538f6b76fa3773c2237cb3d4e983d71edfb0dcee85baffa4a6d0b",
+          "4aa26380bd1efab24dd3ac88fbfd985c08590d78a94e07b4e789682e2930569f",
+          "d0cbd36a291c6e112671cb71bec6bca33ba644999e068100eef67029c72fa775",
+          "f7fed44572a2edcb74d68e9f35516a3e7762c4ea612f8f727fd8ac16122232c4",
+          "1cb407c79f4de7e3a874c970d414d8545d786401c2e6718a1273e4ca0b0f84f4",
+          "da6a785ff443dbba3e027af1c29302aba3a4c9e1456242a6e759aea5ee064f07",
+          "5f77c5b4bf7f119e3d8721e580819584dddd8bdc3be8bc5b1e06cea8cf834664",
+          "8a52a2b8475b86a1047f1d243e644670a48507410a3f0fa59aac557e2ef1063c",
+          "de166ee7f2258ab8961256019f13842866eea77932d53089ef51a9baf57e6445",
+          "3eda9634089008eaecebde717590000700ab27b5529e69c3c2f07c743b7f5506",
+          "ac94942f44d30e89491d98df0b58e23704907cc1f7ee806d48239bb07cb245cd",
+          "c6da2d29c72c6dc938662db0a6da5f0fd36064276c9a77b0ab0cceb87a378eeb",
+          "b6950ac304716d19f9a05f409e9c23164eb699ea7c5da51701eb17e2bb91141b",
+          "778159d3601d60be5277a8f1bfb1601381218f9bc423c95be35250224153151e"
+        ],
+        "policy_weight_sum": 7.1468275779090344,
+        "positive_policy_weight_rows": 32,
+        "positive_value_weight_rows": 16,
+        "value_weight_sum": 3.1155165140550727
+      },
+      "portable_file_loaded_on_cpu": true,
+      "xpu_rng": {
+        "exact_restore": true,
+        "saved_cpu_uint8": true
+      }
+    }
+  },
+  "meaning": "Final mixed-head numerical checks and selected-mode real process recovery. Each device is exact against its own uninterrupted baseline; CPU and XPU weights are not required to be bitwise equal.",
+  "recovery_timing_scope": "Profiler checkpoint_recovery is exclusive bundle load/verification; process startup, opening preparation, model construction/device placement and final validation are not included. Resume process wall time is separately recorded."
+}

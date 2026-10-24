@@ -1,0 +1,1031 @@
+{
+  "purpose": "independent bounded diagnostic reference only; no training labels are generated or consumed",
+  "reference_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+  "child_nodes": 100000,
+  "root_multipv_nodes": 500000,
+  "cases": {
+    "start": {
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "moves": [],
+      "root_top5": [
+        {
+          "uci": "e2e4",
+          "score_cp": 37,
+          "mate": null,
+          "depth": 16,
+          "wdl": [
+            76,
+            920,
+            4
+          ]
+        },
+        {
+          "uci": "g1f3",
+          "score_cp": 23,
+          "mate": null,
+          "depth": 16,
+          "wdl": [
+            44,
+            948,
+            8
+          ]
+        },
+        {
+          "uci": "d2d4",
+          "score_cp": 20,
+          "mate": null,
+          "depth": 16,
+          "wdl": [
+            39,
+            953,
+            8
+          ]
+        },
+        {
+          "uci": "e2e3",
+          "score_cp": 12,
+          "mate": null,
+          "depth": 15,
+          "wdl": [
+            29,
+            959,
+            12
+          ]
+        },
+        {
+          "uci": "c2c4",
+          "score_cp": 8,
+          "mate": null,
+          "depth": 15,
+          "wdl": [
+            25,
+            961,
+            14
+          ]
+        }
+      ],
+      "children": [
+        {
+          "uci": "g1h3",
+          "san": "Nh3",
+          "score_cp": -63,
+          "mate": null,
+          "depth": 18,
+          "nodes": 100011,
+          "wdl": [
+            2,
+            812,
+            186
+          ]
+        },
+        {
+          "uci": "g1f3",
+          "san": "Nf3",
+          "score_cp": 18,
+          "mate": null,
+          "depth": 18,
+          "nodes": 100026,
+          "wdl": [
+            36,
+            955,
+            9
+          ]
+        },
+        {
+          "uci": "b1c3",
+          "san": "Nc3",
+          "score_cp": -5,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100100,
+          "wdl": [
+            15,
+            962,
+            23
+          ]
+        },
+        {
+          "uci": "b1a3",
+          "san": "Na3",
+          "score_cp": -64,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100109,
+          "wdl": [
+            1,
+            805,
+            194
+          ]
+        },
+        {
+          "uci": "h2h3",
+          "san": "h3",
+          "score_cp": -16,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100073,
+          "wdl": [
+            10,
+            956,
+            34
+          ]
+        },
+        {
+          "uci": "g2g3",
+          "san": "g3",
+          "score_cp": 20,
+          "mate": null,
+          "depth": 14,
+          "nodes": 100019,
+          "wdl": [
+            41,
+            951,
+            8
+          ]
+        },
+        {
+          "uci": "f2f3",
+          "san": "f3",
+          "score_cp": -72,
+          "mate": null,
+          "depth": 15,
+          "nodes": 100080,
+          "wdl": [
+            1,
+            755,
+            244
+          ]
+        },
+        {
+          "uci": "e2e3",
+          "san": "e3",
+          "score_cp": 7,
+          "mate": null,
+          "depth": 18,
+          "nodes": 100080,
+          "wdl": [
+            24,
+            962,
+            14
+          ]
+        },
+        {
+          "uci": "d2d3",
+          "san": "d3",
+          "score_cp": -2,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100024,
+          "wdl": [
+            17,
+            963,
+            20
+          ]
+        },
+        {
+          "uci": "c2c3",
+          "san": "c3",
+          "score_cp": 7,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100076,
+          "wdl": [
+            24,
+            962,
+            14
+          ]
+        },
+        {
+          "uci": "b2b3",
+          "san": "b3",
+          "score_cp": -28,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100026,
+          "wdl": [
+            6,
+            940,
+            54
+          ]
+        },
+        {
+          "uci": "a2a3",
+          "san": "a3",
+          "score_cp": -2,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100088,
+          "wdl": [
+            17,
+            963,
+            20
+          ]
+        },
+        {
+          "uci": "h2h4",
+          "san": "h4",
+          "score_cp": -32,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100014,
+          "wdl": [
+            5,
+            933,
+            62
+          ]
+        },
+        {
+          "uci": "g2g4",
+          "san": "g4",
+          "score_cp": -134,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100045,
+          "wdl": [
+            0,
+            205,
+            795
+          ]
+        },
+        {
+          "uci": "f2f4",
+          "san": "f4",
+          "score_cp": -26,
+          "mate": null,
+          "depth": 15,
+          "nodes": 100102,
+          "wdl": [
+            7,
+            943,
+            50
+          ]
+        },
+        {
+          "uci": "e2e4",
+          "san": "e4",
+          "score_cp": 23,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100011,
+          "wdl": [
+            45,
+            948,
+            7
+          ]
+        },
+        {
+          "uci": "d2d4",
+          "san": "d4",
+          "score_cp": 16,
+          "mate": null,
+          "depth": 19,
+          "nodes": 100131,
+          "wdl": [
+            34,
+            956,
+            10
+          ]
+        },
+        {
+          "uci": "c2c4",
+          "san": "c4",
+          "score_cp": 15,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100014,
+          "wdl": [
+            33,
+            957,
+            10
+          ]
+        },
+        {
+          "uci": "b2b4",
+          "san": "b4",
+          "score_cp": -26,
+          "mate": null,
+          "depth": 15,
+          "nodes": 100061,
+          "wdl": [
+            6,
+            943,
+            51
+          ]
+        },
+        {
+          "uci": "a2a4",
+          "san": "a4",
+          "score_cp": -8,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100082,
+          "wdl": [
+            13,
+            962,
+            25
+          ]
+        }
+      ]
+    },
+    "before_Rg1_1s": {
+      "fen": "rnbqkb1r/ppp2ppp/3ppn2/8/8/P1P2N2/1P1PPPPP/RNBQKB1R w KQkq - 0 4",
+      "moves": [
+        "c2c3",
+        "g8f6",
+        "a2a3",
+        "d7d6",
+        "g1f3",
+        "e7e6"
+      ],
+      "root_top5": [
+        {
+          "uci": "d2d4",
+          "score_cp": 18,
+          "mate": null,
+          "depth": 16,
+          "wdl": [
+            36,
+            955,
+            9
+          ]
+        },
+        {
+          "uci": "g2g3",
+          "score_cp": 12,
+          "mate": null,
+          "depth": 16,
+          "wdl": [
+            30,
+            959,
+            11
+          ]
+        },
+        {
+          "uci": "e2e4",
+          "score_cp": 9,
+          "mate": null,
+          "depth": 16,
+          "wdl": [
+            26,
+            961,
+            13
+          ]
+        },
+        {
+          "uci": "c3c4",
+          "score_cp": 5,
+          "mate": null,
+          "depth": 15,
+          "wdl": [
+            22,
+            963,
+            15
+          ]
+        },
+        {
+          "uci": "e2e3",
+          "score_cp": 2,
+          "mate": null,
+          "depth": 15,
+          "wdl": [
+            20,
+            963,
+            17
+          ]
+        }
+      ],
+      "children": [
+        {
+          "uci": "f3g5",
+          "san": "Ng5",
+          "score_cp": -48,
+          "mate": null,
+          "depth": 18,
+          "nodes": 100050,
+          "wdl": [
+            3,
+            883,
+            114
+          ]
+        },
+        {
+          "uci": "f3e5",
+          "san": "Ne5",
+          "score_cp": -759,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100061,
+          "wdl": [
+            0,
+            0,
+            1000
+          ]
+        },
+        {
+          "uci": "f3h4",
+          "san": "Nh4",
+          "score_cp": -47,
+          "mate": null,
+          "depth": 15,
+          "nodes": 100043,
+          "wdl": [
+            3,
+            889,
+            108
+          ]
+        },
+        {
+          "uci": "f3d4",
+          "san": "Nd4",
+          "score_cp": -54,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100037,
+          "wdl": [
+            2,
+            862,
+            136
+          ]
+        },
+        {
+          "uci": "f3g1",
+          "san": "Ng1",
+          "score_cp": -40,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100073,
+          "wdl": [
+            4,
+            913,
+            83
+          ]
+        },
+        {
+          "uci": "h1g1",
+          "san": "Rg1",
+          "score_cp": -70,
+          "mate": null,
+          "depth": 18,
+          "nodes": 100022,
+          "wdl": [
+            1,
+            765,
+            234
+          ]
+        },
+        {
+          "uci": "d1a4",
+          "san": "Qa4+",
+          "score_cp": -18,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100098,
+          "wdl": [
+            9,
+            954,
+            37
+          ]
+        },
+        {
+          "uci": "d1b3",
+          "san": "Qb3",
+          "score_cp": -24,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100058,
+          "wdl": [
+            7,
+            947,
+            46
+          ]
+        },
+        {
+          "uci": "d1c2",
+          "san": "Qc2",
+          "score_cp": 7,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100043,
+          "wdl": [
+            24,
+            962,
+            14
+          ]
+        },
+        {
+          "uci": "a1a2",
+          "san": "Ra2",
+          "score_cp": -26,
+          "mate": null,
+          "depth": 15,
+          "nodes": 100044,
+          "wdl": [
+            6,
+            943,
+            51
+          ]
+        },
+        {
+          "uci": "c3c4",
+          "san": "c4",
+          "score_cp": 5,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100078,
+          "wdl": [
+            23,
+            962,
+            15
+          ]
+        },
+        {
+          "uci": "a3a4",
+          "san": "a4",
+          "score_cp": -28,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100078,
+          "wdl": [
+            6,
+            941,
+            53
+          ]
+        },
+        {
+          "uci": "h2h3",
+          "san": "h3",
+          "score_cp": 0,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100047,
+          "wdl": [
+            18,
+            963,
+            19
+          ]
+        },
+        {
+          "uci": "g2g3",
+          "san": "g3",
+          "score_cp": 4,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100100,
+          "wdl": [
+            22,
+            962,
+            16
+          ]
+        },
+        {
+          "uci": "e2e3",
+          "san": "e3",
+          "score_cp": 0,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100116,
+          "wdl": [
+            18,
+            963,
+            19
+          ]
+        },
+        {
+          "uci": "d2d3",
+          "san": "d3",
+          "score_cp": -6,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100057,
+          "wdl": [
+            15,
+            962,
+            23
+          ]
+        },
+        {
+          "uci": "b2b3",
+          "san": "b3",
+          "score_cp": -5,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100112,
+          "wdl": [
+            15,
+            963,
+            22
+          ]
+        },
+        {
+          "uci": "h2h4",
+          "san": "h4",
+          "score_cp": -26,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100094,
+          "wdl": [
+            7,
+            943,
+            50
+          ]
+        },
+        {
+          "uci": "g2g4",
+          "san": "g4",
+          "score_cp": -55,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100046,
+          "wdl": [
+            2,
+            853,
+            145
+          ]
+        },
+        {
+          "uci": "e2e4",
+          "san": "e4",
+          "score_cp": 7,
+          "mate": null,
+          "depth": 18,
+          "nodes": 100075,
+          "wdl": [
+            24,
+            962,
+            14
+          ]
+        },
+        {
+          "uci": "d2d4",
+          "san": "d4",
+          "score_cp": 17,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100043,
+          "wdl": [
+            35,
+            955,
+            10
+          ]
+        },
+        {
+          "uci": "b2b4",
+          "san": "b4",
+          "score_cp": -1,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100071,
+          "wdl": [
+            18,
+            963,
+            19
+          ]
+        }
+      ]
+    },
+    "before_Ra6_10s": {
+      "fen": "rnbqkbnr/1ppppppp/8/p7/6P1/2P5/PP1PPP1P/RNBQKBNR b KQkq - 0 2",
+      "moves": [
+        "g2g4",
+        "a7a5",
+        "c2c3"
+      ],
+      "root_top5": [
+        {
+          "uci": "d7d5",
+          "score_cp": 100,
+          "mate": null,
+          "depth": 16,
+          "wdl": [
+            495,
+            505,
+            0
+          ]
+        },
+        {
+          "uci": "b8c6",
+          "score_cp": 96,
+          "mate": null,
+          "depth": 16,
+          "wdl": [
+            464,
+            536,
+            0
+          ]
+        },
+        {
+          "uci": "e7e5",
+          "score_cp": 73,
+          "mate": null,
+          "depth": 15,
+          "wdl": [
+            258,
+            741,
+            1
+          ]
+        },
+        {
+          "uci": "c7c5",
+          "score_cp": 58,
+          "mate": null,
+          "depth": 15,
+          "wdl": [
+            159,
+            839,
+            2
+          ]
+        },
+        {
+          "uci": "a5a4",
+          "score_cp": 54,
+          "mate": null,
+          "depth": 15,
+          "wdl": [
+            138,
+            860,
+            2
+          ]
+        }
+      ],
+      "children": [
+        {
+          "uci": "g8h6",
+          "san": "Nh6",
+          "score_cp": -20,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100054,
+          "wdl": [
+            8,
+            952,
+            40
+          ]
+        },
+        {
+          "uci": "g8f6",
+          "san": "Nf6",
+          "score_cp": 3,
+          "mate": null,
+          "depth": 18,
+          "nodes": 100037,
+          "wdl": [
+            21,
+            963,
+            16
+          ]
+        },
+        {
+          "uci": "b8c6",
+          "san": "Nc6",
+          "score_cp": 86,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100062,
+          "wdl": [
+            369,
+            630,
+            1
+          ]
+        },
+        {
+          "uci": "b8a6",
+          "san": "Na6",
+          "score_cp": 28,
+          "mate": null,
+          "depth": 15,
+          "nodes": 100079,
+          "wdl": [
+            54,
+            940,
+            6
+          ]
+        },
+        {
+          "uci": "a8a7",
+          "san": "Ra7",
+          "score_cp": -18,
+          "mate": null,
+          "depth": 14,
+          "nodes": 100005,
+          "wdl": [
+            9,
+            954,
+            37
+          ]
+        },
+        {
+          "uci": "a8a6",
+          "san": "Ra6",
+          "score_cp": -28,
+          "mate": null,
+          "depth": 15,
+          "nodes": 100046,
+          "wdl": [
+            6,
+            941,
+            53
+          ]
+        },
+        {
+          "uci": "h7h6",
+          "san": "h6",
+          "score_cp": 11,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100016,
+          "wdl": [
+            28,
+            960,
+            12
+          ]
+        },
+        {
+          "uci": "g7g6",
+          "san": "g6",
+          "score_cp": 30,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100072,
+          "wdl": [
+            57,
+            937,
+            6
+          ]
+        },
+        {
+          "uci": "f7f6",
+          "san": "f6",
+          "score_cp": 21,
+          "mate": null,
+          "depth": 15,
+          "nodes": 100075,
+          "wdl": [
+            41,
+            951,
+            8
+          ]
+        },
+        {
+          "uci": "e7e6",
+          "san": "e6",
+          "score_cp": 32,
+          "mate": null,
+          "depth": 15,
+          "nodes": 100023,
+          "wdl": [
+            62,
+            933,
+            5
+          ]
+        },
+        {
+          "uci": "d7d6",
+          "san": "d6",
+          "score_cp": 38,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100093,
+          "wdl": [
+            80,
+            916,
+            4
+          ]
+        },
+        {
+          "uci": "c7c6",
+          "san": "c6",
+          "score_cp": 35,
+          "mate": null,
+          "depth": 15,
+          "nodes": 100092,
+          "wdl": [
+            70,
+            925,
+            5
+          ]
+        },
+        {
+          "uci": "b7b6",
+          "san": "b6",
+          "score_cp": 1,
+          "mate": null,
+          "depth": 15,
+          "nodes": 100108,
+          "wdl": [
+            19,
+            964,
+            17
+          ]
+        },
+        {
+          "uci": "a5a4",
+          "san": "a4",
+          "score_cp": 50,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100059,
+          "wdl": [
+            122,
+            875,
+            3
+          ]
+        },
+        {
+          "uci": "h7h5",
+          "san": "h5",
+          "score_cp": 28,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100024,
+          "wdl": [
+            54,
+            940,
+            6
+          ]
+        },
+        {
+          "uci": "g7g5",
+          "san": "g5",
+          "score_cp": -56,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100022,
+          "wdl": [
+            2,
+            851,
+            147
+          ]
+        },
+        {
+          "uci": "f7f5",
+          "san": "f5",
+          "score_cp": -83,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100002,
+          "wdl": [
+            1,
+            659,
+            340
+          ]
+        },
+        {
+          "uci": "e7e5",
+          "san": "e5",
+          "score_cp": 66,
+          "mate": null,
+          "depth": 16,
+          "nodes": 100014,
+          "wdl": [
+            205,
+            794,
+            1
+          ]
+        },
+        {
+          "uci": "d7d5",
+          "san": "d5",
+          "score_cp": 95,
+          "mate": null,
+          "depth": 17,
+          "nodes": 100056,
+          "wdl": [
+            453,
+            547,
+            0
+          ]
+        },
+        {
+          "uci": "c7c5",
+          "san": "c5",
+          "score_cp": 61,
+          "mate": null,
+          "depth": 15,
+          "nodes": 100095,
+          "wdl": [
+            175,
+            823,
+            2
+          ]
+        },
+        {
+          "uci": "b7b5",
+          "san": "b5",
+          "score_cp": 3,
+          "mate": null,
+          "depth": 14,
+          "nodes": 100107,
+          "wdl": [
+            21,
+            963,
+            16
+          ]
+        }
+      ]
+    }
+  },
+  "reference_id": {
+    "name": "Stockfish 19",
+    "author": "the Stockfish developers (see AUTHORS file)"
+  }
+}

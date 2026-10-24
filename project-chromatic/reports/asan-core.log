@@ -1,0 +1,24 @@
+Start testing: Oct 24 13:13 대한민국 표준시
+----------------------------------------------------------
+1/1 Testing: core
+1/1 Test: core
+Command: "C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic/build-asan/zero_tests.exe"
+Directory: C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic/build-asan
+"core" start time: Oct 24 13:13 대한민국 표준시
+Output:
+----------------------------------------------------------
+perft 5 4865609
+perft 4 4085603
+perft 5 674624
+perft 4 422333
+perft 4 2103487
+all core tests passed
+<end of output>
+Test time =   7.55 sec
+----------------------------------------------------------
+Test Passed.
+"core" end time: Oct 24 13:13 대한민국 표준시
+"core" time elapsed: 00:00:07
+----------------------------------------------------------
+
+End testing: Oct 24 13:13 대한민국 표준시

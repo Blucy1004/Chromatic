@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-24",
+  "scope": "diagnosis only; no training or release changes",
+  "integrity": {
+    "manifest_files_checked": 225,
+    "changed_or_missing_manifest_files": [],
+    "engine_sha256": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d",
+    "model_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "checkpoint_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+    "harness_equivalence": true
+  },
+  "cases": {
+    "start": {
+      "label": "시작 위치",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "moves": [],
+      "simulations": 722781,
+      "original_move": "g2g4",
+      "original_san": "g4",
+      "original_prior": 0.00185686699,
+      "original_selected_q": 0.371453524,
+      "tree_nodes": 65536,
+      "byte_allocation_failures": 656176,
+      "non_retained_leaf_evaluations": 656170,
+      "neutral_value_move": "b1c3",
+      "neutral_value_san": "Nc3",
+      "neutral_value_has_saturation": true,
+      "wider_resource_move": "c2c3",
+      "wider_resource_san": "c3",
+      "reference_selected_cp": -134,
+      "reference_best_cp": 23,
+      "reference_best_move": "e2e4",
+      "reference_regret_cp": 157
+    },
+    "before_Rg1_1s": {
+      "label": "1초 기보 Rg1 직전",
+      "fen": "rnbqkb1r/ppp2ppp/3ppn2/8/8/P1P2N2/1P1PPPPP/RNBQKB1R w KQkq - 0 4",
+      "moves": [
+        "c2c3",
+        "g8f6",
+        "a2a3",
+        "d7d6",
+        "g1f3",
+        "e7e6"
+      ],
+      "simulations": 52995,
+      "original_move": "h1g1",
+      "original_san": "Rg1",
+      "original_prior": 1.84741602e-05,
+      "original_selected_q": 0.1071814,
+      "tree_nodes": 52266,
+      "byte_allocation_failures": 0,
+      "non_retained_leaf_evaluations": 0,
+      "neutral_value_move": "e2e4",
+      "neutral_value_san": "e4",
+      "neutral_value_has_saturation": true,
+      "wider_resource_move": "h1g1",
+      "wider_resource_san": "Rg1",
+      "reference_selected_cp": -70,
+      "reference_best_cp": 17,
+      "reference_best_move": "d2d4",
+      "reference_regret_cp": 87
+    },
+    "before_Ra6_10s": {
+      "label": "10초 기보 Ra6 직전",
+      "fen": "rnbqkbnr/1ppppppp/8/p7/6P1/2P5/PP1PPP1P/RNBQKBNR b KQkq - 0 2",
+      "moves": [
+        "g2g4",
+        "a7a5",
+        "c2c3"
+      ],
+      "simulations": 717076,
+      "original_move": "a8a6",
+      "original_san": "Ra6",
+      "original_prior": 0.00239060726,
+      "original_selected_q": 0.983929038,
+      "tree_nodes": 65536,
+      "byte_allocation_failures": 651526,
+      "non_retained_leaf_evaluations": 651526,
+      "neutral_value_move": "g8f6",
+      "neutral_value_san": "Nf6",
+      "neutral_value_has_saturation": true,
+      "wider_resource_move": "e7e6",
+      "wider_resource_san": "e6",
+      "reference_selected_cp": -28,
+      "reference_best_cp": 95,
+      "reference_best_move": "d7d5",
+      "reference_regret_cp": 123
+    }
+  },
+  "conclusion": [
+    "value generalization/self-consistency is inadequate",
+    "64 MiB tree capacity changes long-search choices in two reproduced cases",
+    "no evidence found for backup-sign, WDL-order, action-index or export mismatch"
+  ],
+  "fixed_simulation_comparisons_not_equal_time_strength_claims": true,
+  "rg1_value_no_saturation": {
+    "settings": {
+      "simulations": 52995,
+      "max_nodes": 1000000,
+      "memory_mib": 512,
+      "seed": 2026,
+      "noise": 0,
+      "temperature": 0,
+      "proof_nodes": 0,
+      "backend": "SIMD",
+      "sparse_policy_head": true,
+      "affinity_mask": 2
+    },
+    "policy_and_trunk_bytes_equal": true,
+    "root_priors_equal": true,
+    "all_allocation_failures_and_non_retained_evaluations_zero": true,
+    "results": [
+      {
+        "bestmove": "h1g1",
+        "simulations": 52995,
+        "nodes_size": 52266,
+        "nn_non_retained": 0
+      },
+      {
+        "bestmove": "e2e4",
+        "simulations": 52995,
+        "nodes_size": 52478,
+        "nn_non_retained": 0
+      }
+    ],
+    "raw_evidence": "rg1-value-no-saturation.json"
+  }
+}

@@ -1,0 +1,898 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ cmake_minimum_required(VERSION 3.20)
+-project(ChromaticDepthTelemetry VERSION 1.0.1 LANGUAGES CXX)
++project(ChromaticMemoryRecycling VERSION 1.1.0 LANGUAGES CXX)
+ set(CMAKE_CXX_STANDARD 20)
+ set(CMAKE_CXX_STANDARD_REQUIRED ON)
+ set(CMAKE_CXX_EXTENSIONS OFF)
+@@ -23,6 +23,25 @@
+ target_link_libraries(depth_telemetry_tests PRIVATE zero_core)
+ add_test(NAME depth_uniform COMMAND depth_telemetry_tests)
+ add_test(NAME depth_deployed_model COMMAND depth_telemetry_tests "${CMAKE_CURRENT_SOURCE_DIR}/dist/default.zero")
++add_executable(memory_recycling_tests tests/memory_recycling.cpp)
++target_link_libraries(memory_recycling_tests PRIVATE zero_core)
++add_test(NAME memory_uniform COMMAND memory_recycling_tests)
++add_test(NAME memory_deployed_model COMMAND memory_recycling_tests "${CMAKE_CURRENT_SOURCE_DIR}/dist/default.zero")
++option(CHROMATIC_ASAN "Enable AddressSanitizer for memory recycling validation" OFF)
++if(CHROMATIC_ASAN)
++  if(MSVC)
++    target_compile_options(zero_core PUBLIC /fsanitize=address /Z7)
++    target_link_options(zero_core INTERFACE /INCREMENTAL:NO)
++    get_filename_component(CHROMATIC_COMPILER_DIR "${CMAKE_CXX_COMPILER}" DIRECTORY)
++    foreach(target chromatic_depth depth_probe zero_tests depth_telemetry_tests memory_recycling_tests)
++      add_custom_command(TARGET ${target} POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different
++        "${CHROMATIC_COMPILER_DIR}/clang_rt.asan_dynamic-x86_64.dll" "$<TARGET_FILE_DIR:${target}>")
++    endforeach()
++  else()
++    target_compile_options(zero_core PUBLIC -fsanitize=address,undefined -fno-omit-frame-pointer)
++    target_link_options(zero_core INTERFACE -fsanitize=address,undefined)
++  endif()
++endif()
+ add_library(pristine_core baseline/src/board.cpp baseline/src/network.cpp baseline/src/search.cpp baseline/src/proof.cpp)
+ target_include_directories(pristine_core PUBLIC baseline/include)
+ if(MSVC)
+--- a/README.md
++++ b/README.md
+@@ -1,121 +1,131 @@
+-# CHROMATIC optional MCTS depth telemetry
++# CHROMATIC 1.1 — bounded tree memory recycling
+ 
+-This is a separate diagnostic build of CHROMATIC 1.0. The existing
+-`outputs/project-chromatic` release and its model are preserved. No training,
+-weight changes, search-strength changes, allocator fixes or move filters are
+-included. `dist/default.zero` is a byte-identical copy of the deployed model.
++This is a separate search-only revision. The original release in
++`outputs/project-chromatic` and the prior depth-instrumented version in
++`outputs/project-chromatic-depth` are preserved. The model is byte-identical to
++their `default.zero`. No training, move filters or opening book were added.
+ 
+-Build on Windows with Visual Studio C++ tools, CMake and Ninja:
++## What changed
++
++The previous arena continued evaluating and backing up a selected leaf when its
++child could not be stored. A failed legal-edge-list expansion could also cause
++repeated NN evaluations of a resident but unexpanded node. Both behaviors could
++increase root Visits and Q while the relevant branch stopped growing.
++
++The revised search checks storage **before** NN inference. A failed attempt
++contributes no NN value, completed simulation, root visit, Q backup or depth
++sample. The search then reclaims low-visit descendants inside the existing
++node/edge reservations and retries from the root.
++
++- Root, every root edge, and statistics on retained internal nodes/edges survive.
++- Existing direct root children are protected when that protected set fits both
++  half-capacity targets. Tiny node budgets can relax this protection.
++- The visit threshold starts at 2 and doubles until retained nodes and retained
++  edges each fit half their respective reserved capacities. This creates room
++  for both kinds of allocation.
++- Marking and index assignment are separate passes. New node IDs follow old ID
++  order. Edge blocks are copied in old block order before nodes are compacted.
++  The previous traversal path is discarded before retrying.
++- The arena is compacted in place; a second complete tree is not allocated.
++  Keep flags, remapping and block-order arrays use separately reported scratch.
++- If memory cannot be reclaimed, the search returns with `memory_exhausted=true`
++  and the actual completed N. It never invents requested visits or loops forever.
++
++This is an approximate bounded-memory MCTS: discarded descendant statistics are
++lost and may be rebuilt later. It is not equivalent to unlimited-tree PUCT, and
++deeper measured paths alone do not establish greater playing strength.
++
++## Build and use
++
++Visual Studio C++ tools, CMake and Ninja are required to rebuild:
+ 
+ ```powershell
+ .\build.cmd
+ ctest --test-dir build --output-on-failure
+ ```
+ 
+-The executable `dist/chromatic-depth.exe` speaks UCI. **Telemetry is off by
+-default.** Turn it on when collecting diagnostics:
++Run `.\asan.cmd` for a separate AddressSanitizer build and the same five tests.
++
++Run `dist/chromatic-memory.exe` as a UCI engine. The search fix is always active;
++optional detailed telemetry is off by default.
+ 
+ ```text
+ uci
++setoption name TreeMemoryMB value 64
++setoption name MaxNodes value 1000000
++setoption name MateProofNodes value 0
+ setoption name SearchTelemetry value true
+ setoption name TelemetryInterval value 4096
+-setoption name TreeMemoryMB value 512
+-setoption name MaxNodes value 1000000
+-setoption name MateProofNodes value 0
+ isready
+ position startpos
+-go movetime 1000
++go movetime 10000
+ ```
+ 
+-UCI `go` emits the usual search summary, then an `info string telemetry {JSON}`
+-line, then `bestmove`. JSON serialization/transmission takes place after search
+-and can add response-delivery time when telemetry is on. Use the probe for
+-separately measured search and process times. With telemetry off, neither the
+-histogram bookkeeping nor telemetry JSON is produced.
+-
+-The `zero search` extension accepts an explicit seed and returns the same JSON
+-payload, including telemetry only when enabled:
++For a deterministic completed-simulation budget and explicit seed:
+ 
+ ```text
+ position startpos
+ zero search 722781 2026 0 0
+ ```
+ 
+-For controlled time and simulation budgets use `dist/depth_probe.exe`. All
+-experiments use one search thread, CPU affinity mask 2, SIMD, sparse policy,
+-CPuct 1.5, FPU reduction 0, noise/temperature/proof 0, and seed 2026. Search is
+-fresh for every invocation. `--max-nodes 1000000` is the same at both byte caps.
++The native probe separates search wall time from model load, warmup and final
++JSON transmission. All comparison runs use one search thread, CPU affinity mask
++2, SIMD/sparse inference, CPuct 1.5, FPU 0, proof/noise/temperature 0 and seed 2026.
+ 
+ ```powershell
+-.\dist\depth_probe.exe --model .\dist\default.zero --mode time --budget 1000 --memory 64 --max-nodes 1000000 --seed 2026 --threads 1 --affinity 2 --telemetry true --interval 4096
++.\dist\depth_probe.exe --model .\dist\default.zero --mode time --budget 10000 --memory 64 --max-nodes 1000000 --seed 2026 --threads 1 --affinity 2 --telemetry true --interval 4096
+ .\dist\depth_probe.exe --model .\dist\default.zero --mode simulations --budget 722781 --memory 512 --max-nodes 1000000 --seed 2026 --threads 1 --affinity 2 --telemetry true --interval 4096
+ ```
+ 
+-`--fen` accepts a quoted six-field FEN. `--telemetry false` uses the disabled
+-template instantiation. `--warmup true` performs 32 NN evaluations before the
+-search timer. `elapsed_ms` measures the search call, including final telemetry
+-preparation and tree cleanup, but excludes model loading, warmup and JSON
+-serialization. Experiment logs separately record process wall time.
++The same MaxNodes limit is used at both byte budgets so it does not hide the
++512MiB comparison behind the old 100,000-node default. The UCI default remains
++100,000 unless explicitly set.
+ 
+-`pristine_probe.exe` links the unmodified source in `baseline/`, with the same
+-compiler and optimization options, and is used only for overhead comparisons.
++## Counters and memory definitions
+ 
+-## Metric definitions
++Telemetry schema version 2 retains the depth histograms, candidate histories and
++first-failure events of schema 1 and adds recycling records.
+ 
+-- Root depth is 0. Each completed MCTS simulation contributes one endpoint
+-  depth measured in plies below that root. It may be a newly expanded leaf,
+-  a cached terminal, or an unretained NN-evaluated leaf after allocation failure.
+-  It is not necessarily a unique position.
+-- `leaf_depth[d]` counts endpoints at exactly depth d. Mean and median are exact
+-  visit-weighted statistics of this histogram, not sampled estimates.
+-- `traversal_depth[0]` is the number of completed MCTS simulations.
+-  `traversal_depth[d]` for d >= 1 counts traversed edges at depth d and equals
+-  `sum(leaf_depth[d:])`. These are path visits, not distinct nodes at depth d.
+-- Each root candidate has Policy (`prior`, normalized over legal moves), Q
+-  (average backed-up W−L from the root player's perspective), Visits, and its
+-  own conditional endpoint-depth histogram. Q is not a win probability or a
+-  centipawn evaluation.
+-- `node_creations` counts newly retained nodes and excludes root initialization.
+-  `legal_expansions` counts successfully stored legal-edge lists, including
+-  `root_legal_expansions`. Thus newly created terminal nodes need not count as
+-  legal-edge expansions.
+-- Child creation failures are split into node-limit and byte-capacity failures.
+-  `expansion_fail_byte_capacity` counts legal-edge-list storage failures.
+-  Their sum counts failed allocation attempts, not unique failed positions.
+-- `non_retained_neural_evaluations` counts NN calls whose evaluated leaf has no
+-  stored node. It does not count exact repeated NN inputs. Resident-unexpanded
+-  repeats are tracked separately.
+-- The primary saturation event is `first_allocation_failure`, with a 1-based
+-  simulation index, elapsed time, attempted depth, sizes and reserved capacities.
+-  The first failing simulation belongs to `post_failure_leaf_depth`; earlier
+-  simulations belong to `pre_failure_leaf_depth`.
+-- `first_reserved_cap` reports the separate event where reserved bytes exactly
+-  equal the byte budget. Integer-division slack can prevent this event even when
+-  later allocation fails; use actual failure to identify saturation.
+-- Snapshots are captured at 64, 128, ..., 4096 simulations, each configured
+-  interval, first capacity events, and completion. Events are taken during the
+-  allocation attempt; snapshots describe the state after that simulation's
+-  completed backup. Candidate crossover times are interval-resolved, not exact
+-  per-simulation timestamps. Snapshot windows partition the full histogram.
+-- Root initialization is not a simulation endpoint. Terminal-root searches have
+-  zero endpoints. A successful bounded mate proof retains the old one-root-update
+-  result but is explicitly `proof_only` with zero MCTS endpoints.
+-- The inherited path safety limit is 512 resident path nodes, or at most 511
+-  plies below root. Depth-limit endpoints are counted. None of these metrics
+-  establishes proven minimax depth or playing strength.
+-- Tree budgets apply to Node/Edge reserved capacities. Telemetry is kept outside
+-  this budget. `telemetry_memory_bytes` estimates the retained result structure,
+-  not peak process memory; temporary flags and serializer buffers are additional.
++- `simulations` and each root's Visits count only completed backups. Outside the
++  separate proof-only path, `attempted_simulations - aborted_simulations == simulations`.
++- `node_creations` is cumulative across recycling. Therefore
++  `node_creations + 1 - nodes_evicted == arena_nodes`.
++- `legal_expansions` is cumulative successful legal-edge-list storage, including
++  `root_legal_expansions`. It is different from node creation and NN calls.
++- `non_retained_neural_evaluations`, `resident_unexpanded_repeat` and
++  `discarded_neural_evaluations` should be zero in this version. Failed storage
++  is detected before inference.
++- `prune_count` counts successful reclamations. Each `prunes` record stores
++  before/after sizes, threshold, duration, scratch bytes, root child protection,
++  and exact root Policy/Q/Visits preservation. An unsuccessful reclamation can
++  be recorded without increasing the successful count.
++- Failure events identify both the attempt and completed N. Their `simulation`
++  is completed N + 1. If time expires before retry, it can equal final N + 1.
++- A recycle snapshot may have no new depth samples: completed Visits did not
++  change. Empty windows must be skipped rather than plotted as depth zero.
++- All depths are plies below the current root. One completed simulation creates
++  one endpoint sample. Traversal depth d is the tail sum of endpoint depths ≥d.
++  Root initialization, failed attempts and mate proof are excluded.
++- `memory_bytes` and `peak_memory_bytes` are the node/edge reserved-capacity
++  total and its maximum. The 64MiB/512MiB limits apply to that total. They are
++  not process peak memory and exclude transient `vector::reserve` allocation,
++  model/workspace, telemetry, serializer and algorithm scratch.
++- `peak_auxiliary_bytes` separately reports the keep/remap/block-order scratch
++  peak. `telemetry_memory_bytes` estimates the retained diagnostic result only.
+ 
+-## Validation and results
++Detailed telemetry JSON is produced after search and before `bestmove`, so UCI
++delivery time includes formatting/transmission when enabled. Probe search time
++includes pruning and final result cleanup. It excludes model load, 32 warmup NN
++calls and JSON serialization. Actual process time is recorded separately.
+ 
+-Native tests cover perft, backup sign, off/on exact search equivalence, histogram
+-accounting, exact medians, root partitions, snapshot windows, capacity failures,
+-terminal roots and proof-only returns. The disabled hot loop is selected once
+-through `search_impl<false>`; `if constexpr` removes counter/snapshot work.
++## Verification and experiment data
+ 
+-The sibling `chromatic-depth-analysis` directory contains the complete report,
+-tables, PNG/SVG figures, JSONL runs, per-run requests/stdout, settings, integrity
+-hashes and separate randomized overhead results. Time-budget results have three
+-repeats. Fixed-simulation results use equal N at both memory budgets and are
+-reported separately. See its report for measured performance limits and findings.
++Five native tests pass both normally and with AddressSanitizer: existing core,
++uniform/model depth accounting, and uniform/model recycling regression tests.
++They cover repeated reclamation, root statistics, off/on equivalence, stale ID
++flags, no-progress termination, repetition history, promotion and en passant.
++
++The sibling `chromatic-memory-analysis` directory contains contemporaneous
++legacy/revised measurements, tables, plots and raw logs. Time comparisons and
++equal-completed-N comparisons are kept separate. The model and prior releases
++are verified by SHA-256 before and after the batch.
+--- /dev/null
++++ b/asan.cmd
+@@ -0,0 +1,13 @@
++@echo off
++setlocal
++set VSLANG=1033
++for /f "usebackq tokens=*" %%i in (`"%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath`) do set "MEMORY_VS=%%i"
++if not defined MEMORY_VS exit /b 1
++call "%MEMORY_VS%\VC\Auxiliary\Build\vcvars64.bat" >nul
++if errorlevel 1 exit /b 1
++cmake -S "%~dp0." -B "%~dp0build-asan" -G Ninja -DCMAKE_BUILD_TYPE=Release -DCHROMATIC_ASAN=ON "-DCMAKE_CXX_FLAGS_DEBUG=/Od /RTC1 /Z7"
++if errorlevel 1 exit /b 1
++cmake --build "%~dp0build-asan" --parallel
++if errorlevel 1 exit /b 1
++ctest --test-dir "%~dp0build-asan" --output-on-failure
++exit /b %errorlevel%
+--- a/include/zero/search.hpp
++++ b/include/zero/search.hpp
+@@ -9,9 +9,9 @@
+ #include <string>
+ namespace zero {
+ // Depth is measured in plies below this search root. Each completed MCTS
+-// simulation contributes exactly one endpoint, including cached terminal leaves
+-// and unretained leaves after allocation failure. Root initialization and mate
+-// proof root updates are explicitly excluded from endpoint histograms.
++// simulation contributes exactly one endpoint, including cached terminal leaves.
++// Allocation failures are aborted attempts, not backed-up MCTS simulations.
++// Root initialization and mate proof updates are excluded from histograms.
+ inline constexpr size_t TELEMETRY_DEPTH_BINS=513;
+ using DepthHistogram=std::array<uint64_t,TELEMETRY_DEPTH_BINS>;
+ struct DepthSummary {
+@@ -26,11 +26,14 @@
+     uint64_t neural_evaluations=0,non_retained_neural_evaluations=0,resident_unexpanded_repeat=0;
+     uint64_t terminal_evaluations=0,terminal_leaf_endpoints=0,depth_limit_endpoints=0;
+     uint64_t proof_root_updates=0;
++    uint64_t attempted_simulations=0,aborted_simulations=0;
++    uint64_t prune_count=0,nodes_evicted=0,edges_evicted=0,discarded_neural_evaluations=0;
+ };
+ struct TelemetryEvent {
+     bool occurred=false;
+     std::string reason;
+     uint64_t simulation=0; // 1-based simulation; 0 means root initialization
++    uint64_t attempt=0,completed_simulations=0;
+     double elapsed_ms=0;
+     int depth=0;
+     size_t nodes_size=0,nodes_capacity=0,edges_size=0,edges_capacity=0,memory_bytes=0;
+@@ -41,6 +44,15 @@
+     uint64_t visits=0;
+ };
+ struct TelemetryRoot:TelemetryRootSnapshot {DepthHistogram leaf_depth{};};
++struct TelemetryPrune {
++    uint64_t attempt=0,completed_simulations=0,threshold=0;
++    double elapsed_ms=0,duration_ms=0;
++    int failed_depth=0;
++    size_t nodes_before=0,nodes_after=0,edges_before=0,edges_after=0;
++    size_t nodes_capacity=0,edges_capacity=0,memory_bytes=0,scratch_bytes=0;
++    bool success=false,root_statistics_preserved=false,protected_root_children=false;
++    std::vector<TelemetryRootSnapshot> roots_before,roots_after;
++};
+ struct TelemetrySnapshot {
+     std::string reason;
+     uint64_t simulation=0;
+@@ -56,6 +68,7 @@
+     DepthSummary depth{};
+     std::vector<TelemetryRoot> roots;
+     std::vector<TelemetrySnapshot> snapshots;
++    std::vector<TelemetryPrune> prunes;
+     TelemetryEvent first_reserved_cap{},first_allocation_failure{};
+     TelemetryCounters counters{};
+     uint64_t root_initializations=1;
+@@ -76,6 +89,10 @@
+     Move best{};bool has_move=false,terminal=false;
+     int simulations=0,neural_evals=0,max_depth=0;
+     size_t arena_nodes=0,memory_bytes=0;
++    size_t peak_memory_bytes=0,peak_auxiliary_bytes=0;
++    uint64_t attempted_simulations=0,aborted_simulations=0,prune_count=0;
++    uint64_t nodes_evicted=0,edges_evicted=0,discarded_neural_evaluations=0;
++    bool memory_exhausted=false;
+     float value=0;
+     int proof_nodes=0,proof_plies=0;
+     bool mate_proven=false;
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -53,7 +53,7 @@
+             std::istringstream in(line);std::string cmd;in>>cmd;
+             try {
+                 if(cmd=="quit"){halt();break;}
+-                if(cmd=="uci") {say("id name CHROMATIC 1.0 Depth Telemetry\nid author PROJECT CHROMATIC\noption name ModelFile type string default "+(model_path.empty()?"<none>":model_path)+"\noption name CPuct type string default 1.5\noption name FPUReduction type string default 0\noption name InferenceBackend type combo default SIMD var Scalar var SIMD\noption name SparsePolicyHead type check default true\noption name MateProofNodes type spin default 256 min 0 max 50000\noption name MateProofPlies type combo default 1 var 1 var 3 var 5\noption name TreeMemoryMB type spin default 64 min 1 max 2048\noption name Simulations type spin default 800 min 1 max 10000000\noption name MaxNodes type spin default 100000 min 16 max 1000000\noption name SearchTelemetry type check default false\noption name TelemetryInterval type spin default 4096 min 64 max 1000000\nuciok");}
++                if(cmd=="uci") {say("id name CHROMATIC 1.1 Memory Recycling\nid author PROJECT CHROMATIC\noption name ModelFile type string default "+(model_path.empty()?"<none>":model_path)+"\noption name CPuct type string default 1.5\noption name FPUReduction type string default 0\noption name InferenceBackend type combo default SIMD var Scalar var SIMD\noption name SparsePolicyHead type check default true\noption name MateProofNodes type spin default 256 min 0 max 50000\noption name MateProofPlies type combo default 1 var 1 var 3 var 5\noption name TreeMemoryMB type spin default 64 min 1 max 2048\noption name Simulations type spin default 800 min 1 max 10000000\noption name MaxNodes type spin default 100000 min 16 max 1000000\noption name SearchTelemetry type check default false\noption name TelemetryInterval type spin default 4096 min 64 max 1000000\nuciok");}
+                 else if(cmd=="isready"){if(!startup_error.empty()){say("info string error "+escape(startup_error));startup_error.clear();}say("readyok");}
+                 else if(cmd=="stop")halt();
+                 else if(cmd=="ucinewgame"){halt();board=Board::from_fen(START_FEN);}
+--- a/src/search.cpp
++++ b/src/search.cpp
+@@ -42,21 +42,33 @@
+     std::vector<Node> nodes;
+     std::vector<Edge> edges;
+     const SearchLimits& limits;
++    SearchResult& result;
+     SearchTelemetry* telemetry;
+     std::chrono::steady_clock::time_point start;
+-    uint64_t simulation=0;
++    uint64_t simulation=0,attempt=0;
+     int depth=0;
+     std::vector<uint8_t> evaluated;
+-    explicit Arena(const SearchLimits& l,SearchTelemetry* t,std::chrono::steady_clock::time_point s):limits(l),telemetry(t),start(s) {
++    explicit Arena(const SearchLimits& l,SearchResult& r,SearchTelemetry* t,std::chrono::steady_clock::time_point s):limits(l),result(r),telemetry(t),start(s) {
+         if(l.max_nodes<1||l.max_tree_bytes<65536)throw std::runtime_error("invalid tree memory budget");
+         nodes.reserve(std::min<size_t>(256,l.max_nodes));nodes.emplace_back();
+         edges.reserve(std::min<size_t>(1024,(l.max_tree_bytes-nodes.capacity()*sizeof(Node))/sizeof(Edge)));
++        peak();
+         if constexpr(Measured)reserved_cap();
+     }
+     size_t bytes() const{return nodes.capacity()*sizeof(Node)+edges.capacity()*sizeof(Edge);}
++    void peak(){result.peak_memory_bytes=std::max(result.peak_memory_bytes,bytes());}
++    void sync_counters() {
++        if constexpr(Measured) {
++            auto& c=telemetry->counters;
++            c.attempted_simulations=result.attempted_simulations;c.aborted_simulations=result.aborted_simulations;
++            c.prune_count=result.prune_count;c.nodes_evicted=result.nodes_evicted;c.edges_evicted=result.edges_evicted;
++            c.discarded_neural_evaluations=result.discarded_neural_evaluations;
++        }
++    }
+     void event(TelemetryEvent& e,const char* reason) {
+         if constexpr(Measured)if(!e.occurred) {
+             e.occurred=true;e.reason=reason;e.simulation=simulation;e.depth=depth;
++            e.attempt=attempt;e.completed_simulations=uint64_t(result.simulations);
+             e.elapsed_ms=std::chrono::duration<double,std::milli>(std::chrono::steady_clock::now()-start).count();
+             e.nodes_size=nodes.size();e.nodes_capacity=nodes.capacity();e.edges_size=edges.size();e.edges_capacity=edges.capacity();e.memory_bytes=bytes();
+         }
+@@ -78,14 +90,17 @@
+                 return NONE;
+             }
+             nodes.reserve(capacity);
++            peak();
+             if constexpr(Measured)reserved_cap();
+         }
+         auto index=uint32_t(nodes.size());nodes.emplace_back();edges[edge].child=index;
+         if constexpr(Measured)++telemetry->counters.node_creations;
+         return index;
+     }
+-    bool children(uint32_t index,const std::vector<Move>& moves,const Evaluation& eval) {
+-        size_t needed=edges.size()+moves.size();
++    // Check storage before invoking the NN: failed attempts must never back up
++    // an unretained shallow value. The append below cannot fail its byte budget.
++    bool reserve_children(size_t count) {
++        size_t needed=edges.size()+count;
+         if(needed>edges.capacity()) {
+             size_t available=(limits.max_tree_bytes-nodes.capacity()*sizeof(Node))/sizeof(Edge);
+             size_t capacity=std::min(available,std::max(needed,edges.capacity()*2));
+@@ -94,8 +109,12 @@
+                 return false;
+             }
+             edges.reserve(capacity);
++            peak();
+             if constexpr(Measured)reserved_cap();
+         }
++        return true;
++    }
++    void children(uint32_t index,const std::vector<Move>& moves,const Evaluation& eval) {
+         float maximum=-std::numeric_limits<float>::infinity(),sum=0;
+         for(auto m:moves)maximum=std::max(maximum,eval.policy[action(m)]);
+         uint32_t first=uint32_t(edges.size());
+@@ -103,17 +122,120 @@
+         for(size_t i=first;i<edges.size();++i)edges[i].prior/=sum;
+         nodes[index].first=first;nodes[index].count=uint32_t(moves.size());nodes[index].expanded=true;
+         if constexpr(Measured){++telemetry->counters.legal_expansions;if(index==0)++telemetry->counters.root_legal_expansions;}
+-        return true;
++    }
++    // Reclaim low-visit descendants in the existing reservations. No second
++    // tree is allocated: only keep flags, an index map and block order scratch.
++    // All root edges and the statistics on every retained edge are preserved.
++    bool prune() {
++        const auto prune_start=std::chrono::steady_clock::now();
++        TelemetryPrune record;
++        if constexpr(Measured) {
++            record.attempt=attempt;record.completed_simulations=uint64_t(result.simulations);
++            record.failed_depth=depth;record.nodes_before=nodes.size();record.edges_before=edges.size();
++            record.nodes_capacity=nodes.capacity();record.edges_capacity=edges.capacity();record.memory_bytes=bytes();
++            record.elapsed_ms=std::chrono::duration<double,std::milli>(prune_start-start).count();
++            for(uint32_t i=0;i<nodes[0].count;++i) {
++                const auto& e=edges[nodes[0].first+i];record.roots_before.push_back({e.move,e.prior,e.visits?float(e.sum/e.visits):0,e.visits});
++            }
++        }
++        const size_t old_nodes=nodes.size(),old_edges=edges.size();
++        if constexpr(Measured)evaluated.resize(old_nodes,0);
++        const size_t target_nodes=std::max<size_t>(1,nodes.capacity()/2);
++        const size_t target_edges=std::max<size_t>(nodes[0].count,edges.capacity()/2);
++        uint64_t threshold=2;
++        size_t kept_nodes=0,kept_edges=0,scratch_bytes=0;
++        bool progress=false;
++        {
++            std::vector<uint8_t> keep(old_nodes,0);
++            std::vector<uint32_t> remap(old_nodes,NONE),blocks;
++            // Protect existing root children when the minimum protected set can
++            // still meet both half-capacity targets. Tiny node caps may relax it.
++            size_t protected_nodes=1,protected_edges=nodes[0].count;
++            for(uint32_t i=0;i<nodes[0].count;++i) {
++                auto child=edges[nodes[0].first+i].child;
++                if(child!=NONE){++protected_nodes;protected_edges+=nodes[child].count;}
++            }
++            const bool protect_root_children=protected_nodes<=target_nodes&&protected_edges<=target_edges;
++            if constexpr(Measured)record.protected_root_children=protect_root_children;
++            while(true) {
++                std::fill(keep.begin(),keep.end(),uint8_t(0));keep[0]=1;
++                kept_nodes=kept_edges=0;
++                // Parent indices precede their children, including after every
++                // compaction. This pass only marks; it never assigns new IDs.
++                for(size_t old=0;old<old_nodes;++old)if(keep[old]) {
++                    ++kept_nodes;kept_edges+=nodes[old].count;
++                    const auto& node=nodes[old];
++                    for(uint32_t i=node.first;i<node.first+node.count;++i) {
++                        uint32_t child=edges[i].child;
++                        if(child!=NONE&&((old==0&&protect_root_children)||uint64_t(nodes[child].visits)>=threshold))keep[child]=1;
++                    }
++                }
++                if((kept_nodes<=target_nodes&&kept_edges<=target_edges)||threshold>uint64_t(std::numeric_limits<uint32_t>::max()))break;
++                threshold*=2;
++            }
++            progress=kept_nodes<old_nodes||kept_edges<old_edges;
++            if(progress) {
++                // Ascending old IDs guarantee remap[old] <= old, so forward
++                // node copies cannot overwrite nodes still waiting to be read.
++                uint32_t next=0;
++                blocks.reserve(kept_nodes);
++                for(size_t old=0;old<old_nodes;++old)if(keep[old]) {
++                    remap[old]=next++;
++                    if(nodes[old].count)blocks.push_back(uint32_t(old));
++                }
++                std::sort(blocks.begin(),blocks.end(),[&](uint32_t a,uint32_t b){return nodes[a].first<nodes[b].first;});
++                size_t write_edge=0;
++                for(uint32_t old:blocks) {
++                    const uint32_t first=nodes[old].first,count=nodes[old].count;
++                    nodes[old].first=uint32_t(write_edge);
++                    for(uint32_t j=0;j<count;++j) {
++                        Edge edge=edges[first+j];
++                        if(edge.child!=NONE)edge.child=remap[edge.child];
++                        edges[write_edge++]=edge;
++                    }
++                }
++                for(size_t old=0;old<old_nodes;++old)if(keep[old]) {
++                    const auto dest=remap[old];nodes[dest]=nodes[old];
++                    if constexpr(Measured)evaluated[dest]=evaluated[old];
++                }
++                nodes.resize(kept_nodes);edges.resize(kept_edges);
++                if constexpr(Measured)if(evaluated.size()>kept_nodes)evaluated.resize(kept_nodes);
++                ++result.prune_count;result.nodes_evicted+=old_nodes-kept_nodes;result.edges_evicted+=old_edges-kept_edges;
++            }
++            scratch_bytes=keep.capacity()*sizeof(uint8_t)+remap.capacity()*sizeof(uint32_t)+blocks.capacity()*sizeof(uint32_t);
++            // This excludes diagnostics flags/result/serializer memory; it is
++            // exactly the algorithm's auxiliary compaction scratch peak.
++            result.peak_auxiliary_bytes=std::max(result.peak_auxiliary_bytes,scratch_bytes);
++        }
++        sync_counters();
++        if constexpr(Measured) {
++            record.threshold=threshold;record.nodes_after=nodes.size();record.edges_after=edges.size();
++            record.scratch_bytes=scratch_bytes;record.success=progress;
++            for(uint32_t i=0;i<nodes[0].count;++i) {
++                const auto& e=edges[nodes[0].first+i];record.roots_after.push_back({e.move,e.prior,e.visits?float(e.sum/e.visits):0,e.visits});
++            }
++            record.root_statistics_preserved=record.roots_before.size()==record.roots_after.size();
++            for(size_t i=0;i<record.roots_before.size()&&record.root_statistics_preserved;++i) {
++                const auto& a=record.roots_before[i];const auto& b=record.roots_after[i];
++                record.root_statistics_preserved=a.move==b.move&&a.prior==b.prior&&a.q==b.q&&a.visits==b.visits;
++            }
++            record.duration_ms=std::chrono::duration<double,std::milli>(std::chrono::steady_clock::now()-prune_start).count();
++            telemetry->prunes.push_back(std::move(record));
++        }
++        return progress;
+     }
+ };
+ template<bool Measured>
+-float evaluate(Arena<Measured>& tree,uint32_t index,const Board& b,const Network& net,SearchResult& result,Network::Workspace& workspace,bool* terminal=nullptr) {
++float evaluate(Arena<Measured>& tree,uint32_t index,const Board& b,const Network& net,SearchResult& result,Network::Workspace& workspace,bool* terminal=nullptr,bool* success=nullptr) {
++    if(success)*success=true;
+     auto moves=b.legal();float value;
+     if(b.terminal(moves,value)) {
+         if constexpr(Measured){++tree.telemetry->counters.terminal_evaluations;if(terminal)*terminal=true;}
+         if(index!=NONE){auto& n=tree.nodes[index];n.expanded=n.terminal=true;n.value=value;}
+         return value;
+     }
++    if(index==NONE)throw std::logic_error("unretained leaf evaluation is forbidden");
++    if(!tree.reserve_children(moves.size())){if(success)*success=false;return 0;}
+     if constexpr(Measured) {
+         ++tree.telemetry->counters.neural_evaluations;
+         if(index==NONE)++tree.telemetry->counters.non_retained_neural_evaluations;
+@@ -144,6 +266,7 @@
+ template<bool Measured>
+ void finish_telemetry(Arena<Measured>& tree,SearchResult& result,DepthHistogram& window) {
+     if constexpr(Measured) {
++        tree.sync_counters();
+         auto& t=*result.telemetry;t.depth=summarize(t.leaf_depth);
+         uint64_t tail=0;
+         for(size_t i=t.leaf_depth.size();i-- >0;){tail+=t.leaf_depth[i];t.traversal_depth[i]=tail;}
+@@ -155,6 +278,8 @@
+         snapshot(tree,t,"final",t.depth.samples,window);
+         t.telemetry_memory_bytes=sizeof(SearchTelemetry)+t.roots.capacity()*sizeof(TelemetryRoot)+t.snapshots.capacity()*sizeof(TelemetrySnapshot);
+         for(const auto& s:t.snapshots)t.telemetry_memory_bytes+=s.roots.capacity()*sizeof(TelemetryRootSnapshot)+s.reason.capacity();
++        t.telemetry_memory_bytes+=t.prunes.capacity()*sizeof(TelemetryPrune);
++        for(const auto& p:t.prunes)t.telemetry_memory_bytes+=(p.roots_before.capacity()+p.roots_after.capacity())*sizeof(TelemetryRootSnapshot);
+     }
+ }
+ template<bool Measured>
+@@ -163,12 +288,13 @@
+     auto cancelled=[&](){return stop.load(std::memory_order_relaxed)||(limits.milliseconds>0&&std::chrono::steady_clock::now()-start>=std::chrono::milliseconds(limits.milliseconds));};
+     SearchResult result;
+     if constexpr(Measured)result.telemetry=std::make_shared<SearchTelemetry>();
+-    Arena<Measured> tree(limits,result.telemetry.get(),start);Network::Workspace workspace;
++    Arena<Measured> tree(limits,result,result.telemetry.get(),start);Network::Workspace workspace;
+     DepthHistogram window{};
+-    result.value=evaluate(tree,0,board,network,result,workspace);result.terminal=tree.nodes[0].terminal;
++    bool root_stored=true;
++    result.value=evaluate(tree,0,board,network,result,workspace,nullptr,&root_stored);result.terminal=tree.nodes[0].terminal;
+     result.arena_nodes=tree.nodes.size();result.memory_bytes=tree.bytes();
+     if(result.terminal){finish_telemetry(tree,result,window);return result;}
+-    if(!tree.nodes[0].expanded)throw std::runtime_error("tree budget cannot hold root");
++    if(!root_stored||!tree.nodes[0].expanded)throw std::runtime_error("tree budget cannot hold root");
+     std::mt19937_64 rng(limits.seed);
+     const uint32_t root_count=tree.nodes[0].count;
+     if constexpr(Measured) {
+@@ -198,7 +324,9 @@
+     }
+     std::vector<uint32_t> path_nodes,path_edges;path_nodes.reserve(128);path_edges.reserve(128);
+     while(!cancelled()&&(limits.simulations<=0||result.simulations<limits.simulations)) {
+-        if constexpr(Measured){tree.simulation=uint64_t(result.simulations)+1;tree.depth=0;}
++        ++result.attempted_simulations;
++        tree.simulation=uint64_t(result.simulations)+1;tree.attempt=result.attempted_simulations;
++        if constexpr(Measured){tree.depth=0;tree.sync_counters();}
+         Board b=board;uint32_t current=0;
+         path_nodes.clear();path_edges.clear();path_nodes.push_back(0);
+         while(tree.nodes[current].expanded&&!tree.nodes[current].terminal) {
+@@ -217,11 +345,20 @@
+             path_nodes.push_back(current);
+             if(path_nodes.size()>=512)break;
+         }
+-        float value;bool terminal_endpoint=false;
+-        if(current==NONE||!tree.nodes[current].expanded)value=evaluate(tree,current,b,network,result,workspace,&terminal_endpoint);
+-        else {
++        float value=0;bool terminal_endpoint=false,stored=current!=NONE;
++        if(current!=NONE&&!tree.nodes[current].expanded)value=evaluate(tree,current,b,network,result,workspace,&terminal_endpoint,&stored);
++        else if(current!=NONE) {
+             value=tree.nodes[current].value;
+             if constexpr(Measured){terminal_endpoint=tree.nodes[current].terminal;if(!terminal_endpoint&&path_nodes.size()>=512)++result.telemetry->counters.depth_limit_endpoints;}
++        }
++        if(!stored) {
++            // The failed path contributes neither a neural leaf value nor a
++            // virtual visit. All saved indices become invalid after pruning.
++            ++result.aborted_simulations;tree.sync_counters();
++            if(cancelled())break;
++            if(!tree.prune()){result.memory_exhausted=true;break;}
++            if constexpr(Measured)snapshot(tree,*result.telemetry,"recycle",uint64_t(result.simulations),window);
++            continue;
+         }
+         for(auto index:path_nodes)++tree.nodes[index].visits;
+         for(auto it=path_edges.rbegin();it!=path_edges.rend();++it) {
+--- a/src/telemetry_json.cpp
++++ b/src/telemetry_json.cpp
+@@ -20,7 +20,10 @@
+        <<",\"neural_evaluations\":"<<c.neural_evaluations<<",\"non_retained_neural_evaluations\":"<<c.non_retained_neural_evaluations
+        <<",\"resident_unexpanded_repeat\":"<<c.resident_unexpanded_repeat<<",\"terminal_evaluations\":"<<c.terminal_evaluations
+        <<",\"terminal_leaf_endpoints\":"<<c.terminal_leaf_endpoints<<",\"depth_limit_endpoints\":"<<c.depth_limit_endpoints
+-       <<",\"proof_root_updates\":"<<c.proof_root_updates<<'}';
++       <<",\"proof_root_updates\":"<<c.proof_root_updates
++       <<",\"attempted_simulations\":"<<c.attempted_simulations<<",\"aborted_simulations\":"<<c.aborted_simulations
++       <<",\"prune_count\":"<<c.prune_count<<",\"nodes_evicted\":"<<c.nodes_evicted<<",\"edges_evicted\":"<<c.edges_evicted
++       <<",\"discarded_neural_evaluations\":"<<c.discarded_neural_evaluations<<'}';
+ }
+ template<class T>void arena(std::ostream& out,const T& a) {
+     out<<",\"nodes_size\":"<<a.nodes_size<<",\"nodes_capacity\":"<<a.nodes_capacity
+@@ -28,6 +31,7 @@
+ }
+ void event(std::ostream& out,const TelemetryEvent& e) {
+     out<<"{\"occurred\":"<<(e.occurred?"true":"false")<<",\"reason\":\""<<e.reason<<"\",\"simulation\":"<<e.simulation
++       <<",\"attempt\":"<<e.attempt<<",\"completed_simulations\":"<<e.completed_simulations
+        <<",\"elapsed_ms\":"<<e.elapsed_ms<<",\"depth\":"<<e.depth;arena(out,e);out<<'}';
+ }
+ void root(std::ostream& out,const TelemetryRootSnapshot& r) {
+@@ -35,7 +39,7 @@
+ }
+ }
+ void write_telemetry_json(std::ostream& out,const SearchTelemetry& d) {
+-    out<<std::setprecision(12)<<"{\"schema_version\":1,\"depth\":";summary(out,d.depth);
++    out<<std::setprecision(12)<<"{\"schema_version\":2,\"depth\":";summary(out,d.depth);
+     out<<",\"leaf_depth\":";histogram(out,d.leaf_depth);
+     out<<",\"traversal_depth\":";histogram(out,d.traversal_depth);
+     out<<",\"pre_failure_leaf_depth\":";histogram(out,d.pre_failure_leaf_depth);
+@@ -54,12 +58,27 @@
+         out<<",\"window_leaf_depth\":";histogram(out,s.window_leaf_depth);arena(out,s);
+         out<<",\"counters\":";counters(out,s.counters);out<<",\"roots\":[";
+         for(size_t j=0;j<s.roots.size();++j){if(j)out<<',';root(out,s.roots[j]);out<<'}';}out<<"]}";
++    }out<<"],\"prunes\":[";
++    for(size_t i=0;i<d.prunes.size();++i){if(i)out<<',';const auto& p=d.prunes[i];
++        out<<"{\"attempt\":"<<p.attempt<<",\"completed_simulations\":"<<p.completed_simulations<<",\"threshold\":"<<p.threshold
++           <<",\"elapsed_ms\":"<<p.elapsed_ms<<",\"duration_ms\":"<<p.duration_ms<<",\"failed_depth\":"<<p.failed_depth
++           <<",\"nodes_before\":"<<p.nodes_before<<",\"nodes_after\":"<<p.nodes_after<<",\"edges_before\":"<<p.edges_before<<",\"edges_after\":"<<p.edges_after
++           <<",\"nodes_capacity\":"<<p.nodes_capacity<<",\"edges_capacity\":"<<p.edges_capacity<<",\"memory_bytes\":"<<p.memory_bytes
++           <<",\"scratch_bytes\":"<<p.scratch_bytes<<",\"success\":"<<(p.success?"true":"false")
++           <<",\"root_statistics_preserved\":"<<(p.root_statistics_preserved?"true":"false")
++           <<",\"protected_root_children\":"<<(p.protected_root_children?"true":"false")<<",\"roots_before\":[";
++        for(size_t j=0;j<p.roots_before.size();++j){if(j)out<<',';root(out,p.roots_before[j]);out<<'}';}out<<"],\"roots_after\":[";
++        for(size_t j=0;j<p.roots_after.size();++j){if(j)out<<',';root(out,p.roots_after[j]);out<<'}';}out<<"]}";
+     }out<<"]}";
+ }
+ std::string search_result_json(const SearchResult& r) {
+     std::ostringstream out;out<<std::setprecision(12)<<"{\"bestmove\":\""<<(r.has_move?r.best.uci():"0000")<<"\",\"terminal\":"<<(r.terminal?"true":"false")
+        <<",\"simulations\":"<<r.simulations<<",\"value\":"<<r.value<<",\"neural_evals\":"<<r.neural_evals
+        <<",\"memory_bytes\":"<<r.memory_bytes<<",\"arena_nodes\":"<<r.arena_nodes<<",\"max_depth\":"<<r.max_depth
++       <<",\"peak_memory_bytes\":"<<r.peak_memory_bytes<<",\"peak_auxiliary_bytes\":"<<r.peak_auxiliary_bytes
++       <<",\"attempted_simulations\":"<<r.attempted_simulations<<",\"aborted_simulations\":"<<r.aborted_simulations
++       <<",\"prune_count\":"<<r.prune_count<<",\"nodes_evicted\":"<<r.nodes_evicted<<",\"edges_evicted\":"<<r.edges_evicted
++       <<",\"discarded_neural_evaluations\":"<<r.discarded_neural_evaluations<<",\"memory_exhausted\":"<<(r.memory_exhausted?"true":"false")
+        <<",\"proof_nodes\":"<<r.proof_nodes<<",\"mate_proven\":"<<(r.mate_proven?"true":"false")<<",\"proof_plies\":"<<r.proof_plies<<",\"visits\":[";
+     auto entry=[&](size_t i){out<<"{\"uci\":\""<<r.visits[i].first.uci()<<"\",\"action\":"<<action(r.visits[i].first)
+         <<",\"n\":"<<r.visits[i].second<<",\"q\":"<<r.q_values[i]<<",\"prior\":"<<r.priors[i]<<'}';};
+--- a/tests/core.cpp
++++ b/tests/core.cpp
+@@ -41,6 +41,9 @@
+     limits.max_nodes=100000;limits.max_tree_bytes=65536;limits.simulations=512;
+     auto bounded=search(Board::from_fen(START_FEN),net,limits,stop);
+     require(bounded.simulations==512&&bounded.memory_bytes<=65536,"tree byte budget and progress");
++    require(bounded.prune_count>0&&bounded.nodes_evicted>0,"byte-capacity pressure must reclaim stored tree slots");
++    require(bounded.attempted_simulations==uint64_t(bounded.simulations)+bounded.aborted_simulations,"failed expansions must not invent visits");
++    require(bounded.peak_memory_bytes<=65536&&!bounded.memory_exhausted,"recycling stays inside the reserved tree byte cap");
+     limits.noise=.25f;limits.temperature=1;limits.seed=81;
+     auto deterministic=search(Board::from_fen(START_FEN),net,limits,stop);
+     auto repeat_search=search(Board::from_fen(START_FEN),net,limits,stop);
+--- a/tests/depth_telemetry.cpp
++++ b/tests/depth_telemetry.cpp
+@@ -42,6 +42,11 @@
+     require(off.visits==on.visits&&off.q_values==on.q_values&&off.priors==on.priors,"telemetry changed root statistics");
+     require(off.max_depth==on.max_depth&&off.arena_nodes==on.arena_nodes&&off.memory_bytes==on.memory_bytes,"telemetry changed tree storage/depth");
+     require(off.proof_nodes==on.proof_nodes&&off.proof_plies==on.proof_plies&&off.mate_proven==on.mate_proven,"telemetry changed proof result");
++    require(off.attempted_simulations==on.attempted_simulations&&off.aborted_simulations==on.aborted_simulations,"telemetry changed failed-attempt handling");
++    require(off.prune_count==on.prune_count&&off.nodes_evicted==on.nodes_evicted&&off.edges_evicted==on.edges_evicted,"telemetry changed compaction decisions");
++    require(off.discarded_neural_evaluations==on.discarded_neural_evaluations&&off.memory_exhausted==on.memory_exhausted,"telemetry changed bounded-search termination");
++    require(off.peak_memory_bytes==on.peak_memory_bytes,"telemetry changed peak arena reservation");
++    require(off.peak_auxiliary_bytes==on.peak_auxiliary_bytes,"telemetry changed compaction scratch reservation");
+ }
+ void validate(const SearchResult& result) {
+     require(bool(result.telemetry),"missing telemetry");
+@@ -71,18 +76,26 @@
+         for(const auto& root:t.roots)by_root+=root.leaf_depth[d];
+         require(by_root==t.leaf_depth[d],"root move histograms partition endpoint visits");
+     }
+-    require(t.counters.node_creations+1==result.arena_nodes,"created nodes exclude the initialized root");
++    require(t.counters.node_creations+1>=t.counters.nodes_evicted,"evictions cannot exceed cumulative node creations");
++    require(t.counters.node_creations+1-t.counters.nodes_evicted==result.arena_nodes,"cumulative creations minus evictions equals resident nodes");
+     require(t.counters.neural_evaluations==uint64_t(result.neural_evals),"NN evaluations include root initialization");
+     require(t.counters.legal_expansions>=t.counters.root_legal_expansions,"root expansion subset");
+     require(t.counters.legal_expansions<=t.counters.node_creations+1,"at most one legal expansion per retained node");
+-    require(t.counters.non_retained_neural_evaluations<=t.counters.neural_evaluations,"non-retained NN evaluation subset");
++    require(t.counters.non_retained_neural_evaluations==0,"allocation failures must not evaluate unretained leaves");
++    require(t.counters.attempted_simulations==result.attempted_simulations,"attempt counter output");
++    require(t.counters.aborted_simulations==result.aborted_simulations,"aborted counter output");
++    require(t.counters.prune_count==result.prune_count,"compaction counter output");
++    require(t.counters.nodes_evicted==result.nodes_evicted&&t.counters.edges_evicted==result.edges_evicted,"eviction counter output");
++    if(!t.proof_only)require(result.attempted_simulations==uint64_t(result.simulations)+result.aborted_simulations,"aborted attempts never add completed visits");
+     const uint64_t failures=t.counters.child_fail_node_limit+t.counters.child_fail_byte_capacity+t.counters.expansion_fail_byte_capacity;
+     require(t.first_allocation_failure.occurred==(failures>0),"first failure event agrees with actual allocation failure counters");
+     if(t.first_allocation_failure.occurred) {
+         const auto first=t.first_allocation_failure.simulation;
+-        require(first>=1&&first<=samples,"first failure belongs to a completed MCTS simulation");
+-        require(count(t.pre_failure_leaf_depth)==first-1,"first failing simulation belongs to post-failure phase");
+-        require(count(t.post_failure_leaf_depth)==samples-first+1,"post-failure endpoint count includes first failing simulation");
++        require(first>=1&&first<=samples+1,"failure event identifies the next completed simulation, even if it cannot complete");
++        const auto pre=std::min(samples,first-1);
++        require(count(t.pre_failure_leaf_depth)==pre,"pre-failure distribution excludes the first retried completion");
++        require(count(t.post_failure_leaf_depth)==samples-pre,"failed attempts themselves are absent from endpoint histograms");
++        require(t.first_allocation_failure.attempt>=1&&t.first_allocation_failure.attempt<=result.attempted_simulations,"failure event records an actual attempt");
+     } else {
+         require(t.pre_failure_leaf_depth==t.leaf_depth,"all endpoints precede failure when no failure occurs");
+         require(count(t.post_failure_leaf_depth)==0,"no post-failure endpoints without failure");
+@@ -164,8 +177,9 @@
+     limits.max_nodes=16;
+     limits.simulations=128;
+     auto node_bound=paired(board,net,limits);
+-    require(node_bound.arena_nodes==16,"node cap reached exactly");
+-    require(node_bound.telemetry->counters.node_creations==15,"node creation count excludes root at cap");
++    require(node_bound.arena_nodes<=16,"node cap remains bounded after recycling");
++    require(node_bound.telemetry->counters.node_creations>15,"recycling permits actual node creation beyond the resident cap");
++    require(node_bound.nodes_evicted>0&&node_bound.prune_count>0,"node cap recycles storage instead of evaluating unretained leaves");
+     require(node_bound.telemetry->counters.child_fail_node_limit>0,"node cap failure is reported separately");
+     require(node_bound.telemetry->counters.child_fail_byte_capacity==0,"node cap is not mislabelled byte cap");
+ 
+--- /dev/null
++++ b/tests/memory_recycling.cpp
+@@ -0,0 +1,155 @@
++#include "zero/search.hpp"
++#include <algorithm>
++#include <cmath>
++#include <iostream>
++#include <numeric>
++#include <stdexcept>
++#include <string>
++
++using namespace zero;
++namespace {
++void require(bool condition,const std::string& message) {
++    if(!condition)throw std::runtime_error(message);
++}
++uint64_t sum(const DepthHistogram& histogram) {
++    return std::accumulate(histogram.begin(),histogram.end(),uint64_t(0));
++}
++void equal_roots(const std::vector<TelemetryRootSnapshot>& before,
++                 const std::vector<TelemetryRootSnapshot>& after) {
++    require(before.size()==after.size(),"compaction changed root legal move count");
++    for(size_t i=0;i<before.size();++i) {
++        require(before[i].move==after[i].move,"compaction changed root move identity/order");
++        require(before[i].prior==after[i].prior,"compaction changed root policy");
++        require(before[i].visits==after[i].visits,"compaction discarded or fabricated root visits");
++        require(before[i].q==after[i].q,"compaction changed root Q");
++    }
++}
++void validate(const SearchResult& r,const SearchLimits& limits) {
++    require(bool(r.telemetry),"recycling tests require telemetry");
++    const auto& t=*r.telemetry;
++    const auto& c=t.counters;
++    require(r.memory_bytes<=limits.max_tree_bytes&&r.peak_memory_bytes<=limits.max_tree_bytes,"arena reservation exceeds byte budget");
++    require(r.arena_nodes<=limits.max_nodes,"resident nodes exceed configured count");
++    require(c.node_creations+1>=c.nodes_evicted,"invalid cumulative node eviction count");
++    require(c.node_creations+1-c.nodes_evicted==r.arena_nodes,"creations/evictions do not reconcile with resident tree");
++    require(c.non_retained_neural_evaluations==0,"unallocated child must never be NN evaluated");
++    require(c.discarded_neural_evaluations==0,"edge capacity must be checked before NN evaluation");
++    require(c.resident_unexpanded_repeat==0,"recycled node IDs must not inherit stale evaluation flags");
++    require(c.neural_evaluations==uint64_t(r.neural_evals),"NN call accounting differs from search result");
++    require(c.attempted_simulations==r.attempted_simulations,"attempt counter mismatch");
++    require(c.aborted_simulations==r.aborted_simulations,"aborted counter mismatch");
++    require(c.prune_count==r.prune_count,"prune counter mismatch");
++    require(c.nodes_evicted==r.nodes_evicted&&c.edges_evicted==r.edges_evicted,"eviction output mismatch");
++    require(r.attempted_simulations==uint64_t(r.simulations)+r.aborted_simulations,"failed allocation attempt added completed visits");
++    require(sum(t.leaf_depth)==uint64_t(r.simulations),"failed attempts must not create leaf endpoints");
++    uint64_t root_visits=0;
++    for(auto [move,n]:r.visits){(void)move;root_visits+=uint64_t(n);}
++    require(root_visits==uint64_t(r.simulations),"root visits do not equal successful backups");
++    require(t.roots.size()==r.visits.size(),"root telemetry size");
++    for(size_t i=0;i<t.roots.size();++i) {
++        require(sum(t.roots[i].leaf_depth)==uint64_t(r.visits[i].second),"root endpoint histogram includes failed attempts");
++    }
++    require(sum(t.pre_failure_leaf_depth)+sum(t.post_failure_leaf_depth)==uint64_t(r.simulations),"phase partition lost or fabricated endpoints");
++    uint64_t successful_prunes=0,evicted_nodes=0,evicted_edges=0;
++    for(const auto& p:t.prunes) {
++        require(p.memory_bytes<=limits.max_tree_bytes,"compaction increased reserved arena beyond budget");
++        require(p.completed_simulations<=uint64_t(r.simulations),"compaction reports future completed backups");
++        require(p.attempt>=1&&p.attempt<=r.attempted_simulations,"compaction attempt id is not real");
++        equal_roots(p.roots_before,p.roots_after);
++        require(p.root_statistics_preserved,"compaction root invariant flag");
++        uint64_t before_visits=0;
++        for(const auto& root:p.roots_before)before_visits+=root.visits;
++        require(before_visits==p.completed_simulations,"failed attempt must not back up before compaction");
++        require(p.nodes_after<=p.nodes_before&&p.edges_after<=p.edges_before,"compaction grew logical tree storage");
++        if(p.success) {
++            ++successful_prunes;
++            require(p.threshold>=2,"reclamation must prune low-visit subtrees");
++            require(p.nodes_after<p.nodes_before||p.edges_after<p.edges_before,"successful compaction reclaimed no slots");
++            evicted_nodes+=p.nodes_before-p.nodes_after;
++            evicted_edges+=p.edges_before-p.edges_after;
++        }
++    }
++    require(successful_prunes==r.prune_count,"successful prune events disagree with counter");
++    require(evicted_nodes==r.nodes_evicted&&evicted_edges==r.edges_evicted,"event reclamation differs from cumulative evictions");
++    const uint64_t failures=c.child_fail_node_limit+c.child_fail_byte_capacity+c.expansion_fail_byte_capacity;
++    require(failures==r.aborted_simulations,"one capacity failure must produce exactly one aborted attempt");
++    if(t.first_allocation_failure.occurred) {
++        const auto& e=t.first_allocation_failure;
++        require(e.simulation==e.completed_simulations+1,"failure completed-ordinal definition");
++        require(sum(t.pre_failure_leaf_depth)==std::min<uint64_t>(r.simulations,e.completed_simulations),"phase boundary not tied to successful backups");
++    }
++}
++SearchResult paired(const Board& board,const Network& network,SearchLimits limits) {
++    const auto fen=board.fen();const auto history=board.history;
++    std::atomic<bool> stop=false;
++    limits.telemetry=false;
++    const auto off=search(board,network,limits,stop);
++    limits.telemetry=true;limits.telemetry_interval=97;
++    auto on=search(board,network,limits,stop);
++    require(!off.telemetry&&bool(on.telemetry),"optional telemetry switch");
++    require(off.best==on.best&&off.has_move==on.has_move,"telemetry changed move under reclamation");
++    require(off.simulations==on.simulations&&off.neural_evals==on.neural_evals,"telemetry changed completed work");
++    require(off.value==on.value&&off.visits==on.visits&&off.q_values==on.q_values&&off.priors==on.priors,"telemetry changed PUCT root statistics");
++    require(off.arena_nodes==on.arena_nodes&&off.max_depth==on.max_depth&&off.memory_bytes==on.memory_bytes,"telemetry changed retained tree");
++    require(off.attempted_simulations==on.attempted_simulations&&off.aborted_simulations==on.aborted_simulations,"telemetry changed aborted attempts");
++    require(off.prune_count==on.prune_count&&off.nodes_evicted==on.nodes_evicted&&off.edges_evicted==on.edges_evicted,"telemetry changed reclamation");
++    require(off.memory_exhausted==on.memory_exhausted,"telemetry changed fallback termination");
++    require(off.peak_memory_bytes==on.peak_memory_bytes&&off.peak_auxiliary_bytes==on.peak_auxiliary_bytes,"telemetry changed algorithm memory reservation");
++    require(board.fen()==fen&&board.history==history,"search or compaction mutated input Board/history");
++    validate(on,limits);return on;
++}
++}
++
++int main(int argc,char** argv){try {
++    Network network;
++    if(argc>1)network.load(argv[1]);
++    const auto start=Board::from_fen(START_FEN);
++    SearchLimits limits;limits.seed=2026;limits.proof_nodes=0;
++
++    // Before capacity pressure the new search still uses one real node per
++    // first nonterminal visit and never enters the reclamation path.
++    limits.simulations=128;
++    auto prefix=paired(start,network,limits);
++    require(prefix.simulations==128&&prefix.prune_count==0&&prefix.aborted_simulations==0,"pre-cap search unexpectedly reclaimed storage");
++    require(prefix.telemetry->counters.non_retained_neural_evaluations==0,"pre-cap NN storage guard");
++
++    // The byte cap must permit continued real stored expansion after several
++    // pressure events, without treating failed allocation as a simulation.
++    limits.simulations=8192;limits.max_tree_bytes=1024*1024;limits.max_nodes=1000000;
++    auto bytes=paired(start,network,limits);
++    require(bytes.simulations==8192&&!bytes.memory_exhausted,"byte cap prevented requested completed backups despite reclaimable slots");
++    require(bytes.prune_count>=2&&bytes.nodes_evicted>0&&bytes.edges_evicted>0,"small arena must recycle repeatedly");
++    require(bytes.telemetry->counters.node_creations>bytes.arena_nodes,"successful searches must actually recreate retained nodes after pressure");
++    require(sum(bytes.telemetry->post_failure_leaf_depth)>0,"no completed work after first pressure event");
++    uint64_t deeper=0;for(size_t d=3;d<bytes.telemetry->post_failure_leaf_depth.size();++d)deeper+=bytes.telemetry->post_failure_leaf_depth[d];
++    require(deeper>0,"all post-pressure work stopped at unretained depth-one/two leaves");
++
++    // A count limit exercises the same recovery independently of byte capacity.
++    limits.max_tree_bytes=64*1024*1024;limits.max_nodes=16;limits.simulations=512;
++    auto nodes=paired(start,network,limits);
++    require(nodes.simulations==512&&!nodes.memory_exhausted,"node slots should be reusable");
++    require(nodes.telemetry->counters.child_fail_node_limit>0&&nodes.telemetry->counters.child_fail_byte_capacity==0,"node limit mislabeled as byte limit");
++    require(nodes.prune_count>0&&nodes.nodes_evicted>0,"node cap repeated static leaf evaluation instead of recycling");
++
++    // With only a root slot there is genuinely no possible progress. Returning
++    // a legal zero-visit fallback is honest; fabricating requested N is not.
++    limits.max_nodes=1;limits.simulations=1000;
++    auto impossible=paired(start,network,limits);
++    require(impossible.memory_exhausted&&impossible.simulations==0,"irreducible capacity limit must stop without invented visits");
++    require(impossible.aborted_simulations==1&&impossible.attempted_simulations==1,"irreducible failure must not retry forever");
++    require(impossible.neural_evals==1,"irreducible child failure must not reevaluate the NN beyond root initialization");
++    require(impossible.has_move,"memory-exhausted root must retain a legal fallback move");
++    const auto legal=start.legal();require(std::find(legal.begin(),legal.end(),impossible.best)!=legal.end(),"memory-exhausted fallback is illegal");
++
++    // Reclamation must preserve the input repetition context and special-move
++    // state. Board reconstruction on every retry always starts from this root.
++    Board history=start;for(auto move:{"g1f3","g8f6","f3g1","f6g8"})history.play(move);
++    require(history.repetitions()==2,"twofold fixture");
++    limits.max_nodes=16;limits.simulations=256;
++    paired(history,network,limits);
++    paired(Board::from_fen("1r2k3/P7/8/8/8/8/8/4K3 w - - 0 1"),network,limits);
++    paired(Board::from_fen("4k3/8/8/r4pPK/8/8/8/8 w - f6 0 1"),network,limits);
++
++    std::cout<<"memory recycling regression tests passed; model="<<(argc>1?"loaded":"uniform")<<'\n';
++    return 0;
++}catch(const std::exception& e){std::cerr<<e.what()<<'\n';return 1;}}

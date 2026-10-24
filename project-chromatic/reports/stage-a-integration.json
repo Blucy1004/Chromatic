@@ -1,0 +1,34 @@
+{
+  "checkpoint": {
+    "exact_resume": true,
+    "model_optimizer_rng_generator_equal": true,
+    "corrupt_latest_fallback": true,
+    "dataset_change_rejected": true
+  },
+  "move_oracle_positions": 1008,
+  "inference": {
+    "positions": 52,
+    "tolerance": 2e-05,
+    "max_abs_error": {
+      "policy": 3.57824157748432e-07,
+      "wdl": 5.939930725062936e-08
+    }
+  },
+  "pipeline": {
+    "actual_result_labels": true,
+    "truncated_games_discarded": true,
+    "selfplay_resume": true,
+    "complete_generation_and_restart": true,
+    "insufficient_arena_evidence_no_promotion": true
+  },
+  "uci": {
+    "nodes": true,
+    "stop": true,
+    "ready_during_search": true,
+    "movetime_40ms_elapsed": 0.0470000000204891,
+    "zero_clock": true,
+    "terminal": true,
+    "python_chess_client": true
+  },
+  "passed": true
+}

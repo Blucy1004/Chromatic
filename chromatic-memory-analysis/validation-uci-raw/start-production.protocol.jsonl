@@ -1,0 +1,31 @@
+{"direction":"stdin","elapsed_ms":10.423199972137809,"line":"uci"}
+{"direction":"stdout","elapsed_ms":20.879799965769053,"line":"id name CHROMATIC 1.0"}
+{"direction":"stdout","elapsed_ms":20.902899967040867,"line":"id author PROJECT CHROMATIC"}
+{"direction":"stdout","elapsed_ms":20.909300015773624,"line":"option name ModelFile type string default C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\dist\\default.zero"}
+{"direction":"stdout","elapsed_ms":20.919799979310483,"line":"option name CPuct type string default 1.5"}
+{"direction":"stdout","elapsed_ms":20.926599972881377,"line":"option name FPUReduction type string default 0"}
+{"direction":"stdout","elapsed_ms":20.93060000333935,"line":"option name InferenceBackend type combo default SIMD var Scalar var SIMD"}
+{"direction":"stdout","elapsed_ms":20.933999971020967,"line":"option name SparsePolicyHead type check default true"}
+{"direction":"stdout","elapsed_ms":20.938400004524738,"line":"option name MateProofNodes type spin default 256 min 0 max 50000"}
+{"direction":"stdout","elapsed_ms":20.94219997525215,"line":"option name MateProofPlies type combo default 1 var 1 var 3 var 5"}
+{"direction":"stdout","elapsed_ms":20.945099997334182,"line":"option name TreeMemoryMB type spin default 64 min 1 max 2048"}
+{"direction":"stdout","elapsed_ms":20.9484999650158,"line":"option name Simulations type spin default 800 min 1 max 10000000"}
+{"direction":"stdout","elapsed_ms":20.952099992427975,"line":"option name MaxNodes type spin default 100000 min 16 max 1000000"}
+{"direction":"stdout","elapsed_ms":20.955400017555803,"line":"uciok"}
+{"direction":"stdin","elapsed_ms":22.080699971411377,"line":"setoption name ModelFile value C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-memory\\dist\\default.zero"}
+{"direction":"stdin","elapsed_ms":22.12609996786341,"line":"isready"}
+{"direction":"stdout","elapsed_ms":23.880199994891882,"line":"info string model loaded"}
+{"direction":"stdout","elapsed_ms":23.885799979325384,"line":"readyok"}
+{"direction":"stdin","elapsed_ms":37.62660000938922,"line":"setoption name MateProofNodes value 0"}
+{"direction":"stdin","elapsed_ms":37.66560001531616,"line":"setoption name TreeMemoryMB value 64"}
+{"direction":"stdin","elapsed_ms":37.67569997580722,"line":"setoption name MaxNodes value 1000000"}
+{"direction":"stdin","elapsed_ms":37.678099994082004,"line":"setoption name InferenceBackend value SIMD"}
+{"direction":"stdin","elapsed_ms":37.68179996404797,"line":"setoption name SparsePolicyHead value true"}
+{"direction":"stdin","elapsed_ms":37.683899980038404,"line":"setoption name CPuct value 1.5"}
+{"direction":"stdin","elapsed_ms":37.68710000440478,"line":"setoption name FPUReduction value 0"}
+{"direction":"stdin","elapsed_ms":37.6904999720864,"line":"isready"}
+{"direction":"stdout","elapsed_ms":37.79999999096617,"line":"readyok"}
+{"direction":"stdin","elapsed_ms":38.00299996510148,"line":"position fen rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"}
+{"direction":"stdin","elapsed_ms":38.02939999150112,"line":"zero search 4096 2026 0 0"}
+{"direction":"stdout","elapsed_ms":96.99719998752698,"line":"{\"bestmove\":\"c2c3\",\"terminal\":false,\"simulations\":4096,\"value\":0.00292954128,\"neural_evals\":4097,\"memory_bytes\":4358144,\"max_depth\":15,\"proof_nodes\":0,\"mate_proven\":false,\"proof_plies\":0,\"visits\":[{\"uci\":\"b1c3\",\"action\":82,\"n\":191,\"q\":-0.120803975,\"prior\":0.271253526},{\"uci\":\"b1a3\",\"action\":80,\"n\":1,\"q\":-0.598352849,\"prior\":0.000638242054},{\"uci\":\"g1h3\",\"action\":407,\"n\":1,\"q\":-0.651112974,\"prior\":0.000139716911},{\"uci\":\"g1f3\",\"action\":405,\"n\":89,\"q\":-0.230734587,\"prior\":0.224801809},{\"uci\":\"a2a3\",\"action\":528,\"n\":25,\"q\":-0.194084451,\"prior\":0.0562028587},{\"uci\":\"a2a4\",\"action\":536,\"n\":0,\"q\":0,\"prior\":2.06187033e-05},{\"uci\":\"b2b3\",\"action\":593,\"n\":0,\"q\":0,\"prior\":1.25972008e-06},{\"uci\":\"b2b4\",\"action\":601,\"n\":0,\"q\":0,\"prior\":5.37401365e-06},{\"uci\":\"c2c3\",\"action\":658,\"n\":3574,\"q\":0.0273111109,\"prior\":0.0449669659},{\"uci\":\"c2c4\",\"action\":666,\"n\":69,\"q\":-0.144769669,\"prior\":0.115647458},{\"uci\":\"d2d3\",\"action\":723,\"n\":21,\"q\":-0.116313502,\"prior\":0.0252425298},{\"uci\":\"d2d4\",\"action\":731,\"n\":21,\"q\":-0.137887567,\"prior\":0.0305850506},{\"uci\":\"e2e3\",\"action\":788,\"n\":1,\"q\":-0.843954265,\"prior\":0.0169717185},{\"uci\":\"e2e4\",\"action\":796,\"n\":102,\"q\":-0.18586041,\"prior\":0.211561635},{\"uci\":\"f2f3\",\"action\":853,\"n\":0,\"q\":0,\"prior\":2.74988133e-06},{\"uci\":\"f2f4\",\"action\":861,\"n\":0,\"q\":0,\"prior\":4.77189189e-07},{\"uci\":\"g2g3\",\"action\":918,\"n\":0,\"q\":0,\"prior\":1.02627519e-05},{\"uci\":\"g2g4\",\"action\":926,\"n\":1,\"q\":-0.77095139,\"prior\":0.00185686699},{\"uci\":\"h2h3\",\"action\":983,\"n\":0,\"q\":0,\"prior\":8.10799393e-05},{\"uci\":\"h2h4\",\"action\":991,\"n\":0,\"q\":0,\"prior\":9.78137996e-06}]}"}
+{"direction":"stdin","elapsed_ms":97.06639999058098,"line":"quit"}

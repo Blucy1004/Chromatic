@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "positions": 100,
+  "seed": 2026,
+  "step": 200,
+  "backend": "Scalar",
+  "architecture": {
+    "width": 96,
+    "blocks": 6
+  },
+  "checkpoint": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\reports\\model-scaling\\small\\model.pt",
+  "binary_sha256": "3690c2aa3a4b8e126db0e0bdfa9f69a20bb7ec64e7dd4e666af41081918df93e",
+  "engine_sha256": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d",
+  "tolerance": 2e-05,
+  "max_abs_error": {
+    "policy": 6.6946655277178024e-06,
+    "wdl": 1.490198532128062e-06
+  }
+}

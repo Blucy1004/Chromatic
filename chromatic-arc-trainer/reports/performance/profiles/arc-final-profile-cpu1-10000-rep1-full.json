@@ -1,0 +1,193 @@
+{
+  "elapsed_seconds": 77.98014849994797,
+  "enabled": true,
+  "events": 294451,
+  "stages": {
+    "backward": {
+      "bytes": 0,
+      "calls": 1149,
+      "errors": 0,
+      "inclusive_seconds": 1.4651935013243929,
+      "items": 0,
+      "seconds": 1.4651935013243929
+    },
+    "binary_cache_prepare": {
+      "bytes": 0,
+      "calls": 12,
+      "errors": 0,
+      "inclusive_seconds": 3.408345600008033,
+      "items": 14304,
+      "seconds": 0.57859639916569
+    },
+    "binary_encode": {
+      "bytes": 0,
+      "calls": 114,
+      "errors": 0,
+      "inclusive_seconds": 2.8297492008423433,
+      "items": 14304,
+      "seconds": 2.8297492008423433
+    },
+    "checkpoint_housekeeping": {
+      "bytes": 0,
+      "calls": 56,
+      "errors": 0,
+      "inclusive_seconds": 1.0553227998316288,
+      "items": 0,
+      "seconds": 1.0553227998316288
+    },
+    "checkpoint_save": {
+      "bytes": 0,
+      "calls": 56,
+      "errors": 0,
+      "inclusive_seconds": 13.14063879987225,
+      "items": 0,
+      "seconds": 13.14063879987225
+    },
+    "data_loading": {
+      "bytes": 0,
+      "calls": 2356,
+      "errors": 0,
+      "inclusive_seconds": 4.352426998666488,
+      "items": 48318,
+      "seconds": 1.0805286006070673
+    },
+    "data_preparation": {
+      "bytes": 0,
+      "calls": 11,
+      "errors": 0,
+      "inclusive_seconds": 45.57693040010054,
+      "items": 0,
+      "seconds": 6.661305283079855
+    },
+    "dedup_sampling": {
+      "bytes": 0,
+      "calls": 27381,
+      "errors": 0,
+      "inclusive_seconds": 2.738725087256171,
+      "items": 0,
+      "seconds": 2.738725087256171
+    },
+    "fen_validation": {
+      "bytes": 0,
+      "calls": 25728,
+      "errors": 132,
+      "inclusive_seconds": 1.261264494387433,
+      "items": 0,
+      "seconds": 1.261264494387433
+    },
+    "finite_check": {
+      "bytes": 0,
+      "calls": 1149,
+      "errors": 0,
+      "inclusive_seconds": 4.693935799179599,
+      "items": 0,
+      "seconds": 4.693935799179599
+    },
+    "forward": {
+      "bytes": 0,
+      "calls": 1149,
+      "errors": 0,
+      "inclusive_seconds": 1.2823192969663069,
+      "items": 0,
+      "seconds": 1.2823192969663069
+    },
+    "gradient_clip": {
+      "bytes": 0,
+      "calls": 1149,
+      "errors": 0,
+      "inclusive_seconds": 0.4268733999924734,
+      "items": 0,
+      "seconds": 0.4268733999924734
+    },
+    "json_parse": {
+      "bytes": 0,
+      "calls": 25728,
+      "errors": 0,
+      "inclusive_seconds": 0.2345238282578066,
+      "items": 25728,
+      "seconds": 0.2345238282578066
+    },
+    "label_conversion": {
+      "bytes": 0,
+      "calls": 25728,
+      "errors": 359,
+      "inclusive_seconds": 35.61201550171245,
+      "items": 0,
+      "seconds": 7.758721330435947
+    },
+    "optimizer": {
+      "bytes": 0,
+      "calls": 1149,
+      "errors": 0,
+      "inclusive_seconds": 2.366143700084649,
+      "items": 0,
+      "seconds": 2.366143700084649
+    },
+    "pv_validation": {
+      "bytes": 0,
+      "calls": 179647,
+      "errors": 0,
+      "inclusive_seconds": 26.59202967688907,
+      "items": 0,
+      "seconds": 26.59202967688907
+    },
+    "shard_deserialize": {
+      "bytes": 0,
+      "calls": 2,
+      "errors": 0,
+      "inclusive_seconds": 0.03828699991572648,
+      "items": 0,
+      "seconds": 0.03828699991572648
+    },
+    "shard_serialize": {
+      "bytes": 0,
+      "calls": 12,
+      "errors": 0,
+      "inclusive_seconds": 0.3312511998228729,
+      "items": 0,
+      "seconds": 0.3312511998228729
+    },
+    "source_read": {
+      "bytes": 0,
+      "calls": 542,
+      "errors": 0,
+      "inclusive_seconds": 0.013464200543239713,
+      "items": 0,
+      "seconds": 0.013464200543239713
+    },
+    "source_spool_read": {
+      "bytes": 0,
+      "calls": 247,
+      "errors": 0,
+      "inclusive_seconds": 0.012894098763354123,
+      "items": 0,
+      "seconds": 0.012894098763354123
+    },
+    "source_spool_write": {
+      "bytes": 35180453,
+      "calls": 537,
+      "errors": 0,
+      "inclusive_seconds": 0.016889801365323365,
+      "items": 0,
+      "seconds": 0.016889801365323365
+    },
+    "validation": {
+      "bytes": 0,
+      "calls": 11,
+      "errors": 0,
+      "inclusive_seconds": 0.5915414002956823,
+      "items": 0,
+      "seconds": 0.40593020082451403
+    },
+    "zstd_decompress": {
+      "bytes": 0,
+      "calls": 538,
+      "errors": 0,
+      "inclusive_seconds": 0.06069759966339916,
+      "items": 0,
+      "seconds": 0.047313799150288105
+    }
+  },
+  "timing_contract": "seconds are exclusive wall time; inclusive_seconds include nested spans; concurrent thread sums may exceed elapsed wall time",
+  "xpu_synchronized_spans": true
+}

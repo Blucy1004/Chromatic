@@ -1,0 +1,19 @@
+{
+  "archive": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-overdrive.zip",
+  "sha256": "a4e4991a2c75f697681c5c81c172c8af752ea9d9e647ffea7227b5504bbbdb78",
+  "bytes": 58943730,
+  "files": 873,
+  "zip_crc_passed": true,
+  "all_manifest_sha256_matched": true,
+  "originals_preserved": 515,
+  "extracted_package_smoke": {
+    "passed": true,
+    "powershell_exit": 0,
+    "dry_run_only": true,
+    "local_document_links": 103,
+    "missing_links": [],
+    "extracted_directory": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\arc-package-check-15ddb5d9",
+    "no_training_or_download_started": true,
+    "log": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\arc-package-check-15ddb5d9\\powershell-dryrun.log"
+  }
+}

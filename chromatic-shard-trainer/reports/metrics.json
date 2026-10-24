@@ -1,0 +1,109 @@
+{
+  "metrics": [
+    {
+      "model": "champion",
+      "new_positions": 0,
+      "additional_updates": 0,
+      "validation_policy": 6.208965933519794,
+      "validation_wdl": 2.235937565565078,
+      "test_policy": 6.12298487226965,
+      "test_wdl": 2.242011053177666,
+      "human_brier": 0.9536881435238223,
+      "human_ece": 0.44132496320544173,
+      "start_w": 0.5381177067756653,
+      "start_d": 0.45157110691070557,
+      "start_l": 0.010311273857951164,
+      "start_child_residual_mean": 1.0685681430622935,
+      "start_bellman_residual": 0.5800621528178453,
+      "tactics_exact_correct": 5,
+      "tactics_positions": 20
+    },
+    {
+      "model": "100",
+      "new_positions": 100,
+      "additional_updates": 12,
+      "validation_policy": 3.651027661659537,
+      "validation_wdl": 1.2573921658240865,
+      "test_policy": 3.599842058272945,
+      "test_wdl": 1.1986341558170015,
+      "human_brier": 0.7825525425628493,
+      "human_ece": 0.30040136652402805,
+      "start_w": 0.3490642011165619,
+      "start_d": 0.39640676975250244,
+      "start_l": 0.25452905893325806,
+      "start_child_residual_mean": 0.07388669699430465,
+      "start_bellman_residual": 0.1185268759727478,
+      "tactics_exact_correct": 5,
+      "tactics_positions": 20
+    },
+    {
+      "model": "1000",
+      "new_positions": 1000,
+      "additional_updates": 114,
+      "validation_policy": 3.038100832087647,
+      "validation_wdl": 0.7909824633461453,
+      "test_policy": 3.0190133235383034,
+      "test_wdl": 0.785956298850663,
+      "human_brier": 0.5979492727440425,
+      "human_ece": 0.15440921512611716,
+      "start_w": 0.4324919283390045,
+      "start_d": 0.018462423235177994,
+      "start_l": 0.5490456819534302,
+      "start_child_residual_mean": 0.37159480303525927,
+      "start_bellman_residual": 0.45718929171562195,
+      "tactics_exact_correct": 5,
+      "tactics_positions": 20
+    },
+    {
+      "model": "10000",
+      "new_positions": 10000,
+      "additional_updates": 1149,
+      "validation_policy": 2.8831637669548247,
+      "validation_wdl": 0.7236865068790024,
+      "test_policy": 2.816564764772908,
+      "test_wdl": 0.7390489421028408,
+      "human_brier": 0.5396738545463755,
+      "human_ece": 0.06063530902430326,
+      "start_w": 0.49003133177757263,
+      "start_d": 0.02727452665567398,
+      "start_l": 0.48269420862197876,
+      "start_child_residual_mean": 0.01192924678325653,
+      "start_bellman_residual": 0.020908743143081665,
+      "tactics_exact_correct": 7,
+      "tactics_positions": 20
+    }
+  ],
+  "resources": {
+    "100": {
+      "logged_rss_max_bytes": 313102336,
+      "logged_owned_disk_max_bytes": 70146430,
+      "committed_event_count": 9,
+      "resource_policy": {
+        "bytes": 2147483648,
+        "hard_limit": true,
+        "method": "Windows Job Object process committed-memory limit"
+      }
+    },
+    "1000": {
+      "logged_rss_max_bytes": 324018176,
+      "logged_owned_disk_max_bytes": 89593378,
+      "committed_event_count": 12,
+      "resource_policy": {
+        "bytes": 2147483648,
+        "hard_limit": true,
+        "method": "Windows Job Object process committed-memory limit"
+      }
+    },
+    "10000": {
+      "logged_rss_max_bytes": 348672000,
+      "logged_owned_disk_max_bytes": 118327427,
+      "committed_event_count": 56,
+      "resource_policy": {
+        "bytes": 2147483648,
+        "hard_limit": true,
+        "method": "Windows Job Object process committed-memory limit"
+      }
+    }
+  },
+  "scope": "descriptive comparison on identical held-out records; training size and optimizer steps both vary"
+}

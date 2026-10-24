@@ -1,0 +1,41 @@
+{
+  "ctest_passed": 3,
+  "ctest_failed": 0,
+  "perft": [
+    {
+      "depth": 5,
+      "nodes": 4865609
+    },
+    {
+      "depth": 4,
+      "nodes": 4085603
+    },
+    {
+      "depth": 5,
+      "nodes": 674624
+    },
+    {
+      "depth": 4,
+      "nodes": 422333
+    },
+    {
+      "depth": 4,
+      "nodes": 2103487
+    }
+  ],
+  "tests": [
+    "core",
+    "depth_uniform",
+    "depth_deployed_model"
+  ],
+  "covers": [
+    "perft",
+    "backup sign",
+    "off/on exact native root statistics",
+    "exact depth histograms and median",
+    "terminal root and proof-only handling",
+    "byte and node capacity failures",
+    "pre/post failure partitions",
+    "snapshot window partitions"
+  ]
+}

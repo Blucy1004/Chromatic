@@ -1,0 +1,15 @@
+{
+  "url": "https://database.lichess.org/lichess_db_eval.jsonl.zst",
+  "first_range_status": 206,
+  "first_content_range": "bytes 0-1023/22423777007",
+  "bytes_read": 1056,
+  "first_skippable_payload_integer": 5684148,
+  "first_zstd_frame_content_size": 18446744073709551615,
+  "first_zstd_window_size": 8388608,
+  "first_zstd_has_checksum": true,
+  "probe_offset_12_plus_payload": 5684160,
+  "second_status": 206,
+  "second_content_range": "bytes 5684160-5684191/22423777007",
+  "second_prefix_hex": "502a4d1804000000cdd8580028b52ffd04686cc5012a60dd3227304992b60d18",
+  "next_skippable_magic_matches": true
+}

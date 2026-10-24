@@ -1,0 +1,20 @@
+{
+  "start": {
+    "simulations": 722781,
+    "bestmove": "g2g4",
+    "all_root_visits_equal": true,
+    "maximum_float_serialization_difference": 4.830000843725202e-10
+  },
+  "before_Rg1_1s": {
+    "simulations": 52995,
+    "bestmove": "h1g1",
+    "all_root_visits_equal": true,
+    "maximum_float_serialization_difference": 4.5399994874628646e-10
+  },
+  "before_Ra6_10s": {
+    "simulations": 717076,
+    "bestmove": "a8a6",
+    "all_root_visits_equal": true,
+    "maximum_float_serialization_difference": 4.929999741776214e-10
+  }
+}

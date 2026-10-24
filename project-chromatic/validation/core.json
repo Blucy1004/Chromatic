@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "perft_nodes": [
+    4865609,
+    4085603,
+    674624,
+    422333,
+    2103487
+  ],
+  "positions": 5,
+  "source": "CTest zero_tests / tests/core.cpp"
+}

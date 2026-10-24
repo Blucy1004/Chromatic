@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\fly_t\Documents\Codex\2026-10-24\referenced-chatgpt-conversation-this-is-an\outputs\chromatic-arc-trainer\tools\validate_arc.py", line 390, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "C:\Users\fly_t\Documents\Codex\2026-10-24\referenced-chatgpt-conversation-this-is-an\outputs\chromatic-arc-trainer\tools\validate_arc.py", line 383, in main
+    if a.phase=='numeric':report=numeric_validation(records,a.device,a.precision,a.checkpoint,a.output)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fly_t\Documents\Codex\2026-10-24\referenced-chatgpt-conversation-this-is-an\outputs\chromatic-arc-trainer\tools\validate_arc.py", line 220, in numeric_validation
+    if not both_heads:raise AssertionError('Validation coverage is insufficient: Policy and WDL raw gradients must both be nonzero; include positive-value-weight records')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Validation coverage is insufficient: Policy and WDL raw gradients must both be nonzero; include positive-value-weight records

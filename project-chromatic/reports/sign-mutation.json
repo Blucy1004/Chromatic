@@ -1,0 +1,7 @@
+{
+  "mutation": "remove the single child-to-parent value sign inversion",
+  "caught_by_regression": true,
+  "returncode": 1,
+  "stdout": "perft 5 4865609\nperft 4 4085603\nperft 5 674624\nperft 4 422333\nperft 4 2103487\n",
+  "stderr": "WDL child-to-parent sign inversion\n"
+}

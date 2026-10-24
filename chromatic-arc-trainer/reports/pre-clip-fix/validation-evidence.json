@@ -1,0 +1,17 @@
+{
+  "meaning": "Pre-fix XPU foreach gradient norm; retained as diagnostic evidence, not final validation.",
+  "files": [
+    {
+      "file": "numeric-xpu-fp32.json",
+      "sha256": "0bbbc253ddb38767bf4106851ff57e1627c78cde7bc0608328e3e6a39bba07a0"
+    },
+    {
+      "file": "numeric-xpu-bf16.json",
+      "sha256": "f1358071931fa5fde2739d879a00de655661a70f54e6a676de645bf61ad661ee"
+    },
+    {
+      "file": "recovery-xpu.json",
+      "sha256": "017b3b2523629f9c982f0197b4008a84aa96fd18b5536472ea4c4ab181a469fe"
+    }
+  ]
+}

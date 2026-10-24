@@ -1,0 +1,21 @@
+{
+  "platform": "Windows PowerShell 5.1",
+  "executable": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "default_paths_dry_run": {
+    "returncode": 0,
+    "positions": 100000,
+    "downloads_started": false,
+    "training_started": false
+  },
+  "completed_run_resume": {
+    "returncode": 0,
+    "global_step_before": 12,
+    "global_step_after": 12,
+    "manifest_unchanged": true,
+    "new_training_updates": 0,
+    "head": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-e4354ee1423f4060ab079a815ee5a6dc.manifest.json",
+    "retained_checkpoint_entries": 3
+  },
+  "regression_test": "tests/test_powershell.py",
+  "fix": "default script paths are resolved in the script body after parameter binding"
+}

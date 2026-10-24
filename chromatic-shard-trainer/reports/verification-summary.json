@@ -1,0 +1,22 @@
+{
+  "unit_xml": {
+    "tests": 84,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 6
+  },
+  "unit_console": "58 passed, 6 skipped, 20 subtests passed",
+  "skipped_meaning": "six opt-in real-process pipeline scenarios executed separately; all passed",
+  "real_process_pipeline": {
+    "tests": 6,
+    "all_passed": true
+  },
+  "inference_parity": "reports\\inference-parity.json",
+  "standalone_recovery_inspect": {
+    "status": "verified",
+    "step": 1149,
+    "mirror_needed": false,
+    "training_started": false
+  },
+  "audit_all_split_groups_disjoint": true
+}

@@ -1,0 +1,46 @@
+{
+  "license": "CC0-1.0",
+  "url": "https://github.com/lichess-org/chess-openings",
+  "version": "a6189a30dc273ccb21fc2536a9a2fefd5592a67a",
+  "license_evidence": "https://raw.githubusercontent.com/lichess-org/chess-openings/a6189a30dc273ccb21fc2536a9a2fefd5592a67a/COPYING.txt",
+  "files": {
+    "official-openings-COPYING.txt": {
+      "url": "https://raw.githubusercontent.com/lichess-org/chess-openings/a6189a30dc273ccb21fc2536a9a2fefd5592a67a/COPYING.txt",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "bytes": 7048,
+      "etag": "\"9d3fb2fa8cac7a8827d7cf7e62d6af81f1ffbb3fddb4d270334afebee9e1fc66\""
+    },
+    "official-openings-a.tsv": {
+      "url": "https://raw.githubusercontent.com/lichess-org/chess-openings/a6189a30dc273ccb21fc2536a9a2fefd5592a67a/a.tsv",
+      "sha256": "3282e4c9155289a29224f9a85fba0decb46efa35c2fa5e39662d2ac48fb0f793",
+      "bytes": 67257,
+      "etag": "\"3722992dfaf8e8bfc819b2c52567d2df6c8dfaa8f5fe18002a38c2c7775b7d37\""
+    },
+    "official-openings-b.tsv": {
+      "url": "https://raw.githubusercontent.com/lichess-org/chess-openings/a6189a30dc273ccb21fc2536a9a2fefd5592a67a/b.tsv",
+      "sha256": "1d5ed134ebbd87915ead5683416e37583bb3e5ae3582b4d8cb5cb4aa7ef4f623",
+      "bytes": 78124,
+      "etag": "\"33e39d3f13be832ff7fcb9ec3726e8b1e70a538b0adc042ad9a4bf4f6fd3abda\""
+    },
+    "official-openings-c.tsv": {
+      "url": "https://raw.githubusercontent.com/lichess-org/chess-openings/a6189a30dc273ccb21fc2536a9a2fefd5592a67a/c.tsv",
+      "sha256": "45e843c7b7e79a0d04d5bda879c9bd23f5a10974488bd8615e4f4c5d0749986f",
+      "bytes": 132304,
+      "etag": "\"78e3af7ea02959fb5df1779623308c8571ef099bb4b83dfc5ddde248f0cd4395\""
+    },
+    "official-openings-d.tsv": {
+      "url": "https://raw.githubusercontent.com/lichess-org/chess-openings/a6189a30dc273ccb21fc2536a9a2fefd5592a67a/d.tsv",
+      "sha256": "1cf4057a8aece94f27bb3f278ad410ee2844831a642364eeceaafa091dbcceda",
+      "bytes": 73318,
+      "etag": "\"422dfa3f5840ded3db1db3a774f1ff7257813db42b40bef658e395d77ae24f4a\""
+    },
+    "official-openings-e.tsv": {
+      "url": "https://raw.githubusercontent.com/lichess-org/chess-openings/a6189a30dc273ccb21fc2536a9a2fefd5592a67a/e.tsv",
+      "sha256": "48c6f6645b031a5937c8386839debab0e2e48837251687ba1afb6369677f8546",
+      "bytes": 44061,
+      "etag": "\"6e30ce29fd5d3014cf968bbb5e06f0276fa7672be8e04b30537bcd695eb2b188\""
+    }
+  },
+  "total_bytes": 402112,
+  "captured_at_utc": "2026-10-24T09:00:51.583670+00:00"
+}

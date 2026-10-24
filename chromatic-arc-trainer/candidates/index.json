@@ -1,0 +1,403 @@
+{
+  "candidate_only": true,
+  "champion_overwritten": false,
+  "candidates": {
+    "cpu4-selected": {
+      "positions": 10000,
+      "step": 1149,
+      "device": {
+        "cpu_threads": 4,
+        "device": "cpu",
+        "fallback_policy": "error",
+        "precision": "fp32",
+        "probe": null,
+        "reason": "explicit device request",
+        "requested": "cpu",
+        "requested_precision": "fp32"
+      },
+      "execution": {
+        "effective_precision": "fp32",
+        "host_to_device_seconds": 0.0,
+        "precision_checks": [],
+        "precision_fallbacks": [],
+        "pure_training_seconds": 4.685718700871803,
+        "training_samples": 36318,
+        "training_samples_per_second": 7750.7853796777945,
+        "training_updates_this_process": 1149
+      },
+      "files": {
+        "checkpoint": {
+          "path": "candidates/cpu4-selected.pt",
+          "sha256": "e4813a0b8fa78dd45532ccc571e8a2f629bae265892a8e84adf997d026b8340a",
+          "bytes": 5333925
+        },
+        "model": {
+          "path": "candidates/cpu4-selected.zero",
+          "sha256": "a486053ec4888193fa20cd8c39523335d27daa31919f41e371ce23ddaa0525f4",
+          "bytes": 1576740
+        }
+      },
+      "validation": {
+        "policy_loss": 2.883163848263495,
+        "policy_numerator": 521.3137130737305,
+        "policy_weight": 180.81307220458984,
+        "rows": 1000,
+        "value_numerator": 78.48199105262756,
+        "value_rows": 771,
+        "value_weight": 108.4474937915802,
+        "wdl_loss": 0.7236865353795835
+      },
+      "test": {
+        "policy_loss": 2.8165645440934095,
+        "policy_numerator": 526.9016799926758,
+        "policy_weight": 187.07246780395508,
+        "rows": 1000,
+        "value_numerator": 87.09618949890137,
+        "value_rows": 817,
+        "value_weight": 117.84901428222656,
+        "wdl_loss": 0.7390489435093799
+      },
+      "source_manifest": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\runs\\benchmark-arc-selected\\arc-cpu4-10000-rep1\\candidate\\checkpoints\\bundle-7b967917d30c4f9c8163a2a77037ed60.manifest.json",
+      "promotion_performed": false
+    },
+    "xpu-fp32-selected": {
+      "positions": 10000,
+      "step": 1149,
+      "device": {
+        "cpu_threads": 1,
+        "device": "xpu",
+        "fallback_policy": "error",
+        "precision": "fp32",
+        "probe": {
+          "forward_backward_ok": true,
+          "seconds": 0.5573788000037894
+        },
+        "reason": "explicit device request",
+        "requested": "xpu",
+        "requested_precision": "fp32"
+      },
+      "execution": {
+        "effective_precision": "fp32",
+        "host_to_device_seconds": 2.0074618003563955,
+        "precision_checks": [],
+        "precision_fallbacks": [],
+        "pure_training_seconds": 11.154533300432377,
+        "training_samples": 36318,
+        "training_samples_per_second": 3255.8959681972733,
+        "training_updates_this_process": 1149
+      },
+      "files": {
+        "checkpoint": {
+          "path": "candidates/xpu-fp32-selected.pt",
+          "sha256": "0d1b1471a759cb01e0f69e6db1c84c4fb2a9c9f46d088849b89e51de9bacb3d8",
+          "bytes": 5334178
+        },
+        "model": {
+          "path": "candidates/xpu-fp32-selected.zero",
+          "sha256": "093517d547cd2d7a8562734224c5b548ecfacd5ba44bcbec0a47a18f74f64361",
+          "bytes": 1576740
+        }
+      },
+      "validation": {
+        "policy_loss": 2.883163768803536,
+        "policy_numerator": 521.313720703125,
+        "policy_weight": 180.81307983398438,
+        "rows": 1000,
+        "value_numerator": 78.48198914527893,
+        "value_rows": 771,
+        "value_weight": 108.44749736785889,
+        "wdl_loss": 0.7236864939267748
+      },
+      "test": {
+        "policy_loss": 2.816564625659603,
+        "policy_numerator": 526.9016952514648,
+        "policy_weight": 187.07246780395508,
+        "rows": 1000,
+        "value_numerator": 87.09619522094727,
+        "value_rows": 817,
+        "value_weight": 117.84901237487793,
+        "wdl_loss": 0.7390490040246931
+      },
+      "source_manifest": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\runs\\benchmark-arc-selected\\arc-xpu-fp32-10000-rep1\\candidate\\checkpoints\\bundle-274041ed38dc4c988da8cd8c87248aa1.manifest.json",
+      "promotion_performed": false
+    },
+    "xpu-bf16": {
+      "positions": 10000,
+      "step": 1149,
+      "device": {
+        "cpu_threads": 1,
+        "device": "xpu",
+        "fallback_policy": "error",
+        "precision": "bf16",
+        "probe": {
+          "forward_backward_ok": true,
+          "seconds": 0.564431200036779
+        },
+        "reason": "explicit device request",
+        "requested": "xpu",
+        "requested_precision": "bf16"
+      },
+      "execution": {
+        "effective_precision": "bf16",
+        "host_to_device_seconds": 2.237750299856998,
+        "precision_checks": [
+          {
+            "bf16_loss": 1.044427514076233,
+            "delta": 0.0008554458618164062,
+            "fp32_loss": 1.0435720682144165,
+            "update": 0
+          },
+          {
+            "bf16_loss": 0.48017585277557373,
+            "delta": 3.6388635635375977e-05,
+            "fp32_loss": 0.48013946413993835,
+            "update": 32
+          },
+          {
+            "bf16_loss": 0.5568392276763916,
+            "delta": 9.512901306152344e-05,
+            "fp32_loss": 0.5567440986633301,
+            "update": 64
+          },
+          {
+            "bf16_loss": 0.5977822542190552,
+            "delta": -1.3113021850585938e-05,
+            "fp32_loss": 0.5977953672409058,
+            "update": 96
+          },
+          {
+            "bf16_loss": 0.5031746625900269,
+            "delta": 3.445148468017578e-05,
+            "fp32_loss": 0.5031402111053467,
+            "update": 128
+          },
+          {
+            "bf16_loss": 0.49115806818008423,
+            "delta": -1.5497207641601562e-06,
+            "fp32_loss": 0.4911596179008484,
+            "update": 160
+          },
+          {
+            "bf16_loss": 0.5099984407424927,
+            "delta": 0.0001621246337890625,
+            "fp32_loss": 0.5098363161087036,
+            "update": 192
+          },
+          {
+            "bf16_loss": 0.5083239078521729,
+            "delta": -0.00011789798736572266,
+            "fp32_loss": 0.5084418058395386,
+            "update": 224
+          },
+          {
+            "bf16_loss": 0.45501652359962463,
+            "delta": -2.6226043701171875e-06,
+            "fp32_loss": 0.45501914620399475,
+            "update": 256
+          },
+          {
+            "bf16_loss": 0.4526781737804413,
+            "delta": 9.590387344360352e-05,
+            "fp32_loss": 0.4525822699069977,
+            "update": 288
+          },
+          {
+            "bf16_loss": 0.48988431692123413,
+            "delta": 0.00014293193817138672,
+            "fp32_loss": 0.48974138498306274,
+            "update": 320
+          },
+          {
+            "bf16_loss": 0.5776814222335815,
+            "delta": 1.0013580322265625e-05,
+            "fp32_loss": 0.5776714086532593,
+            "update": 352
+          },
+          {
+            "bf16_loss": 0.5433634519577026,
+            "delta": -2.6524066925048828e-05,
+            "fp32_loss": 0.5433899760246277,
+            "update": 384
+          },
+          {
+            "bf16_loss": 0.4093700051307678,
+            "delta": -7.4803829193115234e-06,
+            "fp32_loss": 0.40937748551368713,
+            "update": 416
+          },
+          {
+            "bf16_loss": 0.48479950428009033,
+            "delta": -1.1086463928222656e-05,
+            "fp32_loss": 0.48481059074401855,
+            "update": 448
+          },
+          {
+            "bf16_loss": 0.3951748013496399,
+            "delta": 3.343820571899414e-05,
+            "fp32_loss": 0.3951413631439209,
+            "update": 480
+          },
+          {
+            "bf16_loss": 0.5621142387390137,
+            "delta": 0.00015145540237426758,
+            "fp32_loss": 0.5619627833366394,
+            "update": 512
+          },
+          {
+            "bf16_loss": 0.48692476749420166,
+            "delta": 6.687641143798828e-05,
+            "fp32_loss": 0.48685789108276367,
+            "update": 544
+          },
+          {
+            "bf16_loss": 0.5976617336273193,
+            "delta": -3.7670135498046875e-05,
+            "fp32_loss": 0.5976994037628174,
+            "update": 576
+          },
+          {
+            "bf16_loss": 0.6918195486068726,
+            "delta": 5.9604644775390625e-06,
+            "fp32_loss": 0.691813588142395,
+            "update": 608
+          },
+          {
+            "bf16_loss": 0.5760308504104614,
+            "delta": 0.00010097026824951172,
+            "fp32_loss": 0.5759298801422119,
+            "update": 640
+          },
+          {
+            "bf16_loss": 0.5482532382011414,
+            "delta": 2.676248550415039e-05,
+            "fp32_loss": 0.5482264757156372,
+            "update": 672
+          },
+          {
+            "bf16_loss": 0.5842801332473755,
+            "delta": -5.835294723510742e-05,
+            "fp32_loss": 0.5843384861946106,
+            "update": 704
+          },
+          {
+            "bf16_loss": 0.6162973046302795,
+            "delta": 4.667043685913086e-05,
+            "fp32_loss": 0.6162506341934204,
+            "update": 736
+          },
+          {
+            "bf16_loss": 0.6687288880348206,
+            "delta": -8.934736251831055e-05,
+            "fp32_loss": 0.6688182353973389,
+            "update": 768
+          },
+          {
+            "bf16_loss": 0.6315112709999084,
+            "delta": 5.6862831115722656e-05,
+            "fp32_loss": 0.6314544081687927,
+            "update": 800
+          },
+          {
+            "bf16_loss": 0.6041462421417236,
+            "delta": -0.00011724233627319336,
+            "fp32_loss": 0.6042634844779968,
+            "update": 832
+          },
+          {
+            "bf16_loss": 0.6928420066833496,
+            "delta": 0.00010114908218383789,
+            "fp32_loss": 0.6927408576011658,
+            "update": 864
+          },
+          {
+            "bf16_loss": 0.5998726487159729,
+            "delta": 2.0503997802734375e-05,
+            "fp32_loss": 0.5998521447181702,
+            "update": 896
+          },
+          {
+            "bf16_loss": 0.7606585621833801,
+            "delta": -2.9265880584716797e-05,
+            "fp32_loss": 0.7606878280639648,
+            "update": 928
+          },
+          {
+            "bf16_loss": 0.49886301159858704,
+            "delta": -1.7136335372924805e-05,
+            "fp32_loss": 0.49888014793395996,
+            "update": 960
+          },
+          {
+            "bf16_loss": 0.634451687335968,
+            "delta": 1.3589859008789062e-05,
+            "fp32_loss": 0.6344380974769592,
+            "update": 992
+          },
+          {
+            "bf16_loss": 0.5649493932723999,
+            "delta": -7.033348083496094e-06,
+            "fp32_loss": 0.5649564266204834,
+            "update": 1024
+          },
+          {
+            "bf16_loss": 0.6504545211791992,
+            "delta": -8.90493392944336e-05,
+            "fp32_loss": 0.6505435705184937,
+            "update": 1056
+          },
+          {
+            "bf16_loss": 0.6082407832145691,
+            "delta": -1.2874603271484375e-05,
+            "fp32_loss": 0.6082536578178406,
+            "update": 1088
+          },
+          {
+            "bf16_loss": 0.6363483667373657,
+            "delta": -0.00023108720779418945,
+            "fp32_loss": 0.6365794539451599,
+            "update": 1120
+          }
+        ],
+        "precision_fallbacks": [],
+        "pure_training_seconds": 13.26632019795943,
+        "training_samples": 36318,
+        "training_samples_per_second": 2737.60918310914,
+        "training_updates_this_process": 1149
+      },
+      "files": {
+        "checkpoint": {
+          "path": "candidates/xpu-bf16.pt",
+          "sha256": "29a8511ad33dde80864347b82baa55cda2d40425ab62a169619e9e97f8acea13",
+          "bytes": 5229090
+        },
+        "model": {
+          "path": "candidates/xpu-bf16.zero",
+          "sha256": "a10e83c545c7142b9747500b80d96cf5dd7ec9ece07c9840958449039778415a",
+          "bytes": 1576740
+        }
+      },
+      "validation": {
+        "policy_loss": 2.884027920888902,
+        "policy_numerator": 521.469970703125,
+        "policy_weight": 180.81307983398438,
+        "rows": 1000,
+        "value_numerator": 78.51509475708008,
+        "value_rows": 771,
+        "value_weight": 108.44749736785889,
+        "wdl_loss": 0.7239917624908694
+      },
+      "test": {
+        "policy_loss": 2.8057442583772305,
+        "policy_numerator": 524.8775024414062,
+        "policy_weight": 187.07246780395508,
+        "rows": 1000,
+        "value_numerator": 87.2087516784668,
+        "value_rows": 817,
+        "value_weight": 117.84901237487793,
+        "wdl_loss": 0.7400040944005164
+      },
+      "source_manifest": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\runs\\benchmark-arc-final\\arc-xpu-bf16-10000-rep1\\candidate\\checkpoints\\bundle-a562f77e7fa2443081e2cc9461545bc4.manifest.json",
+      "promotion_performed": false
+    }
+  }
+}

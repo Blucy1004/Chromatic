@@ -1,0 +1,88 @@
+Start testing: Oct 24 16:01 대한민국 표준시
+----------------------------------------------------------
+1/5 Testing: core
+1/5 Test: core
+Command: "C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-memory/build-asan/zero_tests.exe"
+Directory: C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-memory/build-asan
+"core" start time: Oct 24 16:01 대한민국 표준시
+Output:
+----------------------------------------------------------
+perft 5 4865609
+perft 4 4085603
+perft 5 674624
+perft 4 422333
+perft 4 2103487
+all core tests passed
+<end of output>
+Test time =   8.54 sec
+----------------------------------------------------------
+Test Passed.
+"core" end time: Oct 24 16:01 대한민국 표준시
+"core" time elapsed: 00:00:08
+----------------------------------------------------------
+
+2/5 Testing: depth_uniform
+2/5 Test: depth_uniform
+Command: "C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-memory/build-asan/depth_telemetry_tests.exe"
+Directory: C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-memory/build-asan
+"depth_uniform" start time: Oct 24 16:01 대한민국 표준시
+Output:
+----------------------------------------------------------
+depth telemetry tests passed; model=uniform
+<end of output>
+Test time =   1.15 sec
+----------------------------------------------------------
+Test Passed.
+"depth_uniform" end time: Oct 24 16:01 대한민국 표준시
+"depth_uniform" time elapsed: 00:00:01
+----------------------------------------------------------
+
+3/5 Testing: depth_deployed_model
+3/5 Test: depth_deployed_model
+Command: "C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-memory/build-asan/depth_telemetry_tests.exe" "C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-memory/dist/default.zero"
+Directory: C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-memory/build-asan
+"depth_deployed_model" start time: Oct 24 16:01 대한민국 표준시
+Output:
+----------------------------------------------------------
+depth telemetry tests passed; model=loaded
+<end of output>
+Test time =   2.24 sec
+----------------------------------------------------------
+Test Passed.
+"depth_deployed_model" end time: Oct 24 16:01 대한민국 표준시
+"depth_deployed_model" time elapsed: 00:00:02
+----------------------------------------------------------
+
+4/5 Testing: memory_uniform
+4/5 Test: memory_uniform
+Command: "C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-memory/build-asan/memory_recycling_tests.exe"
+Directory: C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-memory/build-asan
+"memory_uniform" start time: Oct 24 16:01 대한민국 표준시
+Output:
+----------------------------------------------------------
+memory recycling regression tests passed; model=uniform
+<end of output>
+Test time =   0.71 sec
+----------------------------------------------------------
+Test Passed.
+"memory_uniform" end time: Oct 24 16:01 대한민국 표준시
+"memory_uniform" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: memory_deployed_model
+5/5 Test: memory_deployed_model
+Command: "C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-memory/build-asan/memory_recycling_tests.exe" "C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-memory/dist/default.zero"
+Directory: C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic-memory/build-asan
+"memory_deployed_model" start time: Oct 24 16:01 대한민국 표준시
+Output:
+----------------------------------------------------------
+memory recycling regression tests passed; model=loaded
+<end of output>
+Test time =   2.36 sec
+----------------------------------------------------------
+Test Passed.
+"memory_deployed_model" end time: Oct 24 16:01 대한민국 표준시
+"memory_deployed_model" time elapsed: 00:00:02
+----------------------------------------------------------
+
+End testing: Oct 24 16:01 대한민국 표준시

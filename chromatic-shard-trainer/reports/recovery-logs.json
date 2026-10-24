@@ -1,0 +1,37 @@
+[
+  {
+    "file": "recovery-logs/tests-0.log",
+    "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-9vhqli2c\\uninterrupted\\process-1792834633522822800.log",
+    "sha256": "df7d0675d6f21bb111622abfe1d7067e9e45cea5cdc82467ff8e0e22591fb8ac"
+  },
+  {
+    "file": "recovery-logs/tests-1-resume.log",
+    "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-9vhqli2c\\kill-checkpoint_written\\process-1792834660480331500.log",
+    "sha256": "5ef54dcd38db0307d1660d8eeba2944ee5408bdabea092e5d5a0d6383a867d7a"
+  },
+  {
+    "file": "recovery-logs/tests-2-resume.log",
+    "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-9vhqli2c\\kill-ledger_committed\\process-1792834694043391700.log",
+    "sha256": "29b65fde4cdca5cc3430323b6a20455587733bbbb8e29453b277c90da5576d50"
+  },
+  {
+    "file": "recovery-logs/tests-3-resume.log",
+    "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-9vhqli2c\\kill-before_delete\\process-1792834727984187000.log",
+    "sha256": "e7d34b12436fa82f714cbfa532d75a7b8b1793951f1b6e27e26029ff03727c11"
+  },
+  {
+    "file": "recovery-logs/tests-4.log",
+    "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-9vhqli2c\\uninterrupted\\process-1792834768841605100.log",
+    "sha256": "70fecebd773282c2a1dd71faad953daf0dc66bc71ed54c857a6e6b5d2bd8814c"
+  },
+  {
+    "file": "recovery-logs/tests-5-mirror_resume.log",
+    "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-y6g6f2kd\\corruption\\process-1792834996967739800.log",
+    "sha256": "2d79a6f5d310e4794712c1d5636884524809bc995389531637db700af5678fdb"
+  },
+  {
+    "file": "recovery-logs/tests-5-previous_checkpoint_resume.log",
+    "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-y6g6f2kd\\corruption\\process-1792835012966440900.log",
+    "sha256": "dc6078f56061f2a0e14f120406d678167aa462697e2bbb422849c84b208d8184"
+  }
+]

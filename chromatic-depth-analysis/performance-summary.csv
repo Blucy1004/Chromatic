@@ -1,0 +1,4 @@
+﻿variant,paired_rounds,median_search_ms,min_search_ms,max_search_ms,median_simulations_per_second
+pristine,9,1018.461,1006.4214,1138.3314,64348.070274659505
+off,9,1020.4597,1002.2145,1036.2897,64222.036401829486
+on,9,1021.5643,1000.7454,1265.5102,64152.59421262078

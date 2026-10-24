@@ -1,0 +1,367 @@
+{
+  "format": "chromatic-arc-numeric-inputs-v1",
+  "created_utc": "2026-10-24T11:48:29.794893+00:00",
+  "source_file": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-validation\\positions-10000\\data\\fixed\\test.jsonl",
+  "source_sha256": "07e5873c5043dec9243e7e612e1db216eb344fb78f2dd09a0fef1c6512288b26",
+  "source_rows": 1000,
+  "source_split": "fixed test",
+  "output_file": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\numeric-inputs.jsonl",
+  "output_sha256": "96170c27fe385f367f6ebb27631500254f279cff317dda3c58735fc73c38b6a5",
+  "rows": 32,
+  "weak_anchor_rows": 16,
+  "positive_value_rows": 16,
+  "positive_phase_counts": {
+    "opening": 6,
+    "middlegame": 5,
+    "endgame": 5
+  },
+  "policy_weight_sum": 7.146827577909035,
+  "value_weight_sum": 3.115516514055073,
+  "selection": "first 16 weak anchors in frozen file order; positive rows round robin opening/middlegame/endgame with frozen order inside each phase",
+  "scope": "Numerical validation only; these rows are never added to production training or saved as a trained candidate.",
+  "records": [
+    {
+      "index": 0,
+      "source_line": 1,
+      "identity": "4a3b624659e82dadbaa6acb292e9e72f6f4a964bf948f21047b55e2b157c2fff",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "5b08bc29819f06e552054108b94dcf3b1b1582a87cf7eb7373ac14c88142dbf8"
+    },
+    {
+      "index": 1,
+      "source_line": 2,
+      "identity": "5fce524b1782650d96b6b1fb92c4ed3bde5076cb1758eaa222aee10d38c66e95",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "5d08def9456cc54e7ff838d3c166606b1be964c0bef6abec654049ae8ccb8da4"
+    },
+    {
+      "index": 2,
+      "source_line": 3,
+      "identity": "0e0e617287f6ca3a4866efc33a07b4e50e63557e4a187908c1ddc38d28bae042",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "1c6296238b2853d693273029be702d79c928e3721cf6f115eb58379f7610d749"
+    },
+    {
+      "index": 3,
+      "source_line": 4,
+      "identity": "65278229b9335b34220b49aafb220333a9c417116730994e6d92ae36b76d9f03",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "43697b04d66e7bbbdde63efd6af406dc1126d0a1a06225d9d8dade7d0569b6f5"
+    },
+    {
+      "index": 4,
+      "source_line": 5,
+      "identity": "3caa74cc9aff023bca178229fd227bf3add972cda2481e5011ec47e3f047e49e",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "141df9e1167615800ad1b6db7ca912f4ca952bb9b2433fa54c1dde6f14a14a9d"
+    },
+    {
+      "index": 5,
+      "source_line": 6,
+      "identity": "ecd0d0e86bbcedb45a54341a2ac62ab5dd07f714294da899b74066bf9cee6cb1",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "ebe1944df66059f61b848c2d00ef9a8d18dc084f5277cc3e22422f4b7c84cd23"
+    },
+    {
+      "index": 6,
+      "source_line": 7,
+      "identity": "6876800db8520c1bdb374d6a71178f94ec7a78da61a52afbb58bf0428f12be4b",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "b67e5dd683dc1a4802c1fb4a6b75a5c53985a57c60c7494e22b23e0b0885c694"
+    },
+    {
+      "index": 7,
+      "source_line": 8,
+      "identity": "a6bb2b4bf5e72cadfeb8201086d615db76055d93acbdce3a1578ded6cf91438c",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "462e11b9609be4ed1e4af329f20bb60a9efcd28fa0ce94464a79f7bff5361426"
+    },
+    {
+      "index": 8,
+      "source_line": 9,
+      "identity": "b8094a6ecc57e5f3026293dfc7e3b0984c43098ea52b925985eecd267c528aee",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "dc377ba9d547be8d993b9f544c2083a5c93789f47b5d8f9563ec1c5be7b4b3ae"
+    },
+    {
+      "index": 9,
+      "source_line": 10,
+      "identity": "94e12e82fb3525dd748965e2f016ce41ae0654efe0346911c0797504652ac3cd",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "142e6471ba7ed7b39c290b60ec1e6277ceb9868d75e636f4b5b0acd196517e80"
+    },
+    {
+      "index": 10,
+      "source_line": 11,
+      "identity": "8fe15c4f1337f9aa65fd90828d0e67f0e6deeac378b328ad6ade2fc66ba20f30",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "e163df2840545dee49593cbb47e1837d267b4941fc0f4997766cd35bb73818a5"
+    },
+    {
+      "index": 11,
+      "source_line": 12,
+      "identity": "d8b37035b23cf4ed8a9d5d36e8298bf5d41cfd46a1102c9581eebecbb82a3fed",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "cc601c5835511d1d1b2dbfb7079730e6d1f575d9e485eebb60b7377c3eb14a4d"
+    },
+    {
+      "index": 12,
+      "source_line": 13,
+      "identity": "f22b3de21713bacf32f0cf2689c9e9d7974a16036755640a9b85faf10e35fc55",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "f80a0db5d590ec0c8a51285d29852e2d659a2a04b264a095f9146be2e4ae3a48"
+    },
+    {
+      "index": 13,
+      "source_line": 14,
+      "identity": "2450d5b515c7d6964cdb15d80661498e4e031edffeed59a5e26f350ade309212",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "f3bb1f8201d12c66535c068fe8eb483e452de3e123fea19e2093159fbeefdec5"
+    },
+    {
+      "index": 14,
+      "source_line": 15,
+      "identity": "f3723591753dfaf84020960a871fc7278285174bdd8960bb4b3aa9a85f9162db",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "b3dd9f50a2a01902999e722536488c339d47711596c16f78bdd0cf848c106ffe"
+    },
+    {
+      "index": 15,
+      "source_line": 16,
+      "identity": "d118e7d024d16f8c22d2d1dd42a1b88b87e40d384a7e4f14c5ad3b24905e9fbf",
+      "phase": "opening",
+      "policy_weight": 0.15,
+      "value_weight": 0.0,
+      "source": "lichess-openings-cc0",
+      "raw_line_sha256": "1cbc041afc855a12571d6f6cc99f148b7c11eb31410dc4e2f67e0c574ee43bb1"
+    },
+    {
+      "index": 16,
+      "source_line": 188,
+      "identity": "e110a65e8b272577caa00d051da0cf54d3b1afbb15350e2a73cdaa8d2de53d77",
+      "phase": "opening",
+      "policy_weight": 0.37124999999999997,
+      "value_weight": 0.225,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "ff8e796ac86c8b37b34118cabd8e80b5fc165e0cbcb2b014b6c27a3c24896cd7"
+    },
+    {
+      "index": 17,
+      "source_line": 184,
+      "identity": "8931cc59759a839399e2481e687e82e0bfffa9e0f48f5533154039b76df874f6",
+      "phase": "middlegame",
+      "policy_weight": 0.4692857142857143,
+      "value_weight": 0.225,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "d6bca1c69c5739268b6fc150913aa6595525ffa2d6078da4625d0d2ce0b9bdaf"
+    },
+    {
+      "index": 18,
+      "source_line": 186,
+      "identity": "9630ee93e50538f6b76fa3773c2237cb3d4e983d71edfb0dcee85baffa4a6d0b",
+      "phase": "endgame",
+      "policy_weight": 0.2651481447024083,
+      "value_weight": 0.16873063753789616,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "9fb383db6500e7d298f7e741607b4cb7470d0cb7e9f09eec925d8f9c4d6ff21b"
+    },
+    {
+      "index": 19,
+      "source_line": 189,
+      "identity": "4aa26380bd1efab24dd3ac88fbfd985c08590d78a94e07b4e789682e2930569f",
+      "phase": "opening",
+      "policy_weight": 0.3535714285714286,
+      "value_weight": 0.225,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "66cafbe549f162d751da2f2793394b6af66c6a6a6274d1f4acface076ed43925"
+    },
+    {
+      "index": 20,
+      "source_line": 185,
+      "identity": "d0cbd36a291c6e112671cb71bec6bca33ba644999e068100eef67029c72fa775",
+      "phase": "middlegame",
+      "policy_weight": 0.19008866207783592,
+      "value_weight": 0.19008866207783592,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "bfc3f5c7158694d65f7c926d0161ac73085c4bbfbc97abd575a06646990f1e5e"
+    },
+    {
+      "index": 21,
+      "source_line": 187,
+      "identity": "f7fed44572a2edcb74d68e9f35516a3e7762c4ea612f8f727fd8ac16122232c4",
+      "phase": "endgame",
+      "policy_weight": 0.18701617839527807,
+      "value_weight": 0.18701617839527807,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "cc909212e9a274189cd6cc6c730d3a2b61a6a41b4a2c1bef6da7ebef9d2fe24a"
+    },
+    {
+      "index": 22,
+      "source_line": 190,
+      "identity": "1cb407c79f4de7e3a874c970d414d8545d786401c2e6718a1273e4ca0b0f84f4",
+      "phase": "opening",
+      "policy_weight": 0.35100000000000003,
+      "value_weight": 0.225,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "8386bac3be5d5f594ccc5b89a5d0664201ebda34b7801a62c9350ac90336cb64"
+    },
+    {
+      "index": 23,
+      "source_line": 197,
+      "identity": "da6a785ff443dbba3e027af1c29302aba3a4c9e1456242a6e759aea5ee064f07",
+      "phase": "middlegame",
+      "policy_weight": 0.1806807054867182,
+      "value_weight": 0.1806807054867182,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "54b510a5583f0f1b7a338325af3a38d1a64fe094c1a52d2bdc75848083881686"
+    },
+    {
+      "index": 24,
+      "source_line": 191,
+      "identity": "5f77c5b4bf7f119e3d8721e580819584dddd8bdc3be8bc5b1e06cea8cf834664",
+      "phase": "endgame",
+      "policy_weight": 0.1918629371688235,
+      "value_weight": 0.1918629371688235,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "f0f3672828bcda092bc462123859f0498fd016171143d8cb04fb47576d27e99a"
+    },
+    {
+      "index": 25,
+      "source_line": 201,
+      "identity": "8a52a2b8475b86a1047f1d243e644670a48507410a3f0fa59aac557e2ef1063c",
+      "phase": "opening",
+      "policy_weight": 0.36236842105263156,
+      "value_weight": 0.225,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "14444358bb43e7f27cdbce26902fd5dcc74eac12f6d98d9f682dc74c8f7fb600"
+    },
+    {
+      "index": 26,
+      "source_line": 198,
+      "identity": "de166ee7f2258ab8961256019f13842866eea77932d53089ef51a9baf57e6445",
+      "phase": "middlegame",
+      "policy_weight": 0.36642857142857144,
+      "value_weight": 0.225,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "d200a8259de2ad79ba4211968921707af85f6ccdbbe04baaa02a4f1f635debb7"
+    },
+    {
+      "index": 27,
+      "source_line": 192,
+      "identity": "3eda9634089008eaecebde717590000700ab27b5529e69c3c2f07c743b7f5506",
+      "phase": "endgame",
+      "policy_weight": 0.3750479898894038,
+      "value_weight": 0.14424922688053993,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "c14ea993a719a01d35369d27cc58ecb170e4fcb6a2588bb44a4e3227bee35835"
+    },
+    {
+      "index": 28,
+      "source_line": 205,
+      "identity": "ac94942f44d30e89491d98df0b58e23704907cc1f7ee806d48239bb07cb245cd",
+      "phase": "opening",
+      "policy_weight": 0.20315909691480352,
+      "value_weight": 0.20315909691480352,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "f91c65644dda24bfd5890ca0d720fddc43d50700a6fdbfc5ce7079719d0ecafb"
+    },
+    {
+      "index": 29,
+      "source_line": 200,
+      "identity": "c6da2d29c72c6dc938662db0a6da5f0fd36064276c9a77b0ab0cceb87a378eeb",
+      "phase": "middlegame",
+      "policy_weight": 0.16502556633086019,
+      "value_weight": 0.16502556633086019,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "41e1da6ba7be8d8881f77cdb94823bfcb18f7f69e0c17014624f8eea00674544"
+    },
+    {
+      "index": 30,
+      "source_line": 193,
+      "identity": "b6950ac304716d19f9a05f409e9c23164eb699ea7c5da51701eb17e2bb91141b",
+      "phase": "endgame",
+      "policy_weight": 0.5702859875133603,
+      "value_weight": 0.19009532917112013,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "61f09982ece454d1d9719e2dd79b2c0ca9d3405a63184ca325a5042af7c94fb0"
+    },
+    {
+      "index": 31,
+      "source_line": 207,
+      "identity": "778159d3601d60be5277a8f1bfb1601381218f9bc423c95be35250224153151e",
+      "phase": "opening",
+      "policy_weight": 0.14460817409119747,
+      "value_weight": 0.14460817409119747,
+      "source": "lichess-eval-cc0",
+      "raw_line_sha256": "1a9d2a0df72893001ea2a3d5994577613a0b6886274426a1b4fd1bb50ac17360"
+    }
+  ],
+  "native_inputs": {
+    "file": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\numeric-native-inputs.jsonl",
+    "sha256": "6cafbd8721090725c89a3d1471491e5da5405c8972b51a04800e2fc0ef61f4af",
+    "rows": 10,
+    "selected_batch_indices": [
+      0,
+      3,
+      7,
+      10,
+      14,
+      17,
+      21,
+      24,
+      28,
+      31
+    ],
+    "phase_counts": {
+      "opening": 7,
+      "middlegame": 1,
+      "endgame": 2
+    },
+    "positive_value_rows": 5
+  }
+}

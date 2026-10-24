@@ -1,0 +1,35 @@
+{"direction":"stdin","elapsed_ms":36.9648999767378,"line":"uci"}
+{"direction":"stdout","elapsed_ms":53.58509998768568,"line":"id name CHROMATIC 1.0 Depth Telemetry"}
+{"direction":"stdout","elapsed_ms":53.608199988957494,"line":"id author PROJECT CHROMATIC"}
+{"direction":"stdout","elapsed_ms":53.61429997719824,"line":"option name ModelFile type string default <none>"}
+{"direction":"stdout","elapsed_ms":53.62359998980537,"line":"option name CPuct type string default 1.5"}
+{"direction":"stdout","elapsed_ms":53.62949997652322,"line":"option name FPUReduction type string default 0"}
+{"direction":"stdout","elapsed_ms":53.633300005458295,"line":"option name InferenceBackend type combo default SIMD var Scalar var SIMD"}
+{"direction":"stdout","elapsed_ms":53.63689997466281,"line":"option name SparsePolicyHead type check default true"}
+{"direction":"stdout","elapsed_ms":53.64120000740513,"line":"option name MateProofNodes type spin default 256 min 0 max 50000"}
+{"direction":"stdout","elapsed_ms":53.64559998270124,"line":"option name MateProofPlies type combo default 1 var 1 var 3 var 5"}
+{"direction":"stdout","elapsed_ms":53.65019995952025,"line":"option name TreeMemoryMB type spin default 64 min 1 max 2048"}
+{"direction":"stdout","elapsed_ms":53.65379998693243,"line":"option name Simulations type spin default 800 min 1 max 10000000"}
+{"direction":"stdout","elapsed_ms":53.65759995765984,"line":"option name MaxNodes type spin default 100000 min 16 max 1000000"}
+{"direction":"stdout","elapsed_ms":53.66059998050332,"line":"option name SearchTelemetry type check default false"}
+{"direction":"stdout","elapsed_ms":53.66410000715405,"line":"option name TelemetryInterval type spin default 4096 min 64 max 1000000"}
+{"direction":"stdout","elapsed_ms":53.66839998168871,"line":"uciok"}
+{"direction":"stdin","elapsed_ms":54.19880000408739,"line":"setoption name ModelFile value C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\dist\\default.zero"}
+{"direction":"stdin","elapsed_ms":54.221500002313405,"line":"isready"}
+{"direction":"stdout","elapsed_ms":57.839399960357696,"line":"info string model loaded"}
+{"direction":"stdout","elapsed_ms":57.84480000147596,"line":"readyok"}
+{"direction":"stdin","elapsed_ms":58.446999988518655,"line":"setoption name MateProofNodes value 0"}
+{"direction":"stdin","elapsed_ms":58.49109997507185,"line":"setoption name TreeMemoryMB value 64"}
+{"direction":"stdin","elapsed_ms":58.55249997694045,"line":"setoption name MaxNodes value 1000000"}
+{"direction":"stdin","elapsed_ms":58.59249999048188,"line":"setoption name InferenceBackend value SIMD"}
+{"direction":"stdin","elapsed_ms":58.61089995596558,"line":"setoption name SparsePolicyHead value true"}
+{"direction":"stdin","elapsed_ms":58.623299992177635,"line":"setoption name CPuct value 1.5"}
+{"direction":"stdin","elapsed_ms":58.658899972215295,"line":"setoption name FPUReduction value 0"}
+{"direction":"stdin","elapsed_ms":58.68929997086525,"line":"setoption name SearchTelemetry value false"}
+{"direction":"stdin","elapsed_ms":58.698799984995276,"line":"setoption name TelemetryInterval value 4096"}
+{"direction":"stdin","elapsed_ms":58.7091000052169,"line":"isready"}
+{"direction":"stdout","elapsed_ms":58.79159999312833,"line":"readyok"}
+{"direction":"stdin","elapsed_ms":58.90409997664392,"line":"position fen rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"}
+{"direction":"stdin","elapsed_ms":58.92939999466762,"line":"zero search 4096 2026 0 0"}
+{"direction":"stdout","elapsed_ms":119.34489995473996,"line":"{\"bestmove\":\"c2c3\",\"terminal\":false,\"simulations\":4096,\"value\":0.00292954128236,\"neural_evals\":4097,\"memory_bytes\":4358144,\"arena_nodes\":4097,\"max_depth\":15,\"proof_nodes\":0,\"mate_proven\":false,\"proof_plies\":0,\"visits\":[{\"uci\":\"b1c3\",\"action\":82,\"n\":191,\"q\":-0.120803974569,\"prior\":0.271253526211},{\"uci\":\"b1a3\",\"action\":80,\"n\":1,\"q\":-0.598352849483,\"prior\":0.000638242054265},{\"uci\":\"g1h3\",\"action\":407,\"n\":1,\"q\":-0.65111297369,\"prior\":0.00013971691078},{\"uci\":\"g1f3\",\"action\":405,\"n\":89,\"q\":-0.230734586716,\"prior\":0.224801808596},{\"uci\":\"a2a3\",\"action\":528,\"n\":25,\"q\":-0.194084450603,\"prior\":0.0562028586864},{\"uci\":\"a2a4\",\"action\":536,\"n\":0,\"q\":0,\"prior\":2.06187032745e-05},{\"uci\":\"b2b3\",\"action\":593,\"n\":0,\"q\":0,\"prior\":1.25972007936e-06},{\"uci\":\"b2b4\",\"action\":601,\"n\":0,\"q\":0,\"prior\":5.37401365364e-06},{\"uci\":\"c2c3\",\"action\":658,\"n\":3574,\"q\":0.0273111108691,\"prior\":0.0449669659138},{\"uci\":\"c2c4\",\"action\":666,\"n\":69,\"q\":-0.144769668579,\"prior\":0.11564745754},{\"uci\":\"d2d3\",\"action\":723,\"n\":21,\"q\":-0.116313502192,\"prior\":0.0252425298095},{\"uci\":\"d2d4\",\"action\":731,\"n\":21,\"q\":-0.137887567282,\"prior\":0.0305850505829},{\"uci\":\"e2e3\",\"action\":788,\"n\":1,\"q\":-0.843954265118,\"prior\":0.0169717185199},{\"uci\":\"e2e4\",\"action\":796,\"n\":102,\"q\":-0.185860410333,\"prior\":0.211561635137},{\"uci\":\"f2f3\",\"action\":853,\"n\":0,\"q\":0,\"prior\":2.74988133242e-06},{\"uci\":\"f2f4\",\"action\":861,\"n\":0,\"q\":0,\"prior\":4.77189189496e-07},{\"uci\":\"g2g3\",\"action\":918,\"n\":0,\"q\":0,\"prior\":1.02627518572e-05},{\"uci\":\"g2g4\",\"action\":926,\"n\":1,\"q\":-0.770951390266,\"prior\":0.00185686699115},{\"uci\":\"h2h3\",\"action\":983,\"n\":0,\"q\":0,\"prior\":8.10799392639e-05},{\"uci\":\"h2h4\",\"action\":991,\"n\":0,\"q\":0,\"prior\":9.78137995844e-06}],\"selected\":{\"uci\":\"c2c3\",\"action\":658,\"n\":3574,\"q\":0.0273111108691,\"prior\":0.0449669659138},\"top5\":[{\"uci\":\"c2c3\",\"action\":658,\"n\":3574,\"q\":0.0273111108691,\"prior\":0.0449669659138},{\"uci\":\"b1c3\",\"action\":82,\"n\":191,\"q\":-0.120803974569,\"prior\":0.271253526211},{\"uci\":\"e2e4\",\"action\":796,\"n\":102,\"q\":-0.185860410333,\"prior\":0.211561635137},{\"uci\":\"g1f3\",\"action\":405,\"n\":89,\"q\":-0.230734586716,\"prior\":0.224801808596},{\"uci\":\"c2c4\",\"action\":666,\"n\":69,\"q\":-0.144769668579,\"prior\":0.11564745754}],\"telemetry_enabled\":false}"}
+{"direction":"stdin","elapsed_ms":119.41789998672903,"line":"quit"}

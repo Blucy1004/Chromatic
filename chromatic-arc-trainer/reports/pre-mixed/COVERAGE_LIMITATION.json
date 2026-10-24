@@ -1,0 +1,21 @@
+{
+  "meaning": "First 32 original test records contained no positive value-weight rows. Forward WDL and Policy backward checks were valid, but WDL-head backward/update coverage was absent. Retained as limited-coverage evidence, not final mixed-head numeric validation. clip-diagnostic.json remains unchanged as direct foreach norm defect evidence.",
+  "files": [
+    {
+      "file": "numeric-cpu-reference-toolcheck.json",
+      "sha256": "4e784667a1475b7a54fb1b83a3981733e2134eaf85c2239b527cc3fd07213d5a"
+    },
+    {
+      "file": "numeric-cpu-fp32.json",
+      "sha256": "94c47c378a8c392b54ff80903743b0a7f34790f28c6f7e93f7b195f3f58e0759"
+    },
+    {
+      "file": "numeric-xpu-fp32.json",
+      "sha256": "afbc709ba7be9cf3b1e4de070d7e157dc0caef3b0286c452c102dad558931c02"
+    },
+    {
+      "file": "numeric-xpu-bf16.json",
+      "sha256": "3e8141f97f5cdff9c17b1749e105e371c679166b7e34e4bc63583ce442f17ab6"
+    }
+  ]
+}

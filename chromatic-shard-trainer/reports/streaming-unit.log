@@ -1,0 +1,21 @@
+test_checksum_absence_is_reported_and_frame_metadata_is_bounded (test_streaming.StreamingTests.test_checksum_absence_is_reported_and_frame_metadata_is_bounded) ... ok
+test_checksum_corruption_never_exposes_frame_rows (test_streaming.StreamingTests.test_checksum_corruption_never_exposes_frame_rows) ... ok
+test_http_identity_change_and_wrong_content_range_abort (test_streaming.StreamingTests.test_http_identity_change_and_wrong_content_range_abort) ... ok
+test_http_ignored_range_replays_compressed_prefix_once (test_streaming.StreamingTests.test_http_ignored_range_replays_compressed_prefix_once) ... ok
+test_http_range_reconnect_preserves_decoder (test_streaming.StreamingTests.test_http_range_reconnect_preserves_decoder) ... ok
+test_limits_line_frame_decompressed_and_compressed (test_streaming.StreamingTests.test_limits_line_frame_decompressed_and_compressed) ... ok
+test_malformed_json_quarantine_and_final_line (test_streaming.StreamingTests.test_malformed_json_quarantine_and_final_line) ... ok
+test_multiframe_skippable_and_cross_frame_line (test_streaming.StreamingTests.test_multiframe_skippable_and_cross_frame_line) ... ok
+test_network_retry_budget_is_bounded (test_streaming.StreamingTests.test_network_retry_budget_is_bounded) ... ok
+test_nonofficial_or_non_cc0_network_source_rejected (test_streaming.StreamingTests.test_nonofficial_or_non_cc0_network_source_rejected) ... ok
+test_partial_frame_requires_explicit_option_and_marks_integrity (test_streaming.StreamingTests.test_partial_frame_requires_explicit_option_and_marks_integrity) ... ok
+test_plain_cursor_replay_and_digest_guard (test_streaming.StreamingTests.test_plain_cursor_replay_and_digest_guard) ... ok
+test_resource_guard_prevents_spool_growth_and_cleans_up (test_streaming.StreamingTests.test_resource_guard_prevents_spool_growth_and_cleans_up) ... ok
+test_resume_beyond_eof_rejected (test_streaming.StreamingTests.test_resume_beyond_eof_rejected) ... ok
+test_truncated_frame_rejected (test_streaming.StreamingTests.test_truncated_frame_rejected) ... ok
+test_unknown_content_size_window_guard (test_streaming.StreamingTests.test_unknown_content_size_window_guard) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 3.431s
+
+OK

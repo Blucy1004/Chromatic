@@ -1,0 +1,3 @@
+﻿enabled,repeats,median_info_time_ms,median_elapsed_to_info_ms,median_elapsed_to_bestmove_ms,min_elapsed_to_bestmove_ms,max_elapsed_to_bestmove_ms,median_after_info_delivery_ms,note
+False,3,100,100.70559999439865,100.817599974107,100.69230000954121,100.83349997876212,0.08640001760795712,response check only; native off/on overhead is measured in the separate paired fixed-N batch
+True,3,100,100.84180004196241,105.6961000431329,105.32690002582967,106.97770002298057,4.485099983867258,response check only; native off/on overhead is measured in the separate paired fixed-N batch

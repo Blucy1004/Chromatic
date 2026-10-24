@@ -1,0 +1,1422 @@
+{
+  "format": 1,
+  "sources": [
+    {
+      "sha256": "11d883d6132fc5ddba61a6f05a9e83438595259d76dcd4d69d2c07a6001bdf3a",
+      "bytes": 28022
+    },
+    {
+      "sha256": "63f9b66dd59cf62c54469d2718e9c57acee1c74c7df507311a9359ba343fe496",
+      "bytes": 132947
+    },
+    {
+      "sha256": "3a1f6214237cab4e46a141ec8fb43122d0d5a71408468576c3cacfa90310e594",
+      "bytes": 28492
+    },
+    {
+      "sha256": "42470ac2385450262594648693660f2c519135449e390fcccc8de1e4db3aea26",
+      "bytes": 55141
+    }
+  ],
+  "stats": {
+    "capacity": 10000,
+    "selected": 173,
+    "records_scanned": 173,
+    "recent_selected": 173,
+    "older_selected": 0,
+    "duplicates_in_window": 0,
+    "dedup_window_capacity": 80000,
+    "source_recent_records": 173,
+    "source_older_records": 0,
+    "validation_rows": 22,
+    "training_rows": 151,
+    "independent_groups": 4,
+    "validation_status": "held_out_games_and_positions"
+  },
+  "selected": [
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 1,
+      "identity": "0a3f5c3b184245b08577a6a62c996a692a27d5e39a0a250f748f14b365a6526a",
+      "position": "1e51d03f05162692437faaa4364786afb9a1894ade200a1d4ce0948e5bea3a21",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 2,
+      "identity": "293c6c4c4aa109b659401707380d969a5c731ff87ec0a344da24f902abb44a5e",
+      "position": "01d1157276b863821001282b27dc06ce6ad6f34e61e0d48dc79664847dfbbed5",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 3,
+      "identity": "fd5be861c6e8d22b041425513e57d95e2890d75e9aad4b97127e8804a31b541c",
+      "position": "cb36669f28c74de696d07e7912bb3f7b92729051473173fce1b90510f49f74a6",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 4,
+      "identity": "18bd4a6dc2608c6525edfca76b49b79aca2a0d6335b73b852388effa6f13f069",
+      "position": "0161144a39d727b0976e60703f4c7376f2623f95a0b2c709e98a2c82d6982ed4",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 5,
+      "identity": "0d48b5306b89521dd19c4bd5eff38f15b518910691d237e4826727e8ba202589",
+      "position": "f0f861791d20982dda896b563cfb9dc28f6cc7d5941f7ee9e98c346d6b813da3",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 6,
+      "identity": "513c7298b9e162948e3d7e641d8d85ac7ce191eb98cbcd79852571c1564c0106",
+      "position": "a5cea7a2cb8d4a6b399eef158b2883f7ee4ec04bf94f5845a2668b3b6ff9c3e2",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 7,
+      "identity": "f8e657caedfb2ed93094ffeaa378501a5d1a6717e7e572ca0af9fe7373abaeba",
+      "position": "54447ad70b7e6d5d7d8ba4e0970b9c360d20ebfc785f64f887cd0c590d05bcfc",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 8,
+      "identity": "dea142cd52e903dd801f13f5a9165ef112124f37d3e3e1c90bee56f55196db31",
+      "position": "852788031631507b67da9accc285864f45880b21c398903d396728d02b743dd6",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 9,
+      "identity": "5006e547226c299d42507e848fd65c1f26cb4b8df0ad2b7fe55594a53bea85d1",
+      "position": "d0bfe621d40b77289ec87e4f9e8cc4767ab9450d66aa38e73b2a0d85325f51ec",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 10,
+      "identity": "d09e353491f9ef29358b1c0fa98d7671c03558adbeb1b3fe42bb0ebafe93808b",
+      "position": "86209ed4f2b1f8f66cd66c07d62fe4047e7edee044cf72f421e202eb9b3a2772",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 11,
+      "identity": "ce4c18edcccd4159cc273f749679158f4e2c7faa9c19de1104c374e22871bc22",
+      "position": "6b895c28a7de9360ae67939874fd0b07a81955983f04fd7415e291241a074a4c",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 12,
+      "identity": "191c3d9732dcab5bfe0a2a3548a95b448a8361d424b1fb0762fdb91d3c861e3d",
+      "position": "83784c0a6e7614377399c93a7d5681777f099a84e64e35f3e3d1b7adfd3dd57b",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 13,
+      "identity": "9faaef37abb8906703f623cc3f47daebc9124255534803ff7e93c35ed9ef1a32",
+      "position": "2aab3c9fbdabcca9c153084271241fcda6e1db9157f5cc2c376f37306cb1287e",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 14,
+      "identity": "d52c9155966daf5966f2a7e2e0da62b022562f6b9f11ef338fd5815357051e98",
+      "position": "8397f9ead91e469310c3488ad13580c1e6223eb109a45325d49810cff178f1cf",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 15,
+      "identity": "cffd9cac6a4619f54087e90ac6695930df54ada6f7b0686e95df6a93226c18d3",
+      "position": "3ba0cdebd77d1254210f78f550d4cc819be4a0789fc22b218a149323ffaf879a",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 16,
+      "identity": "678c50ff61c8280f4119098adb24af765f7c55c4874e7ade12c51f4249043934",
+      "position": "9cfe95e0b9679b5dfc6e8b4bc23b99da61c66ac58a649126fa164ddffe439d26",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 17,
+      "identity": "5ca9e8b56456814cfee0b5dbf8578ffbdc2b3ded71c964e810d7e1185abd8112",
+      "position": "1384de3fb40343b28dfd140e283dbb047a53b7b7ef62ef2e32f244bbba6f6fe3",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 18,
+      "identity": "137e8266f3168df0860e8727917c7831d9db1c3966cc089a9041cf0d3638de73",
+      "position": "7818535941980a1a2cad585c7b1e24044c433d7777f4bf662269eb665ec3d3ed",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 19,
+      "identity": "9950a4999c45b6b3a3c1ce3730a008a38a3925cf3d952d18db17e254cabf8225",
+      "position": "f29555b3db2c2f2349d07104812e853e58f32a401a058d58a2878d9e7ced35f4",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 20,
+      "identity": "49855d4df3d892b14955f636b692770d921f74c9f0a69caa53662d264e82ecde",
+      "position": "a6f752d939d6f31b62de5587e72429e71af6da9fca68095ba7536e903e2077d1",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 21,
+      "identity": "12fe5140b98790530bd17c98ddbce3365ded25c3838010a917d7fa12494de386",
+      "position": "6e6b9088aaf0793d87fdd133213820d0b87b049640f81d9f9adf3c8c92bc6a2f",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "line": 22,
+      "identity": "6cef8b1b1e491b08888956531df76e4d88650a2cc312ebfd04ffe19b5db8f5f0",
+      "position": "72239b14831f50c53fabf193f52a5a3b72111b7e596a7d7079cbe4dab932f9ff",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:0",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 1,
+      "identity": "99b4d6b3ba1fc0bec2bdd282442873446afb90b80fa9f3e21debb3967b0cfd56",
+      "position": "d95428624dd4e267ed54e66359bf6220eebe1764907cdc525400c12403d70cf6",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 2,
+      "identity": "4afcf64a61d55186e02a29e44a8e2a19fc3e76a83861f83e9586c7300fbd5533",
+      "position": "5426fc09a6edad2ad1f640114273b2c0e5e823248f29bf8fba2a3a923a25b629",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 3,
+      "identity": "c94a8c9511b7253a8c0ef521f84d982018fb6b1e3368492dd1e37e8ceac24630",
+      "position": "781572d339cec95d4b78a8542cb8728ee7312e20e6e7c13dc9bfb12895192b68",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 4,
+      "identity": "6b26b7a87c4c1df307dd7c4cbdae6eec6a86d05dfb6efda49bc232118e56c5f3",
+      "position": "af574ac207534937c10db84b46d6e9b661bae8d0d6b6507ceb5a70f21a25c6c1",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 5,
+      "identity": "86f9fde9f3a6a072c9cf5b0a41d9d50cc052ff59375ba3dac12492c81e63f604",
+      "position": "215a4c3d985a9aae65f7bca8db8d545dc0c9d9dde4695fe24c223057b12a9679",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 6,
+      "identity": "5c188b51deb25b921468ea7fff2b367014f293954e5c1cb6d4df97b29f3b0f57",
+      "position": "b57a819e5a82e1cff821929908942e0677096f54383cf92face8d29638cc7283",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 7,
+      "identity": "af34ffc122f499774e2a17d20bde8136151458cc6d3a6fe2ca0e2726f49c2396",
+      "position": "d7504e492bed27bd8b4faf396ba5b350b40d83bc11adc4223baa0a07637bfd57",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 8,
+      "identity": "46b39bbbdbbc88033fb68a220c958f3f5b4011831bdc3bb41df17da526ce18aa",
+      "position": "b3972f6e892d471265f43937500921eaa0f55583fce74f6961cf810154313d9e",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 9,
+      "identity": "2e1724fe193b899a833cefaccecdae5264678e5576afa2acd5d2baef44dd9840",
+      "position": "ffd7e63d7d98d8f9b5db61d66af58dae8417ce3fa7e3212802e63bf8eff96eb2",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 10,
+      "identity": "b91519a0b922692b1da4400aecb6e84b23c689283022fa9d1112524d2ba07ef3",
+      "position": "8d7802f1e0d2c4c15499b7917befef833a889c9f5d7f2a0b50d3083049d2b76e",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 11,
+      "identity": "8b9628506e0b7ce4e88cbe9e32494f4e46b716c27908d7e2ca62019aa4c31a63",
+      "position": "f5f76b2996f51da5afa2bb392f4e3e105891acb7699ff8f3c9b71eef92c5fd62",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 12,
+      "identity": "500fa19003ff18b3e6a099de26504c1dd019ad13c95bdbc628a21f6718e6fbc4",
+      "position": "559cb35081c2fc1e341cbc7bc5e6e0c08b9fdc65045921ad7c9580e28ff046c5",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 13,
+      "identity": "cabe1ed474263c8fc0b6a769433757eb5faeff11c7adfd9747ccd1b22b4aa717",
+      "position": "559e93ce398a6fb42ef4b0f3f1b3b9bcac09277ed81352c414fe6b992a4fcc46",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 14,
+      "identity": "3e9de2cd159e6b041ede4c3acc25e0967c754a7e09096de183781696aa57a524",
+      "position": "6d9c7781714c7ef9dd9fc142add0224bfe024370e48d5f3fa61e536532bb06f6",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 15,
+      "identity": "d3dc85f4ca3d77b32133f4ce74f934f26cc3dc8b1a71d4c0b4f22bf7dc84b2d7",
+      "position": "0ae6692f84050090a85c567cac2915b05025b9dac82238fc4f84b6349db84858",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 16,
+      "identity": "ad74b69e6e5a8cbc84acbb84812cd08bba60c42cbe2bd017f174942005322d4c",
+      "position": "97de54f4cefcec26ca69c4e5f0ac25cea13f5929685e761b73ac60c1490cc9d0",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 17,
+      "identity": "6e6cf85c8a5b24bd7f355fa2695cb2afb116d8ff3151596c7ec906352ba23b4f",
+      "position": "2271cee81eabbd340a9c63c04d4a8c73f1e393196d27f35b9856e7fe36ce0c53",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 18,
+      "identity": "14f050fa85a35dc6f9c21fd8a2c156df9a233cdfe0859eea4ec978ef077c7540",
+      "position": "28e23ad92b95c21468d228e66bb624032d185cda30e483f5564c8938a7dff61d",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 19,
+      "identity": "7e443501e0c8a03913fe6ccb94331d1eb5d161d5f7c79e30b365f1024f384258",
+      "position": "8ffa3efd273fbc1e4ef54eef32241e296ada21146499b756343735fb86c044cc",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 20,
+      "identity": "826c42e5cb79c070f5084e11185d715ee7edbcb7eba725a7dc9d6d8be6c1810a",
+      "position": "db58ec5a2f265c8e08c422c733b2ecc27ec99b27744b0e5ef456ad3b781e4bbc",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 21,
+      "identity": "5da5605cda31f2f79742e562542e006626f4b60b87c759af1371177b9f721f4c",
+      "position": "69cea80b7a1b4a58e15cf2f0c31a47c3732c7ac82c63eb5f6d7631184a368632",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 22,
+      "identity": "ed7ac873682aa31d091b3c3688f03700d9339277a44645ac004bc9d1efc77ab2",
+      "position": "a558c90df9b1a7d0338510ab9c13d880fd6bdaa266bd81b548acd218ee97203a",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 23,
+      "identity": "ae502637749a1757f01ce1ea3a73a57966ec94a95d62e0a3dd5a5a8161c4b13b",
+      "position": "977b8ef3c41face96d09a69e69207be2ac462f2e8bcf7727a4135630a6d91827",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 24,
+      "identity": "7719c68294374926a96ae036e0284545d9416ee0cff7ee7b3926bd386767d337",
+      "position": "2887f389ddfa2f99d20fb91d2be850a7e20668f68eb15ca88036b51dde4c6c42",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 25,
+      "identity": "db1d31d3689bf34bded25ac4f283673aed6e1ec654bb714cdd612f56dc5750a3",
+      "position": "98005af0a3fe7a203991d218cdad26046af47e709712f0f084cffe128f227d12",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 26,
+      "identity": "1ad29af673a8277bba7d8362a44da05f8c5daa209f1ddb6fcc0811de42720c98",
+      "position": "c97f422421ab76c40075b317203e8eeb0677a24bc343474da7796b474c48dcc2",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 27,
+      "identity": "f8c6e5df9023e3226658a86bb0a000b1fe9f7c1567617ee157c42691a8ebf28b",
+      "position": "9d5e35b6e348855f556ab574c6bc981d187031ba40599c52f8fd3c27dac9822a",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 28,
+      "identity": "a47249de99524279656ca279d7fd1cc6d0e3396dfa790ca02be76a39ba17b5c1",
+      "position": "f60bc7b2abd48597e8f7adc2f5855581ba6599314a7fbfa14ffd32201ac246df",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 29,
+      "identity": "1e94c550354978fa0b3756c53f2895b113a03c276656017bbbf016baa43d1e5d",
+      "position": "27f853e5eba248c9595a9f3e4cf7dba0b5f33c6ba3b4649a48349d2e221dd811",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 30,
+      "identity": "1658d0a396ce743e4606a7ed47644b57e04f95b29b4cce894a0e64c8c03679d0",
+      "position": "ee22cdec05a0f2d7ed84903396539fcb9babd6a8e42ef87b7ac1275ac42907bd",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 31,
+      "identity": "0c0d67c7a168bf4155acc8d0aba563cce8e9e8389ccde0d0d5cb4f9132d29056",
+      "position": "2142a7124ea2cc89a9e2af2c17186c5b5aec3fbd469506851b2698b938d282bd",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 32,
+      "identity": "8355d4c16d434a18e587c1cda3968c93a82cb43b42828274b1dc418241a1e5d9",
+      "position": "dc12410abf34703a37559c8cf8d15b7535c85810101fdbf53bd43de79fce0010",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 33,
+      "identity": "8077562d0995fce93485ca9a34958d36f3ac6efa6cdccfc23d9809c98333b726",
+      "position": "06b789f7ea7a86374d9f97b6e74cec880becd21055f995abc807d891f55c5945",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 34,
+      "identity": "95073936244e9107fa0f7f77157183a3ae070ed262d97ca510a4be66aef34af7",
+      "position": "9d00a0f2914187b772e4ef6f3b4abceb7053078fc1ff2b9b01c1625a5ddb031b",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 35,
+      "identity": "4f74bf9b01b8f848a328b978d73db63c0ef8b68fdf1b44f475604be9189cb7bf",
+      "position": "94ba74f944cfb1675cfbae2edd5d86f8fb8fa1b06db9eaf006ca6daf76b8d5ca",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 36,
+      "identity": "4bd4ad60e68630a01dc2101b13d27a3402fb81013222e75c07e000a61288bfea",
+      "position": "8a94da8137dcf692e78ef5ac51c413b4233e656a53d4a4793e14d56b9d97b7b1",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 37,
+      "identity": "a061e874528a032f6d739a575da472859e31963d3b109064588e73f6ee3ee513",
+      "position": "b38861f105960af248bf3a12fe80986342a352d7a7741df5d1506e1c145bc3db",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 38,
+      "identity": "e5b308705b0810c6ea37f1cdbd8bd98278e0fd862fa69e2b13d146b8680cc76d",
+      "position": "1adef8fe6c5c36027394c44f976b900cb22bca6c5d8a531742e97ab5ef662422",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 39,
+      "identity": "25c0da64e53ab172a30fc3e6b7ad47055a04717ac423c8463b19996f6b4707fc",
+      "position": "f0fbe70aa3e3d53f6f7232b013b330d22aa5becd5fa7dfd765843c244bda5b38",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 40,
+      "identity": "a0c25feaf8613e7e102657dc595a246524ed00eac0c0f8b7a74ed9778bdadb86",
+      "position": "5fc967a9c737150bfad6aa4155be154a222f52f48034de045dac942aa74f3faf",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 41,
+      "identity": "4f565687b0af7410e06773da2f03315b13e2b8e832c06175d0045a49dce7feb0",
+      "position": "fcc7f8455d64abe17d88699c5c4c81ef79366a5698a3cf6acb8e2d00bc2c1a53",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 42,
+      "identity": "da67d7c1157a75cfe63f4da2f959a9b88e959ed5a50c452a1161bed919902a42",
+      "position": "1142889aaf7af4edc138605cdaa6da865dc2aa7ac4a68fb49c3785f15447f252",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 43,
+      "identity": "68917994cd6f2d6a2097aee00b862823eb1a3a54d35a4e03875c105c47a85f65",
+      "position": "60d32947f246d5aabd77478a3c0296ff554bb3d6b1acf4bb19ef63a96475bff3",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 44,
+      "identity": "18aa69443e6ef4c62691787a29b9137865b29d1856817ca3888b15f8e5c9b8de",
+      "position": "61dba94c7af547780e560153525c6b0e3c9e597b186eed82e63094e58c4605fa",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 45,
+      "identity": "08f5e7be4d3fa46a95f2c21a4f211fcd7f40c3703cf1795f9f5792317d67b503",
+      "position": "54ed629507b55e6bd18cf43d75d6325e75aa471316fed9f6222fbaee0b03bbeb",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 46,
+      "identity": "78bbaaa4849988df363be7acf61d2808d32f7252cb2ad02afe99193fbf455b59",
+      "position": "2281807f4905ee93bc255a2c520964f9e563398eb3350118cb00419def14fe4f",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 47,
+      "identity": "45c2318f13c7e94510fb42de4a0bc4e8bce2f38fd552fa16a0b8fa9501bc640c",
+      "position": "920e1cef4e58d3f5bbb714e963bc1f0b04c5b120a37f757ec19ea70fce18e144",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 48,
+      "identity": "97815dbe0d310a9e6565b58a4cb5a41a9d1c8cdc7fc030c6c6ba877410bd8c8f",
+      "position": "ec07b55cafe194031aad72bd46ca6bac56be1abfaa3822c4af0a369a0f02d02e",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 49,
+      "identity": "bf15eb7d0aff36d6b2557cb36e709eda19526901fc37b4ccf4850d64dfd07b18",
+      "position": "5a2c4f065e44ea9fdead9a263693752e2fdc9c2e69545a5adbe1a26c24ec3304",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 50,
+      "identity": "7cedc5b3a5be1c79195e979211a5f5408785a000523fc9b15c1c5f07ac4c35a2",
+      "position": "767f64f391edd44469dac64aa77fdaa4924851ac901c19d824ead40217dffdd8",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 51,
+      "identity": "1af72878c0d2d189b16300c170868b4ccf1ca456a6e61c3fb753677e3b24c950",
+      "position": "c7c3335f7c86575af34d7ae5feea4826f786b20b5fd0712bfed5963407a5eac7",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 52,
+      "identity": "f9b8840ee7331d2c6b29855d70af34f77995220768d40dd178aff9d7c1875a90",
+      "position": "5709cf7152932ec6fa3fdd771ece6c582d485026df56bac6529747e76ca1d013",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 53,
+      "identity": "c0389c0c9e0c87f6b3d10cc753f1d14d34d5655be230bfe506253d15483b787b",
+      "position": "e4322386b9196ac4e6f07a019c369732a6ca5a369364895d0fd55f656575be71",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 54,
+      "identity": "8c2b3e14671d72cbccad167c758c3705b0b19d9699d0657307474be0e45b7d85",
+      "position": "4718660f72fd701f98d148d3cf8fee04dea1f12721fc6d0b824e7b437da43726",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 55,
+      "identity": "59f05f52ed1dca8cd4084cde4c1f0405cd1048070c49829f7414f3979fe42d5c",
+      "position": "fde83709a612f722329ea8a0918cd56b40475699b5c171e3171c79737f3e0895",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 56,
+      "identity": "b7d8bb3b86f580d13f09e9487a48c0fb6bb5e2799055fe6f941b468a92051146",
+      "position": "c7fe40ccf9ee2c69e776761e6b1be6a2ad710220f7a0629e72e4ad1f80b52407",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 57,
+      "identity": "7352c1605d3727623a7cc85b2e226e3eafbf17e082912e297764860f55270df0",
+      "position": "9330579317b9f1cb1fe18894585f34de187ccaa42f0964e140b2ae15f94a17e9",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 58,
+      "identity": "a3823d9b3b731bde411fc1d42ddcfc1f6793578a6323df27abf776a29e8d99e2",
+      "position": "dcafb9b280919eff8b4f9172c68d522d38ceccb82ab52b50886f2c67a7dc51ca",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 59,
+      "identity": "72528bd136f11cc21cc73f4065348541eec9946a862784ee3dde2c3f1ebf2e1b",
+      "position": "1f735f7f38ac25e6ddf589f6ef9b839418c298637bd26a17bbc576cb1d44753c",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 60,
+      "identity": "65860187bf9ba414a461b28580b909579bc3b7206d397c903241a6616dde4266",
+      "position": "070a0e83b34f2393ea0aabc94f7990cf2bf4117279c5be0c87f35957a8aba12a",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 61,
+      "identity": "8ca5d7085536f9f0501b4e35d204a8784cfb6466f67da235646d500b1c724283",
+      "position": "4fe86e484bf976ef618a38721f65fd1ed3e30be8f2c053082afd840eaecc095e",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 62,
+      "identity": "c4066cbdec191138899b4c0087bbf97d540f3009a45ed0eb868c5711763b14ab",
+      "position": "1b94c1179297b5a298e78369d0829b328a05ea328931d4da2abeff8f1513b62b",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 63,
+      "identity": "a551815e9ccabb07039a216c46094834707144a06fb054d94f090f20f2dac1b9",
+      "position": "7ec662d846adf2d6633fece87fc840543fc906c8d875c7524511bb5cdec8c360",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 64,
+      "identity": "037bd0356f004a3ecc62069777696f59d43534bba70a89803c773d5c1b3bf8d6",
+      "position": "fa3846b4bc28b819f52b1d8df0dcacf31362db9401859130786da2c6736890ae",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 65,
+      "identity": "0cb1c5f75a8ad38a0f6ac960a7dcf0dd118d8951e051d45f9309e7bd3e1a7bd9",
+      "position": "106a035f9c8c4cef7e1caa0a00fa3169400d8002992440c6514e895dda0ad7f4",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 66,
+      "identity": "9ba5ef1975ce940d21474f0686311947d9cc3af5d9cb9d65630f57a89579d2c7",
+      "position": "bb53d47e836558dd0a1a4dca96a1111ca9eb7e721205bc0a1d2d09a0253d4dee",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 67,
+      "identity": "9b7504d3d838a4c8d4077addd02a87e2c01ea92f9b956e2927ff77284ea454f8",
+      "position": "ce3c21364539e3570863e738565349f54402f281ddb85162700f3225094e2480",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 68,
+      "identity": "4be91a515766f8ebf409e65dba73a0898a93ed007707364036aea96944651537",
+      "position": "7156339d3e4a25abb633a6fed047b74478612acdbaff490126c67fdcf346bd1c",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 69,
+      "identity": "c7ec45f43c95b6ccb74012c9235749e1ea939e5cd45557abdd2f881189713623",
+      "position": "0d5e1f543b6401c27f0896cddf85728a0c7aad9a095e821bdbdf296d1d309bc9",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 70,
+      "identity": "5572434c4bcbb20aba0a29a73cf2878f6eff49dc1443fc97a56ff9f9a0948219",
+      "position": "1ebf2d50d5e34129cb0b47a291e9c27203cac65b3c786830c9abb90734626369",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 71,
+      "identity": "c37526bcdbe10e4709f0fab12e46e1b6e75edb43a844da36207f807bcbc8f062",
+      "position": "504912e9f0a0b46941ecf6df0a785d75e31bf9d399cbd3a9137f681cd4e27807",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 72,
+      "identity": "1158a11d0d0b37d0f95e9b9cb3c302f58ec1fcac8a2061101a85c2907e62006e",
+      "position": "25f2bceefaf0fcc7f01cd2350b4f81280a8f1877fbd6e4f46be3a08b726e4f63",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 73,
+      "identity": "071a6a40366c6080e70adee0adb3af2d0e8c66a9bb26acac306fb374e588b521",
+      "position": "9e6c2d6b2d58bc88eee638eff761ff59cbe6506a5de29479b75fff37d7a35f50",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 74,
+      "identity": "11b8dbfb600aa4d7c3cd9c7cd99e54892dba689a0bbc2f573b28aebb1d7703d0",
+      "position": "0a4e538d8861883e686e591c2127e3cee150450c2915bc92e680e9421b0f975e",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 75,
+      "identity": "4b4d658e0c6e744154d9e479924e41b817c36b3060113823cb566b22692c4b07",
+      "position": "84ab3f05e4fa57a29808e8daf9272aa1a5b5105d034dfc17975b6fee0528aef5",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 76,
+      "identity": "d1198a611d230e4a587214349fd634e61890483587adf2a9ac04cf3ee57b79b7",
+      "position": "c76d6942c6b480cd2e85000b2aaa312978ead138bfec0fd771c77d717d15b50d",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 77,
+      "identity": "7192dd847074be527805457930ce234dc41f5af78c550e162c6b901f22ec7e81",
+      "position": "968def74102b22ba0e15cfef4ecb4d1be19ba1b8bacf5c6494533730e49eb78e",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 78,
+      "identity": "c7ea2133c7ec2a8c5ce9d44abff1a075baddafbd6d870f26c0a6ea4b7d621a90",
+      "position": "5215a2dfb6e574c288bf141f0f135552e87c4a28487a0cf2caf209d619453ad7",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 79,
+      "identity": "07c51c523a642e902ca7baa4c8b47b85d296c208a87d4ccda17e0d691d78539d",
+      "position": "a8afa8425973eeaf82f7c1071d4b001cfd098a9360cb947b39e9af2f901c3148",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 80,
+      "identity": "1c8352e14729a9660c5f20c8ef39290978dd02498daec50598010238b47ed003",
+      "position": "e58ad64d9a3fad2f029dfa29a17b59b8be37945bc399a5261ce015b4ac87f691",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 81,
+      "identity": "b56e84baf5b134c496d983ca104de483977166206fd02271626ac64093edc1f3",
+      "position": "a998005df2ef8a8645e44ad616e45dd83d83b70f5f60d6a2768cb9fe52b41b85",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 82,
+      "identity": "1a5a7aa05f52f389cfdf75708802541393fff204fc9c338a948a52fed4d1decf",
+      "position": "7f14e654b636192990100e2106b0387836c856ccf2a21ca827865b1bbfef8fb2",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 83,
+      "identity": "bb02afad1f56f4acd56b4bdf69248b77ea4b4d48f0a7df7c3cb25a1f8c6bb6ca",
+      "position": "58932c2d2f921778eb249dca24f7526268d4de0e3a357136dc44bc1087af3463",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 84,
+      "identity": "ad1c0cf7cd33f772286a7586eebe75cbb7668de26655474886862f1dd5a8c295",
+      "position": "7ca57711ba8617dd482ac1ca28942d80e22d42b89ec8b772b1404429eaedae67",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 85,
+      "identity": "20de9a5547d1fd1a0db9345d379a494f7e8fe6e36259810950f3929be1d6f627",
+      "position": "7a82cbab9d3879b392c85d2fe628dc7bff19b1eba9ae29689a2650bde27e73ea",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 86,
+      "identity": "cf96803dbe457df10b3e4a6464e8a2600071280774ae9789ef3ab74bfc020965",
+      "position": "c8087e88b3990f44d7b97be4a8dbba5d127c63589ae28f73e62a4d594e93b00f",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 87,
+      "identity": "a6c18cae2217edaf4c1423db8beb35904a4b7dba47db716ee1183860f85b6d14",
+      "position": "7c34aa731bce47113a14c6ff705004727612c40f4e058f917968317bd3b63458",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "line": 88,
+      "identity": "ffd1a9898d819b7c24f7ca4c3bc2e416015369c22901c415cb8abab7119708ee",
+      "position": "8a98770e3efe053bfda8e3e1767ea829f2e71053cfe4c8678bcf69385d4a9c91",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:1",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 1,
+      "identity": "ecff669d6c16bf08318ea3fae88afd967fba4dff11311b77ac16284047d9bbe8",
+      "position": "e9a3e46630ce4417e524509657b5aeb0c4a979526a9e53b64a26e216d809f120",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 2,
+      "identity": "4dcf0de1954e911540365d814afc3bf75ec1bf2449a29821dd500044dfd808b3",
+      "position": "5f81c4c0a7ac96248ea02f0ca090c07508aaa0fbd4d598b5418db972620aab2d",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 3,
+      "identity": "a4ed0dcad808736d3332351dbba24ed8de5f3f1967eedd8e4faca2d3c60678c7",
+      "position": "2f2c7adf714e73a3060736af31aac0ad212ef7a7fea81a429cffbb60cc0c544f",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 4,
+      "identity": "a08fa19f068b4a558a21517551dce74c688c7ec8f83128b50490215a540bede1",
+      "position": "40ae4d1507d466384778850ac2e2ef978231c608034004227bf14e5a54d1ee9e",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 5,
+      "identity": "625295c80f76fd35163e2cd9acb7a2b66711273711d255de372fb0210087bbd9",
+      "position": "137458f2af52591d4968d50d02074c2dc967aaea16672fdb28420e80cead535d",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 6,
+      "identity": "2e5a45b9cf4f55be01b32b0351341fc1f15ce7365fe8dd57544900231a1b48c8",
+      "position": "8a7df7e33228ea5347c06028455f6b6ae60adbc31db083156adac6947c60d260",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 7,
+      "identity": "0ac95ed676fda7ebef36698453714e618b87eb21c8d42f9a87ba99518caf7ed0",
+      "position": "9be6988b6096f65aea63afd8d6ba82a6a5e601d0f438a1550293bf7c046ad321",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 8,
+      "identity": "89bafda800d19ade9088375ef55c44c2cb7b5748325c93726ff689e10c6025a2",
+      "position": "a3c9b642783c1802778e76f89b97337815e9de53d2c538348cbf262edddad400",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 9,
+      "identity": "17b920e6b24b3999f684f2f4817318a53ec5178cf43bd34a9d3be0f6b706adaa",
+      "position": "ebd03332cef4e9759be632e90ed04e310d966de00f2f209938901df458296bc1",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 10,
+      "identity": "699a5079c6d5a513eee7dc1d5115e871720aacf6f69684e7d13f2778c1f68470",
+      "position": "cf7dfa75b9e93ea8e73c2c4038c5fe33572e0407ba4be47402d3d201af78083a",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 11,
+      "identity": "cec6cc4ac725e7e90f73c6e35f95c7b337a8b2e2a68499b5f9f5d94607e0412b",
+      "position": "724a2744c7cc5ebd86c7f003bf87cb7d51b3e473f98388167a3aedcc0b2a3bb8",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 12,
+      "identity": "7e544211861ed605ca290e11adf555683fc4853781bd8ab02e85d5fee0a9b419",
+      "position": "9144b473fb377a6ac2ad64f243c5981b89b2e4bbb9ede1702e07efddf9909b6c",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 13,
+      "identity": "8070ebccd3e5054e493743ad9a4446d44ac14b798f55ce2acc1d9c0824c11b67",
+      "position": "6838ed448d26a76d63f4e908238d1dfea3d2bdc6e1ec9a622742a19cab4d1a78",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 14,
+      "identity": "37baa3d0385d31b3f5f67abff2f443e13f31bd74b504b12f867f5ce64e3ebfad",
+      "position": "252e0d4787074ca19c394b01f85c60002ff4a40afe786094365b39fe9ce5174e",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 15,
+      "identity": "fec7d6e09b4ba44008a305b4addeabd31b4cb61a980596699c7409ec47a7b5c4",
+      "position": "29c1cb6e19e5e1893b1df33686851426b0a48f164671d9f5f65b4b6f7fc00fd4",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 16,
+      "identity": "f86df416b1a728aead3c1b78e84958decbaba6cc6d855a0d75f0b7e8bfaceb5a",
+      "position": "ad8c2c14e67497cdb230cdbf9d955dbe2ea7f1a549d5c0244845794277aa3132",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 17,
+      "identity": "eaaa92c22a561d112f8d37d3ebdb06d2c2a0fe86d45b5bc355e38cf9fdbf0f7f",
+      "position": "0f627ce145142830914c3530ef5adb544a9f991a2f545c996e89df980e382794",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 18,
+      "identity": "f5253eb716cab313a05d72ad8eada7be19b4a4da3d6aebd589475f8a028dd827",
+      "position": "ee07df7bb9a110cfc8e9178e6f6c0be9a8f24f2fc78d9586e1f913ec05d068bc",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 19,
+      "identity": "357945bf9a16e2241a31b9203df048588e63d95a5477051f53ff7a5f20212216",
+      "position": "59ed2667a69a0d44c7a9667245b23858d998399c26db44d047fa2bc3bacfd2ab",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 20,
+      "identity": "10cab69df8dbed1e1f42c6f7082cdd320da5bc0689528c98a596795d83055929",
+      "position": "1d2cb1346d5cd2b19f04396ea2f974c76bd59842710fe706feeb50a9106406be",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 21,
+      "identity": "90613d845a3d610f10f79deabe44702f663d3f7013063287c9759d5abf7f8af1",
+      "position": "715aff739193721346e377db98ebfca9d17f24b0b662bbea14102faaed6bd1d3",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "line": 22,
+      "identity": "622c5a3055fcd155fdf6db9bdff3e915924b335ddd461d38094a96cf30322ed2",
+      "position": "bde7678bf3e974d4df1c5c72819a541820eafc3b4007b5a085147de4c53ca17e",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:2",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 1,
+      "identity": "1a873fb772a1e5333ddfaf2b5a8c08ff0d51d36332a57af109b5f01fed3cbdb2",
+      "position": "8bb92a01249a977b2c02eadea3a3084dfe6829ba5a861c0da2c80dc01380a58e",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 2,
+      "identity": "03ebb95e87eabb51c21e075cc5ff222cbf17ca80520c946cc2b018cb5462bdf3",
+      "position": "0e589a07d6bfca84eaa56c0958822778e1d230c55707f4279c2ed296b9222670",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 3,
+      "identity": "12b40c7019fb83d2eff2cbfaa9c17fd8c22efd509764f5d3ad8bd491d2399e80",
+      "position": "ed456ae43399f6a1017f0bd5a903d2024e114c9d9f108208cb81064600ae5b3e",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 4,
+      "identity": "101286c0194c5d0c23657bc655b64e5900beead759c6c7f515290df7d3ebbf44",
+      "position": "c0edcebd8c27d2c0a6711bcd7f23e27acaea1da54374e0097c2f5e2931160a83",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 5,
+      "identity": "381696300df39171175454b0268e3bebeb7d04b8a4659edc90603934b24c9a51",
+      "position": "771f7e12bdbfdf65dbc253a1261815b0fd7fca0a4f26753e5f4c634a307181e1",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 6,
+      "identity": "48786245f9e06dbb883f4f4f1cf4e7ee0e9dbe2b265906764beb8794ee18f4c7",
+      "position": "db612a47477b6d5395eba0debaee9c88b2066d28ecabc516e475750cd9fd44e5",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 7,
+      "identity": "0b1f5d7a572f00b139568b6ef0ca9ed5a8a69244638b07acc91e3536b2141802",
+      "position": "aec7f509c92364e9eec77c43b1d8c8fff087489c12f1cccb221484f3216e2dc8",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 8,
+      "identity": "b089d3188373cb53caae988408dca7859f786b42cea0d4183fe278e30c4793dc",
+      "position": "8888a6919a9bdf0d057fd32786c0616f595375bdbafbe997b10cc83cfdaa4801",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 9,
+      "identity": "a32be047a258907e6aeb88a1c67a1513289b494519aac205cdcafdecf286b712",
+      "position": "1e7e3b34df2fd75ee87ceda071a9e3e6ea09c1201248d936b85499023c163898",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 10,
+      "identity": "70481ced215ab3adb6f855380cc74ba50cc298b9e808ad596369efa3d7a4d2bb",
+      "position": "4854ff5f430fdf9d6f1e359b63d21f89901e6174a7394c471d63ddf23b848d4c",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 11,
+      "identity": "332e43cc99b043787c41ce5f873dbaa249fa3198efee1afcbd775ef71a33668a",
+      "position": "9451a49d641ba3ed50d7cd4095e6bde8592a6e85866249703e9d5c2aa65a47db",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 12,
+      "identity": "2c7443efc14788ae8fc11c22c484aa86001f3fb0a4e4267935de85a63463e04a",
+      "position": "c4edda88945ec1fd9d745339990729b5b92a63c85aac8b8c4a73e7753bf34c62",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 13,
+      "identity": "a4c9e9995f2daa25ddec31374287152df19482ee37065168fb99f9d2b01e676a",
+      "position": "14e5e31d7915ae70bb719cc17d9ecdd19589b41153c56849392203e22b7f5d7e",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 14,
+      "identity": "342422ae3359dfae69c5a465b5a2c4d26ebbe0c6c6e9c208d8a955e6c7d5eef4",
+      "position": "f73b6a1532ab3b6137d3294e893967b9da6898c6bb85720fb744a0ce594b2d8f",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 15,
+      "identity": "0e826d0ba11ee6ffffcd21f1442485fbd8ca87686cebbe2b07de92fd09ec8985",
+      "position": "f78a3f220b193f03715211c76f44df029e4a2bbf9dd8d82e5cbff8e6e40d0d77",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 16,
+      "identity": "869f001cd2e6643f50f79b50b34312faedbe5f3f865d7f70888979c6886fe28e",
+      "position": "ba3cf9126e4c32e9e136c115afd5f4693993d2c1ae89ea4a6896aa923313c9f1",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 17,
+      "identity": "08107dd23300a9e67b9b770be33d9a0bb5d1ff2b8a6d57e8920d46557eeb64de",
+      "position": "fb9815ec597555d39725ac03d4ce47ff03fa9b49c10ad550cb4d33f43a20d426",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 18,
+      "identity": "e737fe5223f7d82654479db866a65411afe4c70ae3549eda367cb62457257b5f",
+      "position": "9ba96aa0b360da9f8a39c6a630091b4e6a4f98cba355df152242f87e1415e0d0",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 19,
+      "identity": "3f12bfa9dcb7eee41592e859336b5269f03809f1400608c9950b3f4b60acbc5e",
+      "position": "58c58965f502de6a6fa33ea4f4dc42c4a387fedd536288b266e33a0787ca9ad8",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 20,
+      "identity": "df6d468538d0c24642b3a3861be69edfb2d693a97674191eefc6c2b47bcab159",
+      "position": "e4b354faa70c6030500d66309f2d1ceb0dda12b4af7772d38d79035a025fe4b4",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 21,
+      "identity": "60619aacf0e2bc18d50b28b813c5c7af7d60c1f0fde485296b63a004ab136696",
+      "position": "7e71c0660b5c944e5e92bab94d2c7b7a781fd3bfb3359adf5ca8d193b80639d2",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 22,
+      "identity": "fef6c37cf026b47a1401281329c3358bed81736b341f51199f83934887c8519a",
+      "position": "c79350bc8062605b7e795fde8d6d7568dd2ae121591ed5bdd7f08dab0de95985",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 23,
+      "identity": "e1e2589d815ed2ad682d50c989e9f0eb4605bb2c8b9d8ff63be5101fd0bc3393",
+      "position": "c5424f590c3aeb4cdff0f8e21ce1122e1201a5fc0b14521e2ed7de1a009d282b",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 24,
+      "identity": "2a259e1993e89c30a0f617315d61ce316ec40f533efbd22ffbf5a68892f56287",
+      "position": "48dfa0094e9588459854943d944d09be20365ae2049dcbd89f430d13f39e7aab",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 25,
+      "identity": "2c64470c06c198568d00a086d7e65ff217e74e459e057868843f0bd9832494cf",
+      "position": "7f6b7e8107a7513c05570603f8bc7aa0ed3005b27eebd4e0109ebe1f3d39109d",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 26,
+      "identity": "43739962f9b0e04bddd8d9a941e31aa4deb89685e763af66af6ec59602ef2c1f",
+      "position": "bb1fb56db5683964e12e1ed98afc67fe3623c16e79d006ea3b1de0279b5839cf",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 27,
+      "identity": "30e1533c59ab8980ce1033e4116bb960a49c98d48360795b77d43131c0a06961",
+      "position": "560a4d00a0d4282eb853acdc6cbebabc40183d5523dbf2c3cb35bfc74995ad45",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 28,
+      "identity": "b9e642ff74c5b70ac7968c79e35eb1a062b2833a14b58a0ded750a58bf23e447",
+      "position": "b06ab72f7e88f45d5de523c0c7cf185b4b160f28726d65656664282ec9e88053",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 29,
+      "identity": "5fccc85a4eaf57e56814135e1f17680e6d145661bb0d699bcfbcd57ad8feba25",
+      "position": "9bd41118b7b22d3d4b27e87dbfc2ef41ec767dbe790cf60480fa3fbf97a1d2d8",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 30,
+      "identity": "2368e882c198b6e3c1b5040eb0802c56c42491dc8b17567269b38d416b009d6c",
+      "position": "44b4040eccafe751e2179f23f798f15da9eae2a05d7ebb6b81ed72dd7f3d885f",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 31,
+      "identity": "d5d3351f5c097e03190b37632aa489487a0039d8fca38db5130c59fea412d936",
+      "position": "496ad2b00a03a8706a1cb8617efb22d37806cc866aa096339382de49298c4f00",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 32,
+      "identity": "e580937951b28946da91e461b978be0d20c9d7201b9375512df8ab40b475854b",
+      "position": "3afc5d4d8fcd15001dba60f8d807e0862919e3b404ac5fba600aacfaa80fd7ec",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 33,
+      "identity": "6158626490e93a30cab5a1d150c96a463bd606ae0c6360432bc33895b944ba9d",
+      "position": "6e42f8ea765f59c383b0aef833038764a0a0f5f3f82a714d05b7958f65acf231",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 34,
+      "identity": "21d4d03f77ac37ffc8ed7bac7b052e777cb65a08812017f71baf4ce5c06f8c77",
+      "position": "a51bd635b6e82bb431d336f57c42e36225b17210245ddbd6f31dfefa14799631",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 35,
+      "identity": "114b0a783f44e5d77fca6d5f6d9d5617c07d16db8b5ea26a5fa67bcbcb92507a",
+      "position": "1e63a3b5ccf6061ea5df6655857bfcd7f7206c40aee9fdc0dbdec0701a8bb44c",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 36,
+      "identity": "c8dd4e1d093de871ba83825111ac579bc60c767794043e955cf29dc5891e5c81",
+      "position": "a57c2aa64be9d412887feabaf071e97c7e5b55d6a1e9b2ebe41495b47e4a9a24",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 37,
+      "identity": "a072f4dbc36c04ea11b12d1e9cd10d066e4179f06ddcecafe6800728499f6805",
+      "position": "4995c1d27e7d714aaca7a47dc5fcba2eaff57a332f456f23dbf4d7d75b32be7b",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 38,
+      "identity": "c8beca24e384f44aee1f7e995b201a3adb5f321cad951d22a0aee7705961c079",
+      "position": "11c9e8249099e0b733777afafa170e12d5961458fecd3491cda7d9ae784aebc7",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 39,
+      "identity": "13bae1a69dec3113f80c6d1f6ba2ee57f2197b826b13b488aa78302834aca490",
+      "position": "e6757270c5e52b74ca321c6e1b4da0c63eb19a5480bc0f59d6fbc819d15970a3",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 40,
+      "identity": "30ffba4b863d11471e6a226883e5a8ef9ccd4e783bb289182e5641bbc2642581",
+      "position": "60fb87d9dcb65f75c88233b56c10760ba924ae7c3e31513123025ee1f53cf84f",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "line": 41,
+      "identity": "7df4a5c8cee98dc0a02b9a3e2977e3337d03fefe668098654b7b5b5a7644f28b",
+      "position": "12c4b05f8d5a0f5403e5fd2e46d34f9f8c4755055a2f66d3472dca9c8d42a13b",
+      "group": "dcc4760a3abc0498759db480adcd468081e1be0f8240093a5594e1be783036fd:3",
+      "recent": true
+    }
+  ]
+}

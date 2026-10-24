@@ -1,0 +1,73 @@
+{
+  "engine": "CHROMATIC 1.0",
+  "same_engine_and_model": true,
+  "independent_games_from_startpos": true,
+  "sequential_engine_runs": true,
+  "plies_per_game": 10,
+  "summary": [
+    {
+      "movetime_ms": 100,
+      "completed_plies": 10,
+      "moves": [
+        "c2c3",
+        "d7d6",
+        "a2a3",
+        "g8f6",
+        "g1f3",
+        "b7b6",
+        "e2e4",
+        "e7e6",
+        "h1g1",
+        "c8b7"
+      ],
+      "response_seconds_min": 0.10060389997670427,
+      "response_seconds_max": 0.10147250001318753,
+      "response_seconds_median": 0.10079024999868125,
+      "starting_position_nodes": 6343,
+      "all_moves_legal": true
+    },
+    {
+      "movetime_ms": 1000,
+      "completed_plies": 10,
+      "moves": [
+        "c2c3",
+        "g8f6",
+        "a2a3",
+        "d7d6",
+        "g1f3",
+        "e7e6",
+        "h1g1",
+        "e6e5",
+        "f3h4",
+        "g7g6"
+      ],
+      "response_seconds_min": 1.0026709999656305,
+      "response_seconds_max": 1.0067423000000417,
+      "response_seconds_median": 1.0031827500206418,
+      "starting_position_nodes": 58152,
+      "all_moves_legal": true
+    },
+    {
+      "movetime_ms": 10000,
+      "completed_plies": 10,
+      "moves": [
+        "g2g4",
+        "a7a5",
+        "c2c3",
+        "a8a6",
+        "a2a3",
+        "c7c6",
+        "g1f3",
+        "h7h6",
+        "e2e3",
+        "g7g6"
+      ],
+      "response_seconds_min": 10.00283260003198,
+      "response_seconds_max": 10.004829999990761,
+      "response_seconds_median": 10.003217150020646,
+      "starting_position_nodes": 722781,
+      "all_moves_legal": true
+    }
+  ],
+  "interpretation": "After the first different move, positions differ between runs."
+}

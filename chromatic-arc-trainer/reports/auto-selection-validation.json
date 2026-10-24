@@ -1,0 +1,1 @@
+{"batch_size_unchanged":32,"default_validation_mode":"selected","full_pipeline_cpu_threads":1,"full_pipeline_device":"cpu","micro_device":"cpu","no_training_started":true,"passed":true,"unknown_position_scale_rejected":true,"unvalidated_larger_batch_rejected":true}

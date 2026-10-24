@@ -1,0 +1,60 @@
+>> uci
+<< id name CHROMATIC 1.0
+<< id author PROJECT CHROMATIC
+<< option name ModelFile type string default C:\Users\fly_t\Documents\Codex\2026-10-24\referenced-chatgpt-conversation-this-is-an\outputs\project-chromatic\dist\default.zero
+<< option name CPuct type string default 1.5
+<< option name FPUReduction type string default 0
+<< option name InferenceBackend type combo default SIMD var Scalar var SIMD
+<< option name SparsePolicyHead type check default true
+<< option name MateProofNodes type spin default 256 min 0 max 50000
+<< option name MateProofPlies type combo default 1 var 1 var 3 var 5
+<< option name TreeMemoryMB type spin default 64 min 1 max 2048
+<< option name Simulations type spin default 800 min 1 max 10000000
+<< option name MaxNodes type spin default 100000 min 16 max 1000000
+<< uciok
+>> isready
+<< readyok
+>> ucinewgame
+>> isready
+<< readyok
+>> position startpos
+>> go movetime 1000
+<< info nodes 58152 time 1004 nps 57920 score cp 16 pv c2c3
+<< bestmove c2c3
+>> position startpos moves c2c3
+>> go movetime 1000
+<< info nodes 59314 time 1002 nps 59195 score cp -17 pv g8f6
+<< bestmove g8f6
+>> position startpos moves c2c3 g8f6
+>> go movetime 1000
+<< info nodes 58892 time 1002 nps 58774 score cp 8 pv a2a3
+<< bestmove a2a3
+>> position startpos moves c2c3 g8f6 a2a3
+>> go movetime 1000
+<< info nodes 61418 time 1002 nps 61295 score cp -17 pv d7d6
+<< bestmove d7d6
+>> position startpos moves c2c3 g8f6 a2a3 d7d6
+>> go movetime 1000
+<< info nodes 59582 time 1002 nps 59463 score cp 16 pv g1f3
+<< bestmove g1f3
+>> position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3
+>> go movetime 1000
+<< info nodes 62132 time 1002 nps 62007 score cp -29 pv e7e6
+<< bestmove e7e6
+>> position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3 e7e6
+>> go movetime 1000
+<< info nodes 52995 time 1002 nps 52889 score cp 27 pv h1g1
+<< bestmove h1g1
+>> position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3 e7e6 h1g1
+>> go movetime 1000
+<< info nodes 58039 time 1002 nps 57923 score cp -40 pv e6e5
+<< bestmove e6e5
+>> position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3 e7e6 h1g1 e6e5
+>> go movetime 1000
+<< info nodes 55196 time 1004 nps 54976 score cp 33 pv f3h4
+<< bestmove f3h4
+>> position startpos moves c2c3 g8f6 a2a3 d7d6 g1f3 e7e6 h1g1 e6e5 f3h4
+>> go movetime 1000
+<< info nodes 58001 time 1002 nps 57885 score cp -34 pv g7g6
+<< bestmove g7g6
+>> quit

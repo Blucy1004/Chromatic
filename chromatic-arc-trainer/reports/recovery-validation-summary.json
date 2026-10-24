@@ -1,0 +1,187 @@
+{
+  "format": "chromatic-arc-final-recovery-summary-v1",
+  "devices": {
+    "cpu": {
+      "passed": true,
+      "scenarios": 5,
+      "baseline_step": 8,
+      "baseline_export_sha256": "799eb2432c3f007487f0b777ff40b0a86f766714163d68c50b7f20025b583816",
+      "precision": "fp32",
+      "prefetch": 2,
+      "cache_mode": "auto",
+      "same_device_training_state_exact": true,
+      "checkpoint_tensors_cpu": true,
+      "canonical_report": "recovery-cpu.json"
+    },
+    "xpu": {
+      "passed": true,
+      "scenarios": 5,
+      "baseline_step": 8,
+      "baseline_export_sha256": "63aeeb2a8ecf84d5d3230378502a3351591933be772dcc451cbd1d32321bc7b2",
+      "precision": "fp32",
+      "prefetch": 2,
+      "cache_mode": "auto",
+      "same_device_training_state_exact": true,
+      "checkpoint_tensors_cpu": true,
+      "canonical_report": "recovery-xpu.json"
+    }
+  },
+  "logs": [
+    {
+      "device": "cpu",
+      "file": "recovery-logs/cpu/corruption/process-1792838557901419400.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-first\\corruption\\process-1792838557901419400.log",
+      "bytes": 19273,
+      "sha256": "9679f518d44317a608bf1d670f475b99af444ff8bebe4272b3643ef5254127ee"
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-logs/cpu/corruption/process-1792838571004310400.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-first\\corruption\\process-1792838571004310400.log",
+      "bytes": 4805,
+      "sha256": "454c00873bec8c6a8371a1f6a53525a65af2a138f26105d52f37ff2a81b50060"
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-logs/cpu/corruption/process-1792838579913766100.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-first\\corruption\\process-1792838579913766100.log",
+      "bytes": 6100,
+      "sha256": "7a5d0d55502b3cc4bf312d0478986e3e74068e1c8e76d7068219ad5ea2a0b000"
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-logs/cpu/kill-before_delete/killed-process.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-first\\kill-before_delete\\killed-process.log",
+      "bytes": 3893,
+      "sha256": "84191675dbb56c31bbc516d2e350f379f5a278b0abf471f870243892a6032561"
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-logs/cpu/kill-before_delete/process-1792838548843789200.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-first\\kill-before_delete\\process-1792838548843789200.log",
+      "bytes": 8253,
+      "sha256": "d1c0b6b3d502b301b223f9a5fb51e97fbf0cc7e81c6df522c727fa741724e1a1"
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-logs/cpu/kill-checkpoint_written/killed-process.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-first\\kill-checkpoint_written\\killed-process.log",
+      "bytes": 757,
+      "sha256": "5824507a9b0c53b64dc265efed998a575d80776c02fbd35259feb618a98db0db"
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-logs/cpu/kill-checkpoint_written/process-1792838503054371900.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-first\\kill-checkpoint_written\\process-1792838503054371900.log",
+      "bytes": 15247,
+      "sha256": "c7b8f3cbb6d6d700f281ce080c4acc40db8400a24b1b2ddc03679a7a8f92ed3c"
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-logs/cpu/kill-ledger_committed/killed-process.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-first\\kill-ledger_committed\\killed-process.log",
+      "bytes": 753,
+      "sha256": "11c567bcd1e494bf60555ae355e7fdec7bcfbdf2301c1bc78ea1baaea0d2b34e"
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-logs/cpu/kill-ledger_committed/process-1792838524947072900.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-first\\kill-ledger_committed\\process-1792838524947072900.log",
+      "bytes": 17396,
+      "sha256": "313fd38851db4c669f153a483c5a5ee4ac3be502f68d4bb53f62ecb976a4618e"
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-logs/cpu/uninterrupted/process-1792838465871379800.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-first\\uninterrupted\\process-1792838465871379800.log",
+      "bytes": 21842,
+      "sha256": "e839d3a592546634a63b68253ec1a845f3a3c78b75f453afde129157736fbac1"
+    },
+    {
+      "device": "cpu",
+      "file": "recovery-logs/cpu/uninterrupted/process-1792838484351829600.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\cpu-first\\uninterrupted\\process-1792838484351829600.log",
+      "bytes": 4783,
+      "sha256": "64f22d306de5079b9c76eb132a3683d125301df71a6675b81bd1f5597629b7e9"
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-logs/xpu/corruption/process-1792839319669270900.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-final\\corruption\\process-1792839319669270900.log",
+      "bytes": 28875,
+      "sha256": "03f26a58e071b71b2e55d7795cde7cf4918823e43aa2975a2a2c791a2276a26e"
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-logs/xpu/corruption/process-1792839339154548100.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-final\\corruption\\process-1792839339154548100.log",
+      "bytes": 7590,
+      "sha256": "8bc0a46370c934a592af25b60c3d49746631b8dfbc5d9b7065efddf4af834bd5"
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-logs/xpu/corruption/process-1792839350736390000.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-final\\corruption\\process-1792839350736390000.log",
+      "bytes": 8801,
+      "sha256": "7722225fb7a26d8a948864ec9638dfcc938cdc539356c9319e92a0f57effc77b"
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-logs/xpu/kill-before_delete/killed-process.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-final\\kill-before_delete\\killed-process.log",
+      "bytes": 3896,
+      "sha256": "9fa81f9873ccd3b268386b60bc16bc771d0e94d56c64084b2f31374923402199"
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-logs/xpu/kill-before_delete/process-1792839305091795100.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-final\\kill-before_delete\\process-1792839305091795100.log",
+      "bytes": 14752,
+      "sha256": "8e762d4766f4da54c46f2e9e182b6d14fcc218214667348cb74da8a54e367408"
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-logs/xpu/kill-checkpoint_written/killed-process.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-final\\kill-checkpoint_written\\killed-process.log",
+      "bytes": 759,
+      "sha256": "35ef91203deb5fde627c7211b1b3f338a3f33b954075ed805becd3fca0a524b2"
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-logs/xpu/kill-checkpoint_written/process-1792839239132100600.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-final\\kill-checkpoint_written\\process-1792839239132100600.log",
+      "bytes": 25580,
+      "sha256": "a37b6dc6c2ba059ebb667244ecd91dcbd7823f57ec5f5efb65faf2c66b41247a"
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-logs/xpu/kill-ledger_committed/killed-process.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-final\\kill-ledger_committed\\killed-process.log",
+      "bytes": 755,
+      "sha256": "819d14ceaf790c8eb12c08957ee9f6e19a3f9da2c3097f91a6255543d1b92cc1"
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-logs/xpu/kill-ledger_committed/process-1792839271043455800.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-final\\kill-ledger_committed\\process-1792839271043455800.log",
+      "bytes": 22941,
+      "sha256": "73aa0af5234b2952b02a33f465a98c19b9c1f4f53a015d0e3c7ff50c566fc835"
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-logs/xpu/uninterrupted/process-1792839196309974200.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-final\\uninterrupted\\process-1792839196309974200.log",
+      "bytes": 24926,
+      "sha256": "930463ffcbdea8f21a86ebeb5949742d8040dfd8cb8327832e0e2316feaf8dbc"
+    },
+    {
+      "device": "xpu",
+      "file": "recovery-logs/xpu/uninterrupted/process-1792839214722137700.log",
+      "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\.recovery-work\\xpu-final\\uninterrupted\\process-1792839214722137700.log",
+      "bytes": 7564,
+      "sha256": "824ac6a18c68eb8b7d05483454959e36cc8632ec285962143bcefeafd423debc"
+    }
+  ],
+  "meaning": "Same-device exact recovery after completion, real process termination at 3 boundaries, primary/mirror corruption and previous-state fallback. CPU/XPU states are not required to be bitwise equal to one another.",
+  "clip_fix": "Final XPU uses non-foreach clipping; pre-clip-fix reports remain diagnostic only. CPU original clipping semantics are preserved."
+}

@@ -1,0 +1,518 @@
+{
+  "read_only_audit": true,
+  "no_training_search_or_external_engine": true,
+  "model": {
+    "checkpoint": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\bootstrap\\model.pt",
+    "checkpoint_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+    "default_zero_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "exported_checkpoint_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "export_matches_deployed_zero": true,
+    "architecture": {
+      "width": 64,
+      "blocks": 2
+    },
+    "step": 200,
+    "training_settings": {
+      "batch_size": 32,
+      "lr": 0.001,
+      "device": "cpu",
+      "decay": 0.999,
+      "torch": "2.14.1+cpu"
+    }
+  },
+  "coverage": {
+    "rows": 128,
+    "start_position_rows": 0,
+    "up_to_6_ply_rows": 1,
+    "up_to_10_ply_rows": 13,
+    "plies": {
+      "mean": 34.9765625,
+      "p50": 36.0,
+      "p90": 55.0,
+      "min": 2.0,
+      "max": 60.0
+    },
+    "mean_target_wdl": [
+      0.6032890625,
+      0.11753906249999999,
+      0.27917187499999996
+    ],
+    "mean_teacher_policy_entropy_nats": 0.8766384570447442,
+    "source": "128 individually labeled uniform-random rollout endpoints; history prefixes are not separately supervised"
+  },
+  "deployed_model_training_set": {
+    "prediction": {
+      "positions": 128,
+      "mean_predicted_wdl": [
+        0.6083232164382935,
+        0.10298080742359161,
+        0.2886960506439209
+      ],
+      "predicted_value": {
+        "mean": 0.3196272517525358,
+        "p50": 0.9763161540031433,
+        "p90": 0.9996630847454071,
+        "min": -0.9998092651367188,
+        "max": 0.999997615814209
+      },
+      "p_win_above_0_8": 76,
+      "p_win_above_0_9": 75,
+      "abs_value_above_0_8": 110,
+      "confidence_is_not_calibration_without_outcome_labels": true
+    },
+    "mean_policy_cross_entropy": 1.0343662653396462,
+    "mean_wdl_cross_entropy": 0.10538138420484558,
+    "mean_policy_entropy_nats": 1.1552120930654735
+  },
+  "fresh_unlabeled": {
+    "seed": 20261024,
+    "positions": 64,
+    "generation_attempts": 64,
+    "training_feature_overlap": 0,
+    "plies": {
+      "mean": 30.859375,
+      "p50": 30.5,
+      "p90": 53.400000000000006,
+      "min": 0.0,
+      "max": 60.0
+    },
+    "prediction": {
+      "positions": 64,
+      "mean_predicted_wdl": [
+        0.7404991388320923,
+        0.07740756124258041,
+        0.18209317326545715
+      ],
+      "predicted_value": {
+        "mean": 0.5584061313420534,
+        "p50": 0.8999398052692413,
+        "p90": 0.9986140131950378,
+        "min": -0.9778422713279724,
+        "max": 0.9999847412109375
+      },
+      "p_win_above_0_8": 40,
+      "p_win_above_0_9": 34,
+      "abs_value_above_0_8": 42,
+      "confidence_is_not_calibration_without_outcome_labels": true
+    },
+    "mean_policy_entropy_nats": 1.4495748959771793,
+    "no_ground_truth_accuracy_or_calibration_available": true
+  },
+  "training_set_consistency": {
+    "positions": 128,
+    "max_child_moves": 64,
+    "truncated_positions": 0,
+    "neural_children_evaluated": 4033,
+    "terminal_children": 3,
+    "parent_v_minus_best_negative_child_v": {
+      "mean": 0.3613216532248771,
+      "p50": 0.7437742203474045,
+      "p90": 1.9958337843418121,
+      "min": -1.9969339966773987,
+      "max": 1.9999439716339111
+    },
+    "absolute_residual": {
+      "mean": 1.4923693982564146,
+      "p50": 1.8863398134708405,
+      "p90": 1.9965722978115081,
+      "min": 0.0009098052978515625,
+      "max": 1.9999439716339111
+    },
+    "best_one_ply_backup_value": {
+      "mean": -0.04169440147234127,
+      "p50": -0.07656156271696091,
+      "p90": 0.9899342834949494,
+      "min": -0.9999463558197021,
+      "max": 1.0
+    },
+    "parent_v_above_0_5_but_best_backup_below_minus_0_5": 52,
+    "parent_v_below_minus_0_5_but_best_backup_above_0_5": 34,
+    "child_prediction_summary": {
+      "positions": 4033,
+      "mean_predicted_wdl": [
+        0.6724053621292114,
+        0.07629126310348511,
+        0.2513030171394348
+      ],
+      "predicted_value": {
+        "mean": 0.42110167661653597,
+        "p50": 0.8541665077209473,
+        "p90": 0.9996848464012146,
+        "min": -0.9990487694740295,
+        "max": 0.9999989867210388
+      },
+      "p_win_above_0_8": 2287,
+      "p_win_above_0_9": 2016,
+      "abs_value_above_0_8": 2704,
+      "confidence_is_not_calibration_without_outcome_labels": true
+    },
+    "interpretation": "A model self-consistency diagnostic, not ground-truth move quality, Elo, or proof of an implementation/sign bug."
+  },
+  "fresh_consistency": {
+    "positions": 64,
+    "max_child_moves": 64,
+    "truncated_positions": 0,
+    "neural_children_evaluated": 1997,
+    "terminal_children": 0,
+    "parent_v_minus_best_negative_child_v": {
+      "mean": 0.7204611240886152,
+      "p50": 1.1311709582805634,
+      "p90": 1.9788685500621797,
+      "min": -1.9554820656776428,
+      "max": 1.9992532134056091
+    },
+    "absolute_residual": {
+      "mean": 1.2596807586960495,
+      "p50": 1.4806016087532043,
+      "p90": 1.9788685500621797,
+      "min": 0.000761568546295166,
+      "max": 1.9992532134056091
+    },
+    "best_one_ply_backup_value": {
+      "mean": -0.16205499274656177,
+      "p50": -0.3468364328145981,
+      "p90": 0.9398162364959717,
+      "min": -0.9992684721946716,
+      "max": 0.999326229095459
+    },
+    "parent_v_above_0_5_but_best_backup_below_minus_0_5": 28,
+    "parent_v_below_minus_0_5_but_best_backup_above_0_5": 8,
+    "child_prediction_summary": {
+      "positions": 1997,
+      "mean_predicted_wdl": [
+        0.7311988472938538,
+        0.06734791398048401,
+        0.20145338773727417
+      ],
+      "predicted_value": {
+        "mean": 0.5297451414761092,
+        "p50": 0.8789901733398438,
+        "p90": 0.9993336439132691,
+        "min": -0.999326229095459,
+        "max": 0.9999922513961792
+      },
+      "p_win_above_0_8": 1193,
+      "p_win_above_0_9": 1037,
+      "abs_value_above_0_8": 1269,
+      "confidence_is_not_calibration_without_outcome_labels": true
+    },
+    "interpretation": "A model self-consistency diagnostic, not ground-truth move quality, Elo, or proof of an implementation/sign bug."
+  },
+  "root": {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "wdl": [
+      0.5381177067756653,
+      0.45157110691070557,
+      0.010311273857951164
+    ],
+    "value": 0.5278064608573914,
+    "legal_policy_entropy_nats": 1.8564523200484777,
+    "moves": [
+      {
+        "uci": "b1c3",
+        "san": "Nc3",
+        "action": 82,
+        "logit": 2.0836102962493896,
+        "legal_prior": 0.2712536708762818,
+        "child_wdl_side_to_move": [
+          0.8829154372215271,
+          0.0989232212305069,
+          0.018161309882998466
+        ],
+        "root_value_from_child": -0.8647541403770447,
+        "teacher_rows_where_action_legal": 11,
+        "teacher_policy_positive_rows": 1
+      },
+      {
+        "uci": "g1f3",
+        "san": "Nf3",
+        "action": 405,
+        "logit": 1.8957747220993042,
+        "legal_prior": 0.22480174125762106,
+        "child_wdl_side_to_move": [
+          0.504940390586853,
+          0.35445722937583923,
+          0.14060232043266296
+        ],
+        "root_value_from_child": -0.36433807015419006,
+        "teacher_rows_where_action_legal": 17,
+        "teacher_policy_positive_rows": 4
+      },
+      {
+        "uci": "e2e4",
+        "san": "e4",
+        "action": 796,
+        "logit": 1.8350715637207031,
+        "legal_prior": 0.21156149345408298,
+        "child_wdl_side_to_move": [
+          0.7497764229774475,
+          0.185560405254364,
+          0.06466316431760788
+        ],
+        "root_value_from_child": -0.685113251209259,
+        "teacher_rows_where_action_legal": 12,
+        "teacher_policy_positive_rows": 6
+      },
+      {
+        "uci": "c2c4",
+        "san": "c4",
+        "action": 666,
+        "logit": 1.231102705001831,
+        "legal_prior": 0.11564750869714052,
+        "child_wdl_side_to_move": [
+          0.7827799320220947,
+          0.1705656498670578,
+          0.046654410660266876
+        ],
+        "root_value_from_child": -0.7361255288124084,
+        "teacher_rows_where_action_legal": 10,
+        "teacher_policy_positive_rows": 1
+      },
+      {
+        "uci": "a2a3",
+        "san": "a3",
+        "action": 528,
+        "logit": 0.5095239281654358,
+        "legal_prior": 0.056202883862562926,
+        "child_wdl_side_to_move": [
+          0.5888927578926086,
+          0.29285523295402527,
+          0.11825200915336609
+        ],
+        "root_value_from_child": -0.47064074873924255,
+        "teacher_rows_where_action_legal": 14,
+        "teacher_policy_positive_rows": 3
+      },
+      {
+        "uci": "c2c3",
+        "san": "c3",
+        "action": 658,
+        "logit": 0.2864837646484375,
+        "legal_prior": 0.04496695588424808,
+        "child_wdl_side_to_move": [
+          0.506662905216217,
+          0.27772030234336853,
+          0.2156168520450592
+        ],
+        "root_value_from_child": -0.29104605317115784,
+        "teacher_rows_where_action_legal": 15,
+        "teacher_policy_positive_rows": 2
+      },
+      {
+        "uci": "d2d4",
+        "san": "d4",
+        "action": 731,
+        "logit": -0.09893237799406052,
+        "legal_prior": 0.03058506334189321,
+        "child_wdl_side_to_move": [
+          0.7516402006149292,
+          0.1753624975681305,
+          0.07299733906984329
+        ],
+        "root_value_from_child": -0.6786428689956665,
+        "teacher_rows_where_action_legal": 9,
+        "teacher_policy_positive_rows": 1
+      },
+      {
+        "uci": "d2d3",
+        "san": "d3",
+        "action": 723,
+        "logit": -0.29091349244117737,
+        "legal_prior": 0.025242539564131954,
+        "child_wdl_side_to_move": [
+          0.6247085928916931,
+          0.24372172355651855,
+          0.13156965374946594
+        ],
+        "root_value_from_child": -0.4931389391422272,
+        "teacher_rows_where_action_legal": 15,
+        "teacher_policy_positive_rows": 2
+      },
+      {
+        "uci": "e2e3",
+        "san": "e3",
+        "action": 788,
+        "logit": -0.6878960132598877,
+        "legal_prior": 0.016971714891433242,
+        "child_wdl_side_to_move": [
+          0.8692437410354614,
+          0.10546702146530151,
+          0.02528928779065609
+        ],
+        "root_value_from_child": -0.8439544439315796,
+        "teacher_rows_where_action_legal": 18,
+        "teacher_policy_positive_rows": 1
+      },
+      {
+        "uci": "g2g4",
+        "san": "g4",
+        "action": 926,
+        "logit": -2.9005539417266846,
+        "legal_prior": 0.001856866147809128,
+        "child_wdl_side_to_move": [
+          0.813535213470459,
+          0.14388145506381989,
+          0.042583368718624115
+        ],
+        "root_value_from_child": -0.7709518671035767,
+        "teacher_rows_where_action_legal": 18,
+        "teacher_policy_positive_rows": 1
+      },
+      {
+        "uci": "b1a3",
+        "san": "Na3",
+        "action": 80,
+        "logit": -3.968482494354248,
+        "legal_prior": 0.0006382416199630055,
+        "child_wdl_side_to_move": [
+          0.6923200488090515,
+          0.2137133926153183,
+          0.0939665362238884
+        ],
+        "root_value_from_child": -0.5983535051345825,
+        "teacher_rows_where_action_legal": 13,
+        "teacher_policy_positive_rows": 1
+      },
+      {
+        "uci": "g1h3",
+        "san": "Nh3",
+        "action": 407,
+        "logit": -5.487581729888916,
+        "legal_prior": 0.00013971682431963606,
+        "child_wdl_side_to_move": [
+          0.7186457514762878,
+          0.2138221114873886,
+          0.06753209233283997
+        ],
+        "root_value_from_child": -0.6511136293411255,
+        "teacher_rows_where_action_legal": 14,
+        "teacher_policy_positive_rows": 1
+      },
+      {
+        "uci": "h2h3",
+        "san": "h3",
+        "action": 983,
+        "logit": -6.031763553619385,
+        "legal_prior": 8.107996314729239e-05,
+        "child_wdl_side_to_move": [
+          0.5346237421035767,
+          0.2891048789024353,
+          0.176271453499794
+        ],
+        "root_value_from_child": -0.35835230350494385,
+        "teacher_rows_where_action_legal": 25,
+        "teacher_policy_positive_rows": 0
+      },
+      {
+        "uci": "a2a4",
+        "san": "a4",
+        "action": 536,
+        "logit": -7.401001930236816,
+        "legal_prior": 2.0618680606656366e-05,
+        "child_wdl_side_to_move": [
+          0.33877894282341003,
+          0.37469711899757385,
+          0.2865239381790161
+        ],
+        "root_value_from_child": -0.05225500464439392,
+        "teacher_rows_where_action_legal": 9,
+        "teacher_policy_positive_rows": 0
+      },
+      {
+        "uci": "g2g3",
+        "san": "g3",
+        "action": 918,
+        "logit": -8.098678588867188,
+        "legal_prior": 1.0262749967111379e-05,
+        "child_wdl_side_to_move": [
+          0.6489677429199219,
+          0.2422046661376953,
+          0.10882769525051117
+        ],
+        "root_value_from_child": -0.5401400327682495,
+        "teacher_rows_where_action_legal": 22,
+        "teacher_policy_positive_rows": 0
+      },
+      {
+        "uci": "h2h4",
+        "san": "h4",
+        "action": 991,
+        "logit": -8.14671802520752,
+        "legal_prior": 9.781387992230395e-06,
+        "child_wdl_side_to_move": [
+          0.6575050354003906,
+          0.23370105028152466,
+          0.10879389941692352
+        ],
+        "root_value_from_child": -0.5487111210823059,
+        "teacher_rows_where_action_legal": 23,
+        "teacher_policy_positive_rows": 0
+      },
+      {
+        "uci": "b2b4",
+        "san": "b4",
+        "action": 601,
+        "logit": -8.745624542236328,
+        "legal_prior": 5.374012726994147e-06,
+        "child_wdl_side_to_move": [
+          0.5673409700393677,
+          0.30562227964401245,
+          0.1270366609096527
+        ],
+        "root_value_from_child": -0.44030430912971497,
+        "teacher_rows_where_action_legal": 15,
+        "teacher_policy_positive_rows": 0
+      },
+      {
+        "uci": "f2f3",
+        "san": "f3",
+        "action": 853,
+        "logit": -9.415642738342285,
+        "legal_prior": 2.7498783720034847e-06,
+        "child_wdl_side_to_move": [
+          0.5765208601951599,
+          0.31014472246170044,
+          0.11333440989255905
+        ],
+        "root_value_from_child": -0.46318644285202026,
+        "teacher_rows_where_action_legal": 20,
+        "teacher_policy_positive_rows": 0
+      },
+      {
+        "uci": "b2b3",
+        "san": "b3",
+        "action": 593,
+        "logit": -10.196311950683594,
+        "legal_prior": 1.2597174754613585e-06,
+        "child_wdl_side_to_move": [
+          0.535222589969635,
+          0.33569198846817017,
+          0.12908539175987244
+        ],
+        "root_value_from_child": -0.4061371982097626,
+        "teacher_rows_where_action_legal": 22,
+        "teacher_policy_positive_rows": 0
+      },
+      {
+        "uci": "f2f4",
+        "san": "f4",
+        "action": 861,
+        "logit": -11.167043685913086,
+        "legal_prior": 4.771882245316974e-07,
+        "child_wdl_side_to_move": [
+          0.640923798084259,
+          0.2761271893978119,
+          0.0829489603638649
+        ],
+        "root_value_from_child": -0.5579748153686523,
+        "teacher_rows_where_action_legal": 16,
+        "teacher_policy_positive_rows": 0
+      }
+    ]
+  },
+  "limits": [
+    "Fresh random positions have no labels; high confidence is not itself a measured calibration error.",
+    "Bellman residuals expose lack of value consistency, not a causal separation of policy and search.",
+    "Tiny/Small existing holdout results refer to separate models, not the deployed 64x2 bootstrap model."
+  ]
+}

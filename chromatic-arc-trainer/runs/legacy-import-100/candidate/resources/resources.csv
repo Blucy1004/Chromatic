@@ -1,0 +1,5 @@
+elapsed_seconds,cpu_process_percent,cpu_system_percent,rss_bytes,io_read_bytes,io_write_bytes,io_read_operations,io_write_operations,gpu_busiest_engine_percent,gpu_matching_engine_count,xpu_allocated_bytes,xpu_reserved_bytes,xpu_peak_allocated_bytes,xpu_peak_reserved_bytes
+0.0009399999398738146,0.0,0.0,429285376,0,0,0,0,,0,,,,
+0.2162673999555409,71.7,0.0,445747200,12274771,2574265,177,64,,0,,,,
+0.4235878000035882,69.3,28.7,458047488,60146387,11598237,372,110,,0,,,,
+0.46826939994934946,66.5,24.9,459771904,60212516,11699439,390,146,,0,,,,

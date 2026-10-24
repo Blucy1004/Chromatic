@@ -1,0 +1,3099 @@
+{
+  "passed": true,
+  "checked_files": 515,
+  "old_trainer_and_experiments": 212,
+  "engine_projects": 303,
+  "muyeong": "not accessed or modified",
+  "files": [
+    {
+      "path": "outputs\\chromatic-shard-trainer\\chromatic-train.ps1",
+      "expected": "bf2291bd4fb8b3f89bee9e39fdd05541916ef4067c12f3372241f1b2cf1c4398",
+      "actual": "bf2291bd4fb8b3f89bee9e39fdd05541916ef4067c12f3372241f1b2cf1c4398",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\delivery-manifest.json",
+      "expected": "3b5326cdb5fc2116db1c4ee2ca4f402803b9ceded180aa1878cf53ad839c70a1",
+      "actual": "3b5326cdb5fc2116db1c4ee2ca4f402803b9ceded180aa1878cf53ad839c70a1",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\LICENSE",
+      "expected": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "actual": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\package-verification.json",
+      "expected": "2cdd827238ff275f848ea342436842241d9676bb0bde257f5df42afe1f24d5ad",
+      "actual": "2cdd827238ff275f848ea342436842241d9676bb0bde257f5df42afe1f24d5ad",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\pytest.ini",
+      "expected": "65fbe9769ed63107a674aa536d554ff4e53ed03cc13f6ae204c504372913e398",
+      "actual": "65fbe9769ed63107a674aa536d554ff4e53ed03cc13f6ae204c504372913e398",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\README.md",
+      "expected": "87137fe3a264775cd3e5686ebf14d023f873f5e69ba9b2f4454a70b39899840a",
+      "actual": "87137fe3a264775cd3e5686ebf14d023f873f5e69ba9b2f4454a70b39899840a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\requirements.txt",
+      "expected": "ba2b2c8455e5dad91464fba0a78136744d051decc7277f7df71dcee4a0495fe6",
+      "actual": "ba2b2c8455e5dad91464fba0a78136744d051decc7277f7df71dcee4a0495fe6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\THIRD_PARTY.md",
+      "expected": "a4921488b8240d0df8aca410b15a28d902ebc56a5d3e071da4aee2c98a13bbdd",
+      "actual": "a4921488b8240d0df8aca410b15a28d902ebc56a5d3e071da4aee2c98a13bbdd",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\candidates\\index.json",
+      "expected": "139c2c1746f1f3bdf9ba25f92fa6596e75e299d229c7646322000a14ac415b40",
+      "actual": "139c2c1746f1f3bdf9ba25f92fa6596e75e299d229c7646322000a14ac415b40",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\candidates\\positions-100.pt",
+      "expected": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf",
+      "actual": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\candidates\\positions-100.zero",
+      "expected": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af",
+      "actual": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\candidates\\positions-1000.pt",
+      "expected": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867",
+      "actual": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\candidates\\positions-1000.zero",
+      "expected": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb",
+      "actual": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\candidates\\positions-10000.pt",
+      "expected": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+      "actual": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\candidates\\positions-10000.zero",
+      "expected": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a",
+      "actual": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\champion\\default.zero",
+      "expected": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "actual": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\champion\\model.pt",
+      "expected": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "actual": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\docs\\ARCHITECTURE.md",
+      "expected": "49deff3ac94dcde407763285dace4167115c6f22b137441847d4fd508672ca87",
+      "actual": "49deff3ac94dcde407763285dace4167115c6f22b137441847d4fd508672ca87",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\docs\\EVALUATION.md",
+      "expected": "eef2fc032fce5d573b5d253740883918bb140594cc35accd8790fd6614d45671",
+      "actual": "eef2fc032fce5d573b5d253740883918bb140594cc35accd8790fd6614d45671",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\docs\\LABELS_AND_CALIBRATION.md",
+      "expected": "3be3bb0e19b7140e1cf5644f44ee84f46827363bf75a3cea02953ae16da1383d",
+      "actual": "3be3bb0e19b7140e1cf5644f44ee84f46827363bf75a3cea02953ae16da1383d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\docs\\MODEL_LABELS.md",
+      "expected": "933e168220b9c759676d590a8ec23ec2709c2cdbb4b0729119052864be4ff956",
+      "actual": "933e168220b9c759676d590a8ec23ec2709c2cdbb4b0729119052864be4ff956",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\docs\\SOURCES.md",
+      "expected": "cbd143841c454b6cc8cd41906537d6e43eb0176a1e5148f7f1bb920c4854f8b7",
+      "actual": "cbd143841c454b6cc8cd41906537d6e43eb0176a1e5148f7f1bb920c4854f8b7",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\docs\\STREAMING.md",
+      "expected": "941f25a7023021e13fce88fef4fde1e3c79199c1b05500175680e66c9206d14c",
+      "actual": "941f25a7023021e13fce88fef4fde1e3c79199c1b05500175680e66c9206d14c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\calibration.json",
+      "expected": "82577601c9e455e9c3b40125260df9bf1541db1cff473fe49702765bc3816798",
+      "actual": "82577601c9e455e9c3b40125260df9bf1541db1cff473fe49702765bc3816798",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-calibration-rows.jsonl",
+      "expected": "9764845735ca8f992389c8c1ec59ac0da1e2a5ec273ed1858875ccb6777fe210",
+      "actual": "9764845735ca8f992389c8c1ec59ac0da1e2a5ec273ed1858875ccb6777fe210",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-calibration-rows.jsonl.source.json",
+      "expected": "6d64a5addb7f53807a3c18fd722e2ea5e38ce056014c9f5eab74df712abbb487",
+      "actual": "6d64a5addb7f53807a3c18fd722e2ea5e38ce056014c9f5eab74df712abbb487",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-evaluations.jsonl.zst",
+      "expected": "feb08110ffcef588f05c30bb7ca93f5e19897e85c3d84678aff076f51dd84e2b",
+      "actual": "feb08110ffcef588f05c30bb7ca93f5e19897e85c3d84678aff076f51dd84e2b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-evaluations.jsonl.zst.source.json",
+      "expected": "d9fd36bc4a667a33d2eb69087ad9da97a648a96831f2d713ec25485e554336f3",
+      "actual": "d9fd36bc4a667a33d2eb69087ad9da97a648a96831f2d713ec25485e554336f3",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-games-sample.pgn",
+      "expected": "867b3917b68692f73bc6b4d5d88f655373b682c5ca2be236b3ea1bd71efd3bf7",
+      "actual": "867b3917b68692f73bc6b4d5d88f655373b682c5ca2be236b3ea1bd71efd3bf7",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-games-sample.pgn.source.json",
+      "expected": "5ecf53264d1ca7c640c9474afa5776f8a74b06a712657054e44c3d1c25e25db5",
+      "actual": "5ecf53264d1ca7c640c9474afa5776f8a74b06a712657054e44c3d1c25e25db5",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-openings-a.tsv",
+      "expected": "3282e4c9155289a29224f9a85fba0decb46efa35c2fa5e39662d2ac48fb0f793",
+      "actual": "3282e4c9155289a29224f9a85fba0decb46efa35c2fa5e39662d2ac48fb0f793",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-openings-b.tsv",
+      "expected": "1d5ed134ebbd87915ead5683416e37583bb3e5ae3582b4d8cb5cb4aa7ef4f623",
+      "actual": "1d5ed134ebbd87915ead5683416e37583bb3e5ae3582b4d8cb5cb4aa7ef4f623",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-openings-c.tsv",
+      "expected": "45e843c7b7e79a0d04d5bda879c9bd23f5a10974488bd8615e4f4c5d0749986f",
+      "actual": "45e843c7b7e79a0d04d5bda879c9bd23f5a10974488bd8615e4f4c5d0749986f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-openings-COPYING.txt",
+      "expected": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "actual": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-openings-d.tsv",
+      "expected": "1cf4057a8aece94f27bb3f278ad410ee2844831a642364eeceaafa091dbcceda",
+      "actual": "1cf4057a8aece94f27bb3f278ad410ee2844831a642364eeceaafa091dbcceda",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-openings-e.tsv",
+      "expected": "48c6f6645b031a5937c8386839debab0e2e48837251687ba1afb6369677f8546",
+      "actual": "48c6f6645b031a5937c8386839debab0e2e48837251687ba1afb6369677f8546",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-openings.source.json",
+      "expected": "19dc35ebda711b43635fed6910dfc5e1742a12ec348a0ed5358e89f151a27b8a",
+      "actual": "19dc35ebda711b43635fed6910dfc5e1742a12ec348a0ed5358e89f151a27b8a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-puzzles.csv",
+      "expected": "c46a5c5d83a27e4418a4a13aa196b4097c9aa863d76ce18386d61c8e628cecfb",
+      "actual": "c46a5c5d83a27e4418a4a13aa196b4097c9aa863d76ce18386d61c8e628cecfb",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-puzzles.csv.source.json",
+      "expected": "f00b7d03e568130aa09fc619f16761101134f21361d8044a65388ed7213d19c1",
+      "actual": "f00b7d03e568130aa09fc619f16761101134f21361d8044a65388ed7213d19c1",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\fixtures\\official-sample-manifest.json",
+      "expected": "e0d1f2f249e478479946c629a967afd7bd73c184e1c140d5379837633abf1ac6",
+      "actual": "e0d1f2f249e478479946c629a967afd7bd73c184e1c140d5379837633abf1ac6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\calibration-report.json",
+      "expected": "35121ff07204f76a5f6ffb611ab71e8523f7222f5d571d94885364b1a8bc3283",
+      "actual": "35121ff07204f76a5f6ffb611ab71e8523f7222f5d571d94885364b1a8bc3283",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\data-quality-10000.json",
+      "expected": "8213a44527dfb2d59b99627dfb4798a1339f2509e6c87d2974868fbfa2437fea",
+      "actual": "8213a44527dfb2d59b99627dfb4798a1339f2509e6c87d2974868fbfa2437fea",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\environment.json",
+      "expected": "c8cd46292dd2e020cc3110b1f618ad71bac60180fc62c799344474c24871bb19",
+      "actual": "c8cd46292dd2e020cc3110b1f618ad71bac60180fc62c799344474c24871bb19",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\EXPERIMENTS.md",
+      "expected": "25ec06fa4c31b3bd203cedf0955478a0520310254ac18fc0e048d232a00b09b1",
+      "actual": "25ec06fa4c31b3bd203cedf0955478a0520310254ac18fc0e048d232a00b09b1",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\final-delivery-check.json",
+      "expected": "d2ff4111bfb69bbe62ae5afa881411a91c308c5abb005a5ad24c37d520e3ee21",
+      "actual": "d2ff4111bfb69bbe62ae5afa881411a91c308c5abb005a5ad24c37d520e3ee21",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\frame-probe.json",
+      "expected": "f4b46b2808b71036a52be31ebd145256d7fb5fc75a0b609193470ca17158a802",
+      "actual": "f4b46b2808b71036a52be31ebd145256d7fb5fc75a0b609193470ca17158a802",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\game-frame-verification.json",
+      "expected": "d19b3bea9fbf221e567aa4b20632327972b383bee67d08a184d6d70bd108b2d3",
+      "actual": "d19b3bea9fbf221e567aa4b20632327972b383bee67d08a184d6d70bd108b2d3",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\http-probe.json",
+      "expected": "e724fed6bd988ac78df9585f078f396b486d6ccf0e7a317e95ab777116d99560",
+      "actual": "e724fed6bd988ac78df9585f078f396b486d6ccf0e7a317e95ab777116d99560",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\inference-parity.json",
+      "expected": "12bac8dcef69138b1f1b46ad4153e3df82ade78eb5b9340dc419202d0bb23d97",
+      "actual": "12bac8dcef69138b1f1b46ad4153e3df82ade78eb5b9340dc419202d0bb23d97",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\metrics.csv",
+      "expected": "6977b6919a82380255b2fcd5ffe746a798a4fbf66356fed5381424a023846ca4",
+      "actual": "6977b6919a82380255b2fcd5ffe746a798a4fbf66356fed5381424a023846ca4",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\metrics.json",
+      "expected": "5b14261598397b8c1970dfd1d92c94f0c4c14e11069d43257239ee0ed47d3bb2",
+      "actual": "5b14261598397b8c1970dfd1d92c94f0c4c14e11069d43257239ee0ed47d3bb2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\official-frame-verification.json",
+      "expected": "395bc535b77c945ddbeffc19e84cc43f13374cea602ac02d01bab1b7c87712c4",
+      "actual": "395bc535b77c945ddbeffc19e84cc43f13374cea602ac02d01bab1b7c87712c4",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\pipeline-tests.json",
+      "expected": "fd2998d8652565a466383fc3f98816ba3e6da180c1719153e624e3a2e9899ff0",
+      "actual": "fd2998d8652565a466383fc3f98816ba3e6da180c1719153e624e3a2e9899ff0",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\powershell-compatibility.json",
+      "expected": "e18284382006b31fbd50cb893adc6430e336e3338d820d0abfba69830f976f22",
+      "actual": "e18284382006b31fbd50cb893adc6430e336e3338d820d0abfba69830f976f22",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\preservation.json",
+      "expected": "39361e4b7a658e3076950b6341ef4a5f68d7f9318474d23ae0f4119dc69d0a17",
+      "actual": "39361e4b7a658e3076950b6341ef4a5f68d7f9318474d23ae0f4119dc69d0a17",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\recovery-logs.json",
+      "expected": "4a943d4f752aedf2198c3c594cae5309085180d72915dfc01e878d49f4ae442e",
+      "actual": "4a943d4f752aedf2198c3c594cae5309085180d72915dfc01e878d49f4ae442e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\reserved-opening-families.json",
+      "expected": "56f492385d93016fe14e728809db5e475ac72a49c0ca81be56290dd50db37ae1",
+      "actual": "56f492385d93016fe14e728809db5e475ac72a49c0ca81be56290dd50db37ae1",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\resources.json",
+      "expected": "95ec347c4a86a7607740942f1225a722ba20339f46ecafda394146d0597440df",
+      "actual": "95ec347c4a86a7607740942f1225a722ba20339f46ecafda394146d0597440df",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\streaming-unit.log",
+      "expected": "e8da54215a19d1625048d17a3db067036c6d6a62b3bba278498a108652810fe0",
+      "actual": "e8da54215a19d1625048d17a3db067036c6d6a62b3bba278498a108652810fe0",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\streaming-validation.json",
+      "expected": "4341305c9d53a4a16b1a2ee724fc59905ff10d64c223cf73fa93fdf67f8df448",
+      "actual": "4341305c9d53a4a16b1a2ee724fc59905ff10d64c223cf73fa93fdf67f8df448",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\unit-tests.xml",
+      "expected": "c3a44b788d5403cc8e648835044edacd8378519faa7a06122a09b5f7fce1e8f3",
+      "actual": "c3a44b788d5403cc8e648835044edacd8378519faa7a06122a09b5f7fce1e8f3",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\verification-summary.json",
+      "expected": "27997f2f482e60c6dbffc53fa89f0d15126cd0c2af997eca53998c93a5486031",
+      "actual": "27997f2f482e60c6dbffc53fa89f0d15126cd0c2af997eca53998c93a5486031",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\anchors.py",
+      "expected": "a16433a09426e1f03e0de56353e2d01e10fe0325a23b194c50b0fc6ee4730a7c",
+      "actual": "a16433a09426e1f03e0de56353e2d01e10fe0325a23b194c50b0fc6ee4730a7c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\audit.py",
+      "expected": "1e66968172454bb78009563324567d1b48d686256acc36469d3d2a1ffa011f3a",
+      "actual": "1e66968172454bb78009563324567d1b48d686256acc36469d3d2a1ffa011f3a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\calibration.py",
+      "expected": "a467333d18cfd650f2a174e18017754627528ecfd1e950a73c9b60410a352200",
+      "actual": "a467333d18cfd650f2a174e18017754627528ecfd1e950a73c9b60410a352200",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\durable.py",
+      "expected": "e600ffcca5a7e8d12a9f1119a060762d4c96fae3015d282080de7732fb102310",
+      "actual": "e600ffcca5a7e8d12a9f1119a060762d4c96fae3015d282080de7732fb102310",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\evaluate.py",
+      "expected": "7d01ce8b5d2dbac599e4232fe12cf3dfb605cef1a8771b309b5b96b001f549dd",
+      "actual": "7d01ce8b5d2dbac599e4232fe12cf3dfb605cef1a8771b309b5b96b001f549dd",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\memory_limit.py",
+      "expected": "ac16b21292cbf26e223b9a3b1edd63a0753d3aaf7dd663cca1ffe150061d3822",
+      "actual": "ac16b21292cbf26e223b9a3b1edd63a0753d3aaf7dd663cca1ffe150061d3822",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\model_adapter.py",
+      "expected": "fc5946fc1f45ccd376298beff060ac87ac743cebdf6cbad5fc9a300faf9b0f16",
+      "actual": "fc5946fc1f45ccd376298beff060ac87ac743cebdf6cbad5fc9a300faf9b0f16",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\pipeline.py",
+      "expected": "c29c5b3a237b8c595c6fccefd2d8b78d7eff4a79852570e0bfa180453bfa0714",
+      "actual": "c29c5b3a237b8c595c6fccefd2d8b78d7eff4a79852570e0bfa180453bfa0714",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\quality.py",
+      "expected": "cdd884051cd9be8d65be9fc534da3c5abf4440cf8461c57c57b8c1983465d8a1",
+      "actual": "cdd884051cd9be8d65be9fc534da3c5abf4440cf8461c57c57b8c1983465d8a1",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\recover.py",
+      "expected": "72a6ca28025aebbc5cb0f2369a6e3916daeac04e82508c147149a5c2c1d609ac",
+      "actual": "72a6ca28025aebbc5cb0f2369a6e3916daeac04e82508c147149a5c2c1d609ac",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\run.py",
+      "expected": "215cd37609b685388c512ac111e91524d889812147f4459e9ef0a8a34ffa821a",
+      "actual": "215cd37609b685388c512ac111e91524d889812147f4459e9ef0a8a34ffa821a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\shards.py",
+      "expected": "3d632226e3779920bd96a0454c23d476407867ce2e803eb161178ca8d74d99e6",
+      "actual": "3d632226e3779920bd96a0454c23d476407867ce2e803eb161178ca8d74d99e6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\storage.py",
+      "expected": "7ef35f9e3e93e1127dbe94e4b6f4fcf4e92e23e58fed176f1efde9ac44c9cf2d",
+      "actual": "7ef35f9e3e93e1127dbe94e4b6f4fcf4e92e23e58fed176f1efde9ac44c9cf2d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\streaming.py",
+      "expected": "d239b8258e36c23d95bd2ff22be2654fc64b5ff0876cb1fe8b1d263414e1bf02",
+      "actual": "d239b8258e36c23d95bd2ff22be2654fc64b5ff0876cb1fe8b1d263414e1bf02",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\shardtrain\\__init__.py",
+      "expected": "cf7970a6de2f99f73bde7581a970afb17e2f9e3b9ae7a9ed4ca6ba2fc71f6ce4",
+      "actual": "cf7970a6de2f99f73bde7581a970afb17e2f9e3b9ae7a9ed4ca6ba2fc71f6ce4",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tests\\test_durable.py",
+      "expected": "ec9e0ef99df4f0c93af1a2144357a966463308823fdf386dcc97a0108eb70fa0",
+      "actual": "ec9e0ef99df4f0c93af1a2144357a966463308823fdf386dcc97a0108eb70fa0",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tests\\test_evaluation.py",
+      "expected": "a0e6a19081719c0b567d2afcd0df3e9c1423113480e36ecb53e32a55d448b9fb",
+      "actual": "a0e6a19081719c0b567d2afcd0df3e9c1423113480e36ecb53e32a55d448b9fb",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tests\\test_pipeline.py",
+      "expected": "d6eaad90b695cc538c52d6805ab9be49b29a44effa0ea66214a0545721e4ce42",
+      "actual": "d6eaad90b695cc538c52d6805ab9be49b29a44effa0ea66214a0545721e4ce42",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tests\\test_powershell.py",
+      "expected": "d783bd3acaba152cee228f89798b9e51269f950aa9243524c2d0318f1052e351",
+      "actual": "d783bd3acaba152cee228f89798b9e51269f950aa9243524c2d0318f1052e351",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tests\\test_quality.py",
+      "expected": "6d2495c67bb9be047e867fb10f903de4b50c53cbc2758b85109fbb90aa17eeec",
+      "actual": "6d2495c67bb9be047e867fb10f903de4b50c53cbc2758b85109fbb90aa17eeec",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tests\\test_shards.py",
+      "expected": "1c028a3d808438787565a398d2cc950516387a31a3000eb0f0abd7008154af5d",
+      "actual": "1c028a3d808438787565a398d2cc950516387a31a3000eb0f0abd7008154af5d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tests\\test_streaming.py",
+      "expected": "1e7e1994b6fff4020168d7be1d7749c2880ae967f74d831a3e0c0ab84c19909a",
+      "actual": "1e7e1994b6fff4020168d7be1d7749c2880ae967f74d831a3e0c0ab84c19909a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tools\\check_inference.py",
+      "expected": "37a172694f879253b5bd13b6823996378fe1d1ac43725e6802079dbeaac87aab",
+      "actual": "37a172694f879253b5bd13b6823996378fe1d1ac43725e6802079dbeaac87aab",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tools\\evaluate_candidate.py",
+      "expected": "2de1a8f71774bf3781dd06dca308d53f31c639f243ddc9d1708937a49e0395c5",
+      "actual": "2de1a8f71774bf3781dd06dca308d53f31c639f243ddc9d1708937a49e0395c5",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tools\\evaluate_stages.py",
+      "expected": "bb29917af34f1c10be55c83634375517d12395d8a2377ff2607d51cf59964bb2",
+      "actual": "bb29917af34f1c10be55c83634375517d12395d8a2377ff2607d51cf59964bb2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tools\\fit_calibration.py",
+      "expected": "cbf7b5409d7638371edbea89f5fc30a9afee14547f74a30a6c5208420079c5fb",
+      "actual": "cbf7b5409d7638371edbea89f5fc30a9afee14547f74a30a6c5208420079c5fb",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tools\\prepare_sample.py",
+      "expected": "18f29ba68666f2c8c3fe83e05591dae01b72a0ab88405d2acbfb4e732297c0ea",
+      "actual": "18f29ba68666f2c8c3fe83e05591dae01b72a0ab88405d2acbfb4e732297c0ea",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tools\\verify_game_sample.py",
+      "expected": "5aeda869695e483fa5eff7bc9973756ce4aa787adfd182fa5f2aabc54db5ee6b",
+      "actual": "5aeda869695e483fa5eff7bc9973756ce4aa787adfd182fa5f2aabc54db5ee6b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\tools\\verify_official_sample.py",
+      "expected": "1f2ba1524577e610d07da21e07dcbc8614ff91d9429af41a1da8cb9b5f832ad2",
+      "actual": "1f2ba1524577e610d07da21e07dcbc8614ff91d9429af41a1da8cb9b5f832ad2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\graphs\\start-consistency.png",
+      "expected": "7620376ee7ea127f941dd847fe918fb2b61fac9b79ef612c798613a4db85fb4a",
+      "actual": "7620376ee7ea127f941dd847fe918fb2b61fac9b79ef612c798613a4db85fb4a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\graphs\\validation-and-safety.png",
+      "expected": "42f25323f3255c4adb48a67df9b286131c1a1e9ab1b23856c1fb7f210eddf9dc",
+      "actual": "42f25323f3255c4adb48a67df9b286131c1a1e9ab1b23856c1fb7f210eddf9dc",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\recovery-logs\\tests-0.log",
+      "expected": "df7d0675d6f21bb111622abfe1d7067e9e45cea5cdc82467ff8e0e22591fb8ac",
+      "actual": "df7d0675d6f21bb111622abfe1d7067e9e45cea5cdc82467ff8e0e22591fb8ac",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\recovery-logs\\tests-1-resume.log",
+      "expected": "5ef54dcd38db0307d1660d8eeba2944ee5408bdabea092e5d5a0d6383a867d7a",
+      "actual": "5ef54dcd38db0307d1660d8eeba2944ee5408bdabea092e5d5a0d6383a867d7a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\recovery-logs\\tests-2-resume.log",
+      "expected": "29b65fde4cdca5cc3430323b6a20455587733bbbb8e29453b277c90da5576d50",
+      "actual": "29b65fde4cdca5cc3430323b6a20455587733bbbb8e29453b277c90da5576d50",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\recovery-logs\\tests-3-resume.log",
+      "expected": "e7d34b12436fa82f714cbfa532d75a7b8b1793951f1b6e27e26029ff03727c11",
+      "actual": "e7d34b12436fa82f714cbfa532d75a7b8b1793951f1b6e27e26029ff03727c11",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\recovery-logs\\tests-4.log",
+      "expected": "70fecebd773282c2a1dd71faad953daf0dc66bc71ed54c857a6e6b5d2bd8814c",
+      "actual": "70fecebd773282c2a1dd71faad953daf0dc66bc71ed54c857a6e6b5d2bd8814c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\recovery-logs\\tests-5-mirror_resume.log",
+      "expected": "2d79a6f5d310e4794712c1d5636884524809bc995389531637db700af5678fdb",
+      "actual": "2d79a6f5d310e4794712c1d5636884524809bc995389531637db700af5678fdb",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\reports\\recovery-logs\\tests-5-previous_checkpoint_resume.log",
+      "expected": "dc6078f56061f2a0e14f120406d678167aa462697e2bbb422849c84b208d8184",
+      "actual": "dc6078f56061f2a0e14f120406d678167aa462697e2bbb422849c84b208d8184",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\arena.py",
+      "expected": "3e28cdba564eb0e5092be8ddfaec036564837848fa350fc7e296096cf8b3e8d3",
+      "actual": "3e28cdba564eb0e5092be8ddfaec036564837848fa350fc7e296096cf8b3e8d3",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\bootstrap.py",
+      "expected": "04446f20f8750761a30615dbe76df910c8443d8dfadfc2a3f1943db76decbd9c",
+      "actual": "04446f20f8750761a30615dbe76df910c8443d8dfadfc2a3f1943db76decbd9c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\champion.py",
+      "expected": "3befbde47763c023efd4c17065c105df73ce7eeeda4d3c10ad0a2d5668d43bce",
+      "actual": "3befbde47763c023efd4c17065c105df73ce7eeeda4d3c10ad0a2d5668d43bce",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\checkpoint.py",
+      "expected": "7478e2742cbb5251b6196ad5c6affb53e55f15b7a1f8707fa30f363411d76fe1",
+      "actual": "7478e2742cbb5251b6196ad5c6affb53e55f15b7a1f8707fa30f363411d76fe1",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\data.py",
+      "expected": "91449ce538d8a4c9bba4f48200d3a85471da257800c6070a5b3bc77be4402148",
+      "actual": "91449ce538d8a4c9bba4f48200d3a85471da257800c6070a5b3bc77be4402148",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\encoding.py",
+      "expected": "3f805b2814e360d689f30f47bbe0c81907074befc8fa34136c5f813f0561ef76",
+      "actual": "3f805b2814e360d689f30f47bbe0c81907074befc8fa34136c5f813f0561ef76",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\generate.py",
+      "expected": "5e51fa72fcd88a25337cd30e6c828515a738862c1635bbec441ad02adfe090e5",
+      "actual": "5e51fa72fcd88a25337cd30e6c828515a738862c1635bbec441ad02adfe090e5",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\loop.py",
+      "expected": "c2df93b26617b1a5f813af1e71a9afa377e9e19623026d7d8a790406697fae80",
+      "actual": "c2df93b26617b1a5f813af1e71a9afa377e9e19623026d7d8a790406697fae80",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\match.py",
+      "expected": "483b204971891fbdd115c402dd66176e99d9f3f2ebd55968b596a6e9e6bd8901",
+      "actual": "483b204971891fbdd115c402dd66176e99d9f3f2ebd55968b596a6e9e6bd8901",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\model.py",
+      "expected": "c7e33894b6b96978e3717b713291e8260faa8d2400c0e516189b9f30d0bf78ef",
+      "actual": "c7e33894b6b96978e3717b713291e8260faa8d2400c0e516189b9f30d0bf78ef",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\native.py",
+      "expected": "f970c96b71e92c1a7cb9d82b8c821ffcf864ca28439562704eb91305631cb9be",
+      "actual": "f970c96b71e92c1a7cb9d82b8c821ffcf864ca28439562704eb91305631cb9be",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\replay.py",
+      "expected": "a66767df1bc6116eaeba9ac41d18d2b6541655304c88927b745fe3edc9fb4905",
+      "actual": "a66767df1bc6116eaeba9ac41d18d2b6541655304c88927b745fe3edc9fb4905",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\selfplay.py",
+      "expected": "6f78bf6de150d6d0ed36bffb363e0b1f29669a0e8de36b427fe4528cac329af7",
+      "actual": "6f78bf6de150d6d0ed36bffb363e0b1f29669a0e8de36b427fe4528cac329af7",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\train.py",
+      "expected": "cda86f44a3bb6f4ca798c84ab3248b83ac51bfc8b8047bb34a36b99a97ad574a",
+      "actual": "cda86f44a3bb6f4ca798c84ab3248b83ac51bfc8b8047bb34a36b99a97ad574a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\training.py",
+      "expected": "6b0616e147f54f14d6a90709d2eed2c9eff5d2cb5c0ec0a5e95855c0e14739d6",
+      "actual": "6b0616e147f54f14d6a90709d2eed2c9eff5d2cb5c0ec0a5e95855c0e14739d6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\verify.py",
+      "expected": "a420e59dc81791bcd9336ef326015e9d1c3c916888d7939bf34ad8252a4f7938",
+      "actual": "a420e59dc81791bcd9336ef326015e9d1c3c916888d7939bf34ad8252a4f7938",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\__init__.py",
+      "expected": "c9c8dda2a5324abfece952250f13a78cd1f2f123862195b877226d18d64ae7fc",
+      "actual": "c9c8dda2a5324abfece952250f13a78cd1f2f123862195b877226d18d64ae7fc",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-trainer\\vendor\\zero\\__main__.py",
+      "expected": "6ebc025732479c821b443b39250fdc95d89bd096f4294da2f11caadff14dbf9d",
+      "actual": "6ebc025732479c821b443b39250fdc95d89bd096f4294da2f11caadff14dbf9d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\common-holdout.csv",
+      "expected": "f73384df349deac30dc3bbc893bae26c05f9975e0a1cd08d65c9f981068db810",
+      "actual": "f73384df349deac30dc3bbc893bae26c05f9975e0a1cd08d65c9f981068db810",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\common-holdout.json",
+      "expected": "1a69c50328b01f8ae30df8ccae066570ac87734745ff5d138881879f626a4412",
+      "actual": "1a69c50328b01f8ae30df8ccae066570ac87734745ff5d138881879f626a4412",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\evaluation-summary.json",
+      "expected": "b4053d81aa66532c7243d4477fb3828fb5229f984008fe63940ff8e4a2de6271",
+      "actual": "b4053d81aa66532c7243d4477fb3828fb5229f984008fe63940ff8e4a2de6271",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\validation-results.json",
+      "expected": "9bbfc9233722797c6683ae7c0be61106b1900e2ea41c6431d363347112b46e04",
+      "actual": "9bbfc9233722797c6683ae7c0be61106b1900e2ea41c6431d363347112b46e04",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\timing.json",
+      "expected": "0e1fbb4a25272b036b936245f50aa93c50c88d885bd6f7654c359aa4a9d6e650",
+      "actual": "0e1fbb4a25272b036b936245f50aa93c50c88d885bd6f7654c359aa4a9d6e650",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\training.stdout.log",
+      "expected": "0ed81b32f28c4cbde95b6bf79bbed2cf23c334c234a6e6c8483ddd8aa8a0bbe5",
+      "actual": "0ed81b32f28c4cbde95b6bf79bbed2cf23c334c234a6e6c8483ddd8aa8a0bbe5",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\timing.json",
+      "expected": "405f7079d8d7e948d6e91e7d05dbb7259e31cd63ab112933f40b288d829cbeb9",
+      "actual": "405f7079d8d7e948d6e91e7d05dbb7259e31cd63ab112933f40b288d829cbeb9",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\training.stdout.log",
+      "expected": "e9fd9e039190c4ca42b805625cb98e6637d79d434de2670dacdf373b2d8ad25c",
+      "actual": "e9fd9e039190c4ca42b805625cb98e6637d79d434de2670dacdf373b2d8ad25c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\timing.json",
+      "expected": "b8314d99f4b9e560c0f006454a2d6bdeeb8cb15ae5cfadf423a637cfeacf456a",
+      "actual": "b8314d99f4b9e560c0f006454a2d6bdeeb8cb15ae5cfadf423a637cfeacf456a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\training.stdout.log",
+      "expected": "56e6b56dc36688b6764dee135565e5e440580de80a4fa3912f1de8328b473c02",
+      "actual": "56e6b56dc36688b6764dee135565e5e440580de80a4fa3912f1de8328b473c02",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoint-owner.json",
+      "expected": "5a643e41f44802c3f4012b2519d746110e65e84dcc1012f1d2c9d055a90e4345",
+      "actual": "5a643e41f44802c3f4012b2519d746110e65e84dcc1012f1d2c9d055a90e4345",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\evaluation-report.json",
+      "expected": "6796ff91d0d10249fa446a5c5874de8ac462447d83aa465eebee74eecb1d3e8c",
+      "actual": "6796ff91d0d10249fa446a5c5874de8ac462447d83aa465eebee74eecb1d3e8c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\matches.json",
+      "expected": "6627f7cf485280d82e1406d7501ca5346aaf4fa102fb78a58ee3829b6ec2e7ca",
+      "actual": "6627f7cf485280d82e1406d7501ca5346aaf4fa102fb78a58ee3829b6ec2e7ca",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\resource-policy.json",
+      "expected": "7becb468e03e81651678c277cd9dc38e0903e8d387675b0684703876796893fc",
+      "actual": "7becb468e03e81651678c277cd9dc38e0903e8d387675b0684703876796893fc",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\status.json",
+      "expected": "8db7a53e92b83156e1f07ad8127297ba898fd438a92be51d5b37e2c1edab36e2",
+      "actual": "8db7a53e92b83156e1f07ad8127297ba898fd438a92be51d5b37e2c1edab36e2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\training-report.json",
+      "expected": "e5ceac4b172ba2ac40edf1c7b43aafb2f6147df2c53f9d0da8ee41009ed64023",
+      "actual": "e5ceac4b172ba2ac40edf1c7b43aafb2f6147df2c53f9d0da8ee41009ed64023",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\data\\ledger.sqlite3",
+      "expected": "7b713410f2e76a2dbe9ba726f242ac39f42bd68c0d3f620712fe8e3f090f2f52",
+      "actual": "7b713410f2e76a2dbe9ba726f242ac39f42bd68c0d3f620712fe8e3f090f2f52",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-b505031739914d60b00b01125ff773e6.manifest.json",
+      "expected": "9103a7acfc2d731293f3f0f94d2e80f3c0b83c07d87dcc0f61435f54346caab7",
+      "actual": "9103a7acfc2d731293f3f0f94d2e80f3c0b83c07d87dcc0f61435f54346caab7",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-b505031739914d60b00b01125ff773e6.mirror.pt",
+      "expected": "bcffa19980ddf1e9452001ff21673c0c3e3c45e0111443d69925d23ce8b1704e",
+      "actual": "bcffa19980ddf1e9452001ff21673c0c3e3c45e0111443d69925d23ce8b1704e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-b505031739914d60b00b01125ff773e6.pt",
+      "expected": "bcffa19980ddf1e9452001ff21673c0c3e3c45e0111443d69925d23ce8b1704e",
+      "actual": "bcffa19980ddf1e9452001ff21673c0c3e3c45e0111443d69925d23ce8b1704e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-b505031739914d60b00b01125ff773e6.zero",
+      "expected": "f64b38ca6c63d0fb258121dc26e06fb528dd3991fd8b4ddd30cdb950144147ab",
+      "actual": "f64b38ca6c63d0fb258121dc26e06fb528dd3991fd8b4ddd30cdb950144147ab",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.manifest.json",
+      "expected": "abd23616c1b1b84e873dd6c73979f2916de1229bfa905337714ba92825701f2a",
+      "actual": "abd23616c1b1b84e873dd6c73979f2916de1229bfa905337714ba92825701f2a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.mirror.pt",
+      "expected": "f9ca4348f441e5eb3d10179cf0591818c24550abad78d21823c99922fb6842de",
+      "actual": "f9ca4348f441e5eb3d10179cf0591818c24550abad78d21823c99922fb6842de",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.pt",
+      "expected": "f9ca4348f441e5eb3d10179cf0591818c24550abad78d21823c99922fb6842de",
+      "actual": "f9ca4348f441e5eb3d10179cf0591818c24550abad78d21823c99922fb6842de",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.zero",
+      "expected": "f64b38ca6c63d0fb258121dc26e06fb528dd3991fd8b4ddd30cdb950144147ab",
+      "actual": "f64b38ca6c63d0fb258121dc26e06fb528dd3991fd8b4ddd30cdb950144147ab",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-e4354ee1423f4060ab079a815ee5a6dc.manifest.json",
+      "expected": "93048fb4b3bd83ecd88ca00b78208f7800cf5226dbd2b934a60c41eebfd32938",
+      "actual": "93048fb4b3bd83ecd88ca00b78208f7800cf5226dbd2b934a60c41eebfd32938",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-e4354ee1423f4060ab079a815ee5a6dc.mirror.pt",
+      "expected": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf",
+      "actual": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-e4354ee1423f4060ab079a815ee5a6dc.pt",
+      "expected": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf",
+      "actual": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\checkpoints\\bundle-e4354ee1423f4060ab079a815ee5a6dc.zero",
+      "expected": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af",
+      "actual": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\logs\\training.csv",
+      "expected": "b584cecaada548c6f578e94886a2eed96c63905a04ada8ef4d62b9f6db6c9229",
+      "actual": "b584cecaada548c6f578e94886a2eed96c63905a04ada8ef4d62b9f6db6c9229",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\logs\\training.jsonl",
+      "expected": "0115f9eeb591da45358c138eeae5124496259cbd917785010641d0e2836d1b65",
+      "actual": "0115f9eeb591da45358c138eeae5124496259cbd917785010641d0e2836d1b65",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\evaluations\\f889ab6a3594c5cf371da392\\evaluation-report.json",
+      "expected": "6796ff91d0d10249fa446a5c5874de8ac462447d83aa465eebee74eecb1d3e8c",
+      "actual": "6796ff91d0d10249fa446a5c5874de8ac462447d83aa465eebee74eecb1d3e8c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\evaluations\\f889ab6a3594c5cf371da392\\matches.json",
+      "expected": "8b99737c0941c4c469a7f4bd015d42da51e386dd15a582edb0fdffa614de97c1",
+      "actual": "8b99737c0941c4c469a7f4bd015d42da51e386dd15a582edb0fdffa614de97c1",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\evaluations\\f889ab6a3594c5cf371da392\\matches.pgn",
+      "expected": "4545330b7643dc10b3d17a92ebbd88a65fa5cbc3425263329e7aaf2141ee291e",
+      "actual": "4545330b7643dc10b3d17a92ebbd88a65fa5cbc3425263329e7aaf2141ee291e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\candidate\\evaluations\\f889ab6a3594c5cf371da392\\matches.progress.json",
+      "expected": "7f3a3a595ed4d5c9db1c86b6764c9935f877725a78a060283ee0063e6b822191",
+      "actual": "7f3a3a595ed4d5c9db1c86b6764c9935f877725a78a060283ee0063e6b822191",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\data\\fixed\\test.jsonl",
+      "expected": "30dd79360a88094f47c05670cca45a0925664ce4de32952f4d5ac077e2d7b58b",
+      "actual": "30dd79360a88094f47c05670cca45a0925664ce4de32952f4d5ac077e2d7b58b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\data\\fixed\\validation.jsonl",
+      "expected": "ca69be961de9a4e372e99811d96e644e0f35edd03cf2acc1bee6aca1aebbed67",
+      "actual": "ca69be961de9a4e372e99811d96e644e0f35edd03cf2acc1bee6aca1aebbed67",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-100\\data\\shards\\shard-00000004.jsonl",
+      "expected": "3b624444305398a416faeb266ebde57721e981c2e6bb1338d8e01108c10a7e02",
+      "actual": "3b624444305398a416faeb266ebde57721e981c2e6bb1338d8e01108c10a7e02",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoint-owner.json",
+      "expected": "fb6ad09e9dbcd23ebb35c32232202f0ec67ea7f7c6a727f092869e54fc9cfe9b",
+      "actual": "fb6ad09e9dbcd23ebb35c32232202f0ec67ea7f7c6a727f092869e54fc9cfe9b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\evaluation-report.json",
+      "expected": "a811e79120123732c3d6dda60e84f0ffa6f35f9861976952ebf318b7108bd451",
+      "actual": "a811e79120123732c3d6dda60e84f0ffa6f35f9861976952ebf318b7108bd451",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\matches.json",
+      "expected": "e7e2bcac192a7209747f3af65fb372685fdc5e5a7e10a24818f2faf0b9d90464",
+      "actual": "e7e2bcac192a7209747f3af65fb372685fdc5e5a7e10a24818f2faf0b9d90464",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\resource-policy.json",
+      "expected": "7becb468e03e81651678c277cd9dc38e0903e8d387675b0684703876796893fc",
+      "actual": "7becb468e03e81651678c277cd9dc38e0903e8d387675b0684703876796893fc",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\status.json",
+      "expected": "3dd06bc59d64a6e97779feec3f8a1727dc042cb32d6ddfddbf031dd20b9bbd20",
+      "actual": "3dd06bc59d64a6e97779feec3f8a1727dc042cb32d6ddfddbf031dd20b9bbd20",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\training-report.json",
+      "expected": "8a505e19df439ef2d06d3051c5166a16b429e726437e986ef5495974b17d196e",
+      "actual": "8a505e19df439ef2d06d3051c5166a16b429e726437e986ef5495974b17d196e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\data\\ledger.sqlite3",
+      "expected": "b32b98e5e2aab41d6d6e042c56c433560dec4fbc798667197d4fcfaa8f5dbaf8",
+      "actual": "b32b98e5e2aab41d6d6e042c56c433560dec4fbc798667197d4fcfaa8f5dbaf8",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoints\\bundle-6bbfd686b2254f12a54b75dc242e1a8a.manifest.json",
+      "expected": "d32d6656118c17ce214b8b08fda2929385e2d9d36156e6d1444c293eceb2c2b1",
+      "actual": "d32d6656118c17ce214b8b08fda2929385e2d9d36156e6d1444c293eceb2c2b1",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoints\\bundle-6bbfd686b2254f12a54b75dc242e1a8a.mirror.pt",
+      "expected": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867",
+      "actual": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoints\\bundle-6bbfd686b2254f12a54b75dc242e1a8a.pt",
+      "expected": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867",
+      "actual": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoints\\bundle-6bbfd686b2254f12a54b75dc242e1a8a.zero",
+      "expected": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb",
+      "actual": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoints\\bundle-735de626cbb244a5b6f6f09609143350.manifest.json",
+      "expected": "7b14ac8448c4ab825b9155dd6d91e7c03d7aadb9208d70cbcdc5645c1bb1c241",
+      "actual": "7b14ac8448c4ab825b9155dd6d91e7c03d7aadb9208d70cbcdc5645c1bb1c241",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoints\\bundle-735de626cbb244a5b6f6f09609143350.mirror.pt",
+      "expected": "baca75ca6b42be243e9692bf84d024d0aea8a35dcb55c4d7172329e5e2bb7ed7",
+      "actual": "baca75ca6b42be243e9692bf84d024d0aea8a35dcb55c4d7172329e5e2bb7ed7",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoints\\bundle-735de626cbb244a5b6f6f09609143350.pt",
+      "expected": "baca75ca6b42be243e9692bf84d024d0aea8a35dcb55c4d7172329e5e2bb7ed7",
+      "actual": "baca75ca6b42be243e9692bf84d024d0aea8a35dcb55c4d7172329e5e2bb7ed7",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoints\\bundle-735de626cbb244a5b6f6f09609143350.zero",
+      "expected": "cc82c95407a805a1833edb1d182258a87cf701acc51f4d0d7f1dc64b3071d381",
+      "actual": "cc82c95407a805a1833edb1d182258a87cf701acc51f4d0d7f1dc64b3071d381",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoints\\bundle-d2af69a795a84addaabb497e3b09e4fa.manifest.json",
+      "expected": "b6848a9c44b2c5cad71bc259d256b13a01e7a1c395bb488eb8fc1938701d19ef",
+      "actual": "b6848a9c44b2c5cad71bc259d256b13a01e7a1c395bb488eb8fc1938701d19ef",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoints\\bundle-d2af69a795a84addaabb497e3b09e4fa.mirror.pt",
+      "expected": "8e2782a873d934ded5bf0a711b382f5de700dc82e018a4ee7876cba236310d57",
+      "actual": "8e2782a873d934ded5bf0a711b382f5de700dc82e018a4ee7876cba236310d57",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoints\\bundle-d2af69a795a84addaabb497e3b09e4fa.pt",
+      "expected": "8e2782a873d934ded5bf0a711b382f5de700dc82e018a4ee7876cba236310d57",
+      "actual": "8e2782a873d934ded5bf0a711b382f5de700dc82e018a4ee7876cba236310d57",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\checkpoints\\bundle-d2af69a795a84addaabb497e3b09e4fa.zero",
+      "expected": "6512cc87d5efdc66811e3cfa647cf4e82aff636bc90c29034695d7c95d4621fe",
+      "actual": "6512cc87d5efdc66811e3cfa647cf4e82aff636bc90c29034695d7c95d4621fe",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\logs\\training.csv",
+      "expected": "433a9d27068ddbb7afaae22a1fb615e803ab2f91971e4bc18baadbd28a0911b6",
+      "actual": "433a9d27068ddbb7afaae22a1fb615e803ab2f91971e4bc18baadbd28a0911b6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\logs\\training.jsonl",
+      "expected": "ac46fc39ad192cbc710f618dc63a1a47ce63600fd1fd71651f420f9803a422c6",
+      "actual": "ac46fc39ad192cbc710f618dc63a1a47ce63600fd1fd71651f420f9803a422c6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\evaluations\\c5dc0a72d913272cd8484ffb\\evaluation-report.json",
+      "expected": "a811e79120123732c3d6dda60e84f0ffa6f35f9861976952ebf318b7108bd451",
+      "actual": "a811e79120123732c3d6dda60e84f0ffa6f35f9861976952ebf318b7108bd451",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\evaluations\\c5dc0a72d913272cd8484ffb\\matches.json",
+      "expected": "d21ca4737f418443eb5cacd1c80542ae554d612bc3296bca89ca009d2675f0e8",
+      "actual": "d21ca4737f418443eb5cacd1c80542ae554d612bc3296bca89ca009d2675f0e8",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\evaluations\\c5dc0a72d913272cd8484ffb\\matches.pgn",
+      "expected": "db2c7f205af372c3b343de65e7e7a52950c6a3b57f814bca3c2ceb9a54ebe523",
+      "actual": "db2c7f205af372c3b343de65e7e7a52950c6a3b57f814bca3c2ceb9a54ebe523",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\candidate\\evaluations\\c5dc0a72d913272cd8484ffb\\matches.progress.json",
+      "expected": "3abe957c1367cdae544ab287002197ddda9ce6c604b6da36457cff8274007331",
+      "actual": "3abe957c1367cdae544ab287002197ddda9ce6c604b6da36457cff8274007331",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\data\\fixed\\test.jsonl",
+      "expected": "73e87d7d78f16b7d301e360d26d79a897accb47c6e31402932bf79c6af534ac2",
+      "actual": "73e87d7d78f16b7d301e360d26d79a897accb47c6e31402932bf79c6af534ac2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\data\\fixed\\validation.jsonl",
+      "expected": "50212ab036b5203e51be42773436286e62090573758c2870c7ce17934c53a913",
+      "actual": "50212ab036b5203e51be42773436286e62090573758c2870c7ce17934c53a913",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-1000\\data\\shards\\shard-00000004.jsonl",
+      "expected": "4ee12bcd484246eb09970e3a95e3b46994a5e916dbaff1f226ab8783d7d9a20d",
+      "actual": "4ee12bcd484246eb09970e3a95e3b46994a5e916dbaff1f226ab8783d7d9a20d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoint-owner.json",
+      "expected": "2d98c373dc189b392f99c3a29ad3e72204dcee31fc9f62ab5b3694d7606fa5a2",
+      "actual": "2d98c373dc189b392f99c3a29ad3e72204dcee31fc9f62ab5b3694d7606fa5a2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\evaluation-report.json",
+      "expected": "1b1c731e795b9cac934627664624f741be9379b6444992782862c63a8d5cb9bf",
+      "actual": "1b1c731e795b9cac934627664624f741be9379b6444992782862c63a8d5cb9bf",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\matches.json",
+      "expected": "41cfab3ffdb12a593582590fd6117f02c89599304003ca253b9fd28b608ceda3",
+      "actual": "41cfab3ffdb12a593582590fd6117f02c89599304003ca253b9fd28b608ceda3",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\resource-policy.json",
+      "expected": "7becb468e03e81651678c277cd9dc38e0903e8d387675b0684703876796893fc",
+      "actual": "7becb468e03e81651678c277cd9dc38e0903e8d387675b0684703876796893fc",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\status.json",
+      "expected": "e5f49d213626b34e5784e9675c3103aec23f81396afef55083159233875bb4ae",
+      "actual": "e5f49d213626b34e5784e9675c3103aec23f81396afef55083159233875bb4ae",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\training-report.json",
+      "expected": "86c31478692cf2a9b306bc8ed73a41802afc6c165241353f075741a9822d3d62",
+      "actual": "86c31478692cf2a9b306bc8ed73a41802afc6c165241353f075741a9822d3d62",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\data\\ledger.sqlite3",
+      "expected": "81188e36acf382674286099adeefca0732760dffa67fa1c90e4a431bdcbd614b",
+      "actual": "81188e36acf382674286099adeefca0732760dffa67fa1c90e4a431bdcbd614b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-30929c2f333f49378dbfbd3370aff8cf.manifest.json",
+      "expected": "48895e1625357018c108608c600f36f1bc42a93b963678f3b4353968e92946d7",
+      "actual": "48895e1625357018c108608c600f36f1bc42a93b963678f3b4353968e92946d7",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-30929c2f333f49378dbfbd3370aff8cf.mirror.pt",
+      "expected": "369f1a62d1e4f28ef943514350fab9e8103b455a22474a18d1b1eff205e8d126",
+      "actual": "369f1a62d1e4f28ef943514350fab9e8103b455a22474a18d1b1eff205e8d126",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-30929c2f333f49378dbfbd3370aff8cf.pt",
+      "expected": "369f1a62d1e4f28ef943514350fab9e8103b455a22474a18d1b1eff205e8d126",
+      "actual": "369f1a62d1e4f28ef943514350fab9e8103b455a22474a18d1b1eff205e8d126",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-30929c2f333f49378dbfbd3370aff8cf.zero",
+      "expected": "a06f84bfc02da832999d88f06a838f5775841cd729570636b4212d1207166108",
+      "actual": "a06f84bfc02da832999d88f06a838f5775841cd729570636b4212d1207166108",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-62688936b83c445992ff056f47a58cc2.manifest.json",
+      "expected": "a6ad7d4b78a77e55dcfba3a5f90c920e483883e7bcb6e33879d7c8e4d796d3b8",
+      "actual": "a6ad7d4b78a77e55dcfba3a5f90c920e483883e7bcb6e33879d7c8e4d796d3b8",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-62688936b83c445992ff056f47a58cc2.mirror.pt",
+      "expected": "90dd2a5fafd95ffe502b54f0961ddbe64ae557fc7bcd58f0896e780c64bc1388",
+      "actual": "90dd2a5fafd95ffe502b54f0961ddbe64ae557fc7bcd58f0896e780c64bc1388",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-62688936b83c445992ff056f47a58cc2.pt",
+      "expected": "90dd2a5fafd95ffe502b54f0961ddbe64ae557fc7bcd58f0896e780c64bc1388",
+      "actual": "90dd2a5fafd95ffe502b54f0961ddbe64ae557fc7bcd58f0896e780c64bc1388",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-62688936b83c445992ff056f47a58cc2.zero",
+      "expected": "499df73ffec672de91c6a500e64c0f0eb18daa4aff0c1bd95fcf2047086ee055",
+      "actual": "499df73ffec672de91c6a500e64c0f0eb18daa4aff0c1bd95fcf2047086ee055",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-a181d36c81b94b22aa786094e626b6b8.manifest.json",
+      "expected": "3382c0974443ff960c5f14dd04804e42e10e7b0014726d929a9b81d3c2a8db6b",
+      "actual": "3382c0974443ff960c5f14dd04804e42e10e7b0014726d929a9b81d3c2a8db6b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-a181d36c81b94b22aa786094e626b6b8.mirror.pt",
+      "expected": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+      "actual": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-a181d36c81b94b22aa786094e626b6b8.pt",
+      "expected": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+      "actual": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-a181d36c81b94b22aa786094e626b6b8.zero",
+      "expected": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a",
+      "actual": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\logs\\training.csv",
+      "expected": "e686707c178d490d9f48481c783845b3f967d239e36fd5b1f47ba37e58cb207e",
+      "actual": "e686707c178d490d9f48481c783845b3f967d239e36fd5b1f47ba37e58cb207e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\logs\\training.jsonl",
+      "expected": "b9f672bff8915340e9e19a1bcd96c95b6763f2ae9ff8875eb74c2362fb1120f6",
+      "actual": "b9f672bff8915340e9e19a1bcd96c95b6763f2ae9ff8875eb74c2362fb1120f6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\evaluations\\5def2130ca18f245765eacb4\\evaluation-report.json",
+      "expected": "1b1c731e795b9cac934627664624f741be9379b6444992782862c63a8d5cb9bf",
+      "actual": "1b1c731e795b9cac934627664624f741be9379b6444992782862c63a8d5cb9bf",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\evaluations\\5def2130ca18f245765eacb4\\matches.json",
+      "expected": "e03346323f84b0f35e4c2494823baa2b813ddeb2e8bc12f60fe7641531158119",
+      "actual": "e03346323f84b0f35e4c2494823baa2b813ddeb2e8bc12f60fe7641531158119",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\evaluations\\5def2130ca18f245765eacb4\\matches.pgn",
+      "expected": "83bd318f44b8375b464f7113a2c901031c83ce0e65adaba57dd214075a0d4fe4",
+      "actual": "83bd318f44b8375b464f7113a2c901031c83ce0e65adaba57dd214075a0d4fe4",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\candidate\\evaluations\\5def2130ca18f245765eacb4\\matches.progress.json",
+      "expected": "c9ad0907b23c49e8571e2d16f763840b1f4b436eadcf15e34a3c160b1d0aef52",
+      "actual": "c9ad0907b23c49e8571e2d16f763840b1f4b436eadcf15e34a3c160b1d0aef52",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\data\\fixed\\test.jsonl",
+      "expected": "07e5873c5043dec9243e7e612e1db216eb344fb78f2dd09a0fef1c6512288b26",
+      "actual": "07e5873c5043dec9243e7e612e1db216eb344fb78f2dd09a0fef1c6512288b26",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\data\\fixed\\validation.jsonl",
+      "expected": "7bf47ec8c1af5970239ada7146cbb65f75c18cb568536b8891966c3f27ea3701",
+      "actual": "7bf47ec8c1af5970239ada7146cbb65f75c18cb568536b8891966c3f27ea3701",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\chromatic-shard-validation\\positions-10000\\data\\shards\\shard-00000010.jsonl",
+      "expected": "0630afee415f25bdddaec738806f1e5b656d1dcb4873dceec07c029f05844d43",
+      "actual": "0630afee415f25bdddaec738806f1e5b656d1dcb4873dceec07c029f05844d43",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\.gitignore",
+      "expected": "288fae2f175300d02377df8aaa0e26cd053be5b62ad9413c599be783e0fb8684",
+      "actual": "288fae2f175300d02377df8aaa0e26cd053be5b62ad9413c599be783e0fb8684",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\ARCHITECTURE.md",
+      "expected": "65b4772b06e95471ee2421393f82345544f9982eb0527b8fa28d1e27747d08d0",
+      "actual": "65b4772b06e95471ee2421393f82345544f9982eb0527b8fa28d1e27747d08d0",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\asan.cmd",
+      "expected": "30ebe487dc5138f25c1d265894119941e1497900d8efbc6353a0e82ba2be3f75",
+      "actual": "30ebe487dc5138f25c1d265894119941e1497900d8efbc6353a0e82ba2be3f75",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\default.zero",
+      "expected": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "actual": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\instrumented\\include\\zero\\board.hpp",
+      "expected": "3f2290283c939191678f9b272f9d1ccd4f696e087feba13f34bb732b72c3ce43",
+      "actual": "3f2290283c939191678f9b272f9d1ccd4f696e087feba13f34bb732b72c3ce43",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\instrumented\\include\\zero\\network.hpp",
+      "expected": "7dac9929cbee3edf018c949d054ea150364eb206003f3b262e3772dac0892c18",
+      "actual": "7dac9929cbee3edf018c949d054ea150364eb206003f3b262e3772dac0892c18",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\instrumented\\include\\zero\\search.hpp",
+      "expected": "a6311f615d10e8d17dd6c5c14250f28a66423a4ac3607a450de08a8389d2a69f",
+      "actual": "a6311f615d10e8d17dd6c5c14250f28a66423a4ac3607a450de08a8389d2a69f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\instrumented\\src\\board.cpp",
+      "expected": "791a7f5a1a2d6d5102749a9294ad9abed1e3dbf6935b171e1f9969b52f8fa773",
+      "actual": "791a7f5a1a2d6d5102749a9294ad9abed1e3dbf6935b171e1f9969b52f8fa773",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\instrumented\\src\\main.cpp",
+      "expected": "882bae42579ad655840f4580fbafd943c30f40eb879a6801d048e5a0fbd0a644",
+      "actual": "882bae42579ad655840f4580fbafd943c30f40eb879a6801d048e5a0fbd0a644",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\instrumented\\src\\network.cpp",
+      "expected": "f966e34236740099b2fe99839505f1726bdc9fb7cfb098b8b663c54589669cc3",
+      "actual": "f966e34236740099b2fe99839505f1726bdc9fb7cfb098b8b663c54589669cc3",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\instrumented\\src\\search.cpp",
+      "expected": "e39b12071231c75114541026445b3778abac5fe5882b902e3c023a41c1a87d63",
+      "actual": "e39b12071231c75114541026445b3778abac5fe5882b902e3c023a41c1a87d63",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\project-zero-v0.1.zip",
+      "expected": "8a645faa146390b1a9af2dbb4a17935553608598bdc516972239b02442620f15",
+      "actual": "8a645faa146390b1a9af2dbb4a17935553608598bdc516972239b02442620f15",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\project_zero.exe",
+      "expected": "c6b7bd6700f62bf357483cb055994f3e84316ea6e5572c89576aaa43d209eede",
+      "actual": "c6b7bd6700f62bf357483cb055994f3e84316ea6e5572c89576aaa43d209eede",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\include\\zero\\board.hpp",
+      "expected": "3f2290283c939191678f9b272f9d1ccd4f696e087feba13f34bb732b72c3ce43",
+      "actual": "3f2290283c939191678f9b272f9d1ccd4f696e087feba13f34bb732b72c3ce43",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\include\\zero\\network.hpp",
+      "expected": "7dac9929cbee3edf018c949d054ea150364eb206003f3b262e3772dac0892c18",
+      "actual": "7dac9929cbee3edf018c949d054ea150364eb206003f3b262e3772dac0892c18",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\include\\zero\\search.hpp",
+      "expected": "a6311f615d10e8d17dd6c5c14250f28a66423a4ac3607a450de08a8389d2a69f",
+      "actual": "a6311f615d10e8d17dd6c5c14250f28a66423a4ac3607a450de08a8389d2a69f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\src\\board.cpp",
+      "expected": "e5d2541d8e318403c0c26d27d598e5bfe8794557a0763310f9be7c6717fe9163",
+      "actual": "e5d2541d8e318403c0c26d27d598e5bfe8794557a0763310f9be7c6717fe9163",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\src\\main.cpp",
+      "expected": "882bae42579ad655840f4580fbafd943c30f40eb879a6801d048e5a0fbd0a644",
+      "actual": "882bae42579ad655840f4580fbafd943c30f40eb879a6801d048e5a0fbd0a644",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\src\\network.cpp",
+      "expected": "e03be79736bbd09a9e3404d4746a7c982883aaa93fbb526b7b0ded0da2c22bc5",
+      "actual": "e03be79736bbd09a9e3404d4746a7c982883aaa93fbb526b7b0ded0da2c22bc5",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\src\\search.cpp",
+      "expected": "e39b12071231c75114541026445b3778abac5fe5882b902e3c023a41c1a87d63",
+      "actual": "e39b12071231c75114541026445b3778abac5fe5882b902e3c023a41c1a87d63",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\tests\\core.cpp",
+      "expected": "b5a6b86dd8b127adfc61f467e2fafcda47a2a9e089aa9632d85a409a59717eb8",
+      "actual": "b5a6b86dd8b127adfc61f467e2fafcda47a2a9e089aa9632d85a409a59717eb8",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\tests\\integration.py",
+      "expected": "2f2dfcf25640489cecdb9bcd37c9d1b2e980276c0c9a699c813105599093b221",
+      "actual": "2f2dfcf25640489cecdb9bcd37c9d1b2e980276c0c9a699c813105599093b221",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\zero\\__init__.py",
+      "expected": "c9c8dda2a5324abfece952250f13a78cd1f2f123862195b877226d18d64ae7fc",
+      "actual": "c9c8dda2a5324abfece952250f13a78cd1f2f123862195b877226d18d64ae7fc",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\zero\\__main__.py",
+      "expected": "47003983afe7f158f8d2ba8bb8d0ff006aa22648a14badda793a37b2069be195",
+      "actual": "47003983afe7f158f8d2ba8bb8d0ff006aa22648a14badda793a37b2069be195",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\zero\\arena.py",
+      "expected": "35ecc23066913ea14799c5e1ab1133830eb6d8e785565defdcb331cdd828e9ba",
+      "actual": "35ecc23066913ea14799c5e1ab1133830eb6d8e785565defdcb331cdd828e9ba",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\zero\\bootstrap.py",
+      "expected": "04446f20f8750761a30615dbe76df910c8443d8dfadfc2a3f1943db76decbd9c",
+      "actual": "04446f20f8750761a30615dbe76df910c8443d8dfadfc2a3f1943db76decbd9c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\zero\\checkpoint.py",
+      "expected": "705ce000277ecb2b14ca6e8431626c448b2e313b31c37dd7900c1855c32d26b6",
+      "actual": "705ce000277ecb2b14ca6e8431626c448b2e313b31c37dd7900c1855c32d26b6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\zero\\data.py",
+      "expected": "91449ce538d8a4c9bba4f48200d3a85471da257800c6070a5b3bc77be4402148",
+      "actual": "91449ce538d8a4c9bba4f48200d3a85471da257800c6070a5b3bc77be4402148",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\zero\\encoding.py",
+      "expected": "3f805b2814e360d689f30f47bbe0c81907074befc8fa34136c5f813f0561ef76",
+      "actual": "3f805b2814e360d689f30f47bbe0c81907074befc8fa34136c5f813f0561ef76",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\zero\\loop.py",
+      "expected": "61bde0d475647c62d3cacf1236e570613dd5bef188f02647089c04af8f8d5d34",
+      "actual": "61bde0d475647c62d3cacf1236e570613dd5bef188f02647089c04af8f8d5d34",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\zero\\model.py",
+      "expected": "c7e33894b6b96978e3717b713291e8260faa8d2400c0e516189b9f30d0bf78ef",
+      "actual": "c7e33894b6b96978e3717b713291e8260faa8d2400c0e516189b9f30d0bf78ef",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\zero\\native.py",
+      "expected": "45faeee608b7ae11658cdaf369d386b7b549ac05c8581b38c61ac5cb3fc6506c",
+      "actual": "45faeee608b7ae11658cdaf369d386b7b549ac05c8581b38c61ac5cb3fc6506c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\zero\\selfplay.py",
+      "expected": "a9883fba97fa3e951277679f9fd9134502a6dcff13cea4d1f03b93652178526e",
+      "actual": "a9883fba97fa3e951277679f9fd9134502a6dcff13cea4d1f03b93652178526e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\zero\\train.py",
+      "expected": "952da8a60434797196ec4a235d0b64009f5fd8fa8b06075b3c480ac578228981",
+      "actual": "952da8a60434797196ec4a235d0b64009f5fd8fa8b06075b3c480ac578228981",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\source\\zero\\verify.py",
+      "expected": "14b4ea12d9dd0896f5315925ee39d351722bd5e3696a62d0440c048aec318614",
+      "actual": "14b4ea12d9dd0896f5315925ee39d351722bd5e3696a62d0440c048aec318614",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\ZERO_DESIGN.md",
+      "expected": "4575ddfc8c2c4822e15bfbd5a2784898a40f6875da4771b1aa749e91761328d2",
+      "actual": "4575ddfc8c2c4822e15bfbd5a2784898a40f6875da4771b1aa749e91761328d2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\ZERO_README.md",
+      "expected": "1e9640481f115fd702ea2f91d15ef6d1a4c44e81a18420656e08302f34dfb5e1",
+      "actual": "1e9640481f115fd702ea2f91d15ef6d1a4c44e81a18420656e08302f34dfb5e1",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline\\ZERO_VALIDATION.md",
+      "expected": "6aa5aa8258abfa631e6c9d5169500dcdfe66f01590d3fbc962f619336c673fca",
+      "actual": "6aa5aa8258abfa631e6c9d5169500dcdfe66f01590d3fbc962f619336c673fca",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\baseline-to-chromatic.patch",
+      "expected": "353c1142dfa5e50a8e0e33520f24cae5e17faa573965694052f4a625ebef0fa5",
+      "actual": "353c1142dfa5e50a8e0e33520f24cae5e17faa573965694052f4a625ebef0fa5",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\benchmarks\\openings.json",
+      "expected": "94e5555b9005f02606155208213398d44a2961f760f4b00ff26e65179f5bd3d4",
+      "actual": "94e5555b9005f02606155208213398d44a2961f760f4b00ff26e65179f5bd3d4",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\benchmarks\\tactics.json",
+      "expected": "280363ea0396afcfbb3eb4d3a76e47b170217c7997dae0fcd2536ffc014717ff",
+      "actual": "280363ea0396afcfbb3eb4d3a76e47b170217c7997dae0fcd2536ffc014717ff",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\build.cmd",
+      "expected": "8126f5f2523f5ffd737cf62d55d50e6f4dbe3aee419f66deb9bd6015224e85fd",
+      "actual": "8126f5f2523f5ffd737cf62d55d50e6f4dbe3aee419f66deb9bd6015224e85fd",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\CMakeLists.txt",
+      "expected": "4e47e68b08d209bf1f79d9f30033d036e93c7102aab056ab9a122ad9035782ba",
+      "actual": "4e47e68b08d209bf1f79d9f30033d036e93c7102aab056ab9a122ad9035782ba",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\CORRECTNESS_AUDIT.md",
+      "expected": "646578e68c5d85f32096196d80c4948eee4d49be6d27978fcbf910e061142dc6",
+      "actual": "646578e68c5d85f32096196d80c4948eee4d49be6d27978fcbf910e061142dc6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\dist\\chromatic.exe",
+      "expected": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d",
+      "actual": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\dist\\default.zero",
+      "expected": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "actual": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\dist\\ENGINE_OPTIONS.txt",
+      "expected": "f395dcaa57abf361f599d1d49a52b5e1df05db0414abf44be21b8357c00f100d",
+      "actual": "f395dcaa57abf361f599d1d49a52b5e1df05db0414abf44be21b8357c00f100d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\include\\zero\\board.hpp",
+      "expected": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b",
+      "actual": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\include\\zero\\network.hpp",
+      "expected": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498",
+      "actual": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\include\\zero\\profile.hpp",
+      "expected": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39",
+      "actual": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\include\\zero\\proof.hpp",
+      "expected": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f",
+      "actual": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\include\\zero\\search.hpp",
+      "expected": "ec915330802e6b4ac03f0708962a3d13b807687d9141bc4d5d536edb6701f313",
+      "actual": "ec915330802e6b4ac03f0708962a3d13b807687d9141bc4d5d536edb6701f313",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\LICENSE",
+      "expected": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "actual": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\PERFORMANCE.md",
+      "expected": "e4abc57f8cefb12a016e17abf18023066d257eac667e9c731f7530cf23f2d108",
+      "actual": "e4abc57f8cefb12a016e17abf18023066d257eac667e9c731f7530cf23f2d108",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\README.md",
+      "expected": "64ee581b21b85e32ba8361cec099beac7223aa593a3cb7431d321a905e949c13",
+      "actual": "64ee581b21b85e32ba8361cec099beac7223aa593a3cb7431d321a905e949c13",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\asan-build.log",
+      "expected": "d33b8ca28fb9efa280559bdd9923abd73e2ca132f3fffb3e2bafd3b7c25f017f",
+      "actual": "d33b8ca28fb9efa280559bdd9923abd73e2ca132f3fffb3e2bafd3b7c25f017f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\asan-core.log",
+      "expected": "13e7b69ca4e4f6fa4d92a67f0e7c30737f764cab43e19141b540f1759200a63c",
+      "actual": "13e7b69ca4e4f6fa4d92a67f0e7c30737f764cab43e19141b540f1759200a63c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\asan-safety.json",
+      "expected": "79029799dc17c8b9dfa580b3118a8d4edbd213df48b4ea496cae102012301a2d",
+      "actual": "79029799dc17c8b9dfa580b3118a8d4edbd213df48b4ea496cae102012301a2d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-games\\game_000000.json",
+      "expected": "1eb408a1395387b8d63ac6db14dd601c1ef54b0685a7915a8dc20fd8dbed318f",
+      "actual": "1eb408a1395387b8d63ac6db14dd601c1ef54b0685a7915a8dc20fd8dbed318f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-games\\game_000000.jsonl",
+      "expected": "164d71a13981c61f9546de2860b0219c1cebe21d342f1ec706936c300d3adc52",
+      "actual": "164d71a13981c61f9546de2860b0219c1cebe21d342f1ec706936c300d3adc52",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-games\\game_000001.json",
+      "expected": "288d7ea4509922e1689be31a725857c5efdaedc5fa32237ccdde3972e0637255",
+      "actual": "288d7ea4509922e1689be31a725857c5efdaedc5fa32237ccdde3972e0637255",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-games\\game_000001.jsonl",
+      "expected": "86309b06d78819c4cf0a556d460a80bf6214b0e5f7fa60eeca9aad635fd501df",
+      "actual": "86309b06d78819c4cf0a556d460a80bf6214b0e5f7fa60eeca9aad635fd501df",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-games\\game_000002.json",
+      "expected": "8268da48e769422c779fd77ff6d90c0ae6e330d9e61eafe631629e48609c9475",
+      "actual": "8268da48e769422c779fd77ff6d90c0ae6e330d9e61eafe631629e48609c9475",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-games\\game_000002.jsonl",
+      "expected": "255d6395c0c9d99e0ab94ca457306d4639549769dea4285c17b10f58432bf031",
+      "actual": "255d6395c0c9d99e0ab94ca457306d4639549769dea4285c17b10f58432bf031",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-games\\game_000003.json",
+      "expected": "76e2e0f50e43553eaf6af1ae16de7e58504b69cd4e9524380537c7fe9c494962",
+      "actual": "76e2e0f50e43553eaf6af1ae16de7e58504b69cd4e9524380537c7fe9c494962",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-games\\game_000003.jsonl",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-games\\settings.json",
+      "expected": "4d2e6593d6ee771f24045968760aca14ba96929c7e70178c767fe40987db4451",
+      "actual": "4d2e6593d6ee771f24045968760aca14ba96929c7e70178c767fe40987db4451",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-games\\summary.json",
+      "expected": "c237de628dc050e7960a6d5e2495196285485aeec49228e19516dacc0c599b87",
+      "actual": "c237de628dc050e7960a6d5e2495196285485aeec49228e19516dacc0c599b87",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-native-pinned.json",
+      "expected": "7ac6d7e532c46792b84fa2fc76da30c560b6255eec985b42b353d94a22aebdee",
+      "actual": "7ac6d7e532c46792b84fa2fc76da30c560b6255eec985b42b353d94a22aebdee",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-native.json",
+      "expected": "c7b44c13b941ca9d234f3162fab97ade16bc3eb97a731ed2b2a4e795542c8b01",
+      "actual": "c7b44c13b941ca9d234f3162fab97ade16bc3eb97a731ed2b2a4e795542c8b01",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-preservation.json",
+      "expected": "d2f42e835d33220fcb034dd6e76107ae98870e870442845ca9a39868634bc59b",
+      "actual": "d2f42e835d33220fcb034dd6e76107ae98870e870442845ca9a39868634bc59b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-reconstruction.json",
+      "expected": "fd03383468f8f0c09a6ad75d87e30143a152bf97b40c8564ef2ab673061e910a",
+      "actual": "fd03383468f8f0c09a6ad75d87e30143a152bf97b40c8564ef2ab673061e910a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\baseline-tactics.json",
+      "expected": "96ea568a894d6bcd6286c644c50c348bfcd71a762412a796d1d0bc726ec72a6a",
+      "actual": "96ea568a894d6bcd6286c644c50c348bfcd71a762412a796d1d0bc726ec72a6a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\build-and-core.log",
+      "expected": "236afa7581afa96bb15497c1a545872650ace87eab7b8a622b5acee6bb14eaaa",
+      "actual": "236afa7581afa96bb15497c1a545872650ace87eab7b8a622b5acee6bb14eaaa",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\chromatic-tactics-deep-proof.json",
+      "expected": "af45948139f707003c63db154e5eff1bea59d9362aaed24b4661b8226350a25c",
+      "actual": "af45948139f707003c63db154e5eff1bea59d9362aaed24b4661b8226350a25c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\chromatic-tactics-scalar.json",
+      "expected": "e9f462081b713df51f247bbc0d0d77df70cb4ee61009cb153a3139bc01c2515a",
+      "actual": "e9f462081b713df51f247bbc0d0d77df70cb4ee61009cb153a3139bc01c2515a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\chromatic-tactics-simd.json",
+      "expected": "29fa673c1dac04a34b657de9b479c66457c572845f2da8fcf86691c03acf3ae8",
+      "actual": "29fa673c1dac04a34b657de9b479c66457c572845f2da8fcf86691c03acf3ae8",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\compatibility\\result.json",
+      "expected": "9f15ce2faac21ec45b03196777d83cd6b9bbcf08683341f0c2bbe70d6b0a2851",
+      "actual": "9f15ce2faac21ec45b03196777d83cd6b9bbcf08683341f0c2bbe70d6b0a2851",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\core.log",
+      "expected": "939d9a2fe59110dba96039350d22d03851f461f931d9387b041202ad253d5eb5",
+      "actual": "939d9a2fe59110dba96039350d22d03851f461f931d9387b041202ad253d5eb5",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\baseline-memory.json",
+      "expected": "5908003277cbc7bc3e8d2f78ba72be11da04984652dbbcf489cf3cfdbdca8f1a",
+      "actual": "5908003277cbc7bc3e8d2f78ba72be11da04984652dbbcf489cf3cfdbdca8f1a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\baseline-scalar-parity.json",
+      "expected": "df3fe9e3fc2c233f7c8df829aa4a9639ac9a2296ce026e9c38814df972312aef",
+      "actual": "df3fe9e3fc2c233f7c8df829aa4a9639ac9a2296ce026e9c38814df972312aef",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\baseline-simd-parity.json",
+      "expected": "5cc7d8cdbf2c44f9aa367b44aedce1fad466cef3e06b494b5b001b25e6856fd0",
+      "actual": "5cc7d8cdbf2c44f9aa367b44aedce1fad466cef3e06b494b5b001b25e6856fd0",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\baseline.json",
+      "expected": "6519f0c64cac3fd84ee0f7dd2f33dfed0455f8367b6ed44cf2512122ae1b947c",
+      "actual": "6519f0c64cac3fd84ee0f7dd2f33dfed0455f8367b6ed44cf2512122ae1b947c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\chromatic-memory.json",
+      "expected": "532f9e7e43139ec9a9462265cb0e98149d0f5a4caa15642e478d6ea0372c28e8",
+      "actual": "532f9e7e43139ec9a9462265cb0e98149d0f5a4caa15642e478d6ea0372c28e8",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\deep-proof-tactics.json",
+      "expected": "ecdd019f65275dc1448d7243dbac33c3d888f1fb1b583533297a77aeedc304ca",
+      "actual": "ecdd019f65275dc1448d7243dbac33c3d888f1fb1b583533297a77aeedc304ca",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\default-tactics.json",
+      "expected": "9ce7e1ce22c1a9bd16700ffddcd6d8ddb4e26ae567ce778856bd023a61196d90",
+      "actual": "9ce7e1ce22c1a9bd16700ffddcd6d8ddb4e26ae567ce778856bd023a61196d90",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\draw-audit.json",
+      "expected": "b98a7c82b28102691e02f1e4bc1cfe06d61188b87a7959e1f3f0f2a0f2a398a2",
+      "actual": "b98a7c82b28102691e02f1e4bc1cfe06d61188b87a7959e1f3f0f2a0f2a398a2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\engine-match.json",
+      "expected": "055f05774438ee1798d93b148bce6965ec8c6afbcb8fdb8c50c0b2b38df95c28",
+      "actual": "055f05774438ee1798d93b148bce6965ec8c6afbcb8fdb8c50c0b2b38df95c28",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\engine-match.pgn",
+      "expected": "421d0bdc98cf617bb5ee89ac15888764b7699e7b88f74f31b2345bfe253c3f2f",
+      "actual": "421d0bdc98cf617bb5ee89ac15888764b7699e7b88f74f31b2345bfe253c3f2f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\engine-match.progress.json",
+      "expected": "f6ad42f11b1334055507cc8207ccafd8568e86c027c411dcbe4c16712f7d5aa2",
+      "actual": "f6ad42f11b1334055507cc8207ccafd8568e86c027c411dcbe4c16712f7d5aa2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\execution.json",
+      "expected": "4ff456fd018c590a5cc49fc0fce48d951b03699d2becd5898fc3937f597c89fb",
+      "actual": "4ff456fd018c590a5cc49fc0fce48d951b03699d2becd5898fc3937f597c89fb",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\fpu-025-tactics.json",
+      "expected": "fd379e7ab662fb530a7602d2638e97ebdd2234dfc14df9f8b3c7b7e26221c2b4",
+      "actual": "fd379e7ab662fb530a7602d2638e97ebdd2234dfc14df9f8b3c7b7e26221c2b4",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\full-scalar.json",
+      "expected": "8cf4205fe4537c3e81c70efa4187e308bddded28bbde663ba0da6e8c5122dbe0",
+      "actual": "8cf4205fe4537c3e81c70efa4187e308bddded28bbde663ba0da6e8c5122dbe0",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\generation-match.json",
+      "expected": "da9f61c14e6a2e841f2909ba83b054e98e2deee3594fbd0fac1c5317c3932364",
+      "actual": "da9f61c14e6a2e841f2909ba83b054e98e2deee3594fbd0fac1c5317c3932364",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\legal-scalar.json",
+      "expected": "23ac115a512b7893c6e17487f25e182120160df83deb8212f26b89031cad562a",
+      "actual": "23ac115a512b7893c6e17487f25e182120160df83deb8212f26b89031cad562a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\legal-simd.json",
+      "expected": "e7bb7e3ffaa8f98a7c089b4d6ba2bbea375790c8f5a91ea15828a898ebb7d246",
+      "actual": "e7bb7e3ffaa8f98a7c089b4d6ba2bbea375790c8f5a91ea15828a898ebb7d246",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\model-match.json",
+      "expected": "ed8cb8f559cc475194b5f2222103efa9b5969111d6dfad69c79a2f7668019af5",
+      "actual": "ed8cb8f559cc475194b5f2222103efa9b5969111d6dfad69c79a2f7668019af5",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\model-match.pgn",
+      "expected": "99dab685a52fb4d09096ba8655252bf70de40c0e6009d67cc476244dccc3872a",
+      "actual": "99dab685a52fb4d09096ba8655252bf70de40c0e6009d67cc476244dccc3872a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\model-match.progress.json",
+      "expected": "705e12aff7f4af7266069ad21038ebd26babd6ee9da47664f78e8736837d1308",
+      "actual": "705e12aff7f4af7266069ad21038ebd26babd6ee9da47664f78e8736837d1308",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\scalar-search-equivalence.json",
+      "expected": "c0f7bcd5b80ed1e8ed9a10b815e4328954a3c294f5c807c85ea5433df02582d2",
+      "actual": "c0f7bcd5b80ed1e8ed9a10b815e4328954a3c294f5c807c85ea5433df02582d2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\small-scalar-parity.json",
+      "expected": "c095b29ee36fb874e041f39a8192335ba612317125a042da4319115be1db81ff",
+      "actual": "c095b29ee36fb874e041f39a8192335ba612317125a042da4319115be1db81ff",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\small-simd-parity.json",
+      "expected": "10a2c49139ff57e63c3ae8ed477a9c95c7dcda2b7cfb1370c28498dc3f304394",
+      "actual": "10a2c49139ff57e63c3ae8ed477a9c95c7dcda2b7cfb1370c28498dc3f304394",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\tiny-scalar-parity.json",
+      "expected": "24e44160b4ae9291190ac3a5f4464f4e165e4c1d3a10b010d4491c75d2f66864",
+      "actual": "24e44160b4ae9291190ac3a5f4464f4e165e4c1d3a10b010d4491c75d2f66864",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\final\\tiny-simd-parity.json",
+      "expected": "c39343c0bfb0ffd1cafb715d4ff21d24d3708bac46fa13e56c5f24f259ec0593",
+      "actual": "c39343c0bfb0ffd1cafb715d4ff21d24d3708bac46fa13e56c5f24f259ec0593",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\comparison.json",
+      "expected": "b6e2c5c0750b9681ab1fc25c082bd310e887fd47dde1ebab0b5149735e06936d",
+      "actual": "b6e2c5c0750b9681ab1fc25c082bd310e887fd47dde1ebab0b5149735e06936d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\small\\model.pt",
+      "expected": "759525d4cde43854bf011b756547ced75d16de7d7f271958a73d25f0e7389321",
+      "actual": "759525d4cde43854bf011b756547ced75d16de7d7f271958a73d25f0e7389321",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\small\\model.replay.json",
+      "expected": "c8455f9ebffe528c37ac923ec5d1942717086fb551ca0a0e20e0cf7db913bf5f",
+      "actual": "c8455f9ebffe528c37ac923ec5d1942717086fb551ca0a0e20e0cf7db913bf5f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\small\\model.train.json",
+      "expected": "2fc9ccf5ad28049af36c32ceaa28aca1cc4008a2544debb05a5d4e04cabb9702",
+      "actual": "2fc9ccf5ad28049af36c32ceaa28aca1cc4008a2544debb05a5d4e04cabb9702",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\small\\model.zero",
+      "expected": "3690c2aa3a4b8e126db0e0bdfa9f69a20bb7ec64e7dd4e666af41081918df93e",
+      "actual": "3690c2aa3a4b8e126db0e0bdfa9f69a20bb7ec64e7dd4e666af41081918df93e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\small\\scalar-bench.json",
+      "expected": "92c5b097116c6755f0152e9bd309f7465ceee2c764be77d1cb48384478b47e6d",
+      "actual": "92c5b097116c6755f0152e9bd309f7465ceee2c764be77d1cb48384478b47e6d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\small\\scalar-parity.json",
+      "expected": "c0b6ea7c71079d5b670dbd8ac4fc2443c29dc7d2a664255059962c4010ca3ff9",
+      "actual": "c0b6ea7c71079d5b670dbd8ac4fc2443c29dc7d2a664255059962c4010ca3ff9",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\small\\simd-bench.json",
+      "expected": "c75ce0ac80e6710148921dc4c8a22ccb070e3b2ed020c3d479f709b80b6709eb",
+      "actual": "c75ce0ac80e6710148921dc4c8a22ccb070e3b2ed020c3d479f709b80b6709eb",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\small\\simd-parity.json",
+      "expected": "2bad132bf314f33e98359c4e28b7fc5afe91136de5dc7925f9153ea12ed5578a",
+      "actual": "2bad132bf314f33e98359c4e28b7fc5afe91136de5dc7925f9153ea12ed5578a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\tiny\\model.pt",
+      "expected": "1088abec08db8908b047d5f4b48499b4bf68115329aebaffa059d384cb08b864",
+      "actual": "1088abec08db8908b047d5f4b48499b4bf68115329aebaffa059d384cb08b864",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\tiny\\model.replay.json",
+      "expected": "c8455f9ebffe528c37ac923ec5d1942717086fb551ca0a0e20e0cf7db913bf5f",
+      "actual": "c8455f9ebffe528c37ac923ec5d1942717086fb551ca0a0e20e0cf7db913bf5f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\tiny\\model.train.json",
+      "expected": "3a3d6bb17697aae9fb89245d3960663b0b1684553cd6bf19de48eb9e239046b7",
+      "actual": "3a3d6bb17697aae9fb89245d3960663b0b1684553cd6bf19de48eb9e239046b7",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\tiny\\model.zero",
+      "expected": "427276b4446b9521b6147cd074b81939e66bc2cbf30e74478c02bd678690183a",
+      "actual": "427276b4446b9521b6147cd074b81939e66bc2cbf30e74478c02bd678690183a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\tiny\\scalar-bench.json",
+      "expected": "b455e4d3846c0f8e7612beca550e07d3aca1d26dd88b975f2c397ed9f5bf8efe",
+      "actual": "b455e4d3846c0f8e7612beca550e07d3aca1d26dd88b975f2c397ed9f5bf8efe",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\tiny\\scalar-parity.json",
+      "expected": "d53f243096c1f412bd229efcddd75b20aca2b63d4a3f738e596a64969f68a6b1",
+      "actual": "d53f243096c1f412bd229efcddd75b20aca2b63d4a3f738e596a64969f68a6b1",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\tiny\\simd-bench.json",
+      "expected": "a2e49ad8d7589bfe78c7f010784109fd0597ccb441cab16a57d41bd1e5f81bb6",
+      "actual": "a2e49ad8d7589bfe78c7f010784109fd0597ccb441cab16a57d41bd1e5f81bb6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\model-scaling\\tiny\\simd-parity.json",
+      "expected": "883cec56277bb532ff1bc82171f4226e3d2d5e72e16e31673693032071abeab0",
+      "actual": "883cec56277bb532ff1bc82171f4226e3d2d5e72e16e31673693032071abeab0",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\original-inventory.json",
+      "expected": "86e98444ea52307e8f1768554dce89f0973ac91b590920cffa0528b730e7731f",
+      "actual": "86e98444ea52307e8f1768554dce89f0973ac91b590920cffa0528b730e7731f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\pe-dependencies.txt",
+      "expected": "6e435ac6f3fe24de029d662f6a08fc88c5e586c38d08fe7d7484f665cc7d26e9",
+      "actual": "6e435ac6f3fe24de029d662f6a08fc88c5e586c38d08fe7d7484f665cc7d26e9",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\preservation-final.json",
+      "expected": "a8deabbda009aa4246e87615f48065c660bdae3b19e272c77fad6ce84d72e9e5",
+      "actual": "a8deabbda009aa4246e87615f48065c660bdae3b19e272c77fad6ce84d72e9e5",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\release-arena-tests.json",
+      "expected": "85e19f294af71ca972fbb018390cf4a4eebe10d9fdbf7ba298acb7adc17e5699",
+      "actual": "85e19f294af71ca972fbb018390cf4a4eebe10d9fdbf7ba298acb7adc17e5699",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\release-arena_tests.json",
+      "expected": "85e19f294af71ca972fbb018390cf4a4eebe10d9fdbf7ba298acb7adc17e5699",
+      "actual": "85e19f294af71ca972fbb018390cf4a4eebe10d9fdbf7ba298acb7adc17e5699",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\release-gates.json",
+      "expected": "06ee891f9d81bb9c4d98165e6bb0a226617e30ec1149c37a319d3f73efeb7d13",
+      "actual": "06ee891f9d81bb9c4d98165e6bb0a226617e30ec1149c37a319d3f73efeb7d13",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\release-reliability.json",
+      "expected": "869e7f83553ac299a678d4dad057d2bb72f497cbf9aedf382b368ddc9ea23d31",
+      "actual": "869e7f83553ac299a678d4dad057d2bb72f497cbf9aedf382b368ddc9ea23d31",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\release-safety.json",
+      "expected": "79029799dc17c8b9dfa580b3118a8d4edbd213df48b4ea496cae102012301a2d",
+      "actual": "79029799dc17c8b9dfa580b3118a8d4edbd213df48b4ea496cae102012301a2d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\sign-mutation.json",
+      "expected": "8a5bbb91af40de61bd5a9d91d8b10d742f38116dd3f2388f7ae10d2d5eb2c1b7",
+      "actual": "8a5bbb91af40de61bd5a9d91d8b10d742f38116dd3f2388f7ae10d2d5eb2c1b7",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\stage-a-integration.json",
+      "expected": "df9cbe45285e975538981b4acf138c368a3791154814a2ef1817e5827a83245c",
+      "actual": "df9cbe45285e975538981b4acf138c368a3791154814a2ef1817e5827a83245c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\stage-b-integration.json",
+      "expected": "df9cbe45285e975538981b4acf138c368a3791154814a2ef1817e5827a83245c",
+      "actual": "df9cbe45285e975538981b4acf138c368a3791154814a2ef1817e5827a83245c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\stage-c-equivalence.json",
+      "expected": "c0f7bcd5b80ed1e8ed9a10b815e4328954a3c294f5c807c85ea5433df02582d2",
+      "actual": "c0f7bcd5b80ed1e8ed9a10b815e4328954a3c294f5c807c85ea5433df02582d2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\stage-c-integration.json",
+      "expected": "c60130631faf17831301845004bf3ed610820a6eba11bd479cd52e2f0b0d90ad",
+      "actual": "c60130631faf17831301845004bf3ed610820a6eba11bd479cd52e2f0b0d90ad",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\stage-c-native.json",
+      "expected": "b37f756902670b8f11153291d30d6b866c685cd91c69ceb0075a1bebd04c182a",
+      "actual": "b37f756902670b8f11153291d30d6b866c685cd91c69ceb0075a1bebd04c182a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\stage-d-equivalence.json",
+      "expected": "c0f7bcd5b80ed1e8ed9a10b815e4328954a3c294f5c807c85ea5433df02582d2",
+      "actual": "c0f7bcd5b80ed1e8ed9a10b815e4328954a3c294f5c807c85ea5433df02582d2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\stage-d-integration.json",
+      "expected": "19f023d160e8b5d3ed46dd91a0e8d09ac8a4a6797c36a66c1c8a2c49fb806cc3",
+      "actual": "19f023d160e8b5d3ed46dd91a0e8d09ac8a4a6797c36a66c1c8a2c49fb806cc3",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\stage-d-native-scalar.json",
+      "expected": "cc267215e6c5af2b921e84492c9e7d493b97e66e80237aa681393fbd7d3a9ae3",
+      "actual": "cc267215e6c5af2b921e84492c9e7d493b97e66e80237aa681393fbd7d3a9ae3",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\stage-d-native-simd.json",
+      "expected": "d1d9a790401b33b3128eac7d0e1ab999233da3a2d2f13c7223e01210f490f0c0",
+      "actual": "d1d9a790401b33b3128eac7d0e1ab999233da3a2d2f13c7223e01210f490f0c0",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\stage-e-integration.json",
+      "expected": "6f42430c047a360c69413b9367b395e2f3fdb6c6ed775fd430d71a2fdbd654f4",
+      "actual": "6f42430c047a360c69413b9367b395e2f3fdb6c6ed775fd430d71a2fdbd654f4",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\stage-e-reliability.json",
+      "expected": "795109af0a3ceabb73741b1c4336a409655f93223d7d43fdd9823bb6f21987ed",
+      "actual": "795109af0a3ceabb73741b1c4336a409655f93223d7d43fdd9823bb6f21987ed",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\standalone.json",
+      "expected": "cd70e071206ff42c04b5cbf6ea5d7dab69dd4114f2dcc6ddf24da594968a8660",
+      "actual": "cd70e071206ff42c04b5cbf6ea5d7dab69dd4114f2dcc6ddf24da594968a8660",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\summary.json",
+      "expected": "c4fdd662d51b27905e9e52629a1291a189e4895de4f271aff83d6c366d94b03b",
+      "actual": "c4fdd662d51b27905e9e52629a1291a189e4895de4f271aff83d6c366d94b03b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\reports\\validation-all.log",
+      "expected": "34a7e738c38c204485cb0a1f319d62fe83248e82922258d6a71b2077978955df",
+      "actual": "34a7e738c38c204485cb0a1f319d62fe83248e82922258d6a71b2077978955df",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\requirements.lock.txt",
+      "expected": "2d55f0eac5a8c699ddd590ea4a2b7d3eedecc6211d108a3497c77360bcee791f",
+      "actual": "2d55f0eac5a8c699ddd590ea4a2b7d3eedecc6211d108a3497c77360bcee791f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\requirements.txt",
+      "expected": "a1a5c9effbda6c99c9723f77ef9fe9a6c4fd8f1024b5f972da2cad5b059c0f3d",
+      "actual": "a1a5c9effbda6c99c9723f77ef9fe9a6c4fd8f1024b5f972da2cad5b059c0f3d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\ROADMAP.md",
+      "expected": "c03e5672dc58cb04ead7f2171f8b54f761990e5adefcf1b0a6180bd9b8d4bd04",
+      "actual": "c03e5672dc58cb04ead7f2171f8b54f761990e5adefcf1b0a6180bd9b8d4bd04",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\run.ps1",
+      "expected": "c8dca7fda4b3135618cb33bfc99d2f9bf3b4294ec820c4e0ce29a493325eed12",
+      "actual": "c8dca7fda4b3135618cb33bfc99d2f9bf3b4294ec820c4e0ce29a493325eed12",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\bootstrap\\model.pt",
+      "expected": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "actual": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\bootstrap\\model.train.json",
+      "expected": "8321c5a22fac74d834162d22dd1895390e2b95e4669b8f99419b6bf047982923",
+      "actual": "8321c5a22fac74d834162d22dd1895390e2b95e4669b8f99419b6bf047982923",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\bootstrap\\model.zero",
+      "expected": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "actual": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\bootstrap\\teacher.jsonl",
+      "expected": "d3dd6ce286c7c2421ba35dd3163b879e23328b486b251a28a170cfb210f50e77",
+      "actual": "d3dd6ce286c7c2421ba35dd3163b879e23328b486b251a28a170cfb210f50e77",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\bootstrap\\teacher.meta.json",
+      "expected": "f5771d2905a1a3fd9b3cbaf0505ae17693ff90f00eaeb8b4d3f0c3be5091d1ca",
+      "actual": "f5771d2905a1a3fd9b3cbaf0505ae17693ff90f00eaeb8b4d3f0c3be5091d1ca",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\arena.json",
+      "expected": "da9f61c14e6a2e841f2909ba83b054e98e2deee3594fbd0fac1c5317c3932364",
+      "actual": "da9f61c14e6a2e841f2909ba83b054e98e2deee3594fbd0fac1c5317c3932364",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\arena.pgn",
+      "expected": "e78a14c5007e880d49ab6e276b235110881d88ce021cae73d6a39046a52b8be2",
+      "actual": "e78a14c5007e880d49ab6e276b235110881d88ce021cae73d6a39046a52b8be2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\arena.progress.json",
+      "expected": "599c2490979de5403cded43abc7c36537fff911fa65ab89be04b6bcaa1552bf7",
+      "actual": "599c2490979de5403cded43abc7c36537fff911fa65ab89be04b6bcaa1552bf7",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\candidate.pt",
+      "expected": "e450595a38f7fc66acf0521a3d29190599683bef463aded7e97c6ac16409fc36",
+      "actual": "e450595a38f7fc66acf0521a3d29190599683bef463aded7e97c6ac16409fc36",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\candidate.pt.prev",
+      "expected": "221441e12fe721b3a64380fb83f1e1cbd2f18e640bf9fe753825c9a4f394ef11",
+      "actual": "221441e12fe721b3a64380fb83f1e1cbd2f18e640bf9fe753825c9a4f394ef11",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\candidate.replay.json",
+      "expected": "b7540149791ba1735606e3c6f1b44afed25dee6c3fc72baa849020539cdb2a09",
+      "actual": "b7540149791ba1735606e3c6f1b44afed25dee6c3fc72baa849020539cdb2a09",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\candidate.train.json",
+      "expected": "7d485011fe2897209c1ca6b0ce0620ea4dbcc65f85636069f564352e36db2fff",
+      "actual": "7d485011fe2897209c1ca6b0ce0620ea4dbcc65f85636069f564352e36db2fff",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\candidate.zero",
+      "expected": "da8a36572caced3167a604841668f96b70e4e296551b3e61860656d538b5f577",
+      "actual": "da8a36572caced3167a604841668f96b70e4e296551b3e61860656d538b5f577",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.json",
+      "expected": "225d51d29ec4ba96b8f01c0846b3e9add742458a8ccaa80b3dc75a0e84211d24",
+      "actual": "225d51d29ec4ba96b8f01c0846b3e9add742458a8ccaa80b3dc75a0e84211d24",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000000.jsonl",
+      "expected": "11d883d6132fc5ddba61a6f05a9e83438595259d76dcd4d69d2c07a6001bdf3a",
+      "actual": "11d883d6132fc5ddba61a6f05a9e83438595259d76dcd4d69d2c07a6001bdf3a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.json",
+      "expected": "8af7495f06302704d862a3cdbb5b5df1cf3e80a5362b787da393394fd9b11dfd",
+      "actual": "8af7495f06302704d862a3cdbb5b5df1cf3e80a5362b787da393394fd9b11dfd",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000001.jsonl",
+      "expected": "63f9b66dd59cf62c54469d2718e9c57acee1c74c7df507311a9359ba343fe496",
+      "actual": "63f9b66dd59cf62c54469d2718e9c57acee1c74c7df507311a9359ba343fe496",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.json",
+      "expected": "6ce8dd35824fe6b8953c4ffc59fe41e1f9976bcb6d337aae2349136477d72a87",
+      "actual": "6ce8dd35824fe6b8953c4ffc59fe41e1f9976bcb6d337aae2349136477d72a87",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000002.jsonl",
+      "expected": "3a1f6214237cab4e46a141ec8fb43122d0d5a71408468576c3cacfa90310e594",
+      "actual": "3a1f6214237cab4e46a141ec8fb43122d0d5a71408468576c3cacfa90310e594",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.json",
+      "expected": "cf9f102f7ad14d67db539749c44e93822bda0fcb768ead52cb8c2af7e5540284",
+      "actual": "cf9f102f7ad14d67db539749c44e93822bda0fcb768ead52cb8c2af7e5540284",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\game_000003.jsonl",
+      "expected": "42470ac2385450262594648693660f2c519135449e390fcccc8de1e4db3aea26",
+      "actual": "42470ac2385450262594648693660f2c519135449e390fcccc8de1e4db3aea26",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\pending\\game_000001.jsonl",
+      "expected": "e5d15b9744d2151a907a629920494f41a1151250227c1391605c808318c6e233",
+      "actual": "e5d15b9744d2151a907a629920494f41a1151250227c1391605c808318c6e233",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\pending\\game_000003.jsonl",
+      "expected": "4b3438e18f475eea9ec373e3fa70474e42e1fe7a8c2a5f2dba35671c3f4dd0e8",
+      "actual": "4b3438e18f475eea9ec373e3fa70474e42e1fe7a8c2a5f2dba35671c3f4dd0e8",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\settings.json",
+      "expected": "489f78f339c871ec9c6edd27b255110918eead05894d25f1f42747689078ff03",
+      "actual": "489f78f339c871ec9c6edd27b255110918eead05894d25f1f42747689078ff03",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\summary.json",
+      "expected": "b7a7ff8ca4dba97379008676f9c90059a73245e02b44780769a8cb2ffe8cc74e",
+      "actual": "b7a7ff8ca4dba97379008676f9c90059a73245e02b44780769a8cb2ffe8cc74e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\selfplay\\telemetry.json",
+      "expected": "8e1125967290036ce8f1041a2c69cbb408c71e361aa1ed3e8965f3dd07f45663",
+      "actual": "8e1125967290036ce8f1041a2c69cbb408c71e361aa1ed3e8965f3dd07f45663",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\generation_0000\\source.zero",
+      "expected": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "actual": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\initial.pt",
+      "expected": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "actual": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\initial.zero",
+      "expected": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "actual": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\overdrive\\state.json",
+      "expected": "e6ef20b3f62398bd05279dd53e5de1feb12ca84d3358b69a3834711a2238abd6",
+      "actual": "e6ef20b3f62398bd05279dd53e5de1feb12ca84d3358b69a3834711a2238abd6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\runs\\release-validation\\generation_0000\\candidate.pt",
+      "expected": "17231fdd27b22a2a0dd6f070990d5c8bc26ce435432e6d530470a605b219636b",
+      "actual": "17231fdd27b22a2a0dd6f070990d5c8bc26ce435432e6d530470a605b219636b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\src\\board.cpp",
+      "expected": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f",
+      "actual": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\src\\main.cpp",
+      "expected": "e3b9da223744bb77191c935d2fb606ef591085d311150588cf825be940c5b87f",
+      "actual": "e3b9da223744bb77191c935d2fb606ef591085d311150588cf825be940c5b87f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\src\\network.cpp",
+      "expected": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86",
+      "actual": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\src\\proof.cpp",
+      "expected": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e",
+      "actual": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\src\\search.cpp",
+      "expected": "8a4a2854dcb5ac8bf3401364e1830e085fff2d683a2d991f27094c85e83631ea",
+      "actual": "8a4a2854dcb5ac8bf3401364e1830e085fff2d683a2d991f27094c85e83631ea",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\STRENGTH_REPORT.md",
+      "expected": "78d1d4d6b4c57702957546dcdc1c55634447f7650d2ea6ffecc4ca33b714fcaf",
+      "actual": "78d1d4d6b4c57702957546dcdc1c55634447f7650d2ea6ffecc4ca33b714fcaf",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tests\\arena_tests.py",
+      "expected": "dfdfd1e199bf6d0fc7bd1910d528a6e697e24c6a1029b337e0eaa81c81102803",
+      "actual": "dfdfd1e199bf6d0fc7bd1910d528a6e697e24c6a1029b337e0eaa81c81102803",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tests\\core.cpp",
+      "expected": "cde4329ae236713bc631772c3b58e5d8c01a6dd63377422cdcc5d23ff6b51ad6",
+      "actual": "cde4329ae236713bc631772c3b58e5d8c01a6dd63377422cdcc5d23ff6b51ad6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tests\\integration.py",
+      "expected": "697f96a49ed8d410ef9140798516cf697260ea662ae62be83b6dc9fb558ef320",
+      "actual": "697f96a49ed8d410ef9140798516cf697260ea662ae62be83b6dc9fb558ef320",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tests\\reliability.py",
+      "expected": "99b0d760051a7a70831449ea902bdc0d5e2febe27af21014e5d178a5d73a088c",
+      "actual": "99b0d760051a7a70831449ea902bdc0d5e2febe27af21014e5d178a5d73a088c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tests\\safety.py",
+      "expected": "10c11052c49c396359270c2ca7ba7f6cae2bc28579ff62b3e279fb48ea07e618",
+      "actual": "10c11052c49c396359270c2ca7ba7f6cae2bc28579ff62b3e279fb48ea07e618",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\THIRD_PARTY.md",
+      "expected": "c44114de73a63446dba80bb1962681331d875f490457d6ea8a44db445f350764",
+      "actual": "c44114de73a63446dba80bb1962681331d875f490457d6ea8a44db445f350764",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tools\\baseline_reconstruct.py",
+      "expected": "8e467cb5f2ed82fb22075b059f2fd6c5aa88afa83119c66819388d2597e7bce4",
+      "actual": "8e467cb5f2ed82fb22075b059f2fd6c5aa88afa83119c66819388d2597e7bce4",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tools\\bench.py",
+      "expected": "c6f79804bdb1cc84a51c081fc8364ea6d97627a061cea5a00320329aa79cdc75",
+      "actual": "c6f79804bdb1cc84a51c081fc8364ea6d97627a061cea5a00320329aa79cdc75",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tools\\compare_search.py",
+      "expected": "af6046c45c57ea381f7b8ad75bf6a7c5d0ff7e6b117dfd5d28493b8e82a80b21",
+      "actual": "af6046c45c57ea381f7b8ad75bf6a7c5d0ff7e6b117dfd5d28493b8e82a80b21",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tools\\draw_audit.py",
+      "expected": "84843569f93854d084bd1548df22bfa93dcfa788ff0fa757faa353b3047212a1",
+      "actual": "84843569f93854d084bd1548df22bfa93dcfa788ff0fa757faa353b3047212a1",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tools\\final_experiments.py",
+      "expected": "542669f26710ad236fc56d4641bb317253f9def89484ad1dac946bca2a4d8232",
+      "actual": "542669f26710ad236fc56d4641bb317253f9def89484ad1dac946bca2a4d8232",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tools\\legacy_compat.py",
+      "expected": "554c5f5ef6d2ea96edf9650bdf99f3b92e9ceb0dd7fe13c85b35b611c606de9e",
+      "actual": "554c5f5ef6d2ea96edf9650bdf99f3b92e9ceb0dd7fe13c85b35b611c606de9e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tools\\mutation.py",
+      "expected": "b9bc5f6b7f44f5c36b0de124494cf4aa5600b3f1513b6ed392de49295b97615f",
+      "actual": "b9bc5f6b7f44f5c36b0de124494cf4aa5600b3f1513b6ed392de49295b97615f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tools\\native_bench.cpp",
+      "expected": "c88fd6d641757fe3d68bc6ffc2e85f9e2888df654b3752b34fd4552b59fe54e6",
+      "actual": "c88fd6d641757fe3d68bc6ffc2e85f9e2888df654b3752b34fd4552b59fe54e6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tools\\scaling.py",
+      "expected": "4409d148055e057a80774bc92b37c5ef292d59bd450b3e8ec0b640ca78652871",
+      "actual": "4409d148055e057a80774bc92b37c5ef292d59bd450b3e8ec0b640ca78652871",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\tools\\tactics.py",
+      "expected": "9a19d622526533e7cec66dd930c0e5cdbfcbea3bc05377f0fa7a4bcc71a0087c",
+      "actual": "9a19d622526533e7cec66dd930c0e5cdbfcbea3bc05377f0fa7a4bcc71a0087c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\validate.ps1",
+      "expected": "aefd08b45e828b4238bb139b8acb69d4377fac1fd395aa54f922db34b7d6edc7",
+      "actual": "aefd08b45e828b4238bb139b8acb69d4377fac1fd395aa54f922db34b7d6edc7",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\validation\\core.json",
+      "expected": "1d72ad8fabde26fe3dc18403c10f214c03205529a0485abb5fbf467b6400e8fc",
+      "actual": "1d72ad8fabde26fe3dc18403c10f214c03205529a0485abb5fbf467b6400e8fc",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\validation\\environment.json",
+      "expected": "1fd3d10461c144cff025be19b0d784cb495784e65bc7d58db8e28d79895448c3",
+      "actual": "1fd3d10461c144cff025be19b0d784cb495784e65bc7d58db8e28d79895448c3",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\validation\\integration.json",
+      "expected": "2682615a9e836d34316b83af38f3a7e84127b9287372b7f037b72ae40fd7a72d",
+      "actual": "2682615a9e836d34316b83af38f3a7e84127b9287372b7f037b72ae40fd7a72d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\validation\\pipeline.json",
+      "expected": "e7641c08e6e192c4b26bfacf5877d2c16f642f30f3db3fa3fcb4d5998dfdb773",
+      "actual": "e7641c08e6e192c4b26bfacf5877d2c16f642f30f3db3fa3fcb4d5998dfdb773",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\validation\\trained-parity.json",
+      "expected": "bcdc0f5ada303a453c47c886da29f96e52b8b925b5b0947c4aae97f5f6282ff4",
+      "actual": "bcdc0f5ada303a453c47c886da29f96e52b8b925b5b0947c4aae97f5f6282ff4",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\__init__.py",
+      "expected": "c9c8dda2a5324abfece952250f13a78cd1f2f123862195b877226d18d64ae7fc",
+      "actual": "c9c8dda2a5324abfece952250f13a78cd1f2f123862195b877226d18d64ae7fc",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\__main__.py",
+      "expected": "6ebc025732479c821b443b39250fdc95d89bd096f4294da2f11caadff14dbf9d",
+      "actual": "6ebc025732479c821b443b39250fdc95d89bd096f4294da2f11caadff14dbf9d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\arena.py",
+      "expected": "3e28cdba564eb0e5092be8ddfaec036564837848fa350fc7e296096cf8b3e8d3",
+      "actual": "3e28cdba564eb0e5092be8ddfaec036564837848fa350fc7e296096cf8b3e8d3",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\bootstrap.py",
+      "expected": "04446f20f8750761a30615dbe76df910c8443d8dfadfc2a3f1943db76decbd9c",
+      "actual": "04446f20f8750761a30615dbe76df910c8443d8dfadfc2a3f1943db76decbd9c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\champion.py",
+      "expected": "3befbde47763c023efd4c17065c105df73ce7eeeda4d3c10ad0a2d5668d43bce",
+      "actual": "3befbde47763c023efd4c17065c105df73ce7eeeda4d3c10ad0a2d5668d43bce",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\checkpoint.py",
+      "expected": "7478e2742cbb5251b6196ad5c6affb53e55f15b7a1f8707fa30f363411d76fe1",
+      "actual": "7478e2742cbb5251b6196ad5c6affb53e55f15b7a1f8707fa30f363411d76fe1",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\data.py",
+      "expected": "91449ce538d8a4c9bba4f48200d3a85471da257800c6070a5b3bc77be4402148",
+      "actual": "91449ce538d8a4c9bba4f48200d3a85471da257800c6070a5b3bc77be4402148",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\encoding.py",
+      "expected": "3f805b2814e360d689f30f47bbe0c81907074befc8fa34136c5f813f0561ef76",
+      "actual": "3f805b2814e360d689f30f47bbe0c81907074befc8fa34136c5f813f0561ef76",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\generate.py",
+      "expected": "5e51fa72fcd88a25337cd30e6c828515a738862c1635bbec441ad02adfe090e5",
+      "actual": "5e51fa72fcd88a25337cd30e6c828515a738862c1635bbec441ad02adfe090e5",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\loop.py",
+      "expected": "c2df93b26617b1a5f813af1e71a9afa377e9e19623026d7d8a790406697fae80",
+      "actual": "c2df93b26617b1a5f813af1e71a9afa377e9e19623026d7d8a790406697fae80",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\match.py",
+      "expected": "483b204971891fbdd115c402dd66176e99d9f3f2ebd55968b596a6e9e6bd8901",
+      "actual": "483b204971891fbdd115c402dd66176e99d9f3f2ebd55968b596a6e9e6bd8901",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\model.py",
+      "expected": "c7e33894b6b96978e3717b713291e8260faa8d2400c0e516189b9f30d0bf78ef",
+      "actual": "c7e33894b6b96978e3717b713291e8260faa8d2400c0e516189b9f30d0bf78ef",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\native.py",
+      "expected": "f970c96b71e92c1a7cb9d82b8c821ffcf864ca28439562704eb91305631cb9be",
+      "actual": "f970c96b71e92c1a7cb9d82b8c821ffcf864ca28439562704eb91305631cb9be",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\replay.py",
+      "expected": "a66767df1bc6116eaeba9ac41d18d2b6541655304c88927b745fe3edc9fb4905",
+      "actual": "a66767df1bc6116eaeba9ac41d18d2b6541655304c88927b745fe3edc9fb4905",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\selfplay.py",
+      "expected": "6f78bf6de150d6d0ed36bffb363e0b1f29669a0e8de36b427fe4528cac329af7",
+      "actual": "6f78bf6de150d6d0ed36bffb363e0b1f29669a0e8de36b427fe4528cac329af7",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\train.py",
+      "expected": "cda86f44a3bb6f4ca798c84ab3248b83ac51bfc8b8047bb34a36b99a97ad574a",
+      "actual": "cda86f44a3bb6f4ca798c84ab3248b83ac51bfc8b8047bb34a36b99a97ad574a",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\training.py",
+      "expected": "6b0616e147f54f14d6a90709d2eed2c9eff5d2cb5c0ec0a5e95855c0e14739d6",
+      "actual": "6b0616e147f54f14d6a90709d2eed2c9eff5d2cb5c0ec0a5e95855c0e14739d6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic\\zero\\verify.py",
+      "expected": "a420e59dc81791bcd9336ef326015e9d1c3c916888d7939bf34ad8252a4f7938",
+      "actual": "a420e59dc81791bcd9336ef326015e9d1c3c916888d7939bf34ad8252a4f7938",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\baseline\\include\\zero\\board.hpp",
+      "expected": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b",
+      "actual": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\baseline\\include\\zero\\network.hpp",
+      "expected": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498",
+      "actual": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\baseline\\include\\zero\\profile.hpp",
+      "expected": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39",
+      "actual": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\baseline\\include\\zero\\proof.hpp",
+      "expected": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f",
+      "actual": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\baseline\\include\\zero\\search.hpp",
+      "expected": "ec915330802e6b4ac03f0708962a3d13b807687d9141bc4d5d536edb6701f313",
+      "actual": "ec915330802e6b4ac03f0708962a3d13b807687d9141bc4d5d536edb6701f313",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\baseline\\src\\board.cpp",
+      "expected": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f",
+      "actual": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\baseline\\src\\main.cpp",
+      "expected": "e3b9da223744bb77191c935d2fb606ef591085d311150588cf825be940c5b87f",
+      "actual": "e3b9da223744bb77191c935d2fb606ef591085d311150588cf825be940c5b87f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\baseline\\src\\network.cpp",
+      "expected": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86",
+      "actual": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\baseline\\src\\proof.cpp",
+      "expected": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e",
+      "actual": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\baseline\\src\\search.cpp",
+      "expected": "8a4a2854dcb5ac8bf3401364e1830e085fff2d683a2d991f27094c85e83631ea",
+      "actual": "8a4a2854dcb5ac8bf3401364e1830e085fff2d683a2d991f27094c85e83631ea",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\build.cmd",
+      "expected": "8126f5f2523f5ffd737cf62d55d50e6f4dbe3aee419f66deb9bd6015224e85fd",
+      "actual": "8126f5f2523f5ffd737cf62d55d50e6f4dbe3aee419f66deb9bd6015224e85fd",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\CMakeLists.txt",
+      "expected": "fda16257bb9e18cb21878a82a1012e9738fe511b8391e14f624fb723012bfe4e",
+      "actual": "fda16257bb9e18cb21878a82a1012e9738fe511b8391e14f624fb723012bfe4e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\dist\\chromatic-depth.exe",
+      "expected": "0cb44a789a028479ee31b227c8c0f2698ba34c01983eb240adb42ab8333cf288",
+      "actual": "0cb44a789a028479ee31b227c8c0f2698ba34c01983eb240adb42ab8333cf288",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\dist\\default.zero",
+      "expected": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "actual": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\dist\\depth_probe.exe",
+      "expected": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+      "actual": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\dist\\pristine_probe.exe",
+      "expected": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001",
+      "actual": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\include\\zero\\board.hpp",
+      "expected": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b",
+      "actual": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\include\\zero\\network.hpp",
+      "expected": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498",
+      "actual": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\include\\zero\\profile.hpp",
+      "expected": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39",
+      "actual": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\include\\zero\\proof.hpp",
+      "expected": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f",
+      "actual": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\include\\zero\\search.hpp",
+      "expected": "6bf7b23f28ff8fcad4eb24d6f9aa68b6fc9cd06d382edd0dcad3901c9fcdf3a2",
+      "actual": "6bf7b23f28ff8fcad4eb24d6f9aa68b6fc9cd06d382edd0dcad3901c9fcdf3a2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\include\\zero\\telemetry_json.hpp",
+      "expected": "fe184f046b79940d55c681b5c3edac968c3db3af77762b98f771741ab60aaec8",
+      "actual": "fe184f046b79940d55c681b5c3edac968c3db3af77762b98f771741ab60aaec8",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\LICENSE",
+      "expected": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "actual": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\README.md",
+      "expected": "ef6463dbe5400c01476e84e2784bf702002547fb1b1654cef2576b53e1db6f9e",
+      "actual": "ef6463dbe5400c01476e84e2784bf702002547fb1b1654cef2576b53e1db6f9e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\src\\board.cpp",
+      "expected": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f",
+      "actual": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\src\\main.cpp",
+      "expected": "4cc008a3abe3634b74bee94c5fa58e2e166985800457c1a552af33c16dbd77f2",
+      "actual": "4cc008a3abe3634b74bee94c5fa58e2e166985800457c1a552af33c16dbd77f2",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\src\\network.cpp",
+      "expected": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86",
+      "actual": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\src\\proof.cpp",
+      "expected": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e",
+      "actual": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\src\\search.cpp",
+      "expected": "faa86321d3df2216c20e2647b71ad952225d7f0fb4ea3d73d2785c6f24729a36",
+      "actual": "faa86321d3df2216c20e2647b71ad952225d7f0fb4ea3d73d2785c6f24729a36",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\src\\telemetry_json.cpp",
+      "expected": "27cf64072cb7d379b0f428fbcc4bb1ae90ca06f07040e2d7093dccbb3c4cc787",
+      "actual": "27cf64072cb7d379b0f428fbcc4bb1ae90ca06f07040e2d7093dccbb3c4cc787",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\tests\\arena_tests.py",
+      "expected": "dfdfd1e199bf6d0fc7bd1910d528a6e697e24c6a1029b337e0eaa81c81102803",
+      "actual": "dfdfd1e199bf6d0fc7bd1910d528a6e697e24c6a1029b337e0eaa81c81102803",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\tests\\core.cpp",
+      "expected": "cde4329ae236713bc631772c3b58e5d8c01a6dd63377422cdcc5d23ff6b51ad6",
+      "actual": "cde4329ae236713bc631772c3b58e5d8c01a6dd63377422cdcc5d23ff6b51ad6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\tests\\depth_telemetry.cpp",
+      "expected": "b450ed240b1d81e8ccf8343ce4c5689c9ae38fe95022a2e398064e34bf2a841d",
+      "actual": "b450ed240b1d81e8ccf8343ce4c5689c9ae38fe95022a2e398064e34bf2a841d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\tests\\integration.py",
+      "expected": "697f96a49ed8d410ef9140798516cf697260ea662ae62be83b6dc9fb558ef320",
+      "actual": "697f96a49ed8d410ef9140798516cf697260ea662ae62be83b6dc9fb558ef320",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\tests\\reliability.py",
+      "expected": "99b0d760051a7a70831449ea902bdc0d5e2febe27af21014e5d178a5d73a088c",
+      "actual": "99b0d760051a7a70831449ea902bdc0d5e2febe27af21014e5d178a5d73a088c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\tests\\safety.py",
+      "expected": "10c11052c49c396359270c2ca7ba7f6cae2bc28579ff62b3e279fb48ea07e618",
+      "actual": "10c11052c49c396359270c2ca7ba7f6cae2bc28579ff62b3e279fb48ea07e618",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\THIRD_PARTY.md",
+      "expected": "c44114de73a63446dba80bb1962681331d875f490457d6ea8a44db445f350764",
+      "actual": "c44114de73a63446dba80bb1962681331d875f490457d6ea8a44db445f350764",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-depth\\tools\\depth_probe.cpp",
+      "expected": "37ec0f44ce76aa8527692f7c1f012796cc63680913116cadff3c7df96467a01d",
+      "actual": "37ec0f44ce76aa8527692f7c1f012796cc63680913116cadff3c7df96467a01d",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\asan.cmd",
+      "expected": "accf89eb5d02f8507d8a75e9432ea37ec39fa8b98e9a982b7b449a93916e0955",
+      "actual": "accf89eb5d02f8507d8a75e9432ea37ec39fa8b98e9a982b7b449a93916e0955",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\baseline\\include\\zero\\board.hpp",
+      "expected": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b",
+      "actual": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\baseline\\include\\zero\\network.hpp",
+      "expected": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498",
+      "actual": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\baseline\\include\\zero\\profile.hpp",
+      "expected": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39",
+      "actual": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\baseline\\include\\zero\\proof.hpp",
+      "expected": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f",
+      "actual": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\baseline\\include\\zero\\search.hpp",
+      "expected": "ec915330802e6b4ac03f0708962a3d13b807687d9141bc4d5d536edb6701f313",
+      "actual": "ec915330802e6b4ac03f0708962a3d13b807687d9141bc4d5d536edb6701f313",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\baseline\\src\\board.cpp",
+      "expected": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f",
+      "actual": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\baseline\\src\\main.cpp",
+      "expected": "e3b9da223744bb77191c935d2fb606ef591085d311150588cf825be940c5b87f",
+      "actual": "e3b9da223744bb77191c935d2fb606ef591085d311150588cf825be940c5b87f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\baseline\\src\\network.cpp",
+      "expected": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86",
+      "actual": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\baseline\\src\\proof.cpp",
+      "expected": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e",
+      "actual": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\baseline\\src\\search.cpp",
+      "expected": "8a4a2854dcb5ac8bf3401364e1830e085fff2d683a2d991f27094c85e83631ea",
+      "actual": "8a4a2854dcb5ac8bf3401364e1830e085fff2d683a2d991f27094c85e83631ea",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\build.cmd",
+      "expected": "8126f5f2523f5ffd737cf62d55d50e6f4dbe3aee419f66deb9bd6015224e85fd",
+      "actual": "8126f5f2523f5ffd737cf62d55d50e6f4dbe3aee419f66deb9bd6015224e85fd",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\CMakeLists.txt",
+      "expected": "bc1b2f2a154edd846cd46dbe0be0bf3add2c92e5c8fd93f01841a236abd67f64",
+      "actual": "bc1b2f2a154edd846cd46dbe0be0bf3add2c92e5c8fd93f01841a236abd67f64",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\dist\\chromatic-memory.exe",
+      "expected": "3dc5aef05ee06452564fdc1939d8f9fa4637d1306a2582a18e47cfb0af118624",
+      "actual": "3dc5aef05ee06452564fdc1939d8f9fa4637d1306a2582a18e47cfb0af118624",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\dist\\default.zero",
+      "expected": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "actual": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\dist\\depth_probe.exe",
+      "expected": "e9d1fc07b4279604dad54258700b429940592d71a47f7ff26636c17fd0cff432",
+      "actual": "e9d1fc07b4279604dad54258700b429940592d71a47f7ff26636c17fd0cff432",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\include\\zero\\board.hpp",
+      "expected": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b",
+      "actual": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\include\\zero\\network.hpp",
+      "expected": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498",
+      "actual": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\include\\zero\\profile.hpp",
+      "expected": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39",
+      "actual": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\include\\zero\\proof.hpp",
+      "expected": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f",
+      "actual": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\include\\zero\\search.hpp",
+      "expected": "71726f5fff02253f65363ce4800ddde8edebe0e414c63058510d99a31cb66a84",
+      "actual": "71726f5fff02253f65363ce4800ddde8edebe0e414c63058510d99a31cb66a84",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\include\\zero\\telemetry_json.hpp",
+      "expected": "fe184f046b79940d55c681b5c3edac968c3db3af77762b98f771741ab60aaec8",
+      "actual": "fe184f046b79940d55c681b5c3edac968c3db3af77762b98f771741ab60aaec8",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\LICENSE",
+      "expected": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "actual": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\README.md",
+      "expected": "385ff7d851cfd3b8e18325b586cd5c21e1fc33548e7410e4cd6b70ed92607897",
+      "actual": "385ff7d851cfd3b8e18325b586cd5c21e1fc33548e7410e4cd6b70ed92607897",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\search-memory.patch",
+      "expected": "295dc0c6c75b601112dca4b3671a69a5a9a659085f1911daf4a6919ff6470630",
+      "actual": "295dc0c6c75b601112dca4b3671a69a5a9a659085f1911daf4a6919ff6470630",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\src\\board.cpp",
+      "expected": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f",
+      "actual": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\src\\main.cpp",
+      "expected": "860eecb2d295dce90efadd28fce71d807e17f36a927caa7c3c7498a40e25e4a3",
+      "actual": "860eecb2d295dce90efadd28fce71d807e17f36a927caa7c3c7498a40e25e4a3",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\src\\network.cpp",
+      "expected": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86",
+      "actual": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\src\\proof.cpp",
+      "expected": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e",
+      "actual": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\src\\search.cpp",
+      "expected": "b6c5aff1817587fd9f73698b7e5b1941eb23f68b81b2c3e80c0e699968ed7993",
+      "actual": "b6c5aff1817587fd9f73698b7e5b1941eb23f68b81b2c3e80c0e699968ed7993",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\src\\telemetry_json.cpp",
+      "expected": "5e14c80f9287442d56bb0611c880ed921ad79077559adb224f637e4af448ce5b",
+      "actual": "5e14c80f9287442d56bb0611c880ed921ad79077559adb224f637e4af448ce5b",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\tests\\arena_tests.py",
+      "expected": "dfdfd1e199bf6d0fc7bd1910d528a6e697e24c6a1029b337e0eaa81c81102803",
+      "actual": "dfdfd1e199bf6d0fc7bd1910d528a6e697e24c6a1029b337e0eaa81c81102803",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\tests\\core.cpp",
+      "expected": "9408088d1fc5cbfa777c550404a22d38855922e98cbef52e0c1ebea6d8631fe6",
+      "actual": "9408088d1fc5cbfa777c550404a22d38855922e98cbef52e0c1ebea6d8631fe6",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\tests\\depth_telemetry.cpp",
+      "expected": "7b9e9e866effb7499a3cce2526d93e715db6b5b27fe9b9f64a5ba914596f53ae",
+      "actual": "7b9e9e866effb7499a3cce2526d93e715db6b5b27fe9b9f64a5ba914596f53ae",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\tests\\integration.py",
+      "expected": "697f96a49ed8d410ef9140798516cf697260ea662ae62be83b6dc9fb558ef320",
+      "actual": "697f96a49ed8d410ef9140798516cf697260ea662ae62be83b6dc9fb558ef320",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\tests\\memory_recycling.cpp",
+      "expected": "10ac1c8b8bdb0b5228fd71d0a565b2b3056f670e18650e919a888a90206635b3",
+      "actual": "10ac1c8b8bdb0b5228fd71d0a565b2b3056f670e18650e919a888a90206635b3",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\tests\\reliability.py",
+      "expected": "99b0d760051a7a70831449ea902bdc0d5e2febe27af21014e5d178a5d73a088c",
+      "actual": "99b0d760051a7a70831449ea902bdc0d5e2febe27af21014e5d178a5d73a088c",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\tests\\safety.py",
+      "expected": "10c11052c49c396359270c2ca7ba7f6cae2bc28579ff62b3e279fb48ea07e618",
+      "actual": "10c11052c49c396359270c2ca7ba7f6cae2bc28579ff62b3e279fb48ea07e618",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\THIRD_PARTY.md",
+      "expected": "c44114de73a63446dba80bb1962681331d875f490457d6ea8a44db445f350764",
+      "actual": "c44114de73a63446dba80bb1962681331d875f490457d6ea8a44db445f350764",
+      "unchanged": true
+    },
+    {
+      "path": "outputs\\project-chromatic-memory\\tools\\depth_probe.cpp",
+      "expected": "37ec0f44ce76aa8527692f7c1f012796cc63680913116cadff3c7df96467a01d",
+      "actual": "37ec0f44ce76aa8527692f7c1f012796cc63680913116cadff3c7df96467a01d",
+      "unchanged": true
+    }
+  ]
+}

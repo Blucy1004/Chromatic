@@ -1,0 +1,1065 @@
+{
+  "format": "chromatic-shard-delivery-v1",
+  "generated_utc": "2026-10-24T10:09:28.351903+00:00",
+  "files": [
+    {
+      "path": "chromatic-shard-trainer/candidates/index.json",
+      "bytes": 3639,
+      "sha256": "139c2c1746f1f3bdf9ba25f92fa6596e75e299d229c7646322000a14ac415b40"
+    },
+    {
+      "path": "chromatic-shard-trainer/candidates/positions-100.pt",
+      "bytes": 4952165,
+      "sha256": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf"
+    },
+    {
+      "path": "chromatic-shard-trainer/candidates/positions-100.zero",
+      "bytes": 1576740,
+      "sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "path": "chromatic-shard-trainer/candidates/positions-1000.pt",
+      "bytes": 5216165,
+      "sha256": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867"
+    },
+    {
+      "path": "chromatic-shard-trainer/candidates/positions-1000.zero",
+      "bytes": 1576740,
+      "sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "path": "chromatic-shard-trainer/candidates/positions-10000.pt",
+      "bytes": 5228645,
+      "sha256": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143"
+    },
+    {
+      "path": "chromatic-shard-trainer/candidates/positions-10000.zero",
+      "bytes": 1576740,
+      "sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    },
+    {
+      "path": "chromatic-shard-trainer/champion/default.zero",
+      "bytes": 1576740,
+      "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+    },
+    {
+      "path": "chromatic-shard-trainer/champion/model.pt",
+      "bytes": 4760485,
+      "sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84"
+    },
+    {
+      "path": "chromatic-shard-trainer/chromatic-train.ps1",
+      "bytes": 3260,
+      "sha256": "bf2291bd4fb8b3f89bee9e39fdd05541916ef4067c12f3372241f1b2cf1c4398"
+    },
+    {
+      "path": "chromatic-shard-trainer/docs/ARCHITECTURE.md",
+      "bytes": 24711,
+      "sha256": "49deff3ac94dcde407763285dace4167115c6f22b137441847d4fd508672ca87"
+    },
+    {
+      "path": "chromatic-shard-trainer/docs/EVALUATION.md",
+      "bytes": 3394,
+      "sha256": "eef2fc032fce5d573b5d253740883918bb140594cc35accd8790fd6614d45671"
+    },
+    {
+      "path": "chromatic-shard-trainer/docs/LABELS_AND_CALIBRATION.md",
+      "bytes": 4086,
+      "sha256": "3be3bb0e19b7140e1cf5644f44ee84f46827363bf75a3cea02953ae16da1383d"
+    },
+    {
+      "path": "chromatic-shard-trainer/docs/MODEL_LABELS.md",
+      "bytes": 14423,
+      "sha256": "933e168220b9c759676d590a8ec23ec2709c2cdbb4b0729119052864be4ff956"
+    },
+    {
+      "path": "chromatic-shard-trainer/docs/SOURCES.md",
+      "bytes": 15140,
+      "sha256": "cbd143841c454b6cc8cd41906537d6e43eb0176a1e5148f7f1bb920c4854f8b7"
+    },
+    {
+      "path": "chromatic-shard-trainer/docs/STREAMING.md",
+      "bytes": 5468,
+      "sha256": "941f25a7023021e13fce88fef4fde1e3c79199c1b05500175680e66c9206d14c"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/calibration.json",
+      "bytes": 297641,
+      "sha256": "82577601c9e455e9c3b40125260df9bf1541db1cff473fe49702765bc3816798"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-calibration-rows.jsonl",
+      "bytes": 5357224,
+      "sha256": "9764845735ca8f992389c8c1ec59ac0da1e2a5ec273ed1858875ccb6777fe210"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-calibration-rows.jsonl.source.json",
+      "bytes": 554,
+      "sha256": "6d64a5addb7f53807a3c18fd722e2ea5e38ce056014c9f5eab74df712abbb487"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-evaluations.jsonl.zst",
+      "bytes": 8464969,
+      "sha256": "feb08110ffcef588f05c30bb7ca93f5e19897e85c3d84678aff076f51dd84e2b"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-evaluations.jsonl.zst.source.json",
+      "bytes": 2419,
+      "sha256": "d9fd36bc4a667a33d2eb69087ad9da97a648a96831f2d713ec25485e554336f3"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-games-sample.pgn",
+      "bytes": 11736646,
+      "sha256": "867b3917b68692f73bc6b4d5d88f655373b682c5ca2be236b3ea1bd71efd3bf7"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-games-sample.pgn.source.json",
+      "bytes": 3944,
+      "sha256": "5ecf53264d1ca7c640c9474afa5776f8a74b06a712657054e44c3d1c25e25db5"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-openings-a.tsv",
+      "bytes": 67257,
+      "sha256": "3282e4c9155289a29224f9a85fba0decb46efa35c2fa5e39662d2ac48fb0f793"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-openings-b.tsv",
+      "bytes": 78124,
+      "sha256": "1d5ed134ebbd87915ead5683416e37583bb3e5ae3582b4d8cb5cb4aa7ef4f623"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-openings-c.tsv",
+      "bytes": 132304,
+      "sha256": "45e843c7b7e79a0d04d5bda879c9bd23f5a10974488bd8615e4f4c5d0749986f"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-openings-COPYING.txt",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-openings-d.tsv",
+      "bytes": 73318,
+      "sha256": "1cf4057a8aece94f27bb3f278ad410ee2844831a642364eeceaafa091dbcceda"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-openings-e.tsv",
+      "bytes": 44061,
+      "sha256": "48c6f6645b031a5937c8386839debab0e2e48837251687ba1afb6369677f8546"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-openings.source.json",
+      "bytes": 2521,
+      "sha256": "19dc35ebda711b43635fed6910dfc5e1742a12ec348a0ed5358e89f151a27b8a"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-puzzles.csv",
+      "bytes": 19022,
+      "sha256": "c46a5c5d83a27e4418a4a13aa196b4097c9aa863d76ce18386d61c8e628cecfb"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-puzzles.csv.source.json",
+      "bytes": 33155,
+      "sha256": "f00b7d03e568130aa09fc619f16761101134f21361d8044a65388ed7213d19c1"
+    },
+    {
+      "path": "chromatic-shard-trainer/fixtures/official-sample-manifest.json",
+      "bytes": 9040,
+      "sha256": "e0d1f2f249e478479946c629a967afd7bd73c184e1c140d5379837633abf1ac6"
+    },
+    {
+      "path": "chromatic-shard-trainer/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "chromatic-shard-trainer/pytest.ini",
+      "bytes": 69,
+      "sha256": "65fbe9769ed63107a674aa536d554ff4e53ed03cc13f6ae204c504372913e398"
+    },
+    {
+      "path": "chromatic-shard-trainer/README.md",
+      "bytes": 22144,
+      "sha256": "87137fe3a264775cd3e5686ebf14d023f873f5e69ba9b2f4454a70b39899840a"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/calibration-report.json",
+      "bytes": 3053,
+      "sha256": "35121ff07204f76a5f6ffb611ab71e8523f7222f5d571d94885364b1a8bc3283"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/data-quality-10000.json",
+      "bytes": 137218,
+      "sha256": "8213a44527dfb2d59b99627dfb4798a1339f2509e6c87d2974868fbfa2437fea"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/environment.json",
+      "bytes": 811,
+      "sha256": "c8cd46292dd2e020cc3110b1f618ad71bac60180fc62c799344474c24871bb19"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/EXPERIMENTS.md",
+      "bytes": 11814,
+      "sha256": "25ec06fa4c31b3bd203cedf0955478a0520310254ac18fc0e048d232a00b09b1"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/final-delivery-check.json",
+      "bytes": 430,
+      "sha256": "d2ff4111bfb69bbe62ae5afa881411a91c308c5abb005a5ad24c37d520e3ee21"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/frame-probe.json",
+      "bytes": 623,
+      "sha256": "f4b46b2808b71036a52be31ebd145256d7fb5fc75a0b609193470ca17158a802"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/game-frame-verification.json",
+      "bytes": 3276,
+      "sha256": "d19b3bea9fbf221e567aa4b20632327972b383bee67d08a184d6d70bd108b2d3"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/graphs/start-consistency.png",
+      "bytes": 204822,
+      "sha256": "7620376ee7ea127f941dd847fe918fb2b61fac9b79ef612c798613a4db85fb4a"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/graphs/validation-and-safety.png",
+      "bytes": 228812,
+      "sha256": "42f25323f3255c4adb48a67df9b286131c1a1e9ab1b23856c1fb7f210eddf9dc"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/http-probe.json",
+      "bytes": 3083,
+      "sha256": "e724fed6bd988ac78df9585f078f396b486d6ccf0e7a317e95ab777116d99560"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/inference-parity.json",
+      "bytes": 22936,
+      "sha256": "12bac8dcef69138b1f1b46ad4153e3df82ade78eb5b9340dc419202d0bb23d97"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/metrics.csv",
+      "bytes": 1154,
+      "sha256": "6977b6919a82380255b2fcd5ffe746a798a4fbf66356fed5381424a023846ca4"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/metrics.json",
+      "bytes": 3711,
+      "sha256": "5b14261598397b8c1970dfd1d92c94f0c4c14e11069d43257239ee0ed47d3bb2"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/official-frame-verification.json",
+      "bytes": 2350,
+      "sha256": "395bc535b77c945ddbeffc19e84cc43f13374cea602ac02d01bab1b7c87712c4"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/pipeline-tests.json",
+      "bytes": 4608,
+      "sha256": "fd2998d8652565a466383fc3f98816ba3e6da180c1719153e624e3a2e9899ff0"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/powershell-compatibility.json",
+      "bytes": 876,
+      "sha256": "e18284382006b31fbd50cb893adc6430e336e3338d820d0abfba69830f976f22"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/preservation.json",
+      "bytes": 94295,
+      "sha256": "39361e4b7a658e3076950b6341ef4a5f68d7f9318474d23ae0f4119dc69d0a17"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/recovery-logs/tests-0.log",
+      "bytes": 2530,
+      "sha256": "df7d0675d6f21bb111622abfe1d7067e9e45cea5cdc82467ff8e0e22591fb8ac"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/recovery-logs/tests-1-resume.log",
+      "bytes": 8154,
+      "sha256": "5ef54dcd38db0307d1660d8eeba2944ee5408bdabea092e5d5a0d6383a867d7a"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/recovery-logs/tests-2-resume.log",
+      "bytes": 7743,
+      "sha256": "29b65fde4cdca5cc3430323b6a20455587733bbbb8e29453b277c90da5576d50"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/recovery-logs/tests-3-resume.log",
+      "bytes": 4025,
+      "sha256": "e7d34b12436fa82f714cbfa532d75a7b8b1793951f1b6e27e26029ff03727c11"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/recovery-logs/tests-4.log",
+      "bytes": 109,
+      "sha256": "70fecebd773282c2a1dd71faad953daf0dc66bc71ed54c857a6e6b5d2bd8814c"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/recovery-logs/tests-5-mirror_resume.log",
+      "bytes": 2527,
+      "sha256": "2d79a6f5d310e4794712c1d5636884524809bc995389531637db700af5678fdb"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/recovery-logs/tests-5-previous_checkpoint_resume.log",
+      "bytes": 2886,
+      "sha256": "dc6078f56061f2a0e14f120406d678167aa462697e2bbb422849c84b208d8184"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/recovery-logs.json",
+      "bytes": 2394,
+      "sha256": "4a943d4f752aedf2198c3c594cae5309085180d72915dfc01e878d49f4ae442e"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/reserved-opening-families.json",
+      "bytes": 673,
+      "sha256": "56f492385d93016fe14e728809db5e475ac72a49c0ca81be56290dd50db37ae1"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/resources.json",
+      "bytes": 893,
+      "sha256": "95ec347c4a86a7607740942f1225a722ba20339f46ecafda394146d0597440df"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/streaming-unit.log",
+      "bytes": 2274,
+      "sha256": "e8da54215a19d1625048d17a3db067036c6d6a62b3bba278498a108652810fe0"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/streaming-validation.json",
+      "bytes": 1659,
+      "sha256": "4341305c9d53a4a16b1a2ee724fc59905ff10d64c223cf73fa93fdf67f8df448"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/unit-tests.xml",
+      "bytes": 9989,
+      "sha256": "c3a44b788d5403cc8e648835044edacd8378519faa7a06122a09b5f7fce1e8f3"
+    },
+    {
+      "path": "chromatic-shard-trainer/reports/verification-summary.json",
+      "bytes": 591,
+      "sha256": "27997f2f482e60c6dbffc53fa89f0d15126cd0c2af997eca53998c93a5486031"
+    },
+    {
+      "path": "chromatic-shard-trainer/requirements.txt",
+      "bytes": 152,
+      "sha256": "ba2b2c8455e5dad91464fba0a78136744d051decc7277f7df71dcee4a0495fe6"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/__init__.py",
+      "bytes": 84,
+      "sha256": "cf7970a6de2f99f73bde7581a970afb17e2f9e3b9ae7a9ed4ca6ba2fc71f6ce4"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/anchors.py",
+      "bytes": 2975,
+      "sha256": "a16433a09426e1f03e0de56353e2d01e10fe0325a23b194c50b0fc6ee4730a7c"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/audit.py",
+      "bytes": 2091,
+      "sha256": "1e66968172454bb78009563324567d1b48d686256acc36469d3d2a1ffa011f3a"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/calibration.py",
+      "bytes": 15172,
+      "sha256": "a467333d18cfd650f2a174e18017754627528ecfd1e950a73c9b60410a352200"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/durable.py",
+      "bytes": 19111,
+      "sha256": "e600ffcca5a7e8d12a9f1119a060762d4c96fae3015d282080de7732fb102310"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/evaluate.py",
+      "bytes": 26154,
+      "sha256": "7d01ce8b5d2dbac599e4232fe12cf3dfb605cef1a8771b309b5b96b001f549dd"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/memory_limit.py",
+      "bytes": 1924,
+      "sha256": "ac16b21292cbf26e223b9a3b1edd63a0753d3aaf7dd663cca1ffe150061d3822"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/model_adapter.py",
+      "bytes": 2799,
+      "sha256": "fc5946fc1f45ccd376298beff060ac87ac743cebdf6cbad5fc9a300faf9b0f16"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/pipeline.py",
+      "bytes": 15619,
+      "sha256": "c29c5b3a237b8c595c6fccefd2d8b78d7eff4a79852570e0bfa180453bfa0714"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/quality.py",
+      "bytes": 9292,
+      "sha256": "cdd884051cd9be8d65be9fc534da3c5abf4440cf8461c57c57b8c1983465d8a1"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/recover.py",
+      "bytes": 2218,
+      "sha256": "72a6ca28025aebbc5cb0f2369a6e3916daeac04e82508c147149a5c2c1d609ac"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/run.py",
+      "bytes": 8670,
+      "sha256": "215cd37609b685388c512ac111e91524d889812147f4459e9ef0a8a34ffa821a"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/shards.py",
+      "bytes": 19809,
+      "sha256": "3d632226e3779920bd96a0454c23d476407867ce2e803eb161178ca8d74d99e6"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/storage.py",
+      "bytes": 6962,
+      "sha256": "7ef35f9e3e93e1127dbe94e4b6f4fcf4e92e23e58fed176f1efde9ac44c9cf2d"
+    },
+    {
+      "path": "chromatic-shard-trainer/shardtrain/streaming.py",
+      "bytes": 23902,
+      "sha256": "d239b8258e36c23d95bd2ff22be2654fc64b5ff0876cb1fe8b1d263414e1bf02"
+    },
+    {
+      "path": "chromatic-shard-trainer/tests/test_durable.py",
+      "bytes": 8712,
+      "sha256": "ec9e0ef99df4f0c93af1a2144357a966463308823fdf386dcc97a0108eb70fa0"
+    },
+    {
+      "path": "chromatic-shard-trainer/tests/test_evaluation.py",
+      "bytes": 9289,
+      "sha256": "a0e6a19081719c0b567d2afcd0df3e9c1423113480e36ecb53e32a55d448b9fb"
+    },
+    {
+      "path": "chromatic-shard-trainer/tests/test_pipeline.py",
+      "bytes": 12896,
+      "sha256": "d6eaad90b695cc538c52d6805ab9be49b29a44effa0ea66214a0545721e4ce42"
+    },
+    {
+      "path": "chromatic-shard-trainer/tests/test_powershell.py",
+      "bytes": 1245,
+      "sha256": "d783bd3acaba152cee228f89798b9e51269f950aa9243524c2d0318f1052e351"
+    },
+    {
+      "path": "chromatic-shard-trainer/tests/test_quality.py",
+      "bytes": 9027,
+      "sha256": "6d2495c67bb9be047e867fb10f903de4b50c53cbc2758b85109fbb90aa17eeec"
+    },
+    {
+      "path": "chromatic-shard-trainer/tests/test_shards.py",
+      "bytes": 10329,
+      "sha256": "1c028a3d808438787565a398d2cc950516387a31a3000eb0f0abd7008154af5d"
+    },
+    {
+      "path": "chromatic-shard-trainer/tests/test_streaming.py",
+      "bytes": 11723,
+      "sha256": "1e7e1994b6fff4020168d7be1d7749c2880ae967f74d831a3e0c0ab84c19909a"
+    },
+    {
+      "path": "chromatic-shard-trainer/THIRD_PARTY.md",
+      "bytes": 2233,
+      "sha256": "a4921488b8240d0df8aca410b15a28d902ebc56a5d3e071da4aee2c98a13bbdd"
+    },
+    {
+      "path": "chromatic-shard-trainer/tools/check_inference.py",
+      "bytes": 6731,
+      "sha256": "37a172694f879253b5bd13b6823996378fe1d1ac43725e6802079dbeaac87aab"
+    },
+    {
+      "path": "chromatic-shard-trainer/tools/evaluate_candidate.py",
+      "bytes": 211,
+      "sha256": "2de1a8f71774bf3781dd06dca308d53f31c639f243ddc9d1708937a49e0395c5"
+    },
+    {
+      "path": "chromatic-shard-trainer/tools/evaluate_stages.py",
+      "bytes": 2417,
+      "sha256": "bb29917af34f1c10be55c83634375517d12395d8a2377ff2607d51cf59964bb2"
+    },
+    {
+      "path": "chromatic-shard-trainer/tools/fit_calibration.py",
+      "bytes": 4494,
+      "sha256": "cbf7b5409d7638371edbea89f5fc30a9afee14547f74a30a6c5208420079c5fb"
+    },
+    {
+      "path": "chromatic-shard-trainer/tools/prepare_sample.py",
+      "bytes": 17967,
+      "sha256": "18f29ba68666f2c8c3fe83e05591dae01b72a0ab88405d2acbfb4e732297c0ea"
+    },
+    {
+      "path": "chromatic-shard-trainer/tools/verify_game_sample.py",
+      "bytes": 6897,
+      "sha256": "5aeda869695e483fa5eff7bc9973756ce4aa787adfd182fa5f2aabc54db5ee6b"
+    },
+    {
+      "path": "chromatic-shard-trainer/tools/verify_official_sample.py",
+      "bytes": 6396,
+      "sha256": "1f2ba1524577e610d07da21e07dcbc8614ff91d9429af41a1da8cb9b5f832ad2"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/__init__.py",
+      "bytes": 80,
+      "sha256": "c9c8dda2a5324abfece952250f13a78cd1f2f123862195b877226d18d64ae7fc"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/__main__.py",
+      "bytes": 6472,
+      "sha256": "6ebc025732479c821b443b39250fdc95d89bd096f4294da2f11caadff14dbf9d"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/arena.py",
+      "bytes": 3246,
+      "sha256": "3e28cdba564eb0e5092be8ddfaec036564837848fa350fc7e296096cf8b3e8d3"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/bootstrap.py",
+      "bytes": 3128,
+      "sha256": "04446f20f8750761a30615dbe76df910c8443d8dfadfc2a3f1943db76decbd9c"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/champion.py",
+      "bytes": 974,
+      "sha256": "3befbde47763c023efd4c17065c105df73ce7eeeda4d3c10ad0a2d5668d43bce"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/checkpoint.py",
+      "bytes": 2876,
+      "sha256": "7478e2742cbb5251b6196ad5c6affb53e55f15b7a1f8707fa30f363411d76fe1"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/data.py",
+      "bytes": 3041,
+      "sha256": "91449ce538d8a4c9bba4f48200d3a85471da257800c6070a5b3bc77be4402148"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/encoding.py",
+      "bytes": 2115,
+      "sha256": "3f805b2814e360d689f30f47bbe0c81907074befc8fa34136c5f813f0561ef76"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/generate.py",
+      "bytes": 7953,
+      "sha256": "5e51fa72fcd88a25337cd30e6c828515a738862c1635bbec441ad02adfe090e5"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/loop.py",
+      "bytes": 5153,
+      "sha256": "c2df93b26617b1a5f813af1e71a9afa377e9e19623026d7d8a790406697fae80"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/match.py",
+      "bytes": 9599,
+      "sha256": "483b204971891fbdd115c402dd66176e99d9f3f2ebd55968b596a6e9e6bd8901"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/model.py",
+      "bytes": 2156,
+      "sha256": "c7e33894b6b96978e3717b713291e8260faa8d2400c0e516189b9f30d0bf78ef"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/native.py",
+      "bytes": 5523,
+      "sha256": "f970c96b71e92c1a7cb9d82b8c821ffcf864ca28439562704eb91305631cb9be"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/replay.py",
+      "bytes": 7232,
+      "sha256": "a66767df1bc6116eaeba9ac41d18d2b6541655304c88927b745fe3edc9fb4905"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/selfplay.py",
+      "bytes": 4529,
+      "sha256": "6f78bf6de150d6d0ed36bffb363e0b1f29669a0e8de36b427fe4528cac329af7"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/train.py",
+      "bytes": 4613,
+      "sha256": "cda86f44a3bb6f4ca798c84ab3248b83ac51bfc8b8047bb34a36b99a97ad574a"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/training.py",
+      "bytes": 6552,
+      "sha256": "6b0616e147f54f14d6a90709d2eed2c9eff5d2cb5c0ec0a5e95855c0e14739d6"
+    },
+    {
+      "path": "chromatic-shard-trainer/vendor/zero/verify.py",
+      "bytes": 2908,
+      "sha256": "a420e59dc81791bcd9336ef326015e9d1c3c916888d7939bf34ad8252a4f7938"
+    },
+    {
+      "path": "chromatic-shard-validation/common-holdout.csv",
+      "bytes": 1509,
+      "sha256": "f73384df349deac30dc3bbc893bae26c05f9975e0a1cd08d65c9f981068db810"
+    },
+    {
+      "path": "chromatic-shard-validation/common-holdout.json",
+      "bytes": 5335,
+      "sha256": "1a69c50328b01f8ae30df8ccae066570ac87734745ff5d138881879f626a4412"
+    },
+    {
+      "path": "chromatic-shard-validation/evaluation-summary.json",
+      "bytes": 2078,
+      "sha256": "b4053d81aa66532c7243d4477fb3828fb5229f984008fe63940ff8e4a2de6271"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/checkpoint-owner.json",
+      "bytes": 89,
+      "sha256": "5a643e41f44802c3f4012b2519d746110e65e84dcc1012f1d2c9d055a90e4345"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-b505031739914d60b00b01125ff773e6.manifest.json",
+      "bytes": 1336,
+      "sha256": "9103a7acfc2d731293f3f0f94d2e80f3c0b83c07d87dcc0f61435f54346caab7"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-b505031739914d60b00b01125ff773e6.mirror.pt",
+      "bytes": 4903077,
+      "sha256": "bcffa19980ddf1e9452001ff21673c0c3e3c45e0111443d69925d23ce8b1704e"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-b505031739914d60b00b01125ff773e6.pt",
+      "bytes": 4903077,
+      "sha256": "bcffa19980ddf1e9452001ff21673c0c3e3c45e0111443d69925d23ce8b1704e"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-b505031739914d60b00b01125ff773e6.zero",
+      "bytes": 1576740,
+      "sha256": "f64b38ca6c63d0fb258121dc26e06fb528dd3991fd8b4ddd30cdb950144147ab"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.manifest.json",
+      "bytes": 1342,
+      "sha256": "abd23616c1b1b84e873dd6c73979f2916de1229bfa905337714ba92825701f2a"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.mirror.pt",
+      "bytes": 4903077,
+      "sha256": "f9ca4348f441e5eb3d10179cf0591818c24550abad78d21823c99922fb6842de"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.pt",
+      "bytes": 4903077,
+      "sha256": "f9ca4348f441e5eb3d10179cf0591818c24550abad78d21823c99922fb6842de"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.zero",
+      "bytes": 1576740,
+      "sha256": "f64b38ca6c63d0fb258121dc26e06fb528dd3991fd8b4ddd30cdb950144147ab"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.manifest.json",
+      "bytes": 1348,
+      "sha256": "93048fb4b3bd83ecd88ca00b78208f7800cf5226dbd2b934a60c41eebfd32938"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.mirror.pt",
+      "bytes": 4952165,
+      "sha256": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.pt",
+      "bytes": 4952165,
+      "sha256": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.zero",
+      "bytes": 1576740,
+      "sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/evaluation-report.json",
+      "bytes": 54236,
+      "sha256": "6796ff91d0d10249fa446a5c5874de8ac462447d83aa465eebee74eecb1d3e8c"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/evaluations/f889ab6a3594c5cf371da392/evaluation-report.json",
+      "bytes": 54236,
+      "sha256": "6796ff91d0d10249fa446a5c5874de8ac462447d83aa465eebee74eecb1d3e8c"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/evaluations/f889ab6a3594c5cf371da392/matches.json",
+      "bytes": 36399,
+      "sha256": "8b99737c0941c4c469a7f4bd015d42da51e386dd15a582edb0fdffa614de97c1"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/evaluations/f889ab6a3594c5cf371da392/matches.pgn",
+      "bytes": 4066,
+      "sha256": "4545330b7643dc10b3d17a92ebbd88a65fa5cbc3425263329e7aaf2141ee291e"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/evaluations/f889ab6a3594c5cf371da392/matches.progress.json",
+      "bytes": 36059,
+      "sha256": "7f3a3a595ed4d5c9db1c86b6764c9935f877725a78a060283ee0063e6b822191"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/logs/training.csv",
+      "bytes": 3149,
+      "sha256": "b584cecaada548c6f578e94886a2eed96c63905a04ada8ef4d62b9f6db6c9229"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/logs/training.jsonl",
+      "bytes": 5175,
+      "sha256": "0115f9eeb591da45358c138eeae5124496259cbd917785010641d0e2836d1b65"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/matches.json",
+      "bytes": 19292,
+      "sha256": "6627f7cf485280d82e1406d7501ca5346aaf4fa102fb78a58ee3829b6ec2e7ca"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/resource-policy.json",
+      "bytes": 100,
+      "sha256": "7becb468e03e81651678c277cd9dc38e0903e8d387675b0684703876796893fc"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/status.json",
+      "bytes": 567,
+      "sha256": "8db7a53e92b83156e1f07ad8127297ba898fd438a92be51d5b37e2c1edab36e2"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/candidate/training-report.json",
+      "bytes": 2371,
+      "sha256": "e5ceac4b172ba2ac40edf1c7b43aafb2f6147df2c53f9d0da8ee41009ed64023"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/data/fixed/test.jsonl",
+      "bytes": 23993,
+      "sha256": "30dd79360a88094f47c05670cca45a0925664ce4de32952f4d5ac077e2d7b58b"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/data/fixed/validation.jsonl",
+      "bytes": 23924,
+      "sha256": "ca69be961de9a4e372e99811d96e644e0f35edd03cf2acc1bee6aca1aebbed67"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/data/ledger.sqlite3",
+      "bytes": 598016,
+      "sha256": "7b713410f2e76a2dbe9ba726f242ac39f42bd68c0d3f620712fe8e3f090f2f52"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/data/shards/shard-00000004.jsonl",
+      "bytes": 38336,
+      "sha256": "3b624444305398a416faeb266ebde57721e981c2e6bb1338d8e01108c10a7e02"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/timing.json",
+      "bytes": 1178,
+      "sha256": "0e1fbb4a25272b036b936245f50aa93c50c88d885bd6f7654c359aa4a9d6e650"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-100/training.stdout.log",
+      "bytes": 5680,
+      "sha256": "0ed81b32f28c4cbde95b6bf79bbed2cf23c334c234a6e6c8483ddd8aa8a0bbe5"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/checkpoint-owner.json",
+      "bytes": 89,
+      "sha256": "fb6ad09e9dbcd23ebb35c32232202f0ec67ea7f7c6a727f092869e54fc9cfe9b"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.manifest.json",
+      "bytes": 1354,
+      "sha256": "d32d6656118c17ce214b8b08fda2929385e2d9d36156e6d1444c293eceb2c2b1"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.mirror.pt",
+      "bytes": 5216165,
+      "sha256": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.pt",
+      "bytes": 5216165,
+      "sha256": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.zero",
+      "bytes": 1576740,
+      "sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-735de626cbb244a5b6f6f09609143350.manifest.json",
+      "bytes": 1343,
+      "sha256": "7b14ac8448c4ab825b9155dd6d91e7c03d7aadb9208d70cbcdc5645c1bb1c241"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-735de626cbb244a5b6f6f09609143350.mirror.pt",
+      "bytes": 5234981,
+      "sha256": "baca75ca6b42be243e9692bf84d024d0aea8a35dcb55c4d7172329e5e2bb7ed7"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-735de626cbb244a5b6f6f09609143350.pt",
+      "bytes": 5234981,
+      "sha256": "baca75ca6b42be243e9692bf84d024d0aea8a35dcb55c4d7172329e5e2bb7ed7"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-735de626cbb244a5b6f6f09609143350.zero",
+      "bytes": 1576740,
+      "sha256": "cc82c95407a805a1833edb1d182258a87cf701acc51f4d0d7f1dc64b3071d381"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-d2af69a795a84addaabb497e3b09e4fa.manifest.json",
+      "bytes": 1347,
+      "sha256": "b6848a9c44b2c5cad71bc259d256b13a01e7a1c395bb488eb8fc1938701d19ef"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-d2af69a795a84addaabb497e3b09e4fa.mirror.pt",
+      "bytes": 5216485,
+      "sha256": "8e2782a873d934ded5bf0a711b382f5de700dc82e018a4ee7876cba236310d57"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-d2af69a795a84addaabb497e3b09e4fa.pt",
+      "bytes": 5216485,
+      "sha256": "8e2782a873d934ded5bf0a711b382f5de700dc82e018a4ee7876cba236310d57"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-d2af69a795a84addaabb497e3b09e4fa.zero",
+      "bytes": 1576740,
+      "sha256": "6512cc87d5efdc66811e3cfa647cf4e82aff636bc90c29034695d7c95d4621fe"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/evaluation-report.json",
+      "bytes": 51449,
+      "sha256": "a811e79120123732c3d6dda60e84f0ffa6f35f9861976952ebf318b7108bd451"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/evaluations/c5dc0a72d913272cd8484ffb/evaluation-report.json",
+      "bytes": 51449,
+      "sha256": "a811e79120123732c3d6dda60e84f0ffa6f35f9861976952ebf318b7108bd451"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/evaluations/c5dc0a72d913272cd8484ffb/matches.json",
+      "bytes": 31085,
+      "sha256": "d21ca4737f418443eb5cacd1c80542ae554d612bc3296bca89ca009d2675f0e8"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/evaluations/c5dc0a72d913272cd8484ffb/matches.pgn",
+      "bytes": 3563,
+      "sha256": "db2c7f205af372c3b343de65e7e7a52950c6a3b57f814bca3c2ceb9a54ebe523"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/evaluations/c5dc0a72d913272cd8484ffb/matches.progress.json",
+      "bytes": 30745,
+      "sha256": "3abe957c1367cdae544ab287002197ddda9ce6c604b6da36457cff8274007331"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/logs/training.csv",
+      "bytes": 4512,
+      "sha256": "433a9d27068ddbb7afaae22a1fb615e803ab2f91971e4bc18baadbd28a0911b6"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/logs/training.jsonl",
+      "bytes": 7308,
+      "sha256": "ac46fc39ad192cbc710f618dc63a1a47ce63600fd1fd71651f420f9803a422c6"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/matches.json",
+      "bytes": 16588,
+      "sha256": "e7e2bcac192a7209747f3af65fb372685fdc5e5a7e10a24818f2faf0b9d90464"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/resource-policy.json",
+      "bytes": 100,
+      "sha256": "7becb468e03e81651678c277cd9dc38e0903e8d387675b0684703876796893fc"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/status.json",
+      "bytes": 656,
+      "sha256": "3dd06bc59d64a6e97779feec3f8a1727dc042cb32d6ddfddbf031dd20b9bbd20"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/candidate/training-report.json",
+      "bytes": 2463,
+      "sha256": "8a505e19df439ef2d06d3051c5166a16b429e726437e986ef5495974b17d196e"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/data/fixed/test.jsonl",
+      "bytes": 144460,
+      "sha256": "73e87d7d78f16b7d301e360d26d79a897accb47c6e31402932bf79c6af534ac2"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/data/fixed/validation.jsonl",
+      "bytes": 141540,
+      "sha256": "50212ab036b5203e51be42773436286e62090573758c2870c7ce17934c53a913"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/data/ledger.sqlite3",
+      "bytes": 3665920,
+      "sha256": "b32b98e5e2aab41d6d6e042c56c433560dec4fbc798667197d4fcfaa8f5dbaf8"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/data/shards/shard-00000004.jsonl",
+      "bytes": 378276,
+      "sha256": "4ee12bcd484246eb09970e3a95e3b46994a5e916dbaff1f226ab8783d7d9a20d"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/timing.json",
+      "bytes": 1183,
+      "sha256": "405f7079d8d7e948d6e91e7d05dbb7259e31cd63ab112933f40b288d829cbeb9"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-1000/training.stdout.log",
+      "bytes": 6944,
+      "sha256": "e9fd9e039190c4ca42b805625cb98e6637d79d434de2670dacdf373b2d8ad25c"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/checkpoint-owner.json",
+      "bytes": 89,
+      "sha256": "2d98c373dc189b392f99c3a29ad3e72204dcee31fc9f62ab5b3694d7606fa5a2"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-30929c2f333f49378dbfbd3370aff8cf.manifest.json",
+      "bytes": 1376,
+      "sha256": "48895e1625357018c108608c600f36f1bc42a93b963678f3b4353968e92946d7"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-30929c2f333f49378dbfbd3370aff8cf.mirror.pt",
+      "bytes": 5300709,
+      "sha256": "369f1a62d1e4f28ef943514350fab9e8103b455a22474a18d1b1eff205e8d126"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-30929c2f333f49378dbfbd3370aff8cf.pt",
+      "bytes": 5300709,
+      "sha256": "369f1a62d1e4f28ef943514350fab9e8103b455a22474a18d1b1eff205e8d126"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-30929c2f333f49378dbfbd3370aff8cf.zero",
+      "bytes": 1576740,
+      "sha256": "a06f84bfc02da832999d88f06a838f5775841cd729570636b4212d1207166108"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-62688936b83c445992ff056f47a58cc2.manifest.json",
+      "bytes": 1378,
+      "sha256": "a6ad7d4b78a77e55dcfba3a5f90c920e483883e7bcb6e33879d7c8e4d796d3b8"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-62688936b83c445992ff056f47a58cc2.mirror.pt",
+      "bytes": 5226661,
+      "sha256": "90dd2a5fafd95ffe502b54f0961ddbe64ae557fc7bcd58f0896e780c64bc1388"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-62688936b83c445992ff056f47a58cc2.pt",
+      "bytes": 5226661,
+      "sha256": "90dd2a5fafd95ffe502b54f0961ddbe64ae557fc7bcd58f0896e780c64bc1388"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-62688936b83c445992ff056f47a58cc2.zero",
+      "bytes": 1576740,
+      "sha256": "499df73ffec672de91c6a500e64c0f0eb18daa4aff0c1bd95fcf2047086ee055"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.manifest.json",
+      "bytes": 1385,
+      "sha256": "3382c0974443ff960c5f14dd04804e42e10e7b0014726d929a9b81d3c2a8db6b"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.mirror.pt",
+      "bytes": 5228645,
+      "sha256": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.pt",
+      "bytes": 5228645,
+      "sha256": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.zero",
+      "bytes": 1576740,
+      "sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/evaluation-report.json",
+      "bytes": 53153,
+      "sha256": "1b1c731e795b9cac934627664624f741be9379b6444992782862c63a8d5cb9bf"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/evaluations/5def2130ca18f245765eacb4/evaluation-report.json",
+      "bytes": 53153,
+      "sha256": "1b1c731e795b9cac934627664624f741be9379b6444992782862c63a8d5cb9bf"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/evaluations/5def2130ca18f245765eacb4/matches.json",
+      "bytes": 34452,
+      "sha256": "e03346323f84b0f35e4c2494823baa2b813ddeb2e8bc12f60fe7641531158119"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/evaluations/5def2130ca18f245765eacb4/matches.pgn",
+      "bytes": 3895,
+      "sha256": "83bd318f44b8375b464f7113a2c901031c83ce0e65adaba57dd214075a0d4fe4"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/evaluations/5def2130ca18f245765eacb4/matches.progress.json",
+      "bytes": 34112,
+      "sha256": "c9ad0907b23c49e8571e2d16f763840b1f4b436eadcf15e34a3c160b1d0aef52"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/logs/training.csv",
+      "bytes": 21926,
+      "sha256": "e686707c178d490d9f48481c783845b3f967d239e36fd5b1f47ba37e58cb207e"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/logs/training.jsonl",
+      "bytes": 36806,
+      "sha256": "b9f672bff8915340e9e19a1bcd96c95b6763f2ae9ff8875eb74c2362fb1120f6"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/matches.json",
+      "bytes": 18305,
+      "sha256": "41cfab3ffdb12a593582590fd6117f02c89599304003ca253b9fd28b608ceda3"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/resource-policy.json",
+      "bytes": 100,
+      "sha256": "7becb468e03e81651678c277cd9dc38e0903e8d387675b0684703876796893fc"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/status.json",
+      "bytes": 662,
+      "sha256": "e5f49d213626b34e5784e9675c3103aec23f81396afef55083159233875bb4ae"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/candidate/training-report.json",
+      "bytes": 2614,
+      "sha256": "86c31478692cf2a9b306bc8ed73a41802afc6c165241353f075741a9822d3d62"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/data/fixed/test.jsonl",
+      "bytes": 1433192,
+      "sha256": "07e5873c5043dec9243e7e612e1db216eb344fb78f2dd09a0fef1c6512288b26"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/data/fixed/validation.jsonl",
+      "bytes": 1412256,
+      "sha256": "7bf47ec8c1af5970239ada7146cbb65f75c18cb568536b8891966c3f27ea3701"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/data/ledger.sqlite3",
+      "bytes": 26624000,
+      "sha256": "81188e36acf382674286099adeefca0732760dffa67fa1c90e4a431bdcbd614b"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/data/shards/shard-00000010.jsonl",
+      "bytes": 1532866,
+      "sha256": "0630afee415f25bdddaec738806f1e5b656d1dcb4873dceec07c029f05844d43"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/timing.json",
+      "bytes": 1187,
+      "sha256": "b8314d99f4b9e560c0f006454a2d6bdeeb8cb15ae5cfadf423a637cfeacf456a"
+    },
+    {
+      "path": "chromatic-shard-validation/positions-10000/training.stdout.log",
+      "bytes": 23716,
+      "sha256": "56e6b56dc36688b6764dee135565e5e440580de80a4fa3912f1de8328b473c02"
+    },
+    {
+      "path": "chromatic-shard-validation/validation-results.json",
+      "bytes": 15560,
+      "sha256": "9bbfc9233722797c6683ae7c0be61106b1900e2ea41c6431d363347112b46e04"
+    }
+  ],
+  "file_count": 210,
+  "uncompressed_bytes": 197364081,
+  "preservation": {
+    "report": "chromatic-shard-trainer/reports/preservation.json",
+    "unchanged": true,
+    "checked_files": 303
+  },
+  "resumption": "Existing run manifests/ledger use absolute paths. Resume at original workspace paths. Extracted tool can start new runs; copied PT may initialize a new run.",
+  "excluded": "Python environment, caches, scratch tests, lock/WAL files, original engine projects and binaries are not distributed."
+}

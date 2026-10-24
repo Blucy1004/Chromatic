@@ -1,0 +1,737 @@
+{
+  "url": "https://database.lichess.org/lichess_db_puzzle.csv.zst",
+  "license": "CC0-1.0",
+  "license_evidence": "https://database.lichess.org/",
+  "version": "\"6abf70a1-125007eb\"",
+  "etag": "\"6abf70a1-125007eb\"",
+  "last_modified": "Fri, 02 Oct 2026 08:51:45 GMT",
+  "http_status": 206,
+  "content_range": "bytes 0-1048575/307234795",
+  "content_length": "1048576",
+  "accept_ranges": null,
+  "compressed_start_offset": 0,
+  "compressed_bytes_read": 65536,
+  "compressed_prefix_sha256": "3bedf810941b30e90a5f0d1bbd097e0ed35232d9e6d362c74214d3244d978879",
+  "decompressed_bytes_read": 65536,
+  "stop_reason": "puzzle_record_budget",
+  "captured_at_utc": "2026-10-24T09:06:23.181969+00:00",
+  "intentionally_partial_original": true,
+  "original_frame_checksum": "not established for intentionally stopped remote prefix",
+  "limits": {
+    "compressed_bytes": 1048576,
+    "decompressed_bytes": 4194304
+  },
+  "range_safety": "all decoding began at compressed byte zero; no arbitrary offset decoding",
+  "records": 100,
+  "local_format": "CSV UTF-8",
+  "source_record_start": 1,
+  "source_record_end": 100,
+  "role": "independent tactical test only; excluded from neural training",
+  "first_opponent_and_expected_reply_legality_checked": true,
+  "expected_match_metric": "exact published solution first reply; alternatives may also win",
+  "excluded_training_families": [
+    "01af8508109a1e073fb1ed97e6438b6318152262447b6da702d47ccfb98f9061",
+    "03d7cafcc1e9541bd27f0d318923336f4c6fb535cf7e224a04afa09d496fc345",
+    "03e2cd05f0832b05f4d1afa3d5a887d0221d098f10b163cb7436837dd019f55c",
+    "06f267199976c85549bba185c383b56b54c17e0e5b6ce01a96745b0a47b51836",
+    "1043dde46878a71223d053a38ff5d26580f0e69b27885952956163f528d05e81",
+    "14a94393f2aa148a0e5dbdca25aeaae8af678c577238ccf4a2cd9d387e066b9f",
+    "15bad2f095a4017ff92cdfa46a4533d0a8813a688b46fd3e40f5f4a4e8b38d63",
+    "187b8a4ac2ecb33f98b564a867f2d0bdf251e2eaf7372989783ea39124e55081",
+    "1b2bd0b683f56d606e3fa82b46568f59d6571026d19a20f389e3a52cacb7f975",
+    "1c93594569237f3de09cd13495c45d4136000f811b3c49db631a2e6fde298234",
+    "1f06a2eab2323430a0460c26541dd598347a8b457eb0441d37454417af2b08c1",
+    "21354c500e2d8594bdc90831d7a0785ecdb7f8b4acd5e9c0a29def9677575857",
+    "213abbd79a1d11b77bdd80a87eea632ea4390069e8f7807f033a21033da9a5eb",
+    "21c639f89638c38d5ff473eb5e4550bac325739958fdafd8d8315f77800727fe",
+    "2324239e4120adb17a70cf60a4a08863260d05f3461c280251460133b9260e71",
+    "2424b8235c1557c5595ec53d7936f88aa48e59cb4f3f4bd338cd559db9a202e0",
+    "25e6f34730bcba03f3830ead0990eea8212bd0c90de170cf8c182c3916176376",
+    "29ed2bae88392af88764792f8d0e7b02f89f3c1a6c475557be8f6e7350841bba",
+    "2c7e3b1bd0bdb0a33e3d3ae5ef339830240f10a41b1377281bda4678b8532016",
+    "2d7b8a896b683cbf541cf5c156a7bed6420c6f3b3eec088db13577244c656f47",
+    "2fde91e56a20734bf0c5e2ae88005306963403070afec066375341a7aba64946",
+    "32029025a511464f53f9ae325cdc1bef3fcf0a596b33796351b72b886f0a8a49",
+    "3568c448ea42c015767fb8dcfcad66e07023ac71fa0d3920cbebd891270264f3",
+    "380b19018af7649d48a56bb19dd98d52cb814ede8dfdac0685e938bdf5d26668",
+    "3c4b93da125b4c6703a910c59fbb45f4a06d81e93ab0eed55114040e42d8ff95",
+    "4052c75b529831cbe733efae052c156d3d0fd1f9acdf72939067e15bb623a3a4",
+    "4c4350ed5a18c692a343137f9dba88f1404b91ca7dd23ea9cae26ce41fd6a124",
+    "5560ecf430af6fa7f18e2545dd333eb154f06f687201e9c4bed847827e77382d",
+    "5c8f49f750b57c923b7c02d5c98c7aabcbcfe04a356e2ac5bee414b8ecbc325b",
+    "5fd7862faf3e4e087de39c3bc2884c5af456f6fb943cd54626e2c95dff9db24b",
+    "69268967712c03d80710741e62232f733bd3f2368c8192672c2ddaf3ea2be94f",
+    "6a3dca27f800320e9641d8ea7ea79f825b682d3db1ae203376f4b3271fd49ed0",
+    "6a62c0665ddf61a6711480948f6a19c421cb9046f64c75d57ebe3659d664d431",
+    "6b29618b82e590e6f48be4f4cdfd65b0b98ef2f438d230f6fcedf9442cb26fbf",
+    "6c7eac19c82057b0516a9ef9afdb953f24c356a9670db4cbf271b46ef79b9f5f",
+    "6cfa8a065f7ec6f2ce3abcc19b18883776d01cc584cd430ac032609a4d374e97",
+    "6dc441c5d3ef480986792de717cae7babd0325be3f8540dca0029c08e654c6f3",
+    "6e1bbb337a55286538f4e6f4297b3ba2e39df1177bc6191762325b008a30230c",
+    "6e43af0c3192acfc34a5a3da38fa75b1e2530703ccb7a602ce90a849edaba78c",
+    "70e450f66ccd6282baf347627032bad50a9dabc579c1664a45bcc6fd25a98c92",
+    "71d029cebd4ea53135e9345ef6e59d1d129c53c168f6e54001aa92fe96dd5100",
+    "7221fddca84f09c94611241969dc54a2172776cb9fa023fe98cf8153f1c33124",
+    "7235a97ea61d6fe11f9567ef52e0011b8863b9fe668c088aa738510b9aa7d785",
+    "77bb10bc5af33769a0cd3ee3474f0c10fa3fc78d98e0076b01d5c2fb530aa6f3",
+    "7cac9460a53c11aa86de0f829a365087007f8e7758a5701034e1ee4ed36150fd",
+    "83891d9b07a81b3abcd4857447aaad09145c305158af3a811d62ee5978f02201",
+    "8894328b7c43498b366b036269ba855a3e308b2b7a0c4f6ea6f90eea45a79629",
+    "89530b40be602e2c8a3eed1ca2b1515952cd88af97dc989a07c25cfdb1c34df5",
+    "8d59aa94e0ef65bb3df96ba21e2ff8b26a1a0c2202716e0bceb1aaa324522dd7",
+    "8dce1e53b9002b9c31612275b8266b0a545d539c893aa809667e396114f7cd9c",
+    "9121ae649c57ce388bbcd124945735cbc8fefa0494838f09e1f8ee8bf51541ab",
+    "93ec2b50dfac89a4099d1de192bfbc6b17a990ca4047f45f64b2e3259065c58a",
+    "945142ee48af20d4a99d59a98b9439c9ce03ce8767703620915cb6de9fb7b441",
+    "94a528267769cd66a7ea2203e45c3aac15bf0ec2c0408b695b02d7e25395b9de",
+    "996c8ca03b57b4295f222f4dff3ddc1755ffa2520c4989715b12828491d3fd9b",
+    "9a42de64690ec6aaf5e8846d8ffaa551cc8c118f7ced7fd4a837d4b815b3449c",
+    "9bae31c651416f8abccd6093cce48121ba56ef79642f7ebf30658b845b24639a",
+    "9d381a00638f40d3b2d33741122cfa6d6c19ae48854cd62b740a02aebdd3d8b1",
+    "9da5d87edd4cf5884cc3f3d1f562fdf6a385b63cfe8c07a93ba3199c3534d2ad",
+    "9e3d64546cdb74a7b96ecdfdc80d81d696790e3a21fb8891094fd4e938caff98",
+    "a216f8237013a8ef408ffa73b194d85796b85010352b16165f137d786d757d25",
+    "a3066dee07310f35a2d65b044eb7dca141daf6bd55070310973581c484d5c52d",
+    "a3fb793cc7f163e88e00d419fec11281c6bc4a78d6b16767ce4bc685038df975",
+    "a43e2692f2ee05d60c3262b03e43d37599069722e84b2982468891bf716b6bc9",
+    "a44e1deade0211a0c161e964470a75c0fb814d9cf4a6c53cefd2f59f7dc934bb",
+    "a6864d2941e7abe87657e33b2af072b0fb57d8d0b787bbbdc268639d45618c87",
+    "a95063fefded44493dea2cacd32ec20480596f25946547bdeaf760096cad2245",
+    "a97470f374c2d655b40903392d0780174dcecd51c05947473ee275c22c0ce22b",
+    "a977b72b8d454b125ddad0931278d55dc02e946c4ae4eccbdf1b027297701f07",
+    "ad6dda101c3a43cd85a153eeaf03eda9ee9cef491826d93b4f23a94d4bfbee69",
+    "adfad2df1d6cb510d0dbdb4dfd715093f266047198067683b8db4e16bce04f2b",
+    "af41ec6c16047a85fc35b323f6513f9b5c5e1f12b456c3b4485fe3d04abecbc3",
+    "b0a63dd2817c376c9134ba7074528cc30865518611beb0bc79ae99f859e362d0",
+    "b44aee18c24a70e4cb00a8cb44d0216cd09e5e0029b92d1e30250efda259e729",
+    "bc853ee13d8870374c90530c5b96172b7ea6a7fe13c0b741fd224341da61141d",
+    "c15ad10c814fea3dc2cdc2bcc406c5dafcdaaf85fd0abe88cfafa8c013bf8672",
+    "c7f50e1d4f955011f75ecca6011c4a0e84ea5bab17dfbc5bb4605100a9df2bc5",
+    "c98dff1e66ebfbcb69ddfe153f144df603b39392fe29b1e0fd69558c1f5c8895",
+    "ca1b154f5ecceaf8b44a1096826e8a1c25f270a7d4226e5dd01a7cdec685b7fe",
+    "cab01ff2b2da1252394cf843fd8d1d2905edbb450caf8e5fe4596c9774fde865",
+    "ce4b912a3b96d9c52ecdec353f55343f8aca64172dadadc5750a1e2c52274194",
+    "cfecaedc638cbe73c9ac6672705a55eb9e25797225f8a082431792e30b193c7d",
+    "d6d56102d52b350b0473ac1b5aa3d60172d2877bc21e7dd8d94426360a25dd91",
+    "d744b454eb18e28b9a0120e1e477246a9af3d2066e0c7504249792c4e9f05a9d",
+    "d859326cd883b4930f303582c596aa7794618c3a1eef462837abb4c7405da4b9",
+    "d8ecc14d16a8669b18ec3813936f57604d5fbba277d93dc1cab10d843215ad63",
+    "d959118ebd7b7ea24b0e26cafeab6a7c3f94cb7c47f5d9544c8787f83f718979",
+    "dc1aa0a575aeee93b04281e8a20c167027be8d810c4014b36d16a9d4b3ac801d",
+    "de71d6391e4deb873428257b4378a69204261140a2038db5e1650d558fbda71e",
+    "e1eb697bfb38462f3aa57810ee48346887cfb310f0b9f2996537ef9d2fb09fff",
+    "e39e9082d20c3c2d2aef4ffd2179ae401b1f0febbb5e6bc547b7bc343ec21854",
+    "e4597a96e7e4b7fd2c99f8867a22fc3fe3be84e77c1e27cabe79aed6c09eab46",
+    "e73f9842638b6a0cfb9f3cb5f4782f9de8a79a167e68e25160659f9729cc13ab",
+    "e90881dabc132a28afd140234a07e976f8c7253c0f0507ff9c5325e98ea905ba",
+    "ed5b9f72ffaac20d95c839f324c39538e988e6049d3ca5b5683e29c69ef21095",
+    "ed6fc55fbe7038f0ab601157db214a4fffb0ec013191cd86a7a0d6531ec89f9e",
+    "f03a8469a108da0a48b4c7ac3a2edbd6d37f5b41f47f1e85095a1bef1142f5f0",
+    "f08d1fb417e35000638ebb2b9f7f4d9d17524241cf584476aaaaffac94a229dc",
+    "f4b6b6e748e7f2d20e6be869057c0556edb175fc3444920a1ffa8815ac6a5812",
+    "f8db58d396fa2694f77575c10a1642e886347efe29956b9a37c33f52513f8492"
+  ],
+  "test_positions": [
+    {
+      "puzzle_id": "00008",
+      "fen_after_opponent_move": "r6k/pp2r2p/4Rp1Q/3p4/8/1N1P2b1/PqP3PP/7K w - - 0 25",
+      "expected_uci": "e6e7",
+      "family": "14a94393f2aa148a0e5dbdca25aeaae8af678c577238ccf4a2cd9d387e066b9f"
+    },
+    {
+      "puzzle_id": "0000D",
+      "fen_after_opponent_move": "5rk1/1p3ppp/pq1Q1b2/8/8/1P3N2/P4PPP/3R2K1 b - - 3 27",
+      "expected_uci": "f8d8",
+      "family": "2324239e4120adb17a70cf60a4a08863260d05f3461c280251460133b9260e71"
+    },
+    {
+      "puzzle_id": "0000H",
+      "fen_after_opponent_move": "r4rk1/pp3ppp/8/2bqp2Q/3N4/P2Bn2P/1PPN1P2/R1B2RK1 b - - 0 15",
+      "expected_uci": "d5g2",
+      "family": "de71d6391e4deb873428257b4378a69204261140a2038db5e1650d558fbda71e"
+    },
+    {
+      "puzzle_id": "0008Q",
+      "fen_after_opponent_move": "8/5R2/1p2P3/p4r2/P6p/1P3Pk1/4K3/8 b - - 2 64",
+      "expected_uci": "f5e5",
+      "family": "5c8f49f750b57c923b7c02d5c98c7aabcbcfe04a356e2ac5bee414b8ecbc325b"
+    },
+    {
+      "puzzle_id": "0009B",
+      "fen_after_opponent_move": "r2qr1k1/b1p2ppp/p5n1/P1p1p3/4P1n1/B2P2Pb/3NBP1P/RN1QR1K1 w - - 0 17",
+      "expected_uci": "e2g4",
+      "family": "d8ecc14d16a8669b18ec3813936f57604d5fbba277d93dc1cab10d843215ad63"
+    },
+    {
+      "puzzle_id": "000Pw",
+      "fen_after_opponent_move": "6k1/5p1p/4p3/4q3/3n4/2Q3P1/PP1N1P1P/6K1 b - - 3 37",
+      "expected_uci": "d4e2",
+      "family": "9a42de64690ec6aaf5e8846d8ffaa551cc8c118f7ced7fd4a837d4b815b3449c"
+    },
+    {
+      "puzzle_id": "000Sa",
+      "fen_after_opponent_move": "2Q2bk1/5p1p/p5p1/2p3P1/4B3/7P/qPr2P2/2K4R w - - 0 33",
+      "expected_uci": "e4c2",
+      "family": "8894328b7c43498b366b036269ba855a3e308b2b7a0c4f6ea6f90eea45a79629"
+    },
+    {
+      "puzzle_id": "000VW",
+      "fen_after_opponent_move": "r4r2/1p3pkp/p7/3R1p1Q/3P4/8/P1q2P2/3R2K1 w - - 0 26",
+      "expected_uci": "d5c5",
+      "family": "3568c448ea42c015767fb8dcfcad66e07023ac71fa0d3920cbebd891270264f3"
+    },
+    {
+      "puzzle_id": "000Vc",
+      "fen_after_opponent_move": "8/8/4k1p1/2KpP2P/5P2/8/8/8 b - - 0 53",
+      "expected_uci": "g6h5",
+      "family": "93ec2b50dfac89a4099d1de192bfbc6b17a990ca4047f45f64b2e3259065c58a"
+    },
+    {
+      "puzzle_id": "000Zo",
+      "fen_after_opponent_move": "4r3/1k6/pp3P2/1b5p/3R1p2/P1R2P2/1P4PP/6K1 b - - 0 35",
+      "expected_uci": "e8e1",
+      "family": "a95063fefded44493dea2cacd32ec20480596f25946547bdeaf760096cad2245"
+    },
+    {
+      "puzzle_id": "000aY",
+      "fen_after_opponent_move": "r4rk1/pp2Bppp/2n1b3/q1pp4/8/P1Q2NP1/1PP1PP1P/2KR3R b - - 1 15",
+      "expected_uci": "a5c3",
+      "family": "a977b72b8d454b125ddad0931278d55dc02e946c4ae4eccbdf1b027297701f07"
+    },
+    {
+      "puzzle_id": "000c8",
+      "fen_after_opponent_move": "6k1/Bp3pp1/p3p3/2NpPn1p/5P1q/P2Q1R1P/1P4PK/2r5 b - - 1 28",
+      "expected_uci": "h4e1",
+      "family": "f03a8469a108da0a48b4c7ac3a2edbd6d37f5b41f47f1e85095a1bef1142f5f0"
+    },
+    {
+      "puzzle_id": "000h0",
+      "fen_after_opponent_move": "5rk1/p5p1/3bRr1p/1Pp4q/3p4/1P1Q1N2/P4PPP/4R1K1 b - - 0 22",
+      "expected_uci": "f6f3",
+      "family": "4c4350ed5a18c692a343137f9dba88f1404b91ca7dd23ea9cae26ce41fd6a124"
+    },
+    {
+      "puzzle_id": "000hf",
+      "fen_after_opponent_move": "r1bq3r/pp1nbkp1/2p1p2p/8/2BP4/1PN3P1/P3QP1P/3R1RK1 w - - 0 20",
+      "expected_uci": "e2e6",
+      "family": "d6d56102d52b350b0473ac1b5aa3d60172d2877bc21e7dd8d94426360a25dd91"
+    },
+    {
+      "puzzle_id": "000jr",
+      "fen_after_opponent_move": "6k1/1p4pp/p5n1/5Q2/3BpP2/1P2PP1K/P1q4P/7r w - - 2 34",
+      "expected_uci": "f5d5",
+      "family": "83891d9b07a81b3abcd4857447aaad09145c305158af3a811d62ee5978f02201"
+    },
+    {
+      "puzzle_id": "000lC",
+      "fen_after_opponent_move": "3r3r/pQNk1ppp/1qnR1n2/1B6/8/8/PPP3PP/5R1K b - - 0 19",
+      "expected_uci": "d7d6",
+      "family": "dc1aa0a575aeee93b04281e8a20c167027be8d810c4014b36d16a9d4b3ac801d"
+    },
+    {
+      "puzzle_id": "000mr",
+      "fen_after_opponent_move": "5r1k/5rp1/p7/1b2B2p/1P1P1Pq1/2R3Q1/P3p1P1/2R3K1 b - - 1 41",
+      "expected_uci": "f7f4",
+      "family": "d859326cd883b4930f303582c596aa7794618c3a1eef462837abb4c7405da4b9"
+    },
+    {
+      "puzzle_id": "000o3",
+      "fen_after_opponent_move": "8/2p5/3k2p1/1p1P1p2/1P3P2/3K2Pp/7P/8 w - - 2 44",
+      "expected_uci": "d3d4",
+      "family": "adfad2df1d6cb510d0dbdb4dfd715093f266047198067683b8db4e16bce04f2b"
+    },
+    {
+      "puzzle_id": "000pA",
+      "fen_after_opponent_move": "5rk1/5pp1/7p/3p4/1KpPn3/4PPP1/1P2N1P1/r4R1R b - - 0 24",
+      "expected_uci": "f8b8",
+      "family": "ed6fc55fbe7038f0ab601157db214a4fffb0ec013191cd86a7a0d6531ec89f9e"
+    },
+    {
+      "puzzle_id": "000qP",
+      "fen_after_opponent_move": "8/7R/8/5p2/4bk1P/8/2r5/5KR1 b - - 8 51",
+      "expected_uci": "f4f3",
+      "family": "9da5d87edd4cf5884cc3f3d1f562fdf6a385b63cfe8c07a93ba3199c3534d2ad"
+    },
+    {
+      "puzzle_id": "000rO",
+      "fen_after_opponent_move": "3R4/8/8/KB2b3/1p6/1P2k3/3p4/8 b - - 0 58",
+      "expected_uci": "e5c7",
+      "family": "94a528267769cd66a7ea2203e45c3aac15bf0ec2c0408b695b02d7e25395b9de"
+    },
+    {
+      "puzzle_id": "000rZ",
+      "fen_after_opponent_move": "2kr1b1r/p1p2pp1/2pqN3/7p/6n1/2NPB3/PPP2PPP/R2Q1RK1 b - - 0 13",
+      "expected_uci": "d6h2",
+      "family": "d744b454eb18e28b9a0120e1e477246a9af3d2066e0c7504249792c4e9f05a9d"
+    },
+    {
+      "puzzle_id": "00143",
+      "fen_after_opponent_move": "r4rk1/5ppp/1np2q2/p1b5/2p1B3/P7/1P3PPP/R1BQ1RK1 w - - 2 18",
+      "expected_uci": "d1h5",
+      "family": "cab01ff2b2da1252394cf843fd8d1d2905edbb450caf8e5fe4596c9774fde865"
+    },
+    {
+      "puzzle_id": "0017R",
+      "fen_after_opponent_move": "r2qk2r/pp2ppbp/1n1p2p1/3P4/2n5/2NBBP1P/PP3P2/R2QK2R w KQkq - 0 13",
+      "expected_uci": "d3c4",
+      "family": "6dc441c5d3ef480986792de717cae7babd0325be3f8540dca0029c08e654c6f3"
+    },
+    {
+      "puzzle_id": "0018P",
+      "fen_after_opponent_move": "5R2/1p6/p1p1k3/2P1r3/2K3p1/2P1p1P1/1P5P/8 w - - 2 45",
+      "expected_uci": "f8e8",
+      "family": "e90881dabc132a28afd140234a07e976f8c7253c0f0507ff9c5325e98ea905ba"
+    },
+    {
+      "puzzle_id": "0018S",
+      "fen_after_opponent_move": "2kr3r/p4p2/1p2p2p/1N1p2p1/3Q4/1P1P4/2q2PPP/5RK1 w - - 0 21",
+      "expected_uci": "d4a1",
+      "family": "9121ae649c57ce388bbcd124945735cbc8fefa0494838f09e1f8ee8bf51541ab"
+    },
+    {
+      "puzzle_id": "001Fg",
+      "fen_after_opponent_move": "5r1k/pQR3pp/5rp1/3B4/q2n4/7P/P4PP1/5RK1 b - - 4 30",
+      "expected_uci": "d4e2",
+      "family": "af41ec6c16047a85fc35b323f6513f9b5c5e1f12b456c3b4485fe3d04abecbc3"
+    },
+    {
+      "puzzle_id": "001Hi",
+      "fen_after_opponent_move": "6k1/pp1r1pp1/2p1p2p/4P2P/3q1Q2/1P4R1/P1Pr1PP1/R5K1 w - - 5 24",
+      "expected_uci": "f4f6",
+      "family": "03d7cafcc1e9541bd27f0d318923336f4c6fb535cf7e224a04afa09d496fc345"
+    },
+    {
+      "puzzle_id": "001KR",
+      "fen_after_opponent_move": "6k1/p1p3pp/4N3/1p6/2q1r1n1/2B5/PP4PP/3R1R1K w - - 0 29",
+      "expected_uci": "f1f8",
+      "family": "c98dff1e66ebfbcb69ddfe153f144df603b39392fe29b1e0fd69558c1f5c8895"
+    },
+    {
+      "puzzle_id": "001Oo",
+      "fen_after_opponent_move": "6k1/4p1bp/6p1/1p1pP3/qPpPp3/2P1P3/Q2B1KPP/8 w - - 3 24",
+      "expected_uci": "a2a4",
+      "family": "e1eb697bfb38462f3aa57810ee48346887cfb310f0b9f2996537ef9d2fb09fff"
+    },
+    {
+      "puzzle_id": "001Wz",
+      "fen_after_opponent_move": "6k1/5ppp/r1p5/p1n1rP2/8/2P2N1P/2P3P1/3R2K1 w - - 0 22",
+      "expected_uci": "d1d8",
+      "family": "f8db58d396fa2694f77575c10a1642e886347efe29956b9a37c33f52513f8492"
+    },
+    {
+      "puzzle_id": "001XA",
+      "fen_after_opponent_move": "2r2rk1/pbq1bppp/8/8/2p1N3/P1Bn2P1/2Q2PBP/1R3RK1 w - - 4 24",
+      "expected_uci": "b1b7",
+      "family": "3c4b93da125b4c6703a910c59fbb45f4a06d81e93ab0eed55114040e42d8ff95"
+    },
+    {
+      "puzzle_id": "001aK",
+      "fen_after_opponent_move": "6k1/5p2/4p3/P1B5/2P4P/4Pnp1/Rb2r3/5K2 w - - 0 34",
+      "expected_uci": "f1e2",
+      "family": "6b29618b82e590e6f48be4f4cdfd65b0b98ef2f438d230f6fcedf9442cb26fbf"
+    },
+    {
+      "puzzle_id": "001cr",
+      "fen_after_opponent_move": "8/3B2pp/p5k1/6P1/1ppp1K2/8/1P6/8 w - - 0 39",
+      "expected_uci": "d7e8",
+      "family": "9d381a00638f40d3b2d33741122cfa6d6c19ae48854cd62b740a02aebdd3d8b1"
+    },
+    {
+      "puzzle_id": "001gi",
+      "fen_after_opponent_move": "N6r/1p1k1ppp/2np4/b3p3/4P1b1/N1Q5/P4PPP/R3KB1R b KQ - 0 18",
+      "expected_uci": "a5c3",
+      "family": "2c7e3b1bd0bdb0a33e3d3ae5ef339830240f10a41b1377281bda4678b8532016"
+    },
+    {
+      "puzzle_id": "001h8",
+      "fen_after_opponent_move": "2r3k1/2r4p/4p1p1/1p1q1pP1/p2P1P1Q/P6R/4bB2/2R3K1 w - - 6 35",
+      "expected_uci": "h4h7",
+      "family": "1c93594569237f3de09cd13495c45d4136000f811b3c49db631a2e6fde298234"
+    },
+    {
+      "puzzle_id": "001kG",
+      "fen_after_opponent_move": "rnbq3r/1p3kpp/p4n2/2b5/2pNP3/2N5/PPP3PP/R1BQ1RK1 w - - 2 12",
+      "expected_uci": "d1h5",
+      "family": "c7f50e1d4f955011f75ecca6011c4a0e84ea5bab17dfbc5bb4605100a9df2bc5"
+    },
+    {
+      "puzzle_id": "001m3",
+      "fen_after_opponent_move": "7r/6k1/2b1Rp2/8/P1N3p1/5nP1/5P2/Q4K2 b - - 0 38",
+      "expected_uci": "h8h1",
+      "family": "f08d1fb417e35000638ebb2b9f7f4d9d17524241cf584476aaaaffac94a229dc"
+    },
+    {
+      "puzzle_id": "001om",
+      "fen_after_opponent_move": "5r1k/pp4pp/5p2/1BbQp1r1/7K/7P/1PP3P1/3R3R b - - 3 26",
+      "expected_uci": "c5f2",
+      "family": "6c7eac19c82057b0516a9ef9afdb953f24c356a9670db4cbf271b46ef79b9f5f"
+    },
+    {
+      "puzzle_id": "001pC",
+      "fen_after_opponent_move": "r4rk1/pp3ppp/3b4/2p1pPB1/7N/2PP3n/PP4PP/R2Q2RK b - - 0 18",
+      "expected_uci": "h3f2",
+      "family": "2fde91e56a20734bf0c5e2ae88005306963403070afec066375341a7aba64946"
+    },
+    {
+      "puzzle_id": "001u3",
+      "fen_after_opponent_move": "2r3k1/p4pp1/Qq2p2p/b1Np4/2nP1P2/4P1P1/5K1P/2B1N3 w - - 4 34",
+      "expected_uci": "a6c8",
+      "family": "a216f8237013a8ef408ffa73b194d85796b85010352b16165f137d786d757d25"
+    },
+    {
+      "puzzle_id": "001uD",
+      "fen_after_opponent_move": "6k1/1p4p1/1p3p1p/2r1p3/2n5/r3PN2/2RnNPPP/2R3K1 w - - 0 33",
+      "expected_uci": "f3d2",
+      "family": "996c8ca03b57b4295f222f4dff3ddc1755ffa2520c4989715b12828491d3fd9b"
+    },
+    {
+      "puzzle_id": "001w5",
+      "fen_after_opponent_move": "1rb3k1/q4rP1/4p2p/3p3p/3P1P2/2P5/2QK3P/3R2R1 w - - 1 30",
+      "expected_uci": "c2h7",
+      "family": "71d029cebd4ea53135e9345ef6e59d1d129c53c168f6e54001aa92fe96dd5100"
+    },
+    {
+      "puzzle_id": "001wR",
+      "fen_after_opponent_move": "6nr/p4p1p/k1p5/1p6/1QN5/2P1P3/4KPqP/8 w - - 0 27",
+      "expected_uci": "b4a5",
+      "family": "5fd7862faf3e4e087de39c3bc2884c5af456f6fb943cd54626e2c95dff9db24b"
+    },
+    {
+      "puzzle_id": "001wb",
+      "fen_after_opponent_move": "r3k2r/pb1p1ppp/1b4q1/1Q2P3/8/2NP1PP1/PP4P1/R1B2R1K b kq - 0 17",
+      "expected_uci": "g6h5",
+      "family": "d959118ebd7b7ea24b0e26cafeab6a7c3f94cb7c47f5d9544c8787f83f718979"
+    },
+    {
+      "puzzle_id": "001wr",
+      "fen_after_opponent_move": "r4rk1/p3ppbp/Pp1q1np1/3PpbB1/2B5/2N2P2/1PPQ2PP/3RR1K1 b - - 0 18",
+      "expected_uci": "d6c5",
+      "family": "a97470f374c2d655b40903392d0780174dcecd51c05947473ee275c22c0ce22b"
+    },
+    {
+      "puzzle_id": "001xO",
+      "fen_after_opponent_move": "k1r1b3/p1r1nppp/Bp1qpn2/2Np4/1P1P4/PQR1PN2/5PPP/2R3K1 b - - 1 19",
+      "expected_uci": "b6c5",
+      "family": "77bb10bc5af33769a0cd3ee3474f0c10fa3fc78d98e0076b01d5c2fb530aa6f3"
+    },
+    {
+      "puzzle_id": "001xl",
+      "fen_after_opponent_move": "8/4R3/p4kpp/3B4/5q2/8/5P1P/6K1 w - - 6 41",
+      "expected_uci": "e7f7",
+      "family": "70e450f66ccd6282baf347627032bad50a9dabc579c1664a45bcc6fd25a98c92"
+    },
+    {
+      "puzzle_id": "002CP",
+      "fen_after_opponent_move": "r5k1/pp4pp/4p1q1/4p3/3n4/P3Q1P1/1PP4P/2KR1R2 b - - 5 24",
+      "expected_uci": "g6c2",
+      "family": "8dce1e53b9002b9c31612275b8266b0a545d539c893aa809667e396114f7cd9c"
+    },
+    {
+      "puzzle_id": "002Ds",
+      "fen_after_opponent_move": "8/2p5/pp1p4/P2Pk2p/1PP1p2P/2n1K2P/3N4/8 w - - 0 46",
+      "expected_uci": "b4b5",
+      "family": "21354c500e2d8594bdc90831d7a0785ecdb7f8b4acd5e9c0a29def9677575857"
+    },
+    {
+      "puzzle_id": "002GQ",
+      "fen_after_opponent_move": "5rk1/5ppp/4p3/4N3/8/1Pn5/5PPP/2R3K1 b - - 1 28",
+      "expected_uci": "c3e2",
+      "family": "a44e1deade0211a0c161e964470a75c0fb814d9cf4a6c53cefd2f59f7dc934bb"
+    },
+    {
+      "puzzle_id": "002HE",
+      "fen_after_opponent_move": "1qr2rk1/1p1p1ppp/pB2p1n1/7n/2P1P3/1Q2NP1P/PP2BKPb/3R1R2 b - - 2 20",
+      "expected_uci": "b8g3",
+      "family": "6cfa8a065f7ec6f2ce3abcc19b18883776d01cc584cd430ac032609a4d374e97"
+    },
+    {
+      "puzzle_id": "002Hv",
+      "fen_after_opponent_move": "8/8/8/6p1/5N2/3p3P/5kP1/3K4 b - - 0 56",
+      "expected_uci": "g5f4",
+      "family": "ad6dda101c3a43cd85a153eeaf03eda9ee9cef491826d93b4f23a94d4bfbee69"
+    },
+    {
+      "puzzle_id": "002IE",
+      "fen_after_opponent_move": "r3brk1/5pp1/p2qpn1p/P2pn3/2pP4/2P1PN2/5PPP/RB1QK2R w KQ - 0 17",
+      "expected_uci": "d4e5",
+      "family": "1b2bd0b683f56d606e3fa82b46568f59d6571026d19a20f389e3a52cacb7f975"
+    },
+    {
+      "puzzle_id": "002KJ",
+      "fen_after_opponent_move": "r3k2r/ppq1bppp/4pn2/2Ppn3/1P4bP/2P2N2/P3BPP1/RNBQ1RK1 w kq - 3 11",
+      "expected_uci": "f3e5",
+      "family": "21c639f89638c38d5ff473eb5e4550bac325739958fdafd8d8315f77800727fe"
+    },
+    {
+      "puzzle_id": "002LF",
+      "fen_after_opponent_move": "7r/p4pk1/1pp3p1/8/6q1/4Q3/PP1R1P1r/5KN1 w - - 0 39",
+      "expected_uci": "e3e5",
+      "family": "25e6f34730bcba03f3830ead0990eea8212bd0c90de170cf8c182c3916176376"
+    },
+    {
+      "puzzle_id": "002LW",
+      "fen_after_opponent_move": "3r1rk1/1b3pp1/3p4/p3nPPQ/4P3/3q1BN1/8/2R2RK1 w - - 2 29",
+      "expected_uci": "f5f6",
+      "family": "4052c75b529831cbe733efae052c156d3d0fd1f9acdf72939067e15bb623a3a4"
+    },
+    {
+      "puzzle_id": "002Mm",
+      "fen_after_opponent_move": "rn1qrk2/ppp3pQ/3p1pP1/3Pp3/2P1P3/8/PP3PP1/R1B1K3 w Q - 3 17",
+      "expected_uci": "h7h8",
+      "family": "f4b6b6e748e7f2d20e6be869057c0556edb175fc3444920a1ffa8815ac6a5812"
+    },
+    {
+      "puzzle_id": "002O7",
+      "fen_after_opponent_move": "r3qrk1/2p2pp1/p2bpn1p/2ppN3/3P1Pb1/1PP1P1B1/P2N2PP/R2Q1RK1 w - - 1 15",
+      "expected_uci": "e5g4",
+      "family": "e73f9842638b6a0cfb9f3cb5f4782f9de8a79a167e68e25160659f9729cc13ab"
+    },
+    {
+      "puzzle_id": "002Q2",
+      "fen_after_opponent_move": "7k/p4R1p/3p3B/2pN1n2/2PbB1b1/3P2P1/P3r3/5R1K b - - 0 28",
+      "expected_uci": "f5g3",
+      "family": "e4597a96e7e4b7fd2c99f8867a22fc3fe3be84e77c1e27cabe79aed6c09eab46"
+    },
+    {
+      "puzzle_id": "002Tf",
+      "fen_after_opponent_move": "r3kbnr/ppp1qppp/2n5/1B1pP3/5B2/4PQ2/PPP2PPP/RN2K2R b KQkq - 2 7",
+      "expected_uci": "e7b4",
+      "family": "187b8a4ac2ecb33f98b564a867f2d0bdf251e2eaf7372989783ea39124e55081"
+    },
+    {
+      "puzzle_id": "002Ua",
+      "fen_after_opponent_move": "r4rk1/pp3ppp/3p1q2/P1P1p3/2B5/2B2n2/2P2P1P/R2Q1R1K b - - 1 16",
+      "expected_uci": "f6f4",
+      "family": "69268967712c03d80710741e62232f733bd3f2368c8192672c2ddaf3ea2be94f"
+    },
+    {
+      "puzzle_id": "002Uy",
+      "fen_after_opponent_move": "8/8/1p6/k7/P7/1KR4r/8/8 b - - 27 64",
+      "expected_uci": "h3c3",
+      "family": "2d7b8a896b683cbf541cf5c156a7bed6420c6f3b3eec088db13577244c656f47"
+    },
+    {
+      "puzzle_id": "002VP",
+      "fen_after_opponent_move": "8/6p1/2B2n2/3b2k1/3B4/6K1/4P3/8 w - - 5 45",
+      "expected_uci": "d4f6",
+      "family": "ca1b154f5ecceaf8b44a1096826e8a1c25f270a7d4226e5dd01a7cdec685b7fe"
+    },
+    {
+      "puzzle_id": "002X3",
+      "fen_after_opponent_move": "6k1/2q2p1p/4pPp1/4P3/p1pP1P2/r1P5/6QP/4B1K1 w - - 0 34",
+      "expected_uci": "g2a8",
+      "family": "a3fb793cc7f163e88e00d419fec11281c6bc4a78d6b16767ce4bc685038df975"
+    },
+    {
+      "puzzle_id": "002Z9",
+      "fen_after_opponent_move": "4r1k1/1p2R1p1/p2p2Pp/P1pP4/8/1R3p2/1P1q3P/5B1K w - - 0 35",
+      "expected_uci": "e7e8",
+      "family": "9e3d64546cdb74a7b96ecdfdc80d81d696790e3a21fb8891094fd4e938caff98"
+    },
+    {
+      "puzzle_id": "002bK",
+      "fen_after_opponent_move": "8/7p/4k3/pb1p1pPB/1n1P3P/N1p1P3/4K3/8 w - - 2 43",
+      "expected_uci": "a3b5",
+      "family": "32029025a511464f53f9ae325cdc1bef3fcf0a596b33796351b72b886f0a8a49"
+    },
+    {
+      "puzzle_id": "002e5",
+      "fen_after_opponent_move": "r2q2k1/pp1n2bp/3P2b1/6N1/6Q1/P3P3/6P1/4K2R w K - 2 22",
+      "expected_uci": "g4c4",
+      "family": "b0a63dd2817c376c9134ba7074528cc30865518611beb0bc79ae99f859e362d0"
+    },
+    {
+      "puzzle_id": "002e8",
+      "fen_after_opponent_move": "3rnrk1/1b3pp1/4pb2/p3q3/1p1N4/3B2R1/PPPQN2P/1K4R1 w - - 2 24",
+      "expected_uci": "d2h6",
+      "family": "7cac9460a53c11aa86de0f829a365087007f8e7758a5701034e1ee4ed36150fd"
+    },
+    {
+      "puzzle_id": "002mG",
+      "fen_after_opponent_move": "5r1k/B1p3pp/2Qb1p2/3Pq3/P6P/8/2P2K2/3R1R2 b - - 2 36",
+      "expected_uci": "f8e8",
+      "family": "29ed2bae88392af88764792f8d0e7b02f89f3c1a6c475557be8f6e7350841bba"
+    },
+    {
+      "puzzle_id": "002p5",
+      "fen_after_opponent_move": "r1bqr1k1/pp1nbpp1/2p5/3n2P1/2BP4/P7/1PQNNPP1/R3K2R w KQ - 1 14",
+      "expected_uci": "c2h7",
+      "family": "89530b40be602e2c8a3eed1ca2b1515952cd88af97dc989a07c25cfdb1c34df5"
+    },
+    {
+      "puzzle_id": "002rd",
+      "fen_after_opponent_move": "r6k/q1p2p1p/1b2bPr1/p1ppP2Q/3P2p1/4B3/PP2NRPP/3R2K1 w - - 2 26",
+      "expected_uci": "e2f4",
+      "family": "ce4b912a3b96d9c52ecdec353f55343f8aca64172dadadc5750a1e2c52274194"
+    },
+    {
+      "puzzle_id": "002uV",
+      "fen_after_opponent_move": "r2r2k1/1p2qppp/2n1p3/5Q2/p2P4/P4N2/BP3PPP/2R1R1K1 b - - 0 20",
+      "expected_uci": "e6f5",
+      "family": "6a62c0665ddf61a6711480948f6a19c421cb9046f64c75d57ebe3659d664d431"
+    },
+    {
+      "puzzle_id": "002vV",
+      "fen_after_opponent_move": "8/6k1/1R5p/5p1P/5P1K/6P1/8/r7 b - - 3 58",
+      "expected_uci": "a1h1",
+      "family": "bc853ee13d8870374c90530c5b96172b7ea6a7fe13c0b741fd224341da61141d"
+    },
+    {
+      "puzzle_id": "002xh",
+      "fen_after_opponent_move": "2nk4/8/2PBp3/1pK1P1p1/1P4Pn/8/8/8 w - - 3 43",
+      "expected_uci": "c5b5",
+      "family": "a3066dee07310f35a2d65b044eb7dca141daf6bd55070310973581c484d5c52d"
+    },
+    {
+      "puzzle_id": "0030b",
+      "fen_after_opponent_move": "6k1/5ppp/5n2/pp6/4b1rP/5N1Q/Pq2r1P1/3R2RK w - - 5 33",
+      "expected_uci": "d1d8",
+      "family": "8d59aa94e0ef65bb3df96ba21e2ff8b26a1a0c2202716e0bceb1aaa324522dd7"
+    },
+    {
+      "puzzle_id": "00347",
+      "fen_after_opponent_move": "8/2p5/8/2pPk2p/8/3K3P/6P1/8 b - - 2 42",
+      "expected_uci": "h5h4",
+      "family": "ed5b9f72ffaac20d95c839f324c39538e988e6049d3ca5b5683e29c69ef21095"
+    },
+    {
+      "puzzle_id": "0039T",
+      "fen_after_opponent_move": "1r5r/p3kp2/4p2p/4P3/R4Pp1/6P1/P1P4P/4K2R b K - 2 25",
+      "expected_uci": "b8b1",
+      "family": "7221fddca84f09c94611241969dc54a2172776cb9fa023fe98cf8153f1c33124"
+    },
+    {
+      "puzzle_id": "003AX",
+      "fen_after_opponent_move": "2r2rk1/5ppp/bq2p3/p2pP1N1/Pb1p2P1/1P2P2P/2QN4/2R1K2R w K - 0 19",
+      "expected_uci": "c2h7",
+      "family": "a6864d2941e7abe87657e33b2af072b0fb57d8d0b787bbbdc268639d45618c87"
+    },
+    {
+      "puzzle_id": "003Ec",
+      "fen_after_opponent_move": "3r4/p4R2/1pb2Pp1/n1p1Qqkp/8/P7/1P4PP/6RK w - - 3 33",
+      "expected_uci": "e5e3",
+      "family": "6e1bbb337a55286538f4e6f4297b3ba2e39df1177bc6191762325b008a30230c"
+    },
+    {
+      "puzzle_id": "003IM",
+      "fen_after_opponent_move": "8/5kp1/p3pb2/8/6Pp/1P4qP/P2R2Q1/7K b - - 3 34",
+      "expected_uci": "g3e1",
+      "family": "9bae31c651416f8abccd6093cce48121ba56ef79642f7ebf30658b845b24639a"
+    },
+    {
+      "puzzle_id": "003IX",
+      "fen_after_opponent_move": "8/3pk3/R7/1R2PK1p/2PPn1r1/8/8/8 b - - 0 43",
+      "expected_uci": "e4g3",
+      "family": "6e43af0c3192acfc34a5a3da38fa75b1e2530703ccb7a602ce90a849edaba78c"
+    },
+    {
+      "puzzle_id": "003Jb",
+      "fen_after_opponent_move": "6k1/Q2bqr1p/2rpp1pR/p7/Pp2P3/1B3P2/1PP3P1/2KR4 b - - 7 22",
+      "expected_uci": "e7g5",
+      "family": "5560ecf430af6fa7f18e2545dd333eb154f06f687201e9c4bed847827e77382d"
+    },
+    {
+      "puzzle_id": "003S3",
+      "fen_after_opponent_move": "1r3k1r/pNqnppb1/6pn/2p3Np/7P/2P2Q2/PP3PP1/R1B1K2R w KQ - 3 16",
+      "expected_uci": "g5e6",
+      "family": "cfecaedc638cbe73c9ac6672705a55eb9e25797225f8a082431792e30b193c7d"
+    },
+    {
+      "puzzle_id": "003Tx",
+      "fen_after_opponent_move": "2r5/pR5p/5p1k/4p3/4R3/B4nPP/PP3P2/1K6 b - - 0 27",
+      "expected_uci": "f3d2",
+      "family": "945142ee48af20d4a99d59a98b9439c9ce03ce8767703620915cb6de9fb7b441"
+    },
+    {
+      "puzzle_id": "003UW",
+      "fen_after_opponent_move": "8/6pk/7p/2pq4/3p4/5PP1/P3QK1P/8 w - - 2 41",
+      "expected_uci": "e2e4",
+      "family": "7235a97ea61d6fe11f9567ef52e0011b8863b9fe668c088aa738510b9aa7d785"
+    },
+    {
+      "puzzle_id": "003YF",
+      "fen_after_opponent_move": "r4rk1/1pp2ppp/p2p4/2bPp3/2P1PB1q/P1N2B2/1P3P2/R2QK1R1 b Q - 0 15",
+      "expected_uci": "h4f2",
+      "family": "01af8508109a1e073fb1ed97e6438b6318152262447b6da702d47ccfb98f9061"
+    },
+    {
+      "puzzle_id": "003aS",
+      "fen_after_opponent_move": "8/8/5k1p/6pP/1R4P1/1p2KP2/8/1r6 b - - 0 43",
+      "expected_uci": "b3b2",
+      "family": "a43e2692f2ee05d60c3262b03e43d37599069722e84b2982468891bf716b6bc9"
+    },
+    {
+      "puzzle_id": "003cs",
+      "fen_after_opponent_move": "2r1kbnr/pp4pp/4p3/3pq1N1/8/1P2B3/P3Q1PP/nN3RK1 w k - 0 17",
+      "expected_uci": "f1f8",
+      "family": "380b19018af7649d48a56bb19dd98d52cb814ede8dfdac0685e938bdf5d26668"
+    },
+    {
+      "puzzle_id": "003eP",
+      "fen_after_opponent_move": "6k1/r1b1q3/2p3p1/2Pp4/1P2p1n1/2B1P3/NQ6/2K4R w - - 2 37",
+      "expected_uci": "h1h8",
+      "family": "03e2cd05f0832b05f4d1afa3d5a887d0221d098f10b163cb7436837dd019f55c"
+    },
+    {
+      "puzzle_id": "003if",
+      "fen_after_opponent_move": "8/1q3kpp/1P2p3/4Q3/5P2/4B2P/2r3PK/8 w - - 1 44",
+      "expected_uci": "e5h5",
+      "family": "c15ad10c814fea3dc2cdc2bcc406c5dafcdaaf85fd0abe88cfafa8c013bf8672"
+    },
+    {
+      "puzzle_id": "003jH",
+      "fen_after_opponent_move": "rn3rk1/p5pp/3N4/4np1q/5Q2/1P6/PB1P1KP1/2R4R b - - 1 25",
+      "expected_uci": "e5d3",
+      "family": "6a3dca27f800320e9641d8ea7ea79f825b682d3db1ae203376f4b3271fd49ed0"
+    },
+    {
+      "puzzle_id": "003jb",
+      "fen_after_opponent_move": "r3kb1r/p4ppp/b3p3/2pq4/3Q4/4BN2/PPP2PPP/R3K2R w KQkq - 0 12",
+      "expected_uci": "d4a4",
+      "family": "b44aee18c24a70e4cb00a8cb44d0216cd09e5e0029b92d1e30250efda259e729"
+    },
+    {
+      "puzzle_id": "003jv",
+      "fen_after_opponent_move": "7R/1p2k2p/p2n2p1/4K3/8/6P1/P6P/8 b - - 11 37",
+      "expected_uci": "d6f7",
+      "family": "06f267199976c85549bba185c383b56b54c17e0e5b6ce01a96745b0a47b51836"
+    },
+    {
+      "puzzle_id": "003md",
+      "fen_after_opponent_move": "r1b1k2N/ppp3pp/2n5/2bp4/7q/1B4n1/PPPP1P1P/RNBQR1K1 b q - 1 10",
+      "expected_uci": "g3e4",
+      "family": "213abbd79a1d11b77bdd80a87eea632ea4390069e8f7807f033a21033da9a5eb"
+    },
+    {
+      "puzzle_id": "003mh",
+      "fen_after_opponent_move": "4rk1r/1pp2p2/p2p3p/3N4/3P2q1/8/PPP5/1K2Q1NR w - - 2 24",
+      "expected_uci": "e1e8",
+      "family": "15bad2f095a4017ff92cdfa46a4533d0a8813a688b46fd3e40f5f4a4e8b38d63"
+    },
+    {
+      "puzzle_id": "003nQ",
+      "fen_after_opponent_move": "6rk/pp6/2n5/3ppn1p/3p4/2P2P1q/PP3QNB/R5RK b - - 3 29",
+      "expected_uci": "f5g3",
+      "family": "2424b8235c1557c5595ec53d7936f88aa48e59cb4f3f4bd338cd559db9a202e0"
+    },
+    {
+      "puzzle_id": "003o0",
+      "fen_after_opponent_move": "r1bqk2r/pp1nbppp/3p4/1B1p4/3P1B2/5N2/PPP2PPP/R2QK2R b KQkq - 3 9",
+      "expected_uci": "d8a5",
+      "family": "e39e9082d20c3c2d2aef4ffd2179ae401b1f0febbb5e6bc547b7bc343ec21854"
+    },
+    {
+      "puzzle_id": "003r5",
+      "fen_after_opponent_move": "r2qr1k1/ppp2ppp/4P3/8/1nP2Q2/2N2N1P/PP3KP1/R4R2 b - - 0 15",
+      "expected_uci": "b4d3",
+      "family": "1f06a2eab2323430a0460c26541dd598347a8b457eb0441d37454417af2b08c1"
+    },
+    {
+      "puzzle_id": "003wQ",
+      "fen_after_opponent_move": "2r2rk1/6pp/3Q1q2/8/3N1B2/6P1/PP1K3P/5R2 b - - 0 24",
+      "expected_uci": "f6d6",
+      "family": "1043dde46878a71223d053a38ff5d26580f0e69b27885952956163f528d05e81"
+    }
+  ],
+  "local_sha256": "c46a5c5d83a27e4418a4a13aa196b4097c9aa863d76ce18386d61c8e628cecfb"
+}

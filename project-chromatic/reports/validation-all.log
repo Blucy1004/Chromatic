@@ -1,0 +1,42 @@
+Test project C:/Users/fly_t/Documents/Codex/2026-10-24/referenced-chatgpt-conversation-this-is-an/outputs/project-chromatic/build
+    Start 1: core
+1/1 Test #1: core .............................   Passed    0.94 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =   0.94 sec
+test_checkpoint_exact_resume_and_corruption_recovery (__main__.Integration.test_checkpoint_exact_resume_and_corruption_recovery) ... ok
+test_move_oracle_and_encoder (__main__.Integration.test_move_oracle_and_encoder) ... ok
+test_native_model_parity_and_invalid_load (__main__.Integration.test_native_model_parity_and_invalid_load) ... ok
+test_selfplay_labels_truncation_and_restartable_loop (__main__.Integration.test_selfplay_labels_truncation_and_restartable_loop) ... ok
+test_uci_time_stop_and_protocol (__main__.Integration.test_uci_time_stop_and_protocol) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 6.311s
+
+OK
+test_small_data_overfit_and_validation_metrics (__main__.Reliability.test_small_data_overfit_and_validation_metrics) ... ok
+test_sparse_replay_capacity_dedup_and_group_holdout (__main__.Reliability.test_sparse_replay_capacity_dedup_and_group_holdout) ... ok
+test_unfinished_trajectory_is_durable_and_resumable (__main__.Reliability.test_unfinished_trajectory_is_durable_and_resumable) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.430s
+
+OK
+test_pgn_fixed_opening_pair_and_restart (__main__.ArenaTests.test_pgn_fixed_opening_pair_and_restart) ... ok
+test_rollback_preserves_artifacts_and_checks_hash (__main__.ArenaTests.test_rollback_preserves_artifacts_and_checks_hash) ... ok
+test_statistics_distinguishes_uncertainty_from_inferiority (__main__.ArenaTests.test_statistics_distinguishes_uncertainty_from_inferiority) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.157s
+
+OK
+test_bad_optimizer_never_replaces_last_valid_checkpoint (__main__.Safety.test_bad_optimizer_never_replaces_last_valid_checkpoint) ... ok
+test_finite_weights_that_overflow_cannot_crash_search (__main__.Safety.test_finite_weights_that_overflow_cannot_crash_search) ... ok
+test_malformed_go_returns_completion_and_recovers (__main__.Safety.test_malformed_go_returns_completion_and_recovers) ... ok
+test_missing_startup_model_stays_uci_responsive (__main__.Safety.test_missing_startup_model_stays_uci_responsive) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.976s
+
+OK

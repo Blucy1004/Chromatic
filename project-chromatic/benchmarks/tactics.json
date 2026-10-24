@@ -1,0 +1,13 @@
+{
+  "format": 1,
+  "cases": [
+    {"id":"mate-1","category":"mate_in_1","fen":"7k/8/5KQ1/8/8/8/8/8 w - - 0 1","oracle":"mate","plies":1,"expected":["g6g7"]},
+    {"id":"mate-2","category":"mate_in_2","fen":"k7/8/2K5/8/8/4Q3/8/8 w - - 0 1","oracle":"mate","plies":3,"expected":["c6b6","e3e7","e3b3"]},
+    {"id":"mate-3","category":"mate_in_3","fen":"7k/8/8/4K3/8/2Q5/8/8 w - - 0 1","oracle":"mate","plies":5,"expected":["e5f6","c3c7","c3g3"]},
+    {"id":"forced-recapture","category":"forced_capture","fen":"k7/8/8/8/8/8/6q1/7K w - - 0 1","oracle":"only_legal_capture","expected":["h1g2"]},
+    {"id":"promotion-mate","category":"promotion","fen":"7k/5P2/6K1/8/8/8/8/8 w - - 0 1","oracle":"mate","plies":1,"expected":["f7f8q","f7f8r"]},
+    {"id":"avoid-stalemate","category":"stalemate_avoidance","fen":"7k/5Q2/6K1/8/8/8/8/8 w - - 0 1","oracle":"mate","plies":1,"expected":["f7f8","f7e8","f7h7","f7g7"]},
+    {"id":"defensive-resource","category":"defense","fen":"7k/6Q1/8/8/8/8/8/K7 b - - 0 1","oracle":"only_legal_capture","expected":["h8g7"]},
+    {"id":"checking-repetition","category":"perpetual_check_detection","fen":"7k/5Q2/8/8/8/8/8/K7 w - - 0 1","moves":["f7f8","h8h7","f8f7","h7h8","f7f8","h8h7","f8f7","h7h8"],"oracle":"repetition_draw","expected":["0000"]}
+  ]
+}

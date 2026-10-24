@@ -1,0 +1,28 @@
+{
+  "train": {
+    "records": 128,
+    "start_step": 0,
+    "step": 200,
+    "recovered_from": null,
+    "device": "cpu",
+    "last": {
+      "step": 200,
+      "policy_loss": 0.71860671043396,
+      "wdl_loss": 0.10278409719467163
+    }
+  },
+  "train_seconds_including_load_save": 4.47393939999165,
+  "train_samples_per_second_including_load_save": 1430.5066358323818,
+  "reproduced_bootstrap_weights_exactly": true,
+  "selfplay": {
+    "games": 4,
+    "accepted": 3,
+    "truncated": 1,
+    "records": 190
+  },
+  "selfplay_seconds": 10.728895300009754,
+  "accepted_positions_per_minute": 1062.5511463411929,
+  "completion_rate": 0.75,
+  "draw_rate_of_completed": 1.0,
+  "crashes_observed": 0
+}

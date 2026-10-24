@@ -1,0 +1,52 @@
+{
+  "valid_for_recommendation": false,
+  "reason": "XPU default foreach gradient clipping returned an incorrect total norm; retained as diagnostic history only. New canonical microbenchmark uses devices.clip_gradients with foreach=False on XPU.",
+  "diagnostic": "../../clip-diagnostic.json",
+  "files": [
+    {
+      "path": "microbenchmark.json",
+      "sha256": "42d6e83ca36b104ea10b8dfb5dfa0b9c37d853410ccdd8feff573a00d445df22",
+      "bytes": 121177
+    },
+    {
+      "path": "microbenchmark.csv",
+      "sha256": "567a7dc85e1cc1775b745134292fda0bb6b3d6cce723a77c3ac7ed703beb01b1",
+      "bytes": 11503
+    },
+    {
+      "path": "microbenchmark.jsonl",
+      "sha256": "f388f1b16c94547d02da9937263b933c6e192d361552fcb3eb90b15e6c1385ad",
+      "bytes": 126270
+    },
+    {
+      "path": "microbenchmark-progress.json",
+      "sha256": "83ad9189c6137b43b4f123ff25102997f56917f13d527bc91c5970d69dac78e1",
+      "bytes": 119319
+    },
+    {
+      "path": "recommendation.json",
+      "sha256": "35b1fd62c836b6046d862953ec800af6f1bb2936053395fc9c53fe641f98770a",
+      "bytes": 1030
+    },
+    {
+      "path": "by-signature/2c87650041d72efe1fdec86628dea09135f47be2bec67be9389ba53130bbee82/microbenchmark.csv",
+      "sha256": "567a7dc85e1cc1775b745134292fda0bb6b3d6cce723a77c3ac7ed703beb01b1",
+      "bytes": 11503
+    },
+    {
+      "path": "by-signature/2c87650041d72efe1fdec86628dea09135f47be2bec67be9389ba53130bbee82/microbenchmark.json",
+      "sha256": "42d6e83ca36b104ea10b8dfb5dfa0b9c37d853410ccdd8feff573a00d445df22",
+      "bytes": 121177
+    },
+    {
+      "path": "by-signature/2c87650041d72efe1fdec86628dea09135f47be2bec67be9389ba53130bbee82/microbenchmark.jsonl",
+      "sha256": "f388f1b16c94547d02da9937263b933c6e192d361552fcb3eb90b15e6c1385ad",
+      "bytes": 126270
+    },
+    {
+      "path": "by-signature/2c87650041d72efe1fdec86628dea09135f47be2bec67be9389ba53130bbee82/recommendation.json",
+      "sha256": "35b1fd62c836b6046d862953ec800af6f1bb2936053395fc9c53fe641f98770a",
+      "bytes": 1030
+    }
+  ]
+}

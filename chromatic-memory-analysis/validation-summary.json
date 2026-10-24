@@ -1,0 +1,61 @@
+{
+  "native_and_asan": {
+    "native-tests.log": {
+      "passed": 5,
+      "failed": 0,
+      "perft": [
+        {
+          "depth": 5,
+          "nodes": 4865609
+        },
+        {
+          "depth": 4,
+          "nodes": 4085603
+        },
+        {
+          "depth": 5,
+          "nodes": 674624
+        },
+        {
+          "depth": 4,
+          "nodes": 422333
+        },
+        {
+          "depth": 4,
+          "nodes": 2103487
+        }
+      ]
+    },
+    "asan-tests.log": {
+      "passed": 5,
+      "failed": 0,
+      "perft": [
+        {
+          "depth": 5,
+          "nodes": 4865609
+        },
+        {
+          "depth": 4,
+          "nodes": 4085603
+        },
+        {
+          "depth": 5,
+          "nodes": 674624
+        },
+        {
+          "depth": 4,
+          "nodes": 422333
+        },
+        {
+          "depth": 4,
+          "nodes": 2103487
+        }
+      ]
+    }
+  },
+  "uci": "passed",
+  "runs_checked": 208,
+  "all_fixed_N_completed_exactly": true,
+  "all_recycled_unretained_and_unexpanded_repeat_NN_zero": true,
+  "all_prune_root_statistics_preserved": true
+}

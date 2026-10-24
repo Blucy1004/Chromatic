@@ -1,0 +1,9 @@
+{
+  "format": "chromatic-arc-coverage-negative-test-v1",
+  "passed": true,
+  "expected": "reject all-weak anchor batch because WDL backward was not exercised",
+  "actual_returncode": 1,
+  "negative_report": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\coverage-negative\\weak-only.json",
+  "log": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\coverage-negative\\weak-only.log",
+  "missing_value_head_correctly_rejected": true
+}

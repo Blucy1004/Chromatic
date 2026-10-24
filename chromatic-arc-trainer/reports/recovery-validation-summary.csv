@@ -1,0 +1,11 @@
+device,scenario,passed,step,model_optimizer_scheduler_rng_replay_exact,native_export_equal,source_cursor_equal,fixed_holdout_equal,checkpoint_tensors_cpu
+cpu,completed_resume,True,8,True,True,True,True,True
+cpu,kill_checkpoint_written,True,8,True,True,True,True,True
+cpu,kill_ledger_committed,True,8,True,True,True,True,True
+cpu,kill_before_delete,True,8,True,True,True,True,True
+cpu,mirror_and_previous_checkpoint,True,8,True,True,True,True,True
+xpu,completed_resume,True,8,True,True,True,True,True
+xpu,kill_checkpoint_written,True,8,True,True,True,True,True
+xpu,kill_ledger_committed,True,8,True,True,True,True,True
+xpu,kill_before_delete,True,8,True,True,True,True,True
+xpu,mirror_and_previous_checkpoint,True,8,True,True,True,True,True

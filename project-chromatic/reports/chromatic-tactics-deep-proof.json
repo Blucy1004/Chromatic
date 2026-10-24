@@ -1,0 +1,131 @@
+{
+  "suite_sha256": "280363ea0396afcfbb3eb4d3a76e47b170217c7997dae0fcd2536ffc014717ff",
+  "engine_sha256": "d48999510530f542681f948a9594223ad7c2b77d99f195c4bb11ae4867213427",
+  "model_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+  "budget": {
+    "milliseconds": 25,
+    "nodes": null
+  },
+  "options": {
+    "InferenceBackend": "SIMD",
+    "MateProofNodes": 12000,
+    "MateProofPlies": 5
+  },
+  "correct": 8,
+  "total": 8,
+  "accuracy": 1.0,
+  "cases": [
+    {
+      "id": "mate-1",
+      "category": "mate_in_1",
+      "passed": true,
+      "chosen": "g6g7",
+      "expected": [
+        "g6g7"
+      ],
+      "elapsed_seconds": 0.0014153000083751976,
+      "visits": 1,
+      "oracle_nodes": 23,
+      "failure_category": null
+    },
+    {
+      "id": "mate-2",
+      "category": "mate_in_2",
+      "passed": true,
+      "chosen": "e3b3",
+      "expected": [
+        "c6b6",
+        "e3e7",
+        "e3b3"
+      ],
+      "elapsed_seconds": 0.0005350999999791384,
+      "visits": 1,
+      "oracle_nodes": 857,
+      "failure_category": null
+    },
+    {
+      "id": "mate-3",
+      "category": "mate_in_3",
+      "passed": true,
+      "chosen": "c3g3",
+      "expected": [
+        "e5f6",
+        "c3c7",
+        "c3g3"
+      ],
+      "elapsed_seconds": 0.005307700019329786,
+      "visits": 1,
+      "oracle_nodes": 10249,
+      "failure_category": null
+    },
+    {
+      "id": "forced-recapture",
+      "category": "forced_capture",
+      "passed": true,
+      "chosen": "h1g2",
+      "expected": [
+        "h1g2"
+      ],
+      "elapsed_seconds": 0.025460599979851395,
+      "visits": 224005,
+      "oracle_nodes": 1,
+      "failure_category": null
+    },
+    {
+      "id": "promotion-mate",
+      "category": "promotion",
+      "passed": true,
+      "chosen": "f7f8r",
+      "expected": [
+        "f7f8q",
+        "f7f8r"
+      ],
+      "elapsed_seconds": 0.0004130000015720725,
+      "visits": 1,
+      "oracle_nodes": 9,
+      "failure_category": null
+    },
+    {
+      "id": "avoid-stalemate",
+      "category": "stalemate_avoidance",
+      "passed": true,
+      "chosen": "f7g7",
+      "expected": [
+        "f7f8",
+        "f7e8",
+        "f7h7",
+        "f7g7"
+      ],
+      "elapsed_seconds": 0.00023090001195669174,
+      "visits": 1,
+      "oracle_nodes": 26,
+      "failure_category": null
+    },
+    {
+      "id": "defensive-resource",
+      "category": "defense",
+      "passed": true,
+      "chosen": "h8g7",
+      "expected": [
+        "h8g7"
+      ],
+      "elapsed_seconds": 0.025307800038717687,
+      "visits": 207606,
+      "oracle_nodes": 1,
+      "failure_category": null
+    },
+    {
+      "id": "checking-repetition",
+      "category": "perpetual_check_detection",
+      "passed": true,
+      "chosen": "0000",
+      "expected": [
+        "0000"
+      ],
+      "elapsed_seconds": 0.0002772000152617693,
+      "visits": 0,
+      "oracle_nodes": 1,
+      "failure_category": null
+    }
+  ]
+}

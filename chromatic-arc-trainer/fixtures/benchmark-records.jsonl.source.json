@@ -1,0 +1,8 @@
+{
+  "license": "CC0-1.0",
+  "rows": 1000,
+  "local_sha256": "07e5873c5043dec9243e7e612e1db216eb344fb78f2dd09a0fef1c6512288b26",
+  "original_url": "https://database.lichess.org/lichess_db_eval.jsonl.zst",
+  "meaning": "Preserved normalized fixed test rows used for temporary device microbenchmarks; includes weak CC0 opening policy anchors. No trained model is persisted by microbenchmarks.",
+  "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-validation\\positions-10000\\data\\fixed\\test.jsonl"
+}

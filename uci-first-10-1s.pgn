@@ -1,0 +1,10 @@
+[Event "First 10 UCI plies at 1000ms"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "CHROMATIC 1.0"]
+[Black "CHROMATIC 1.0"]
+[Result "*"]
+[TimeControl "1 seconds per move"]
+
+1. c3 Nf6 2. a3 d6 3. Nf3 e6 4. Rg1 e5 5. Nh4 g6 *

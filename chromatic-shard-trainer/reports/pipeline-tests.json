@@ -1,0 +1,122 @@
+{
+  "format": 1,
+  "scope": "100 official CC0 positions per run; real process termination; CPU",
+  "work_directory": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-y6g6f2kd",
+  "work_directories": [
+    "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-9vhqli2c",
+    "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-y6g6f2kd"
+  ],
+  "cpu_affinity": [
+    3
+  ],
+  "tests": [
+    {
+      "name": "completed_resume_no_duplicate_training",
+      "passed": true,
+      "seconds": 12.701500399969518,
+      "returncode": 0,
+      "log": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-9vhqli2c\\uninterrupted\\process-1792834633522822800.log",
+      "global_step": 16,
+      "no_new_commit": true
+    },
+    {
+      "name": "kill_checkpoint_written",
+      "passed": true,
+      "hook": "checkpoint_written",
+      "marker": {
+        "global_step": 2,
+        "hook": "checkpoint_written",
+        "pid": 8464,
+        "shard": 1
+      },
+      "forced_exit": 15,
+      "resume": {
+        "seconds": 20.222105699998792,
+        "returncode": 0,
+        "log": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-9vhqli2c\\kill-checkpoint_written\\process-1792834660480331500.log"
+      },
+      "global_step": 16,
+      "exact_model_optimizer_scheduler_rng_progress_replay": true
+    },
+    {
+      "name": "kill_ledger_committed",
+      "passed": true,
+      "hook": "ledger_committed",
+      "marker": {
+        "global_step": 2,
+        "hook": "ledger_committed",
+        "pid": 23276,
+        "shard": 1
+      },
+      "forced_exit": 15,
+      "resume": {
+        "seconds": 19.101439799997024,
+        "returncode": 0,
+        "log": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-9vhqli2c\\kill-ledger_committed\\process-1792834694043391700.log"
+      },
+      "global_step": 16,
+      "exact_model_optimizer_scheduler_rng_progress_replay": true
+    },
+    {
+      "name": "kill_before_delete",
+      "passed": true,
+      "hook": "before_delete",
+      "marker": {
+        "global_step": 12,
+        "hook": "before_delete",
+        "pid": 17184,
+        "shard": 2
+      },
+      "forced_exit": 15,
+      "resume": {
+        "seconds": 12.249794700008351,
+        "returncode": 0,
+        "log": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-9vhqli2c\\kill-before_delete\\process-1792834727984187000.log"
+      },
+      "global_step": 16,
+      "exact_model_optimizer_scheduler_rng_progress_replay": true
+    },
+    {
+      "name": "resume_config_mismatch_rejected",
+      "passed": true,
+      "seconds": 10.552067500015255,
+      "returncode": 1,
+      "log": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-9vhqli2c\\uninterrupted\\process-1792834768841605100.log",
+      "checkpoint_head_unchanged": true
+    },
+    {
+      "name": "corruption_mirror_and_previous_checkpoint",
+      "passed": true,
+      "mirror_resume": {
+        "seconds": 15.892925399995875,
+        "returncode": 0,
+        "log": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-y6g6f2kd\\corruption\\process-1792834996967739800.log"
+      },
+      "previous_checkpoint_resume": {
+        "seconds": 14.030600199999753,
+        "returncode": 0,
+        "log": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\pipeline-tests\\run-y6g6f2kd\\corruption\\process-1792835012966440900.log"
+      },
+      "exact_model_optimizer_scheduler_rng_progress_replay": true,
+      "corrupt_latest_bundle_recovered_without_deleted_shard_dependency": true
+    }
+  ],
+  "status": "passed",
+  "baseline": {
+    "step": 16,
+    "progress": {
+      "completed": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "active": null,
+      "epoch": 0,
+      "offset": 0,
+      "permutation": [],
+      "positions_processed": 100
+    },
+    "model_export_sha256": "9d53e807e9dd9829f0b9fa9aad23272a914a7f1cc99d56a65c4f248ed9b28b42"
+  }
+}

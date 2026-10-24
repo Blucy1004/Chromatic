@@ -1,0 +1,2335 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,10 +1,10 @@
+ cmake_minimum_required(VERSION 3.20)
+-project(ProjectZero VERSION 0.1.0 LANGUAGES CXX)
++project(Chromatic VERSION 1.0.0 LANGUAGES CXX)
+ set(CMAKE_CXX_STANDARD 20)
+ set(CMAKE_CXX_STANDARD_REQUIRED ON)
+ set(CMAKE_CXX_EXTENSIONS OFF)
+ find_package(Threads REQUIRED)
+-add_library(zero_core src/board.cpp src/network.cpp src/search.cpp)
++add_library(zero_core src/board.cpp src/network.cpp src/search.cpp src/proof.cpp)
+ target_include_directories(zero_core PUBLIC include)
+ if(MSVC)
+   target_compile_options(zero_core PRIVATE /W4 /permissive- /fp:precise)
+@@ -17,3 +17,36 @@
+ add_executable(zero_tests tests/core.cpp)
+ target_link_libraries(zero_tests PRIVATE zero_core)
+ add_test(NAME core COMMAND zero_tests)
++option(CHROMATIC_ASAN "Build native targets with AddressSanitizer" OFF)
++if(CHROMATIC_ASAN)
++  if(MSVC)
++    target_compile_options(zero_core PUBLIC /fsanitize=address /Z7)
++    target_link_options(zero_core INTERFACE /INCREMENTAL:NO)
++    get_filename_component(CHROMATIC_COMPILER_DIR "${CMAKE_CXX_COMPILER}" DIRECTORY)
++    foreach(target project_zero zero_tests)
++      add_custom_command(TARGET ${target} POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different
++        "${CHROMATIC_COMPILER_DIR}/clang_rt.asan_dynamic-x86_64.dll" "$<TARGET_FILE_DIR:${target}>")
++    endforeach()
++  else()
++    target_compile_options(zero_core PUBLIC -fsanitize=address,undefined -fno-omit-frame-pointer)
++    target_link_options(zero_core INTERFACE -fsanitize=address,undefined)
++  endif()
++endif()
++file(READ "${CMAKE_CURRENT_SOURCE_DIR}/src/search.cpp" CHROMATIC_SEARCH_SOURCE)
++string(REPLACE "value=-value;" "value=value;" CHROMATIC_MUTANT_SOURCE "${CHROMATIC_SEARCH_SOURCE}")
++file(GENERATE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/sign_mutant.cpp" CONTENT "${CHROMATIC_MUTANT_SOURCE}")
++add_executable(sign_mutant EXCLUDE_FROM_ALL tests/core.cpp "${CMAKE_CURRENT_BINARY_DIR}/sign_mutant.cpp")
++target_link_libraries(sign_mutant PRIVATE zero_core Threads::Threads)
++add_library(baseline_core baseline/instrumented/src/board.cpp baseline/instrumented/src/network.cpp baseline/instrumented/src/search.cpp)
++target_include_directories(baseline_core PUBLIC baseline/instrumented/include include)
++add_executable(baseline_bench tools/native_bench.cpp)
++target_compile_definitions(baseline_bench PRIVATE CHROMATIC_BASELINE)
++target_link_libraries(baseline_bench PRIVATE baseline_core Threads::Threads)
++if(WIN32)
++  target_link_libraries(baseline_bench PRIVATE Psapi)
++endif()
++add_executable(chromatic_bench tools/native_bench.cpp)
++target_link_libraries(chromatic_bench PRIVATE zero_core Threads::Threads)
++if(WIN32)
++  target_link_libraries(chromatic_bench PRIVATE Psapi)
++endif()
+--- a/build.cmd
++++ b/build.cmd
+@@ -1,5 +1,6 @@
+ @echo off
+ setlocal
++chcp 65001 >nul
+ set VSLANG=1033
+ if not defined VSCMD_VER (
+   for /f "usebackq tokens=*" %%i in (`"%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath`) do set "ZERO_VS=%%i"
+@@ -11,5 +12,11 @@
+ )
+ cmake -S "%~dp0." -B "%~dp0build" -G Ninja -DCMAKE_BUILD_TYPE=Release "-DCMAKE_CXX_FLAGS_DEBUG=/Od /RTC1 /Z7"
+ if errorlevel 1 exit /b 1
+-cmake --build "%~dp0build" --parallel
++if "%~1"=="mutation" (
++  cmake --build "%~dp0build" --target sign_mutant --parallel
++  if errorlevel 1 exit /b 1
++  exit /b 0
++)
++rem A full rebuild also protects against localized MSVC dependency-prefix issues.
++cmake --build "%~dp0build" --clean-first --parallel
+ exit /b %errorlevel%
+--- a/include/zero/board.hpp
++++ b/include/zero/board.hpp
+@@ -19,6 +19,7 @@
+     int turn=1, castle=0, ep=-1, halfmove=0, fullmove=1;
+     std::vector<uint64_t> history;
+     static Board from_fen(const std::string& fen);
++    Board position_only() const;
+     std::string fen() const;
+     bool attacked(int square, int by) const;
+     bool check(int color) const;
+--- a/include/zero/network.hpp
++++ b/include/zero/network.hpp
+@@ -3,14 +3,29 @@
+ #include <string>
+ namespace zero {
+ struct Evaluation {std::array<float,ACTIONS> policy{};std::array<float,3> wdl{};};
++enum class InferenceBackend {Scalar,SIMD};
+ class Network {
+-    struct Layer {int in=0,out=0;std::vector<float> weights,bias;std::vector<float> apply(const std::vector<float>& x) const;};
++    struct Layer {
++        int in=0,out=0;std::vector<float> weights,bias;
++        float row(const std::vector<float>& x,int output,InferenceBackend backend) const;
++        void apply(const std::vector<float>& x,std::vector<float>& y,InferenceBackend backend) const;
++    };
+     Layer input_,policy_,wdl_;
+     std::vector<Layer> residual_;
+     bool loaded_=false;
++    InferenceBackend backend_=InferenceBackend::SIMD;
++    bool sparse_=true;
+ public:
++    struct Workspace {std::vector<float> input,a,b,wdl;};
+     void load(const std::string& path); // transactional: old model survives invalid files
+     bool loaded() const {return loaded_;}
++    void set_backend(InferenceBackend backend){backend_=backend;}
++    InferenceBackend backend() const{return backend_;}
++    void set_sparse(bool enabled){sparse_=enabled;}
++    bool sparse() const{return sparse_;}
+     Evaluation evaluate(const Board& b) const;
++    Evaluation evaluate_legal(const Board& b,const std::vector<Move>& moves,Workspace& workspace) const;
++private:
++    Evaluation evaluate_impl(const Board& b,const std::vector<Move>* moves,Workspace& workspace) const;
+ };
+ }
+--- a/include/zero/profile.hpp
++++ b/include/zero/profile.hpp
+@@ -0,0 +1,14 @@
++#pragma once
++#include <chrono>
++#include <cstdint>
++namespace zero::profile {
++inline thread_local bool active=false;
++inline thread_local uint64_t neural_ns=0, neural_calls=0, movegen_ns=0, feature_ns=0;
++inline void reset(){neural_ns=neural_calls=movegen_ns=feature_ns=0;}
++struct Timer {
++    uint64_t* counter;
++    std::chrono::steady_clock::time_point start;
++    explicit Timer(uint64_t& target):counter(active?&target:nullptr){if(counter)start=std::chrono::steady_clock::now();}
++    ~Timer(){if(counter)*counter+=uint64_t(std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now()-start).count());}
++};
++}
+--- a/include/zero/proof.hpp
++++ b/include/zero/proof.hpp
+@@ -0,0 +1,10 @@
++#pragma once
++#include "board.hpp"
++#include <atomic>
++#include <chrono>
++namespace zero {
++struct MateProof {bool proven=false;Move move{};int plies=0,nodes=0;};
++// Bounded terminal-only AND/OR proof. No material score, quiescence or alpha-beta.
++MateProof verify_mate(const Board& board,const std::vector<Move>& moves,int plies,int nodes,
++                      const std::atomic<bool>& stop,int microseconds);
++}
+--- a/include/zero/search.hpp
++++ b/include/zero/search.hpp
+@@ -5,7 +5,23 @@
+ #include <memory>
+ #include <random>
+ namespace zero {
+-struct SearchLimits {int simulations=800;int milliseconds=0;float cpuct=1.5f;float noise=0;float temperature=0;uint64_t seed=1;size_t max_nodes=100000;};
+-struct SearchResult {Move best{};bool has_move=false;bool terminal=false;int simulations=0;float value=0;std::vector<std::pair<Move,int>> visits;};
++struct SearchLimits {
++    int simulations=800,milliseconds=0;
++    float cpuct=1.5f,noise=0,temperature=0,fpu_reduction=0;
++    uint64_t seed=1;
++    size_t max_nodes=100000,max_tree_bytes=64*1024*1024;
++    bool tactical_safety=false;
++    int proof_nodes=0,proof_plies=1;
++};
++struct SearchResult {
++    Move best{};bool has_move=false,terminal=false;
++    int simulations=0,neural_evals=0,max_depth=0;
++    size_t arena_nodes=0,memory_bytes=0;
++    float value=0;
++    int proof_nodes=0,proof_plies=0;
++    bool mate_proven=false;
++    std::vector<std::pair<Move,int>> visits;
++    std::vector<float> q_values,priors;
++};
+ SearchResult search(const Board& board,const Network& network,const SearchLimits& limits,const std::atomic<bool>& stop);
+ }
+--- a/src/board.cpp
++++ b/src/board.cpp
+@@ -1,3 +1,4 @@
++#include "zero/profile.hpp"
+ #include "zero/board.hpp"
+ #include <algorithm>
+ #include <cmath>
+@@ -35,12 +36,18 @@
+         b.squares[rank*8+file++]=color*p;
+         if(p==6) {if(color==1) ++wk; else ++bk;}
+     }
+-    if(rank!=0||file!=8||wk!=1||bk!=1||b.halfmove<0||b.fullmove<1) throw std::runtime_error("invalid FEN board or clocks");
++    if(rank!=0||file!=8||wk!=1||bk!=1||b.halfmove<0||b.halfmove>100000||b.fullmove<1||b.fullmove>1000000000) throw std::runtime_error("invalid FEN board or clocks");
+     if(side!="w"&&side!="b") throw std::runtime_error("invalid FEN turn");
+     b.turn=side=="w"?1:-1;
+     for(char c:rights) { if(c=='K') b.castle|=1;else if(c=='Q') b.castle|=2;else if(c=='k') b.castle|=4;else if(c=='q') b.castle|=8;else if(c!='-') throw std::runtime_error("invalid castling rights"); }
+     b.ep=eps=="-"?-1:parse_sq(eps);
+     if(b.ep>=0 && (b.ep/8!=(b.turn==1?5:2)||b.squares[b.ep]!=0||b.squares[b.ep-b.turn*8]!=-b.turn)) throw std::runtime_error("invalid en passant square");
++    for(int s=0;s<8;++s)if(std::abs(b.squares[s])==1||std::abs(b.squares[56+s])==1)throw std::runtime_error("unpromoted pawn on back rank");
++    for(int color:{1,-1}){int pieces=0,pawns=0;for(int p:b.squares){pieces+=p*color>0;pawns+=p==color;}if(pieces>16||pawns>8)throw std::runtime_error("too many FEN pieces");}
++    if(b.check(-b.turn))throw std::runtime_error("side that just moved is in check");
++    if(((b.castle&3)&&(b.squares[4]!=6))||((b.castle&12)&&(b.squares[60]!=-6))||
++       ((b.castle&1)&&b.squares[7]!=4)||((b.castle&2)&&b.squares[0]!=4)||
++       ((b.castle&4)&&b.squares[63]!=-4)||((b.castle&8)&&b.squares[56]!=-4))throw std::runtime_error("inconsistent castling rights");
+     b.history.push_back(b.key());return b;
+ }
+ std::string Board::fen() const {
+@@ -66,7 +73,12 @@
+     return false;
+ }
+ bool Board::check(int color) const {for(int i=0;i<64;++i)if(squares[i]==color*6)return attacked(i,-color);return true;}
++Board Board::position_only() const {
++    Board b;b.squares=squares;b.turn=turn;b.castle=castle;b.ep=ep;
++    b.halfmove=halfmove;b.fullmove=fullmove;return b;
++}
+ std::vector<Move> Board::legal() const {
++    profile::Timer timer(profile::movegen_ns);
+     std::vector<Move> pseudo,result; pseudo.reserve(64);result.reserve(64);
+     auto add=[&](int f,int t) {if(std::abs(squares[f])==1&&(t/8==0||t/8==7)){for(int p=2;p<=5;++p)pseudo.push_back({f,t,p});}else pseudo.push_back({f,t,0});};
+     constexpr int jumps[8][2]={{1,2},{2,1},{-1,2},{-2,1},{1,-2},{2,-1},{-1,-2},{-2,-1}};
+@@ -93,7 +105,7 @@
+             }
+         }
+     }
+-    for(auto m:pseudo) {Board b=*this;b.make(m,false);if(!b.check(turn))result.push_back(m);}
++    for(auto m:pseudo) {Board b=position_only();b.make(m,false);if(!b.check(turn))result.push_back(m);}
+     return result;
+ }
+ void Board::make(Move m,bool track) {
+@@ -116,7 +128,7 @@
+     for(int p:squares)mix(p+6);mix(turn+1);mix(castle);
+     // FIDE repetition includes an EP square only if a legal EP capture exists.
+     int effective=-1;
+-    if(ep>=0) for(int dx:{-1,1}) {int f=ep-turn*8+dx;if(f<0||f>=64||std::abs(f%8-ep%8)!=1||squares[f]!=turn)continue;Board b=*this;b.make({f,ep,0},false);if(!b.check(turn)){effective=ep;break;}}
++    if(ep>=0) for(int dx:{-1,1}) {int f=ep-turn*8+dx;if(f<0||f>=64||std::abs(f%8-ep%8)!=1||squares[f]!=turn)continue;Board b=position_only();b.make({f,ep,0},false);if(!b.check(turn)){effective=ep;break;}}
+     mix(effective+1);return h;
+ }
+ int Board::repetitions() const {return int(std::count(history.begin(),history.end(),key()));}
+@@ -130,6 +142,7 @@
+     if(halfmove>=100||repetitions()>=3||insufficient()){value=0;return true;}return false;
+ }
+ std::array<float,INPUTS> Board::features() const {
++    profile::Timer timer(profile::feature_ns);
+     std::array<float,INPUTS> x{};
+     for(int s=0;s<64;++s) {int p=squares[s];if(p)x[((p>0?0:6)+std::abs(p)-1)*64+s]=1;}
+     auto fill=[&](int plane,float v){std::fill(x.begin()+plane*64,x.begin()+(plane+1)*64,v);};
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -1,5 +1,6 @@
+ #include "zero/search.hpp"
+ #include <algorithm>
++#include <charconv>
+ #include <cmath>
+ #include <filesystem>
+ #include <iomanip>
+@@ -15,16 +16,16 @@
+ void say(const std::string& s){std::lock_guard lock(output_mutex);std::cout<<s<<std::endl;}
+ std::string escape(const std::string& s){std::string r;for(unsigned char c:s){if(c=='"'||c=='\\')r+='\\';if(c>=32)r+=char(c);}return r;}
+ template<class T>void array(std::ostream& o,const T& values){o<<'[';bool first=true;for(auto v:values){if(!first)o<<',';first=false;o<<v;}o<<']';}
+-std::string inspect(const Board& b,const Network& net,bool evaluation){
++std::string inspect(const Board& b,const Network& net,bool evaluation,bool legal_only=false){
+     std::ostringstream o;o<<std::setprecision(9);auto moves=b.legal();float value=0;bool terminal=b.terminal(moves,value);
+     o<<"{\"fen\":\""<<b.fen()<<"\",\"repetitions\":"<<b.repetitions()<<",\"terminal\":"<<(terminal?"true":"false")<<",\"value\":"<<value<<",\"features\":";array(o,b.features());
+     o<<",\"legal\":[";bool first=true;for(auto m:moves){if(!first)o<<',';first=false;o<<"{\"uci\":\""<<m.uci()<<"\",\"action\":"<<action(m)<<'}';}o<<']';
+-    if(evaluation){auto e=net.evaluate(b);o<<",\"policy\":";array(o,e.policy);o<<",\"wdl\":";array(o,e.wdl);}
++    if(evaluation){Network::Workspace workspace;auto e=legal_only?net.evaluate_legal(b,moves,workspace):net.evaluate(b);o<<",\"policy\":";array(o,e.policy);o<<",\"wdl\":";array(o,e.wdl);}
+     o<<'}';return o.str();
+ }
+ std::string result_json(const SearchResult& r){
+-    std::ostringstream o;o<<std::setprecision(9)<<"{\"bestmove\":\""<<(r.has_move?r.best.uci():"0000")<<"\",\"terminal\":"<<(r.terminal?"true":"false")<<",\"simulations\":"<<r.simulations<<",\"value\":"<<r.value<<",\"visits\":[";
+-    bool first=true;for(auto& [m,n]:r.visits){if(!first)o<<',';first=false;o<<"{\"uci\":\""<<m.uci()<<"\",\"action\":"<<action(m)<<",\"n\":"<<n<<'}';}o<<"]}";return o.str();
++    std::ostringstream o;o<<std::setprecision(9)<<"{\"bestmove\":\""<<(r.has_move?r.best.uci():"0000")<<"\",\"terminal\":"<<(r.terminal?"true":"false")<<",\"simulations\":"<<r.simulations<<",\"value\":"<<r.value<<",\"neural_evals\":"<<r.neural_evals<<",\"memory_bytes\":"<<r.memory_bytes<<",\"max_depth\":"<<r.max_depth<<",\"proof_nodes\":"<<r.proof_nodes<<",\"mate_proven\":"<<(r.mate_proven?"true":"false")<<",\"proof_plies\":"<<r.proof_plies<<",\"visits\":[";
++    for(size_t i=0;i<r.visits.size();++i){auto [m,n]=r.visits[i];if(i)o<<',';o<<"{\"uci\":\""<<m.uci()<<"\",\"action\":"<<action(m)<<",\"n\":"<<n<<",\"q\":"<<r.q_values[i]<<",\"prior\":"<<r.priors[i]<<'}';}o<<"]}";return o.str();
+ }
+ Board position(std::istringstream& in){
+     std::string word;in>>word;Board b;
+@@ -44,16 +45,17 @@
+             if(std::string(argv[1])=="--model"&&argc==3)model_path=argv[2];
+             else throw std::runtime_error("usage: project_zero [--model FILE] | --perft DEPTH [FEN]");
+         }
+-        Board board=Board::from_fen(START_FEN);Network network;if(!model_path.empty())network.load(model_path);
+-        SearchLimits defaults;std::atomic<bool> stop{false};std::thread worker;
++        Board board=Board::from_fen(START_FEN);Network network;std::string startup_error;
++        if(!model_path.empty()){try{network.load(model_path);}catch(const std::exception& e){startup_error=e.what();model_path.clear();}}
++        SearchLimits defaults;defaults.proof_nodes=256;std::atomic<bool> stop{false};std::thread worker;
+         auto halt=[&](){stop.store(true);if(worker.joinable())worker.join();};
+         std::string line;
+         while(std::getline(std::cin,line)) {
+             std::istringstream in(line);std::string cmd;in>>cmd;
+             try {
+                 if(cmd=="quit"){halt();break;}
+-                if(cmd=="uci") {say("id name PROJECT ZERO 0.1\nid author PROJECT ZERO\noption name ModelFile type string default "+(model_path.empty()?"<none>":model_path)+"\noption name CPuct type string default 1.5\noption name Simulations type spin default 800 min 1 max 10000000\noption name MaxNodes type spin default 100000 min 16 max 1000000\nuciok");}
+-                else if(cmd=="isready")say("readyok");
++                if(cmd=="uci") {say("id name CHROMATIC 1.0\nid author PROJECT CHROMATIC\noption name ModelFile type string default "+(model_path.empty()?"<none>":model_path)+"\noption name CPuct type string default 1.5\noption name FPUReduction type string default 0\noption name InferenceBackend type combo default SIMD var Scalar var SIMD\noption name SparsePolicyHead type check default true\noption name MateProofNodes type spin default 256 min 0 max 50000\noption name MateProofPlies type combo default 1 var 1 var 3 var 5\noption name TreeMemoryMB type spin default 64 min 1 max 2048\noption name Simulations type spin default 800 min 1 max 10000000\noption name MaxNodes type spin default 100000 min 16 max 1000000\nuciok");}
++                else if(cmd=="isready"){if(!startup_error.empty()){say("info string error "+escape(startup_error));startup_error.clear();}say("readyok");}
+                 else if(cmd=="stop")halt();
+                 else if(cmd=="ucinewgame"){halt();board=Board::from_fen(START_FEN);}
+                 else if(cmd=="position"){halt();board=position(in);}
+@@ -61,10 +63,16 @@
+                     halt();std::string token,name,value;in>>token;if(token!="name")throw std::runtime_error("missing option name");
+                     while(in>>token&&token!="value"){if(!name.empty())name+=' ';name+=token;}
+                     std::getline(in,value);if(!value.empty()&&value.front()==' ')value.erase(0,1);
+-                    if(name=="ModelFile"){if(value=="<none>"||value.empty()){network=Network{};model_path.clear();}else {network.load(value);model_path=value;}say("info string model "+std::string(network.loaded()?"loaded":"uniform baseline"));}
++                    if(name=="ModelFile"){if(value=="<none>"||value.empty()){auto backend=network.backend();auto sparse=network.sparse();network=Network{};network.set_backend(backend);network.set_sparse(sparse);model_path.clear();}else {network.load(value);model_path=value;}say("info string model "+std::string(network.loaded()?"loaded":"uniform baseline"));}
+                     else if(name=="CPuct"){float v=std::stof(value);if(!std::isfinite(v)||v<=0||v>10)throw std::runtime_error("CPuct must be in (0,10]");defaults.cpuct=v;}
+                     else if(name=="Simulations")defaults.simulations=std::clamp(std::stoi(value),1,10000000);
+                     else if(name=="MaxNodes")defaults.max_nodes=size_t(std::clamp(std::stoi(value),16,1000000));
++                    else if(name=="TreeMemoryMB")defaults.max_tree_bytes=size_t(std::clamp(std::stoi(value),1,2048))*1024*1024;
++                    else if(name=="FPUReduction"){float v=std::stof(value);if(!std::isfinite(v)||v<0||v>1)throw std::runtime_error("FPU reduction must be in [0,1]");defaults.fpu_reduction=v;}
++                    else if(name=="InferenceBackend"){if(value!="Scalar"&&value!="SIMD")throw std::runtime_error("unknown inference backend");network.set_backend(value=="Scalar"?InferenceBackend::Scalar:InferenceBackend::SIMD);}
++                    else if(name=="SparsePolicyHead"){if(value!="true"&&value!="false")throw std::runtime_error("SparsePolicyHead requires true or false");network.set_sparse(value=="true");}
++                    else if(name=="MateProofNodes")defaults.proof_nodes=std::clamp(std::stoi(value),0,50000);
++                    else if(name=="MateProofPlies"){int n=std::stoi(value);if(n<1||n>5||n%2==0)throw std::runtime_error("mate proof plies must be 1,3,5");defaults.proof_plies=n;}
+                 } else if(cmd=="go") {
+                     halt();SearchLimits limits=defaults;std::string token;int remaining=0,increment=0,moves_to_go=30;bool explicit_nodes=false,explicit_time=false,infinite=false,has_clock=false;
+                     while(in>>token){if(token=="infinite"){infinite=true;continue;}if(token=="ponder"||token=="searchmoves")throw std::runtime_error("unsupported go option: "+token);long long n;if(!(in>>n))throw std::runtime_error("missing go limit");n=std::clamp(n,0LL,1000000000LL);
+@@ -81,12 +89,15 @@
+                     worker=std::thread([&,copy,limits](){try {auto start=std::chrono::steady_clock::now();auto r=search(copy,network,limits,stop);auto ms=std::max<int64_t>(1,std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now()-start).count());say("info nodes "+std::to_string(r.simulations)+" time "+std::to_string(ms)+" nps "+std::to_string(r.simulations*1000LL/ms)+" score cp "+std::to_string(int(400*r.value))+" pv "+(r.has_move?r.best.uci():"0000"));say("bestmove "+(r.has_move?r.best.uci():"0000"));}catch(const std::exception& e){say("info string error "+escape(e.what()));say("bestmove 0000");}});
+                 } else if(cmd=="zero") {
+                     halt();std::string op;in>>op;
+-                    if(op=="inspect"||op=="eval")say(inspect(board,network,op=="eval"));
++                    if(op=="inspect"||op=="eval"||op=="evallegal")say(inspect(board,network,op!="inspect",op=="evallegal"));
+                     else if(op=="search") {SearchLimits limits=defaults;if(!(in>>limits.simulations>>limits.seed>>limits.noise>>limits.temperature)||limits.simulations<1||limits.simulations>10000000||!std::isfinite(limits.noise)||limits.noise<0||limits.noise>1||!std::isfinite(limits.temperature)||limits.temperature<0)throw std::runtime_error("zero search SIMULATIONS SEED NOISE TEMPERATURE");stop.store(false);say(result_json(search(board,network,limits,stop)));}
+                     else throw std::runtime_error("unknown zero command");
+                 } else if(cmd=="d")say("info string "+board.fen());
+-            } catch(const std::exception& e) {if(cmd=="zero")say("{\"error\":\""+escape(e.what())+"\"}");else say("info string error "+escape(e.what()));}
++            } catch(const std::exception& e) {if(cmd=="zero")say("{\"error\":\""+escape(e.what())+"\"}");else {say("info string error "+escape(e.what()));if(cmd=="go")say("bestmove 0000");}}
+         }
+         halt();return 0;
+     }catch(const std::exception& e){std::cerr<<e.what()<<'\n';return 1;}
+ }
++
++
++
+--- a/src/network.cpp
++++ b/src/network.cpp
+@@ -1,24 +1,55 @@
+ #include "zero/network.hpp"
++#include "zero/profile.hpp"
+ #include <algorithm>
+ #include <cmath>
+ #include <fstream>
+ #include <stdexcept>
++#if defined(_M_X64)||defined(__SSE2__)
++#include <emmintrin.h>
++#define CHROMATIC_SSE2 1
++#endif
+ 
+ namespace zero {
+-std::vector<float> Network::Layer::apply(const std::vector<float>& x) const {
+-    std::vector<float> y=bias;
+-    for(int o=0;o<out;++o) {const float* w=weights.data()+size_t(o)*in;float s=y[o];for(int i=0;i<in;++i)s+=w[i]*x[i];y[o]=s;}
+-    return y;
++float Network::Layer::row(const std::vector<float>& x,int output,InferenceBackend backend) const {
++    const float* w=weights.data()+size_t(output)*in;
++    float sum=bias[output];
++#ifdef CHROMATIC_SSE2
++    if(backend==InferenceBackend::SIMD) {
++        __m128 partial=_mm_setzero_ps();int i=0;
++        for(;i+3<in;i+=4)partial=_mm_add_ps(partial,_mm_mul_ps(_mm_loadu_ps(w+i),_mm_loadu_ps(x.data()+i)));
++        float lanes[4];_mm_storeu_ps(lanes,partial);
++        for(float value:lanes)sum+=value;
++        for(;i<in;++i)sum+=w[i]*x[i];
++    } else
++#else
++    (void)backend;
++#endif
++    {for(int i=0;i<in;++i)sum+=w[i]*x[i];}
++    if(!std::isfinite(sum))throw std::runtime_error("nonfinite neural activation");
++    return sum;
++}
++void Network::Layer::apply(const std::vector<float>& x,std::vector<float>& y,InferenceBackend backend) const {
++    y.resize(out);for(int output=0;output<out;++output)y[output]=row(x,output,backend);
+ }
+ void Network::load(const std::string& path) {
+     static_assert(sizeof(float)==4);
+     std::ifstream f(path,std::ios::binary);if(!f)throw std::runtime_error("cannot open network: "+path);
+-    char magic[8];f.read(magic,8);if(std::string(magic,8)!="ZERO0001")throw std::runtime_error("invalid network magic");
++    char magic[8]{};f.read(magic,8);
++    if(!f)throw std::runtime_error("truncated network magic");
++    if(std::string(magic,8)!="ZERO0001")throw std::runtime_error("incompatible network version or magic");
+     auto number=[&](){uint32_t n=0;f.read(reinterpret_cast<char*>(&n),4);if(!f)throw std::runtime_error("truncated network header");return n;};
+     auto inputs=number(),width=number(),blocks=number(),actions=number();
+     if(inputs!=INPUTS||actions!=ACTIONS||width<1||width>1024||blocks>16)throw std::runtime_error("unsupported network dimensions");
+-    Network candidate;
+-    auto layer=[&](int in,int out){Layer l;l.in=in;l.out=out;l.weights.resize(size_t(in)*out);l.bias.resize(out);f.read(reinterpret_cast<char*>(l.weights.data()),std::streamsize(l.weights.size()*4));f.read(reinterpret_cast<char*>(l.bias.data()),std::streamsize(l.bias.size()*4));if(!f)throw std::runtime_error("truncated network weights");for(float v:l.weights)if(!std::isfinite(v))throw std::runtime_error("nonfinite weight");for(float v:l.bias)if(!std::isfinite(v))throw std::runtime_error("nonfinite bias");return l;};
++    Network candidate;candidate.backend_=backend_;candidate.sparse_=sparse_;
++    auto layer=[&](int in,int out) {
++        Layer l;l.in=in;l.out=out;l.weights.resize(size_t(in)*out);l.bias.resize(out);
++        f.read(reinterpret_cast<char*>(l.weights.data()),std::streamsize(l.weights.size()*4));
++        f.read(reinterpret_cast<char*>(l.bias.data()),std::streamsize(l.bias.size()*4));
++        if(!f)throw std::runtime_error("truncated network weights");
++        for(float v:l.weights)if(!std::isfinite(v))throw std::runtime_error("nonfinite weight");
++        for(float v:l.bias)if(!std::isfinite(v))throw std::runtime_error("nonfinite bias");
++        return l;
++    };
+     candidate.input_=layer(INPUTS,int(width));
+     for(uint32_t i=0;i<blocks;++i)candidate.residual_.push_back(layer(int(width),int(width)));
+     candidate.policy_=layer(int(width),ACTIONS);candidate.wdl_=layer(int(width),3);
+@@ -26,14 +57,33 @@
+     candidate.loaded_=true;*this=std::move(candidate);
+ }
+ Evaluation Network::evaluate(const Board& b) const {
++    Workspace workspace;return evaluate_impl(b,nullptr,workspace);
++}
++Evaluation Network::evaluate_legal(const Board& b,const std::vector<Move>& moves,Workspace& workspace) const {
++    return evaluate_impl(b,sparse_?&moves:nullptr,workspace);
++}
++Evaluation Network::evaluate_impl(const Board& b,const std::vector<Move>* moves,Workspace& workspace) const {
++    profile::Timer timer(profile::neural_ns);if(profile::active)++profile::neural_calls;
+     Evaluation e;
+-    if(!loaded_) { // Explicit uniform baseline for rule tests and pre-bootstrap play.
+-        e.wdl={0.25f,0.5f,0.25f};return e;
++    if(!loaded_){e.wdl={.25f,.5f,.25f};return e;}
++    auto features=b.features();workspace.input.assign(features.begin(),features.end());
++    input_.apply(workspace.input,workspace.a,backend_);
++    for(float& value:workspace.a)value=std::max(0.0f,value);
++    for(const auto& layer:residual_) {
++        layer.apply(workspace.a,workspace.b,backend_);
++        for(size_t i=0;i<workspace.a.size();++i)workspace.a[i]=std::max(0.0f,workspace.a[i]+workspace.b[i]);
+     }
+-    auto features=b.features();std::vector<float>x(features.begin(),features.end());x=input_.apply(x);for(float& v:x)v=std::max(0.0f,v);
+-    for(const auto& layer:residual_) {auto y=layer.apply(x);for(size_t i=0;i<x.size();++i)x[i]=std::max(0.0f,x[i]+y[i]);}
+-    auto p=policy_.apply(x),v=wdl_.apply(x);std::copy(p.begin(),p.end(),e.policy.begin());
+-    float max=*std::max_element(v.begin(),v.end()),sum=0;for(int i=0;i<3;++i){e.wdl[i]=std::exp(v[i]-max);sum+=e.wdl[i];}for(float& f:e.wdl)f/=sum;
++    if(moves) {
++        // This is exact row selection, with the same FP32 arithmetic as the full head.
++        // Unselected logits are not probabilities and must never enter a softmax.
++        for(auto m:*moves){int index=action(m);e.policy[index]=policy_.row(workspace.a,index,backend_);}
++    } else {
++        for(int index=0;index<ACTIONS;++index)e.policy[index]=policy_.row(workspace.a,index,backend_);
++    }
++    wdl_.apply(workspace.a,workspace.wdl,backend_);
++    float maximum=*std::max_element(workspace.wdl.begin(),workspace.wdl.end()),sum=0;
++    for(int i=0;i<3;++i){e.wdl[i]=std::exp(workspace.wdl[i]-maximum);sum+=e.wdl[i];}
++    for(float& value:e.wdl)value/=sum;
+     return e;
+ }
+ }
+--- a/src/proof.cpp
++++ b/src/proof.cpp
+@@ -0,0 +1,46 @@
++#include "zero/proof.hpp"
++#include <algorithm>
++namespace zero {
++namespace {
++enum class Proof {Refuted,Unknown,Win};
++struct Context {
++    int attacker,budget,nodes=0,microseconds;
++    const std::atomic<bool>& stop;
++    std::chrono::steady_clock::time_point start=std::chrono::steady_clock::now();
++    bool expired() const {
++        return nodes>=budget||stop.load(std::memory_order_relaxed)||
++          (microseconds>0&&std::chrono::steady_clock::now()-start>=std::chrono::microseconds(microseconds));
++    }
++    Proof forced(const Board& b,int remaining) {
++        if(expired())return Proof::Unknown;
++        ++nodes;
++        if(remaining==0&&!b.check(b.turn))return Proof::Refuted;
++        auto moves=b.legal();float value;
++        if(b.terminal(moves,value))return value==-1&&b.turn!=attacker?Proof::Win:Proof::Refuted;
++        if(remaining==0)return Proof::Refuted;
++        std::stable_partition(moves.begin(),moves.end(),[&](Move move){auto c=b.position_only();c.make(move,false);return c.check(c.turn);});
++        bool unknown=false;
++        for(auto move:moves) {
++            if(expired())return Proof::Unknown;
++            Board child=b;child.make(move);Proof proof=forced(child,remaining-1);
++            if(b.turn==attacker&&proof==Proof::Win)return Proof::Win;
++            if(b.turn!=attacker&&proof==Proof::Refuted)return Proof::Refuted;
++            unknown|=proof==Proof::Unknown;
++        }
++        if(unknown)return Proof::Unknown;
++        return b.turn==attacker?Proof::Refuted:Proof::Win;
++    }
++};
++}
++MateProof verify_mate(const Board& b,const std::vector<Move>& moves,int plies,int nodes,const std::atomic<bool>& stop,int microseconds) {
++    Context context{b.turn,nodes,0,microseconds,stop};MateProof result;
++    for(int depth=1;depth<=plies;depth+=2) {
++        for(auto move:moves) {
++            if(context.expired()){result.nodes=context.nodes;return result;}
++            Board child=b;child.make(move);
++            if(context.forced(child,depth-1)==Proof::Win){result={true,move,depth,context.nodes};return result;}
++        }
++    }
++    result.nodes=context.nodes;return result;
++}
++}
+--- a/src/search.cpp
++++ b/src/search.cpp
+@@ -1,58 +1,150 @@
+ #include "zero/search.hpp"
++#include "zero/proof.hpp"
+ #include <algorithm>
+ #include <cmath>
+ #include <limits>
++#include <stdexcept>
++
+ namespace zero {
+ namespace {
+-struct Node;
+-struct Edge {Move move;float prior=0;int visits=0;double sum=0;std::unique_ptr<Node> child;};
+-struct Node {std::vector<Edge> edges;bool expanded=false,terminal=false;float value=0;int visits=0;};
+-float expand(Node& n,const Board& b,const Network& net) {
+-    n.expanded=true;auto moves=b.legal();
+-    if(b.terminal(moves,n.value)){n.terminal=true;return n.value;}
+-    auto eval=net.evaluate(b);n.value=eval.wdl[0]-eval.wdl[2];float max=-std::numeric_limits<float>::infinity(),sum=0;
+-    for(auto m:moves)max=std::max(max,eval.policy[action(m)]);
+-    for(auto m:moves){float p=std::exp(eval.policy[action(m)]-max);sum+=p;n.edges.push_back({m,p,0,0,nullptr});}
+-    for(auto& e:n.edges)e.prior/=sum;return n.value;
++constexpr uint32_t NONE=std::numeric_limits<uint32_t>::max();
++struct Edge {
++    Move move;
++    float prior=0;
++    double sum=0;
++    uint32_t visits=0,child=NONE;
++};
++struct Node {
++    uint32_t first=0,count=0,visits=0;
++    float value=0;
++    bool expanded=false,terminal=false;
++};
++// Integer indices remain valid when vectors grow. No pointers outlive a reserve.
++class Arena {
++public:
++    std::vector<Node> nodes;
++    std::vector<Edge> edges;
++    const SearchLimits& limits;
++    explicit Arena(const SearchLimits& l):limits(l) {
++        if(l.max_nodes<1||l.max_tree_bytes<65536)throw std::runtime_error("invalid tree memory budget");
++        nodes.reserve(std::min<size_t>(256,l.max_nodes));nodes.emplace_back();
++        edges.reserve(std::min<size_t>(1024,(l.max_tree_bytes-nodes.capacity()*sizeof(Node))/sizeof(Edge)));
++    }
++    size_t bytes() const{return nodes.capacity()*sizeof(Node)+edges.capacity()*sizeof(Edge);}
++    uint32_t child(uint32_t edge) {
++        if(edges[edge].child!=NONE)return edges[edge].child;
++        if(nodes.size()>=limits.max_nodes)return NONE;
++        if(nodes.size()==nodes.capacity()) {
++            size_t available=(limits.max_tree_bytes-edges.capacity()*sizeof(Edge))/sizeof(Node);
++            size_t capacity=std::min({limits.max_nodes,available,std::max<size_t>(64,nodes.capacity()*2)});
++            if(capacity<=nodes.size())return NONE;
++            nodes.reserve(capacity);
++        }
++        auto index=uint32_t(nodes.size());nodes.emplace_back();edges[edge].child=index;return index;
++    }
++    bool children(uint32_t index,const std::vector<Move>& moves,const Evaluation& eval) {
++        size_t needed=edges.size()+moves.size();
++        if(needed>edges.capacity()) {
++            size_t available=(limits.max_tree_bytes-nodes.capacity()*sizeof(Node))/sizeof(Edge);
++            size_t capacity=std::min(available,std::max(needed,edges.capacity()*2));
++            if(capacity<needed)return false;
++            edges.reserve(capacity);
++        }
++        float maximum=-std::numeric_limits<float>::infinity(),sum=0;
++        for(auto m:moves)maximum=std::max(maximum,eval.policy[action(m)]);
++        uint32_t first=uint32_t(edges.size());
++        for(auto m:moves){float p=std::exp(eval.policy[action(m)]-maximum);sum+=p;edges.push_back({m,p,0,0,NONE});}
++        for(size_t i=first;i<edges.size();++i)edges[i].prior/=sum;
++        nodes[index].first=first;nodes[index].count=uint32_t(moves.size());nodes[index].expanded=true;
++        return true;
++    }
++};
++float evaluate(Arena& tree,uint32_t index,const Board& b,const Network& net,SearchResult& result,Network::Workspace& workspace) {
++    auto moves=b.legal();float value;
++    if(b.terminal(moves,value)) {
++        if(index!=NONE){auto& n=tree.nodes[index];n.expanded=n.terminal=true;n.value=value;}
++        return value;
++    }
++    ++result.neural_evals;auto eval=net.evaluate_legal(b,moves,workspace);value=eval.wdl[0]-eval.wdl[2];
++    if(index!=NONE){tree.nodes[index].value=value;tree.children(index,moves,eval);}
++    return value;
+ }
+ }
++
+ SearchResult search(const Board& board,const Network& network,const SearchLimits& limits,const std::atomic<bool>& stop) {
+-    SearchResult result;Node root;expand(root,board,network);result.value=root.value;result.terminal=root.terminal;
+-    if(root.terminal)return result;
+-    std::mt19937_64 rng(limits.seed);size_t node_count=1;
+-    if(limits.noise>0){std::gamma_distribution<float> gamma(0.3f,1);std::vector<float> noise(root.edges.size());float sum=0;for(float& n:noise){n=gamma(rng);sum+=n;}if(sum>0)for(size_t i=0;i<noise.size();++i)root.edges[i].prior=(1-limits.noise)*root.edges[i].prior+limits.noise*noise[i]/sum;}
+-    auto start=std::chrono::steady_clock::now();
+-    while(!stop.load(std::memory_order_relaxed) && (limits.simulations<=0||result.simulations<limits.simulations)) {
+-        if(limits.milliseconds>0 && std::chrono::steady_clock::now()-start>=std::chrono::milliseconds(limits.milliseconds))break;
+-        Board b=board;Node* n=&root;std::vector<Node*> nodes{n};std::vector<Edge*> edges;
+-        while(n->expanded&&!n->terminal) {
+-            Edge* best=nullptr;double score=-1e100;
+-            for(auto& e:n->edges) {
+-                double q=e.visits?e.sum/e.visits:0;
+-                double u=limits.cpuct*e.prior*std::sqrt(double(n->visits)+1)/(1+e.visits);
+-                if(q+u>score){score=q+u;best=&e;}
++    const auto start=std::chrono::steady_clock::now();
++    auto cancelled=[&](){return stop.load(std::memory_order_relaxed)||(limits.milliseconds>0&&std::chrono::steady_clock::now()-start>=std::chrono::milliseconds(limits.milliseconds));};
++    Arena tree(limits);SearchResult result;Network::Workspace workspace;
++    result.value=evaluate(tree,0,board,network,result,workspace);result.terminal=tree.nodes[0].terminal;
++    result.arena_nodes=tree.nodes.size();result.memory_bytes=tree.bytes();
++    if(result.terminal)return result;
++    if(!tree.nodes[0].expanded)throw std::runtime_error("tree budget cannot hold root");
++    std::mt19937_64 rng(limits.seed);
++    const uint32_t root_count=tree.nodes[0].count;
++    if(limits.proof_nodes>0&&!cancelled()) {
++        std::vector<Move> moves;for(uint32_t i=0;i<root_count;++i)moves.push_back(tree.edges[i].move);
++        int microseconds=limits.milliseconds>0?std::max(100, std::min(10000,limits.milliseconds*1000/4)):0;
++        auto proof=verify_mate(board,moves,limits.proof_plies,limits.proof_nodes,stop,microseconds);
++        result.proof_nodes=proof.nodes;
++        if(proof.proven) {
++            // One actual root update backed by a proof; do not invent requested visits.
++            result.best=proof.move;result.has_move=result.mate_proven=true;result.value=1;
++            result.simulations=1;result.proof_plies=proof.plies;result.memory_bytes=tree.bytes();result.arena_nodes=tree.nodes.size();
++            for(uint32_t i=0;i<root_count;++i){auto& edge=tree.edges[i];bool best=edge.move==proof.move;result.visits.emplace_back(edge.move,best?1:0);result.q_values.push_back(best?1.f:0.f);result.priors.push_back(edge.prior);}
++            return result;
++        }
++    }
++    if(limits.noise>0) {
++        std::gamma_distribution<float> gamma(0.3f,1);std::vector<float> noise(root_count);float sum=0;
++        for(float& n:noise){n=gamma(rng);sum+=n;}
++        if(sum>0)for(uint32_t i=0;i<root_count;++i)tree.edges[i].prior=(1-limits.noise)*tree.edges[i].prior+limits.noise*noise[i]/sum;
++    }
++    std::vector<uint32_t> path_nodes,path_edges;path_nodes.reserve(128);path_edges.reserve(128);
++    while(!cancelled()&&(limits.simulations<=0||result.simulations<limits.simulations)) {
++        Board b=board;uint32_t current=0;
++        path_nodes.clear();path_edges.clear();path_nodes.push_back(0);
++        while(tree.nodes[current].expanded&&!tree.nodes[current].terminal) {
++            const Node node=tree.nodes[current];double best_score=-1e100;
++            uint32_t best=node.first;double exploration=std::sqrt(double(node.visits)+1);
++            for(uint32_t i=node.first;i<node.first+node.count;++i) {
++                const auto& e=tree.edges[i];
++                double q=e.visits?e.sum/e.visits:(limits.fpu_reduction>0?node.value-limits.fpu_reduction:0);
++                double score=q+(limits.cpuct*e.prior)*exploration/(1+e.visits);
++                if(score>best_score){best_score=score;best=i;}
+             }
+-            edges.push_back(best);b.make(best->move);
+-            if(!best->child){if(node_count>=limits.max_nodes)break;best->child=std::make_unique<Node>();++node_count;}
+-            n=best->child.get();nodes.push_back(n);
+-            if(nodes.size()>=512)break;
++            path_edges.push_back(best);b.make(tree.edges[best].move);
++            current=tree.child(best);
++            if(current==NONE)break;
++            path_nodes.push_back(current);
++            if(path_nodes.size()>=512)break;
+         }
+         float value;
+-        if(edges.size()>=nodes.size()) { // Memory bound: evaluate leaf without retaining a child.
+-            auto moves=b.legal();if(!b.terminal(moves,value)){auto e=network.evaluate(b);value=e.wdl[0]-e.wdl[2];}
+-        } else if(!n->expanded)value=expand(*n,b,network);
+-        else value=n->value;
+-        for(auto* visited:nodes)++visited->visits;
+-        for(auto it=edges.rbegin();it!=edges.rend();++it){value=-value;++(*it)->visits;(*it)->sum+=value;}
+-        ++result.simulations;
++        if(current==NONE||!tree.nodes[current].expanded)value=evaluate(tree,current,b,network,result,workspace);
++        else value=tree.nodes[current].value;
++        for(auto index:path_nodes)++tree.nodes[index].visits;
++        for(auto it=path_edges.rbegin();it!=path_edges.rend();++it) {
++            value=-value;
++            auto& edge=tree.edges[*it];++edge.visits;edge.sum+=value;
++        }
++        result.max_depth=std::max(result.max_depth,int(path_edges.size()));++result.simulations;
+     }
+-    Edge* best=&root.edges.front();double total=0;
+-    for(auto& e:root.edges){result.visits.emplace_back(e.move,e.visits);total+=e.sum;if(e.visits>best->visits||(e.visits==best->visits&&e.prior>best->prior))best=&e;}
+-    if(limits.temperature>0 && result.simulations>0) {
+-        double maxlog=-1e100;std::vector<double> weights;for(auto& e:root.edges)if(e.visits)maxlog=std::max(maxlog,std::log(double(e.visits))/limits.temperature);
+-        for(auto& e:root.edges)weights.push_back(e.visits?std::exp(std::log(double(e.visits))/limits.temperature-maxlog):0);
+-        std::discrete_distribution<size_t> choose(weights.begin(),weights.end());best=&root.edges[choose(rng)];
++    uint32_t best=0;double total=0;
++    for(uint32_t i=0;i<root_count;++i) {
++        const auto& edge=tree.edges[i];total+=edge.sum;
++        result.visits.emplace_back(edge.move,int(edge.visits));
++        result.q_values.push_back(edge.visits?float(edge.sum/edge.visits):0);
++        result.priors.push_back(edge.prior);
++        const auto& previous=tree.edges[best];
++        if(edge.visits>previous.visits||(edge.visits==previous.visits&&edge.prior>previous.prior))best=i;
+     }
+-    result.has_move=true;result.best=best->move;if(result.simulations)result.value=float(total/result.simulations);return result;
++    if(limits.temperature>0&&result.simulations>0) {
++        double maximum=-1e100;std::vector<double> weights;
++        for(uint32_t i=0;i<root_count;++i)if(tree.edges[i].visits)maximum=std::max(maximum,std::log(double(tree.edges[i].visits))/limits.temperature);
++        for(uint32_t i=0;i<root_count;++i)weights.push_back(tree.edges[i].visits?std::exp(std::log(double(tree.edges[i].visits))/limits.temperature-maximum):0);
++        std::discrete_distribution<uint32_t> choose(weights.begin(),weights.end());best=choose(rng);
++    }
++    result.has_move=true;result.best=tree.edges[best].move;
++    if(result.simulations)result.value=float(total/result.simulations);
++    result.arena_nodes=tree.nodes.size();result.memory_bytes=tree.bytes();return result;
+ }
+ }
+--- a/tests/arena_tests.py
++++ b/tests/arena_tests.py
+@@ -0,0 +1,53 @@
++import argparse
++import json
++from pathlib import Path
++import sys
++import tempfile
++import unittest
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
++from zero.match import statistics,sprt_state,arena
++from zero.champion import rollback
++from zero.checkpoint import digest
++from zero.data import atomic_json
++import chess.pgn
++
++ENGINE=None;TEMP=Path(__file__).resolve().parents[1]/'runs/test-temp';TEMP.mkdir(parents=True,exist_ok=True)
++class ArenaTests(unittest.TestCase):
++    def test_statistics_distinguishes_uncertainty_from_inferiority(self):
++        self.assertEqual(statistics([{'score':.5},{'score':.5}])['decision'],'insufficient_evidence')
++        self.assertEqual(statistics([{'score':1},{'score':None}])['decision'],'insufficient_evidence')
++        self.assertIsNone(statistics([{'score':1},{'score':None}])['elo'])
++        self.assertEqual(statistics([{'score':0}]*200)['decision'],'demonstrated_inferiority')
++        self.assertTrue(statistics([{'score':1}]*200)['promote'])
++        self.assertEqual(sprt_state([{'score':.5}]*24)['status'],'continue')
++        self.assertEqual(sprt_state([{'score':1}]*24)['status'],'accept_h1')
++        repeated=[{'score':1,'opening':{'fen':'same-fixture','moves':[]}}]*200
++        self.assertFalse(statistics(repeated)['promote'])
++        self.assertEqual(statistics(repeated)['effective_independent_units'],1)
++        self.assertEqual(sprt_state(repeated)['status'],'continue')
++    def test_pgn_fixed_opening_pair_and_restart(self):
++        with tempfile.TemporaryDirectory(dir=TEMP) as folder:
++            path=Path(folder)/'arena.json';fen='7k/8/5KQ1/8/8/8/8/8 w - - 99 1'
++            report=arena(ENGINE,None,None,path,pairs=1,simulations=8,max_plies=2,opening_fens=[fen])
++            self.assertEqual(report['wdl'],{'wins':1,'draws':0,'losses':1,'unfinished':0})
++            self.assertFalse(report['promote']);self.assertEqual(report['elo'],0)
++            with path.with_suffix('.pgn').open() as stream:
++                games=[chess.pgn.read_game(stream),chess.pgn.read_game(stream)]
++            self.assertTrue(all(game and not game.errors for game in games))
++            again=arena(ENGINE,None,None,path,pairs=1,simulations=8,max_plies=2,opening_fens=[fen])
++            self.assertEqual(report,again)
++    def test_rollback_preserves_artifacts_and_checks_hash(self):
++        with tempfile.TemporaryDirectory(dir=TEMP) as folder:
++            root=Path(folder);(root/'old.pt').write_bytes(b'old-fixture');(root/'new.pt').write_bytes(b'new-fixture')
++            state={'champion':'new.pt','champion_sha256':digest(root/'new.pt'),'completed':2,
++                   'history':[{'previous_champion':'old.pt','previous_sha256':digest(root/'old.pt')}],'rollbacks':[]}
++            atomic_json(root/'state.json',state);result=rollback(root)
++            self.assertEqual(result['champion'],'old.pt');self.assertTrue((root/'new.pt').exists())
++            self.assertEqual(result['completed'],2)
++            with self.assertRaisesRegex(ValueError,'not enough'):rollback(root)
++
++if __name__=='__main__':
++    p=argparse.ArgumentParser();p.add_argument('--engine',required=True);p.add_argument('--report',required=True)
++    args=p.parse_args();ENGINE=Path(args.engine).resolve()
++    result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(ArenaTests))
++    atomic_json(args.report,{'passed':result.wasSuccessful(),'tests':result.testsRun});sys.exit(not result.wasSuccessful())
+--- a/tests/core.cpp
++++ b/tests/core.cpp
+@@ -2,6 +2,8 @@
+ #include <iostream>
+ #include <stdexcept>
+ #include <set>
++#include <fstream>
++#include <cmath>
+ using namespace zero;
+ void require(bool ok,const char* msg){if(!ok)throw std::runtime_error(msg);}
+ int main(){try {
+@@ -22,6 +24,35 @@
+     for(auto m:a.legal())require(m.uci()!="g5f6","EP discovered check");
+     a=Board::from_fen("1r2k3/P7/8/8/8/8/8/4K3 w - - 0 1");std::set<int> ids;for(auto m:a.legal()){require(action(m)>=0&&action(m)<ACTIONS,"action range");require(ids.insert(action(m)).second,"action collision");}
+     Network net;std::atomic<bool> stop=false;SearchLimits limits;limits.simulations=128;limits.max_nodes=16;
++    // A child that predicts a win for its side must be a loss for the root side.
++    // This assertion fails if the single minus sign in backup is removed.
++    {
++      std::ofstream f("synthetic-wdl.zero",std::ios::binary);f.write("ZERO0001",8);
++      uint32_t header[]={INPUTS,1,0,ACTIONS};f.write(reinterpret_cast<char*>(header),sizeof(header));
++      auto zeros=[&](int n){float z=0;for(int i=0;i<n;++i)f.write(reinterpret_cast<char*>(&z),4);};
++      zeros(INPUTS+1);zeros(ACTIONS+ACTIONS);zeros(3);float biases[]={8,-8,-8};f.write(reinterpret_cast<char*>(biases),sizeof(biases));f.close();
++      Network win_for_child;win_for_child.load("synthetic-wdl.zero");SearchLimits one;one.simulations=1;
++      auto sign=search(Board::from_fen(START_FEN),win_for_child,one,stop);require(sign.value<-.99f,"WDL child-to-parent sign inversion");
++    }
++    for(auto fen:{"8/8/8/8/8/8/4K3/7k w K - 0 1","4k3/8/8/8/8/8/8/4K3 w - - 2147483647 1"}){
++      bool rejected=false;try{Board::from_fen(fen);}catch(const std::exception&){rejected=true;}require(rejected,"invalid FEN must be rejected");
++    }
+     a=Board::from_fen("7k/8/5KQ1/8/8/8/8/8 w - - 0 1");auto r=search(a,net,limits,stop);require(r.simulations==128,"simulation budget");int visits=0;for(auto [m,n]:r.visits)visits+=n;require(visits==128,"visit accounting");a.make(r.best);require(a.terminal(a.legal(),value)&&value==-1,"PUCT mate in one / backup sign");
++    limits.max_nodes=100000;limits.max_tree_bytes=65536;limits.simulations=512;
++    auto bounded=search(Board::from_fen(START_FEN),net,limits,stop);
++    require(bounded.simulations==512&&bounded.memory_bytes<=65536,"tree byte budget and progress");
++    limits.noise=.25f;limits.temperature=1;limits.seed=81;
++    auto deterministic=search(Board::from_fen(START_FEN),net,limits,stop);
++    auto repeat_search=search(Board::from_fen(START_FEN),net,limits,stop);
++    require(deterministic.visits==repeat_search.visits&&deterministic.best==repeat_search.best,"seeded search reproducibility");
++    float priors=0;for(float p:deterministic.priors){require(std::isfinite(p)&&p>=0,"valid prior");priors+=p;}require(std::abs(priors-1)<1e-5,"normalized legal prior");
++    limits.noise=0;limits.temperature=0;limits.simulations=1;limits.proof_nodes=12000;limits.proof_plies=5;
++    auto proof=search(Board::from_fen("7k/8/8/4K3/8/2Q5/8/8 w - - 0 1"),net,limits,stop);
++    require(proof.mate_proven&&proof.proof_plies==5&&proof.proof_nodes<=12000,"bounded mate in three proof");
++    require(proof.best.uci()=="c3g3"||proof.best.uci()=="c3c7"||proof.best.uci()=="e5f6","independently verified mate solution");
++    require(proof.simulations==1,"proof must not invent unused simulations");
++    limits.proof_nodes=1;
++    auto unknown=search(Board::from_fen(START_FEN),net,limits,stop);
++    require(!unknown.mate_proven&&unknown.proof_nodes<=1,"exhausted proof is unknown, not a win");
+     std::cout<<"all core tests passed\n";return 0;
+ }catch(const std::exception& e){std::cerr<<e.what()<<'\n';return 1;}}
+--- a/tests/integration.py
++++ b/tests/integration.py
+@@ -102,6 +102,19 @@
+                         err = float(np.max(np.abs(np.asarray(result[name]) - expected)))
+                         errors[name] = max(errors[name], err)
+                         self.assertLess(err, 2e-5)
++                    sparse=native.command('zero evallegal')
++                    legal_ids=[action(m) for m in b.legal_moves]
++                    np.testing.assert_array_equal(np.asarray(sparse['policy'])[legal_ids],np.asarray(result['policy'])[legal_ids])
++                    if b is boards[0]:
++                        native.configure({'SparsePolicyHead':False})
++                        full=native.command('zero evallegal')
++                        self.assertEqual(full['policy'],result['policy'])
++                        native.configure({'SparsePolicyHead':True})
++                    native.configure({'InferenceBackend':'SIMD'})
++                    simd=native.command('zero eval')
++                    self.assertLess(float(np.max(np.abs(np.asarray(simd['policy'])-policy[0].numpy()))),2e-5)
++                    self.assertLess(float(np.max(np.abs(np.asarray(simd['wdl'])-wdl[0].numpy()))),2e-5)
++                    native.configure({'InferenceBackend':'Scalar'})
+                 native.send('setoption name ModelFile value ' + str(corrupt))
+                 with self.assertRaisesRegex(RuntimeError, 'truncated'):
+                     native.ready()
+@@ -113,6 +126,7 @@
+             shutil.copyfile(ENGINE, auto_engine)
+             model.export(Path(folder) / 'default.zero')
+             with Native(auto_engine) as automatic:
++                automatic.configure({'InferenceBackend':'Scalar'})
+                 automatic.position(boards[-1])
+                 self.assertEqual(automatic.command('zero eval')['policy'], result['policy'])
+             selfplay(auto_engine, None, Path(folder) / 'automatic-games', games=1,
+--- a/tests/reliability.py
++++ b/tests/reliability.py
+@@ -0,0 +1,92 @@
++"""CHROMATIC replay, trace, holdout, optimizer and tiny-data learning regressions."""
++import argparse
++import json
++from pathlib import Path
++import sys
++import tempfile
++import unittest
++import numpy as np
++import chess
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
++from zero.data import position_record,write_records,atomic_json
++from zero.encoding import action
++from zero.replay import Replay,prepare
++from zero.train import train
++from zero.selfplay import selfplay
++from zero import checkpoint
++
++ENGINE=None
++TEMP=Path(__file__).resolve().parents[1]/'runs/test-temp'
++TEMP.mkdir(parents=True,exist_ok=True)
++REPORT={}
++
++class Reliability(unittest.TestCase):
++    def test_sparse_replay_capacity_dedup_and_group_holdout(self):
++        with tempfile.TemporaryDirectory(dir=TEMP) as folder:
++            root=Path(folder);paths=[];board=chess.Board()
++            for generation in range(2):
++                rows=[]
++                for i in range(12):
++                    moves=list(board.legal_moves);move=moves[i%len(moves)]
++                    rows.append(position_record(board,[[action(move),1]],'selfplay',wdl=[0,1,0],game_id=f'g{generation}-game{i//4}'))
++                    board.push(move)
++                path=root/str(generation)/'data.jsonl';write_records(path,rows+rows[:2]);paths.append(path)
++            replay=Replay(paths,capacity=8,recent_fraction=.5,seed=9)
++            self.assertLessEqual(len(replay.rows),8)
++            self.assertEqual(replay.stats['older_selected'],4);self.assertEqual(replay.stats['recent_selected'],4)
++            self.assertEqual(replay.stats['duplicates_in_window'],4)
++            training,validation=replay.split(.25,9)
++            self.assertTrue(validation)
++            self.assertFalse({replay.rows[i].position for i in training}&{replay.rows[i].position for i in validation})
++            replay.persist(root/'replay.json')
++            self.assertTrue(all(path.exists() for path in paths))
++        REPORT['bounded_replay_dedup_holdout']=True
++
++    def test_unfinished_trajectory_is_durable_and_resumable(self):
++        with tempfile.TemporaryDirectory(dir=TEMP) as folder:
++            path=Path(folder)/'games'
++            first=selfplay(ENGINE,None,path,games=1,simulations=4,max_plies=1,noise=0,temperature_plies=0)
++            self.assertEqual(first['records'],0)
++            pending=path/'pending/game_000000.jsonl'
++            rows=[json.loads(line) for line in pending.read_text().splitlines()]
++            self.assertEqual(len(rows),1);self.assertNotIn('wdl',rows[0])
++            with self.assertRaisesRegex(ValueError,'unfinished'):
++                prepare(rows[0])
++            second=selfplay(ENGINE,None,path,games=1,simulations=4,max_plies=2,noise=0,temperature_plies=0,resume_truncated=True)
++            rows2=[json.loads(line) for line in pending.read_text().splitlines()]
++            self.assertEqual(rows2[0],rows[0]);self.assertEqual(len(rows2),2)
++            self.assertEqual(second['records'],0)
++            completed=Path(folder)/'mate'
++            selfplay(ENGINE,None,completed,games=1,simulations=64,max_plies=2,noise=0,temperature_plies=0,
++                     start_fen='7k/8/5KQ1/8/8/8/8/8 w - - 99 1')
++            row=json.loads((completed/'game_000000.jsonl').read_text().splitlines()[0]);prepared=prepare(row)
++            self.assertEqual(row['schema'],2);self.assertEqual(row['wdl'],[1,0,0])
++            row['legal_actions']=[]
++            with self.assertRaisesRegex(ValueError,'mask mismatch'):prepare(row)
++        REPORT['unfinished_durable_no_fake_outcome_resume']=True
++        REPORT['versioned_trace_features_mask_action_outcome']=True
++
++    def test_small_data_overfit_and_validation_metrics(self):
++        with tempfile.TemporaryDirectory(dir=TEMP) as folder:
++            root=Path(folder);board=chess.Board();move=chess.Move.from_uci('e2e4')
++            row=position_record(board,[[action(move),1]],'selfplay',wdl=[1,0,0])
++            path=root/'tiny.jsonl';write_records(path,[row])
++            result=train([path],root/'fit.pt',steps=160,batch_size=4,lr=.01,width=16,blocks=1,
++                         save_every=80,validation_fraction=0,weight_decay=0)
++            before=result['initial']['training'];after=result['final']['training']
++            self.assertLess(after['policy_loss'],.03);self.assertLess(after['wdl_loss'],.03)
++            self.assertLess(after['policy_loss']+after['wdl_loss'],.02*(before['policy_loss']+before['wdl_loss']))
++            self.assertIn('wdl_ece',after);self.assertIn('gradient_norm_before_clip',result['last'])
++            self.assertGreater(result['compute_samples_per_second'],0)
++            state,_=checkpoint.load(root/'fit.pt');self.assertEqual(state['format'],2)
++            # A separate optimizer path must also run with finite gradients.
++            sgd=train([path],root/'sgd.pt',steps=2,batch_size=1,width=8,blocks=0,optimizer_name='sgd',validation_fraction=0)
++            self.assertTrue(np.isfinite(sgd['last']['wdl_loss']))
++            REPORT['overfit']={'initial':before,'final':after,'steps':160,
++                               'samples_per_second':result['compute_samples_per_second']}
++
++if __name__=='__main__':
++    p=argparse.ArgumentParser();p.add_argument('--engine',required=True);p.add_argument('--report',required=True)
++    args=p.parse_args();ENGINE=Path(args.engine).resolve()
++    result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Reliability))
++    REPORT['passed']=result.wasSuccessful();atomic_json(args.report,REPORT);sys.exit(not result.wasSuccessful())
+--- a/tests/safety.py
++++ b/tests/safety.py
+@@ -0,0 +1,54 @@
++import argparse
++from pathlib import Path
++import struct
++import subprocess
++import sys
++import tempfile
++import unittest
++import torch
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
++from zero.native import Native
++from zero.train import initialize
++from zero import checkpoint
++from zero.data import atomic_json
++from zero.encoding import INPUTS,ACTIONS
++
++ENGINE=None;TEMP=Path(__file__).resolve().parents[1]/'runs/test-temp';TEMP.mkdir(parents=True,exist_ok=True)
++class Safety(unittest.TestCase):
++    def test_missing_startup_model_stays_uci_responsive(self):
++        result=subprocess.run([str(ENGINE),'--model','missing-model.zero'],input='uci\nisready\nquit\n',
++                              text=True,capture_output=True,timeout=5)
++        self.assertEqual(result.returncode,0);self.assertIn('uciok',result.stdout)
++        self.assertIn('readyok',result.stdout);self.assertIn('cannot open network',result.stdout)
++    def test_malformed_go_returns_completion_and_recovers(self):
++        with Native(ENGINE) as engine:
++            engine.send('go nodes nonsense')
++            with self.assertRaisesRegex(RuntimeError,'error'):engine.until(lambda line:line.startswith('bestmove '))
++            self.assertEqual(engine.until(lambda line:line.startswith('bestmove ')),'bestmove 0000');engine.ready()
++            for fen in ('8/8/8/8/8/8/8/8 w - - 0 1','4k3/8/8/8/8/8/8/4K3 w K - 0 1'):
++                engine.send('position fen '+fen)
++                with self.assertRaises(RuntimeError):engine.ready()
++                engine.ready()
++    def test_finite_weights_that_overflow_cannot_crash_search(self):
++        with tempfile.TemporaryDirectory(dir=TEMP) as folder:
++            path=Path(folder)/'overflow.zero'
++            arrays=[struct.pack('<f',3e38)*INPUTS,struct.pack('<f',1.),b'\0'*(ACTIONS*8),b'\0'*24]
++            path.write_bytes(b'ZERO0001'+struct.pack('<4I',INPUTS,1,0,ACTIONS)+b''.join(arrays))
++            with Native(ENGINE,path) as engine:
++                with self.assertRaisesRegex(RuntimeError,'nonfinite'):engine.command('zero eval')
++                engine.send('go nodes 1')
++                with self.assertRaisesRegex(RuntimeError,'nonfinite'):engine.until(lambda line:line.startswith('bestmove '))
++                self.assertEqual(engine.until(lambda line:line.startswith('bestmove ')),'bestmove 0000')
++    def test_bad_optimizer_never_replaces_last_valid_checkpoint(self):
++        with tempfile.TemporaryDirectory(dir=TEMP) as folder:
++            path=Path(folder)/'model.pt';initialize(path,width=1,blocks=0)
++            before=checkpoint.digest(path);state,_=checkpoint.load(path)
++            state['optimizer']={'state':{0:{'exp_avg':torch.tensor(float('nan'))}}}
++            with self.assertRaisesRegex(ValueError,'optimizer'):checkpoint.save(path,state)
++            self.assertEqual(checkpoint.digest(path),before)
++
++if __name__=='__main__':
++    p=argparse.ArgumentParser();p.add_argument('--engine',required=True);p.add_argument('--report',required=True)
++    args=p.parse_args();ENGINE=Path(args.engine).resolve()
++    result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Safety))
++    atomic_json(args.report,{'passed':result.wasSuccessful(),'tests':result.testsRun});sys.exit(not result.wasSuccessful())
+--- a/tools/baseline_reconstruct.py
++++ b/tools/baseline_reconstruct.py
+@@ -0,0 +1,38 @@
++"""Fresh, bounded v0.1 reconstruction. Refuses cached output for timing integrity."""
++from pathlib import Path
++import argparse
++import json
++import sys
++import time
++import torch
++root=Path(__file__).resolve().parents[1]
++sys.path.insert(0,str(root/'baseline/source'))
++from zero.train import train
++from zero.selfplay import selfplay
++from zero.checkpoint import load
++from zero.data import atomic_json
++
++if __name__=='__main__':
++    p=argparse.ArgumentParser();p.add_argument('--output',required=True)
++    args=p.parse_args();directory=Path(args.output).resolve()
++    if directory.exists() and any(directory.iterdir()):raise SystemExit('Choose an empty output directory; cached timings are not generation timings')
++    directory.mkdir(parents=True,exist_ok=True)
++    start=time.perf_counter()
++    training=train([root/'runs/bootstrap/teacher.jsonl'],directory/'model.pt',steps=200,batch_size=32,
++                   save_every=50,width=64,blocks=2,seed=2026)
++    train_seconds=time.perf_counter()-start
++    actual,_=load(directory/'model.pt');expected,_=load(root/'runs/bootstrap/model.pt')
++    same=all(torch.equal(actual['model'][k],expected['model'][k]) for k in actual['model'])
++    if not same:raise RuntimeError('baseline bootstrap weights did not reproduce')
++    start=time.perf_counter()
++    games=selfplay(root/'baseline/project_zero.exe',root/'baseline/default.zero',directory/'games',
++                   games=4,simulations=64,max_plies=512,seed=2026)
++    elapsed=time.perf_counter()-start
++    metas=[json.loads(path.read_text()) for path in (directory/'games').glob('game_*.json')]
++    draws=sum(row['accepted'] and row['result']=='1/2-1/2' for row in metas)
++    report={'fresh_output':True,'training':training,'train_seconds':train_seconds,
++            'train_samples_per_second_including_io':6400/train_seconds,
++            'bootstrap_weights_equal':same,'selfplay':games,'selfplay_seconds':elapsed,
++            'accepted_positions_per_minute':games['records']*60/elapsed,
++            'draw_rate':draws/games['accepted'] if games['accepted'] else None}
++    atomic_json(directory/'report.json',report);print(json.dumps(report,indent=2))
+--- a/tools/bench.py
++++ b/tools/bench.py
+@@ -0,0 +1,39 @@
++"""Fixed-budget in-process native timings; repeated raw samples retained."""
++import argparse
++import json
++from pathlib import Path
++import platform
++import statistics
++import subprocess
++import sys
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++from zero.checkpoint import digest
++from zero.data import atomic_json
++
++def benchmark(executable, model, output, repeats=5, evaluations=1000, simulations=128, backend=None,head=None):
++    if not 1 <= repeats <= 20:
++        raise ValueError('repeats must be 1..20')
++    samples=[]
++    for _ in range(repeats):
++        command=[str(Path(executable).resolve()),str(Path(model).resolve()),str(evaluations),str(simulations)]
++        if backend:
++            command.append(backend)
++        if head:
++            if not backend:raise ValueError('explicit backend required with head ablation')
++            command.append(head)
++        samples.append(json.loads(subprocess.check_output(command,text=True,timeout=60)))
++    medians={key:statistics.median(row[key] for row in samples) for key in samples[0]
++             if isinstance(samples[0][key],(int,float))}
++    report={'executable_sha256':digest(executable),'model_sha256':digest(model),
++            'platform':platform.platform(),'cpu':platform.processor(),'logical_cpus':__import__('os').cpu_count(),
++            'config':{'repeats':repeats,'evaluations':evaluations,'simulations_per_position':simulations,'backend':backend,'head':head,'mate_proof':'disabled'},
++            'medians':medians,'samples':samples}
++    atomic_json(output,report)
++    return report
++
++if __name__=='__main__':
++    p=argparse.ArgumentParser();p.add_argument('--executable',required=True);p.add_argument('--model',required=True)
++    p.add_argument('--output',required=True);p.add_argument('--repeats',type=int,default=5)
++    p.add_argument('--evaluations',type=int,default=1000);p.add_argument('--simulations',type=int,default=128)
++    p.add_argument('--backend',choices=['scalar','simd']);p.add_argument('--head',choices=['full','legal']);args=vars(p.parse_args())
++    print(json.dumps(benchmark(**args),indent=2))
+--- a/tools/compare_search.py
++++ b/tools/compare_search.py
+@@ -0,0 +1,33 @@
++import argparse
++import json
++from pathlib import Path
++import random
++import sys
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
++import chess
++from zero.native import Native
++from zero.data import atomic_json
++
++def compare(baseline,candidate,model,output,positions=20,simulations=128):
++    rng=random.Random(2026);board=chess.Board();mismatches=[]
++    with Native(baseline,model) as old,Native(candidate,model) as new:
++        if 'InferenceBackend' in new.options:new.configure({'InferenceBackend':'Scalar','MateProofNodes':0})
++        for index in range(positions):
++            for engine in (old,new):engine.position(board)
++            before=old.search(simulations,2026,0,0);after=new.search(simulations,2026,0,0)
++            counts=lambda row:[(v['uci'],v['action'],v['n']) for v in row['visits']]
++            if (before['bestmove'],counts(before),before['value'])!=(after['bestmove'],counts(after),after['value']):
++                mismatches.append({'index':index,'fen':board.fen(),'baseline':before,'candidate':after})
++            for _ in range(3):
++                if board.is_game_over():board=chess.Board()
++                board.push(rng.choice(list(board.legal_moves)))
++    result={'positions':positions,'simulations':simulations,'identical':not mismatches,'mismatches':mismatches}
++    atomic_json(output,result)
++    if mismatches:raise AssertionError(f'{len(mismatches)} searches differ')
++    return result
++
++if __name__=='__main__':
++    p=argparse.ArgumentParser()
++    for arg in ('baseline','candidate','model','output'):p.add_argument('--'+arg,required=True)
++    p.add_argument('--positions',type=int,default=20);p.add_argument('--simulations',type=int,default=128)
++    print(json.dumps(compare(**vars(p.parse_args())),indent=2))
+--- a/tools/draw_audit.py
++++ b/tools/draw_audit.py
+@@ -0,0 +1,32 @@
++import argparse
++import json
++from pathlib import Path
++import sys
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
++import numpy as np
++import torch
++from zero.model import load_model
++from zero.encoding import features,restore_board
++from zero.data import atomic_json
++
++def audit(paths,models,output):
++    rows=[json.loads(line) for path in paths for line in Path(path).read_text(encoding='utf-8').splitlines()]
++    if not rows:raise ValueError('empty draw audit data')
++    x=torch.from_numpy(np.stack([features(restore_board(row)) for row in rows]))
++    result={'records':len(rows),'mean_target_wdl':np.mean([row['wdl'] for row in rows],axis=0).tolist(),
++            'models':{},'causal_limit':'observational comparison; exploration and network quality are not independently identified'}
++    torch.set_num_threads(1)
++    for path in models:
++        model,state,_=load_model(path)
++        with torch.no_grad():
++            policy,wdl=model(x);probs=torch.softmax(wdl,-1)
++        result['models'][str(path)]={'step':state['step'],'mean_predicted_wdl':probs.mean(0).tolist(),
++                                    'mean_expected_value':float((probs[:,0]-probs[:,2]).mean())}
++    result['findings']=['Completed v0.1 selfplay targets in this dataset can be checked directly above.',
++                        'Repetition identity and value-sign tests are separate correctness gates.',
++                        'Draw-only labels train a draw-only value head; lower training loss is not evidence of stronger play.',
++                        'Opening diversification is supported; no artificial decisive result or draw penalty is introduced.']
++    atomic_json(output,result);return result
++if __name__=='__main__':
++    p=argparse.ArgumentParser();p.add_argument('--data',nargs='+',required=True);p.add_argument('--models',nargs='+',required=True);p.add_argument('--output',required=True)
++    args=p.parse_args();print(json.dumps(audit(args.data,args.models,args.output),indent=2))
+--- a/tools/final_experiments.py
++++ b/tools/final_experiments.py
+@@ -0,0 +1,57 @@
++"""Bounded release experiments. No external dataset or teacher invocation."""
++import argparse
++import json
++from pathlib import Path
++import sys
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
++from zero.verify import verify
++from zero.train import legacy_train
++from zero.loop import loop
++from zero.arena import arena
++from zero.data import atomic_json
++from bench import benchmark
++from compare_search import compare
++from tactics import tactics
++from draw_audit import audit
++
++if __name__=='__main__':
++    p=argparse.ArgumentParser();p.add_argument('--root',default='.');p.add_argument('--output',help='new reproduction directory');args=p.parse_args()
++    root=Path(args.root).resolve();engine=root/'build/project_zero.exe';bench=root/'build/chromatic_bench.exe'
++    model=root/'baseline/default.zero';reports=(root/args.output).resolve() if args.output else root/'reports/final'
++    if args.output and reports.exists() and any(reports.iterdir()):raise ValueError('choose an empty reproduction directory')
++    reports.mkdir(parents=True,exist_ok=True)
++    cycle=reports/'selfplay-cycle' if args.output else root/'runs/overdrive'
++    compare(root/'baseline/project_zero.exe',engine,model,reports/'scalar-search-equivalence.json')
++    for name,executable,backend,head in [('baseline',root/'build/baseline_bench.exe',None,None),
++            ('full-scalar',bench,'scalar','full'),('legal-scalar',bench,'scalar','legal'),('legal-simd',bench,'simd','legal')]:
++        benchmark(executable,model,reports/(name+'.json'),repeats=5,backend=backend,head=head)
++    benchmark(root/'build/baseline_bench.exe',model,reports/'baseline-memory.json',repeats=3,evaluations=100,simulations=4096)
++    benchmark(bench,model,reports/'chromatic-memory.json',repeats=3,evaluations=100,simulations=4096,backend='scalar')
++    for name,checkpoint in [('baseline',root/'runs/bootstrap/model.pt'),
++                            ('tiny',root/'reports/model-scaling/tiny/model.pt'),('small',root/'reports/model-scaling/small/model.pt')]:
++        for backend in ('Scalar','SIMD'):
++            verify(engine,checkpoint,reports/f'{name}-{backend.lower()}-parity.json',positions=100,backend=backend)
++    for name,options in [('default',{}),('deep-proof',{'MateProofNodes':12000,'MateProofPlies':5}),
++                          ('fpu-025',{'FPUReduction':.25})]:
++        tactics(engine,model,root/'benchmarks/tactics.json',reports/(name+'-tactics.json'),options=options)
++    state=loop(engine,root/'runs/bootstrap/model.pt',cycle,iterations=1,games=4,simulations=64,
++               steps=100,batch_size=32,pairs=2,max_plies=512,seed=2026,engine_options={'InferenceBackend':'SIMD'},
++               opening_plies=6,arena_milliseconds=10,opening_suite=root/'benchmarks/openings.json')
++    again=loop(engine,root/'runs/bootstrap/model.pt',cycle,iterations=1,games=4,simulations=64,
++               steps=100,batch_size=32,pairs=2,max_plies=512,seed=2026,engine_options={'InferenceBackend':'SIMD'},
++               opening_plies=6,arena_milliseconds=10,opening_suite=root/'benchmarks/openings.json')
++    if state!=again:raise AssertionError('completed generation changed on restart')
++    arena(engine,model,model,reports/'engine-match.json',pairs=4,incumbent_executable=root/'baseline/project_zero.exe',
++          milliseconds=10,max_plies=256,opening_suite=root/'benchmarks/openings.json')
++    arena(engine,root/'reports/model-scaling/small/model.zero',root/'reports/model-scaling/tiny/model.zero',
++          reports/'model-match.json',pairs=2,milliseconds=10,max_plies=256,opening_suite=root/'benchmarks/openings.json')
++    old_shards=sorted((root/'reports/baseline-games').glob('game_*.jsonl'))
++    audit(old_shards,[root/'runs/bootstrap/model.pt',root/'runs/release-validation/generation_0000/candidate.pt'],reports/'draw-audit.json')
++    legacy_output=reports/'compatibility/chromatic-legacy-resumed.pt' if args.output else root/'reports/compatibility/chromatic-legacy-resumed.pt'
++    legacy_train([root/'runs/bootstrap/teacher.jsonl'],legacy_output,
++                 steps=201,batch_size=32,seed=2026,save_every=50,resume=root/'runs/bootstrap/model.pt')
++    atomic_json(reports/'execution.json',{'completed':True,'completed_generation_restart_equal':True,
++                'selfplay_games':4,'training_steps':100,'engine_match_games':8,'model_match_games':4,
++                'maximum_selfplay_plies_per_game':512,'maximum_match_plies_per_game':256,
++                'teacher_used_after_bootstrap':False,'external_dataset_downloaded':False})
++    print(json.dumps({'experiments_completed':True,'report_directory':str(reports)},indent=2))
+--- a/tools/legacy_compat.py
++++ b/tools/legacy_compat.py
+@@ -0,0 +1,28 @@
++"""Reproduce one optimizer step with both readers, without mixing Python packages."""
++from pathlib import Path
++import json
++import subprocess
++import sys
++import torch
++root=Path(__file__).resolve().parents[1]
++directory=root/'reports/compatibility';directory.mkdir(parents=True,exist_ok=True)
++new=directory/'chromatic-legacy-resumed.pt'
++subprocess.run([sys.executable,'-m','zero','train','--legacy','--data',str(root/'runs/bootstrap/teacher.jsonl'),
++                '--output',str(new),'--resume',str(root/'runs/bootstrap/model.pt'),'--steps','201',
++                '--batch-size','32','--seed','2026','--save-every','50'],cwd=root,check=True,capture_output=True,text=True)
++sys.path.insert(0,str(root/'baseline/source'))
++from zero.train import train
++old=directory/'v0-source-resumed.pt'
++train([root/'runs/bootstrap/teacher.jsonl'],old,steps=201,batch_size=32,seed=2026,save_every=50,
++      resume=root/'runs/bootstrap/model.pt')
++def equal(a,b):
++    if isinstance(a,torch.Tensor):return torch.equal(a,b)
++    if isinstance(a,dict):return a.keys()==b.keys() and all(equal(a[k],b[k]) for k in a)
++    if isinstance(a,(tuple,list)):return len(a)==len(b) and all(equal(x,y) for x,y in zip(a,b))
++    return a==b
++a=torch.load(old,weights_only=False,map_location='cpu');b=torch.load(new,weights_only=False,map_location='cpu')
++result={'original_format':a['format'],'new_format':b['format'],'step':b['step'],
++        'model_optimizer_sampler_equal':all(equal(a[k],b[k]) for k in ('model','optimizer','generator'))}
++(directory/'result.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
++print(json.dumps(result,indent=2))
++if not result['model_optimizer_sampler_equal']:raise SystemExit('legacy continuation differs')
+--- a/tools/mutation.py
++++ b/tools/mutation.py
+@@ -0,0 +1,16 @@
++import argparse
++import json
++from pathlib import Path
++import subprocess
++import sys
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
++from zero.data import atomic_json
++if __name__=='__main__':
++    p=argparse.ArgumentParser();p.add_argument('--executable',required=True);p.add_argument('--output',required=True)
++    args=p.parse_args();path=Path(args.executable).resolve()
++    result=subprocess.run([str(path)],cwd=path.parent,capture_output=True,text=True,timeout=30)
++    caught=result.returncode!=0 and 'WDL child-to-parent sign inversion' in result.stderr
++    report={'mutation':'remove the single child-to-parent value sign inversion',
++            'caught_by_regression':caught,'returncode':result.returncode,'stdout':result.stdout,'stderr':result.stderr}
++    atomic_json(args.output,report);print(json.dumps(report,indent=2))
++    if not caught:raise SystemExit('sign mutation escaped regression')
+--- a/tools/native_bench.cpp
++++ b/tools/native_bench.cpp
+@@ -0,0 +1,57 @@
++#include "zero/search.hpp"
++#include "zero/profile.hpp"
++#include <iomanip>
++#include <iostream>
++#ifdef _WIN32
++#define NOMINMAX
++#include <windows.h>
++#include <psapi.h>
++#endif
++using namespace zero;
++int main(int argc,char** argv){try {
++#ifdef _WIN32
++    if(!SetProcessAffinityMask(GetCurrentProcess(),DWORD_PTR(1)))throw std::runtime_error("cannot pin benchmark to CPU 0");
++#endif
++    if(argc<2)throw std::runtime_error("native_bench MODEL [EVALS=1000] [SIMULATIONS=128]");
++    int evals=argc>2?std::stoi(argv[2]):1000,sims=argc>3?std::stoi(argv[3]):128;
++    if(evals<1||evals>100000||sims<1||sims>100000)throw std::runtime_error("invalid benchmark budget");
++    Network net;net.load(argv[1]);
++#ifndef CHROMATIC_BASELINE
++    if(argc>4)net.set_backend(std::string(argv[4])=="scalar"?InferenceBackend::Scalar:InferenceBackend::SIMD);
++    if(argc>5)net.set_sparse(std::string(argv[5])!="full");
++#endif
++    const char* fens[]={START_FEN,
++      "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1",
++      "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 0 1",
++      "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPP1NnPP/RNBQK2R w KQ - 1 8"};
++    std::vector<Board> boards;for(auto f:fens)boards.push_back(Board::from_fen(f));
++    double checksum=0;for(int i=0;i<16;++i)checksum+=net.evaluate(boards[i%4]).wdl[0];
++    auto start=std::chrono::steady_clock::now();
++    for(int i=0;i<evals;++i){auto e=net.evaluate(boards[i%4]);checksum+=e.policy[i%ACTIONS]+e.wdl[0];}
++    double inference=std::chrono::duration<double>(std::chrono::steady_clock::now()-start).count();
++#ifndef CHROMATIC_BASELINE
++    std::vector<std::vector<Move>> legal;for(auto& board:boards)legal.push_back(board.legal());
++    Network::Workspace workspace;start=std::chrono::steady_clock::now();
++    for(int i=0;i<evals;++i){auto e=net.evaluate_legal(boards[i%4],legal[i%4],workspace);checksum+=e.wdl[0];}
++    double legal_inference=std::chrono::duration<double>(std::chrono::steady_clock::now()-start).count();
++#endif
++    std::atomic<bool> stop=false;SearchLimits limits;limits.simulations=sims;limits.seed=2026;
++    profile::reset();profile::active=true;start=std::chrono::steady_clock::now();
++    int nodes=0;for(auto& b:boards){auto r=search(b,net,limits,stop);nodes+=r.simulations;checksum+=r.value;}
++    double search_time=std::chrono::duration<double>(std::chrono::steady_clock::now()-start).count();profile::active=false;
++    std::cout<<std::setprecision(12)<<"{\"affinity_mask\":1,\"evaluations\":"<<evals<<",\"simulations\":"<<nodes<<",\"positions\":4,\"inference_seconds\":"<<inference
++      <<",\"mean_inference_us\":"<<inference*1e6/evals<<",\"evaluations_per_second\":"<<evals/inference
++      <<",\"search_seconds\":"<<search_time<<",\"nodes_per_second\":"<<nodes/search_time
++      <<",\"search_neural_calls\":"<<profile::neural_calls<<",\"search_neural_seconds\":"<<profile::neural_ns*1e-9
++      <<",\"search_overhead_fraction\":"<<(search_time-profile::neural_ns*1e-9)/search_time
++      <<",\"movegen_seconds\":"<<profile::movegen_ns*1e-9<<",\"feature_seconds\":"<<profile::feature_ns*1e-9<<",\"peak_working_set_bytes\":";
++#ifdef _WIN32
++    PROCESS_MEMORY_COUNTERS pmc{};if(GetProcessMemoryInfo(GetCurrentProcess(),&pmc,sizeof(pmc)))std::cout<<pmc.PeakWorkingSetSize;else std::cout<<"null";
++#else
++    std::cout<<"null";
++#endif
++#ifndef CHROMATIC_BASELINE
++    std::cout<<",\"legal_mean_inference_us\":"<<legal_inference*1e6/evals<<",\"legal_evaluations_per_second\":"<<evals/legal_inference;
++#endif
++    std::cout<<",\"checksum\":"<<checksum<<"}\n";return 0;
++}catch(const std::exception& e){std::cerr<<e.what()<<'\n';return 1;}}
+--- a/tools/scaling.py
++++ b/tools/scaling.py
+@@ -0,0 +1,33 @@
++"""Two bounded CPU residual-MLP configurations; no strength claim from model size."""
++import argparse
++import json
++from pathlib import Path
++import sys
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
++from zero.train import train
++from zero.verify import verify
++from zero.data import atomic_json
++from bench import benchmark
++
++if __name__=='__main__':
++    p=argparse.ArgumentParser();p.add_argument('--engine',required=True);p.add_argument('--bench',required=True)
++    p.add_argument('--data',required=True);p.add_argument('--output',required=True);p.add_argument('--steps',type=int,default=200)
++    args=p.parse_args();root=Path(args.output);reports={}
++    if not 1<=args.steps<=1000:raise ValueError('scaling experiment must be bounded to 1..1000 steps')
++    for name,width,blocks in [('tiny',64,4),('small',96,6)]:
++        directory=root/name;directory.mkdir(parents=True,exist_ok=True);model=directory/'model.pt'
++        training=train([args.data],model,steps=args.steps,batch_size=32,save_every=100,
++                       width=width,blocks=blocks,seed=2026,validation_fraction=.15)
++        variants={}
++        for backend in ('Scalar','SIMD'):
++            parity=verify(args.engine,model,directory/(backend.lower()+'-parity.json'),positions=100,backend=backend)
++            timing=benchmark(args.bench,model.with_suffix('.zero'),directory/(backend.lower()+'-bench.json'),
++                             repeats=3,evaluations=1000,simulations=128,backend=backend.lower())
++            variants[backend]={'parity':parity,'medians':timing['medians']}
++        reports[name]={'architecture':'residual_mlp','width':width,'residual_blocks':blocks,
++                       'training':training,'inference':variants,'strength_evidence':'not inferred from size or loss'}
++    atomic_json(root/'comparison.json',reports)
++    print(json.dumps({key:{'width':r['width'],'blocks':r['residual_blocks'],
++                          'scalar_nps':r['inference']['Scalar']['medians']['nodes_per_second'],
++                          'simd_nps':r['inference']['SIMD']['medians']['nodes_per_second'],
++                          'validation':r['training']['final']['validation']} for key,r in reports.items()},indent=2))
+--- a/tools/tactics.py
++++ b/tools/tactics.py
+@@ -0,0 +1,78 @@
++"""Small independently proved suite. Accuracy is not an Elo estimate."""
++import argparse
++import json
++from pathlib import Path
++import sys
++import time
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
++import chess
++from zero.encoding import outcome
++from zero.native import Native
++from zero.data import atomic_json
++from zero.checkpoint import digest
++
++def solutions(board,plies):
++    cache={};nodes=0
++    def forced(b,depth,attacker):
++        nonlocal nodes
++        nodes+=1
++        if nodes>250000:raise RuntimeError('oracle node budget exceeded')
++        if b.is_checkmate():return b.turn!=attacker
++        if depth==0 or outcome(b):return False
++        key=(b.board_fen(),b.turn,depth,attacker)
++        if key in cache:return cache[key]
++        moves=list(b.legal_moves);moves.sort(key=lambda m:b.gives_check(m),reverse=True)
++        result=b.turn!=attacker
++        for move in moves:
++            b.push(move);win=forced(b,depth-1,attacker);b.pop()
++            if b.turn==attacker and win:result=True;break
++            if b.turn!=attacker and not win:result=False;break
++        cache[key]=result;return result
++    attacker=board.turn
++    if plies>1 and forced(board,plies-2,attacker):raise AssertionError('mate depth is not minimal')
++    moves=[]
++    for move in list(board.legal_moves):
++        board.push(move);yes=forced(board,plies-1,attacker);board.pop()
++        if yes:moves.append(move.uci())
++    return sorted(moves),nodes
++
++def verify_case(case):
++    board=chess.Board(case['fen'])
++    if not board.is_valid():raise AssertionError('invalid tactical FEN: '+case['id'])
++    for text in case.get('moves',[]):board.push_uci(text)
++    if case['oracle']=='mate':
++        expected,nodes=solutions(board,case['plies'])
++        if set(expected)!=set(case['expected']):raise AssertionError(f"{case['id']} expected {expected}, provided {case['expected']}")
++    elif case['oracle']=='only_legal_capture':
++        legal=list(board.legal_moves);nodes=1
++        if len(legal)!=1 or not board.is_capture(legal[0]) or [legal[0].uci()]!=case['expected']:
++            raise AssertionError('not a forced legal capture')
++    else:
++        nodes=1
++        if not board.is_repetition(3) or outcome(board).winner is not None:raise AssertionError('not a repeated draw')
++    return board,nodes
++
++def tactics(executable,model,suite,output,milliseconds=25,nodes=None,options=None):
++    cases=json.loads(Path(suite).read_text(encoding='utf-8'))['cases']
++    verified=[verify_case(case) for case in cases];rows=[]
++    with Native(executable,model) as engine:
++        if options:engine.configure(options)
++        for case,(board,proof_nodes) in zip(cases,verified):
++            result=engine.play(board,nodes=nodes) if nodes else engine.play(board,milliseconds=milliseconds)
++            passed=result['bestmove'] in case['expected']
++            rows.append({'id':case['id'],'category':case['category'],'passed':passed,
++                         'chosen':result['bestmove'],'expected':case['expected'],
++                         'elapsed_seconds':result['elapsed_seconds'],'visits':result['info'].get('nodes'),
++                         'oracle_nodes':proof_nodes,'failure_category':None if passed else case['category']})
++    report={'suite_sha256':digest(suite),'engine_sha256':digest(executable),'model_sha256':digest(model) if model else None,
++            'budget':{'milliseconds':milliseconds if not nodes else None,'nodes':nodes},'options':options or {},
++            'correct':sum(row['passed'] for row in rows),'total':len(rows),
++            'accuracy':sum(row['passed'] for row in rows)/len(rows),'cases':rows}
++    atomic_json(output,report);return report
++
++if __name__=='__main__':
++    p=argparse.ArgumentParser();p.add_argument('--executable',required=True);p.add_argument('--model')
++    p.add_argument('--suite',default='benchmarks/tactics.json');p.add_argument('--output',required=True)
++    p.add_argument('--milliseconds',type=int,default=25);p.add_argument('--nodes',type=int);p.add_argument('--options',default='{}')
++    args=vars(p.parse_args());args['options']=json.loads(args['options'])
++    print(json.dumps(tactics(**args),indent=2))
+--- a/validate.ps1
++++ b/validate.ps1
+@@ -1,4 +1,4 @@
+-param([string]$Python = $env:ZERO_PYTHON)
++param([string]$Python = $env:ZERO_PYTHON,[switch]$SkipBuild)
+ $ErrorActionPreference = 'Stop'
+ if (-not $Python) {
+     foreach ($item in @('.venv\Scripts\python.exe', '..\..\work\.venv\Scripts\python.exe')) {
+@@ -10,10 +10,16 @@
+ $Python = (Resolve-Path -LiteralPath $Python).Path
+ Push-Location $PSScriptRoot
+ try {
+-    & (Join-Path $PSScriptRoot 'build.cmd')
+-    if ($LASTEXITCODE) { throw 'C++ build failed' }
++    if (-not $SkipBuild) {
++        & (Join-Path $PSScriptRoot 'build.cmd')
++        if ($LASTEXITCODE) { throw 'C++ build failed' }
++    }
+     ctest --test-dir build --output-on-failure
+     if ($LASTEXITCODE) { throw 'Core tests failed' }
+     & $Python tests\integration.py --engine build\project_zero.exe --report validation\integration.json
+     if ($LASTEXITCODE) { throw 'Integration tests failed' }
++    foreach ($item in @('reliability','arena_tests','safety')) {
++        & $Python "tests\$item.py" --engine build\project_zero.exe --report "reports\release-$item.json"
++        if ($LASTEXITCODE) { throw "$item tests failed" }
++    }
+ } finally { Pop-Location }
+--- a/zero/__main__.py
++++ b/zero/__main__.py
+@@ -1,13 +1,14 @@
+ import argparse
+ import json
+ from pathlib import Path
+-from .train import initialize, train
++from .train import initialize, train, legacy_train
+ from .model import load_model
+ from .selfplay import selfplay
+ from .bootstrap import bootstrap
+ from .arena import arena
+ from .loop import loop
+ from .verify import verify
++from .champion import rollback
+ 
+ 
+ def main():
+@@ -22,6 +23,7 @@
+     p.add_argument('--executable', required=True); p.add_argument('--checkpoint', required=True)
+     p.add_argument('--output', required=True); p.add_argument('--positions', type=int, default=100)
+     p.add_argument('--seed', type=int, default=2026); p.add_argument('--tolerance', type=float, default=2e-5)
++    p.add_argument('--backend',choices=['Scalar','SIMD'],default='Scalar')
+     p = commands.add_parser('bootstrap')
+     p.add_argument('--teacher', required=True); p.add_argument('--output', required=True)
+     p.add_argument('--positions', type=int, default=128); p.add_argument('--nodes', type=int, default=2000)
+@@ -33,6 +35,9 @@
+     source = p.add_mutually_exclusive_group(); source.add_argument('--resume'); source.add_argument('--init')
+     p.add_argument('--width', type=int, default=64); p.add_argument('--blocks', type=int, default=2)
+     p.add_argument('--save-every', type=int, default=100); p.add_argument('--device', default='cpu')
++    p.add_argument('--capacity',type=int,default=10000);p.add_argument('--recent-fraction',type=float,default=.75)
++    p.add_argument('--validation-fraction',type=float,default=.15);p.add_argument('--optimizer-name',choices=['adamw','sgd'],default='adamw')
++    p.add_argument('--legacy',action='store_true',help='explicit v0.1 optimizer continuation')
+     p = commands.add_parser('selfplay')
+     p.add_argument('--executable', required=True); p.add_argument('--model'); p.add_argument('--output', required=True)
+     p.add_argument('--games', type=int, default=8); p.add_argument('--simulations', type=int, default=128)
+@@ -40,12 +45,17 @@
+     import chess
+     p.add_argument('--start-fen', default=chess.STARTING_FEN); p.add_argument('--noise', type=float, default=0.25)
+     p.add_argument('--temperature-plies', type=int, default=30)
++    p.add_argument('--temperature',type=float,default=1);p.add_argument('--late-temperature',type=float,default=0)
++    p.add_argument('--opening-plies',type=int,default=0);p.add_argument('--resume-truncated',action='store_true')
+     p = commands.add_parser('arena')
+     p.add_argument('--executable', required=True); p.add_argument('--candidate', required=True)
+     p.add_argument('--incumbent', required=True); p.add_argument('--output', required=True)
+     p.add_argument('--pairs', type=int, default=8); p.add_argument('--simulations', type=int, default=128)
+     p.add_argument('--max-plies', type=int, default=512); p.add_argument('--seed', type=int, default=1)
+     p.add_argument('--threshold', type=float, default=0.55); p.add_argument('--confidence', type=float, default=0.95)
++    p.add_argument('--candidate-executable');p.add_argument('--incumbent-executable');p.add_argument('--milliseconds',type=int)
++    p.add_argument('--opening-suite');p.add_argument('--candidate-options',type=json.loads);p.add_argument('--incumbent-options',type=json.loads)
++    p.add_argument('--sprt',action='store_true')
+     p = commands.add_parser('loop')
+     p.add_argument('--executable', required=True); p.add_argument('--initial', required=True)
+     p.add_argument('--output', required=True); p.add_argument('--iterations', type=int, default=1)
+@@ -54,6 +64,9 @@
+     p.add_argument('--pairs', type=int, default=8); p.add_argument('--max-plies', type=int, default=512)
+     p.add_argument('--seed', type=int, default=1); p.add_argument('--replay-generations', type=int, default=4)
+     p.add_argument('--threshold', type=float, default=0.55); p.add_argument('--start-fen')
++    p.add_argument('--engine-options',type=json.loads);p.add_argument('--opening-plies',type=int,default=6)
++    p.add_argument('--arena-milliseconds',type=int);p.add_argument('--opening-suite')
++    p=commands.add_parser('rollback');p.add_argument('--output',required=True);p.add_argument('--steps',type=int,default=1)
+     args = vars(parser.parse_args())
+     command = args.pop('command')
+     if command == 'init':
+@@ -67,9 +80,12 @@
+         paths = [path for pattern in args.pop('data') for path in sorted(glob.glob(pattern))]
+         if not paths:
+             raise ValueError('no data files matched')
+-        result = train(paths, **args)
++        legacy=args.pop('legacy')
++        if legacy:
++            for name in ('capacity','recent_fraction','validation_fraction','optimizer_name'):args.pop(name)
++        result = (legacy_train if legacy else train)(paths, **args)
+     else:
+-        result = {'selfplay': selfplay, 'bootstrap': bootstrap, 'arena': arena, 'loop': loop, 'verify': verify}[command](**args)
++        result = {'selfplay': selfplay, 'bootstrap': bootstrap, 'arena': arena, 'loop': loop, 'verify': verify,'rollback':rollback}[command](**args)
+     print(json.dumps(result, ensure_ascii=False, indent=2))
+ 
+ 
+--- a/zero/arena.py
++++ b/zero/arena.py
+@@ -8,7 +8,7 @@
+ from .native import Native
+ 
+ 
+-def arena(executable, candidate, incumbent, output, pairs=8, simulations=128,
++def legacy_arena(executable, candidate, incumbent, output, pairs=8, simulations=128,
+           max_plies=512, seed=1, threshold=0.55, confidence=0.95,
+           opening_fens=None):
+     """Paired colors; a conservative Hoeffding bound over independent opening pairs."""
+@@ -58,3 +58,6 @@
+               'simulations': simulations, 'games': games}
+     atomic_json(output, report)
+     return report
++
++
++from .match import arena
+--- a/zero/champion.py
++++ b/zero/champion.py
+@@ -0,0 +1,16 @@
++import json
++from pathlib import Path
++from .checkpoint import digest
++from .data import atomic_json
++
++def rollback(output,steps=1):
++    root=Path(output);path=root/'state.json';state=json.loads(path.read_text(encoding='utf-8'))
++    history=state.get('history',[])
++    if steps<1 or steps>len(history):raise ValueError('not enough verified promotion history to roll back')
++    target=history[-steps]
++    checkpoint=root/target['previous_champion']
++    if not checkpoint.resolve().is_relative_to(root.resolve()):raise ValueError('champion path escaped run directory')
++    if digest(checkpoint)!=target['previous_sha256']:raise ValueError('rollback checkpoint checksum mismatch')
++    state.setdefault('rollbacks',[]).append({'from':state['champion'],'to':target['previous_champion'],'promotions':steps})
++    state['champion']=target['previous_champion'];state['champion_sha256']=target['previous_sha256']
++    state['history']=history[:-steps];atomic_json(path,state);return state
+--- a/zero/checkpoint.py
++++ b/zero/checkpoint.py
+@@ -7,7 +7,7 @@
+ import numpy as np
+ import torch
+ 
+-FORMAT = 1
++FORMAT = 2
+ 
+ 
+ def digest(path):
+@@ -37,6 +37,7 @@
+     path.parent.mkdir(parents=True, exist_ok=True)
+     temp = path.with_suffix(path.suffix + '.tmp')
+     state = dict(state, format=FORMAT, rng=rng_state())
++    _validate(state)
+     with temp.open('wb') as f:
+         torch.save(state, f)
+         f.flush()
+@@ -58,12 +59,20 @@
+ def _read(path):
+     # Full optimizer + Python/NumPy RNG require weights_only=False. Local trusted files only.
+     state = torch.load(path, map_location='cpu', weights_only=False)
++    _validate(state)
++    return state
++
++
++def _validate(state):
+     required = {'format', 'config', 'model', 'optimizer', 'rng', 'step', 'generator', 'dataset'}
+-    if not isinstance(state, dict) or not required <= state.keys() or state['format'] != FORMAT:
++    if not isinstance(state, dict) or not required <= state.keys() or state['format'] not in (1,FORMAT):
+         raise ValueError('invalid checkpoint schema')
+     if any(not torch.isfinite(t).all() for t in state['model'].values()):
+         raise ValueError('nonfinite checkpoint weights')
+-    return state
++    if state['optimizer'] is not None:
++        for values in state['optimizer'].get('state',{}).values():
++            for value in values.values():
++                if isinstance(value,torch.Tensor) and not torch.isfinite(value).all():raise ValueError('nonfinite optimizer state')
+ 
+ 
+ def load(path):
+--- a/zero/generate.py
++++ b/zero/generate.py
+@@ -0,0 +1,118 @@
++"""Bounded teacher-free games with durable unfinished trajectories."""
++import base64
++import hashlib
++import json
++from pathlib import Path
++import random
++import time
++import zlib
++import chess
++from .checkpoint import digest
++from .data import atomic_json,position_record,write_records
++from .encoding import action,features,outcome,restore_board
++from .native import Native
++
++
++def selfplay(executable,model,output,games=8,simulations=128,seed=1,max_plies=512,
++             start_fen=chess.STARTING_FEN,noise=.25,temperature_plies=30,
++             temperature=1.,late_temperature=0.,opening_plies=0,starting_fens=None,
++             engine_options=None,resume_truncated=False,save_every_plies=32):
++    if games<1 or games>10000 or simulations<1 or not 1<=max_plies<=4096 or not 0<=noise<=1 or save_every_plies<1:
++        raise ValueError('invalid bounded selfplay settings')
++    if not 0<=opening_plies<=64 or min(temperature,late_temperature)<0:raise ValueError('invalid exploration settings')
++    output=Path(output);output.mkdir(parents=True,exist_ok=True);pending=output/'pending';pending.mkdir(exist_ok=True)
++    if model is None:
++        adjacent=Path(executable).resolve().parent/'default.zero'
++        if adjacent.exists():model=adjacent
++    model_hash=digest(model) if model else 'uniform-baseline'
++    settings={'format':2,'model':model_hash,'executable':digest(executable),'simulations':simulations,'seed':seed,
++              'max_plies':max_plies,'start_fen':start_fen,'starting_fens':starting_fens,'noise':noise,
++              'temperature_plies':temperature_plies,'temperature':temperature,'late_temperature':late_temperature,
++              'opening_plies':opening_plies,'engine_options':engine_options or {}}
++    manifest=output/'settings.json'
++    if manifest.exists():
++        old=json.loads(manifest.read_text(encoding='utf-8'))
++        same=dict(old,max_plies=max_plies)==settings
++        if not (old==settings or (resume_truncated and same and old['max_plies']<=max_plies)):
++            raise ValueError('selfplay output belongs to different settings/model')
++    atomic_json(manifest,settings)
++    identity_settings={k:v for k,v in settings.items() if k!='max_plies'}
++    run_id=hashlib.sha256(json.dumps(identity_settings,sort_keys=True).encode()).hexdigest()
++    accepted=truncated=records_count=draws=generated=0;started=time.perf_counter()
++    with Native(executable,model) as engine:
++        if engine_options:engine.configure(engine_options)
++        for game in range(games):
++            path=output/f'game_{game:06d}.jsonl';meta=path.with_suffix('.json');partial=pending/path.name
++            info=json.loads(meta.read_text(encoding='utf-8')) if meta.exists() else None
++            reuse=info is not None and info.get('accepted') is not None and path.exists() and (info['accepted'] or not resume_truncated)
++            if reuse:
++                if info['sha256']!=digest(path):raise ValueError('selfplay shard checksum mismatch')
++            else:
++                records=[];rng=random.Random(seed+game*1000003)
++                if partial.exists():
++                    records=[json.loads(line) for line in partial.read_text(encoding='utf-8').splitlines()]
++                    if any(row['game_id']!=run_id+':'+str(game) for row in records):raise ValueError('pending trajectory provenance mismatch')
++                if records:
++                    board=restore_board(records[-1]);board.push_uci(records[-1]['selected_uci'])
++                    initial_opening=len(records[0]['moves'])
++                else:
++                    board=chess.Board(rng.choice(starting_fens) if starting_fens else start_fen)
++                    if not board.is_valid() or outcome(board):raise ValueError('selfplay start must be valid and nonterminal')
++                    for _ in range(opening_plies):
++                        moves=list(board.legal_moves);rng.shuffle(moves)
++                        for move in moves:
++                            board.push(move)
++                            if not outcome(board):break
++                            board.pop()
++                        else:break
++                    initial_opening=len(board.move_stack)
++                def durable_progress(reason):
++                    write_records(partial,records)
++                    progress={'game':game,'accepted':None,'records':0,'plies':len(records),'termination':reason,
++                              'moves':[m.uci() for m in board.move_stack],'pending_sha256':digest(partial)}
++                    atomic_json(meta,progress)
++                for ply in range(len(records),max_plies):
++                    if outcome(board):break
++                    engine.position(board);search_seed=seed+game*1000003+ply
++                    try:result=engine.search(simulations,search_seed,noise,temperature if ply<temperature_plies else late_temperature)
++                    except Exception:
++                        durable_progress('ENGINE_ERROR');raise
++                    if result['terminal']:raise RuntimeError('C++ and Python termination disagreement')
++                    move=chess.Move.from_uci(result['bestmove'])
++                    if move not in board.legal_moves:raise RuntimeError('native illegal selfplay move')
++                    total=sum(item['n'] for item in result['visits'])
++                    if total!=result['simulations'] or total<1:raise RuntimeError('invalid MCTS visits')
++                    policy=[[item['action'],item['n']/total] for item in result['visits'] if item['n']]
++                    record=position_record(board,policy,'selfplay',schema=2,model=model_hash,game=game,
++                        game_id=run_id+':'+str(game),simulations=total,search_budget=simulations,
++                        random_seed=search_seed,selected_action=action(move),selected_uci=move.uci(),
++                        legal_actions=sorted(action(m) for m in board.legal_moves),
++                        encoded_position=base64.b64encode(zlib.compress(features(board).astype('<f4').tobytes())).decode('ascii'))
++                    records.append(record);board.push(move);generated+=1
++                    if len(records)%save_every_plies==0:durable_progress('IN_PROGRESS')
++                result=outcome(board)
++                if result:
++                    for row in records:
++                        turn=restore_board(row).turn
++                        row['wdl']=[0,1,0] if result.winner is None else [1,0,0] if result.winner==turn else [0,0,1]
++                        row['result']=result.result();row['termination']=result.termination.name
++                    kept=records
++                else:
++                    # Keep policy targets durably, without fabricating an outcome.
++                    durable_progress('TRUNCATED');kept=[]
++                write_records(path,kept)
++                info={'game':game,'accepted':result is not None,'records':len(kept),'plies':len(records),
++                      'opening_plies':initial_opening,'result':result.result() if result else '*',
++                      'termination':result.termination.name if result else 'TRUNCATED',
++                      'moves':[m.uci() for m in board.move_stack],'sha256':digest(path)}
++                atomic_json(meta,info)
++            accepted+=bool(info['accepted']);truncated+=not info['accepted'];records_count+=info['records']
++            draws+=bool(info['accepted'] and info['result']=='1/2-1/2')
++    elapsed=time.perf_counter()-started
++    summary={'games':games,'accepted':accepted,'truncated':truncated,'records':records_count}
++    atomic_json(output/'summary.json',summary)
++    atomic_json(output/'telemetry.json',{'seconds':elapsed,'new_positions_generated':generated,
++                'new_positions_per_minute':generated*60/elapsed,'completed_draws':draws,
++                'draw_rate_of_completed':draws/accepted if accepted else None,'completion_rate':accepted/games,
++                'crashes_observed':0,'unfinished_trajectories_directory':'pending'})
++    return summary
+--- a/zero/loop.py
++++ b/zero/loop.py
+@@ -12,7 +12,8 @@
+ 
+ def loop(executable, initial, output, iterations=1, games=8, simulations=128,
+          steps=200, batch_size=64, pairs=8, max_plies=512, seed=1,
+-         replay_generations=4, threshold=0.55, start_fen=None, opening_fens=None):
++         replay_generations=4, threshold=0.55, start_fen=None, opening_fens=None,
++         engine_options=None,opening_plies=6,arena_milliseconds=None,opening_suite=None):
+     if iterations < 1 or replay_generations < 1:
+         raise ValueError('positive iterations and replay_generations required')
+     root = Path(output)
+@@ -21,7 +22,9 @@
+                 'simulations': simulations, 'steps': steps, 'batch_size': batch_size,
+                 'pairs': pairs, 'max_plies': max_plies, 'seed': seed,
+                 'replay_generations': replay_generations, 'threshold': threshold,
+-                'start_fen': start_fen, 'opening_fens': opening_fens}
++                'start_fen': start_fen, 'opening_fens': opening_fens,'format':2,
++                'engine_options':engine_options or {},'opening_plies':opening_plies,
++                'arena_milliseconds':arena_milliseconds,'opening_suite':digest(opening_suite) if opening_suite else None}
+     path = root / 'state.json'
+     if path.exists():
+         state = json.loads(path.read_text(encoding='utf-8'))
+@@ -33,16 +36,19 @@
+         initial_copy = root / 'initial.pt'
+         shutil.copyfile(actual, initial_copy)
+         model.export(root / 'initial.zero')
+-        state = {'settings': settings, 'completed': 0, 'champion': 'initial.pt', 'reports': []}
++        state = {'settings': settings, 'completed': 0, 'champion': 'initial.pt', 'reports': [],
++                 'champion_sha256':digest(initial_copy),'history':[],'rollbacks':[]}
+         atomic_json(path, state)
+     for iteration in range(state['completed'], iterations):
+         stage = root / f'generation_{iteration:04d}'
+         stage.mkdir(exist_ok=True)
+         champion = root / state['champion']
++        if digest(champion)!=state['champion_sha256']:raise ValueError('champion checkpoint checksum mismatch')
+         model, _, _ = load_model(champion)
+         champion_zero = stage / 'source.zero'
+         model.export(champion_zero)
+         kwargs = {'start_fen': start_fen} if start_fen else {}
++        kwargs.update(engine_options=engine_options,opening_plies=0 if start_fen else opening_plies)
+         selfplay(executable, champion_zero, stage / 'selfplay', games=games,
+                  simulations=simulations, seed=seed + iteration * 10000019,
+                  max_plies=max_plies, **kwargs)
+@@ -63,9 +69,14 @@
+         else:
+             report = arena(executable, candidate.with_suffix('.zero'), champion_zero, gate,
+                            pairs=pairs, simulations=simulations, max_plies=max_plies,
+-                           seed=seed + iteration, threshold=threshold, opening_fens=opening_fens)
++                           seed=seed + iteration, threshold=threshold, opening_fens=opening_fens,
++                           candidate_options=engine_options,incumbent_options=engine_options,
++                           milliseconds=arena_milliseconds,opening_suite=opening_suite)
+         if report['promote']:
++            state['history'].append({'previous_champion':state['champion'],'previous_sha256':state['champion_sha256'],
++                                     'promoted':candidate.relative_to(root).as_posix(),'arena':gate.relative_to(root).as_posix()})
+             state['champion'] = candidate.relative_to(root).as_posix()
++            state['champion_sha256']=digest(candidate)
+         state['reports'].append({'iteration': iteration, 'arena': gate.relative_to(root).as_posix(),
+                                  'promoted': report['promote']})
+         state['completed'] = iteration + 1
+--- a/zero/match.py
++++ b/zero/match.py
+@@ -0,0 +1,149 @@
++"""Paired UCI matches with honest incomplete results and conservative promotion."""
++import json
++import math
++import os
++from pathlib import Path
++import random
++import chess
++import chess.pgn
++from .checkpoint import digest
++from .data import atomic_json
++from .encoding import outcome
++from .native import Native
++
++
++def opening_identity(game,index):
++    opening=game.get('opening')
++    if opening is None:return 'fixture-pair:'+str(index//2)
++    return json.dumps({'fen':opening['fen'],'moves':opening.get('moves',[])},sort_keys=True)
++
++
++def statistics(games,confidence=.95,threshold=.55,anytime=False):
++    complete=bool(games) and all(game['score'] is not None for game in games)
++    pairs=len(games)//2
++    if not complete or len(games)%2:
++        return {'score':None,'lower_bound':None,'upper_bound':None,'elo':None,'elo_interval':None,
++                'decision':'insufficient_evidence','promote':False,'complete':False}
++    score=sum(game['score'] for game in games)/len(games)
++    clusters={}
++    for index in range(0,len(games),2):
++        clusters.setdefault(opening_identity(games[index],index),[]).append((games[index]['score']+games[index+1]['score'])/2)
++    # Repeating a deterministic opening must not manufacture independent evidence.
++    squared_weights=sum((len(values)/pairs)**2 for values in clusters.values())
++    alpha=1-confidence
++    if anytime:alpha/=pairs*(pairs+1) # union bound over all stopping times
++    margin=math.sqrt(math.log(2/alpha)*squared_weights/2)
++    lower=max(0.,score-margin);upper=min(1.,score+margin)
++    def elo(value):return 400*math.log10(value/(1-value)) if 0<value<1 else None
++    decision='promote' if lower>=threshold else 'demonstrated_inferiority' if upper<.5 else 'insufficient_evidence'
++    return {'score':score,'lower_bound':lower,'upper_bound':upper,'elo':elo(score),
++            'elo_interval':{'lower':elo(lower),'upper':elo(upper),'unbounded_lower':lower==0,'unbounded_upper':upper==1},
++            'decision':decision,'promote':decision=='promote','complete':True,
++            'unique_opening_clusters':len(clusters),'effective_independent_units':1/squared_weights}
++
++
++def sprt_state(games,alpha=.05,beta=.05,p0=.5,p1=.65):
++    # Exact Bernoulli sign test on non-tied opening pairs, not a fractional-draw Elo SPRT.
++    wins=losses=0;seen=set()
++    for i in range(0,len(games)-1,2):
++        scores=[game['score'] for game in games[i:i+2]]
++        if None in scores:continue
++        identity=opening_identity(games[i],i)
++        if identity in seen:continue
++        seen.add(identity)
++        score=sum(scores)/2
++        wins+=score>.5;losses+=score<.5
++    llr=wins*math.log(p1/p0)+losses*math.log((1-p1)/(1-p0))
++    lower=math.log(beta/(1-alpha));upper=math.log((1-beta)/alpha)
++    return {'test':'non_tied_opening_pair_sign','p0':p0,'p1':p1,'pair_wins':wins,'pair_losses':losses,
++            'log_likelihood_ratio':llr,'lower':lower,'upper':upper,'unique_opening_clusters':len(seen),
++            'status':'accept_h1' if llr>=upper else 'accept_h0' if llr<=lower else 'continue'}
++
++
++def write_pgn(path,games,candidate_name,incumbent_name):
++    text=[]
++    for record in games:
++        game=chess.pgn.Game();game.setup(chess.Board(record['root_fen']));node=game
++        for move in record['moves']:node=node.add_variation(chess.Move.from_uci(move))
++        game.headers.update(Event='CHROMATIC bounded arena',Round=str(record['pair']+1),
++                            White=candidate_name if record['candidate_white'] else incumbent_name,
++                            Black=incumbent_name if record['candidate_white'] else candidate_name,
++                            Result=record['result'],Termination=record['termination'])
++        text.append(str(game))
++    path=Path(path);temporary=Path(str(path)+'.tmp')
++    with temporary.open('w',encoding='utf-8') as stream:
++        stream.write('\n\n'.join(text)+'\n');stream.flush();os.fsync(stream.fileno())
++    os.replace(temporary,path)
++
++
++def arena(executable,candidate,incumbent,output,pairs=8,simulations=128,max_plies=512,seed=1,
++          threshold=.55,confidence=.95,opening_fens=None,candidate_executable=None,incumbent_executable=None,
++          milliseconds=None,opening_suite=None,candidate_options=None,incumbent_options=None,sprt=False,affinity_mask=1):
++    if not 1<=pairs<=10000 or not 1<=max_plies<=4096 or not .5<=threshold<=1 or not 0<confidence<1:
++        raise ValueError('invalid bounded arena settings')
++    if milliseconds is not None and not 1<=milliseconds<=60000:raise ValueError('invalid time budget')
++    candidate_executable=candidate_executable or executable;incumbent_executable=incumbent_executable or executable
++    if opening_suite:
++        openings=json.loads(Path(opening_suite).read_text(encoding='utf-8'))['openings']
++    elif opening_fens:openings=[{'fen':fen,'moves':[]} for fen in opening_fens]
++    else:
++        rng=random.Random(seed);openings=[]
++        for _ in range(pairs):
++            board=chess.Board()
++            for _ in range(6):board.push(rng.choice(list(board.legal_moves)))
++            openings.append({'fen':board.root().fen(),'moves':[m.uci() for m in board.move_stack]})
++    if not openings:raise ValueError('empty opening suite')
++    settings={'format':2,'candidate_engine':digest(candidate_executable),'incumbent_engine':digest(incumbent_executable),
++              'candidate':digest(candidate) if candidate else None,'incumbent':digest(incumbent) if incumbent else None,
++              'pairs':pairs,'nodes':simulations if milliseconds is None else None,'milliseconds':milliseconds,
++              'max_plies':max_plies,'seed':seed,'openings':openings,'candidate_options':candidate_options or {},
++              'incumbent_options':incumbent_options or {},'confidence':confidence,'threshold':threshold,'sprt':sprt,'affinity_mask':affinity_mask}
++    output=Path(output);output.parent.mkdir(parents=True,exist_ok=True);progress=output.with_suffix('.progress.json')
++    if progress.exists():
++        previous=json.loads(progress.read_text(encoding='utf-8'))
++        if previous['settings']!=settings:raise ValueError('arena output belongs to different settings')
++        games=previous['games']
++    else:games=[]
++    with Native(candidate_executable,candidate) as challenger,Native(incumbent_executable,incumbent) as champion:
++        for engine in (challenger,champion):
++            if affinity_mask:engine.pin_cpu(affinity_mask)
++            if 'Threads' in engine.options:engine.configure({'Threads':1})
++        if candidate_options:challenger.configure(candidate_options)
++        if incumbent_options:champion.configure(incumbent_options)
++        for pair in range(pairs):
++            for candidate_white in (True,False):
++                index=pair*2+int(not candidate_white)
++                if index<len(games):continue
++                opening=openings[pair%len(openings)];board=chess.Board(opening['fen'])
++                for move in opening.get('moves',[]):board.push_uci(move)
++                if not board.is_valid() or outcome(board):raise ValueError('invalid or terminal arena opening')
++                times=[];visits=[];failure=None
++                for _ in range(max_plies):
++                    if outcome(board):break
++                    engine=challenger if board.turn==candidate_white else champion
++                    try:
++                        result=engine.play(board,milliseconds=milliseconds) if milliseconds is not None else engine.play(board,nodes=simulations)
++                        move=chess.Move.from_uci(result['bestmove'])
++                        if move not in board.legal_moves:raise RuntimeError('engine returned illegal move')
++                    except Exception as exc:failure=str(exc);break
++                    times.append(result['elapsed_seconds']);visits.append(result['info'].get('nodes'));board.push(move)
++                result=outcome(board)
++                score=None if result is None else .5 if result.winner is None else float(result.winner==candidate_white)
++                games.append({'pair':pair,'candidate_white':candidate_white,'score':score,
++                              'result':result.result() if result else '*','root_fen':board.root().fen(en_passant='fen'),
++                              'opening':opening,'moves':[m.uci() for m in board.move_stack],
++                              'termination':result.termination.name if result else 'ENGINE_ERROR' if failure else 'TRUNCATED',
++                              'error':failure,'move_seconds':times,'visits':visits})
++                atomic_json(progress,{'settings':settings,'games':games})
++                write_pgn(output.with_suffix('.pgn'),games,challenger.name,champion.name)
++            if sprt and sprt_state(games)['status']!='continue':break
++    stats=statistics(games,confidence,threshold,anytime=sprt)
++    if any(game['error'] for game in games):stats.update(decision='insufficient_evidence',promote=False)
++    report={**settings,**stats,'pairs':len(games)//2,'completed_games':sum(g['score'] is not None for g in games),
++            'confidence':confidence,'threshold':threshold,'simulations':simulations,'games':games,
++            'wdl':{'wins':sum(g['score']==1 for g in games),'draws':sum(g['score']==.5 for g in games),
++                   'losses':sum(g['score']==0 for g in games),'unfinished':sum(g['score'] is None for g in games)},
++            'engine_errors':sum(g['error'] is not None for g in games),
++            'sprt_state':sprt_state(games) if sprt else None,
++            'statistical_scope':'paired opening distribution; this small run is not a certified engine rating'}
++    atomic_json(output,report);return report
+--- a/zero/native.py
++++ b/zero/native.py
+@@ -4,6 +4,7 @@
+ import subprocess
+ import threading
+ import time
++import re
+ 
+ 
+ class Native:
+@@ -15,10 +16,17 @@
+         self.lines = queue.Queue()
+         self.reader = threading.Thread(target=self._read, daemon=True)
+         self.reader.start()
++        self.options=set()
++        self.name='unknown'
+         try:
+             self.send('uci')
+-            self.until(lambda s: s == 'uciok')
++            def handshake(line):
++                if line.startswith('option name '):self.options.add(line[12:].split(' type ',1)[0])
++                if line.startswith('id name '):self.name=line[8:]
++                return line=='uciok'
++            self.until(handshake)
+             if model:
++                if 'ModelFile' not in self.options:raise ValueError('engine does not support ModelFile')
+                 self.send('setoption name ModelFile value ' + str(Path(model).resolve()))
+             self.ready()
+         except BaseException:
+@@ -34,7 +42,7 @@
+         self.process.stdin.write(text + '\n')
+         self.process.stdin.flush()
+ 
+-    def until(self, predicate, timeout=None):
++    def until(self, predicate, timeout=None, errors=None):
+         deadline = time.monotonic() + (self.timeout if timeout is None else timeout)
+         while True:
+             left = deadline - time.monotonic()
+@@ -47,13 +55,16 @@
+             if line is None:
+                 raise RuntimeError('native engine exited: ' + str(self.process.poll()))
+             if line.startswith('info string error '):
+-                raise RuntimeError(line)
++                if errors is None:raise RuntimeError(line)
++                errors.append(line)
+             if predicate(line):
+                 return line
+ 
+     def ready(self):
+         self.send('isready')
+-        self.until(lambda s: s == 'readyok')
++        errors=[]
++        self.until(lambda s: s == 'readyok',errors=errors)
++        if errors:raise RuntimeError('; '.join(errors))
+ 
+     def position(self, board):
+         root = board.root().fen(en_passant='fen')
+@@ -69,6 +80,42 @@
+ 
+     def search(self, simulations=128, seed=1, noise=0.25, temperature=1.0):
+         return self.command(f'zero search {simulations} {seed} {noise} {temperature}')
++
++    def configure(self, options):
++        for name,value in options.items():
++            if name not in self.options:raise ValueError('unsupported UCI option: '+name)
++            if isinstance(value,bool):value=str(value).lower()
++            self.send(f'setoption name {name} value {value}')
++        self.ready()
++
++    def pin_cpu(self,mask=1):
++        import os
++        if os.name=='nt':
++            import ctypes
++            from ctypes import wintypes
++            kernel=ctypes.WinDLL('kernel32',use_last_error=True)
++            function=kernel.SetProcessAffinityMask
++            function.argtypes=[wintypes.HANDLE,ctypes.c_size_t];function.restype=wintypes.BOOL
++            if not function(int(self.process._handle),mask):raise ctypes.WinError(ctypes.get_last_error())
++        elif hasattr(os,'sched_setaffinity'):
++            os.sched_setaffinity(self.process.pid,{i for i in range(mask.bit_length()) if mask&(1<<i)})
++        else:raise RuntimeError('CPU affinity is unavailable')
++
++    def play(self, board, *, milliseconds=None, nodes=None):
++        if (milliseconds is None)==(nodes is None):raise ValueError('choose one UCI search budget')
++        self.position(board)
++        self.send(f'go movetime {milliseconds}' if milliseconds is not None else f'go nodes {nodes}')
++        info={};start=time.perf_counter()
++        def response(line):
++            if line.startswith('info '):
++                for field in ('nodes','time','nps'):
++                    match=re.search(r'\b'+field+r' (\d+)',line)
++                    if match:info[field]=int(match[1])
++            return line.startswith('bestmove ')
++        errors=[]
++        line=self.until(response,timeout=max(5,(milliseconds or 0)/1000+3),errors=errors)
++        if errors:raise RuntimeError('; '.join(errors))
++        return {'bestmove':line.split()[1],'elapsed_seconds':time.perf_counter()-start,'info':info}
+ 
+     def close(self):
+         if self.process.poll() is None:
+--- a/zero/replay.py
++++ b/zero/replay.py
+@@ -0,0 +1,131 @@
++"""Bounded sparse replay; raw game shards are immutable durable sources."""
++from collections import OrderedDict
++from dataclasses import dataclass
++import hashlib
++import json
++import math
++from pathlib import Path
++import random
++import base64
++import zlib
++import numpy as np
++import torch
++from .checkpoint import digest
++from .data import atomic_json
++from .encoding import INPUTS,ACTIONS,action,features,restore_board,outcome
++
++
++@dataclass
++class Prepared:
++    x:np.ndarray
++    policy:list
++    legal:list
++    wdl:np.ndarray
++    group:str
++    position:str
++    identity:str
++    recent:bool
++    reference:dict
++
++
++def prepare(record,reference=None,recent=True):
++    if record.get('schema') not in (1,2) or record.get('source') not in ('bootstrap','selfplay'):
++        raise ValueError('unsupported record schema/source')
++    if 'wdl' not in record:raise ValueError('unfinished record has no outcome')
++    board=restore_board(record)
++    if not board.is_valid() or outcome(board):raise ValueError('invalid or terminal training position')
++    x=features(board);legal=sorted(action(m) for m in board.legal_moves)
++    seen=set();total=0
++    for index,probability in record['policy']:
++        if type(index) is not int or index not in legal or index in seen or not np.isfinite(probability) or probability<0:
++            raise ValueError('invalid or duplicate policy action')
++        seen.add(index);total+=probability
++    if not record['policy'] or abs(total-1)>1e-5:raise ValueError('policy is not normalized')
++    wdl=np.asarray(record['wdl'],dtype=np.float32)
++    if wdl.shape!=(3,) or not np.isfinite(wdl).all() or (wdl<0).any() or abs(float(wdl.sum())-1)>1e-5:
++        raise ValueError('invalid WDL target')
++    if record['schema']==2:
++        if record['legal_actions']!=legal:raise ValueError('recorded legal mask mismatch')
++        payload=base64.b64decode(record['encoded_position'],validate=True)
++        decoder=zlib.decompressobj();raw=decoder.decompress(payload,INPUTS*4+1)
++        if len(raw)!=INPUTS*4 or not decoder.eof or decoder.unused_data:
++            raise ValueError('invalid encoded position payload')
++        if not np.array_equal(np.frombuffer(raw,dtype='<f4'),x):raise ValueError('encoded position mismatch')
++        if record['selected_action'] not in legal:raise ValueError('selected illegal action')
++        if record.get('termination') in (None,'TRUNCATED','IN_PROGRESS'):raise ValueError('missing actual termination')
++    position=hashlib.sha256(x.tobytes()).hexdigest()
++    identity=hashlib.sha256((position+json.dumps(record['policy'],sort_keys=True)+str(wdl.tolist())).encode()).hexdigest()
++    if 'game_id' in record:group=record['game_id']
++    elif record['source']=='bootstrap':group='teacher:'+str(record.get('index',position))
++    else:group=str(record.get('model','fixture'))+':'+str(record.get('game',record['root_fen']))
++    return Prepared(x,record['policy'],legal,wdl,str(group),position,identity,recent,reference or {})
++
++
++class Replay:
++    def __init__(self,paths,capacity=10000,recent_fraction=.75,seed=1):
++        if capacity<1 or not 0<=recent_fraction<=1:raise ValueError('invalid replay capacity/mix')
++        self.sources=[{'sha256':digest(p),'bytes':Path(p).stat().st_size} for p in paths]
++        parents=list(dict.fromkeys(str(Path(p).parent) for p in paths))
++        recent_parent=parents[-1] if parents else ''
++        old_capacity=round(capacity*(1-recent_fraction)) if len(parents)>1 else 0
++        quotas=[old_capacity,capacity-old_capacity];pools=[[],[]];counts=[0,0]
++        rng=random.Random(seed);seen=OrderedDict();duplicate_count=0;total=0
++        for path in paths:
++            recent=str(Path(path).parent)==recent_parent
++            pool_index=int(recent)
++            with open(path,encoding='utf-8') as stream:
++                for line_number,line in enumerate(stream,1):
++                    total+=1
++                    try:row=prepare(json.loads(line),{'path':str(Path(path).resolve()),'line':line_number},recent)
++                    except Exception as exc:raise ValueError(f'{path}:{line_number}: {exc}') from exc
++                    if row.identity in seen:duplicate_count+=1;continue
++                    seen[row.identity]=None
++                    if len(seen)>capacity*8:seen.popitem(last=False)
++                    counts[pool_index]+=1
++                    pool=pools[pool_index];quota=quotas[pool_index]
++                    if len(pool)<quota:pool.append(row)
++                    elif quota:
++                        index=rng.randrange(counts[pool_index])
++                        if index<quota:pool[index]=row
++        # If one stratum is short, its unused space can be filled from the other source
++        # on a subsequent build with a different fraction; never exceed capacity here.
++        self.rows=pools[0]+pools[1]
++        if not self.rows:raise ValueError('empty replay dataset')
++        self.stats={'capacity':capacity,'selected':len(self.rows),'records_scanned':total,
++                    'recent_selected':len(pools[1]),'older_selected':len(pools[0]),
++                    'duplicates_in_window':duplicate_count,'dedup_window_capacity':capacity*8,
++                    'source_recent_records':counts[1],'source_older_records':counts[0]}
++
++    def split(self,fraction,seed):
++        if not 0<=fraction<.5:raise ValueError('validation fraction must be [0,.5)')
++        # Union games sharing the same encoded position to prevent position leakage.
++        parent={row.group:row.group for row in self.rows}
++        def find(x):
++            while parent[x]!=x:parent[x]=parent[parent[x]];x=parent[x]
++            return x
++        positions={}
++        for row in self.rows:
++            if row.position in positions:parent[find(row.group)]=find(positions[row.position])
++            else:positions[row.position]=row.group
++        groups=sorted({find(row.group) for row in self.rows});random.Random(seed).shuffle(groups)
++        holdout=set(groups[:max(1,int(len(groups)*fraction))]) if fraction and len(groups)>1 else set()
++        train=[i for i,row in enumerate(self.rows) if find(row.group) not in holdout]
++        valid=[i for i,row in enumerate(self.rows) if find(row.group) in holdout]
++        self.stats.update(validation_rows=len(valid),training_rows=len(train),independent_groups=len(groups),
++                          validation_status='held_out_games_and_positions' if valid else 'unavailable_single_group_or_disabled')
++        return train,valid
++
++    def batch(self,indices,device='cpu'):
++        rows=[self.rows[int(i)] for i in indices]
++        x=np.stack([row.x for row in rows]);p=np.zeros((len(rows),ACTIONS),dtype=np.float32)
++        mask=np.zeros((len(rows),ACTIONS),dtype=np.bool_)
++        for i,row in enumerate(rows):
++            for a,prob in row.policy:p[i,a]=prob
++            mask[i,row.legal]=True
++        values=(x,p,np.stack([row.wdl for row in rows]),mask)
++        return tuple(torch.from_numpy(value).to(device) for value in values)
++
++    def persist(self,path):
++        atomic_json(path,{'format':1,'sources':self.sources,'stats':self.stats,
++                          'selected':[dict(row.reference,identity=row.identity,position=row.position,
++                                           group=row.group,recent=row.recent) for row in self.rows]})
+--- a/zero/selfplay.py
++++ b/zero/selfplay.py
+@@ -6,7 +6,7 @@
+ from .native import Native
+ 
+ 
+-def selfplay(executable, model, output, games=8, simulations=128, seed=1,
++def legacy_selfplay(executable, model, output, games=8, simulations=128, seed=1,
+              max_plies=512, start_fen=chess.STARTING_FEN, noise=0.25, temperature_plies=30):
+     if games < 1 or simulations < 1 or max_plies < 1 or not 0 <= noise <= 1:
+         raise ValueError('invalid selfplay settings')
+@@ -80,3 +80,6 @@
+     summary = {'games': games, 'accepted': accepted, 'truncated': truncated, 'records': records_count}
+     atomic_json(output / 'summary.json', summary)
+     return summary
++
++
++from .generate import selfplay
+--- a/zero/train.py
++++ b/zero/train.py
+@@ -26,7 +26,7 @@
+     return model
+ 
+ 
+-def train(paths, output, steps=1000, batch_size=64, lr=0.001, seed=1,
++def legacy_train(paths, output, steps=1000, batch_size=64, lr=0.001, seed=1,
+           resume=None, init=None, width=64, blocks=2, save_every=100, device='cpu'):
+     if steps < 0 or batch_size < 1 or save_every < 1 or not np.isfinite(lr) or lr <= 0:
+         raise ValueError('invalid training settings')
+@@ -91,3 +91,7 @@
+               'device': device, 'last': history[-1] if history else None}
+     atomic_json(Path(output).with_suffix('.train.json'), report)
+     return report
++
++
++# v0.1 exact continuation remains explicit; new training uses sparse bounded replay.
++from .training import train
+--- a/zero/training.py
++++ b/zero/training.py
+@@ -0,0 +1,99 @@
++from dataclasses import asdict
++from pathlib import Path
++import time
++import numpy as np
++import torch
++from . import checkpoint
++from .data import atomic_json
++from .model import ModelConfig,PolicyWDL
++from .replay import Replay
++
++
++def measurements(model,replay,ids,device):
++    if not ids:return None
++    model.eval();sums={'policy_loss':0.,'wdl_loss':0.,'policy_entropy':0.,'wdl_brier':0.}
++    bins=np.zeros((10,3),dtype=np.float64);draw=0.;n=0
++    with torch.no_grad():
++        for start in range(0,len(ids),64):
++            x,p,v,mask=replay.batch(ids[start:start+64],device)
++            policy,wdl=model(x);logs=torch.log_softmax(policy.masked_fill(~mask,-1e9),-1)
++            value_logs=torch.log_softmax(wdl,-1);probs=value_logs.exp();count=len(x)
++            sums['policy_loss']+=float(-(p*logs).sum())
++            sums['wdl_loss']+=float(-(v*value_logs).sum())
++            sums['policy_entropy']+=float(-(logs.exp()*logs).sum())
++            sums['wdl_brier']+=float(((probs-v)**2).sum())
++            confidence,choice=probs.max(-1);target=v.gather(1,choice[:,None]).squeeze(1)
++            for c,t in zip(confidence.cpu().numpy(),target.cpu().numpy()):
++                index=min(9,int(c*10));bins[index]+=[1,c,t]
++            draw+=float(probs[:,1].sum());n+=count
++    result={key:value/n for key,value in sums.items()}
++    result['wdl_ece']=float(sum(abs(c-t) for count,c,t in bins if count)/n)
++    result['mean_predicted_draw']=draw/n;result['rows']=n
++    return result
++
++
++def train(paths,output,steps=1000,batch_size=64,lr=.001,seed=1,resume=None,init=None,
++          width=64,blocks=2,save_every=100,device='cpu',capacity=10000,recent_fraction=.75,
++          validation_fraction=.15,optimizer_name='adamw',weight_decay=1e-4,decay=.999):
++    from .train import seed_all
++    started=time.perf_counter()
++    if steps<0 or batch_size<1 or save_every<1 or not np.isfinite(lr) or lr<=0 or optimizer_name not in ('adamw','sgd'):
++        raise ValueError('invalid training settings')
++    if not 0<decay<=1 or not 0<=weight_decay<=1:raise ValueError('invalid schedule or weight decay')
++    if resume and init:raise ValueError('choose resume or init')
++    torch.set_num_threads(1);seed_all(seed)
++    replay=Replay(paths,capacity,recent_fraction,seed)
++    training,validation=replay.split(validation_fraction,seed)
++    settings={'version':2,'batch_size':batch_size,'lr':lr,'device':device,'decay':decay,
++              'torch':str(torch.__version__),'capacity':capacity,'recent_fraction':recent_fraction,
++              'validation_fraction':validation_fraction,'optimizer':optimizer_name,'weight_decay':weight_decay,'seed':seed}
++    state,recovered=checkpoint.load(resume or init) if resume or init else (None,None)
++    config=ModelConfig(**state['config']) if state else ModelConfig(width,blocks)
++    model=PolicyWDL(config).to(device)
++    if optimizer_name=='adamw':optimizer=torch.optim.AdamW(model.parameters(),lr=lr,weight_decay=weight_decay)
++    else:optimizer=torch.optim.SGD(model.parameters(),lr=lr,momentum=.9,weight_decay=weight_decay)
++    generator=torch.Generator().manual_seed(seed);start=0;sampling={'recent':0,'older':0}
++    if state:
++        model.load_state_dict(state['model'])
++        if resume:
++            if state.get('settings',{}).get('version')!=2:raise ValueError('v0.1 continuation requires --legacy; use --init to start CHROMATIC training')
++            if replay.sources!=state['dataset'] or settings!=state['settings']:
++                raise ValueError('resume requires identical dataset and training settings; use --init for a new generation')
++            if state['optimizer'] is None:raise ValueError('no optimizer state; use --init')
++            optimizer.load_state_dict(state['optimizer']);generator.set_state(state['generator'])
++            start=state['step'];sampling=state.get('sampling',sampling);checkpoint.restore_rng(state['rng'])
++    if steps<start:raise ValueError('steps is a total target smaller than checkpoint step')
++    replay.persist(Path(output).with_suffix('.replay.json'))
++    initial={'training':measurements(model,replay,training,device),'validation':measurements(model,replay,validation,device)}
++    compute_seconds=0.;history=[]
++    def save(step):
++        checkpoint.save(output,{'config':asdict(config),'model':model.state_dict(),'optimizer':optimizer.state_dict(),
++                               'step':step,'generator':generator.get_state(),'dataset':replay.sources,
++                               'settings':settings,'seed':seed,'sampling':sampling})
++        model.export(Path(output).with_suffix('.zero'))
++    for step in range(start,steps):
++        before=time.perf_counter();model.train()
++        chosen=torch.randint(len(training),(batch_size,),generator=generator)
++        ids=[training[int(i)] for i in chosen]
++        for index in ids:sampling['recent' if replay.rows[index].recent else 'older']+=1
++        x,p,v,mask=replay.batch(ids,device)
++        for group in optimizer.param_groups:group['lr']=lr*decay**step
++        optimizer.zero_grad(set_to_none=True);policy,wdl=model(x)
++        pl=-(p*torch.log_softmax(policy.masked_fill(~mask,-1e9),-1)).sum(-1).mean()
++        vl=-(v*torch.log_softmax(wdl,-1)).sum(-1).mean();loss=pl+vl
++        if not torch.isfinite(loss):raise RuntimeError('nonfinite training loss')
++        loss.backward();grad=torch.nn.utils.clip_grad_norm_(model.parameters(),1.,error_if_nonfinite=True)
++        optimizer.step();compute_seconds+=time.perf_counter()-before
++        history.append({'step':step+1,'policy_loss':float(pl.detach()),'wdl_loss':float(vl.detach()),'gradient_norm_before_clip':float(grad)})
++        if (step+1)%save_every==0:save(step+1)
++    if steps==start or steps%save_every:save(steps)
++    final={'training':measurements(model,replay,training,device),'validation':measurements(model,replay,validation,device)}
++    elapsed=time.perf_counter()-started;samples=(steps-start)*batch_size
++    report={'format':2,'records':len(replay.rows),'start_step':start,'step':steps,'recovered_from':str(recovered) if recovered else None,
++            'device':device,'replay':replay.stats,'sampling_counts':sampling,'initial':initial,'final':final,
++            'last':history[-1] if history else None,'compute_seconds':compute_seconds,'total_seconds':elapsed,
++            'compute_samples_per_second':samples/compute_seconds if compute_seconds else None,
++            'total_samples_per_second_including_load_save_validation':samples/elapsed,
++            'history':history[-256:]}
++    atomic_json(Path(output).with_suffix('.train.json'),report)
++    return report
+--- a/zero/verify.py
++++ b/zero/verify.py
+@@ -11,7 +11,7 @@
+ from .native import Native
+ 
+ 
+-def verify(executable, checkpoint, output, positions=100, seed=2026, tolerance=2e-5):
++def verify(executable, checkpoint, output, positions=100, seed=2026, tolerance=2e-5, backend='Scalar'):
+     if positions < 1 or tolerance <= 0:
+         raise ValueError('positive positions and tolerance required')
+     model, state, actual = load_model(checkpoint)
+@@ -26,6 +26,7 @@
+         model.export(binary)
+         binary_hash = digest(binary)
+         with Native(executable, binary) as native:
++            if 'InferenceBackend' in native.options:native.configure({'InferenceBackend':backend})
+             for i in range(positions):
+                 if i:
+                     if outcome(board):
+@@ -33,6 +34,10 @@
+                     board.push(rng.choice(list(board.legal_moves)))
+                 native.position(board)
+                 result = native.command('zero eval')
++                if 'InferenceBackend' in native.options:
++                    sparse=native.command('zero evallegal')
++                    indices=[action(m) for m in board.legal_moves]
++                    np.testing.assert_array_equal(np.asarray(sparse['policy'])[indices],np.asarray(result['policy'])[indices])
+                 np.testing.assert_allclose(result['features'], features(board), atol=1e-7, rtol=0)
+                 if {v['uci']: v['action'] for v in result['legal']} != {m.uci(): action(m) for m in board.legal_moves}:
+                     raise AssertionError('native legal moves/action encoding mismatch')
+@@ -44,7 +49,8 @@
+                     error[name] = max(error[name], err)
+                     if err > tolerance:
+                         raise AssertionError(f'{name} parity failed: {err} > {tolerance}')
+-    report = {'passed': True, 'positions': positions, 'seed': seed, 'step': state['step'],
++    report = {'passed': True, 'positions': positions, 'seed': seed, 'step': state['step'], 'backend':backend,
++              'architecture':state['config'],
+               'checkpoint': str(actual), 'binary_sha256': binary_hash,
+               'engine_sha256': digest(executable), 'tolerance': tolerance, 'max_abs_error': error}
+     atomic_json(output, report)

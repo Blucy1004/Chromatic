@@ -1,0 +1,27 @@
+{
+  "timestamp_utc": "2026-10-24T10:07:32.651406+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel",
+  "logical_cpu_count": 16,
+  "physical_cpu_count": 16,
+  "physical_memory_bytes": 33820106752,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "zstandard": "0.25.0",
+    "psutil": "7.2.2",
+    "chess": "1.11.2"
+  },
+  "training": {
+    "device": "cpu",
+    "torch_threads": 1,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "epochs": 3,
+    "seed": 2026,
+    "gradient_clip": 1.0,
+    "replay_size": 256
+  },
+  "scope": "bounded 100/1000/10000 training only; no large download or long training started"
+}

@@ -1,0 +1,16 @@
+**/__pycache__/
+**/.pytest_cache/
+**/.venv/
+**/node_modules/
+**/build*/
+**/encoded-cache/
+**/source-spool/
+**/checkpoints/
+**/*.sqlite3*
+**/*.pyc
+**/*.pyo
+**/*.lock
+**/checkpoint-owner*
+chromatic-arc-trainer/data/
+chromatic-arc-trainer/runs/
+chromatic-shard-trainer/data/

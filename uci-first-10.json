@@ -1,0 +1,414 @@
+{
+  "engine": "CHROMATIC 1.0",
+  "executable_sha256": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d",
+  "model_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+  "requested_plies": 10,
+  "completed_plies": 10,
+  "movetime_ms": 100,
+  "moves": [
+    {
+      "ply": 1,
+      "move_number": 1,
+      "side": "white",
+      "position_command": "position startpos",
+      "go_command": "go movetime 100",
+      "response": "bestmove c2c3",
+      "uci": "c2c3",
+      "san": "c3"
+    },
+    {
+      "ply": 2,
+      "move_number": 1,
+      "side": "black",
+      "position_command": "position startpos moves c2c3",
+      "go_command": "go movetime 100",
+      "response": "bestmove d7d6",
+      "uci": "d7d6",
+      "san": "d6"
+    },
+    {
+      "ply": 3,
+      "move_number": 2,
+      "side": "white",
+      "position_command": "position startpos moves c2c3 d7d6",
+      "go_command": "go movetime 100",
+      "response": "bestmove a2a3",
+      "uci": "a2a3",
+      "san": "a3"
+    },
+    {
+      "ply": 4,
+      "move_number": 2,
+      "side": "black",
+      "position_command": "position startpos moves c2c3 d7d6 a2a3",
+      "go_command": "go movetime 100",
+      "response": "bestmove g8f6",
+      "uci": "g8f6",
+      "san": "Nf6"
+    },
+    {
+      "ply": 5,
+      "move_number": 3,
+      "side": "white",
+      "position_command": "position startpos moves c2c3 d7d6 a2a3 g8f6",
+      "go_command": "go movetime 100",
+      "response": "bestmove g1f3",
+      "uci": "g1f3",
+      "san": "Nf3"
+    },
+    {
+      "ply": 6,
+      "move_number": 3,
+      "side": "black",
+      "position_command": "position startpos moves c2c3 d7d6 a2a3 g8f6 g1f3",
+      "go_command": "go movetime 100",
+      "response": "bestmove b7b6",
+      "uci": "b7b6",
+      "san": "b6"
+    },
+    {
+      "ply": 7,
+      "move_number": 4,
+      "side": "white",
+      "position_command": "position startpos moves c2c3 d7d6 a2a3 g8f6 g1f3 b7b6",
+      "go_command": "go movetime 100",
+      "response": "bestmove e2e4",
+      "uci": "e2e4",
+      "san": "e4"
+    },
+    {
+      "ply": 8,
+      "move_number": 4,
+      "side": "black",
+      "position_command": "position startpos moves c2c3 d7d6 a2a3 g8f6 g1f3 b7b6 e2e4",
+      "go_command": "go movetime 100",
+      "response": "bestmove e7e6",
+      "uci": "e7e6",
+      "san": "e6"
+    },
+    {
+      "ply": 9,
+      "move_number": 5,
+      "side": "white",
+      "position_command": "position startpos moves c2c3 d7d6 a2a3 g8f6 g1f3 b7b6 e2e4 e7e6",
+      "go_command": "go movetime 100",
+      "response": "bestmove h1g1",
+      "uci": "h1g1",
+      "san": "Rg1"
+    },
+    {
+      "ply": 10,
+      "move_number": 5,
+      "side": "black",
+      "position_command": "position startpos moves c2c3 d7d6 a2a3 g8f6 g1f3 b7b6 e2e4 e7e6 h1g1",
+      "go_command": "go movetime 100",
+      "response": "bestmove c8b7",
+      "uci": "c8b7",
+      "san": "Bb7"
+    }
+  ],
+  "final_fen": "rn1qkb1r/pbp2ppp/1p1ppn2/8/4P3/P1P2N2/1P1P1PPP/RNBQKBR1 w Qkq - 2 6",
+  "all_moves_legal": true,
+  "transcript": [
+    {
+      "direction": "send",
+      "seconds": 0.009650900028645992,
+      "line": "uci"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.01811410003574565,
+      "line": "id name CHROMATIC 1.0"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.01815120002720505,
+      "line": "id author PROJECT CHROMATIC"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.018154999997932464,
+      "line": "option name ModelFile type string default C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\dist\\default.zero"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.0181571000139229,
+      "line": "option name CPuct type string default 1.5"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.01815850002458319,
+      "line": "option name FPUReduction type string default 0"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.018159700033720583,
+      "line": "option name InferenceBackend type combo default SIMD var Scalar var SIMD"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.018160800042096525,
+      "line": "option name SparsePolicyHead type check default true"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.018162399996072054,
+      "line": "option name MateProofNodes type spin default 256 min 0 max 50000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.018163400003686547,
+      "line": "option name MateProofPlies type combo default 1 var 1 var 3 var 5"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.018164200009778142,
+      "line": "option name TreeMemoryMB type spin default 64 min 1 max 2048"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.018165100016631186,
+      "line": "option name Simulations type spin default 800 min 1 max 10000000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.01816620002500713,
+      "line": "option name MaxNodes type spin default 100000 min 16 max 1000000"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.01816750003490597,
+      "line": "uciok"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.01824619999388233,
+      "line": "isready"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.018333900021389127,
+      "line": "readyok"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.018377100001089275,
+      "line": "ucinewgame"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.01840320002520457,
+      "line": "isready"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.018432000011671335,
+      "line": "readyok"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.018734100041911006,
+      "line": "position startpos"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.018744100001640618,
+      "line": "go movetime 100"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.12018309999257326,
+      "line": "info nodes 6343 time 100 nps 63430 score cp 8 pv c2c3"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.12021660001482815,
+      "line": "bestmove c2c3"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.1208483999944292,
+      "line": "position startpos moves c2c3"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.12090969999553636,
+      "line": "go movetime 100"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.22155980003299192,
+      "line": "info nodes 5576 time 100 nps 55760 score cp -16 pv d7d6"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.22160819999407977,
+      "line": "bestmove d7d6"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.22227140003815293,
+      "line": "position startpos moves c2c3 d7d6"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.22230240004137158,
+      "line": "go movetime 100"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.3228665000060573,
+      "line": "info nodes 4559 time 100 nps 45590 score cp 13 pv a2a3"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.32290630001807585,
+      "line": "bestmove a2a3"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.32328740000957623,
+      "line": "position startpos moves c2c3 d7d6 a2a3"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.3233718000119552,
+      "line": "go movetime 100"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.4241487000253983,
+      "line": "info nodes 6344 time 100 nps 63440 score cp -26 pv g8f6"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.4242454000050202,
+      "line": "bestmove g8f6"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.4248318000463769,
+      "line": "position startpos moves c2c3 d7d6 a2a3 g8f6"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.4248681000317447,
+      "line": "go movetime 100"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.5256262000184506,
+      "line": "info nodes 6643 time 100 nps 66430 score cp 19 pv g1f3"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.5256581000285223,
+      "line": "bestmove g1f3"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.5259969000471756,
+      "line": "position startpos moves c2c3 d7d6 a2a3 g8f6 g1f3"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.5260208999970928,
+      "line": "go movetime 100"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.6267959999968298,
+      "line": "info nodes 6405 time 100 nps 64050 score cp -27 pv b7b6"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.626829800021369,
+      "line": "bestmove b7b6"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.6271437000250444,
+      "line": "position startpos moves c2c3 d7d6 a2a3 g8f6 g1f3 b7b6"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.627167200029362,
+      "line": "go movetime 100"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.7279067000490613,
+      "line": "info nodes 6374 time 100 nps 63740 score cp 34 pv e2e4"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.7279490000219084,
+      "line": "bestmove e2e4"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.7282733000465669,
+      "line": "position startpos moves c2c3 d7d6 a2a3 g8f6 g1f3 b7b6 e2e4"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.7282961000455543,
+      "line": "go movetime 100"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.8290079000289552,
+      "line": "info nodes 6343 time 100 nps 63430 score cp -49 pv e7e6"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.8290866000461392,
+      "line": "bestmove e7e6"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.8293392999912612,
+      "line": "position startpos moves c2c3 d7d6 a2a3 g8f6 g1f3 b7b6 e2e4 e7e6"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.8293594000278972,
+      "line": "go movetime 100"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.929957700020168,
+      "line": "info nodes 6363 time 100 nps 63630 score cp 47 pv h1g1"
+    },
+    {
+      "direction": "receive",
+      "seconds": 0.929989900032524,
+      "line": "bestmove h1g1"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.9302821000455879,
+      "line": "position startpos moves c2c3 d7d6 a2a3 g8f6 g1f3 b7b6 e2e4 e7e6 h1g1"
+    },
+    {
+      "direction": "send",
+      "seconds": 0.9303075000061654,
+      "line": "go movetime 100"
+    },
+    {
+      "direction": "receive",
+      "seconds": 1.0311377000180073,
+      "line": "info nodes 6204 time 100 nps 62040 score cp -58 pv c8b7"
+    },
+    {
+      "direction": "receive",
+      "seconds": 1.0311688000219874,
+      "line": "bestmove c8b7"
+    },
+    {
+      "direction": "send",
+      "seconds": 1.0312940000439994,
+      "line": "quit"
+    }
+  ]
+}

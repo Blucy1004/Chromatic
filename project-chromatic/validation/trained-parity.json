@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "positions": 100,
+  "seed": 2026,
+  "step": 100,
+  "checkpoint": "runs\\release-validation\\generation_0000\\candidate.pt",
+  "binary_sha256": "a06a3b37ade14d9da5429ae275427e721663868288138bd599a535b4c20c3259",
+  "engine_sha256": "c6b7bd6700f62bf357483cb055994f3e84316ea6e5572c89576aaa43d209eede",
+  "tolerance": 2e-05,
+  "max_abs_error": {
+    "policy": 5.719851074559301e-06,
+    "wdl": 4.769810790783424e-07
+  }
+}

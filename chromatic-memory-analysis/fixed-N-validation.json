@@ -1,0 +1,290 @@
+[
+  {
+    "case": "start",
+    "memory_mib": 64,
+    "N": 6586,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "start",
+    "memory_mib": 512,
+    "N": 6586,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "start",
+    "memory_mib": 512,
+    "N": 65180,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "start",
+    "memory_mib": 64,
+    "N": 65180,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "start",
+    "memory_mib": 512,
+    "N": 781622,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": null,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "start",
+    "memory_mib": 64,
+    "N": 781622,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": null,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_100ms",
+    "memory_mib": 64,
+    "N": 6360,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_100ms",
+    "memory_mib": 512,
+    "N": 6360,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_100ms",
+    "memory_mib": 64,
+    "N": 65793,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_100ms",
+    "memory_mib": 512,
+    "N": 65793,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_100ms",
+    "memory_mib": 512,
+    "N": 788239,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": null,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_100ms",
+    "memory_mib": 64,
+    "N": 788239,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": null,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_1s",
+    "memory_mib": 64,
+    "N": 6712,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_1s",
+    "memory_mib": 512,
+    "N": 6712,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_1s",
+    "memory_mib": 64,
+    "N": 62675,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_1s",
+    "memory_mib": 512,
+    "N": 62675,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_1s",
+    "memory_mib": 512,
+    "N": 779510,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": null,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_1s",
+    "memory_mib": 64,
+    "N": 779510,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": null,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Ra6_10s",
+    "memory_mib": 512,
+    "N": 6702,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Ra6_10s",
+    "memory_mib": 64,
+    "N": 6702,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Ra6_10s",
+    "memory_mib": 64,
+    "N": 59351,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Ra6_10s",
+    "memory_mib": 512,
+    "N": 59351,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Ra6_10s",
+    "memory_mib": 64,
+    "N": 751040,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": null,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Ra6_10s",
+    "memory_mib": 512,
+    "N": 751040,
+    "group": "matched_simulations",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": null,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "start",
+    "memory_mib": 512,
+    "N": 722781,
+    "group": "historical_anchor",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": null,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "start",
+    "memory_mib": 64,
+    "N": 722781,
+    "group": "historical_anchor",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": null,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_100ms",
+    "memory_mib": 512,
+    "N": 6363,
+    "group": "historical_anchor",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_100ms",
+    "memory_mib": 64,
+    "N": 6363,
+    "group": "historical_anchor",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_1s",
+    "memory_mib": 512,
+    "N": 52995,
+    "group": "historical_anchor",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Rg1_1s",
+    "memory_mib": 64,
+    "N": 52995,
+    "group": "historical_anchor",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": true,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Ra6_10s",
+    "memory_mib": 512,
+    "N": 717076,
+    "group": "historical_anchor",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": null,
+    "first_failure_index_equal": true
+  },
+  {
+    "case": "before_Ra6_10s",
+    "memory_mib": 64,
+    "N": 717076,
+    "group": "historical_anchor",
+    "completed_N_equal": true,
+    "pre_saturation_exact_statistics_equal": null,
+    "first_failure_index_equal": true
+  }
+]

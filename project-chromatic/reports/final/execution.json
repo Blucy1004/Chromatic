@@ -1,0 +1,12 @@
+{
+  "completed": true,
+  "completed_generation_restart_equal": true,
+  "selfplay_games": 4,
+  "training_steps": 100,
+  "engine_match_games": 8,
+  "model_match_games": 4,
+  "maximum_selfplay_plies_per_game": 512,
+  "maximum_match_plies_per_game": 256,
+  "teacher_used_after_bootstrap": false,
+  "external_dataset_downloaded": false
+}

@@ -1,0 +1,43 @@
+[Event "CHROMATIC bounded arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "1"]
+[White "CHROMATIC 1.1 Memory Recycling"]
+[Black "CHROMATIC 1.1 Memory Recycling"]
+[Result "*"]
+[Termination "TRUNCATED"]
+
+1. Na3 b6 2. e4 f5 3. g3 Bb7 4. Nf3 Bxe4 5. Rb1 e6 6. Bg2 Bxc2 7. Qe2 Ba4 8. d4 Bc6 9. Qxe6+ Be7 10. Qf7+ Kxf7 11. Nh4 Bb5 12. Bxa8 Bd3 13. Bg2 Kf6 14. Nf3 Be2 15. Nc4 h6 16. Ncd2 h5 17. Ne4+ fxe4 18. h3 h4 19. gxh4 Rh5 20. Bg5+ Rxg5 21. Rf1 Rf5 22. h5 Ra5 23. Rg1 Rf5 24. Rc1 Rxh5 25. Rb1 Ra5 26. Nh4 Rxa2 27. Ng6 Kf7 28. Nh4 Bh5 29. Nf3 Ra3 30. Nd2 Rxh3 31. Nf3 Kf6 32. Nh4 Rd3 33. Rc1 Kf7 34. Ng6 Rh3 35. Nh4 Rd3 36. Ng6 Bd6 37. Ne5+ Ke7 38. d5 Bc5 39. d6+ Kxd6 40. Rb1 Be3 41. Nc6 Bf7 42. Nb4 Kc5 43. Nd5 Rxd5 44. f3 Bg5 45. Rc1+ Kb4 46. Kf2 Rd1 47. Rb1 Bc4 48. Kg3 Nh6 49. Bf1 Rd5 50. Bg2 Rd1 51. Bf1 Bd2 52. Bd3 Bc1 53. Bf1 Nc6 54. Bg2 Rd5 55. Bf1 Rd1 56. Bg2 Rd5 57. Rd1 Rh5 58. Rh1 Kc5 59. Rbxc1 Rd5 60. Kf4 Qb8 61. Rcf1 Rd1 62. Rf2 Rd5 63. Rc2 Rd1 64. Rd2 Rxh1 65. Rf2 Bf7 66. Ke3 Qg8 67. Kf4 Qb8 *
+
+[Event "CHROMATIC bounded arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "1"]
+[White "CHROMATIC 1.1 Memory Recycling"]
+[Black "CHROMATIC 1.1 Memory Recycling"]
+[Result "1/2-1/2"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. Na3 b6 2. e4 f5 3. g3 Bb7 4. Bh3 Nf6 5. Nf3 e6 6. Rg1 Bc5 7. Nh4 O-O 8. Nb5 fxe4 9. Nd6 e3 10. Ndf5 d5 11. Nd4 c6 12. dxe3 Qe7 13. Ndf5 Rd8 14. Nd4 Nbd7 15. Ndf5 Rab8 16. Nd4 h6 17. Ndf5 Qf7 18. Nd4 Qe7 19. Ndf5 d4 20. Nxd4 Qf7 21. Ndf5 Qe7 22. Nd4 Qf7 23. Ndf5 Qe7 24. Nd4 1/2-1/2
+
+[Event "CHROMATIC bounded arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "2"]
+[White "CHROMATIC 1.1 Memory Recycling"]
+[Black "CHROMATIC 1.1 Memory Recycling"]
+[Result "*"]
+[Termination "TRUNCATED"]
+
+1. e3 a5 2. d3 e5 3. Na3 h5 4. Rb1 h4 5. Nf3 g5 6. Nc4 Bd6 7. Nxa5 b5 8. Nc4 b4 9. Na5 Bc5 10. Nc4 Bf8 11. Qe2 Bb7 12. Na5 Be4 13. Nc4 Bh7 14. Na5 Be4 15. Nc4 Bh7 16. Qd2 Be4 17. Na5 Bh7 18. Nc4 Be4 19. Nd4 Bh7 20. Be2 Nf6 21. Bh5 Nxh5 22. Na5 Be4 23. Nc4 Bh7 24. Na5 Nf6 25. e4 Bxe4 26. Qe3 Bh7 27. Nc4 Be4 28. Qh3 Bh7 29. Qxd7+ Qxd7 30. Bf4 exf4 31. Rc1 Nh5 32. h3 Nf6 33. a3 Qxh3 34. Nd6+ Bxd6 35. Nf5 Qxd3 36. Ng7+ Kf8 37. Rxh4 f3 38. Re4 fxg2 39. Re8+ Kxg7 40. cxd3 g4 41. Ke2 Be4 42. Re5 Bh7 43. Rd5 Kg8 44. Rh1 Bc5 45. Rh6 Bf8 46. Rg5+ Bg6 47. Rh1 Bd6 48. Ra5 gxh1=N 49. Rf5 Bh5 50. Rf3 Nc6 51. Rh3 Bc5 52. Rh2 Bf8 53. Kd2 Bd6 54. Kc2 Bc5 55. Rg2 Bf8 56. Rh2 Bd6 57. Rh3 Rxa3 58. Rh2 Ra6 59. Rg2 Bc5 60. Rg1 Bf8 61. Rb1 Bd6 62. Rc1 Ra1 63. Rf1 Bc5 64. Rc1 Bf8 65. Rb1 g3 66. fxg3 Bd6 67. Rxh1 Rg1 *
+
+[Event "CHROMATIC bounded arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "2"]
+[White "CHROMATIC 1.1 Memory Recycling"]
+[Black "CHROMATIC 1.1 Memory Recycling"]
+[Result "*"]
+[Termination "TRUNCATED"]
+
+1. e3 a5 2. d3 e5 3. Na3 h5 4. c4 Nf6 5. Nf3 h4 6. d4 exd4 7. exd4 Bc5 8. Bf4 O-O 9. Be5 d5 10. Bd6 dxc4 11. Be5 c6 12. Bd6 Ra6 13. Be5 Nbd7 14. Bd6 c3 15. Be5 Rb6 16. Bd6 Rxb2 17. Be5 Rxf2 18. Bb8 g6 19. Ba7 g5 20. Bxc5 Rb2 21. Bxf8 Rf2 22. Bd6 Re2+ 23. Bxe2 a4 24. Be5 Qe7 25. Bb8 c5 26. Ba7 h3 27. Bxc5 Qe3 28. Bf8 Qg1+ 29. Nxg1 Nb6 30. Bh5 Nbd7 31. Bxf7+ Kxf7 32. Bd6 hxg2 33. Be5 gxh1=R 34. Bd6 Kg7 35. Nb5 Nb6 36. Nc7 Nbd7 37. Ne8+ Kh6 38. Nc7 g4 39. Ne8 Kg6 40. Nc7 Kf7 41. Ne8 Nb6 42. Be5 Ke7 43. Bb8 Nbd7 44. Ba7 b6 45. Nc7 Ba6 46. Ne8 Bc8 47. Nc7 Ba6 48. Ne8 Bb7 49. Nc7 Kf7 50. Ne8 Ke7 51. Nc7 Kf7 52. Ne8 Bg2 53. Nc7 Rxh2 54. Ne8 Ke7 55. Nc7 Kf7 56. Ne8 Ke7 57. Nc7 Bb7 58. Ne8 Rxa2 59. Nc7 Bh1 60. Ne8 Bb7 61. Nc7 Bh1 62. Ne8 Bd5 63. Nc7 Rh2 64. Ne8 Bc6 65. Nc7 Bb5 66. Ne8 Bc6 67. Nc7 Ba8 *

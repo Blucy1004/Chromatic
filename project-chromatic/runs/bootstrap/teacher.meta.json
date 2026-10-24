@@ -1,0 +1,12 @@
+{
+  "positions": 128,
+  "teacher_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+  "teacher_id": {
+    "name": "Stockfish 19",
+    "author": "the Stockfish developers (see AUTHORS file)"
+  },
+  "nodes": 2000,
+  "multipv": 4,
+  "seed": 2026,
+  "sha256": "d3dd6ce286c7c2421ba35dd3163b879e23328b486b251a28a170cfb210f50e77"
+}

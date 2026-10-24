@@ -1,0 +1,14 @@
+{
+  "license": "CC0-1.0",
+  "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2026-09.pgn.zst",
+  "version": "\"6ac08d73-6cdeaccb7\"",
+  "source_file_sha256": "867b3917b68692f73bc6b4d5d88f655373b682c5ca2be236b3ea1bd71efd3bf7",
+  "local_sha256": "9764845735ca8f992389c8c1ec59ac0da1e2a5ec273ed1858875ccb6777fe210",
+  "records": 3831,
+  "games": 483,
+  "families": 3830,
+  "source": "official game outcomes plus existing PGN cp annotations",
+  "independent_from_eval_training": true,
+  "minimum_ply": 13,
+  "maximum_rows_per_game": 8
+}

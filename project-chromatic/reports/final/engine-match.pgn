@@ -1,0 +1,87 @@
+[Event "CHROMATIC bounded arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "1"]
+[White "CHROMATIC 1.0"]
+[Black "PROJECT ZERO 0.1"]
+[Result "*"]
+[Termination "TRUNCATED"]
+
+1. e4 e5 2. Nf3 Nc6 3. c3 Nf6 4. Nh4 d6 5. Rg1 Bg4 6. Bc4 Bc8 7. Bb5 b6 8. Bf1 Bb7 9. Bc4 Qb8 10. Bb5 Nh5 11. Bf1 Nf6 12. Qc2 Nh5 13. Qa4 Nf6 14. Qc4 Nh5 15. Qd5 Nf6 16. Qc4 Nh5 17. Qb4 Nf6 18. Qxb6 Nh5 19. Qxc7 Nf6 20. Bc4 Ne7 21. Bb5+ Bc6 22. Bf1 Qxb2 23. Qxa7 Qxa1 24. Qb6 Ned5 25. Qb8+ Rxb8 26. c4 Nc3 27. Ba3 Ba8 28. d3 Ncxe4 29. d4 Nc5 30. dxe5 Ne6 31. exd6 Nc7 32. dxc7 Rg8 33. c8=R+ Rxc8 34. Bxf8 Qe5+ 35. Kd2 Qh5 36. Bb4 Qxh4 37. Ke3 Qg3+ 38. Kd4 Qb3 39. Bc5 Qg3 40. Bf8 Qb3 41. Bb4 Bxg2 42. Ke5 Qc3+ 43. Kf5 Qd4 44. Bf8 Qd6 45. Bxd6 Bh1 46. Ke5 Bc6 47. Kf5 Ba8 48. Ke5 Bg2 49. Kf5 h6 50. Ke5 Bh1 51. Kf5 Bc6 52. Ke5 Ba8 53. Kf5 Bc6 54. Ke5 Ba8 55. Rxg7 Bg2 56. Rxg8+ Kd7 57. Kf5 Rxg8 58. Ke5 Rb8 59. Kf5 Rd8 60. Ke5 Rb8 61. Bc5 Rg8 62. Bf8 h5 63. Kf5 h4 64. Ke5 Nh5 65. Bd6 Rb8 66. Bc5 Rg8 67. Be3 Rb8 68. Bd4 f6+ 69. Kf5 Rg8 70. Be3 Rb8 71. Kg4 Rg8+ 72. Bg5 Rc8 73. Bc1 Rg8+ 74. Bg5 Rb8 75. Bxh4 Rg8+ 76. Kf5 Rb8 77. Kg4 Rg8+ 78. Kf5 Rb8 79. Nd2 Rg8 80. Bxf6 Rb8 81. Ba1 Rd8 82. Ke5 Nf6 83. Kf5 Rb8 84. Ke5 Rg8 85. Kf5 Rb8 86. Kg5 Rd8 87. Be5 Rb8 88. Bd6 Rg8+ 89. Kf5 Rb8 90. Ke5 Rg8 91. Kf5 Rb8 92. Ke5 Rg8 93. Bc5 Rb8 94. Bf8 Rxf8 95. Kf5 Nh5+ 96. Ke5 Nf4 97. Nb3 Rf5+ 98. Kxf5 Nd3 99. Kg5 Nf4 100. Kg4 Nd3 101. Nd2 Nf4 102. Nb1 Nd3 103. Nd2 Nf4 104. a3 Nd3 105. Nb3 Nf4 106. Nd2 Nd3 107. Kf5 Nxf2 108. Ke5 Ng4+ 109. Kf4 Nf2 110. Ke3 Nh1 111. Nb3 Kd6 112. Kd4 Kc7 113. Kc3 Kb7 114. Kd4 Ng3 115. Kc3 Nxf1 116. Kb2 Ne3 117. Ka1 Nf1 118. Nd2 Ne3 119. Nb3 Nf1 120. Nd2 Ne3 121. Ka2 Nf1 122. Kb3 Ne3 123. Kc3 Nf1 124. Kd4 Ne3 125. Kc3 Nf1 126. Kb2 Ne3 127. Ka1 Nxc4 128. Ka2 Na5 129. Nb3 Nc4 130. Nd2 Na5 *
+
+[Event "CHROMATIC bounded arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "1"]
+[White "PROJECT ZERO 0.1"]
+[Black "CHROMATIC 1.0"]
+[Result "1/2-1/2"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. e4 e5 2. Nf3 Nc6 3. Nc3 d6 4. Bc4 Bg4 5. Bxf7+ Kxf7 6. Nb5 Bc8 7. Nxd6+ Bxd6 8. a3 Qh4 9. Nxh4 Ke7 10. c3 h6 11. Ra2 Kf7 12. d3 Bxa3 13. Bxh6 Nge7 14. Rxa3 Bh3 15. Ra5 Rhb8 16. Ra2 a5 17. Ra3 Kf6 18. Rxa5 Rg8 19. Ra2 Ra5 20. Ra3 Rb8 21. Rxa5 Rg8 22. Ra2 Rb8 23. Ra7 Rg8 24. Rxb7 Rb8 25. Qh5 Rg8 26. Qf7+ Kxf7 27. Kd1 g5 28. Bf8 gxh4 29. Kc2 Kf6 30. Bg7+ Kxg7 31. Rb6 cxb6 32. Kd2 Rb8 33. Kc1 Rg8 34. Kb1 Rb8 35. c4 Rg8 36. Ka2 Rb8 37. Kb3 Rg8 38. Kc3 Rb8 39. Kd2 Rg8 40. Kc3 Rb8 41. Kd2 Rg8 42. Kc1 Rb8 43. Kb1 Rg8 44. Ka2 Rb8 45. Ka3 Rg8 46. Kb3 Rb8 47. Kc3 Rc8 48. Kd2 Rg8 1/2-1/2
+
+[Event "CHROMATIC bounded arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "2"]
+[White "CHROMATIC 1.0"]
+[Black "PROJECT ZERO 0.1"]
+[Result "1-0"]
+[Termination "CHECKMATE"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. e4 Be7 5. Bf4 dxc4 6. Be5 Qd6 7. a3 Qxe5 8. Bxc4 Qf5 9. Bd5 Qf3 10. Bb3 Qxg2 11. Nf3 Qg5 12. Nb5 Qd2+ 13. Kxd2 Bd6 14. Nxd6+ Kf8 15. Nf5 exf5 16. e5 Be6 17. Ba2 h6 18. Bb3 Nc6 19. Ra2 Bd7 20. Kc3 Nh5 21. Kd2 f6 22. e6 Nf4 23. exd7 h5 24. d8=N h4 25. Kc1 Nd3+ 26. Kb1 Nf4 27. Nf7 Nd3 28. Nd6 Nf4 29. Nxf5 Nd3 30. Ne7 Nxf2 31. Qc2 Ng4 32. Qe2 Nf2 33. Ng6# 1-0
+
+[Event "CHROMATIC bounded arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "2"]
+[White "PROJECT ZERO 0.1"]
+[Black "CHROMATIC 1.0"]
+[Result "1/2-1/2"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. d4 d5 2. c4 e6 3. Bf4 Nf6 4. Nc3 Be7 5. Be5 dxc4 6. a3 b5 7. e4 b4 8. Bd6 Bb7 9. Be5 Bxe4 10. Bxc4 Bc2 11. Bd5 Ba4 12. Bxa8 Bc6 13. Bd6 Bxa8 14. Be5 Bc6 15. Bd6 Ba8 16. Be5 Bc6 17. Bd6 Ba8 1/2-1/2
+
+[Event "CHROMATIC bounded arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "3"]
+[White "CHROMATIC 1.0"]
+[Black "PROJECT ZERO 0.1"]
+[Result "*"]
+[Termination "TRUNCATED"]
+
+1. c4 e5 2. Nc3 Nf6 3. Nf3 d5 4. Rg1 dxc4 5. e4 Bg4 6. Nh4 Bc8 7. Bxc4 Bg4 8. Bd5 Bc8 9. Bc4 Nh5 10. Bd5 Nf6 11. Nb5 b6 12. Nd6+ Qxd6 13. Bc4 Qc6 14. Bd5 Qc3 15. Bc4 Bb7 16. Bb5+ Qc6 17. Bf1 Qc3 18. bxc3 Nh5 19. Bc4 Nf6 20. Bb5+ Nc6 21. Bf1 Nh5 22. Bc4 Nf6 23. Bd5 Nh5 24. Be6 Nf6 25. a3 Nh5 26. g4 Nf6 27. g5 Nh5 28. Bd7+ Kxd7 29. Ra2 f6 30. Qc2 Bd6 31. Qd1 Bc5 32. Qc2 Bf8 33. Qa4 Bd6 34. Qb4 Bc5 35. Qd4+ Bxd4 36. cxd4 h6 37. dxe5 hxg5 38. e6+ Kd6 39. e5+ Kc5 40. Kd1 Kc4 41. Kc2 Kd4 42. Kd1 Kc4 43. Kc2 Kd4 44. d3 Nf4 45. Nf5+ Kxe5 46. Nd4 Kd5 47. Nf5 Rhb8 48. Nd4 Rg8 49. Nf5 Rgb8 50. Ne7+ Kxe6 51. Nd5 Kf5 52. Ne7+ Ke5 53. Nd5 Kxd5 54. Rg4 Rg8 55. Rg2 Rgb8 56. Rxg5+ Kd6 57. Rg3 Rg8 58. Rxg7 Rgb8 59. Rg3 Rg8 60. Rg7 Rgb8 61. Rg3 Kc5 62. Rg8 Rxg8 63. Kd2 Rgb8 64. Kc2 Rg8 65. Kd2 Rgb8 66. Ke3 Rg8 67. Kf3 Rgb8 68. Ke4 Rg8 69. Ke3 Rgb8 70. Kf3 Nxd3 71. Bh6 Nxf2 72. Bf8+ Rxf8 73. Rxf2 Kc4 74. Rc2+ Kd4 75. Re2 Kc4 76. Rg2 Kd4 77. Rg1 Kc3 78. Rg7 Kd4 79. Rg2 Kc4 80. Ra2 Kd4 81. Rg2 Kc3 82. Rg1 Kd4 83. Rg7 f5 84. Rg3 Kc3 85. Rg7 Kb2 86. Rg3 Ka1 87. Rg7 Rf7 88. Rg8 Re7 89. Rb8 Re2 90. Rd8 Ra2 91. Rd2 Rxa3+ 92. Kg2 Rf3 93. Kg1 Ba6 94. Rd5 Bb5 95. Rd1+ Ka2 96. Rd5 Bd3 97. Rd6 Ka3 98. Rg6 a5 99. Rxc6 Be2 100. Rg6 Rf8 101. Rxb6 Rc8 102. Rg6 Rg8 103. Rg7 Rb8 104. Rg3 Rg8 105. Rxg8 Rf1+ 106. Kg2 Ra1 107. Rb8 Rg1+ 108. Kxg1 Bh5 109. Rd8 Bf7 110. Rd2 Bc4 111. Rd6 Bf7 112. Rc6 Ba2 113. Rg6 Bb3 114. Rb6 c5 115. Rf6 c4 116. Rh6 Ba2 117. Rg6 Bb3 118. Rb6 f4 119. Rf6 Ba2 120. Rh6 f3 121. Rg6 Bb3 122. Rb6 Ba2 123. Rg6 Bb3 124. Rb6 Ba2 125. Rf6 Bb3 126. Rh6 Ba2 127. Rb6 Bb3 128. Rg6 f2+ 129. Kf1 Ba2 130. Rb6 Bb3 *
+
+[Event "CHROMATIC bounded arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "3"]
+[White "PROJECT ZERO 0.1"]
+[Black "CHROMATIC 1.0"]
+[Result "1/2-1/2"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. c4 e5 2. Nc3 Nf6 3. e4 d6 4. a3 Bg4 5. Nb5 Bc8 6. Nxd6+ Qxd6 7. Nf3 Bg4 8. Rg1 Bc8 9. Nh4 Rg8 10. g4 Be7 11. g5 Qc6 12. Qc2 Nh5 13. Qa4 Nf6 14. Qxc6+ Nfd7 15. Qg6 Nb6 16. Qxb6 Bg4 17. Qg6 Bc8 18. Qb6 g6 19. Qxg6 Bg4 20. Qb6 Bc8 21. Qg6 hxg6 22. Bh3 Bg4 23. d3 Bc8 24. d4 Bg4 25. Bf4 Bc8 26. Bd2 b6 27. Bxc8 Bf8 28. Bb7 Bb4 29. Ba6 Bc5 30. Bc8 f6 31. Bb7 Bf8 32. Ba6 Bb4 33. Bc8 Bc5 34. Bb7 Bf8 35. Ba6 c5 36. Bc8 cxd4 37. Bb7 Bb4 38. Ba6 d3 39. Bc8 Bc5 40. Bb7 Bf8 41. Ba6 Be7 42. Bc8 f5 43. Bb7 Bf8 44. Ba6 fxe4 45. Bc8 e3 46. Bb7 e2 47. Bh1 Bb4 48. Bc6+ Nxc6 49. Bc3 Bc5 50. Bd4 Bf8 51. Bc3 e4 52. Bd4 e3 53. Bc3 d2+ 54. Bxd2 Rb8 55. Bxe3 Rd8 56. Bd4 Bd6 57. Bc3 Be5 58. Bb4 Bd6 59. Bc5 Be5 60. Bf8 Bd6 61. Bxd6 Rb8 62. Be5 Rh8 63. Bd6 Rh5 64. Be5 Rd8 65. Bd6 Rb8 66. Be5 Rd8 67. Bd6 Rb8 1/2-1/2
+
+[Event "CHROMATIC bounded arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "4"]
+[White "CHROMATIC 1.0"]
+[Black "PROJECT ZERO 0.1"]
+[Result "1/2-1/2"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. e4 c5 2. Nf3 d6 3. Rg1 Bg4 4. Bc4 Bc8 5. Bxf7+ Kxf7 6. Kf1 Nc6 7. Nh4 c4 8. Qh5+ Kf6 9. Qa5 h6 10. Qf5+ Bxf5 11. e5+ Kf7 12. exd6 Bc8 13. a3 exd6 14. Nf5 Be6 15. Nd4 Ke7 16. Nf5+ Bxf5 17. Ra2 Bc8 18. d3 d5 19. Bxh6 Kd6 20. Bg5 Kc5 21. Bd2 Bd6 22. Bc1 Qa5 23. Bg5 Qb4 24. Bc1 Qb6 25. Bg5 Qb3 26. Bc1 Qxb2 27. Bg5 Qc1+ 28. Bxc1 Be6 29. Bg5 Bd7 30. Bd2 d4 31. Bg5 Rf8 32. Bd2 Rf5 33. Bc1 Rfh5 34. Bh6 Rh4 35. Bg5 Rxh2 36. Bd2 Bh3 37. Bg5 Nge7 38. Bd2 Rb8 39. Bg5 Rg8 40. Bd2 Rb8 41. Bg5 Rg8 42. Nd2 Rb8 43. Nxc4 Rg8 44. Ne3 Rb8 45. Nc4 Rg8 46. Na5 Rb8 47. Bd2 Rg8 48. Bg5 Rb8 49. Bd2 Rg8 50. Nb3+ Kb5 51. Bg5 Rb8 52. Bd2 Bc5 53. Bg5 Rg8 54. Bd2 Rb8 55. Bg5 Rg8 56. Nd2 Rb8 57. Bh4 g5 58. Bg3 Rg8 59. Nb3 Rb8 60. Nd2 Rg8 61. Nc4 Rb8 62. Ne3 Rg8 63. Nc4 Rb8 64. Ne3 Rg8 65. Ng4 Rb8 66. Nxh2 Rg8 67. Ke2 Rb8 68. Kd2 Rg8 69. Rga1 Rb8 70. Rh1 Rg8 71. Kc1 Rb8 72. Ng4 Bb4 73. Nh2 Kc5 74. Ng4 Rg8 75. Nh2 Rb8 76. Kb1 g4 77. Nxg4 Rg8 78. Nf6 Rb8 79. Be5 Rg8 80. Bd6+ Kb5 81. Nh5 Rb8 82. Bc5 Kxc5 83. Nf6 Rg8 84. Nh5 Rb8 85. Ng3 Rg8 86. Ne2 Rb8 87. Ng3 Rg8 88. Nf1 Rb8 89. Ne3 Rg8 90. Nf1 Rb8 91. Ne3 Rg8 92. Nc4 Rb8 93. Nb2 Rg8 94. Nc4 Rb8 95. Nd2 Rg8 96. Nb3+ Kb5 97. Nd2 Kc5 98. Nb3+ Kb5 99. Nd2 Kc5 1/2-1/2
+
+[Event "CHROMATIC bounded arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "4"]
+[White "PROJECT ZERO 0.1"]
+[Black "CHROMATIC 1.0"]
+[Result "1/2-1/2"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. e4 c5 2. Nf3 d6 3. Bc4 Nf6 4. Bxf7+ Kd7 5. Bb3 c4 6. Nc3 h6 7. Nb5 Ke8 8. Nxd6+ exd6 9. Nh4 d5 10. c3 Bg4 11. d3 Bc8 12. Bxh6 Bg4 13. dxc4 Bc8 14. Qxd5 Bd6 15. Qb5+ Nc6 16. Qc5 Qe7 17. Qg5 Be5 18. Qd2 Bd6 19. Qe3 Be5 20. Qd4 Bd6 21. Qxd6 Qf7 22. Qe5+ Qe7 23. Qe6 Rf8 24. Qxc6+ Kf7 25. Qd7 Nh5 26. Qd5+ Be6 27. Qb5 Nf6 28. Qxb7 Bd7 29. a3 Ke6 30. Bg5 Qf7 31. Bd2 Kd6 32. Be3 Ke5 33. Bd4+ Ke6 34. Bxa7 Qe7 35. Bc5 Rxa3 36. Be3 Ra5 37. Bd4 Rf5 38. Ra7 Kd6 39. Kd1 Rh5 40. Kc2 Ra5 41. Ba2 Rf5 42. Bb3 Re5 43. Ba2 Rf5 44. Bb3 Rh5 45. e5+ Rxe5 46. Qe4 Rf5 47. Qe2 Rh5 48. Qxh5 Nxh5 49. Rb7 Qf7 50. Ba2 Qf6 51. Bb3 Qh6 52. Ba2 Qf6 53. Bb3 Qh6 54. Ba2 Qf6 1/2-1/2

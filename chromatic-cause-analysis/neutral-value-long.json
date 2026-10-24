@@ -1,0 +1,2830 @@
+{
+  "intervention": "same policy and trunk, WDL weights zero and equal W/L biases, expected value exactly zero",
+  "policy_and_trunk_bytes_equal": true,
+  "value_head_expected_value_zero": true,
+  "wdl_biases": [
+    -1.3862943649291992,
+    -0.6931471824645996,
+    -1.3862943649291992
+  ],
+  "original_model_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+  "neutral_model_sha256": "6367c546f7c032eb2fc51ccc0de9c3f5d35d511eaf463ffcc649143e10174ba7",
+  "runner_sha256": "e03648496741fac1b510f179dd2942622f836ebc2b99f716a5211b74da7b5fd3",
+  "affinity_mask": 2,
+  "max_nodes": 100000,
+  "memory_mib": 64,
+  "proof_nodes": 0,
+  "backend": "SIMD",
+  "noise": 0,
+  "temperature": 0,
+  "scope": "fixed simulation counts, no timing/performance comparison claimed",
+  "results": [
+    {
+      "case": "start",
+      "moves": [],
+      "summary": {
+        "case": "start",
+        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+        "simulations": 722781,
+        "bestmove": "b1c3",
+        "root_value": 0,
+        "memory_bytes": 67108864,
+        "nodes_size": 65536,
+        "nodes_capacity": 65536,
+        "max_depth": 21,
+        "child_fail_node_limit": 0,
+        "child_fail_byte_capacity": 657246,
+        "expansion_fail_byte_capacity": 0,
+        "nn_non_retained": 657246,
+        "nn_resident_unexpanded_repeat": 0,
+        "root_top5": [
+          {
+            "uci": "b1c3",
+            "action": 82,
+            "n": 196059,
+            "q": 0,
+            "prior": 0.271253526
+          },
+          {
+            "uci": "g1f3",
+            "action": 405,
+            "n": 162484,
+            "q": 0,
+            "prior": 0.224801809
+          },
+          {
+            "uci": "e2e4",
+            "action": 796,
+            "n": 152915,
+            "q": 0,
+            "prior": 0.211561635
+          },
+          {
+            "uci": "c2c4",
+            "action": 666,
+            "n": 83589,
+            "q": 0,
+            "prior": 0.115647458
+          },
+          {
+            "uci": "a2a3",
+            "action": 528,
+            "n": 40622,
+            "q": 0,
+            "prior": 0.0562028587
+          }
+        ]
+      },
+      "raw": {
+        "bestmove": "b1c3",
+        "simulations": 722781,
+        "value": 0,
+        "elapsed_seconds": 11.5849119,
+        "limits": {
+          "max_nodes": 100000,
+          "max_tree_bytes": 67108864,
+          "seed": 2026,
+          "noise": 0,
+          "temperature": 0,
+          "proof_nodes": 0,
+          "backend": "SIMD"
+        },
+        "audit": {
+          "simulations": 722781,
+          "neural_evals": 722782,
+          "max_depth": 21,
+          "nodes_size": 65536,
+          "nodes_capacity": 65536,
+          "edges_size": 1940709,
+          "edges_capacity": 2056192,
+          "memory_bytes": 67108864,
+          "node_struct_bytes": 20,
+          "edge_struct_bytes": 32,
+          "expanded_nodes": 65536,
+          "expanded_nonterminal_nodes": 65536,
+          "expanded_terminal_nodes": 0,
+          "child_fail_node_limit": 0,
+          "child_fail_byte_capacity": 657246,
+          "expansion_fail_byte_capacity": 0,
+          "nn_non_retained": 657246,
+          "nn_resident_unexpanded_repeat": 0,
+          "nn_resident_first": 65536,
+          "terminal_non_retained": 0,
+          "root_value": 0,
+          "bestmove": "b1c3",
+          "root": [
+            {
+              "uci": "b1c3",
+              "action": 82,
+              "n": 196059,
+              "q": 0,
+              "prior": 0.271253526
+            },
+            {
+              "uci": "b1a3",
+              "action": 80,
+              "n": 461,
+              "q": 0,
+              "prior": 0.000638242054
+            },
+            {
+              "uci": "g1h3",
+              "action": 407,
+              "n": 100,
+              "q": 0,
+              "prior": 0.000139716911
+            },
+            {
+              "uci": "g1f3",
+              "action": 405,
+              "n": 162484,
+              "q": 0,
+              "prior": 0.224801809
+            },
+            {
+              "uci": "a2a3",
+              "action": 528,
+              "n": 40622,
+              "q": 0,
+              "prior": 0.0562028587
+            },
+            {
+              "uci": "a2a4",
+              "action": 536,
+              "n": 14,
+              "q": 0,
+              "prior": 2.06187033e-05
+            },
+            {
+              "uci": "b2b3",
+              "action": 593,
+              "n": 0,
+              "q": 0,
+              "prior": 1.25972008e-06
+            },
+            {
+              "uci": "b2b4",
+              "action": 601,
+              "n": 3,
+              "q": 0,
+              "prior": 5.37401365e-06
+            },
+            {
+              "uci": "c2c3",
+              "action": 658,
+              "n": 32501,
+              "q": 0,
+              "prior": 0.0449669659
+            },
+            {
+              "uci": "c2c4",
+              "action": 666,
+              "n": 83589,
+              "q": 0,
+              "prior": 0.115647458
+            },
+            {
+              "uci": "d2d3",
+              "action": 723,
+              "n": 18245,
+              "q": 0,
+              "prior": 0.0252425298
+            },
+            {
+              "uci": "d2d4",
+              "action": 731,
+              "n": 22106,
+              "q": 0,
+              "prior": 0.0305850506
+            },
+            {
+              "uci": "e2e3",
+              "action": 788,
+              "n": 12267,
+              "q": 0,
+              "prior": 0.0169717185
+            },
+            {
+              "uci": "e2e4",
+              "action": 796,
+              "n": 152915,
+              "q": 0,
+              "prior": 0.211561635
+            },
+            {
+              "uci": "f2f3",
+              "action": 853,
+              "n": 1,
+              "q": 0,
+              "prior": 2.74988133e-06
+            },
+            {
+              "uci": "f2f4",
+              "action": 861,
+              "n": 0,
+              "q": 0,
+              "prior": 4.77189189e-07
+            },
+            {
+              "uci": "g2g3",
+              "action": 918,
+              "n": 7,
+              "q": 0,
+              "prior": 1.02627519e-05
+            },
+            {
+              "uci": "g2g4",
+              "action": 926,
+              "n": 1342,
+              "q": 0,
+              "prior": 0.00185686699
+            },
+            {
+              "uci": "h2h3",
+              "action": 983,
+              "n": 58,
+              "q": 0,
+              "prior": 8.10799393e-05
+            },
+            {
+              "uci": "h2h4",
+              "action": 991,
+              "n": 7,
+              "q": 0,
+              "prior": 9.78137996e-06
+            }
+          ]
+        },
+        "milestones": [
+          {
+            "simulations": 1000,
+            "neural_evals": 1001,
+            "max_depth": 8,
+            "nodes_size": 1001,
+            "nodes_capacity": 1024,
+            "edges_size": 27235,
+            "edges_capacity": 32768,
+            "memory_bytes": 1069056,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 1001,
+            "expanded_nonterminal_nodes": 1001,
+            "expanded_terminal_nodes": 0,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 0,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 0,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 1001,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "b1c3",
+            "root": [
+              {
+                "uci": "b1c3",
+                "action": 82,
+                "n": 272,
+                "q": 0,
+                "prior": 0.271253526
+              },
+              {
+                "uci": "b1a3",
+                "action": 80,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000638242054
+              },
+              {
+                "uci": "g1h3",
+                "action": 407,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000139716911
+              },
+              {
+                "uci": "g1f3",
+                "action": 405,
+                "n": 226,
+                "q": 0,
+                "prior": 0.224801809
+              },
+              {
+                "uci": "a2a3",
+                "action": 528,
+                "n": 56,
+                "q": 0,
+                "prior": 0.0562028587
+              },
+              {
+                "uci": "a2a4",
+                "action": 536,
+                "n": 0,
+                "q": 0,
+                "prior": 2.06187033e-05
+              },
+              {
+                "uci": "b2b3",
+                "action": 593,
+                "n": 0,
+                "q": 0,
+                "prior": 1.25972008e-06
+              },
+              {
+                "uci": "b2b4",
+                "action": 601,
+                "n": 0,
+                "q": 0,
+                "prior": 5.37401365e-06
+              },
+              {
+                "uci": "c2c3",
+                "action": 658,
+                "n": 45,
+                "q": 0,
+                "prior": 0.0449669659
+              },
+              {
+                "uci": "c2c4",
+                "action": 666,
+                "n": 116,
+                "q": 0,
+                "prior": 0.115647458
+              },
+              {
+                "uci": "d2d3",
+                "action": 723,
+                "n": 25,
+                "q": 0,
+                "prior": 0.0252425298
+              },
+              {
+                "uci": "d2d4",
+                "action": 731,
+                "n": 30,
+                "q": 0,
+                "prior": 0.0305850506
+              },
+              {
+                "uci": "e2e3",
+                "action": 788,
+                "n": 17,
+                "q": 0,
+                "prior": 0.0169717185
+              },
+              {
+                "uci": "e2e4",
+                "action": 796,
+                "n": 212,
+                "q": 0,
+                "prior": 0.211561635
+              },
+              {
+                "uci": "f2f3",
+                "action": 853,
+                "n": 0,
+                "q": 0,
+                "prior": 2.74988133e-06
+              },
+              {
+                "uci": "f2f4",
+                "action": 861,
+                "n": 0,
+                "q": 0,
+                "prior": 4.77189189e-07
+              },
+              {
+                "uci": "g2g3",
+                "action": 918,
+                "n": 0,
+                "q": 0,
+                "prior": 1.02627519e-05
+              },
+              {
+                "uci": "g2g4",
+                "action": 926,
+                "n": 1,
+                "q": 0,
+                "prior": 0.00185686699
+              },
+              {
+                "uci": "h2h3",
+                "action": 983,
+                "n": 0,
+                "q": 0,
+                "prior": 8.10799393e-05
+              },
+              {
+                "uci": "h2h4",
+                "action": 991,
+                "n": 0,
+                "q": 0,
+                "prior": 9.78137996e-06
+              }
+            ]
+          },
+          {
+            "simulations": 8000,
+            "neural_evals": 8001,
+            "max_depth": 13,
+            "nodes_size": 8001,
+            "nodes_capacity": 8192,
+            "edges_size": 228490,
+            "edges_capacity": 262144,
+            "memory_bytes": 8552448,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 8001,
+            "expanded_nonterminal_nodes": 8001,
+            "expanded_terminal_nodes": 0,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 0,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 0,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 8001,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "b1c3",
+            "root": [
+              {
+                "uci": "b1c3",
+                "action": 82,
+                "n": 2171,
+                "q": 0,
+                "prior": 0.271253526
+              },
+              {
+                "uci": "b1a3",
+                "action": 80,
+                "n": 5,
+                "q": 0,
+                "prior": 0.000638242054
+              },
+              {
+                "uci": "g1h3",
+                "action": 407,
+                "n": 1,
+                "q": 0,
+                "prior": 0.000139716911
+              },
+              {
+                "uci": "g1f3",
+                "action": 405,
+                "n": 1800,
+                "q": 0,
+                "prior": 0.224801809
+              },
+              {
+                "uci": "a2a3",
+                "action": 528,
+                "n": 450,
+                "q": 0,
+                "prior": 0.0562028587
+              },
+              {
+                "uci": "a2a4",
+                "action": 536,
+                "n": 0,
+                "q": 0,
+                "prior": 2.06187033e-05
+              },
+              {
+                "uci": "b2b3",
+                "action": 593,
+                "n": 0,
+                "q": 0,
+                "prior": 1.25972008e-06
+              },
+              {
+                "uci": "b2b4",
+                "action": 601,
+                "n": 0,
+                "q": 0,
+                "prior": 5.37401365e-06
+              },
+              {
+                "uci": "c2c3",
+                "action": 658,
+                "n": 360,
+                "q": 0,
+                "prior": 0.0449669659
+              },
+              {
+                "uci": "c2c4",
+                "action": 666,
+                "n": 925,
+                "q": 0,
+                "prior": 0.115647458
+              },
+              {
+                "uci": "d2d3",
+                "action": 723,
+                "n": 202,
+                "q": 0,
+                "prior": 0.0252425298
+              },
+              {
+                "uci": "d2d4",
+                "action": 731,
+                "n": 244,
+                "q": 0,
+                "prior": 0.0305850506
+              },
+              {
+                "uci": "e2e3",
+                "action": 788,
+                "n": 135,
+                "q": 0,
+                "prior": 0.0169717185
+              },
+              {
+                "uci": "e2e4",
+                "action": 796,
+                "n": 1693,
+                "q": 0,
+                "prior": 0.211561635
+              },
+              {
+                "uci": "f2f3",
+                "action": 853,
+                "n": 0,
+                "q": 0,
+                "prior": 2.74988133e-06
+              },
+              {
+                "uci": "f2f4",
+                "action": 861,
+                "n": 0,
+                "q": 0,
+                "prior": 4.77189189e-07
+              },
+              {
+                "uci": "g2g3",
+                "action": 918,
+                "n": 0,
+                "q": 0,
+                "prior": 1.02627519e-05
+              },
+              {
+                "uci": "g2g4",
+                "action": 926,
+                "n": 14,
+                "q": 0,
+                "prior": 0.00185686699
+              },
+              {
+                "uci": "h2h3",
+                "action": 983,
+                "n": 0,
+                "q": 0,
+                "prior": 8.10799393e-05
+              },
+              {
+                "uci": "h2h4",
+                "action": 991,
+                "n": 0,
+                "q": 0,
+                "prior": 9.78137996e-06
+              }
+            ]
+          },
+          {
+            "simulations": 65000,
+            "neural_evals": 65001,
+            "max_depth": 20,
+            "nodes_size": 65001,
+            "nodes_capacity": 65536,
+            "edges_size": 1924549,
+            "edges_capacity": 2056192,
+            "memory_bytes": 67108864,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 65001,
+            "expanded_nonterminal_nodes": 65001,
+            "expanded_terminal_nodes": 0,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 0,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 0,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 65001,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "b1c3",
+            "root": [
+              {
+                "uci": "b1c3",
+                "action": 82,
+                "n": 17633,
+                "q": 0,
+                "prior": 0.271253526
+              },
+              {
+                "uci": "b1a3",
+                "action": 80,
+                "n": 41,
+                "q": 0,
+                "prior": 0.000638242054
+              },
+              {
+                "uci": "g1h3",
+                "action": 407,
+                "n": 9,
+                "q": 0,
+                "prior": 0.000139716911
+              },
+              {
+                "uci": "g1f3",
+                "action": 405,
+                "n": 14613,
+                "q": 0,
+                "prior": 0.224801809
+              },
+              {
+                "uci": "a2a3",
+                "action": 528,
+                "n": 3653,
+                "q": 0,
+                "prior": 0.0562028587
+              },
+              {
+                "uci": "a2a4",
+                "action": 536,
+                "n": 1,
+                "q": 0,
+                "prior": 2.06187033e-05
+              },
+              {
+                "uci": "b2b3",
+                "action": 593,
+                "n": 0,
+                "q": 0,
+                "prior": 1.25972008e-06
+              },
+              {
+                "uci": "b2b4",
+                "action": 601,
+                "n": 0,
+                "q": 0,
+                "prior": 5.37401365e-06
+              },
+              {
+                "uci": "c2c3",
+                "action": 658,
+                "n": 2923,
+                "q": 0,
+                "prior": 0.0449669659
+              },
+              {
+                "uci": "c2c4",
+                "action": 666,
+                "n": 7518,
+                "q": 0,
+                "prior": 0.115647458
+              },
+              {
+                "uci": "d2d3",
+                "action": 723,
+                "n": 1640,
+                "q": 0,
+                "prior": 0.0252425298
+              },
+              {
+                "uci": "d2d4",
+                "action": 731,
+                "n": 1988,
+                "q": 0,
+                "prior": 0.0305850506
+              },
+              {
+                "uci": "e2e3",
+                "action": 788,
+                "n": 1103,
+                "q": 0,
+                "prior": 0.0169717185
+              },
+              {
+                "uci": "e2e4",
+                "action": 796,
+                "n": 13753,
+                "q": 0,
+                "prior": 0.211561635
+              },
+              {
+                "uci": "f2f3",
+                "action": 853,
+                "n": 0,
+                "q": 0,
+                "prior": 2.74988133e-06
+              },
+              {
+                "uci": "f2f4",
+                "action": 861,
+                "n": 0,
+                "q": 0,
+                "prior": 4.77189189e-07
+              },
+              {
+                "uci": "g2g3",
+                "action": 918,
+                "n": 0,
+                "q": 0,
+                "prior": 1.02627519e-05
+              },
+              {
+                "uci": "g2g4",
+                "action": 926,
+                "n": 120,
+                "q": 0,
+                "prior": 0.00185686699
+              },
+              {
+                "uci": "h2h3",
+                "action": 983,
+                "n": 5,
+                "q": 0,
+                "prior": 8.10799393e-05
+              },
+              {
+                "uci": "h2h4",
+                "action": 991,
+                "n": 0,
+                "q": 0,
+                "prior": 9.78137996e-06
+              }
+            ]
+          },
+          {
+            "simulations": 65536,
+            "neural_evals": 65537,
+            "max_depth": 20,
+            "nodes_size": 65536,
+            "nodes_capacity": 65536,
+            "edges_size": 1940709,
+            "edges_capacity": 2056192,
+            "memory_bytes": 67108864,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 65536,
+            "expanded_nonterminal_nodes": 65536,
+            "expanded_terminal_nodes": 0,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 1,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 1,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 65536,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "b1c3",
+            "root": [
+              {
+                "uci": "b1c3",
+                "action": 82,
+                "n": 17779,
+                "q": 0,
+                "prior": 0.271253526
+              },
+              {
+                "uci": "b1a3",
+                "action": 80,
+                "n": 41,
+                "q": 0,
+                "prior": 0.000638242054
+              },
+              {
+                "uci": "g1h3",
+                "action": 407,
+                "n": 9,
+                "q": 0,
+                "prior": 0.000139716911
+              },
+              {
+                "uci": "g1f3",
+                "action": 405,
+                "n": 14734,
+                "q": 0,
+                "prior": 0.224801809
+              },
+              {
+                "uci": "a2a3",
+                "action": 528,
+                "n": 3683,
+                "q": 0,
+                "prior": 0.0562028587
+              },
+              {
+                "uci": "a2a4",
+                "action": 536,
+                "n": 1,
+                "q": 0,
+                "prior": 2.06187033e-05
+              },
+              {
+                "uci": "b2b3",
+                "action": 593,
+                "n": 0,
+                "q": 0,
+                "prior": 1.25972008e-06
+              },
+              {
+                "uci": "b2b4",
+                "action": 601,
+                "n": 0,
+                "q": 0,
+                "prior": 5.37401365e-06
+              },
+              {
+                "uci": "c2c3",
+                "action": 658,
+                "n": 2947,
+                "q": 0,
+                "prior": 0.0449669659
+              },
+              {
+                "uci": "c2c4",
+                "action": 666,
+                "n": 7580,
+                "q": 0,
+                "prior": 0.115647458
+              },
+              {
+                "uci": "d2d3",
+                "action": 723,
+                "n": 1654,
+                "q": 0,
+                "prior": 0.0252425298
+              },
+              {
+                "uci": "d2d4",
+                "action": 731,
+                "n": 2004,
+                "q": 0,
+                "prior": 0.0305850506
+              },
+              {
+                "uci": "e2e3",
+                "action": 788,
+                "n": 1112,
+                "q": 0,
+                "prior": 0.0169717185
+              },
+              {
+                "uci": "e2e4",
+                "action": 796,
+                "n": 13866,
+                "q": 0,
+                "prior": 0.211561635
+              },
+              {
+                "uci": "f2f3",
+                "action": 853,
+                "n": 0,
+                "q": 0,
+                "prior": 2.74988133e-06
+              },
+              {
+                "uci": "f2f4",
+                "action": 861,
+                "n": 0,
+                "q": 0,
+                "prior": 4.77189189e-07
+              },
+              {
+                "uci": "g2g3",
+                "action": 918,
+                "n": 0,
+                "q": 0,
+                "prior": 1.02627519e-05
+              },
+              {
+                "uci": "g2g4",
+                "action": 926,
+                "n": 121,
+                "q": 0,
+                "prior": 0.00185686699
+              },
+              {
+                "uci": "h2h3",
+                "action": 983,
+                "n": 5,
+                "q": 0,
+                "prior": 8.10799393e-05
+              },
+              {
+                "uci": "h2h4",
+                "action": 991,
+                "n": 0,
+                "q": 0,
+                "prior": 9.78137996e-06
+              }
+            ]
+          },
+          {
+            "simulations": 524288,
+            "neural_evals": 524289,
+            "max_depth": 21,
+            "nodes_size": 65536,
+            "nodes_capacity": 65536,
+            "edges_size": 1940709,
+            "edges_capacity": 2056192,
+            "memory_bytes": 67108864,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 65536,
+            "expanded_nonterminal_nodes": 65536,
+            "expanded_terminal_nodes": 0,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 458753,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 458753,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 65536,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "b1c3",
+            "root": [
+              {
+                "uci": "b1c3",
+                "action": 82,
+                "n": 142217,
+                "q": 0,
+                "prior": 0.271253526
+              },
+              {
+                "uci": "b1a3",
+                "action": 80,
+                "n": 334,
+                "q": 0,
+                "prior": 0.000638242054
+              },
+              {
+                "uci": "g1h3",
+                "action": 407,
+                "n": 73,
+                "q": 0,
+                "prior": 0.000139716911
+              },
+              {
+                "uci": "g1f3",
+                "action": 405,
+                "n": 117862,
+                "q": 0,
+                "prior": 0.224801809
+              },
+              {
+                "uci": "a2a3",
+                "action": 528,
+                "n": 29467,
+                "q": 0,
+                "prior": 0.0562028587
+              },
+              {
+                "uci": "a2a4",
+                "action": 536,
+                "n": 10,
+                "q": 0,
+                "prior": 2.06187033e-05
+              },
+              {
+                "uci": "b2b3",
+                "action": 593,
+                "n": 0,
+                "q": 0,
+                "prior": 1.25972008e-06
+              },
+              {
+                "uci": "b2b4",
+                "action": 601,
+                "n": 2,
+                "q": 0,
+                "prior": 5.37401365e-06
+              },
+              {
+                "uci": "c2c3",
+                "action": 658,
+                "n": 23576,
+                "q": 0,
+                "prior": 0.0449669659
+              },
+              {
+                "uci": "c2c4",
+                "action": 666,
+                "n": 60633,
+                "q": 0,
+                "prior": 0.115647458
+              },
+              {
+                "uci": "d2d3",
+                "action": 723,
+                "n": 13234,
+                "q": 0,
+                "prior": 0.0252425298
+              },
+              {
+                "uci": "d2d4",
+                "action": 731,
+                "n": 16035,
+                "q": 0,
+                "prior": 0.0305850506
+              },
+              {
+                "uci": "e2e3",
+                "action": 788,
+                "n": 8898,
+                "q": 0,
+                "prior": 0.0169717185
+              },
+              {
+                "uci": "e2e4",
+                "action": 796,
+                "n": 110921,
+                "q": 0,
+                "prior": 0.211561635
+              },
+              {
+                "uci": "f2f3",
+                "action": 853,
+                "n": 1,
+                "q": 0,
+                "prior": 2.74988133e-06
+              },
+              {
+                "uci": "f2f4",
+                "action": 861,
+                "n": 0,
+                "q": 0,
+                "prior": 4.77189189e-07
+              },
+              {
+                "uci": "g2g3",
+                "action": 918,
+                "n": 5,
+                "q": 0,
+                "prior": 1.02627519e-05
+              },
+              {
+                "uci": "g2g4",
+                "action": 926,
+                "n": 973,
+                "q": 0,
+                "prior": 0.00185686699
+              },
+              {
+                "uci": "h2h3",
+                "action": 983,
+                "n": 42,
+                "q": 0,
+                "prior": 8.10799393e-05
+              },
+              {
+                "uci": "h2h4",
+                "action": 991,
+                "n": 5,
+                "q": 0,
+                "prior": 9.78137996e-06
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "before_Rg1_1s",
+      "moves": [
+        "c2c3",
+        "g8f6",
+        "a2a3",
+        "d7d6",
+        "g1f3",
+        "e7e6"
+      ],
+      "summary": {
+        "case": "before_Rg1_1s",
+        "fen": "rnbqkb1r/ppp2ppp/3ppn2/8/8/P1P2N2/1P1PPPPP/RNBQKB1R w KQkq - 0 4",
+        "simulations": 52995,
+        "bestmove": "e2e4",
+        "root_value": 0,
+        "memory_bytes": 67108864,
+        "nodes_size": 32768,
+        "nodes_capacity": 32768,
+        "max_depth": 21,
+        "child_fail_node_limit": 0,
+        "child_fail_byte_capacity": 19716,
+        "expansion_fail_byte_capacity": 0,
+        "nn_non_retained": 19685,
+        "nn_resident_unexpanded_repeat": 0,
+        "root_top5": [
+          {
+            "uci": "e2e4",
+            "action": 796,
+            "n": 25849,
+            "q": 0,
+            "prior": 0.487686962
+          },
+          {
+            "uci": "f3h4",
+            "action": 1375,
+            "n": 16291,
+            "q": 0,
+            "prior": 0.307362646
+          },
+          {
+            "uci": "d2d4",
+            "action": 731,
+            "n": 4158,
+            "q": 0,
+            "prior": 0.0784519315
+          },
+          {
+            "uci": "d2d3",
+            "action": 723,
+            "n": 3548,
+            "q": 0,
+            "prior": 0.0669565275
+          },
+          {
+            "uci": "e2e3",
+            "action": 788,
+            "n": 2461,
+            "q": 0,
+            "prior": 0.0464367047
+          }
+        ]
+      },
+      "raw": {
+        "bestmove": "e2e4",
+        "simulations": 52995,
+        "value": 0,
+        "elapsed_seconds": 1.0024609,
+        "limits": {
+          "max_nodes": 100000,
+          "max_tree_bytes": 67108864,
+          "seed": 2026,
+          "noise": 0,
+          "temperature": 0,
+          "proof_nodes": 0,
+          "backend": "SIMD"
+        },
+        "audit": {
+          "simulations": 52995,
+          "neural_evals": 52405,
+          "max_depth": 21,
+          "nodes_size": 32768,
+          "nodes_capacity": 32768,
+          "edges_size": 1097453,
+          "edges_capacity": 2076672,
+          "memory_bytes": 67108864,
+          "node_struct_bytes": 20,
+          "edge_struct_bytes": 32,
+          "expanded_nodes": 32768,
+          "expanded_nonterminal_nodes": 32720,
+          "expanded_terminal_nodes": 48,
+          "child_fail_node_limit": 0,
+          "child_fail_byte_capacity": 19716,
+          "expansion_fail_byte_capacity": 0,
+          "nn_non_retained": 19685,
+          "nn_resident_unexpanded_repeat": 0,
+          "nn_resident_first": 32720,
+          "terminal_non_retained": 31,
+          "root_value": 0,
+          "bestmove": "e2e4",
+          "root": [
+            {
+              "uci": "a1a2",
+              "action": 8,
+              "n": 17,
+              "q": 0,
+              "prior": 0.000328600727
+            },
+            {
+              "uci": "d1c2",
+              "action": 202,
+              "n": 76,
+              "q": 0,
+              "prior": 0.00145241467
+            },
+            {
+              "uci": "d1b3",
+              "action": 209,
+              "n": 0,
+              "q": 0,
+              "prior": 1.270697e-06
+            },
+            {
+              "uci": "d1a4",
+              "action": 216,
+              "n": 0,
+              "q": 0,
+              "prior": 1.46713853e-06
+            },
+            {
+              "uci": "h1g1",
+              "action": 454,
+              "n": 0,
+              "q": 0,
+              "prior": 1.84741602e-05
+            },
+            {
+              "uci": "b2b3",
+              "action": 593,
+              "n": 0,
+              "q": 0,
+              "prior": 2.65712333e-06
+            },
+            {
+              "uci": "b2b4",
+              "action": 601,
+              "n": 0,
+              "q": 0,
+              "prior": 1.26645127e-05
+            },
+            {
+              "uci": "d2d3",
+              "action": 723,
+              "n": 3548,
+              "q": 0,
+              "prior": 0.0669565275
+            },
+            {
+              "uci": "d2d4",
+              "action": 731,
+              "n": 4158,
+              "q": 0,
+              "prior": 0.0784519315
+            },
+            {
+              "uci": "e2e3",
+              "action": 788,
+              "n": 2461,
+              "q": 0,
+              "prior": 0.0464367047
+            },
+            {
+              "uci": "e2e4",
+              "action": 796,
+              "n": 25849,
+              "q": 0,
+              "prior": 0.487686962
+            },
+            {
+              "uci": "g2g3",
+              "action": 918,
+              "n": 1,
+              "q": 0,
+              "prior": 2.11620918e-05
+            },
+            {
+              "uci": "g2g4",
+              "action": 926,
+              "n": 190,
+              "q": 0,
+              "prior": 0.00359774637
+            },
+            {
+              "uci": "h2h3",
+              "action": 983,
+              "n": 12,
+              "q": 0,
+              "prior": 0.000233885308
+            },
+            {
+              "uci": "h2h4",
+              "action": 991,
+              "n": 1,
+              "q": 0,
+              "prior": 2.36322358e-05
+            },
+            {
+              "uci": "a3a4",
+              "action": 1048,
+              "n": 320,
+              "q": 0,
+              "prior": 0.00604840741
+            },
+            {
+              "uci": "c3c4",
+              "action": 1178,
+              "n": 28,
+              "q": 0,
+              "prior": 0.000530172605
+            },
+            {
+              "uci": "f3g5",
+              "action": 1382,
+              "n": 3,
+              "q": 0,
+              "prior": 5.79273437e-05
+            },
+            {
+              "uci": "f3h4",
+              "action": 1375,
+              "n": 16291,
+              "q": 0,
+              "prior": 0.307362646
+            },
+            {
+              "uci": "f3e5",
+              "action": 1380,
+              "n": 12,
+              "q": 0,
+              "prior": 0.000234063598
+            },
+            {
+              "uci": "f3d4",
+              "action": 1371,
+              "n": 1,
+              "q": 0,
+              "prior": 2.72561319e-05
+            },
+            {
+              "uci": "f3g1",
+              "action": 1350,
+              "n": 27,
+              "q": 0,
+              "prior": 0.000513618928
+            }
+          ]
+        },
+        "milestones": [
+          {
+            "simulations": 1000,
+            "neural_evals": 1000,
+            "max_depth": 13,
+            "nodes_size": 1001,
+            "nodes_capacity": 1024,
+            "edges_size": 31559,
+            "edges_capacity": 32768,
+            "memory_bytes": 1069056,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 1001,
+            "expanded_nonterminal_nodes": 1000,
+            "expanded_terminal_nodes": 1,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 0,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 0,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 1000,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "e2e4",
+            "root": [
+              {
+                "uci": "a1a2",
+                "action": 8,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000328600727
+              },
+              {
+                "uci": "d1c2",
+                "action": 202,
+                "n": 1,
+                "q": 0,
+                "prior": 0.00145241467
+              },
+              {
+                "uci": "d1b3",
+                "action": 209,
+                "n": 0,
+                "q": 0,
+                "prior": 1.270697e-06
+              },
+              {
+                "uci": "d1a4",
+                "action": 216,
+                "n": 0,
+                "q": 0,
+                "prior": 1.46713853e-06
+              },
+              {
+                "uci": "h1g1",
+                "action": 454,
+                "n": 0,
+                "q": 0,
+                "prior": 1.84741602e-05
+              },
+              {
+                "uci": "b2b3",
+                "action": 593,
+                "n": 0,
+                "q": 0,
+                "prior": 2.65712333e-06
+              },
+              {
+                "uci": "b2b4",
+                "action": 601,
+                "n": 0,
+                "q": 0,
+                "prior": 1.26645127e-05
+              },
+              {
+                "uci": "d2d3",
+                "action": 723,
+                "n": 67,
+                "q": 0,
+                "prior": 0.0669565275
+              },
+              {
+                "uci": "d2d4",
+                "action": 731,
+                "n": 78,
+                "q": 0,
+                "prior": 0.0784519315
+              },
+              {
+                "uci": "e2e3",
+                "action": 788,
+                "n": 46,
+                "q": 0,
+                "prior": 0.0464367047
+              },
+              {
+                "uci": "e2e4",
+                "action": 796,
+                "n": 490,
+                "q": 0,
+                "prior": 0.487686962
+              },
+              {
+                "uci": "g2g3",
+                "action": 918,
+                "n": 0,
+                "q": 0,
+                "prior": 2.11620918e-05
+              },
+              {
+                "uci": "g2g4",
+                "action": 926,
+                "n": 3,
+                "q": 0,
+                "prior": 0.00359774637
+              },
+              {
+                "uci": "h2h3",
+                "action": 983,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000233885308
+              },
+              {
+                "uci": "h2h4",
+                "action": 991,
+                "n": 0,
+                "q": 0,
+                "prior": 2.36322358e-05
+              },
+              {
+                "uci": "a3a4",
+                "action": 1048,
+                "n": 6,
+                "q": 0,
+                "prior": 0.00604840741
+              },
+              {
+                "uci": "c3c4",
+                "action": 1178,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000530172605
+              },
+              {
+                "uci": "f3g5",
+                "action": 1382,
+                "n": 0,
+                "q": 0,
+                "prior": 5.79273437e-05
+              },
+              {
+                "uci": "f3h4",
+                "action": 1375,
+                "n": 309,
+                "q": 0,
+                "prior": 0.307362646
+              },
+              {
+                "uci": "f3e5",
+                "action": 1380,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000234063598
+              },
+              {
+                "uci": "f3d4",
+                "action": 1371,
+                "n": 0,
+                "q": 0,
+                "prior": 2.72561319e-05
+              },
+              {
+                "uci": "f3g1",
+                "action": 1350,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000513618928
+              }
+            ]
+          },
+          {
+            "simulations": 8000,
+            "neural_evals": 7932,
+            "max_depth": 17,
+            "nodes_size": 7946,
+            "nodes_capacity": 8192,
+            "edges_size": 260850,
+            "edges_capacity": 262144,
+            "memory_bytes": 8552448,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 7946,
+            "expanded_nonterminal_nodes": 7932,
+            "expanded_terminal_nodes": 14,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 0,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 0,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 7932,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "e2e4",
+            "root": [
+              {
+                "uci": "a1a2",
+                "action": 8,
+                "n": 2,
+                "q": 0,
+                "prior": 0.000328600727
+              },
+              {
+                "uci": "d1c2",
+                "action": 202,
+                "n": 11,
+                "q": 0,
+                "prior": 0.00145241467
+              },
+              {
+                "uci": "d1b3",
+                "action": 209,
+                "n": 0,
+                "q": 0,
+                "prior": 1.270697e-06
+              },
+              {
+                "uci": "d1a4",
+                "action": 216,
+                "n": 0,
+                "q": 0,
+                "prior": 1.46713853e-06
+              },
+              {
+                "uci": "h1g1",
+                "action": 454,
+                "n": 0,
+                "q": 0,
+                "prior": 1.84741602e-05
+              },
+              {
+                "uci": "b2b3",
+                "action": 593,
+                "n": 0,
+                "q": 0,
+                "prior": 2.65712333e-06
+              },
+              {
+                "uci": "b2b4",
+                "action": 601,
+                "n": 0,
+                "q": 0,
+                "prior": 1.26645127e-05
+              },
+              {
+                "uci": "d2d3",
+                "action": 723,
+                "n": 536,
+                "q": 0,
+                "prior": 0.0669565275
+              },
+              {
+                "uci": "d2d4",
+                "action": 731,
+                "n": 628,
+                "q": 0,
+                "prior": 0.0784519315
+              },
+              {
+                "uci": "e2e3",
+                "action": 788,
+                "n": 371,
+                "q": 0,
+                "prior": 0.0464367047
+              },
+              {
+                "uci": "e2e4",
+                "action": 796,
+                "n": 3905,
+                "q": 0,
+                "prior": 0.487686962
+              },
+              {
+                "uci": "g2g3",
+                "action": 918,
+                "n": 0,
+                "q": 0,
+                "prior": 2.11620918e-05
+              },
+              {
+                "uci": "g2g4",
+                "action": 926,
+                "n": 28,
+                "q": 0,
+                "prior": 0.00359774637
+              },
+              {
+                "uci": "h2h3",
+                "action": 983,
+                "n": 1,
+                "q": 0,
+                "prior": 0.000233885308
+              },
+              {
+                "uci": "h2h4",
+                "action": 991,
+                "n": 0,
+                "q": 0,
+                "prior": 2.36322358e-05
+              },
+              {
+                "uci": "a3a4",
+                "action": 1048,
+                "n": 48,
+                "q": 0,
+                "prior": 0.00604840741
+              },
+              {
+                "uci": "c3c4",
+                "action": 1178,
+                "n": 4,
+                "q": 0,
+                "prior": 0.000530172605
+              },
+              {
+                "uci": "f3g5",
+                "action": 1382,
+                "n": 0,
+                "q": 0,
+                "prior": 5.79273437e-05
+              },
+              {
+                "uci": "f3h4",
+                "action": 1375,
+                "n": 2461,
+                "q": 0,
+                "prior": 0.307362646
+              },
+              {
+                "uci": "f3e5",
+                "action": 1380,
+                "n": 1,
+                "q": 0,
+                "prior": 0.000234063598
+              },
+              {
+                "uci": "f3d4",
+                "action": 1371,
+                "n": 0,
+                "q": 0,
+                "prior": 2.72561319e-05
+              },
+              {
+                "uci": "f3g1",
+                "action": 1350,
+                "n": 4,
+                "q": 0,
+                "prior": 0.000513618928
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "before_Ra6_10s",
+      "moves": [
+        "g2g4",
+        "a7a5",
+        "c2c3"
+      ],
+      "summary": {
+        "case": "before_Ra6_10s",
+        "fen": "rnbqkbnr/1ppppppp/8/p7/6P1/2P5/PP1PPP1P/RNBQKBNR b KQkq - 0 2",
+        "simulations": 717076,
+        "bestmove": "g8f6",
+        "root_value": 0,
+        "memory_bytes": 67108864,
+        "nodes_size": 65536,
+        "nodes_capacity": 65536,
+        "max_depth": 15,
+        "child_fail_node_limit": 0,
+        "child_fail_byte_capacity": 651541,
+        "expansion_fail_byte_capacity": 0,
+        "nn_non_retained": 651541,
+        "nn_resident_unexpanded_repeat": 0,
+        "root_top5": [
+          {
+            "uci": "g8f6",
+            "action": 4013,
+            "n": 207081,
+            "q": 0,
+            "prior": 0.288781554
+          },
+          {
+            "uci": "d7d5",
+            "action": 3299,
+            "n": 182090,
+            "q": 0,
+            "prior": 0.253930748
+          },
+          {
+            "uci": "e7e6",
+            "action": 3372,
+            "n": 117719,
+            "q": 0,
+            "prior": 0.164163709
+          },
+          {
+            "uci": "b7b6",
+            "action": 3177,
+            "n": 94742,
+            "q": 0,
+            "prior": 0.132122144
+          },
+          {
+            "uci": "d7d6",
+            "action": 3307,
+            "n": 64510,
+            "q": 0,
+            "prior": 0.089962177
+          }
+        ]
+      },
+      "raw": {
+        "bestmove": "g8f6",
+        "simulations": 717076,
+        "value": 0,
+        "elapsed_seconds": 11.6551088,
+        "limits": {
+          "max_nodes": 100000,
+          "max_tree_bytes": 67108864,
+          "seed": 2026,
+          "noise": 0,
+          "temperature": 0,
+          "proof_nodes": 0,
+          "backend": "SIMD"
+        },
+        "audit": {
+          "simulations": 717076,
+          "neural_evals": 717077,
+          "max_depth": 15,
+          "nodes_size": 65536,
+          "nodes_capacity": 65536,
+          "edges_size": 1905216,
+          "edges_capacity": 2056192,
+          "memory_bytes": 67108864,
+          "node_struct_bytes": 20,
+          "edge_struct_bytes": 32,
+          "expanded_nodes": 65536,
+          "expanded_nonterminal_nodes": 65536,
+          "expanded_terminal_nodes": 0,
+          "child_fail_node_limit": 0,
+          "child_fail_byte_capacity": 651541,
+          "expansion_fail_byte_capacity": 0,
+          "nn_non_retained": 651541,
+          "nn_resident_unexpanded_repeat": 0,
+          "nn_resident_first": 65536,
+          "terminal_non_retained": 0,
+          "root_value": 0,
+          "bestmove": "g8f6",
+          "root": [
+            {
+              "uci": "a5a4",
+              "action": 2072,
+              "n": 3,
+              "q": 0,
+              "prior": 4.30454566e-06
+            },
+            {
+              "uci": "b7b6",
+              "action": 3177,
+              "n": 94742,
+              "q": 0,
+              "prior": 0.132122144
+            },
+            {
+              "uci": "b7b5",
+              "action": 3169,
+              "n": 12247,
+              "q": 0,
+              "prior": 0.0170791727
+            },
+            {
+              "uci": "c7c6",
+              "action": 3242,
+              "n": 2301,
+              "q": 0,
+              "prior": 0.00320902956
+            },
+            {
+              "uci": "c7c5",
+              "action": 3234,
+              "n": 880,
+              "q": 0,
+              "prior": 0.00122824416
+            },
+            {
+              "uci": "d7d6",
+              "action": 3307,
+              "n": 64510,
+              "q": 0,
+              "prior": 0.089962177
+            },
+            {
+              "uci": "d7d5",
+              "action": 3299,
+              "n": 182090,
+              "q": 0,
+              "prior": 0.253930748
+            },
+            {
+              "uci": "e7e6",
+              "action": 3372,
+              "n": 117719,
+              "q": 0,
+              "prior": 0.164163709
+            },
+            {
+              "uci": "e7e5",
+              "action": 3364,
+              "n": 15228,
+              "q": 0,
+              "prior": 0.0212373324
+            },
+            {
+              "uci": "f7f6",
+              "action": 3437,
+              "n": 217,
+              "q": 0,
+              "prior": 0.00030283042
+            },
+            {
+              "uci": "f7f5",
+              "action": 3429,
+              "n": 23,
+              "q": 0,
+              "prior": 3.34658762e-05
+            },
+            {
+              "uci": "g7g6",
+              "action": 3502,
+              "n": 6276,
+              "q": 0,
+              "prior": 0.00875241216
+            },
+            {
+              "uci": "g7g5",
+              "action": 3494,
+              "n": 5364,
+              "q": 0,
+              "prior": 0.00748092635
+            },
+            {
+              "uci": "h7h6",
+              "action": 3567,
+              "n": 5076,
+              "q": 0,
+              "prior": 0.00707958266
+            },
+            {
+              "uci": "h7h5",
+              "action": 3559,
+              "n": 1,
+              "q": 0,
+              "prior": 2.27113492e-06
+            },
+            {
+              "uci": "a8a7",
+              "action": 3632,
+              "n": 126,
+              "q": 0,
+              "prior": 0.000176635294
+            },
+            {
+              "uci": "a8a6",
+              "action": 3624,
+              "n": 1714,
+              "q": 0,
+              "prior": 0.00239060726
+            },
+            {
+              "uci": "b8c6",
+              "action": 3690,
+              "n": 1464,
+              "q": 0,
+              "prior": 0.00204260391
+            },
+            {
+              "uci": "b8a6",
+              "action": 3688,
+              "n": 0,
+              "q": 0,
+              "prior": 5.98018289e-07
+            },
+            {
+              "uci": "g8h6",
+              "action": 4015,
+              "n": 14,
+              "q": 0,
+              "prior": 1.97050049e-05
+            },
+            {
+              "uci": "g8f6",
+              "action": 4013,
+              "n": 207081,
+              "q": 0,
+              "prior": 0.288781554
+            }
+          ]
+        },
+        "milestones": [
+          {
+            "simulations": 1000,
+            "neural_evals": 1001,
+            "max_depth": 8,
+            "nodes_size": 1001,
+            "nodes_capacity": 1024,
+            "edges_size": 27286,
+            "edges_capacity": 32768,
+            "memory_bytes": 1069056,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 1001,
+            "expanded_nonterminal_nodes": 1001,
+            "expanded_terminal_nodes": 0,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 0,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 0,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 1001,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "g8f6",
+            "root": [
+              {
+                "uci": "a5a4",
+                "action": 2072,
+                "n": 0,
+                "q": 0,
+                "prior": 4.30454566e-06
+              },
+              {
+                "uci": "b7b6",
+                "action": 3177,
+                "n": 132,
+                "q": 0,
+                "prior": 0.132122144
+              },
+              {
+                "uci": "b7b5",
+                "action": 3169,
+                "n": 17,
+                "q": 0,
+                "prior": 0.0170791727
+              },
+              {
+                "uci": "c7c6",
+                "action": 3242,
+                "n": 3,
+                "q": 0,
+                "prior": 0.00320902956
+              },
+              {
+                "uci": "c7c5",
+                "action": 3234,
+                "n": 1,
+                "q": 0,
+                "prior": 0.00122824416
+              },
+              {
+                "uci": "d7d6",
+                "action": 3307,
+                "n": 90,
+                "q": 0,
+                "prior": 0.089962177
+              },
+              {
+                "uci": "d7d5",
+                "action": 3299,
+                "n": 255,
+                "q": 0,
+                "prior": 0.253930748
+              },
+              {
+                "uci": "e7e6",
+                "action": 3372,
+                "n": 165,
+                "q": 0,
+                "prior": 0.164163709
+              },
+              {
+                "uci": "e7e5",
+                "action": 3364,
+                "n": 21,
+                "q": 0,
+                "prior": 0.0212373324
+              },
+              {
+                "uci": "f7f6",
+                "action": 3437,
+                "n": 0,
+                "q": 0,
+                "prior": 0.00030283042
+              },
+              {
+                "uci": "f7f5",
+                "action": 3429,
+                "n": 0,
+                "q": 0,
+                "prior": 3.34658762e-05
+              },
+              {
+                "uci": "g7g6",
+                "action": 3502,
+                "n": 8,
+                "q": 0,
+                "prior": 0.00875241216
+              },
+              {
+                "uci": "g7g5",
+                "action": 3494,
+                "n": 7,
+                "q": 0,
+                "prior": 0.00748092635
+              },
+              {
+                "uci": "h7h6",
+                "action": 3567,
+                "n": 7,
+                "q": 0,
+                "prior": 0.00707958266
+              },
+              {
+                "uci": "h7h5",
+                "action": 3559,
+                "n": 0,
+                "q": 0,
+                "prior": 2.27113492e-06
+              },
+              {
+                "uci": "a8a7",
+                "action": 3632,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000176635294
+              },
+              {
+                "uci": "a8a6",
+                "action": 3624,
+                "n": 2,
+                "q": 0,
+                "prior": 0.00239060726
+              },
+              {
+                "uci": "b8c6",
+                "action": 3690,
+                "n": 2,
+                "q": 0,
+                "prior": 0.00204260391
+              },
+              {
+                "uci": "b8a6",
+                "action": 3688,
+                "n": 0,
+                "q": 0,
+                "prior": 5.98018289e-07
+              },
+              {
+                "uci": "g8h6",
+                "action": 4015,
+                "n": 0,
+                "q": 0,
+                "prior": 1.97050049e-05
+              },
+              {
+                "uci": "g8f6",
+                "action": 4013,
+                "n": 290,
+                "q": 0,
+                "prior": 0.288781554
+              }
+            ]
+          },
+          {
+            "simulations": 8000,
+            "neural_evals": 8001,
+            "max_depth": 12,
+            "nodes_size": 8001,
+            "nodes_capacity": 8192,
+            "edges_size": 225586,
+            "edges_capacity": 262144,
+            "memory_bytes": 8552448,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 8001,
+            "expanded_nonterminal_nodes": 8001,
+            "expanded_terminal_nodes": 0,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 0,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 0,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 8001,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "g8f6",
+            "root": [
+              {
+                "uci": "a5a4",
+                "action": 2072,
+                "n": 0,
+                "q": 0,
+                "prior": 4.30454566e-06
+              },
+              {
+                "uci": "b7b6",
+                "action": 3177,
+                "n": 1058,
+                "q": 0,
+                "prior": 0.132122144
+              },
+              {
+                "uci": "b7b5",
+                "action": 3169,
+                "n": 136,
+                "q": 0,
+                "prior": 0.0170791727
+              },
+              {
+                "uci": "c7c6",
+                "action": 3242,
+                "n": 25,
+                "q": 0,
+                "prior": 0.00320902956
+              },
+              {
+                "uci": "c7c5",
+                "action": 3234,
+                "n": 9,
+                "q": 0,
+                "prior": 0.00122824416
+              },
+              {
+                "uci": "d7d6",
+                "action": 3307,
+                "n": 720,
+                "q": 0,
+                "prior": 0.089962177
+              },
+              {
+                "uci": "d7d5",
+                "action": 3299,
+                "n": 2033,
+                "q": 0,
+                "prior": 0.253930748
+              },
+              {
+                "uci": "e7e6",
+                "action": 3372,
+                "n": 1314,
+                "q": 0,
+                "prior": 0.164163709
+              },
+              {
+                "uci": "e7e5",
+                "action": 3364,
+                "n": 170,
+                "q": 0,
+                "prior": 0.0212373324
+              },
+              {
+                "uci": "f7f6",
+                "action": 3437,
+                "n": 2,
+                "q": 0,
+                "prior": 0.00030283042
+              },
+              {
+                "uci": "f7f5",
+                "action": 3429,
+                "n": 0,
+                "q": 0,
+                "prior": 3.34658762e-05
+              },
+              {
+                "uci": "g7g6",
+                "action": 3502,
+                "n": 70,
+                "q": 0,
+                "prior": 0.00875241216
+              },
+              {
+                "uci": "g7g5",
+                "action": 3494,
+                "n": 59,
+                "q": 0,
+                "prior": 0.00748092635
+              },
+              {
+                "uci": "h7h6",
+                "action": 3567,
+                "n": 56,
+                "q": 0,
+                "prior": 0.00707958266
+              },
+              {
+                "uci": "h7h5",
+                "action": 3559,
+                "n": 0,
+                "q": 0,
+                "prior": 2.27113492e-06
+              },
+              {
+                "uci": "a8a7",
+                "action": 3632,
+                "n": 1,
+                "q": 0,
+                "prior": 0.000176635294
+              },
+              {
+                "uci": "a8a6",
+                "action": 3624,
+                "n": 19,
+                "q": 0,
+                "prior": 0.00239060726
+              },
+              {
+                "uci": "b8c6",
+                "action": 3690,
+                "n": 16,
+                "q": 0,
+                "prior": 0.00204260391
+              },
+              {
+                "uci": "b8a6",
+                "action": 3688,
+                "n": 0,
+                "q": 0,
+                "prior": 5.98018289e-07
+              },
+              {
+                "uci": "g8h6",
+                "action": 4015,
+                "n": 0,
+                "q": 0,
+                "prior": 1.97050049e-05
+              },
+              {
+                "uci": "g8f6",
+                "action": 4013,
+                "n": 2312,
+                "q": 0,
+                "prior": 0.288781554
+              }
+            ]
+          },
+          {
+            "simulations": 65000,
+            "neural_evals": 65001,
+            "max_depth": 14,
+            "nodes_size": 65001,
+            "nodes_capacity": 65536,
+            "edges_size": 1889489,
+            "edges_capacity": 2056192,
+            "memory_bytes": 67108864,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 65001,
+            "expanded_nonterminal_nodes": 65001,
+            "expanded_terminal_nodes": 0,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 0,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 0,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 65001,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "g8f6",
+            "root": [
+              {
+                "uci": "a5a4",
+                "action": 2072,
+                "n": 0,
+                "q": 0,
+                "prior": 4.30454566e-06
+              },
+              {
+                "uci": "b7b6",
+                "action": 3177,
+                "n": 8589,
+                "q": 0,
+                "prior": 0.132122144
+              },
+              {
+                "uci": "b7b5",
+                "action": 3169,
+                "n": 1110,
+                "q": 0,
+                "prior": 0.0170791727
+              },
+              {
+                "uci": "c7c6",
+                "action": 3242,
+                "n": 208,
+                "q": 0,
+                "prior": 0.00320902956
+              },
+              {
+                "uci": "c7c5",
+                "action": 3234,
+                "n": 79,
+                "q": 0,
+                "prior": 0.00122824416
+              },
+              {
+                "uci": "d7d6",
+                "action": 3307,
+                "n": 5848,
+                "q": 0,
+                "prior": 0.089962177
+              },
+              {
+                "uci": "d7d5",
+                "action": 3299,
+                "n": 16507,
+                "q": 0,
+                "prior": 0.253930748
+              },
+              {
+                "uci": "e7e6",
+                "action": 3372,
+                "n": 10672,
+                "q": 0,
+                "prior": 0.164163709
+              },
+              {
+                "uci": "e7e5",
+                "action": 3364,
+                "n": 1380,
+                "q": 0,
+                "prior": 0.0212373324
+              },
+              {
+                "uci": "f7f6",
+                "action": 3437,
+                "n": 19,
+                "q": 0,
+                "prior": 0.00030283042
+              },
+              {
+                "uci": "f7f5",
+                "action": 3429,
+                "n": 2,
+                "q": 0,
+                "prior": 3.34658762e-05
+              },
+              {
+                "uci": "g7g6",
+                "action": 3502,
+                "n": 568,
+                "q": 0,
+                "prior": 0.00875241216
+              },
+              {
+                "uci": "g7g5",
+                "action": 3494,
+                "n": 486,
+                "q": 0,
+                "prior": 0.00748092635
+              },
+              {
+                "uci": "h7h6",
+                "action": 3567,
+                "n": 460,
+                "q": 0,
+                "prior": 0.00707958266
+              },
+              {
+                "uci": "h7h5",
+                "action": 3559,
+                "n": 0,
+                "q": 0,
+                "prior": 2.27113492e-06
+              },
+              {
+                "uci": "a8a7",
+                "action": 3632,
+                "n": 11,
+                "q": 0,
+                "prior": 0.000176635294
+              },
+              {
+                "uci": "a8a6",
+                "action": 3624,
+                "n": 155,
+                "q": 0,
+                "prior": 0.00239060726
+              },
+              {
+                "uci": "b8c6",
+                "action": 3690,
+                "n": 132,
+                "q": 0,
+                "prior": 0.00204260391
+              },
+              {
+                "uci": "b8a6",
+                "action": 3688,
+                "n": 0,
+                "q": 0,
+                "prior": 5.98018289e-07
+              },
+              {
+                "uci": "g8h6",
+                "action": 4015,
+                "n": 1,
+                "q": 0,
+                "prior": 1.97050049e-05
+              },
+              {
+                "uci": "g8f6",
+                "action": 4013,
+                "n": 18773,
+                "q": 0,
+                "prior": 0.288781554
+              }
+            ]
+          },
+          {
+            "simulations": 65536,
+            "neural_evals": 65537,
+            "max_depth": 14,
+            "nodes_size": 65536,
+            "nodes_capacity": 65536,
+            "edges_size": 1905216,
+            "edges_capacity": 2056192,
+            "memory_bytes": 67108864,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 65536,
+            "expanded_nonterminal_nodes": 65536,
+            "expanded_terminal_nodes": 0,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 1,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 1,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 65536,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "g8f6",
+            "root": [
+              {
+                "uci": "a5a4",
+                "action": 2072,
+                "n": 0,
+                "q": 0,
+                "prior": 4.30454566e-06
+              },
+              {
+                "uci": "b7b6",
+                "action": 3177,
+                "n": 8659,
+                "q": 0,
+                "prior": 0.132122144
+              },
+              {
+                "uci": "b7b5",
+                "action": 3169,
+                "n": 1119,
+                "q": 0,
+                "prior": 0.0170791727
+              },
+              {
+                "uci": "c7c6",
+                "action": 3242,
+                "n": 210,
+                "q": 0,
+                "prior": 0.00320902956
+              },
+              {
+                "uci": "c7c5",
+                "action": 3234,
+                "n": 80,
+                "q": 0,
+                "prior": 0.00122824416
+              },
+              {
+                "uci": "d7d6",
+                "action": 3307,
+                "n": 5896,
+                "q": 0,
+                "prior": 0.089962177
+              },
+              {
+                "uci": "d7d5",
+                "action": 3299,
+                "n": 16643,
+                "q": 0,
+                "prior": 0.253930748
+              },
+              {
+                "uci": "e7e6",
+                "action": 3372,
+                "n": 10760,
+                "q": 0,
+                "prior": 0.164163709
+              },
+              {
+                "uci": "e7e5",
+                "action": 3364,
+                "n": 1392,
+                "q": 0,
+                "prior": 0.0212373324
+              },
+              {
+                "uci": "f7f6",
+                "action": 3437,
+                "n": 19,
+                "q": 0,
+                "prior": 0.00030283042
+              },
+              {
+                "uci": "f7f5",
+                "action": 3429,
+                "n": 2,
+                "q": 0,
+                "prior": 3.34658762e-05
+              },
+              {
+                "uci": "g7g6",
+                "action": 3502,
+                "n": 573,
+                "q": 0,
+                "prior": 0.00875241216
+              },
+              {
+                "uci": "g7g5",
+                "action": 3494,
+                "n": 490,
+                "q": 0,
+                "prior": 0.00748092635
+              },
+              {
+                "uci": "h7h6",
+                "action": 3567,
+                "n": 464,
+                "q": 0,
+                "prior": 0.00707958266
+              },
+              {
+                "uci": "h7h5",
+                "action": 3559,
+                "n": 0,
+                "q": 0,
+                "prior": 2.27113492e-06
+              },
+              {
+                "uci": "a8a7",
+                "action": 3632,
+                "n": 11,
+                "q": 0,
+                "prior": 0.000176635294
+              },
+              {
+                "uci": "a8a6",
+                "action": 3624,
+                "n": 156,
+                "q": 0,
+                "prior": 0.00239060726
+              },
+              {
+                "uci": "b8c6",
+                "action": 3690,
+                "n": 133,
+                "q": 0,
+                "prior": 0.00204260391
+              },
+              {
+                "uci": "b8a6",
+                "action": 3688,
+                "n": 0,
+                "q": 0,
+                "prior": 5.98018289e-07
+              },
+              {
+                "uci": "g8h6",
+                "action": 4015,
+                "n": 1,
+                "q": 0,
+                "prior": 1.97050049e-05
+              },
+              {
+                "uci": "g8f6",
+                "action": 4013,
+                "n": 18928,
+                "q": 0,
+                "prior": 0.288781554
+              }
+            ]
+          },
+          {
+            "simulations": 524288,
+            "neural_evals": 524289,
+            "max_depth": 15,
+            "nodes_size": 65536,
+            "nodes_capacity": 65536,
+            "edges_size": 1905216,
+            "edges_capacity": 2056192,
+            "memory_bytes": 67108864,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 65536,
+            "expanded_nonterminal_nodes": 65536,
+            "expanded_terminal_nodes": 0,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 458753,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 458753,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 65536,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "g8f6",
+            "root": [
+              {
+                "uci": "a5a4",
+                "action": 2072,
+                "n": 2,
+                "q": 0,
+                "prior": 4.30454566e-06
+              },
+              {
+                "uci": "b7b6",
+                "action": 3177,
+                "n": 69271,
+                "q": 0,
+                "prior": 0.132122144
+              },
+              {
+                "uci": "b7b5",
+                "action": 3169,
+                "n": 8954,
+                "q": 0,
+                "prior": 0.0170791727
+              },
+              {
+                "uci": "c7c6",
+                "action": 3242,
+                "n": 1682,
+                "q": 0,
+                "prior": 0.00320902956
+              },
+              {
+                "uci": "c7c5",
+                "action": 3234,
+                "n": 643,
+                "q": 0,
+                "prior": 0.00122824416
+              },
+              {
+                "uci": "d7d6",
+                "action": 3307,
+                "n": 47167,
+                "q": 0,
+                "prior": 0.089962177
+              },
+              {
+                "uci": "d7d5",
+                "action": 3299,
+                "n": 133135,
+                "q": 0,
+                "prior": 0.253930748
+              },
+              {
+                "uci": "e7e6",
+                "action": 3372,
+                "n": 86070,
+                "q": 0,
+                "prior": 0.164163709
+              },
+              {
+                "uci": "e7e5",
+                "action": 3364,
+                "n": 11134,
+                "q": 0,
+                "prior": 0.0212373324
+              },
+              {
+                "uci": "f7f6",
+                "action": 3437,
+                "n": 158,
+                "q": 0,
+                "prior": 0.00030283042
+              },
+              {
+                "uci": "f7f5",
+                "action": 3429,
+                "n": 17,
+                "q": 0,
+                "prior": 3.34658762e-05
+              },
+              {
+                "uci": "g7g6",
+                "action": 3502,
+                "n": 4588,
+                "q": 0,
+                "prior": 0.00875241216
+              },
+              {
+                "uci": "g7g5",
+                "action": 3494,
+                "n": 3922,
+                "q": 0,
+                "prior": 0.00748092635
+              },
+              {
+                "uci": "h7h6",
+                "action": 3567,
+                "n": 3711,
+                "q": 0,
+                "prior": 0.00707958266
+              },
+              {
+                "uci": "h7h5",
+                "action": 3559,
+                "n": 1,
+                "q": 0,
+                "prior": 2.27113492e-06
+              },
+              {
+                "uci": "a8a7",
+                "action": 3632,
+                "n": 92,
+                "q": 0,
+                "prior": 0.000176635294
+              },
+              {
+                "uci": "a8a6",
+                "action": 3624,
+                "n": 1253,
+                "q": 0,
+                "prior": 0.00239060726
+              },
+              {
+                "uci": "b8c6",
+                "action": 3690,
+                "n": 1070,
+                "q": 0,
+                "prior": 0.00204260391
+              },
+              {
+                "uci": "b8a6",
+                "action": 3688,
+                "n": 0,
+                "q": 0,
+                "prior": 5.98018289e-07
+              },
+              {
+                "uci": "g8h6",
+                "action": 4015,
+                "n": 10,
+                "q": 0,
+                "prior": 1.97050049e-05
+              },
+              {
+                "uci": "g8f6",
+                "action": 4013,
+                "n": 151408,
+                "q": 0,
+                "prior": 0.288781554
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

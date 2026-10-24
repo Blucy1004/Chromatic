@@ -1,0 +1,36 @@
+{
+  "settings": {
+    "initial": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+    "executable": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d",
+    "games": 4,
+    "simulations": 64,
+    "steps": 100,
+    "batch_size": 32,
+    "pairs": 2,
+    "max_plies": 512,
+    "seed": 2026,
+    "replay_generations": 4,
+    "threshold": 0.55,
+    "start_fen": null,
+    "opening_fens": null,
+    "format": 2,
+    "engine_options": {
+      "InferenceBackend": "SIMD"
+    },
+    "opening_plies": 6,
+    "arena_milliseconds": 10,
+    "opening_suite": "94e5555b9005f02606155208213398d44a2961f760f4b00ff26e65179f5bd3d4"
+  },
+  "completed": 1,
+  "champion": "initial.pt",
+  "reports": [
+    {
+      "iteration": 0,
+      "arena": "generation_0000/arena.json",
+      "promoted": false
+    }
+  ],
+  "champion_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+  "history": [],
+  "rollbacks": []
+}

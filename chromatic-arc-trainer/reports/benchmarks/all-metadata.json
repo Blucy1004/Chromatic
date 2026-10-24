@@ -1,0 +1,503 @@
+{
+  "format": "chromatic-arc-pipeline-benchmark-v1",
+  "suite": "all",
+  "requested_repeats": 3,
+  "created_utc": "2026-10-24T10:57:41.398690+00:00",
+  "python": "C:\\Users\\fly_t\\chromatic-xpu\\Scripts\\python.exe",
+  "baseline_python": "C:\\Users\\fly_t\\chromatic-xpu\\Scripts\\python.exe",
+  "baseline_root": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-trainer",
+  "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-trainer\\fixtures\\official-evaluations.jsonl.zst",
+  "source_sha256": "feb08110ffcef588f05c30bb7ca93f5e19897e85c3d84678aff076f51dd84e2b",
+  "champion_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+  "baseline_champion_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+  "settings": {
+    "epochs": 3,
+    "seed": 2026,
+    "replay_size": 256,
+    "checkpoint_every": 32,
+    "max_memory_gb": 4,
+    "max_disk_gb": 1,
+    "max_download_mb": 16,
+    "prefetch": 0
+  },
+  "deadline_seconds": 1800.0,
+  "case_timeout_seconds": 240.0,
+  "sequential_only": true,
+  "downloads_started": false,
+  "cold_scope": "Fresh per-run ledger and encoded cache. OS file cache is not flushed or controlled.",
+  "historical_baseline_seconds": {
+    "100": 15.4,
+    "1000": 24.8,
+    "10000": 132.6
+  },
+  "plan": [
+    {
+      "name": "baseline-cpu1-100",
+      "positions": 100,
+      "implementation": "baseline",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "baseline-cpu1-1000",
+      "positions": 1000,
+      "implementation": "baseline",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "baseline-cpu1-10000",
+      "positions": 10000,
+      "implementation": "baseline",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-cpu1-100",
+      "positions": 100,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-xpu-fp32-100",
+      "positions": 100,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-cpu1-1000",
+      "positions": 1000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-xpu-fp32-1000",
+      "positions": 1000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-xpu-bf16-1000",
+      "positions": 1000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "bf16",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-cpu8-batch256-1000",
+      "positions": 1000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 8,
+      "batch_size": 256,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-xpu-fp32-batch256-1000",
+      "positions": 1000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 256,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-cpu8-batch512-1000",
+      "positions": 1000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 8,
+      "batch_size": 512,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-xpu-fp32-batch512-1000",
+      "positions": 1000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 512,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-cpu1-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-cpu2-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 2,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-cpu4-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 4,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-cpu8-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 8,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-xpu-fp32-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-xpu-bf16-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "bf16",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "arc-xpu-resident-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "device",
+      "profile": false,
+      "repeat": 1
+    },
+    {
+      "name": "profile-cpu1-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": true,
+      "repeat": 1
+    },
+    {
+      "name": "profile-xpu-fp32-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": true,
+      "repeat": 1
+    },
+    {
+      "name": "arc-cpu1-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 2
+    },
+    {
+      "name": "arc-cpu2-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 2,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 2
+    },
+    {
+      "name": "arc-cpu4-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 4,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 2
+    },
+    {
+      "name": "arc-cpu8-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 8,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 2
+    },
+    {
+      "name": "arc-xpu-fp32-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 2
+    },
+    {
+      "name": "arc-xpu-bf16-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "bf16",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 2
+    },
+    {
+      "name": "arc-xpu-resident-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "device",
+      "profile": false,
+      "repeat": 2
+    },
+    {
+      "name": "arc-cpu1-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 3
+    },
+    {
+      "name": "arc-cpu2-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 2,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 3
+    },
+    {
+      "name": "arc-cpu4-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 4,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 3
+    },
+    {
+      "name": "arc-cpu8-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 8,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 3
+    },
+    {
+      "name": "arc-xpu-fp32-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 3
+    },
+    {
+      "name": "arc-xpu-bf16-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "bf16",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 3
+    },
+    {
+      "name": "arc-xpu-resident-10000",
+      "positions": 10000,
+      "implementation": "arc",
+      "device": "xpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "device",
+      "profile": false,
+      "repeat": 3
+    }
+  ],
+  "signature": {
+    "details": {
+      "inputs": 1280,
+      "logical_cpus": 16,
+      "model_config": {
+        "blocks": 2,
+        "width": 64
+      },
+      "platform": "Windows-10-10.0.26200-SP0",
+      "policy_actions": 4672,
+      "processor": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel",
+      "schema": 1,
+      "torch": "2.14.1+xpu",
+      "xpu": [
+        {
+          "driver_version": "1.6.34938",
+          "name": "Intel(R) Arc(TM) 140T GPU (16GB)",
+          "platform_name": "Intel(R) oneAPI Unified Runtime over Level-Zero",
+          "total_memory": 17648951296
+        }
+      ],
+      "xpu_error": null
+    },
+    "key": "2c87650041d72efe1fdec86628dea09135f47be2bec67be9389ba53130bbee82"
+  },
+  "source_files": [
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\benchmarks\\combined-corrected.jsonl",
+      "sha256": "872c56d59f0b17a851370fd8cd30c28a5d42bfd5d0b9c9aeb9e908fbf3a7adad",
+      "run_group": "arc-final"
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\benchmarks\\pipeline-arc-selected\\pipeline-runs.jsonl",
+      "sha256": "9e9e97900d958cf4cb11a055a80ea985bc234c35e05e65c7639568bdd5b2261e",
+      "run_group": "arc-selected"
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\benchmarks\\pipeline-arc-baseline-tree\\pipeline-runs.jsonl",
+      "sha256": "5e833fd274f72d031002e88a6fe1dcda44c93f69ebfdf52dcb12cb85350c2024",
+      "run_group": "arc-baseline-tree"
+    },
+    {
+      "path": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\benchmarks\\pipeline-arc-resident-6gb\\pipeline-runs.jsonl",
+      "sha256": "262c09db7126dc1f53880c762f1951c42e3daad9a48543e521b01bc007ed5e5c",
+      "run_group": "arc-resident-6gb"
+    }
+  ],
+  "attestation": "All groups were sequential on the same supplied local XPU environment; individual group metadata and raw logs retained."
+}

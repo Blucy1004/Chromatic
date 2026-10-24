@@ -1,0 +1,10 @@
+{
+  "markdown_local_links_checked": 62,
+  "missing_links": [],
+  "sqlite_integrity": "3/3 ok",
+  "completed_shards_only": true,
+  "candidates_only": true,
+  "delivery_archive_crc": "verified by package-verification.json",
+  "originals_preserved": "303/303 recorded hashes match",
+  "archive_content_hashes": "Every packaged file is checked against delivery-manifest.json; exact count is in package-verification.json."
+}

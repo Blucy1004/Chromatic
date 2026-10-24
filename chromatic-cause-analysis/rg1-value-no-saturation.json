@@ -1,0 +1,1293 @@
+{
+  "case": "before_Rg1_1s",
+  "fen": "rnbqkb1r/ppp2ppp/3ppn2/8/8/P1P2N2/1P1PPPPP/RNBQKB1R w KQkq - 0 4",
+  "moves": [
+    "c2c3",
+    "g8f6",
+    "a2a3",
+    "d7d6",
+    "g1f3",
+    "e7e6"
+  ],
+  "scope": "Exactly two fixed-simulation diagnostics; no timing or playing-strength comparison claimed",
+  "settings": {
+    "simulations": 52995,
+    "max_nodes": 1000000,
+    "memory_mib": 512,
+    "seed": 2026,
+    "noise": 0,
+    "temperature": 0,
+    "proof_nodes": 0,
+    "backend": "SIMD",
+    "sparse_policy_head": true,
+    "affinity_mask": 2
+  },
+  "intervention": "Only WDL head replaced with constant W=.25, D=.5, L=.25; trunk and policy bytes unchanged",
+  "policy_and_trunk_bytes_equal": true,
+  "root_priors_equal": true,
+  "shared_policy_and_trunk_sha256": "3d695e35c44d0e430561db6ead7f696ff38af392bf93b914333d87b4a2677f9b",
+  "value_head_expected_value_zero": true,
+  "neutral_wdl_biases": [
+    -1.3862943649291992,
+    -0.6931471824645996,
+    -1.3862943649291992
+  ],
+  "files_unchanged": true,
+  "sha256_before": {
+    "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\dist\\default.zero": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\cause-models\\neutral_value.zero": "6367c546f7c032eb2fc51ccc0de9c3f5d35d511eaf463ffcc649143e10174ba7",
+    "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\cause-native\\build\\cause_native.exe": "e03648496741fac1b510f179dd2942622f836ebc2b99f716a5211b74da7b5fd3"
+  },
+  "sha256_after": {
+    "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\dist\\default.zero": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\cause-models\\neutral_value.zero": "6367c546f7c032eb2fc51ccc0de9c3f5d35d511eaf463ffcc649143e10174ba7",
+    "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\cause-native\\build\\cause_native.exe": "e03648496741fac1b510f179dd2942622f836ebc2b99f716a5211b74da7b5fd3"
+  },
+  "all_allocation_failures_and_non_retained_evaluations_zero": true,
+  "results": [
+    {
+      "variant": "original",
+      "command_argv": [
+        "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\cause-native\\build\\cause_native.exe",
+        "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\dist\\default.zero",
+        "52995",
+        "1000000",
+        "512",
+        "rnbqkb1r/ppp2ppp/3ppn2/8/8/P1P2N2/1P1PPPPP/RNBQKB1R w KQkq - 0 4"
+      ],
+      "stderr": "",
+      "summary": {
+        "nodes_size": 52266,
+        "nodes_capacity": 65536,
+        "edges_size": 1531031,
+        "edges_capacity": 2097152,
+        "memory_bytes": 68419584,
+        "max_depth": 20,
+        "child_fail_node_limit": 0,
+        "child_fail_byte_capacity": 0,
+        "expansion_fail_byte_capacity": 0,
+        "nn_non_retained": 0,
+        "nn_resident_unexpanded_repeat": 0,
+        "bestmove": "h1g1",
+        "simulations": 52995,
+        "root_value": 0.0675077513,
+        "root_top5": [
+          {
+            "uci": "h1g1",
+            "action": 454,
+            "n": 34784,
+            "q": 0.1071814,
+            "prior": 1.84741602e-05
+          },
+          {
+            "uci": "e2e4",
+            "action": 796,
+            "n": 13403,
+            "q": -0.00363277877,
+            "prior": 0.487686962
+          },
+          {
+            "uci": "f3h4",
+            "action": 1375,
+            "n": 3702,
+            "q": -0.0130594317,
+            "prior": 0.307362646
+          },
+          {
+            "uci": "e2e3",
+            "action": 788,
+            "n": 969,
+            "q": -0.00612863246,
+            "prior": 0.0464367047
+          },
+          {
+            "uci": "d2d4",
+            "action": 731,
+            "n": 67,
+            "q": -0.292007029,
+            "prior": 0.0784519315
+          }
+        ]
+      },
+      "raw": {
+        "bestmove": "h1g1",
+        "simulations": 52995,
+        "value": 0.0675077513,
+        "elapsed_seconds": 0.7972506,
+        "limits": {
+          "max_nodes": 1000000,
+          "max_tree_bytes": 536870912,
+          "seed": 2026,
+          "noise": 0,
+          "temperature": 0,
+          "proof_nodes": 0,
+          "backend": "SIMD"
+        },
+        "audit": {
+          "simulations": 52995,
+          "neural_evals": 52140,
+          "max_depth": 20,
+          "nodes_size": 52266,
+          "nodes_capacity": 65536,
+          "edges_size": 1531031,
+          "edges_capacity": 2097152,
+          "memory_bytes": 68419584,
+          "node_struct_bytes": 20,
+          "edge_struct_bytes": 32,
+          "expanded_nodes": 52266,
+          "expanded_nonterminal_nodes": 52140,
+          "expanded_terminal_nodes": 126,
+          "child_fail_node_limit": 0,
+          "child_fail_byte_capacity": 0,
+          "expansion_fail_byte_capacity": 0,
+          "nn_non_retained": 0,
+          "nn_resident_unexpanded_repeat": 0,
+          "nn_resident_first": 52140,
+          "terminal_non_retained": 0,
+          "root_value": 0.0675077513,
+          "bestmove": "h1g1",
+          "root": [
+            {
+              "uci": "a1a2",
+              "action": 8,
+              "n": 1,
+              "q": -0.850564599,
+              "prior": 0.000328600727
+            },
+            {
+              "uci": "d1c2",
+              "action": 202,
+              "n": 1,
+              "q": -0.796987236,
+              "prior": 0.00145241467
+            },
+            {
+              "uci": "d1b3",
+              "action": 209,
+              "n": 0,
+              "q": 0,
+              "prior": 1.270697e-06
+            },
+            {
+              "uci": "d1a4",
+              "action": 216,
+              "n": 0,
+              "q": 0,
+              "prior": 1.46713853e-06
+            },
+            {
+              "uci": "h1g1",
+              "action": 454,
+              "n": 34784,
+              "q": 0.1071814,
+              "prior": 1.84741602e-05
+            },
+            {
+              "uci": "b2b3",
+              "action": 593,
+              "n": 0,
+              "q": 0,
+              "prior": 2.65712333e-06
+            },
+            {
+              "uci": "b2b4",
+              "action": 601,
+              "n": 0,
+              "q": 0,
+              "prior": 1.26645127e-05
+            },
+            {
+              "uci": "d2d3",
+              "action": 723,
+              "n": 51,
+              "q": -0.340369642,
+              "prior": 0.0669565275
+            },
+            {
+              "uci": "d2d4",
+              "action": 731,
+              "n": 67,
+              "q": -0.292007029,
+              "prior": 0.0784519315
+            },
+            {
+              "uci": "e2e3",
+              "action": 788,
+              "n": 969,
+              "q": -0.00612863246,
+              "prior": 0.0464367047
+            },
+            {
+              "uci": "e2e4",
+              "action": 796,
+              "n": 13403,
+              "q": -0.00363277877,
+              "prior": 0.487686962
+            },
+            {
+              "uci": "g2g3",
+              "action": 918,
+              "n": 1,
+              "q": -0.836033702,
+              "prior": 2.11620918e-05
+            },
+            {
+              "uci": "g2g4",
+              "action": 926,
+              "n": 1,
+              "q": -0.927771032,
+              "prior": 0.00359774637
+            },
+            {
+              "uci": "h2h3",
+              "action": 983,
+              "n": 1,
+              "q": -0.789509356,
+              "prior": 0.000233885308
+            },
+            {
+              "uci": "h2h4",
+              "action": 991,
+              "n": 1,
+              "q": -0.856123865,
+              "prior": 2.36322358e-05
+            },
+            {
+              "uci": "a3a4",
+              "action": 1048,
+              "n": 8,
+              "q": -0.141848385,
+              "prior": 0.00604840741
+            },
+            {
+              "uci": "c3c4",
+              "action": 1178,
+              "n": 1,
+              "q": -0.865314066,
+              "prior": 0.000530172605
+            },
+            {
+              "uci": "f3g5",
+              "action": 1382,
+              "n": 1,
+              "q": -0.901946247,
+              "prior": 5.79273437e-05
+            },
+            {
+              "uci": "f3h4",
+              "action": 1375,
+              "n": 3702,
+              "q": -0.0130594317,
+              "prior": 0.307362646
+            },
+            {
+              "uci": "f3e5",
+              "action": 1380,
+              "n": 1,
+              "q": -0.93683964,
+              "prior": 0.000234063598
+            },
+            {
+              "uci": "f3d4",
+              "action": 1371,
+              "n": 1,
+              "q": -0.92950654,
+              "prior": 2.72561319e-05
+            },
+            {
+              "uci": "f3g1",
+              "action": 1350,
+              "n": 1,
+              "q": -0.900795817,
+              "prior": 0.000513618928
+            }
+          ]
+        },
+        "milestones": [
+          {
+            "simulations": 1000,
+            "neural_evals": 987,
+            "max_depth": 16,
+            "nodes_size": 989,
+            "nodes_capacity": 1024,
+            "edges_size": 29586,
+            "edges_capacity": 32768,
+            "memory_bytes": 1069056,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 989,
+            "expanded_nonterminal_nodes": 987,
+            "expanded_terminal_nodes": 2,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 0,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 0,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 987,
+            "terminal_non_retained": 0,
+            "root_value": -0.0018430854,
+            "bestmove": "f3h4",
+            "root": [
+              {
+                "uci": "a1a2",
+                "action": 8,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000328600727
+              },
+              {
+                "uci": "d1c2",
+                "action": 202,
+                "n": 1,
+                "q": -0.796987236,
+                "prior": 0.00145241467
+              },
+              {
+                "uci": "d1b3",
+                "action": 209,
+                "n": 0,
+                "q": 0,
+                "prior": 1.270697e-06
+              },
+              {
+                "uci": "d1a4",
+                "action": 216,
+                "n": 0,
+                "q": 0,
+                "prior": 1.46713853e-06
+              },
+              {
+                "uci": "h1g1",
+                "action": 454,
+                "n": 0,
+                "q": 0,
+                "prior": 1.84741602e-05
+              },
+              {
+                "uci": "b2b3",
+                "action": 593,
+                "n": 0,
+                "q": 0,
+                "prior": 2.65712333e-06
+              },
+              {
+                "uci": "b2b4",
+                "action": 601,
+                "n": 0,
+                "q": 0,
+                "prior": 1.26645127e-05
+              },
+              {
+                "uci": "d2d3",
+                "action": 723,
+                "n": 31,
+                "q": -0.056159351,
+                "prior": 0.0669565275
+              },
+              {
+                "uci": "d2d4",
+                "action": 731,
+                "n": 40,
+                "q": -0.0588691309,
+                "prior": 0.0784519315
+              },
+              {
+                "uci": "e2e3",
+                "action": 788,
+                "n": 58,
+                "q": -0.00605508359,
+                "prior": 0.0464367047
+              },
+              {
+                "uci": "e2e4",
+                "action": 796,
+                "n": 117,
+                "q": -0.15471074,
+                "prior": 0.487686962
+              },
+              {
+                "uci": "g2g3",
+                "action": 918,
+                "n": 0,
+                "q": 0,
+                "prior": 2.11620918e-05
+              },
+              {
+                "uci": "g2g4",
+                "action": 926,
+                "n": 1,
+                "q": -0.927771032,
+                "prior": 0.00359774637
+              },
+              {
+                "uci": "h2h3",
+                "action": 983,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000233885308
+              },
+              {
+                "uci": "h2h4",
+                "action": 991,
+                "n": 0,
+                "q": 0,
+                "prior": 2.36322358e-05
+              },
+              {
+                "uci": "a3a4",
+                "action": 1048,
+                "n": 1,
+                "q": -0.639762282,
+                "prior": 0.00604840741
+              },
+              {
+                "uci": "c3c4",
+                "action": 1178,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000530172605
+              },
+              {
+                "uci": "f3g5",
+                "action": 1382,
+                "n": 0,
+                "q": 0,
+                "prior": 5.79273437e-05
+              },
+              {
+                "uci": "f3h4",
+                "action": 1375,
+                "n": 751,
+                "q": 0.0307183657,
+                "prior": 0.307362646
+              },
+              {
+                "uci": "f3e5",
+                "action": 1380,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000234063598
+              },
+              {
+                "uci": "f3d4",
+                "action": 1371,
+                "n": 0,
+                "q": 0,
+                "prior": 2.72561319e-05
+              },
+              {
+                "uci": "f3g1",
+                "action": 1350,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000513618928
+              }
+            ]
+          },
+          {
+            "simulations": 8000,
+            "neural_evals": 7761,
+            "max_depth": 17,
+            "nodes_size": 7792,
+            "nodes_capacity": 8192,
+            "edges_size": 231925,
+            "edges_capacity": 262144,
+            "memory_bytes": 8552448,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 7792,
+            "expanded_nonterminal_nodes": 7761,
+            "expanded_terminal_nodes": 31,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 0,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 0,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 7761,
+            "terminal_non_retained": 0,
+            "root_value": 0.030409405,
+            "bestmove": "e2e4",
+            "root": [
+              {
+                "uci": "a1a2",
+                "action": 8,
+                "n": 1,
+                "q": -0.850564599,
+                "prior": 0.000328600727
+              },
+              {
+                "uci": "d1c2",
+                "action": 202,
+                "n": 1,
+                "q": -0.796987236,
+                "prior": 0.00145241467
+              },
+              {
+                "uci": "d1b3",
+                "action": 209,
+                "n": 0,
+                "q": 0,
+                "prior": 1.270697e-06
+              },
+              {
+                "uci": "d1a4",
+                "action": 216,
+                "n": 0,
+                "q": 0,
+                "prior": 1.46713853e-06
+              },
+              {
+                "uci": "h1g1",
+                "action": 454,
+                "n": 0,
+                "q": 0,
+                "prior": 1.84741602e-05
+              },
+              {
+                "uci": "b2b3",
+                "action": 593,
+                "n": 0,
+                "q": 0,
+                "prior": 2.65712333e-06
+              },
+              {
+                "uci": "b2b4",
+                "action": 601,
+                "n": 0,
+                "q": 0,
+                "prior": 1.26645127e-05
+              },
+              {
+                "uci": "d2d3",
+                "action": 723,
+                "n": 38,
+                "q": -0.198050857,
+                "prior": 0.0669565275
+              },
+              {
+                "uci": "d2d4",
+                "action": 731,
+                "n": 47,
+                "q": -0.18336387,
+                "prior": 0.0784519315
+              },
+              {
+                "uci": "e2e3",
+                "action": 788,
+                "n": 61,
+                "q": -0.0526718758,
+                "prior": 0.0464367047
+              },
+              {
+                "uci": "e2e4",
+                "action": 796,
+                "n": 6146,
+                "q": 0.0429295786,
+                "prior": 0.487686962
+              },
+              {
+                "uci": "g2g3",
+                "action": 918,
+                "n": 0,
+                "q": 0,
+                "prior": 2.11620918e-05
+              },
+              {
+                "uci": "g2g4",
+                "action": 926,
+                "n": 1,
+                "q": -0.927771032,
+                "prior": 0.00359774637
+              },
+              {
+                "uci": "h2h3",
+                "action": 983,
+                "n": 1,
+                "q": -0.789509356,
+                "prior": 0.000233885308
+              },
+              {
+                "uci": "h2h4",
+                "action": 991,
+                "n": 0,
+                "q": 0,
+                "prior": 2.36322358e-05
+              },
+              {
+                "uci": "a3a4",
+                "action": 1048,
+                "n": 1,
+                "q": -0.639762282,
+                "prior": 0.00604840741
+              },
+              {
+                "uci": "c3c4",
+                "action": 1178,
+                "n": 1,
+                "q": -0.865314066,
+                "prior": 0.000530172605
+              },
+              {
+                "uci": "f3g5",
+                "action": 1382,
+                "n": 0,
+                "q": 0,
+                "prior": 5.79273437e-05
+              },
+              {
+                "uci": "f3h4",
+                "action": 1375,
+                "n": 1700,
+                "q": 0.00323211774,
+                "prior": 0.307362646
+              },
+              {
+                "uci": "f3e5",
+                "action": 1380,
+                "n": 1,
+                "q": -0.93683964,
+                "prior": 0.000234063598
+              },
+              {
+                "uci": "f3d4",
+                "action": 1371,
+                "n": 0,
+                "q": 0,
+                "prior": 2.72561319e-05
+              },
+              {
+                "uci": "f3g1",
+                "action": 1350,
+                "n": 1,
+                "q": -0.900795817,
+                "prior": 0.000513618928
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "neutral_value",
+      "command_argv": [
+        "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\cause-native\\build\\cause_native.exe",
+        "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\cause-models\\neutral_value.zero",
+        "52995",
+        "1000000",
+        "512",
+        "rnbqkb1r/ppp2ppp/3ppn2/8/8/P1P2N2/1P1PPPPP/RNBQKB1R w KQkq - 0 4"
+      ],
+      "stderr": "",
+      "summary": {
+        "nodes_size": 52478,
+        "nodes_capacity": 65536,
+        "edges_size": 1765703,
+        "edges_capacity": 2097152,
+        "memory_bytes": 68419584,
+        "max_depth": 23,
+        "child_fail_node_limit": 0,
+        "child_fail_byte_capacity": 0,
+        "expansion_fail_byte_capacity": 0,
+        "nn_non_retained": 0,
+        "nn_resident_unexpanded_repeat": 0,
+        "bestmove": "e2e4",
+        "simulations": 52995,
+        "root_value": 0,
+        "root_top5": [
+          {
+            "uci": "e2e4",
+            "action": 796,
+            "n": 25849,
+            "q": 0,
+            "prior": 0.487686962
+          },
+          {
+            "uci": "f3h4",
+            "action": 1375,
+            "n": 16291,
+            "q": 0,
+            "prior": 0.307362646
+          },
+          {
+            "uci": "d2d4",
+            "action": 731,
+            "n": 4158,
+            "q": 0,
+            "prior": 0.0784519315
+          },
+          {
+            "uci": "d2d3",
+            "action": 723,
+            "n": 3548,
+            "q": 0,
+            "prior": 0.0669565275
+          },
+          {
+            "uci": "e2e3",
+            "action": 788,
+            "n": 2461,
+            "q": 0,
+            "prior": 0.0464367047
+          }
+        ]
+      },
+      "raw": {
+        "bestmove": "e2e4",
+        "simulations": 52995,
+        "value": 0,
+        "elapsed_seconds": 0.8925658,
+        "limits": {
+          "max_nodes": 1000000,
+          "max_tree_bytes": 536870912,
+          "seed": 2026,
+          "noise": 0,
+          "temperature": 0,
+          "proof_nodes": 0,
+          "backend": "SIMD"
+        },
+        "audit": {
+          "simulations": 52995,
+          "neural_evals": 52400,
+          "max_depth": 23,
+          "nodes_size": 52478,
+          "nodes_capacity": 65536,
+          "edges_size": 1765703,
+          "edges_capacity": 2097152,
+          "memory_bytes": 68419584,
+          "node_struct_bytes": 20,
+          "edge_struct_bytes": 32,
+          "expanded_nodes": 52478,
+          "expanded_nonterminal_nodes": 52400,
+          "expanded_terminal_nodes": 78,
+          "child_fail_node_limit": 0,
+          "child_fail_byte_capacity": 0,
+          "expansion_fail_byte_capacity": 0,
+          "nn_non_retained": 0,
+          "nn_resident_unexpanded_repeat": 0,
+          "nn_resident_first": 52400,
+          "terminal_non_retained": 0,
+          "root_value": 0,
+          "bestmove": "e2e4",
+          "root": [
+            {
+              "uci": "a1a2",
+              "action": 8,
+              "n": 17,
+              "q": 0,
+              "prior": 0.000328600727
+            },
+            {
+              "uci": "d1c2",
+              "action": 202,
+              "n": 76,
+              "q": 0,
+              "prior": 0.00145241467
+            },
+            {
+              "uci": "d1b3",
+              "action": 209,
+              "n": 0,
+              "q": 0,
+              "prior": 1.270697e-06
+            },
+            {
+              "uci": "d1a4",
+              "action": 216,
+              "n": 0,
+              "q": 0,
+              "prior": 1.46713853e-06
+            },
+            {
+              "uci": "h1g1",
+              "action": 454,
+              "n": 0,
+              "q": 0,
+              "prior": 1.84741602e-05
+            },
+            {
+              "uci": "b2b3",
+              "action": 593,
+              "n": 0,
+              "q": 0,
+              "prior": 2.65712333e-06
+            },
+            {
+              "uci": "b2b4",
+              "action": 601,
+              "n": 0,
+              "q": 0,
+              "prior": 1.26645127e-05
+            },
+            {
+              "uci": "d2d3",
+              "action": 723,
+              "n": 3548,
+              "q": 0,
+              "prior": 0.0669565275
+            },
+            {
+              "uci": "d2d4",
+              "action": 731,
+              "n": 4158,
+              "q": 0,
+              "prior": 0.0784519315
+            },
+            {
+              "uci": "e2e3",
+              "action": 788,
+              "n": 2461,
+              "q": 0,
+              "prior": 0.0464367047
+            },
+            {
+              "uci": "e2e4",
+              "action": 796,
+              "n": 25849,
+              "q": 0,
+              "prior": 0.487686962
+            },
+            {
+              "uci": "g2g3",
+              "action": 918,
+              "n": 1,
+              "q": 0,
+              "prior": 2.11620918e-05
+            },
+            {
+              "uci": "g2g4",
+              "action": 926,
+              "n": 190,
+              "q": 0,
+              "prior": 0.00359774637
+            },
+            {
+              "uci": "h2h3",
+              "action": 983,
+              "n": 12,
+              "q": 0,
+              "prior": 0.000233885308
+            },
+            {
+              "uci": "h2h4",
+              "action": 991,
+              "n": 1,
+              "q": 0,
+              "prior": 2.36322358e-05
+            },
+            {
+              "uci": "a3a4",
+              "action": 1048,
+              "n": 320,
+              "q": 0,
+              "prior": 0.00604840741
+            },
+            {
+              "uci": "c3c4",
+              "action": 1178,
+              "n": 28,
+              "q": 0,
+              "prior": 0.000530172605
+            },
+            {
+              "uci": "f3g5",
+              "action": 1382,
+              "n": 3,
+              "q": 0,
+              "prior": 5.79273437e-05
+            },
+            {
+              "uci": "f3h4",
+              "action": 1375,
+              "n": 16291,
+              "q": 0,
+              "prior": 0.307362646
+            },
+            {
+              "uci": "f3e5",
+              "action": 1380,
+              "n": 12,
+              "q": 0,
+              "prior": 0.000234063598
+            },
+            {
+              "uci": "f3d4",
+              "action": 1371,
+              "n": 1,
+              "q": 0,
+              "prior": 2.72561319e-05
+            },
+            {
+              "uci": "f3g1",
+              "action": 1350,
+              "n": 27,
+              "q": 0,
+              "prior": 0.000513618928
+            }
+          ]
+        },
+        "milestones": [
+          {
+            "simulations": 1000,
+            "neural_evals": 1000,
+            "max_depth": 13,
+            "nodes_size": 1001,
+            "nodes_capacity": 1024,
+            "edges_size": 31559,
+            "edges_capacity": 32768,
+            "memory_bytes": 1069056,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 1001,
+            "expanded_nonterminal_nodes": 1000,
+            "expanded_terminal_nodes": 1,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 0,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 0,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 1000,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "e2e4",
+            "root": [
+              {
+                "uci": "a1a2",
+                "action": 8,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000328600727
+              },
+              {
+                "uci": "d1c2",
+                "action": 202,
+                "n": 1,
+                "q": 0,
+                "prior": 0.00145241467
+              },
+              {
+                "uci": "d1b3",
+                "action": 209,
+                "n": 0,
+                "q": 0,
+                "prior": 1.270697e-06
+              },
+              {
+                "uci": "d1a4",
+                "action": 216,
+                "n": 0,
+                "q": 0,
+                "prior": 1.46713853e-06
+              },
+              {
+                "uci": "h1g1",
+                "action": 454,
+                "n": 0,
+                "q": 0,
+                "prior": 1.84741602e-05
+              },
+              {
+                "uci": "b2b3",
+                "action": 593,
+                "n": 0,
+                "q": 0,
+                "prior": 2.65712333e-06
+              },
+              {
+                "uci": "b2b4",
+                "action": 601,
+                "n": 0,
+                "q": 0,
+                "prior": 1.26645127e-05
+              },
+              {
+                "uci": "d2d3",
+                "action": 723,
+                "n": 67,
+                "q": 0,
+                "prior": 0.0669565275
+              },
+              {
+                "uci": "d2d4",
+                "action": 731,
+                "n": 78,
+                "q": 0,
+                "prior": 0.0784519315
+              },
+              {
+                "uci": "e2e3",
+                "action": 788,
+                "n": 46,
+                "q": 0,
+                "prior": 0.0464367047
+              },
+              {
+                "uci": "e2e4",
+                "action": 796,
+                "n": 490,
+                "q": 0,
+                "prior": 0.487686962
+              },
+              {
+                "uci": "g2g3",
+                "action": 918,
+                "n": 0,
+                "q": 0,
+                "prior": 2.11620918e-05
+              },
+              {
+                "uci": "g2g4",
+                "action": 926,
+                "n": 3,
+                "q": 0,
+                "prior": 0.00359774637
+              },
+              {
+                "uci": "h2h3",
+                "action": 983,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000233885308
+              },
+              {
+                "uci": "h2h4",
+                "action": 991,
+                "n": 0,
+                "q": 0,
+                "prior": 2.36322358e-05
+              },
+              {
+                "uci": "a3a4",
+                "action": 1048,
+                "n": 6,
+                "q": 0,
+                "prior": 0.00604840741
+              },
+              {
+                "uci": "c3c4",
+                "action": 1178,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000530172605
+              },
+              {
+                "uci": "f3g5",
+                "action": 1382,
+                "n": 0,
+                "q": 0,
+                "prior": 5.79273437e-05
+              },
+              {
+                "uci": "f3h4",
+                "action": 1375,
+                "n": 309,
+                "q": 0,
+                "prior": 0.307362646
+              },
+              {
+                "uci": "f3e5",
+                "action": 1380,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000234063598
+              },
+              {
+                "uci": "f3d4",
+                "action": 1371,
+                "n": 0,
+                "q": 0,
+                "prior": 2.72561319e-05
+              },
+              {
+                "uci": "f3g1",
+                "action": 1350,
+                "n": 0,
+                "q": 0,
+                "prior": 0.000513618928
+              }
+            ]
+          },
+          {
+            "simulations": 8000,
+            "neural_evals": 7932,
+            "max_depth": 17,
+            "nodes_size": 7946,
+            "nodes_capacity": 8192,
+            "edges_size": 260850,
+            "edges_capacity": 262144,
+            "memory_bytes": 8552448,
+            "node_struct_bytes": 20,
+            "edge_struct_bytes": 32,
+            "expanded_nodes": 7946,
+            "expanded_nonterminal_nodes": 7932,
+            "expanded_terminal_nodes": 14,
+            "child_fail_node_limit": 0,
+            "child_fail_byte_capacity": 0,
+            "expansion_fail_byte_capacity": 0,
+            "nn_non_retained": 0,
+            "nn_resident_unexpanded_repeat": 0,
+            "nn_resident_first": 7932,
+            "terminal_non_retained": 0,
+            "root_value": 0,
+            "bestmove": "e2e4",
+            "root": [
+              {
+                "uci": "a1a2",
+                "action": 8,
+                "n": 2,
+                "q": 0,
+                "prior": 0.000328600727
+              },
+              {
+                "uci": "d1c2",
+                "action": 202,
+                "n": 11,
+                "q": 0,
+                "prior": 0.00145241467
+              },
+              {
+                "uci": "d1b3",
+                "action": 209,
+                "n": 0,
+                "q": 0,
+                "prior": 1.270697e-06
+              },
+              {
+                "uci": "d1a4",
+                "action": 216,
+                "n": 0,
+                "q": 0,
+                "prior": 1.46713853e-06
+              },
+              {
+                "uci": "h1g1",
+                "action": 454,
+                "n": 0,
+                "q": 0,
+                "prior": 1.84741602e-05
+              },
+              {
+                "uci": "b2b3",
+                "action": 593,
+                "n": 0,
+                "q": 0,
+                "prior": 2.65712333e-06
+              },
+              {
+                "uci": "b2b4",
+                "action": 601,
+                "n": 0,
+                "q": 0,
+                "prior": 1.26645127e-05
+              },
+              {
+                "uci": "d2d3",
+                "action": 723,
+                "n": 536,
+                "q": 0,
+                "prior": 0.0669565275
+              },
+              {
+                "uci": "d2d4",
+                "action": 731,
+                "n": 628,
+                "q": 0,
+                "prior": 0.0784519315
+              },
+              {
+                "uci": "e2e3",
+                "action": 788,
+                "n": 371,
+                "q": 0,
+                "prior": 0.0464367047
+              },
+              {
+                "uci": "e2e4",
+                "action": 796,
+                "n": 3905,
+                "q": 0,
+                "prior": 0.487686962
+              },
+              {
+                "uci": "g2g3",
+                "action": 918,
+                "n": 0,
+                "q": 0,
+                "prior": 2.11620918e-05
+              },
+              {
+                "uci": "g2g4",
+                "action": 926,
+                "n": 28,
+                "q": 0,
+                "prior": 0.00359774637
+              },
+              {
+                "uci": "h2h3",
+                "action": 983,
+                "n": 1,
+                "q": 0,
+                "prior": 0.000233885308
+              },
+              {
+                "uci": "h2h4",
+                "action": 991,
+                "n": 0,
+                "q": 0,
+                "prior": 2.36322358e-05
+              },
+              {
+                "uci": "a3a4",
+                "action": 1048,
+                "n": 48,
+                "q": 0,
+                "prior": 0.00604840741
+              },
+              {
+                "uci": "c3c4",
+                "action": 1178,
+                "n": 4,
+                "q": 0,
+                "prior": 0.000530172605
+              },
+              {
+                "uci": "f3g5",
+                "action": 1382,
+                "n": 0,
+                "q": 0,
+                "prior": 5.79273437e-05
+              },
+              {
+                "uci": "f3h4",
+                "action": 1375,
+                "n": 2461,
+                "q": 0,
+                "prior": 0.307362646
+              },
+              {
+                "uci": "f3e5",
+                "action": 1380,
+                "n": 1,
+                "q": 0,
+                "prior": 0.000234063598
+              },
+              {
+                "uci": "f3d4",
+                "action": 1371,
+                "n": 0,
+                "q": 0,
+                "prior": 2.72561319e-05
+              },
+              {
+                "uci": "f3g1",
+                "action": 1350,
+                "n": 4,
+                "q": 0,
+                "prior": 0.000513618928
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

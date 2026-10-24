@@ -1,0 +1,18 @@
+{
+  "format": 2,
+  "model": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+  "executable": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d",
+  "simulations": 64,
+  "seed": 2026,
+  "max_plies": 512,
+  "start_fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "starting_fens": null,
+  "noise": 0.25,
+  "temperature_plies": 30,
+  "temperature": 1.0,
+  "late_temperature": 0.0,
+  "opening_plies": 6,
+  "engine_options": {
+    "InferenceBackend": "SIMD"
+  }
+}

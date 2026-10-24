@@ -1,0 +1,35 @@
+{"direction":"stdin","elapsed_ms":7.269699999596924,"line":"uci"}
+{"direction":"stdout","elapsed_ms":18.72589997947216,"line":"id name CHROMATIC 1.0 Depth Telemetry"}
+{"direction":"stdout","elapsed_ms":18.741399981081486,"line":"id author PROJECT CHROMATIC"}
+{"direction":"stdout","elapsed_ms":18.742999993264675,"line":"option name ModelFile type string default <none>"}
+{"direction":"stdout","elapsed_ms":18.747099966276437,"line":"option name CPuct type string default 1.5"}
+{"direction":"stdout","elapsed_ms":18.749199982266873,"line":"option name FPUReduction type string default 0"}
+{"direction":"stdout","elapsed_ms":18.750799994450063,"line":"option name InferenceBackend type combo default SIMD var Scalar var SIMD"}
+{"direction":"stdout","elapsed_ms":18.7525000073947,"line":"option name SparsePolicyHead type check default true"}
+{"direction":"stdout","elapsed_ms":18.754799966700375,"line":"option name MateProofNodes type spin default 256 min 0 max 50000"}
+{"direction":"stdout","elapsed_ms":18.756299978122115,"line":"option name MateProofPlies type combo default 1 var 1 var 3 var 5"}
+{"direction":"stdout","elapsed_ms":18.757699988782406,"line":"option name TreeMemoryMB type spin default 64 min 1 max 2048"}
+{"direction":"stdout","elapsed_ms":18.759200000204146,"line":"option name Simulations type spin default 800 min 1 max 10000000"}
+{"direction":"stdout","elapsed_ms":18.760700011625886,"line":"option name MaxNodes type spin default 100000 min 16 max 1000000"}
+{"direction":"stdout","elapsed_ms":18.761899962555617,"line":"option name SearchTelemetry type check default false"}
+{"direction":"stdout","elapsed_ms":18.763299973215908,"line":"option name TelemetryInterval type spin default 4096 min 64 max 1000000"}
+{"direction":"stdout","elapsed_ms":18.76459998311475,"line":"uciok"}
+{"direction":"stdin","elapsed_ms":19.847999967169017,"line":"setoption name ModelFile value C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\dist\\default.zero"}
+{"direction":"stdin","elapsed_ms":19.88139998866245,"line":"isready"}
+{"direction":"stdout","elapsed_ms":22.301599965430796,"line":"info string model loaded"}
+{"direction":"stdout","elapsed_ms":22.31169998412952,"line":"readyok"}
+{"direction":"stdin","elapsed_ms":22.76769996387884,"line":"setoption name MateProofNodes value 0"}
+{"direction":"stdin","elapsed_ms":22.793499985709786,"line":"setoption name TreeMemoryMB value 64"}
+{"direction":"stdin","elapsed_ms":22.800799983087927,"line":"setoption name MaxNodes value 1000000"}
+{"direction":"stdin","elapsed_ms":22.805699962191284,"line":"setoption name InferenceBackend value SIMD"}
+{"direction":"stdin","elapsed_ms":22.811800008639693,"line":"setoption name SparsePolicyHead value true"}
+{"direction":"stdin","elapsed_ms":22.8167999885045,"line":"setoption name CPuct value 1.5"}
+{"direction":"stdin","elapsed_ms":22.821799968369305,"line":"setoption name FPUReduction value 0"}
+{"direction":"stdin","elapsed_ms":22.826400003395975,"line":"setoption name SearchTelemetry value false"}
+{"direction":"stdin","elapsed_ms":22.830599977169186,"line":"setoption name TelemetryInterval value 4096"}
+{"direction":"stdin","elapsed_ms":22.835000010672957,"line":"isready"}
+{"direction":"stdout","elapsed_ms":22.968399978708476,"line":"readyok"}
+{"direction":"stdin","elapsed_ms":23.13519996823743,"line":"position fen rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1 moves g2g4 a7a5 c2c3"}
+{"direction":"stdin","elapsed_ms":23.164499958511442,"line":"zero search 4096 2026 0 0"}
+{"direction":"stdout","elapsed_ms":83.37639999808744,"line":"{\"bestmove\":\"e7e6\",\"terminal\":false,\"simulations\":4096,\"value\":0.103429235518,\"neural_evals\":4097,\"memory_bytes\":4358144,\"arena_nodes\":4097,\"max_depth\":15,\"proof_nodes\":0,\"mate_proven\":false,\"proof_plies\":0,\"visits\":[{\"uci\":\"a5a4\",\"action\":2072,\"n\":0,\"q\":0,\"prior\":4.30454565503e-06},{\"uci\":\"b7b6\",\"action\":3177,\"n\":42,\"q\":-0.146242797375,\"prior\":0.132122144103},{\"uci\":\"b7b5\",\"action\":3169,\"n\":13,\"q\":0.0315674990416,\"prior\":0.0170791726559},{\"uci\":\"c7c6\",\"action\":3242,\"n\":1,\"q\":-0.465063989162,\"prior\":0.00320902955718},{\"uci\":\"c7c5\",\"action\":3234,\"n\":1,\"q\":-0.368822187185,\"prior\":0.0012282441603},{\"uci\":\"d7d6\",\"action\":3307,\"n\":68,\"q\":-0.0199191179127,\"prior\":0.0899621769786},{\"uci\":\"d7d5\",\"action\":3299,\"n\":65,\"q\":-0.219746336341,\"prior\":0.253930747509},{\"uci\":\"e7e6\",\"action\":3372,\"n\":2553,\"q\":0.147136002779,\"prior\":0.164163708687},{\"uci\":\"e7e5\",\"action\":3364,\"n\":29,\"q\":0.071403041482,\"prior\":0.0212373323739},{\"uci\":\"f7f6\",\"action\":3437,\"n\":0,\"q\":0,\"prior\":0.000302830419969},{\"uci\":\"f7f5\",\"action\":3429,\"n\":0,\"q\":0,\"prior\":3.34658761858e-05},{\"uci\":\"g7g6\",\"action\":3502,\"n\":1,\"q\":-0.545637249947,\"prior\":0.00875241216272},{\"uci\":\"g7g5\",\"action\":3494,\"n\":1,\"q\":-0.638580322266,\"prior\":0.00748092634603},{\"uci\":\"h7h6\",\"action\":3567,\"n\":1,\"q\":-0.447880238295,\"prior\":0.00707958266139},{\"uci\":\"h7h5\",\"action\":3559,\"n\":0,\"q\":0,\"prior\":2.27113491746e-06},{\"uci\":\"a8a7\",\"action\":3632,\"n\":0,\"q\":0,\"prior\":0.000176635294338},{\"uci\":\"a8a6\",\"action\":3624,\"n\":1,\"q\":-0.981763780117,\"prior\":0.00239060726017},{\"uci\":\"b8c6\",\"action\":3690,\"n\":1,\"q\":-0.396918535233,\"prior\":0.00204260391183},{\"uci\":\"b8a6\",\"action\":3688,\"n\":0,\"q\":0,\"prior\":5.98018289111e-07},{\"uci\":\"g8h6\",\"action\":4015,\"n\":0,\"q\":0,\"prior\":1.97050048882e-05},{\"uci\":\"g8f6\",\"action\":4013,\"n\":1319,\"q\":0.0539437122643,\"prior\":0.288781553507}],\"selected\":{\"uci\":\"e7e6\",\"action\":3372,\"n\":2553,\"q\":0.147136002779,\"prior\":0.164163708687},\"top5\":[{\"uci\":\"e7e6\",\"action\":3372,\"n\":2553,\"q\":0.147136002779,\"prior\":0.164163708687},{\"uci\":\"g8f6\",\"action\":4013,\"n\":1319,\"q\":0.0539437122643,\"prior\":0.288781553507},{\"uci\":\"d7d6\",\"action\":3307,\"n\":68,\"q\":-0.0199191179127,\"prior\":0.0899621769786},{\"uci\":\"d7d5\",\"action\":3299,\"n\":65,\"q\":-0.219746336341,\"prior\":0.253930747509},{\"uci\":\"b7b6\",\"action\":3177,\"n\":42,\"q\":-0.146242797375,\"prior\":0.132122144103}],\"telemetry_enabled\":false}"}
+{"direction":"stdin","elapsed_ms":83.44600000418723,"line":"quit"}

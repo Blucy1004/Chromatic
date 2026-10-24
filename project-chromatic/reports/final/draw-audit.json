@@ -1,0 +1,35 @@
+{
+  "records": 190,
+  "mean_target_wdl": [
+    0.0,
+    1.0,
+    0.0
+  ],
+  "models": {
+    "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\bootstrap\\model.pt": {
+      "step": 200,
+      "mean_predicted_wdl": [
+        0.6940762996673584,
+        0.06804077327251434,
+        0.23788295686244965
+      ],
+      "mean_expected_value": 0.45619329810142517
+    },
+    "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\runs\\release-validation\\generation_0000\\candidate.pt": {
+      "step": 100,
+      "mean_predicted_wdl": [
+        0.0003961721668019891,
+        0.9994410276412964,
+        0.00016279633564408869
+      ],
+      "mean_expected_value": 0.00023337581660598516
+    }
+  },
+  "causal_limit": "observational comparison; exploration and network quality are not independently identified",
+  "findings": [
+    "Completed v0.1 selfplay targets in this dataset can be checked directly above.",
+    "Repetition identity and value-sign tests are separate correctness gates.",
+    "Draw-only labels train a draw-only value head; lower training loss is not evidence of stronger play.",
+    "Opening diversification is supported; no artificial decisive result or draw penalty is introduced."
+  ]
+}

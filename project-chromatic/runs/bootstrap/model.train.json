@@ -1,0 +1,12 @@
+{
+  "records": 128,
+  "start_step": 0,
+  "step": 200,
+  "recovered_from": null,
+  "device": "cpu",
+  "last": {
+    "step": 200,
+    "policy_loss": 0.71860671043396,
+    "wdl_loss": 0.10278409719467163
+  }
+}

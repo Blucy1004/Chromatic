@@ -1,0 +1,49 @@
+{
+  "format": "chromatic-arc-pipeline-benchmark-v1",
+  "suite": "small",
+  "requested_repeats": 1,
+  "created_utc": "2026-10-24T12:05:34.403032+00:00",
+  "python": "C:\\Users\\fly_t\\chromatic-xpu\\Scripts\\python.exe",
+  "baseline_python": "C:\\Users\\fly_t\\chromatic-xpu\\Scripts\\python.exe",
+  "baseline_root": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-trainer",
+  "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-trainer\\fixtures\\official-evaluations.jsonl.zst",
+  "source_sha256": "feb08110ffcef588f05c30bb7ca93f5e19897e85c3d84678aff076f51dd84e2b",
+  "champion_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+  "baseline_champion_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+  "settings": {
+    "epochs": 3,
+    "seed": 2026,
+    "replay_size": 256,
+    "checkpoint_every": 32,
+    "max_memory_gb": 4.0,
+    "validation_mode": "full",
+    "baseline_validation_mode": "full",
+    "max_disk_gb": 1,
+    "max_download_mb": 16,
+    "prefetch": 0
+  },
+  "deadline_seconds": 180.0,
+  "case_timeout_seconds": 180.0,
+  "sequential_only": true,
+  "downloads_started": false,
+  "cold_scope": "Fresh per-run ledger and encoded cache. OS file cache is not flushed or controlled.",
+  "historical_baseline_seconds": {
+    "100": 15.4,
+    "1000": 24.8,
+    "10000": 132.6
+  },
+  "plan": [
+    {
+      "name": "baseline-cpu1-10000",
+      "positions": 10000,
+      "implementation": "baseline",
+      "device": "cpu",
+      "precision": "fp32",
+      "threads": 1,
+      "batch_size": 32,
+      "cache_mode": "auto",
+      "profile": false,
+      "repeat": 1
+    }
+  ]
+}

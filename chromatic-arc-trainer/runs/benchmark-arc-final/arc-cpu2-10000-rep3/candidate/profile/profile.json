@@ -1,0 +1,1 @@
+{"elapsed_seconds":68.08888549997937,"enabled":false,"events":0,"stages":{},"timing_contract":"seconds are exclusive wall time; inclusive_seconds include nested spans; concurrent thread sums may exceed elapsed wall time","xpu_synchronized_spans":true}

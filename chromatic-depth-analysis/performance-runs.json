@@ -1,0 +1,4997 @@
+[
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r1-off",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 1,
+    "group": "overhead",
+    "variant": "off",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1045.6674000015482,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": false,
+      "elapsed_ms": 1010.8579
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r1-on",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 1,
+    "group": "overhead",
+    "variant": "on",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1303.8530999911018,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "true",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": true,
+      "elapsed_ms": 1265.5102
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r1-pristine",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 1,
+    "group": "overhead",
+    "variant": "pristine",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1204.1730000055395,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\pristine_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001",
+    "result": {
+      "bestmove": "c2c3",
+      "simulations": 65536,
+      "max_depth": 26,
+      "elapsed_ms": 1138.3314
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r2-off",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 2,
+    "group": "overhead",
+    "variant": "off",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1045.5894999904558,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": false,
+      "elapsed_ms": 1019.69
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r2-pristine",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 2,
+    "group": "overhead",
+    "variant": "pristine",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1030.1380999735557,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\pristine_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001",
+    "result": {
+      "bestmove": "c2c3",
+      "simulations": 65536,
+      "max_depth": 26,
+      "elapsed_ms": 1006.4214
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r2-on",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 2,
+    "group": "overhead",
+    "variant": "on",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1031.0858000302687,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "true",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": true,
+      "elapsed_ms": 1006.0834
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r3-pristine",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 3,
+    "group": "overhead",
+    "variant": "pristine",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1044.2290999926627,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\pristine_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001",
+    "result": {
+      "bestmove": "c2c3",
+      "simulations": 65536,
+      "max_depth": 26,
+      "elapsed_ms": 1018.461
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r3-off",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 3,
+    "group": "overhead",
+    "variant": "off",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1023.4018000192009,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": false,
+      "elapsed_ms": 1002.2145
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r3-on",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 3,
+    "group": "overhead",
+    "variant": "on",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1091.3774999789894,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "true",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": true,
+      "elapsed_ms": 1052.6902
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r4-off",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 4,
+    "group": "overhead",
+    "variant": "off",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1026.0069000069052,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": false,
+      "elapsed_ms": 1006.9031
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r4-pristine",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 4,
+    "group": "overhead",
+    "variant": "pristine",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1029.5006000087596,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\pristine_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001",
+    "result": {
+      "bestmove": "c2c3",
+      "simulations": 65536,
+      "max_depth": 26,
+      "elapsed_ms": 1007.0447
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r4-on",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 4,
+    "group": "overhead",
+    "variant": "on",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1049.9112999532372,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "true",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": true,
+      "elapsed_ms": 1015.507
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r5-on",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 5,
+    "group": "overhead",
+    "variant": "on",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1027.6398999849334,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "true",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": true,
+      "elapsed_ms": 1000.7454
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r5-off",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 5,
+    "group": "overhead",
+    "variant": "off",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1058.3234999794513,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": false,
+      "elapsed_ms": 1028.3438
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r5-pristine",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 5,
+    "group": "overhead",
+    "variant": "pristine",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1106.5781000070274,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\pristine_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001",
+    "result": {
+      "bestmove": "c2c3",
+      "simulations": 65536,
+      "max_depth": 26,
+      "elapsed_ms": 1084.437
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r6-on",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 6,
+    "group": "overhead",
+    "variant": "on",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1058.293899986893,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "true",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": true,
+      "elapsed_ms": 1025.125
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r6-off",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 6,
+    "group": "overhead",
+    "variant": "off",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1042.9661000380293,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": false,
+      "elapsed_ms": 1020.4597
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r6-pristine",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 6,
+    "group": "overhead",
+    "variant": "pristine",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1036.198699963279,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\pristine_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001",
+    "result": {
+      "bestmove": "c2c3",
+      "simulations": 65536,
+      "max_depth": 26,
+      "elapsed_ms": 1006.537
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r7-pristine",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 7,
+    "group": "overhead",
+    "variant": "pristine",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1044.157499971334,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\pristine_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001",
+    "result": {
+      "bestmove": "c2c3",
+      "simulations": 65536,
+      "max_depth": 26,
+      "elapsed_ms": 1014.986
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r7-on",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 7,
+    "group": "overhead",
+    "variant": "on",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1060.664699994959,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "true",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": true,
+      "elapsed_ms": 1027.4534
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r7-off",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 7,
+    "group": "overhead",
+    "variant": "off",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1055.013199977111,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": false,
+      "elapsed_ms": 1036.2897
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r8-on",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 8,
+    "group": "overhead",
+    "variant": "on",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1057.1789999958128,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "true",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": true,
+      "elapsed_ms": 1021.5643
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r8-pristine",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 8,
+    "group": "overhead",
+    "variant": "pristine",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1079.0610000258312,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\pristine_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001",
+    "result": {
+      "bestmove": "c2c3",
+      "simulations": 65536,
+      "max_depth": 26,
+      "elapsed_ms": 1056.7279
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r8-off",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 8,
+    "group": "overhead",
+    "variant": "off",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1048.5740000149235,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": false,
+      "elapsed_ms": 1032.2117
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r9-pristine",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 9,
+    "group": "overhead",
+    "variant": "pristine",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1050.2436999813654,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\pristine_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001",
+    "result": {
+      "bestmove": "c2c3",
+      "simulations": 65536,
+      "max_depth": 26,
+      "elapsed_ms": 1028.5167
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r9-off",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 9,
+    "group": "overhead",
+    "variant": "off",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1052.6810999726877,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "false",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": false,
+      "elapsed_ms": 1026.6479
+    }
+  },
+  {
+    "run_id": "overhead-start-512MiB-simulations-65536-r9-on",
+    "case": "start",
+    "case_label": "1.g4 직전",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [],
+    "mode": "simulations",
+    "memory_mib": 512,
+    "max_nodes": 1000000,
+    "seed": 2026,
+    "threads": 1,
+    "affinity_mask": 2,
+    "replicate": 9,
+    "group": "overhead",
+    "variant": "on",
+    "budget_label": null,
+    "budget_ms": null,
+    "budget_simulations": 65536,
+    "process_wall_ms": 1054.5165999792516,
+    "command_argv": [
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\build\\depth_probe.exe",
+      "--model",
+      "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic-depth\\dist\\default.zero",
+      "--fen",
+      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "--mode",
+      "simulations",
+      "--budget",
+      "65536",
+      "--memory",
+      "512",
+      "--max-nodes",
+      "1000000",
+      "--seed",
+      "2026",
+      "--threads",
+      "1",
+      "--affinity",
+      "2",
+      "--telemetry",
+      "true",
+      "--interval",
+      "4096",
+      "--warmup",
+      "true"
+    ],
+    "stderr": "",
+    "probe_sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "result": {
+      "bestmove": "c2c3",
+      "terminal": false,
+      "simulations": 65536,
+      "value": 0.0348191894591,
+      "neural_evals": 64385,
+      "memory_bytes": 68419584,
+      "arena_nodes": 64553,
+      "max_depth": 26,
+      "proof_nodes": 0,
+      "mate_proven": false,
+      "proof_plies": 0,
+      "visits": [
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "b1a3",
+          "action": 80,
+          "n": 1,
+          "q": -0.598352849483,
+          "prior": 0.000638242054265
+        },
+        {
+          "uci": "g1h3",
+          "action": 407,
+          "n": 1,
+          "q": -0.65111297369,
+          "prior": 0.00013971691078
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "a2a3",
+          "action": 528,
+          "n": 244,
+          "q": -0.048340883106,
+          "prior": 0.0562028586864
+        },
+        {
+          "uci": "a2a4",
+          "action": 536,
+          "n": 0,
+          "q": 0,
+          "prior": 2.06187032745e-05
+        },
+        {
+          "uci": "b2b3",
+          "action": 593,
+          "n": 0,
+          "q": 0,
+          "prior": 1.25972007936e-06
+        },
+        {
+          "uci": "b2b4",
+          "action": 601,
+          "n": 0,
+          "q": 0,
+          "prior": 5.37401365364e-06
+        },
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        },
+        {
+          "uci": "d2d3",
+          "action": 723,
+          "n": 40,
+          "q": -0.200583189726,
+          "prior": 0.0252425298095
+        },
+        {
+          "uci": "d2d4",
+          "action": 731,
+          "n": 40,
+          "q": -0.24632845819,
+          "prior": 0.0305850505829
+        },
+        {
+          "uci": "e2e3",
+          "action": 788,
+          "n": 35,
+          "q": -0.151998147368,
+          "prior": 0.0169717185199
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "f2f3",
+          "action": 853,
+          "n": 0,
+          "q": 0,
+          "prior": 2.74988133242e-06
+        },
+        {
+          "uci": "f2f4",
+          "action": 861,
+          "n": 0,
+          "q": 0,
+          "prior": 4.77189189496e-07
+        },
+        {
+          "uci": "g2g3",
+          "action": 918,
+          "n": 0,
+          "q": 0,
+          "prior": 1.02627518572e-05
+        },
+        {
+          "uci": "g2g4",
+          "action": 926,
+          "n": 1,
+          "q": -0.770951390266,
+          "prior": 0.00185686699115
+        },
+        {
+          "uci": "h2h3",
+          "action": 983,
+          "n": 0,
+          "q": 0,
+          "prior": 8.10799392639e-05
+        },
+        {
+          "uci": "h2h4",
+          "action": 991,
+          "n": 0,
+          "q": 0,
+          "prior": 9.78137995844e-06
+        }
+      ],
+      "selected": {
+        "uci": "c2c3",
+        "action": 658,
+        "n": 63139,
+        "q": 0.0404229983687,
+        "prior": 0.0449669659138
+      },
+      "top5": [
+        {
+          "uci": "c2c3",
+          "action": 658,
+          "n": 63139,
+          "q": 0.0404229983687,
+          "prior": 0.0449669659138
+        },
+        {
+          "uci": "g1f3",
+          "action": 405,
+          "n": 1038,
+          "q": -0.0424740128219,
+          "prior": 0.224801808596
+        },
+        {
+          "uci": "b1c3",
+          "action": 82,
+          "n": 398,
+          "q": -0.221524581313,
+          "prior": 0.271253526211
+        },
+        {
+          "uci": "e2e4",
+          "action": 796,
+          "n": 321,
+          "q": -0.212103739381,
+          "prior": 0.211561635137
+        },
+        {
+          "uci": "c2c4",
+          "action": 666,
+          "n": 278,
+          "q": -0.118723846972,
+          "prior": 0.11564745754
+        }
+      ],
+      "telemetry_enabled": true,
+      "elapsed_ms": 1018.9984
+    }
+  }
+]

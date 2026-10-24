@@ -1,0 +1,9 @@
+{
+  "rows": 31,
+  "original_logs_modified": false,
+  "wall_times_modified": false,
+  "original_report": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\benchmarks\\pipeline-arc-final",
+  "source": "candidate/resources/resource-summary.json or legacy training CSV",
+  "reason": "Windows venv python.exe is a redirector; v1 external sampler observed the launcher rather than the actual interpreter.",
+  "future_driver": "ProcessTreeSampler regression covers real child allocation and I/O; historical baseline will be remeasured."
+}

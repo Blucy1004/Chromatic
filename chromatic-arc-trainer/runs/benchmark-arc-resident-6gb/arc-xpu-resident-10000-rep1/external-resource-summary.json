@@ -1,0 +1,26 @@
+{
+  "samples": 316,
+  "rss_peak_bytes": 3978366976,
+  "cpu_process_percent_mean": 90.0842735170423,
+  "cpu_seconds_total_last_known": 62.921875,
+  "io_read_bytes": 4356609842,
+  "io_write_bytes": 1556448086,
+  "io_read_operations": 306812,
+  "io_write_operations": 308654,
+  "tracked_processes": 2,
+  "process_identities": [
+    {
+      "pid": 20988,
+      "create_time": 1792843617.1244268
+    },
+    {
+      "pid": 4608,
+      "create_time": 1792843617.1460989
+    }
+  ],
+  "sampling_scope": "process_tree_v2",
+  "invalid_parent_launcher_sample": false,
+  "memory_accounting": "Sum of live process RSS; launcher/interpreter shared pages may be counted twice. This is not unique physical memory.",
+  "counter_accounting": "Observed per-PID lifetime CPU/I/O counters; exited children retain last known values. Activity between the last sample and exit can be missed.",
+  "errors": []
+}

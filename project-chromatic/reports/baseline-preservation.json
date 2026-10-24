@@ -1,0 +1,20 @@
+{
+  "original": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-zero",
+  "archive": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\project-chromatic\\baseline\\project-zero-v0.1.zip",
+  "archive_sha256": "8a645faa146390b1a9af2dbb4a17935553608598bdc516972239b02442620f15",
+  "source_review": [
+    "src/*.cpp",
+    "include/zero/*.hpp",
+    "zero/*.py",
+    "tests/*",
+    "CMakeLists.txt",
+    "build.cmd",
+    "run.ps1",
+    "validate.ps1",
+    "README.md",
+    "DESIGN.md",
+    "VALIDATION.md",
+    "THIRD_PARTY.md"
+  ],
+  "inventory_files": 89
+}

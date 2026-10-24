@@ -1,0 +1,58 @@
+{
+  "format": "chromatic-arc-native-final-summary-v1",
+  "passed": true,
+  "cases": 30,
+  "results": [
+    {
+      "candidate": "cpu4-selected",
+      "passed": true,
+      "training_report": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\runs\\benchmark-arc-selected\\arc-cpu4-10000-rep1\\candidate\\training-report.json",
+      "source_manifest": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\runs\\benchmark-arc-selected\\arc-cpu4-10000-rep1\\candidate\\checkpoints\\bundle-7b967917d30c4f9c8163a2a77037ed60.manifest.json",
+      "checkpoint": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\runs\\benchmark-arc-selected\\arc-cpu4-10000-rep1\\candidate\\checkpoints\\bundle-7b967917d30c4f9c8163a2a77037ed60.pt",
+      "checkpoint_sha256": "e4813a0b8fa78dd45532ccc571e8a2f629bae265892a8e84adf997d026b8340a",
+      "cases": 10,
+      "maximum_absolute_error": {
+        "features": 2.674407917346855e-10,
+        "legal_policy_logits": 9.567968746182487e-07,
+        "wdl_probability": 8.899302672560339e-08
+      },
+      "report": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\native-cpu4-selected.json",
+      "log": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\native-cpu4-selected.log",
+      "seconds": 2.947143799974583
+    },
+    {
+      "candidate": "xpu-fp32-selected",
+      "passed": true,
+      "training_report": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\runs\\benchmark-arc-selected\\arc-xpu-fp32-10000-rep1\\candidate\\training-report.json",
+      "source_manifest": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\runs\\benchmark-arc-selected\\arc-xpu-fp32-10000-rep1\\candidate\\checkpoints\\bundle-274041ed38dc4c988da8cd8c87248aa1.manifest.json",
+      "checkpoint": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\runs\\benchmark-arc-selected\\arc-xpu-fp32-10000-rep1\\candidate\\checkpoints\\bundle-274041ed38dc4c988da8cd8c87248aa1.pt",
+      "checkpoint_sha256": "0d1b1471a759cb01e0f69e6db1c84c4fb2a9c9f46d088849b89e51de9bacb3d8",
+      "cases": 10,
+      "maximum_absolute_error": {
+        "features": 2.674407917346855e-10,
+        "legal_policy_logits": 9.536340330740245e-07,
+        "wdl_probability": 1.1880877681669233e-07
+      },
+      "report": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\native-xpu-fp32-selected.json",
+      "log": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\native-xpu-fp32-selected.log",
+      "seconds": 2.8181594000197947
+    },
+    {
+      "candidate": "xpu-bf16",
+      "passed": true,
+      "training_report": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\runs\\benchmark-arc-final\\arc-xpu-bf16-10000-rep1\\candidate\\training-report.json",
+      "source_manifest": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\runs\\benchmark-arc-final\\arc-xpu-bf16-10000-rep1\\candidate\\checkpoints\\bundle-a562f77e7fa2443081e2cc9461545bc4.manifest.json",
+      "checkpoint": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\runs\\benchmark-arc-final\\arc-xpu-bf16-10000-rep1\\candidate\\checkpoints\\bundle-a562f77e7fa2443081e2cc9461545bc4.pt",
+      "checkpoint_sha256": "29a8511ad33dde80864347b82baa55cda2d40425ab62a169619e9e97f8acea13",
+      "cases": 10,
+      "maximum_absolute_error": {
+        "features": 2.674407917346855e-10,
+        "legal_policy_logits": 9.555102540304006e-07,
+        "wdl_probability": 8.975439452774125e-08
+      },
+      "report": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\native-xpu-bf16.json",
+      "log": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-arc-trainer\\reports\\native-xpu-bf16.log",
+      "seconds": 3.2329939000774175
+    }
+  ]
+}

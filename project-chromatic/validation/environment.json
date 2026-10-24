@@ -1,0 +1,14 @@
+{
+  "date_seoul": "2026-10-24",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "architecture": "AMD64",
+  "python": "3.12.14",
+  "torch": "2.14.1+cpu",
+  "numpy": "2.5.4",
+  "chess": "1.11.2",
+  "cuda_available": false,
+  "cmake": "cmake version 4.4.0",
+  "compiler": "MSVC 19.51.36248.0 / C++20 Release",
+  "workspace_started_as_git_repository": false,
+  "project_repository_initialized": true
+}
