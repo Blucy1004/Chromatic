@@ -1,0 +1,35 @@
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/chromatic-original
+[1/9] Building CXX object CMakeFiles/zero_core.dir/src/network.cpp.o
+[2/9] Building CXX object CMakeFiles/zero_core.dir/src/search.cpp.o
+[3/9] Building CXX object CMakeFiles/zero_core.dir/src/board.cpp.o
+/workspace/Chromatic/project-chromatic/src/board.cpp: In member function ‘void zero::Board::make(zero::Move, bool)’:
+/workspace/Chromatic/project-chromatic/src/board.cpp:122:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  122 |     if(turn==-1)++fullmove;turn=-turn;
+      |     ^~
+/workspace/Chromatic/project-chromatic/src/board.cpp:122:28: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  122 |     if(turn==-1)++fullmove;turn=-turn;
+      |                            ^~~~
+/workspace/Chromatic/project-chromatic/src/board.cpp: In member function ‘uint64_t zero::Board::key() const’:
+/workspace/Chromatic/project-chromatic/src/board.cpp:128:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  128 |     for(int p:squares)mix(p+6);mix(turn+1);mix(castle);
+      |     ^~~
+/workspace/Chromatic/project-chromatic/src/board.cpp:128:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  128 |     for(int p:squares)mix(p+6);mix(turn+1);mix(castle);
+      |                                ^~~
+[4/9] Building CXX object CMakeFiles/zero_core.dir/src/proof.cpp.o
+[5/9] Linking CXX static library libzero_core.a
+[6/9] Building CXX object CMakeFiles/zero_tests.dir/tests/core.cpp.o
+[7/9] Linking CXX executable zero_tests
+[8/9] Building CXX object CMakeFiles/project_zero.dir/src/main.cpp.o
+[9/9] Linking CXX executable project_zero

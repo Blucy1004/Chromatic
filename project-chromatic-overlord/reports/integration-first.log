@@ -1,0 +1,26 @@
+test_checkpoint_exact_resume_and_corruption_recovery (__main__.Integration.test_checkpoint_exact_resume_and_corruption_recovery) ... ok
+test_move_oracle_and_encoder (__main__.Integration.test_move_oracle_and_encoder) ... ok
+test_native_model_parity_and_invalid_load (__main__.Integration.test_native_model_parity_and_invalid_load) ... ERROR
+test_selfplay_labels_truncation_and_restartable_loop (__main__.Integration.test_selfplay_labels_truncation_and_restartable_loop) ... ok
+test_uci_time_stop_and_protocol (__main__.Integration.test_uci_time_stop_and_protocol) ... ok
+
+======================================================================
+ERROR: test_native_model_parity_and_invalid_load (__main__.Integration.test_native_model_parity_and_invalid_load)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Chromatic/project-chromatic-overlord/tests/integration.py", line 128, in test_native_model_parity_and_invalid_load
+    with Native(auto_engine) as automatic:
+         ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Chromatic/project-chromatic/zero/native.py", line 13, in __init__
+    self.process = subprocess.Popen([str(Path(executable).resolve())], stdin=subprocess.PIPE,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/workspace/Chromatic/project-chromatic-overlord/runs/test-temp/tmp6601p0it/chromatic_overlord'
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.345s
+
+FAILED (errors=1)

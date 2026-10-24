@@ -40,11 +40,15 @@ go movetime 100
 | SharedTree | true | false with Threads>1 selects the independent legacy-tree control; verification/telemetry disabled in that control |
 | VerificationNodes | 2048 | Total verification node allowance, divided equally among shortlisted candidates |
 | VerificationDepth | 4 | 1–8; finite horizon, not a proof depth |
-| VerificationCandidates | 4 | Best MCTS move then highest-visit/prior alternatives; not every legal root move |
+| VerificationCandidates | 4 | Best MCTS move, admitted forcing alternatives, then visit/prior leaders |
 
 Verification reserves the final 25% of requested movetime. It never alters
 MCTS visits, priors or Q; separate counters report its work and changed choices.
 If any candidate comparison is interrupted, all tentative scores are ignored.
+ForcingSearch and TacticalVerify also scan legal root moves under the same budget
+for exact mate-in-one terminals, and admit low-prior captures/promotions (plus
+checks for ForcingSearch) to the shortlist. This avoids relying entirely on the
+small model's root ranking.
 Only terminal values and the retained original MateProof are proofs. Material
 and WDL scores remain heuristics. Defaults for original MateProof are retained.
 

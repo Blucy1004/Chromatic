@@ -1,0 +1,28 @@
+{
+  "overfit": {
+    "initial": {
+      "policy_loss": 2.7082860469818115,
+      "wdl_loss": 1.151968002319336,
+      "policy_entropy": 2.9671220779418945,
+      "wdl_brier": 0.7069000005722046,
+      "wdl_ece": 0.3927136957645416,
+      "mean_predicted_draw": 0.29127204418182373,
+      "rows": 1
+    },
+    "final": {
+      "policy_loss": 0.0,
+      "wdl_loss": 0.0,
+      "policy_entropy": 5.761140174339158e-23,
+      "wdl_brier": 0.0,
+      "wdl_ece": 0.0,
+      "mean_predicted_draw": 1.0295752622873926e-26,
+      "rows": 1
+    },
+    "steps": 160,
+    "samples_per_second": 3013.112495943318
+  },
+  "bounded_replay_dedup_holdout": true,
+  "unfinished_durable_no_fake_outcome_resume": true,
+  "versioned_trace_features_mask_action_outcome": true,
+  "passed": true
+}

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Reproducible UCI ablations. Never adjudicates unfinished games as draws."""
-import argparse,csv,hashlib,io,json,math,platform,queue,statistics,subprocess,threading,time
+import argparse,csv,gzip,hashlib,io,json,math,os,platform,queue,statistics,subprocess,threading,time
 from pathlib import Path
 import chess,chess.pgn
 ROOT=Path(__file__).resolve().parents[1]
@@ -30,7 +30,11 @@ OPENINGS=[
  {'name':'PawnEnding','fen':'8/5pk1/6p1/3p4/3P4/5KP1/5P1P/8 w - - 0 1','moves':[]},
 ]
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
-def save(path,data):Path(path).write_text(json.dumps(data,indent=2,allow_nan=False)+'\n')
+def save(path,data):
+ path=Path(path);content=json.dumps(data,indent=2,allow_nan=False)+'\n'
+ if path.name.endswith('-games.json'):
+  path.with_suffix('.json.gz').write_bytes(gzip.compress(content.encode(),compresslevel=3,mtime=0))
+ else:path.write_text(content)
 class Engine:
  def __init__(self,path,options=None,model=MODEL):
   self.p=subprocess.Popen([str(path),'--model',str(model)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,bufsize=1)
@@ -112,10 +116,12 @@ def game(candidate,reference,opening,color,ms,maxplies):
  game.headers['Termination']=str(outcome.termination.name) if outcome else ('error: '+error if error else 'ply_limit_unfinished')
  return {'score':score,'result':game.headers['Result'],'termination':game.headers['Termination'],'plies':len(trace),'moves':moves,'trace':trace,'error':error},str(game)+'\n\n'
 def main():
+ if hasattr(os,'sched_getaffinity'):
+  os.sched_setaffinity(0,sorted(os.sched_getaffinity(0))[:2])
  p=argparse.ArgumentParser();p.add_argument('--engine',type=Path,required=True);p.add_argument('--baseline',type=Path,required=True)
  p.add_argument('--out',type=Path,required=True);p.add_argument('--ms',type=int,default=30);p.add_argument('--max-plies',type=int,default=240)
  p.add_argument('--configs',nargs='+',default=list(CONFIGS));p.add_argument('--skip-matches',action='store_true');a=p.parse_args();a.out.mkdir(parents=True,exist_ok=True)
- metadata={'platform':platform.platform(),'python':platform.python_version(),'model':str(MODEL),'model_sha256':sha(MODEL),
+ metadata={'driver_sha256':sha(Path(__file__)), 'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'cpu_affinity':sorted(os.sched_getaffinity(0)) if hasattr(os,'sched_getaffinity') else None,'search_seed':1,'platform':platform.platform(),'python':platform.python_version(),'model':str(MODEL),'model_sha256':sha(MODEL),
   'engine_sha256':sha(a.engine),'baseline_sha256':sha(a.baseline),'time_control':f'{a.ms}ms per move','max_plies':a.max_plies,'proof_nodes':0,'configs':CONFIGS,'openings':OPENINGS,'tactics':TACTICS}
  save(a.out/'metadata.json',metadata)
  # Disabled-module exact parity with the unmodified memory-recycling engine.

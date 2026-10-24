@@ -9,7 +9,9 @@ checkpoint/legacy import, validation and arena contracts. The new source derives
 from project-chromatic-memory. Preserved paths and hashes are recorded in
 reports/preserved-sha256.json. No SANABI/Laugh Tale source was found by a
 case-insensitive repository search. The new designs make no external equivalence
-claim.
+claim. The audit focuses on the active engine/training paths and their preserved
+variants; historical raw reports and duplicated archived packages are evidence,
+not separate implementations revalidated line by line.
 
 ## Findings driving implementation
 
@@ -32,7 +34,10 @@ claim.
   must find mate-in-one failed; the raw result is retained. The sign test now
   isolates the value convention with a uniform policy and synthetic weights;
   the loaded-model exact-mate test separately exercises existing MateProof.
-- The new shortlist verification cannot discover moves outside its shortlist.
+- The initial shortlist verification missed low-prior queen captures. The second
+  iteration admits captures/promotions/checks and scans root terminal mates under
+  the same budget. Finite-horizon verification still cannot explore every root
+  alternative beyond its shortlist.
   Counterexample verification searches all replies at the first opponent node,
   but finite-horizon WDL is not an exhaustive strategic refutation. Quiescence
   can miss quiet defenses, sacrifices and deeper forced wins; stand pat is
@@ -61,3 +66,23 @@ Original trainer/ARC tests remain unchanged. Local fixture smoke training alread
 completed during onboarding. Regression outcomes distinguish opt-in recovery
 suites, hardware/Windows skips and the existing container I/O-counter assertion.
 No output from historical reports is relabeled as a new validation run.
+
+## Validation environment diagnosis
+
+The existing ARC process-tree I/O test initially failed under /tmp. A controlled
+child-process experiment showed write_count/write_chars increase there while
+physical write_bytes stays zero; the same code under /workspace reports physical
+bytes. Running the unchanged suite with pytest --basetemp on /workspace/scratch
+passes that assertion. Both original failure and corrected run are retained.
+The six actual kill/resume tests were run from an identical isolated source copy
+so their hard-coded report paths cannot overwrite historical tracked reports.
+The copied legacy Python integration fixture used copyfile for a test engine;
+on Linux that strips executable permissions. Only the candidate test was changed
+to copy2. All integration/model parity, replay/learning and safety tests then pass.
+
+Neural trainer batching validates masks, WDL normalization, finite labels and
+confidence weights. Validation/test families and source prefix hashes are kept
+separate; durable model/optimizer/RNG/replay checkpoints are confirmed with the
+SQLite ledger before shard deletion. The new engine does not train, rewrite or
+promote any checkpoint. Historical champion training data cannot be reconstructed
+from this repository; no stronger data-leakage claim is made.

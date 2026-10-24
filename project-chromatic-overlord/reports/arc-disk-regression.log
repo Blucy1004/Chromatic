@@ -1,0 +1,13 @@
+....s....................................................sss [ 38%]
+ssss.............................................................. [ 80%]
+...............................                                    [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_arc_recovery.py:63: explicit actual XPU regression
+SKIPPED [1] tests/test_pipeline.py:154: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:185: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:188: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:191: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:194: opt-in bounded process integration suite
+SKIPPED [1] tests/test_pipeline.py:210: opt-in bounded process integration suite
+SKIPPED [1] tests/test_powershell.py:14: Windows PowerShell 5.1 integration
+149 passed, 8 skipped, 24 subtests passed in 23.87s

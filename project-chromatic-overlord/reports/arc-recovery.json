@@ -1,0 +1,121 @@
+{
+  "format": 1,
+  "scope": "100 official CC0 positions per run; real process termination; CPU",
+  "work_directory": "/workspace/scratch/work/pipeline-tests/run-vs6qp0hd",
+  "work_directories": [
+    "/workspace/scratch/work/pipeline-tests/run-vs6qp0hd"
+  ],
+  "cpu_affinity": [
+    3
+  ],
+  "tests": [
+    {
+      "name": "completed_resume_no_duplicate_training",
+      "passed": true,
+      "seconds": 4.6328765220000605,
+      "returncode": 0,
+      "log": "/workspace/scratch/work/pipeline-tests/run-vs6qp0hd/uninterrupted/process-1792849227919751489.log",
+      "global_step": 16,
+      "no_new_commit": true
+    },
+    {
+      "name": "kill_checkpoint_written",
+      "passed": true,
+      "hook": "checkpoint_written",
+      "marker": {
+        "global_step": 2,
+        "hook": "checkpoint_written",
+        "pid": 5431,
+        "shard": 1
+      },
+      "forced_exit": -15,
+      "resume": {
+        "seconds": 6.08914244899961,
+        "returncode": 0,
+        "log": "/workspace/scratch/work/pipeline-tests/run-vs6qp0hd/kill-checkpoint_written/process-1792849239639678039.log"
+      },
+      "global_step": 16,
+      "exact_model_optimizer_scheduler_rng_progress_replay": true
+    },
+    {
+      "name": "kill_ledger_committed",
+      "passed": true,
+      "hook": "ledger_committed",
+      "marker": {
+        "global_step": 2,
+        "hook": "ledger_committed",
+        "pid": 5633,
+        "shard": 1
+      },
+      "forced_exit": -15,
+      "resume": {
+        "seconds": 5.942746723000255,
+        "returncode": 0,
+        "log": "/workspace/scratch/work/pipeline-tests/run-vs6qp0hd/kill-ledger_committed/process-1792849252811741127.log"
+      },
+      "global_step": 16,
+      "exact_model_optimizer_scheduler_rng_progress_replay": true
+    },
+    {
+      "name": "kill_before_delete",
+      "passed": true,
+      "hook": "before_delete",
+      "marker": {
+        "global_step": 12,
+        "hook": "before_delete",
+        "pid": 5677,
+        "shard": 2
+      },
+      "forced_exit": -15,
+      "resume": {
+        "seconds": 4.8335290089999035,
+        "returncode": 0,
+        "log": "/workspace/scratch/work/pipeline-tests/run-vs6qp0hd/kill-before_delete/process-1792849266639719560.log"
+      },
+      "global_step": 16,
+      "exact_model_optimizer_scheduler_rng_progress_replay": true
+    },
+    {
+      "name": "corruption_mirror_and_previous_checkpoint",
+      "passed": true,
+      "mirror_resume": {
+        "seconds": 4.579802650000147,
+        "returncode": 0,
+        "log": "/workspace/scratch/work/pipeline-tests/run-vs6qp0hd/corruption/process-1792849280175396709.log"
+      },
+      "previous_checkpoint_resume": {
+        "seconds": 4.629838040999857,
+        "returncode": 0,
+        "log": "/workspace/scratch/work/pipeline-tests/run-vs6qp0hd/corruption/process-1792849284783640473.log"
+      },
+      "exact_model_optimizer_scheduler_rng_progress_replay": true,
+      "corrupt_latest_bundle_recovered_without_deleted_shard_dependency": true
+    },
+    {
+      "name": "resume_config_mismatch_rejected",
+      "passed": true,
+      "seconds": 3.7270902380000734,
+      "returncode": 1,
+      "log": "/workspace/scratch/work/pipeline-tests/run-vs6qp0hd/uninterrupted/process-1792849289465713207.log",
+      "checkpoint_head_unchanged": true
+    }
+  ],
+  "status": "passed",
+  "baseline": {
+    "step": 16,
+    "progress": {
+      "completed": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "active": null,
+      "epoch": 0,
+      "offset": 0,
+      "permutation": [],
+      "positions_processed": 100
+    },
+    "model_export_sha256": "2e469e4fd598b24c0033d9caaeb7ef16423b854812228cb7a3635b11003ba4a5"
+  }
+}

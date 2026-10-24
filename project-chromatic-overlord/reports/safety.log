@@ -1,0 +1,9 @@
+test_bad_optimizer_never_replaces_last_valid_checkpoint (__main__.Safety.test_bad_optimizer_never_replaces_last_valid_checkpoint) ... ok
+test_finite_weights_that_overflow_cannot_crash_search (__main__.Safety.test_finite_weights_that_overflow_cannot_crash_search) ... ok
+test_malformed_go_returns_completion_and_recovers (__main__.Safety.test_malformed_go_returns_completion_and_recovers) ... ok
+test_missing_startup_model_stays_uci_responsive (__main__.Safety.test_missing_startup_model_stays_uci_responsive) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.020s
+
+OK

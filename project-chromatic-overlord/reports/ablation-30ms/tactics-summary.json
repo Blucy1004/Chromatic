@@ -1,0 +1,30 @@
+{
+  "disabled": {
+    "passed": 3,
+    "total": 8
+  },
+  "counterexample": {
+    "passed": 3,
+    "total": 8
+  },
+  "adaptive": {
+    "passed": 3,
+    "total": 8
+  },
+  "forcing": {
+    "passed": 2,
+    "total": 8
+  },
+  "tactical": {
+    "passed": 4,
+    "total": 8
+  },
+  "parallel": {
+    "passed": 3,
+    "total": 8
+  },
+  "combination": {
+    "passed": 4,
+    "total": 8
+  }
+}

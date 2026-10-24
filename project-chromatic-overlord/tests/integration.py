@@ -123,7 +123,7 @@ class Integration(unittest.TestCase):
                 old = native.command('zero eval')
                 self.assertEqual(old['policy'], result['policy'])
             auto_engine = Path(folder) / ENGINE.name
-            shutil.copyfile(ENGINE, auto_engine)
+            shutil.copy2(ENGINE, auto_engine)
             model.export(Path(folder) / 'default.zero')
             with Native(auto_engine) as automatic:
                 automatic.configure({'InferenceBackend':'Scalar'})

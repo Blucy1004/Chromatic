@@ -1,0 +1,112 @@
+[Event "Overlord paired ablation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "candidate"]
+[Black "reference"]
+[Result "1/2-1/2"]
+[TimeControl "30ms/move"]
+[Opening "Italian"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. Rf1 Bd4 5. c3 b6 6. Bd5 Nf6 7. Bb3 Rg8 8. cxd4 Nh5 9. dxe5 Nf6 10. Qc2 d5 11. e6 Rb8 12. Kd1 g5 13. Qxc6+ Qd7 14. exd7+ Nxd7 15. Qc3 f6 16. Qd4 f5 17. Qc3 Ne5 18. Qb4 Nc6 19. Qd4 h6 20. Qc3 g4 21. Kc2 g3 22. e5 Bb7 23. Qxc6+ Bxc6 24. hxg3 Ba8 25. Kd1 a5 26. e6 d4 27. Kc2 d3+ 28. Kxd3 h5 29. Ke2 Bxf3+ 30. Kxf3 h4 31. e7 Rg7 32. Ke3 hxg3 33. Ke2 c5 34. a3 c4 35. Ba2 Rxe7+ 36. Kd1 c3 37. bxc3 Rd8 38. Bb3 Rxd2+ 39. Nxd2 Re2 40. Kc2 Rxd2+ 41. Bxd2 f4 42. Be3 fxe3 43. Kd1 b5 44. Ba2 b4 45. Be6 bxc3 46. Bd7+ Kd8 47. Bh3 gxf2 48. a4 e2+ 49. Kxe2 c2 50. Rxf2 c1=N+ 51. Ke1 Na2 52. Rf5 Nc3 53. Rh5 Ne4 54. Rh4 Nd6 55. Rf4 Nf5 56. Rf3 Nd4 57. Rfa3 Nc6 58. Re3 Kc7 59. Re8 Kb7 60. Re3 Ka6 61. Bd7 Kb7 62. Rh3 Ka6 63. Rh5 Ka7 64. Rd5 Kb8 65. Rd3 Ka7 66. Rh3 Kb6 67. Rh5 Kc7 68. Rd5 Kb8 69. Rd3 Ka7 70. Rh3 Kb7 71. Rh5 Ka6 72. Rd5 Kb6 73. Rd3 1/2-1/2
+
+[Event "Overlord paired ablation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "reference"]
+[Black "candidate"]
+[Result "1/2-1/2"]
+[TimeControl "30ms/move"]
+[Opening "Italian"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. Bxf7+ Kxf7 5. Nc3 h6 6. Nb5 Bf8 7. Rb1 Kf6 8. Nd6 Bxd6 9. a3 Bc5 10. d3 Bf8 11. Bxh6 d5 12. Bg5+ Kg6 13. Bd2 Bd6 14. Bc1 Bc5 15. Bh6 Bf8 16. c4 Bg4 17. cxd5 Bd6 18. dxc6 Bc5 19. Bg5 Bc8 20. Bd2 Bf8 21. Be3 Bd6 22. Bd4 Bg4 23. Qc2 Bc8 24. Qe2 Bg4 25. Qd2 Qb8 26. Bc3 Kh5 27. Bd4 Kg6 28. Qc1 Bc8 29. Qh6+ Kxh6 30. Bc3 Kg6 31. Bd4 Kh5 32. Bc3 Bg4 33. Bd2 Ne7 34. Bc1 Qg8 35. Bh6 Qa2 36. Nh4 Kxh4 37. Bg5+ Kxg5 38. d4 Qxb1+ 39. Kd2 Qc2+ 40. Kxc2 Bd1+ 41. Kd2 Bg4 42. Kc1 Rhg8 43. dxe5 Bxa3 44. e6 Rab8 45. e5 a5 46. bxa3 Nxc6 47. Kb1 Rgc8 48. Ka2 Rg8 49. Kb3 g6 50. Kb2 Rg7 51. Ka1 Rbg8 52. Ka2 Rb8 53. Kb3 Rbg8 54. Kb2 Rb8 55. Ka1 Rbg8 56. Ka2 Rb8 1/2-1/2
+
+[Event "Overlord paired ablation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "candidate"]
+[Black "reference"]
+[Result "1/2-1/2"]
+[TimeControl "30ms/move"]
+[Opening "QueensGambit"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Nf3 dxc4 5. Rg1 Rg8 6. Nb5 Bb4+ 7. Bd2 Nh5 8. g4 Nf6 9. e4 Nh5 10. Bxc4 Nf6 11. g5 Qd6 12. Nxd6+ Bxd6 13. Qc2 g6 14. Bc3 Bc5 15. Kd2 Bf8 16. Qa4+ Nc6 17. Bd5 Nh5 18. Bc4 Rb8 19. Kd1 f6 20. h3 Bb4 21. Kc2 Nf4 22. Qb5 Nd3 23. Bd2 Nxf2 24. Qxc6+ Ke7 25. Qb6 Ng4 26. Qxe6+ Kf8 27. Qd7 a5 28. Qxh7 Nf2 29. Bc3 fxg5 30. Bxb4+ c5 31. Bc3 Bxh3 32. Bb4 g4 33. Bf7 Nd3 34. Bb3 Nf4 35. Bc3 c4 36. Bb4+ axb4 37. Qg7+ Kxg7 38. Nh4 Nd3 39. a3 Nf4 40. Kd1 cxb3 41. Ke1 Rbf8 42. Ra2 g3 43. e5 Rf5 44. Nxf5+ gxf5 45. Kd2 Rb8 46. Rga1 Rg8 47. Kc1 Rb8 48. Kd1 Rg8 49. a4 Rb8 50. Ke1 Rg8 51. Ra3 Rb8 52. Rxb3 Rg8 53. a5 Rb8 54. Ra2 Rg8 55. Kd1 Rb8 56. Kc2 Nd3 57. Kd1 Nf2+ 58. Ke1 Rg8 59. e6 Rb8 60. Rxg3+ Ng4 61. Rb3 Nf2 62. Rg3+ Ng4 63. Rb3 Nf2 1/2-1/2
+
+[Event "Overlord paired ablation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "reference"]
+[Black "candidate"]
+[Result "1/2-1/2"]
+[TimeControl "30ms/move"]
+[Opening "QueensGambit"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. a3 dxc4 5. Nf3 Nh5 6. Bf4 b6 7. Rg1 Rg8 8. Kd2 Nxf4 9. e4 Nd3 10. Nb5 Nxf2 11. Nxc7+ Qxc7 12. e5 Nc6 13. Ke3 Rb8 14. Qc2 Ng4+ 15. Ke2 f6 16. Qd2 Qb7 17. Qg5 fxe5 18. dxe5 h6 19. Qxg4 Qa6 20. Kd2 Qb5 21. Ke3 Qc5+ 22. Ke2 Qxg1 23. Kd2 Bd6 24. exd6 e5 25. Qxc8+ Rxc8 26. Nh4 Qd4+ 27. Kc1 Qxd6 28. Bxc4 Qd3 29. Bd5 Qh7 30. Be6 Qe4 31. Bd7+ Kf7 32. Bh3 Qxh4 33. Bxc8 Qe1+ 34. Kc2 Qe2+ 35. Kc1 Kf6 36. Bb7 Kf7 37. Ba6 b5 38. Bc8 Kf6 39. Bb7 Qxg2 40. Kb1 Qe2 41. Ba6 Rb8 42. Bc8 Rxc8 43. Kc1 Rg8 44. Kb1 a5 45. Kc1 Rb8 46. Kb1 Rg8 47. Ka2 Rb8 48. Rh1 Rg8 49. Kb1 Rb8 50. Kc1 Rg8 51. Kb1 Rb8 52. Ka2 Rg8 1/2-1/2
+
+[Event "Overlord paired ablation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "candidate"]
+[Black "reference"]
+[Result "1/2-1/2"]
+[FEN "8/5pk1/6p1/3R4/8/5KP1/7P/5r2 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "30ms/move"]
+[Opening "RookEnding"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. Kg2 f6 2. Rd3 f5 3. Re3 Ra1 4. Re8 Rh1 5. Re3 Kg8 6. Re8+ Kg7 7. Re2 Kg8 8. Ra2 g5 9. Ra8+ Kg7 10. Ra3 f4 11. Rc3 Kg8 12. Rc8+ Kg7 13. Rc3 Kg8 14. Ra3 f3+ 15. Kxh1 g4 16. Rxf3 Kh8 17. Ra3 Kh7 18. Re3 Kh6 19. Re6+ Kg5 20. Re3 Kf5 21. Re8 Kg5 22. Ra8 Kf5 23. Ra3 Ke5 24. Rc3 Kd5 25. Rc1 Ke6 26. Ra1 Kf5 27. Ra8 Ke5 28. Ra3 Kd5 29. Re3 Kd4 30. Re6 Kc4 31. Re3 Kd4 32. Re6 Kc4 33. Re3 1/2-1/2
+
+[Event "Overlord paired ablation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "reference"]
+[Black "candidate"]
+[Result "1/2-1/2"]
+[FEN "8/5pk1/6p1/3R4/8/5KP1/7P/5r2 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "30ms/move"]
+[Opening "RookEnding"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. Ke4 Ra1 2. Rd1 f5+ 3. Ke3 Ra7 4. Rd5 g5 5. Rd6 g4 6. Rg6+ Kxg6 7. Ke2 Rg7 8. Kd2 Kh5 9. Kc1 Kg5 10. Kb1 Rg8 11. Ka2 Rb8 12. Ka3 Rg8 13. Kb3 Rc8 14. Kb2 Rg8 15. Ka1 Rb8 16. Ka2 Rg8 17. Kb3 Rc8 18. Kb2 Rg8 1/2-1/2
+
+[Event "Overlord paired ablation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "candidate"]
+[Black "reference"]
+[Result "1/2-1/2"]
+[FEN "8/5pk1/6p1/3p4/3P4/5KP1/5P1P/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "30ms/move"]
+[Opening "PawnEnding"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. h3 f6 2. Kg2 Kg8 3. Kf1 g5 4. Kg2 g4 5. Kh1 Kh8 6. hxg4 Kh7 7. Kg2 Kg6 8. Kh1 f5 9. gxf5+ Kh5 10. Kg2 Kg5 11. Kg1 Kxf5 12. g4+ Kg5 13. f3 Kh4 14. Kf1 Kg3 15. Ke2 Kh3 16. Ke1 Kg3 17. Ke2 Kh3 18. Ke1 Kg3 1/2-1/2
+
+[Event "Overlord paired ablation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "reference"]
+[Black "candidate"]
+[Result "1/2-1/2"]
+[FEN "8/5pk1/6p1/3p4/3P4/5KP1/5P1P/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "30ms/move"]
+[Opening "PawnEnding"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. Kg2 f6 2. Kg1 f5 3. h4 g5 4. Kh2 g4 5. h5 Kh8 6. Kg2 Kg7 7. Kh1 Kh8 8. Kg2 Kg7 9. Kg1 Kf6 10. Kh2 Kg7 11. Kg2 Kh8 12. Kh2 Kg7 13. Kg1 Kf6 14. Kh2 1/2-1/2
+

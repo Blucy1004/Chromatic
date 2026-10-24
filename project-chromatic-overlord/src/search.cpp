@@ -397,7 +397,7 @@ SearchResult search_impl(const Board& board,const Network& network,const SearchL
     const bool verify=limits.counterexample||limits.forcing_search||limits.tactical_verify;
     const auto hard_deadline=limits.milliseconds>0?start+std::chrono::milliseconds(limits.milliseconds):std::chrono::steady_clock::time_point::max();
     auto search_deadline=hard_deadline;
-    if(verify&&limits.milliseconds>0)search_deadline=start+std::chrono::milliseconds(std::max(1,limits.milliseconds*3/4));
+    if(verify&&limits.milliseconds>0)search_deadline=start+std::chrono::milliseconds(std::max<int64_t>(1,int64_t(limits.milliseconds)*3/4));
     auto cancelled=[&](){return stop.load(std::memory_order_relaxed)||std::chrono::steady_clock::now()>=search_deadline;};
     SearchResult result;
     if constexpr(Measured)result.telemetry=std::make_shared<SearchTelemetry>();
@@ -417,7 +417,7 @@ SearchResult search_impl(const Board& board,const Network& network,const SearchL
     }
     if(limits.proof_nodes>0&&!cancelled()) {
         std::vector<Move> moves;for(uint32_t i=0;i<root_count;++i)moves.push_back(tree.edges[i].move);
-        int microseconds=limits.milliseconds>0?std::max(100, std::min(10000,limits.milliseconds*1000/4)):0;
+        int microseconds=limits.milliseconds>0?int(std::max<int64_t>(100, std::min<int64_t>(10000,int64_t(limits.milliseconds)*1000/4))):0;
         auto proof=verify_mate(board,moves,limits.proof_plies,limits.proof_nodes,stop,microseconds);
         result.proof_nodes=proof.nodes;
         if(proof.proven) {

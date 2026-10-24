@@ -87,8 +87,35 @@ void verify_candidates(const Board& b,const Network& net,const SearchLimits& lim
         if(result.visits[c].first==result.best)return false;
         return result.visits[a].second!=result.visits[c].second?result.visits[a].second>result.visits[c].second:result.priors[a]>result.priors[c];
     });
+    if(limits.forcing_search||limits.tactical_verify) {
+        // Low-prior forcing moves must have an opportunity to be checked. Keep
+        // the MCTS choice, then admit ordered tactical alternatives before quiet
+        // visit leaders. Scan only under the same hard time/node budget.
+        std::vector<std::pair<int,size_t>> forcing_moves;
+        for(size_t i=0;i<result.visits.size();++i) {
+            if(stop.load(std::memory_order_relaxed)||std::chrono::steady_clock::now()>=deadline||result.verification_nodes>=limits.verification_nodes)return;
+            Move m=result.visits[i].first;Board child=b;child.make(m);
+            ++result.verification_nodes;
+            auto replies=child.legal();float terminal=0;
+            if(child.terminal(replies,terminal)&&terminal==-1) {
+                // An actual terminal board is an exact one-ply proof. Visits/Q
+                // remain the real MCTS statistics, including a zero-visit mate.
+                result.verification_changed=m!=result.best;result.best=m;
+                result.mate_proven=true;result.proof_plies=1;result.value=1;return;
+            }
+            const bool is_capture=capture(b,m),gives_check=child.check(child.turn);
+            int score=(is_capture?16*piece_value[std::abs(b.squares[m.to])]-piece_value[std::abs(b.squares[m.from])]+100:0)
+                      +(m.promo?2000+piece_value[m.promo]:0)+(gives_check&&limits.forcing_search?50:0);
+            if(is_capture||m.promo||(gives_check&&limits.forcing_search))forcing_moves.push_back({score,i});
+        }
+        std::stable_sort(forcing_moves.begin(),forcing_moves.end(),[](auto a,auto c){return a.first>c.first;});
+        std::vector<size_t> shortlist{order.front()};
+        for(auto [score,index]:forcing_moves)if(index!=order.front())shortlist.push_back(index);
+        for(size_t index:order)if(std::find(shortlist.begin(),shortlist.end(),index)==shortlist.end())shortlist.push_back(index);
+        order=std::move(shortlist);
+    }
     order.resize(std::min(order.size(),size_t(limits.verification_candidates)));
-    const int quota=limits.verification_nodes/std::max(1,int(order.size()));
+    const int quota=(limits.verification_nodes-result.verification_nodes)/std::max(1,int(order.size()));
     std::vector<float> scores;
     for(size_t index:order) {
         auto checked=verify_candidate(b,result.visits[index].first,net,limits.verification_depth,quota,

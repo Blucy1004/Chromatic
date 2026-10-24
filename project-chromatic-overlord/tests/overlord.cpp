@@ -55,6 +55,15 @@ int main(int argc,char** argv){try {
         require(good.complete&&bad.complete,"bounded verifier completes comparison");
         if(mode==2)require(good.value>bad.value+.2,"tactical verifier catches hanging queen");
     }
+    // An obvious zero/low-policy capture must enter the tactical shortlist.
+    auto tactical_limits=SearchLimits{};tactical_limits.simulations=1;tactical_limits.tactical_verify=true;
+    tactical_limits.verification_depth=2;tactical_limits.verification_nodes=4096;
+    auto tactical=search(hanging,net,tactical_limits,stop);
+    require(tactical.best==Move{3,11,0},"tactical admission finds low-visit queen capture");
+    auto forcing_limits=tactical_limits;forcing_limits.tactical_verify=false;forcing_limits.forcing_search=true;
+    auto forced=search(mate,net,forcing_limits,stop);
+    auto after_mate=mate;after_mate.make(forced.best);float mate_value=0;
+    require(forced.mate_proven&&after_mate.terminal(after_mate.legal(),mate_value)&&mate_value==-1,"forcing root terminal proof independent of policy");
     auto incomplete=verify_candidate(start,start.legal()[0],net,4,1,true,true,true,stop,deadline);
     require(!incomplete.complete&&incomplete.nodes<=1,"incomplete verification cannot certify a candidate");
     l=SearchLimits{};l.simulations=128;l.counterexample=true;l.verification_nodes=1;
@@ -63,7 +72,7 @@ int main(int argc,char** argv){try {
     l=SearchLimits{};l.threads=4;l.simulations=0;l.milliseconds=30;l.counterexample=true;l.forcing_search=true;l.tactical_verify=true;
     auto t=std::chrono::steady_clock::now();auto timed=search(start,net,l,stop);
     require(timed.has_move&&std::chrono::steady_clock::now()-t<std::chrono::seconds(2),"bounded clock with verification");
-    l.milliseconds=0;
+    l.milliseconds=1000000000; // Exercise deadline arithmetic without waiting for it.
     auto job=std::async(std::launch::async,[&]{return search(start,net,l,stop);});
     std::this_thread::sleep_for(std::chrono::milliseconds(10));stop=true;
     require(job.wait_for(std::chrono::seconds(2))==std::future_status::ready,"stop joins parallel workers");job.get();stop=false;

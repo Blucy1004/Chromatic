@@ -1,0 +1,10 @@
+test_checkpoint_exact_resume_and_corruption_recovery (__main__.Integration.test_checkpoint_exact_resume_and_corruption_recovery) ... ok
+test_move_oracle_and_encoder (__main__.Integration.test_move_oracle_and_encoder) ... ok
+test_native_model_parity_and_invalid_load (__main__.Integration.test_native_model_parity_and_invalid_load) ... ok
+test_selfplay_labels_truncation_and_restartable_loop (__main__.Integration.test_selfplay_labels_truncation_and_restartable_loop) ... ok
+test_uci_time_stop_and_protocol (__main__.Integration.test_uci_time_stop_and_protocol) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.394s
+
+OK

@@ -1,0 +1,68 @@
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/chromatic-depth
+[1/21] Building CXX object CMakeFiles/zero_core.dir/src/network.cpp.o
+[2/21] Building CXX object CMakeFiles/zero_core.dir/src/board.cpp.o
+/workspace/Chromatic/project-chromatic-depth/src/board.cpp: In member function ‘void zero::Board::make(zero::Move, bool)’:
+/workspace/Chromatic/project-chromatic-depth/src/board.cpp:122:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  122 |     if(turn==-1)++fullmove;turn=-turn;
+      |     ^~
+/workspace/Chromatic/project-chromatic-depth/src/board.cpp:122:28: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  122 |     if(turn==-1)++fullmove;turn=-turn;
+      |                            ^~~~
+/workspace/Chromatic/project-chromatic-depth/src/board.cpp: In member function ‘uint64_t zero::Board::key() const’:
+/workspace/Chromatic/project-chromatic-depth/src/board.cpp:128:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  128 |     for(int p:squares)mix(p+6);mix(turn+1);mix(castle);
+      |     ^~~
+/workspace/Chromatic/project-chromatic-depth/src/board.cpp:128:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  128 |     for(int p:squares)mix(p+6);mix(turn+1);mix(castle);
+      |                                ^~~
+[3/21] Building CXX object CMakeFiles/zero_core.dir/src/proof.cpp.o
+[4/21] Building CXX object CMakeFiles/zero_core.dir/src/search.cpp.o
+/workspace/Chromatic/project-chromatic-depth/src/search.cpp: In function ‘zero::SearchResult zero::{anonymous}::search_impl(const zero::Board&, const zero::Network&, const zero::SearchLimits&, const std::atomic<bool>&)’:
+/workspace/Chromatic/project-chromatic-depth/src/search.cpp:246:17: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  246 |                 if(first_reserved)add("first_reserved_cap");if(first_failure)add("first_allocation_failure");if(early)add("early");if(interval)add("interval");
+      |                 ^~
+/workspace/Chromatic/project-chromatic-depth/src/search.cpp:246:61: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  246 |                 if(first_reserved)add("first_reserved_cap");if(first_failure)add("first_allocation_failure");if(early)add("early");if(interval)add("interval");
+      |                                                             ^~
+[5/21] Building CXX object CMakeFiles/zero_core.dir/src/telemetry_json.cpp.o
+[6/21] Building CXX object CMakeFiles/pristine_core.dir/baseline/src/network.cpp.o
+[7/21] Building CXX object CMakeFiles/pristine_core.dir/baseline/src/board.cpp.o
+/workspace/Chromatic/project-chromatic-depth/baseline/src/board.cpp: In member function ‘void zero::Board::make(zero::Move, bool)’:
+/workspace/Chromatic/project-chromatic-depth/baseline/src/board.cpp:122:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  122 |     if(turn==-1)++fullmove;turn=-turn;
+      |     ^~
+/workspace/Chromatic/project-chromatic-depth/baseline/src/board.cpp:122:28: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  122 |     if(turn==-1)++fullmove;turn=-turn;
+      |                            ^~~~
+/workspace/Chromatic/project-chromatic-depth/baseline/src/board.cpp: In member function ‘uint64_t zero::Board::key() const’:
+/workspace/Chromatic/project-chromatic-depth/baseline/src/board.cpp:128:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  128 |     for(int p:squares)mix(p+6);mix(turn+1);mix(castle);
+      |     ^~~
+/workspace/Chromatic/project-chromatic-depth/baseline/src/board.cpp:128:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  128 |     for(int p:squares)mix(p+6);mix(turn+1);mix(castle);
+      |                                ^~~
+[8/21] Linking CXX static library libzero_core.a
+[9/21] Building CXX object CMakeFiles/pristine_core.dir/baseline/src/proof.cpp.o
+[10/21] Building CXX object CMakeFiles/pristine_core.dir/baseline/src/search.cpp.o
+[11/21] Building CXX object CMakeFiles/depth_probe.dir/tools/depth_probe.cpp.o
+[12/21] Building CXX object CMakeFiles/zero_tests.dir/tests/core.cpp.o
+[13/21] Linking CXX static library libpristine_core.a
+[14/21] Building CXX object CMakeFiles/chromatic_depth.dir/src/main.cpp.o
+[15/21] Linking CXX executable chromatic_depth
+[16/21] Linking CXX executable depth_probe
+[17/21] Linking CXX executable zero_tests
+[18/21] Building CXX object CMakeFiles/depth_telemetry_tests.dir/tests/depth_telemetry.cpp.o
+[19/21] Linking CXX executable depth_telemetry_tests
+[20/21] Building CXX object CMakeFiles/pristine_probe.dir/tools/depth_probe.cpp.o
+[21/21] Linking CXX executable pristine_probe

@@ -1,0 +1,76 @@
+[
+  {
+    "directory": "/tmp",
+    "child_self": {
+      "read_count": 124,
+      "write_count": 1,
+      "read_bytes": 0,
+      "write_bytes": 0,
+      "read_chars": 1261811,
+      "write_chars": 2097152
+    },
+    "parent_observed": {
+      "read_count": 126,
+      "write_count": 2,
+      "read_bytes": 0,
+      "write_bytes": 0,
+      "read_chars": 1261915,
+      "write_chars": 2097271
+    },
+    "sampler": {
+      "elapsed_seconds": 0.0319970799996554,
+      "rss_bytes": 11055104,
+      "cpu_process_percent": 93.39802080276239,
+      "cpu_seconds_total_last_known": 0.02,
+      "root_launcher_rss_bytes": 11055104,
+      "io_read_bytes": 0,
+      "io_write_bytes": 0,
+      "io_read_operations": 126,
+      "io_write_operations": 2,
+      "live_pids": [
+        5363
+      ],
+      "tracked_processes": 1,
+      "live_processes": 1,
+      "sampling_scope": "process_tree_v2"
+    },
+    "errors": []
+  },
+  {
+    "directory": "/workspace/scratch",
+    "child_self": {
+      "read_count": 124,
+      "write_count": 1,
+      "read_bytes": 0,
+      "write_bytes": 2109440,
+      "read_chars": 1261811,
+      "write_chars": 2097152
+    },
+    "parent_observed": {
+      "read_count": 126,
+      "write_count": 2,
+      "read_bytes": 0,
+      "write_bytes": 2113536,
+      "read_chars": 1261921,
+      "write_chars": 2097277
+    },
+    "sampler": {
+      "elapsed_seconds": 0.03169329399997878,
+      "rss_bytes": 11059200,
+      "cpu_process_percent": 0.0,
+      "cpu_seconds_total_last_known": 0.01,
+      "root_launcher_rss_bytes": 11059200,
+      "io_read_bytes": 0,
+      "io_write_bytes": 2113536,
+      "io_read_operations": 126,
+      "io_write_operations": 2,
+      "live_pids": [
+        5364
+      ],
+      "tracked_processes": 1,
+      "live_processes": 1,
+      "sampling_scope": "process_tree_v2"
+    },
+    "errors": []
+  }
+]
