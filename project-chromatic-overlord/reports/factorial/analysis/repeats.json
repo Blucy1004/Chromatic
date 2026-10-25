@@ -1,0 +1,754 @@
+[
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "model": "lichess10000",
+    "mask": 0,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      35,
+      35,
+      35
+    ],
+    "accuracy_mean": 0.35,
+    "accuracy_mean_cluster_ci95": [
+      0.26,
+      0.44
+    ],
+    "run_accuracy_sd": 6.798699777552591e-17,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 1
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 1
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "model": "lichess10000",
+    "mask": 8,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      50,
+      50,
+      50
+    ],
+    "accuracy_mean": 0.5,
+    "accuracy_mean_cluster_ci95": [
+      0.4,
+      0.6
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "model": "lichess10000",
+    "mask": 12,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      62,
+      62,
+      62
+    ],
+    "accuracy_mean": 0.62,
+    "accuracy_mean_cluster_ci95": [
+      0.52,
+      0.71
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "model": "lichess10000",
+    "mask": 15,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      51,
+      51,
+      51
+    ],
+    "accuracy_mean": 0.51,
+    "accuracy_mean_cluster_ci95": [
+      0.41,
+      0.61
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 1
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 1
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "model": "zero128",
+    "mask": 0,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      22,
+      22,
+      22
+    ],
+    "accuracy_mean": 0.22,
+    "accuracy_mean_cluster_ci95": [
+      0.14,
+      0.3
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 1
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 1
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "model": "zero128",
+    "mask": 8,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      45,
+      45,
+      45
+    ],
+    "accuracy_mean": 0.45,
+    "accuracy_mean_cluster_ci95": [
+      0.35,
+      0.55
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "model": "zero128",
+    "mask": 14,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      63,
+      63,
+      63
+    ],
+    "accuracy_mean": 0.63,
+    "accuracy_mean_cluster_ci95": [
+      0.54,
+      0.72
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "model": "zero128",
+    "mask": 15,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      56,
+      56,
+      56
+    ],
+    "accuracy_mean": 0.56,
+    "accuracy_mean_cluster_ci95": [
+      0.46,
+      0.66
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "model": "lichess10000",
+    "mask": 0,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      34,
+      34,
+      34
+    ],
+    "accuracy_mean": 0.34,
+    "accuracy_mean_cluster_ci95": [
+      0.25,
+      0.43
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "model": "lichess10000",
+    "mask": 8,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      48,
+      48,
+      48
+    ],
+    "accuracy_mean": 0.48,
+    "accuracy_mean_cluster_ci95": [
+      0.38,
+      0.58
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "model": "lichess10000",
+    "mask": 12,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      62,
+      62,
+      62
+    ],
+    "accuracy_mean": 0.62,
+    "accuracy_mean_cluster_ci95": [
+      0.52,
+      0.71
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "model": "lichess10000",
+    "mask": 15,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      47,
+      47,
+      47
+    ],
+    "accuracy_mean": 0.47,
+    "accuracy_mean_cluster_ci95": [
+      0.37,
+      0.57
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 2
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 2
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "model": "zero128",
+    "mask": 0,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      22,
+      22,
+      22
+    ],
+    "accuracy_mean": 0.22,
+    "accuracy_mean_cluster_ci95": [
+      0.14,
+      0.3
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "model": "zero128",
+    "mask": 8,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      45,
+      45,
+      45
+    ],
+    "accuracy_mean": 0.45,
+    "accuracy_mean_cluster_ci95": [
+      0.35,
+      0.55
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "model": "zero128",
+    "mask": 14,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      63,
+      63,
+      63
+    ],
+    "accuracy_mean": 0.63,
+    "accuracy_mean_cluster_ci95": [
+      0.54,
+      0.72
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      }
+    ],
+    "independent_source_game_units": 100
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "model": "zero128",
+    "mask": 15,
+    "puzzles": 100,
+    "repeats": 3,
+    "run_hits": [
+      48,
+      48,
+      48
+    ],
+    "accuracy_mean": 0.48,
+    "accuracy_mean_cluster_ci95": [
+      0.38,
+      0.58
+    ],
+    "run_accuracy_sd": 0.0,
+    "puzzles_with_correctness_variation": 0,
+    "comparisons": [
+      {
+        "repeats": [
+          0,
+          1
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          0,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      },
+      {
+        "repeats": [
+          1,
+          2
+        ],
+        "correctness_flips": 0,
+        "move_flips": 0
+      }
+    ],
+    "independent_source_game_units": 100
+  }
+]

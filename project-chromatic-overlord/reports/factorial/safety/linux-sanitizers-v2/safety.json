@@ -1,0 +1,137 @@
+{
+  "os": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "sanitizer_options": {
+    "ASAN_OPTIONS": "detect_leaks=1:halt_on_error=1",
+    "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1",
+    "TSAN_OPTIONS": "halt_on_error=1"
+  },
+  "source_commit": "5acdc0af5571d6d41da1db16f0b74e9819f0d4f8",
+  "cpp_sha256": {
+    "src/board.cpp": "3710bfcd57304a5cb6093b844afe5c67d57462670e88044330f5164a8c63d0a9",
+    "src/main.cpp": "ef24e47ea2edbc53cf0d5aab31bec72eeebeb188e4da4dda1ff5321097172573",
+    "src/network.cpp": "27f61c9ec77a6b4ac37da89807693adbccf7f8f6e28b3275e2e48f50aef14abb",
+    "src/proof.cpp": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e",
+    "src/search.cpp": "5e8280aac2e21ed5a574b517041c3d6fd01139cb837b76094a83fcc0f7d2fc17",
+    "src/sha256.cpp": "65caec4f94bca9578c22e13ce8c4493e634fa0ccb8868a38fedf7ab953686cd4",
+    "src/telemetry_json.cpp": "a54eb02ad85bce383d70c5753db1903594dc1db7514406a9541925cce07c5d9b",
+    "src/verification.cpp": "45a636cf5366dce9a0f1eb6ccbd1ec0f3bf4d19fac6c3bdfd8ecfea1b246a06c",
+    "include/zero/board.hpp": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b",
+    "include/zero/leaf_pool.hpp": "31d8f6a2ceb050f034c356bc8979135d8d7db0e1cbb9399c4476645fee9f348d",
+    "include/zero/network.hpp": "0971c5921df05a09813cb1c2782672107cb553f91f7f0f1c155045f4a3465a0a",
+    "include/zero/profile.hpp": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39",
+    "include/zero/proof.hpp": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f",
+    "include/zero/research.hpp": "83c322dd3b481666f96ca889a61dc83393b650edebfa22fe3e7bcad1c16d63dd",
+    "include/zero/search.hpp": "525aa27370784dfee5886e2a8eb19dffa4e30c88c3622f8334c0b442f6b62d0b",
+    "include/zero/sha256.hpp": "e75d3884092c23133cf28579d7e8149134d33d843f75eaa9984d5d1c6fb0d0f5",
+    "include/zero/telemetry_json.hpp": "fe184f046b79940d55c681b5c3edac968c3db3af77762b98f771741ab60aaec8",
+    "include/zero/verification.hpp": "2fcbe42e1017867a93b0a0ead506cbc86cf9ee865681c0ddddb170df5474466f"
+  },
+  "builds": [
+    {
+      "kind": "asan",
+      "steps": [
+        {
+          "name": "configure",
+          "command": [
+            "cmake",
+            "-S",
+            "/workspace/Chromatic/project-chromatic-overlord",
+            "-B",
+            "/tmp/chromatic-factorial-safety-v2/asan",
+            "-G",
+            "Ninja",
+            "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+            "-DCHROMATIC_ASAN=ON"
+          ],
+          "exit_code": 0,
+          "seconds": 0.28469239299738547,
+          "log_sha256": "16712b4abbbdf4a3d6842b5a750d7299062bc596bcd9281e97aeef7f7470c594"
+        },
+        {
+          "name": "build",
+          "command": [
+            "cmake",
+            "--build",
+            "/tmp/chromatic-factorial-safety-v2/asan",
+            "--parallel",
+            "2"
+          ],
+          "exit_code": 0,
+          "seconds": 31.164882519995444,
+          "log_sha256": "c54e80afa6903f0438617ed476822909d099f3fcbbd45d9cfbe69be0a6ad2f6a"
+        },
+        {
+          "name": "ctest",
+          "command": [
+            "ctest",
+            "--test-dir",
+            "/tmp/chromatic-factorial-safety-v2/asan",
+            "--output-on-failure"
+          ],
+          "exit_code": 0,
+          "seconds": 12.158576187001017,
+          "log_sha256": "0a69529af3a7d10f429f9a6689395d3733c415947350aa4a0a67453815b15d17"
+        }
+      ],
+      "engine_sha256": "585b8fced4841824153d7198059a1038bd27bfd65ae1d21f169ffcda627ce5d9",
+      "passed": true
+    },
+    {
+      "kind": "tsan",
+      "steps": [
+        {
+          "name": "configure",
+          "command": [
+            "cmake",
+            "-S",
+            "/workspace/Chromatic/project-chromatic-overlord",
+            "-B",
+            "/tmp/chromatic-factorial-safety-v2/tsan",
+            "-G",
+            "Ninja",
+            "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+            "-DCHROMATIC_TSAN=ON"
+          ],
+          "exit_code": 0,
+          "seconds": 0.2675803750025807,
+          "log_sha256": "9953a6b4c2208fa708cc725579d782ca4fba6ca4796b6f70ffbf42626416cd26"
+        },
+        {
+          "name": "build",
+          "command": [
+            "cmake",
+            "--build",
+            "/tmp/chromatic-factorial-safety-v2/tsan",
+            "--parallel",
+            "2"
+          ],
+          "exit_code": 0,
+          "seconds": 14.23170945700258,
+          "log_sha256": "954e5bae904f693570c8102c2ea4a5a144470aeed71f9c86acc6d9557b45f114"
+        },
+        {
+          "name": "ctest",
+          "command": [
+            "ctest",
+            "--test-dir",
+            "/tmp/chromatic-factorial-safety-v2/tsan",
+            "--output-on-failure"
+          ],
+          "exit_code": 0,
+          "seconds": 26.78970348000439,
+          "log_sha256": "4492c75126064acdb7f8761e3abbf0d0b0cdf9b52f9b53f7002caa36f636dec6"
+        }
+      ],
+      "engine_sha256": "f4f66c5d0278dc9b0f19e69313864152456e793938e76a869aae60930b458576",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "measured_engine_sha256": "b97bcfc96400e6b7973382bf30234654c82cb97181eb68b86ba79ebe1cbf5428",
+  "same_cpp_as_measurement": true,
+  "tools": {
+    "cmake": "/tmp/chromatic-venv/bin/cmake",
+    "ctest": "/tmp/chromatic-venv/bin/ctest",
+    "ninja": "/tmp/chromatic-venv/bin/ninja"
+  }
+}

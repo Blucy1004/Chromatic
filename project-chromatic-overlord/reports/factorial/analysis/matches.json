@@ -1,0 +1,218 @@
+[
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "series": "lichess10000-m12",
+    "model": "lichess10000",
+    "mask": 12,
+    "games": 16,
+    "finished": 16,
+    "unfinished": 0,
+    "wins": 11,
+    "draws": 5,
+    "losses": 0,
+    "complete_opening_pairs": 8,
+    "paired_score": 0.84375,
+    "pair_bootstrap_ci95": [
+      0.78125,
+      0.9375
+    ],
+    "pair_hoeffding_ci95": [
+      0.36358860434003965,
+      1
+    ],
+    "descriptive_elo": 292.9575039291874,
+    "elo_bootstrap_ci95": [
+      221.1367874631123,
+      470.43650362227254
+    ],
+    "elo_hoeffding_ci95": [
+      -97.25107381888546,
+      "infinity"
+    ],
+    "pgn_trace_validation": true,
+    "confirmed_elo_gain": false,
+    "promote": false,
+    "reason": "bounded fixed 8-opening suite is below preregistered 64 independent pairs; incomplete games are not draws; intervals are conditional on opening-sampling assumptions"
+  },
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "series": "zero128-m14",
+    "model": "zero128",
+    "mask": 14,
+    "games": 16,
+    "finished": 16,
+    "unfinished": 0,
+    "wins": 5,
+    "draws": 11,
+    "losses": 0,
+    "complete_opening_pairs": 8,
+    "paired_score": 0.65625,
+    "pair_bootstrap_ci95": [
+      0.53125,
+      0.78125
+    ],
+    "pair_hoeffding_ci95": [
+      0.17608860434003965,
+      1
+    ],
+    "descriptive_elo": 112.3306438302777,
+    "elo_bootstrap_ci95": [
+      21.74306492903707,
+      221.1367874631123
+    ],
+    "elo_hoeffding_ci95": [
+      -268.0597033613719,
+      "infinity"
+    ],
+    "pgn_trace_validation": true,
+    "confirmed_elo_gain": false,
+    "promote": false,
+    "reason": "bounded fixed 8-opening suite is below preregistered 64 independent pairs; incomplete games are not draws; intervals are conditional on opening-sampling assumptions"
+  },
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "series": "zero128-m15",
+    "model": "zero128",
+    "mask": 15,
+    "games": 16,
+    "finished": 15,
+    "unfinished": 1,
+    "wins": 13,
+    "draws": 2,
+    "losses": 0,
+    "complete_opening_pairs": 7,
+    "paired_score": 0.9285714285714286,
+    "pair_bootstrap_ci95": [
+      0.7857142857142857,
+      1.0
+    ],
+    "pair_hoeffding_ci95": [
+      0.4152573048814927,
+      1
+    ],
+    "descriptive_elo": 445.5773409227348,
+    "elo_bootstrap_ci95": [
+      225.70857217542502,
+      "infinity"
+    ],
+    "elo_hoeffding_ci95": [
+      -59.45900965774875,
+      "infinity"
+    ],
+    "pgn_trace_validation": true,
+    "confirmed_elo_gain": false,
+    "promote": false,
+    "reason": "bounded fixed 8-opening suite is below preregistered 64 independent pairs; incomplete games are not draws; intervals are conditional on opening-sampling assumptions"
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "series": "lichess10000-m12",
+    "model": "lichess10000",
+    "mask": 12,
+    "games": 16,
+    "finished": 14,
+    "unfinished": 2,
+    "wins": 9,
+    "draws": 5,
+    "losses": 0,
+    "complete_opening_pairs": 6,
+    "paired_score": 0.875,
+    "pair_bootstrap_ci95": [
+      0.7916666666666666,
+      0.9583333333333334
+    ],
+    "pair_hoeffding_ci95": [
+      0.32055737792251093,
+      1
+    ],
+    "descriptive_elo": 338.0392160057027,
+    "elo_bootstrap_ci95": [
+      231.913438646724,
+      544.6911344070373
+    ],
+    "elo_hoeffding_ci95": [
+      -130.49880402817024,
+      "infinity"
+    ],
+    "pgn_trace_validation": true,
+    "confirmed_elo_gain": false,
+    "promote": false,
+    "reason": "bounded fixed 8-opening suite is below preregistered 64 independent pairs; incomplete games are not draws; intervals are conditional on opening-sampling assumptions"
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "series": "zero128-m14",
+    "model": "zero128",
+    "mask": 14,
+    "games": 16,
+    "finished": 16,
+    "unfinished": 0,
+    "wins": 8,
+    "draws": 8,
+    "losses": 0,
+    "complete_opening_pairs": 8,
+    "paired_score": 0.75,
+    "pair_bootstrap_ci95": [
+      0.65625,
+      0.84375
+    ],
+    "pair_hoeffding_ci95": [
+      0.26983860434003965,
+      1
+    ],
+    "descriptive_elo": 190.84850188786498,
+    "elo_bootstrap_ci95": [
+      112.3306438302777,
+      292.9575039291874
+    ],
+    "elo_hoeffding_ci95": [
+      -172.92591428920895,
+      "infinity"
+    ],
+    "pgn_trace_validation": true,
+    "confirmed_elo_gain": false,
+    "promote": false,
+    "reason": "bounded fixed 8-opening suite is below preregistered 64 independent pairs; incomplete games are not draws; intervals are conditional on opening-sampling assumptions"
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "series": "zero128-m15",
+    "model": "zero128",
+    "mask": 15,
+    "games": 16,
+    "finished": 12,
+    "unfinished": 4,
+    "wins": 9,
+    "draws": 3,
+    "losses": 0,
+    "complete_opening_pairs": 4,
+    "paired_score": 0.875,
+    "pair_bootstrap_ci95": [
+      0.75,
+      1.0
+    ],
+    "pair_hoeffding_ci95": [
+      0.19594924212969023,
+      1
+    ],
+    "descriptive_elo": 338.0392160057027,
+    "elo_bootstrap_ci95": [
+      190.84850188786498,
+      "infinity"
+    ],
+    "elo_hoeffding_ci95": [
+      -245.25595100830094,
+      "infinity"
+    ],
+    "pgn_trace_validation": true,
+    "confirmed_elo_gain": false,
+    "promote": false,
+    "reason": "bounded fixed 8-opening suite is below preregistered 64 independent pairs; incomplete games are not draws; intervals are conditional on opening-sampling assumptions"
+  }
+]

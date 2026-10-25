@@ -1,0 +1,197 @@
+{
+  "checks": [
+    {
+      "name": "linux_complete_matrix",
+      "passed": true,
+      "counts": {
+        "five_seconds": 8,
+        "ten_seconds": 6,
+        "scalar_fixed": 16,
+        "one_second": 32,
+        "fixed_nn": 128,
+        "screen": 128,
+        "anchors": 16,
+        "holdout": 24,
+        "fixed_nodes": 128,
+        "legacy_proof": 4
+      },
+      "expected": {
+        "scalar_fixed": 16,
+        "screen": 128,
+        "legacy_proof": 4,
+        "anchors": 16,
+        "one_second": 32,
+        "five_seconds": 8,
+        "ten_seconds": 6,
+        "fixed_nodes": 128,
+        "fixed_nn": 128,
+        "holdout": 24
+      },
+      "searches": 27048,
+      "completed": {
+        "completed": true,
+        "active_seconds": 3466.069126676004
+      },
+      "model_attestations": true
+    },
+    {
+      "name": "linux_native_os",
+      "passed": true
+    },
+    {
+      "name": "windows_complete_matrix",
+      "passed": true,
+      "counts": {
+        "five_seconds": 8,
+        "ten_seconds": 6,
+        "scalar_fixed": 16,
+        "one_second": 32,
+        "fixed_nn": 128,
+        "screen": 128,
+        "anchors": 16,
+        "holdout": 24,
+        "fixed_nodes": 128,
+        "legacy_proof": 4
+      },
+      "expected": {
+        "scalar_fixed": 16,
+        "screen": 128,
+        "legacy_proof": 4,
+        "anchors": 16,
+        "one_second": 32,
+        "five_seconds": 8,
+        "ten_seconds": 6,
+        "fixed_nodes": 128,
+        "fixed_nn": 128,
+        "holdout": 24
+      },
+      "searches": 27048,
+      "completed": {
+        "completed": true,
+        "active_seconds": 3683.844
+      },
+      "model_attestations": true
+    },
+    {
+      "name": "windows_native_os",
+      "passed": true
+    },
+    {
+      "name": "same_cpp_runner_seed_corpora",
+      "passed": true
+    },
+    {
+      "name": "linux_release",
+      "passed": true,
+      "path": "/workspace/Chromatic/project-chromatic-overlord/reports/factorial/preflight/native-linux.log",
+      "sha256": "745c95bd6e6598b3b78c88259b154babb67f753ecfd827f6539a8ead12cba086"
+    },
+    {
+      "name": "windows_msvc_release",
+      "passed": true,
+      "path": "project-chromatic-overlord/reports/factorial/windows/40152066905-1/ctest.log",
+      "sha256": "3015e6c94bf24a6898132a948591fb86cfcc0999dcefb6228c0d04bc78f69bad"
+    },
+    {
+      "name": "linux_uci_perft_stop_quit_time_reclamation",
+      "passed": true,
+      "checks": 41,
+      "engine_sha256": "b97bcfc96400e6b7973382bf30234654c82cb97181eb68b86ba79ebe1cbf5428"
+    },
+    {
+      "name": "linux_research_protocol",
+      "passed": true,
+      "checks": 68
+    },
+    {
+      "name": "windows_uci_perft_stop_quit_time_reclamation",
+      "passed": true,
+      "checks": 41,
+      "engine_sha256": "8eb4dc51c223a74ef18f310950292ff9cfb37341cb1593f9662c50b0f06d3cc8"
+    },
+    {
+      "name": "windows_research_protocol",
+      "passed": true,
+      "checks": 68
+    },
+    {
+      "name": "linux_sanitizers_same_cpp",
+      "passed": true,
+      "report": "/workspace/Chromatic/project-chromatic-overlord/reports/factorial/safety/linux-sanitizers-v2/safety.json"
+    },
+    {
+      "name": "linux_asan",
+      "passed": true,
+      "path": "/workspace/Chromatic/project-chromatic-overlord/reports/factorial/safety/linux-sanitizers-v2/asan-ctest.log",
+      "sha256": "0a69529af3a7d10f429f9a6689395d3733c415947350aa4a0a67453815b15d17"
+    },
+    {
+      "name": "linux_tsan",
+      "passed": true,
+      "path": "/workspace/Chromatic/project-chromatic-overlord/reports/factorial/safety/linux-sanitizers-v2/tsan-ctest.log",
+      "sha256": "4492c75126064acdb7f8761e3abbf0d0b0cdf9b52f9b53f7002caa36f636dec6"
+    },
+    {
+      "name": "windows_native_msvc_asan",
+      "passed": true,
+      "path": "project-chromatic-overlord/reports/factorial/artifact-validation/40156123193-1/asan-ctest.log",
+      "sha256": "bc0ea5b88f63483be128797758f9acc2b42386b2236006485788be44ed5e5d3f"
+    },
+    {
+      "name": "windows_exact_measured_artifact",
+      "passed": true,
+      "artifact": {
+        "scope": "same executable on a separate native Windows host; protocol only",
+        "native_os": "Microsoft Windows NT 10.0.20348.0",
+        "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+        "research_run": "40152066905",
+        "engine_sha256": "8eb4dc51c223a74ef18f310950292ff9cfb37341cb1593f9662c50b0f06d3cc8"
+      }
+    },
+    {
+      "name": "historical_preservation",
+      "passed": true,
+      "protected_counts": [
+        308,
+        70
+      ],
+      "previous_report_files": 214
+    },
+    {
+      "name": "python_statistics",
+      "passed": true,
+      "path": "/workspace/Chromatic/project-chromatic-overlord/reports/factorial/safety/unit-statistics.log"
+    },
+    {
+      "name": "python_analysis",
+      "passed": true,
+      "path": "/workspace/Chromatic/project-chromatic-overlord/reports/factorial/safety/unit-analysis.log"
+    },
+    {
+      "name": "all_game_traces_and_pgns",
+      "passed": true,
+      "series": 6,
+      "games": 96
+    },
+    {
+      "name": "experimental_defaults_preserved",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "scope": "factorial source and measured executables; old reports preserved",
+  "known_failures_retained": [
+    {
+      "path": "reports/factorial/safety/linux-sanitizers/launch-failure.json",
+      "kind": "tool PATH launch; no sanitizer test executed; repaired in separate v2"
+    },
+    {
+      "path": "reports/factorial/analysis-failures/001-unpaired-ten-second-models.log",
+      "kind": "analysis rejected model/OS-specific ten-second diagnostics as unpaired; excluded only those contrasts; primary/workload identity assertions retained"
+    },
+    {
+      "path": "reports/factorial/analysis-failures/002-unpaired-ten-second-platforms.log",
+      "kind": "analysis rejected model/OS-specific ten-second diagnostics as unpaired; excluded only those contrasts; primary/workload identity assertions retained"
+    }
+  ]
+}

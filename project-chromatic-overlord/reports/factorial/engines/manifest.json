@@ -1,0 +1,14 @@
+{
+  "linux": {
+    "sha256": "b97bcfc96400e6b7973382bf30234654c82cb97181eb68b86ba79ebe1cbf5428",
+    "path": "linux-measured.gz",
+    "compression": "gzip, original measured executable bytes"
+  },
+  "windows": {
+    "sha256": "8eb4dc51c223a74ef18f310950292ff9cfb37341cb1593f9662c50b0f06d3cc8",
+    "artifact_id": 12583749823,
+    "artifact_name": "factorial-windows-40152066905-1",
+    "run_url": "https://github.com/Blucy1004/Chromatic/actions/runs/40152066905"
+  },
+  "deployment_modified": false
+}

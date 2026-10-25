@@ -1,0 +1,56 @@
+[
+  {
+    "stage": "ten_seconds",
+    "model": "lichess10000",
+    "mask": 0,
+    "linux_ids": [
+      "0008Q",
+      "00008",
+      "0009B",
+      "0000D"
+    ],
+    "windows_ids": [
+      "00008",
+      "0009B",
+      "0000D",
+      "0000H"
+    ],
+    "reason": "local screen gain/loss diagnostics chose different cases; no paired OS contrast is valid"
+  },
+  {
+    "stage": "ten_seconds",
+    "model": "lichess10000",
+    "mask": 12,
+    "linux_ids": [
+      "0008Q",
+      "00008",
+      "0009B",
+      "0000D"
+    ],
+    "windows_ids": [
+      "00008",
+      "0009B",
+      "0000D",
+      "0000H"
+    ],
+    "reason": "local screen gain/loss diagnostics chose different cases; no paired OS contrast is valid"
+  },
+  {
+    "stage": "ten_seconds",
+    "model": "lichess10000",
+    "mask": 15,
+    "linux_ids": [
+      "0008Q",
+      "00008",
+      "0009B",
+      "0000D"
+    ],
+    "windows_ids": [
+      "00008",
+      "0009B",
+      "0000D",
+      "0000H"
+    ],
+    "reason": "local screen gain/loss diagnostics chose different cases; no paired OS contrast is valid"
+  }
+]

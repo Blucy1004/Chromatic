@@ -1,0 +1,7 @@
+{
+  "os": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "host": "e0fb683c8d0f",
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "compiled_binary_sha256": "b97bcfc96400e6b7973382bf30234654c82cb97181eb68b86ba79ebe1cbf5428",
+  "compiler_record_sha256": "b57674ec1d0e8678c3a6be1b06d9bb0c33fedf0b6b0592a855c89ca8854cc1cf"
+}

@@ -1,0 +1,13 @@
+ingested linux/20261025-v1 490
+ingested windows/40152066905-1 490
+Traceback (most recent call last):
+  File "/workspace/Chromatic/project-chromatic-overlord/research/analyze.py", line 313, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/Chromatic/project-chromatic-overlord/research/analyze.py", line 301, in main
+    csvfile(a.out/'model-effects.csv',[x for r in runs for x in model_effects(r,a.bootstrap)])
+                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Chromatic/project-chromatic-overlord/research/analyze.py", line 183, in model_effects
+    rows=models[m]['cases'];assert [r['id'] for r in rows]==ids;diffs.append(np.array([r['hit'] for r in rows])-old)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

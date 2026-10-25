@@ -1,0 +1,274 @@
+[
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "model": "zero128",
+    "pair": "CF",
+    "mask": 5,
+    "n": 200,
+    "component_tests": [
+      {
+        "reference_mask": 1,
+        "gains": 53,
+        "losses": 7,
+        "delta_pp": 23.0,
+        "p_exact": 7.671918274276823e-10,
+        "p_holm_all_os_models": 1.2275069238842917e-08
+      },
+      {
+        "reference_mask": 4,
+        "gains": 9,
+        "losses": 17,
+        "delta_pp": -4.0,
+        "p_exact": 0.16863754391670227,
+        "p_holm_all_os_models": 0.6745501756668091
+      }
+    ],
+    "synergy_pp": -5.5,
+    "lo95_pp": -12.0,
+    "hi95_pp": 0.5124999999998181,
+    "simultaneous_lo95_pp": -14.105676567363282,
+    "simultaneous_hi95_pp": 3.105676567363281,
+    "simultaneous_family_size": 8,
+    "component_test_family_size": 16,
+    "positive_synergy_confirmed": false
+  },
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "model": "lichess100",
+    "pair": "CF",
+    "mask": 5,
+    "n": 200,
+    "component_tests": [
+      {
+        "reference_mask": 1,
+        "gains": 43,
+        "losses": 10,
+        "delta_pp": 16.5,
+        "p_exact": 5.550520889130439e-06,
+        "p_holm_all_os_models": 6.105572978043483e-05
+      },
+      {
+        "reference_mask": 4,
+        "gains": 10,
+        "losses": 21,
+        "delta_pp": -5.5,
+        "p_exact": 0.07075554598122835,
+        "p_holm_all_os_models": 0.4245332758873701
+      }
+    ],
+    "synergy_pp": -3.5000000000000004,
+    "lo95_pp": -11.0,
+    "hi95_pp": 4.0,
+    "simultaneous_lo95_pp": -13.541061134344478,
+    "simultaneous_hi95_pp": 6.541061134344477,
+    "simultaneous_family_size": 8,
+    "component_test_family_size": 16,
+    "positive_synergy_confirmed": false
+  },
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "model": "lichess1000",
+    "pair": "CF",
+    "mask": 5,
+    "n": 200,
+    "component_tests": [
+      {
+        "reference_mask": 1,
+        "gains": 46,
+        "losses": 6,
+        "delta_pp": 20.0,
+        "p_exact": 1.0325821975243343e-08,
+        "p_holm_all_os_models": 1.5488732962865015e-07
+      },
+      {
+        "reference_mask": 4,
+        "gains": 8,
+        "losses": 13,
+        "delta_pp": -2.5,
+        "p_exact": 0.38331031799316406,
+        "p_holm_all_os_models": 0.9223687648773193
+      }
+    ],
+    "synergy_pp": 0.5,
+    "lo95_pp": -6.5,
+    "hi95_pp": 7.5,
+    "simultaneous_lo95_pp": -8.93459540923374,
+    "simultaneous_hi95_pp": 9.93459540923374,
+    "simultaneous_family_size": 8,
+    "component_test_family_size": 16,
+    "positive_synergy_confirmed": false
+  },
+  {
+    "scope": "linux/20261025-v1",
+    "os": "Linux",
+    "model": "lichess10000",
+    "pair": "CF",
+    "mask": 5,
+    "n": 200,
+    "component_tests": [
+      {
+        "reference_mask": 1,
+        "gains": 23,
+        "losses": 7,
+        "delta_pp": 8.0,
+        "p_exact": 0.005222879350185394,
+        "p_holm_all_os_models": 0.04700591415166855
+      },
+      {
+        "reference_mask": 4,
+        "gains": 8,
+        "losses": 13,
+        "delta_pp": -2.5,
+        "p_exact": 0.38331031799316406,
+        "p_holm_all_os_models": 0.9223687648773193
+      }
+    ],
+    "synergy_pp": 1.0,
+    "lo95_pp": -6.0,
+    "hi95_pp": 8.0,
+    "simultaneous_lo95_pp": -8.355483273523587,
+    "simultaneous_hi95_pp": 10.355483273523586,
+    "simultaneous_family_size": 8,
+    "component_test_family_size": 16,
+    "positive_synergy_confirmed": false
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "model": "zero128",
+    "pair": "CF",
+    "mask": 5,
+    "n": 200,
+    "component_tests": [
+      {
+        "reference_mask": 1,
+        "gains": 45,
+        "losses": 8,
+        "delta_pp": 18.5,
+        "p_exact": 2.3683513772354559e-07,
+        "p_holm_all_os_models": 3.315691928129638e-06
+      },
+      {
+        "reference_mask": 4,
+        "gains": 5,
+        "losses": 22,
+        "delta_pp": -8.5,
+        "p_exact": 0.0015137195587158203,
+        "p_holm_all_os_models": 0.015137195587158203
+      }
+    ],
+    "synergy_pp": -9.5,
+    "lo95_pp": -16.0,
+    "hi95_pp": -3.0,
+    "simultaneous_lo95_pp": -18.16577590191696,
+    "simultaneous_hi95_pp": -0.8342240980830418,
+    "simultaneous_family_size": 8,
+    "component_test_family_size": 16,
+    "positive_synergy_confirmed": false
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "model": "lichess100",
+    "pair": "CF",
+    "mask": 5,
+    "n": 200,
+    "component_tests": [
+      {
+        "reference_mask": 1,
+        "gains": 42,
+        "losses": 7,
+        "delta_pp": 17.5,
+        "p_exact": 3.6245783263666453e-07,
+        "p_holm_all_os_models": 4.711951824276639e-06
+      },
+      {
+        "reference_mask": 4,
+        "gains": 11,
+        "losses": 22,
+        "delta_pp": -5.5,
+        "p_exact": 0.08014331245794892,
+        "p_holm_all_os_models": 0.4245332758873701
+      }
+    ],
+    "synergy_pp": -2.0,
+    "lo95_pp": -10.0,
+    "hi95_pp": 5.5,
+    "simultaneous_lo95_pp": -12.320872416076915,
+    "simultaneous_hi95_pp": 8.320872416076913,
+    "simultaneous_family_size": 8,
+    "component_test_family_size": 16,
+    "positive_synergy_confirmed": false
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "model": "lichess1000",
+    "pair": "CF",
+    "mask": 5,
+    "n": 200,
+    "component_tests": [
+      {
+        "reference_mask": 1,
+        "gains": 41,
+        "losses": 8,
+        "delta_pp": 16.5,
+        "p_exact": 1.9646537765538596e-06,
+        "p_holm_all_os_models": 2.3575845318646316e-05
+      },
+      {
+        "reference_mask": 4,
+        "gains": 6,
+        "losses": 17,
+        "delta_pp": -5.5,
+        "p_exact": 0.03468966484069824,
+        "p_holm_all_os_models": 0.2428276538848877
+      }
+    ],
+    "synergy_pp": -4.0,
+    "lo95_pp": -11.0,
+    "hi95_pp": 3.0,
+    "simultaneous_lo95_pp": -13.5,
+    "simultaneous_hi95_pp": 5.500000000000002,
+    "simultaneous_family_size": 8,
+    "component_test_family_size": 16,
+    "positive_synergy_confirmed": false
+  },
+  {
+    "scope": "windows/40152066905-1",
+    "os": "Windows",
+    "model": "lichess10000",
+    "pair": "CF",
+    "mask": 5,
+    "n": 200,
+    "component_tests": [
+      {
+        "reference_mask": 1,
+        "gains": 22,
+        "losses": 7,
+        "delta_pp": 7.5,
+        "p_exact": 0.008130058646202087,
+        "p_holm_all_os_models": 0.0650404691696167
+      },
+      {
+        "reference_mask": 4,
+        "gains": 9,
+        "losses": 15,
+        "delta_pp": -3.0,
+        "p_exact": 0.30745625495910645,
+        "p_holm_all_os_models": 0.9223687648773193
+      }
+    ],
+    "synergy_pp": 0.5,
+    "lo95_pp": -7.000000000000001,
+    "hi95_pp": 8.0,
+    "simultaneous_lo95_pp": -9.345027345521656,
+    "simultaneous_hi95_pp": 10.345027345521657,
+    "simultaneous_family_size": 8,
+    "component_test_family_size": 16,
+    "positive_synergy_confirmed": false
+  }
+]

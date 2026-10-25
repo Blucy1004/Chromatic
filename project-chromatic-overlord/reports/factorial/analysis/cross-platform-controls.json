@@ -1,0 +1,29 @@
+{
+  "same_cpp_runner_seed_corpora": true,
+  "same_model_files": true,
+  "linux": {
+    "os": "Linux",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "processor": "",
+    "host": "e0fb683c8d0f",
+    "logical_cpus": 5,
+    "engine_cpu_affinity": [
+      0,
+      1
+    ],
+    "engine_sha256": "b97bcfc96400e6b7973382bf30234654c82cb97181eb68b86ba79ebe1cbf5428"
+  },
+  "windows": {
+    "os": "Windows",
+    "platform": "Windows-2022Server-10.0.20348-SP0",
+    "processor": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD",
+    "host": "runnervma5ucf",
+    "logical_cpus": 4,
+    "engine_cpu_affinity": [
+      0,
+      1
+    ],
+    "engine_sha256": "8eb4dc51c223a74ef18f310950292ff9cfb37341cb1593f9662c50b0f06d3cc8"
+  },
+  "limit": "different host hardware and compiler; throughput differences cannot be assigned to OS alone"
+}

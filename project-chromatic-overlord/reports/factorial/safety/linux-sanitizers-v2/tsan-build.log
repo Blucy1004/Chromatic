@@ -1,0 +1,22 @@
+[1/22] Building CXX object CMakeFiles/zero_core.dir/src/network.cpp.o
+[2/22] Building CXX object CMakeFiles/zero_core.dir/src/board.cpp.o
+[3/22] Building CXX object CMakeFiles/zero_core.dir/src/proof.cpp.o
+[4/22] Building CXX object CMakeFiles/zero_core.dir/src/telemetry_json.cpp.o
+[5/22] Building CXX object CMakeFiles/zero_core.dir/src/verification.cpp.o
+[6/22] Building CXX object CMakeFiles/zero_core.dir/src/sha256.cpp.o
+[7/22] Building CXX object CMakeFiles/zero_core.dir/src/search.cpp.o
+[8/22] Linking CXX static library libzero_core.a
+[9/22] Building CXX object CMakeFiles/core_tests.dir/tests/core.cpp.o
+[10/22] Building CXX object CMakeFiles/chromatic_overlord.dir/src/main.cpp.o
+[11/22] Building CXX object CMakeFiles/depth_telemetry_tests.dir/tests/depth_telemetry.cpp.o
+[12/22] Building CXX object CMakeFiles/memory_recycling_tests.dir/tests/memory_recycling.cpp.o
+[13/22] Building CXX object CMakeFiles/model_identity_tests.dir/tests/model_identity.cpp.o
+[14/22] Building CXX object CMakeFiles/research_tests.dir/tests/research.cpp.o
+[15/22] Linking CXX executable chromatic_overlord
+[16/22] Linking CXX executable core_tests
+[17/22] Linking CXX executable depth_telemetry_tests
+[18/22] Linking CXX executable memory_recycling_tests
+[19/22] Linking CXX executable model_identity_tests
+[20/22] Linking CXX executable research_tests
+[21/22] Building CXX object CMakeFiles/overlord_tests.dir/tests/overlord.cpp.o
+[22/22] Linking CXX executable overlord_tests

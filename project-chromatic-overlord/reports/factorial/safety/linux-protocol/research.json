@@ -1,0 +1,519 @@
+{
+  "passed": true,
+  "os": "Linux",
+  "engine_sha256": "b97bcfc96400e6b7973382bf30234654c82cb97181eb68b86ba79ebe1cbf5428",
+  "checks": [
+    {
+      "model": "zero128",
+      "mask": 0,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 3872,
+      "search_ns": 100145809,
+      "loaded_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+    },
+    {
+      "model": "zero128",
+      "mask": 0,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 33,
+      "search_ns": 667453,
+      "loaded_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+    },
+    {
+      "model": "zero128",
+      "mask": 0,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 318969,
+      "loaded_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+    },
+    {
+      "model": "zero128",
+      "rejected": "zero bench invalid 1 1"
+    },
+    {
+      "model": "zero128",
+      "rejected": "zero bench time 0 1"
+    },
+    {
+      "model": "zero128",
+      "rejected": "zero bench nn -1 1"
+    },
+    {
+      "model": "zero128",
+      "rejected": "zero bench nodes 100001 1"
+    },
+    {
+      "model": "zero128",
+      "rejected": "zero bench time"
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 1909,
+      "search_ns": 78046805,
+      "loaded_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 152,
+      "search_ns": 3518360,
+      "loaded_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 418229,
+      "loaded_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 4219,
+      "search_ns": 100333760,
+      "loaded_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 33,
+      "search_ns": 796888,
+      "loaded_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 414063,
+      "loaded_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 3967,
+      "search_ns": 77935822,
+      "loaded_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 152,
+      "search_ns": 3429817,
+      "loaded_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 456897,
+      "loaded_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+    },
+    {
+      "model": "lichess100",
+      "mask": 0,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 4541,
+      "search_ns": 100250806,
+      "loaded_sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "model": "lichess100",
+      "mask": 0,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 33,
+      "search_ns": 797059,
+      "loaded_sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "model": "lichess100",
+      "mask": 0,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 349004,
+      "loaded_sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "model": "lichess100",
+      "rejected": "zero bench invalid 1 1"
+    },
+    {
+      "model": "lichess100",
+      "rejected": "zero bench time 0 1"
+    },
+    {
+      "model": "lichess100",
+      "rejected": "zero bench nn -1 1"
+    },
+    {
+      "model": "lichess100",
+      "rejected": "zero bench nodes 100001 1"
+    },
+    {
+      "model": "lichess100",
+      "rejected": "zero bench time"
+    },
+    {
+      "model": "lichess100",
+      "mask": 15,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 3356,
+      "search_ns": 77617485,
+      "loaded_sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "model": "lichess100",
+      "mask": 15,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 170,
+      "search_ns": 3924330,
+      "loaded_sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "model": "lichess100",
+      "mask": 15,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 390017,
+      "loaded_sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "model": "lichess100",
+      "mask": 16,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 5057,
+      "search_ns": 100213657,
+      "loaded_sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "model": "lichess100",
+      "mask": 16,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 33,
+      "search_ns": 730548,
+      "loaded_sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "model": "lichess100",
+      "mask": 16,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 505950,
+      "loaded_sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "model": "lichess100",
+      "mask": 31,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 3927,
+      "search_ns": 77855631,
+      "loaded_sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "model": "lichess100",
+      "mask": 31,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 170,
+      "search_ns": 3970700,
+      "loaded_sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "model": "lichess100",
+      "mask": 31,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 461975,
+      "loaded_sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+    },
+    {
+      "model": "lichess1000",
+      "mask": 0,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 4166,
+      "search_ns": 100139024,
+      "loaded_sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "model": "lichess1000",
+      "mask": 0,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 33,
+      "search_ns": 770288,
+      "loaded_sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "model": "lichess1000",
+      "mask": 0,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 375645,
+      "loaded_sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "model": "lichess1000",
+      "rejected": "zero bench invalid 1 1"
+    },
+    {
+      "model": "lichess1000",
+      "rejected": "zero bench time 0 1"
+    },
+    {
+      "model": "lichess1000",
+      "rejected": "zero bench nn -1 1"
+    },
+    {
+      "model": "lichess1000",
+      "rejected": "zero bench nodes 100001 1"
+    },
+    {
+      "model": "lichess1000",
+      "rejected": "zero bench time"
+    },
+    {
+      "model": "lichess1000",
+      "mask": 15,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 3575,
+      "search_ns": 77510852,
+      "loaded_sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "model": "lichess1000",
+      "mask": 15,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 150,
+      "search_ns": 3420313,
+      "loaded_sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "model": "lichess1000",
+      "mask": 15,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 367202,
+      "loaded_sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "model": "lichess1000",
+      "mask": 16,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 5198,
+      "search_ns": 100277733,
+      "loaded_sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "model": "lichess1000",
+      "mask": 16,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 33,
+      "search_ns": 727384,
+      "loaded_sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "model": "lichess1000",
+      "mask": 16,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 389616,
+      "loaded_sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "model": "lichess1000",
+      "mask": 31,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 3960,
+      "search_ns": 77626346,
+      "loaded_sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "model": "lichess1000",
+      "mask": 31,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 150,
+      "search_ns": 6224414,
+      "loaded_sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "model": "lichess1000",
+      "mask": 31,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 1452974,
+      "loaded_sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 4482,
+      "search_ns": 100188349,
+      "loaded_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 33,
+      "search_ns": 724559,
+      "loaded_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 320222,
+      "loaded_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    },
+    {
+      "model": "lichess10000",
+      "rejected": "zero bench invalid 1 1"
+    },
+    {
+      "model": "lichess10000",
+      "rejected": "zero bench time 0 1"
+    },
+    {
+      "model": "lichess10000",
+      "rejected": "zero bench nn -1 1"
+    },
+    {
+      "model": "lichess10000",
+      "rejected": "zero bench nodes 100001 1"
+    },
+    {
+      "model": "lichess10000",
+      "rejected": "zero bench time"
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 3080,
+      "search_ns": 77972983,
+      "loaded_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 144,
+      "search_ns": 4314367,
+      "loaded_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 384898,
+      "loaded_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 4580,
+      "search_ns": 100280848,
+      "loaded_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 33,
+      "search_ns": 745020,
+      "loaded_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 392630,
+      "loaded_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "mode": "time",
+      "budget": 100,
+      "actual_nn": 3146,
+      "search_ns": 78037494,
+      "loaded_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "mode": "nodes",
+      "budget": 32,
+      "actual_nn": 144,
+      "search_ns": 3321895,
+      "loaded_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "mode": "nn",
+      "budget": 16,
+      "actual_nn": 16,
+      "search_ns": 445890,
+      "loaded_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+    }
+  ]
+}

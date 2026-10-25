@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/workspace/Chromatic/project-chromatic-overlord/research/cross_analysis.py", line 99, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/Chromatic/project-chromatic-overlord/research/cross_analysis.py", line 93, in main
+    s,d=work(a.linux,a.windows);csvfile(a.out/'cross-platform-cells.csv',s);csvfile(a.out/'cross-platform-puzzles.csv',d)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Chromatic/project-chromatic-overlord/research/cross_analysis.py", line 44, in work
+    lm,lr=l[key];wm,wr=w[key];assert lm['options']==wm['options'];assert lm['ids']==wm['ids'];assert lm['model_sha256']==wm['model_sha256']
+                                                                         ^^^^^^^^^^^^^^^^^^^^
+AssertionError

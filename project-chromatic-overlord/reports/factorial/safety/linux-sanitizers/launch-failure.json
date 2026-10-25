@@ -1,0 +1,6 @@
+{
+  "executed_sanitizer_tests": false,
+  "reason": "cmake/ctest/ninja installed in virtualenv bin but absent from shell PATH",
+  "error": "FileNotFoundError: cmake",
+  "repair": "prepend current Python environment bin for child build tools; rerun in separate v2 directory"
+}
