@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "os": "Windows",
+  "platform": "Windows-2022Server-10.0.20348-SP0",
+  "processor": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD",
+  "host": "runnervma5ucf",
+  "logical_cpus": 4,
+  "runner_sha256": "d836e78046e1fbb17791ed4ffed85c14eaca043371f96a60624edb33c245ab61",
+  "engine_path": "D:\\a\\Chromatic\\Chromatic\\build-windows-factorial\\Release\\chromatic_overlord.exe",
+  "engine_sha256": "8eb4dc51c223a74ef18f310950292ff9cfb37341cb1593f9662c50b0f06d3cc8",
+  "cpp_sha256": {
+    "src/board.cpp": "3710bfcd57304a5cb6093b844afe5c67d57462670e88044330f5164a8c63d0a9",
+    "src/main.cpp": "ef24e47ea2edbc53cf0d5aab31bec72eeebeb188e4da4dda1ff5321097172573",
+    "src/network.cpp": "27f61c9ec77a6b4ac37da89807693adbccf7f8f6e28b3275e2e48f50aef14abb",
+    "src/proof.cpp": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e",
+    "src/search.cpp": "5e8280aac2e21ed5a574b517041c3d6fd01139cb837b76094a83fcc0f7d2fc17",
+    "src/sha256.cpp": "65caec4f94bca9578c22e13ce8c4493e634fa0ccb8868a38fedf7ab953686cd4",
+    "src/telemetry_json.cpp": "a54eb02ad85bce383d70c5753db1903594dc1db7514406a9541925cce07c5d9b",
+    "src/verification.cpp": "45a636cf5366dce9a0f1eb6ccbd1ec0f3bf4d19fac6c3bdfd8ecfea1b246a06c",
+    "include/zero/board.hpp": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b",
+    "include/zero/leaf_pool.hpp": "31d8f6a2ceb050f034c356bc8979135d8d7db0e1cbb9399c4476645fee9f348d",
+    "include/zero/network.hpp": "0971c5921df05a09813cb1c2782672107cb553f91f7f0f1c155045f4a3465a0a",
+    "include/zero/profile.hpp": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39",
+    "include/zero/proof.hpp": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f",
+    "include/zero/research.hpp": "83c322dd3b481666f96ca889a61dc83393b650edebfa22fe3e7bcad1c16d63dd",
+    "include/zero/search.hpp": "525aa27370784dfee5886e2a8eb19dffa4e30c88c3622f8334c0b442f6b62d0b",
+    "include/zero/sha256.hpp": "e75d3884092c23133cf28579d7e8149134d33d843f75eaa9984d5d1c6fb0d0f5",
+    "include/zero/telemetry_json.hpp": "fe184f046b79940d55c681b5c3edac968c3db3af77762b98f771741ab60aaec8",
+    "include/zero/verification.hpp": "2fcbe42e1017867a93b0a0ead506cbc86cf9ee865681c0ddddb170df5474466f"
+  },
+  "models": {
+    "zero128": {
+      "path": "D:\\a\\Chromatic\\Chromatic\\chromatic-shard-trainer\\champion\\default.zero",
+      "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "architecture": [
+        1280,
+        64,
+        2,
+        4672
+      ]
+    },
+    "lichess100": {
+      "path": "D:\\a\\Chromatic\\Chromatic\\chromatic-shard-trainer\\candidates\\positions-100.zero",
+      "sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af",
+      "architecture": [
+        1280,
+        64,
+        2,
+        4672
+      ]
+    },
+    "lichess1000": {
+      "path": "D:\\a\\Chromatic\\Chromatic\\chromatic-shard-trainer\\candidates\\positions-1000.zero",
+      "sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb",
+      "architecture": [
+        1280,
+        64,
+        2,
+        4672
+      ]
+    },
+    "lichess10000": {
+      "path": "D:\\a\\Chromatic\\Chromatic\\chromatic-shard-trainer\\candidates\\positions-10000.zero",
+      "sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a",
+      "architecture": [
+        1280,
+        64,
+        2,
+        4672
+      ]
+    }
+  },
+  "old_fixture_sha256": "c46a5c5d83a27e4418a4a13aa196b4097c9aa863d76ce18386d61c8e628cecfb",
+  "holdout_sha256": "9dd20e119e6124216c48e5237a7c78e603bb3c04a42e0a31eee5c4627d02a066",
+  "seed": 1,
+  "cell_shuffle_seed": 20261025,
+  "engine_cpu_affinity": [
+    0,
+    1
+  ],
+  "driver_cpu_affinity": [
+    3
+  ],
+  "budget_seconds": 5400,
+  "source_commit": "dd29c8f91c5a7d8db850d1eacedebd08826fece2"
+}

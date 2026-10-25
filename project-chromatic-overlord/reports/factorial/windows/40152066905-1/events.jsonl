@@ -1,0 +1,1030 @@
+{"event": "pipeline_start", "utc_epoch": 1792892990.7046657}
+{"event": "cell_start", "utc_epoch": 1792892991.7670379, "stage": "scalar_fixed", "key": "zero128-m00-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792892992.7999325, "stage": "scalar_fixed", "key": "zero128-m00-nodes512-r0-scalar", "seconds": 1.030999999999949, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792892992.802978, "stage": "scalar_fixed", "key": "zero128-m15-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792892995.1959085, "stage": "scalar_fixed", "key": "zero128-m15-nodes512-r0-scalar", "seconds": 2.375, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792892995.1959085, "stage": "scalar_fixed", "key": "zero128-m16-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792892995.9928892, "stage": "scalar_fixed", "key": "zero128-m16-nodes512-r0-scalar", "seconds": 0.7970000000000255, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792892995.9928892, "stage": "scalar_fixed", "key": "zero128-m31-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792892998.181564, "stage": "scalar_fixed", "key": "zero128-m31-nodes512-r0-scalar", "seconds": 2.187000000000012, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792892998.9354527, "stage": "scalar_fixed", "key": "lichess100-m00-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792892999.9682932, "stage": "scalar_fixed", "key": "lichess100-m00-nodes512-r0-scalar", "seconds": 1.0310000000000628, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792892999.9838998, "stage": "scalar_fixed", "key": "lichess100-m15-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792893002.397246, "stage": "scalar_fixed", "key": "lichess100-m15-nodes512-r0-scalar", "seconds": 2.4060000000000628, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792893002.4082832, "stage": "scalar_fixed", "key": "lichess100-m16-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792893003.205927, "stage": "scalar_fixed", "key": "lichess100-m16-nodes512-r0-scalar", "seconds": 0.7960000000000491, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792893003.2215354, "stage": "scalar_fixed", "key": "lichess100-m31-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792893005.4111235, "stage": "scalar_fixed", "key": "lichess100-m31-nodes512-r0-scalar", "seconds": 2.187999999999988, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792893006.1931374, "stage": "scalar_fixed", "key": "lichess1000-m00-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792893007.216384, "stage": "scalar_fixed", "key": "lichess1000-m00-nodes512-r0-scalar", "seconds": 1.0310000000000628, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792893007.216384, "stage": "scalar_fixed", "key": "lichess1000-m15-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792893009.6724062, "stage": "scalar_fixed", "key": "lichess1000-m15-nodes512-r0-scalar", "seconds": 2.4529999999999745, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792893009.6880097, "stage": "scalar_fixed", "key": "lichess1000-m16-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792893010.469889, "stage": "scalar_fixed", "key": "lichess1000-m16-nodes512-r0-scalar", "seconds": 0.7810000000000628, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792893010.469889, "stage": "scalar_fixed", "key": "lichess1000-m31-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792893012.7380397, "stage": "scalar_fixed", "key": "lichess1000-m31-nodes512-r0-scalar", "seconds": 2.2659999999999627, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792893013.5039139, "stage": "scalar_fixed", "key": "lichess10000-m00-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792893014.5984871, "stage": "scalar_fixed", "key": "lichess10000-m00-nodes512-r0-scalar", "seconds": 1.094000000000051, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792893014.6140869, "stage": "scalar_fixed", "key": "lichess10000-m15-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792893016.9437988, "stage": "scalar_fixed", "key": "lichess10000-m15-nodes512-r0-scalar", "seconds": 2.3279999999999745, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792893016.9593961, "stage": "scalar_fixed", "key": "lichess10000-m16-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792893017.81963, "stage": "scalar_fixed", "key": "lichess10000-m16-nodes512-r0-scalar", "seconds": 0.8599999999999, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792893017.81963, "stage": "scalar_fixed", "key": "lichess10000-m31-nodes512-r0-scalar", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792893019.901606, "stage": "scalar_fixed", "key": "lichess10000-m31-nodes512-r0-scalar", "seconds": 2.078000000000088, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792893019.901606, "stage": "screen", "key": "lichess100-m19-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893028.0191298, "stage": "screen", "key": "lichess100-m19-time100-r0", "seconds": 8.125, "hits": 23}
+{"event": "cell_start", "utc_epoch": 1792893028.0191298, "stage": "screen", "key": "lichess10000-m15-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893037.1536973, "stage": "screen", "key": "lichess10000-m15-time100-r0", "seconds": 9.140999999999963, "hits": 47}
+{"event": "cell_start", "utc_epoch": 1792893037.1536973, "stage": "screen", "key": "zero128-m16-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893047.47848, "stage": "screen", "key": "zero128-m16-time100-r0", "seconds": 10.312000000000012, "hits": 21}
+{"event": "cell_start", "utc_epoch": 1792893047.4940505, "stage": "screen", "key": "lichess10000-m30-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893055.4897027, "stage": "screen", "key": "lichess10000-m30-time100-r0", "seconds": 8.0, "hits": 64}
+{"event": "cell_start", "utc_epoch": 1792893055.4897027, "stage": "screen", "key": "zero128-m01-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893063.6107907, "stage": "screen", "key": "zero128-m01-time100-r0", "seconds": 8.125, "hits": 25}
+{"event": "cell_start", "utc_epoch": 1792893063.6107907, "stage": "screen", "key": "lichess1000-m25-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893072.824575, "stage": "screen", "key": "lichess1000-m25-time100-r0", "seconds": 9.218000000000075, "hits": 36}
+{"event": "cell_start", "utc_epoch": 1792893072.840178, "stage": "screen", "key": "lichess1000-m03-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893080.9424784, "stage": "screen", "key": "lichess1000-m03-time100-r0", "seconds": 8.1099999999999, "hits": 26}
+{"event": "cell_start", "utc_epoch": 1792893080.9424784, "stage": "screen", "key": "zero128-m26-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893088.639512, "stage": "screen", "key": "zero128-m26-time100-r0", "seconds": 7.703000000000088, "hits": 45}
+{"event": "cell_start", "utc_epoch": 1792893088.6551178, "stage": "screen", "key": "lichess1000-m26-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893096.5422418, "stage": "screen", "key": "lichess1000-m26-time100-r0", "seconds": 7.875, "hits": 49}
+{"event": "cell_start", "utc_epoch": 1792893096.5422418, "stage": "screen", "key": "lichess10000-m26-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893104.4408827, "stage": "screen", "key": "lichess10000-m26-time100-r0", "seconds": 7.905999999999949, "hits": 48}
+{"event": "cell_start", "utc_epoch": 1792893104.4408827, "stage": "screen", "key": "lichess10000-m18-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893114.7343507, "stage": "screen", "key": "lichess10000-m18-time100-r0", "seconds": 10.281999999999925, "hits": 34}
+{"event": "cell_start", "utc_epoch": 1792893114.7343507, "stage": "screen", "key": "zero128-m08-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893122.6175482, "stage": "screen", "key": "zero128-m08-time100-r0", "seconds": 7.875, "hits": 45}
+{"event": "cell_start", "utc_epoch": 1792893122.6175482, "stage": "screen", "key": "lichess10000-m23-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893131.7183318, "stage": "screen", "key": "lichess10000-m23-time100-r0", "seconds": 9.109000000000037, "hits": 41}
+{"event": "cell_start", "utc_epoch": 1792893131.7183318, "stage": "screen", "key": "zero128-m30-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893139.4934769, "stage": "screen", "key": "zero128-m30-time100-r0", "seconds": 7.765999999999963, "hits": 62}
+{"event": "cell_start", "utc_epoch": 1792893139.4934769, "stage": "screen", "key": "lichess1000-m00-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893149.8044882, "stage": "screen", "key": "lichess1000-m00-time100-r0", "seconds": 10.312000000000012, "hits": 30}
+{"event": "cell_start", "utc_epoch": 1792893149.8044882, "stage": "screen", "key": "lichess1000-m31-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893159.0129457, "stage": "screen", "key": "lichess1000-m31-time100-r0", "seconds": 9.219000000000051, "hits": 44}
+{"event": "cell_start", "utc_epoch": 1792893159.0129457, "stage": "screen", "key": "lichess10000-m24-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893166.9277284, "stage": "screen", "key": "lichess10000-m24-time100-r0", "seconds": 7.905999999999949, "hits": 48}
+{"event": "cell_start", "utc_epoch": 1792893166.9277284, "stage": "screen", "key": "lichess1000-m04-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893174.921956, "stage": "screen", "key": "lichess1000-m04-time100-r0", "seconds": 8.0, "hits": 49}
+{"event": "cell_start", "utc_epoch": 1792893174.921956, "stage": "screen", "key": "lichess1000-m01-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893183.0190668, "stage": "screen", "key": "lichess1000-m01-time100-r0", "seconds": 8.094000000000051, "hits": 26}
+{"event": "cell_start", "utc_epoch": 1792893183.0190668, "stage": "screen", "key": "lichess100-m15-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893192.2045133, "stage": "screen", "key": "lichess100-m15-time100-r0", "seconds": 9.187000000000012, "hits": 46}
+{"event": "cell_start", "utc_epoch": 1792893192.2045133, "stage": "screen", "key": "lichess1000-m29-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893201.3712392, "stage": "screen", "key": "lichess1000-m29-time100-r0", "seconds": 9.156999999999925, "hits": 44}
+{"event": "cell_start", "utc_epoch": 1792893201.3868659, "stage": "screen", "key": "lichess1000-m21-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893210.509542, "stage": "screen", "key": "lichess1000-m21-time100-r0", "seconds": 9.125, "hits": 41}
+{"event": "cell_start", "utc_epoch": 1792893210.509542, "stage": "screen", "key": "lichess1000-m20-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893218.513128, "stage": "screen", "key": "lichess1000-m20-time100-r0", "seconds": 8.016000000000076, "hits": 49}
+{"event": "cell_start", "utc_epoch": 1792893218.5286574, "stage": "screen", "key": "zero128-m13-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893227.7245667, "stage": "screen", "key": "zero128-m13-time100-r0", "seconds": 9.187000000000012, "hits": 44}
+{"event": "cell_start", "utc_epoch": 1792893227.7245667, "stage": "screen", "key": "lichess100-m23-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893236.909311, "stage": "screen", "key": "lichess100-m23-time100-r0", "seconds": 9.187999999999988, "hits": 43}
+{"event": "cell_start", "utc_epoch": 1792893236.909311, "stage": "screen", "key": "lichess1000-m14-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893244.869302, "stage": "screen", "key": "lichess1000-m14-time100-r0", "seconds": 7.9529999999999745, "hits": 62}
+{"event": "cell_start", "utc_epoch": 1792893244.884927, "stage": "screen", "key": "lichess100-m30-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893252.8655047, "stage": "screen", "key": "lichess100-m30-time100-r0", "seconds": 7.985000000000014, "hits": 67}
+{"event": "cell_start", "utc_epoch": 1792893252.8655047, "stage": "screen", "key": "lichess1000-m02-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893263.145306, "stage": "screen", "key": "lichess1000-m02-time100-r0", "seconds": 10.281000000000063, "hits": 29}
+{"event": "cell_start", "utc_epoch": 1792893263.145306, "stage": "screen", "key": "zero128-m00-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893273.45424, "stage": "screen", "key": "zero128-m00-time100-r0", "seconds": 10.312000000000012, "hits": 22}
+{"event": "cell_start", "utc_epoch": 1792893273.45424, "stage": "screen", "key": "lichess100-m06-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893281.4644904, "stage": "screen", "key": "lichess100-m06-time100-r0", "seconds": 8.0, "hits": 47}
+{"event": "cell_start", "utc_epoch": 1792893281.4801178, "stage": "screen", "key": "zero128-m31-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893290.5691383, "stage": "screen", "key": "zero128-m31-time100-r0", "seconds": 9.094000000000051, "hits": 47}
+{"event": "cell_start", "utc_epoch": 1792893290.5691383, "stage": "screen", "key": "lichess10000-m05-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893299.6730938, "stage": "screen", "key": "lichess10000-m05-time100-r0", "seconds": 9.109000000000151, "hits": 41}
+{"event": "cell_start", "utc_epoch": 1792893299.6730938, "stage": "screen", "key": "lichess100-m04-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893307.680868, "stage": "screen", "key": "lichess100-m04-time100-r0", "seconds": 8.0, "hits": 47}
+{"event": "cell_start", "utc_epoch": 1792893307.696467, "stage": "screen", "key": "lichess1000-m07-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893316.831417, "stage": "screen", "key": "lichess1000-m07-time100-r0", "seconds": 9.1400000000001, "hits": 40}
+{"event": "cell_start", "utc_epoch": 1792893316.831417, "stage": "screen", "key": "zero128-m11-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893325.797208, "stage": "screen", "key": "zero128-m11-time100-r0", "seconds": 8.953000000000202, "hits": 37}
+{"event": "cell_start", "utc_epoch": 1792893325.797208, "stage": "screen", "key": "zero128-m14-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893333.5752604, "stage": "screen", "key": "zero128-m14-time100-r0", "seconds": 7.765999999999849, "hits": 63}
+{"event": "cell_start", "utc_epoch": 1792893333.5892887, "stage": "screen", "key": "lichess10000-m29-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893342.7293322, "stage": "screen", "key": "lichess10000-m29-time100-r0", "seconds": 9.140999999999849, "hits": 46}
+{"event": "cell_start", "utc_epoch": 1792893342.7293322, "stage": "screen", "key": "zero128-m22-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893350.488596, "stage": "screen", "key": "zero128-m22-time100-r0", "seconds": 7.766000000000076, "hits": 46}
+{"event": "cell_start", "utc_epoch": 1792893350.504195, "stage": "screen", "key": "lichess1000-m06-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893358.4975853, "stage": "screen", "key": "lichess1000-m06-time100-r0", "seconds": 8.0, "hits": 49}
+{"event": "cell_start", "utc_epoch": 1792893358.5042682, "stage": "screen", "key": "lichess100-m25-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893367.6640768, "stage": "screen", "key": "lichess100-m25-time100-r0", "seconds": 9.156999999999925, "hits": 35}
+{"event": "cell_start", "utc_epoch": 1792893367.6796677, "stage": "screen", "key": "lichess100-m01-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893375.781781, "stage": "screen", "key": "lichess100-m01-time100-r0", "seconds": 8.1099999999999, "hits": 22}
+{"event": "cell_start", "utc_epoch": 1792893375.7973793, "stage": "screen", "key": "lichess100-m18-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893385.9039972, "stage": "screen", "key": "lichess100-m18-time100-r0", "seconds": 10.1099999999999, "hits": 23}
+{"event": "cell_start", "utc_epoch": 1792893385.9039972, "stage": "screen", "key": "lichess100-m07-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893395.0820963, "stage": "screen", "key": "lichess100-m07-time100-r0", "seconds": 9.17100000000005, "hits": 42}
+{"event": "cell_start", "utc_epoch": 1792893395.0866246, "stage": "screen", "key": "zero128-m24-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893402.9537814, "stage": "screen", "key": "zero128-m24-time100-r0", "seconds": 7.875, "hits": 45}
+{"event": "cell_start", "utc_epoch": 1792893402.9537814, "stage": "screen", "key": "lichess10000-m06-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893410.9763036, "stage": "screen", "key": "lichess10000-m06-time100-r0", "seconds": 8.015999999999849, "hits": 42}
+{"event": "cell_start", "utc_epoch": 1792893410.9919229, "stage": "screen", "key": "lichess1000-m19-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893419.0951009, "stage": "screen", "key": "lichess1000-m19-time100-r0", "seconds": 8.108999999999924, "hits": 25}
+{"event": "cell_start", "utc_epoch": 1792893419.0951009, "stage": "screen", "key": "lichess1000-m27-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893428.2620258, "stage": "screen", "key": "lichess1000-m27-time100-r0", "seconds": 9.156000000000176, "hits": 36}
+{"event": "cell_start", "utc_epoch": 1792893428.2620258, "stage": "screen", "key": "lichess100-m12-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893436.2558205, "stage": "screen", "key": "lichess100-m12-time100-r0", "seconds": 8.0, "hits": 65}
+{"event": "cell_start", "utc_epoch": 1792893436.2558205, "stage": "screen", "key": "lichess1000-m18-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893446.5495934, "stage": "screen", "key": "lichess1000-m18-time100-r0", "seconds": 10.297000000000025, "hits": 29}
+{"event": "cell_start", "utc_epoch": 1792893446.5495934, "stage": "screen", "key": "lichess10000-m11-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893455.7036872, "stage": "screen", "key": "lichess10000-m11-time100-r0", "seconds": 9.155999999999949, "hits": 42}
+{"event": "cell_start", "utc_epoch": 1792893455.7036872, "stage": "screen", "key": "zero128-m03-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893463.6183505, "stage": "screen", "key": "zero128-m03-time100-r0", "seconds": 7.906999999999925, "hits": 25}
+{"event": "cell_start", "utc_epoch": 1792893463.6339772, "stage": "screen", "key": "lichess10000-m10-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893471.5319488, "stage": "screen", "key": "lichess10000-m10-time100-r0", "seconds": 7.906999999999925, "hits": 49}
+{"event": "cell_start", "utc_epoch": 1792893471.5319488, "stage": "screen", "key": "lichess100-m22-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893479.5455742, "stage": "screen", "key": "lichess100-m22-time100-r0", "seconds": 8.0150000000001, "hits": 50}
+{"event": "cell_start", "utc_epoch": 1792893479.5611947, "stage": "screen", "key": "lichess1000-m08-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893487.4442415, "stage": "screen", "key": "lichess1000-m08-time100-r0", "seconds": 7.875, "hits": 51}
+{"event": "cell_start", "utc_epoch": 1792893487.4442415, "stage": "screen", "key": "lichess100-m03-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893495.5620644, "stage": "screen", "key": "lichess100-m03-time100-r0", "seconds": 8.125, "hits": 21}
+{"event": "cell_start", "utc_epoch": 1792893495.5620644, "stage": "screen", "key": "zero128-m23-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893504.6345942, "stage": "screen", "key": "zero128-m23-time100-r0", "seconds": 9.062000000000126, "hits": 38}
+{"event": "cell_start", "utc_epoch": 1792893504.6345942, "stage": "screen", "key": "lichess10000-m27-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893513.7731879, "stage": "screen", "key": "lichess10000-m27-time100-r0", "seconds": 9.140999999999849, "hits": 40}
+{"event": "cell_start", "utc_epoch": 1792893513.7887838, "stage": "screen", "key": "zero128-m19-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893521.7070792, "stage": "screen", "key": "zero128-m19-time100-r0", "seconds": 7.921000000000049, "hits": 24}
+{"event": "cell_start", "utc_epoch": 1792893521.722677, "stage": "screen", "key": "lichess10000-m01-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893529.7928803, "stage": "screen", "key": "lichess10000-m01-time100-r0", "seconds": 8.063000000000102, "hits": 30}
+{"event": "cell_start", "utc_epoch": 1792893529.7928803, "stage": "screen", "key": "lichess1000-m23-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893538.92868, "stage": "screen", "key": "lichess1000-m23-time100-r0", "seconds": 9.1400000000001, "hits": 42}
+{"event": "cell_start", "utc_epoch": 1792893538.92868, "stage": "screen", "key": "zero128-m20-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893546.8917277, "stage": "screen", "key": "zero128-m20-time100-r0", "seconds": 7.968999999999824, "hits": 45}
+{"event": "cell_start", "utc_epoch": 1792893546.8917277, "stage": "screen", "key": "lichess100-m10-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893554.7929032, "stage": "screen", "key": "lichess100-m10-time100-r0", "seconds": 7.891000000000076, "hits": 48}
+{"event": "cell_start", "utc_epoch": 1792893554.7929032, "stage": "screen", "key": "lichess10000-m07-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893563.8954735, "stage": "screen", "key": "lichess10000-m07-time100-r0", "seconds": 9.108999999999924, "hits": 41}
+{"event": "cell_start", "utc_epoch": 1792893563.8954735, "stage": "screen", "key": "zero128-m21-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893573.0926855, "stage": "screen", "key": "zero128-m21-time100-r0", "seconds": 9.202999999999975, "hits": 36}
+{"event": "cell_start", "utc_epoch": 1792893573.108284, "stage": "screen", "key": "lichess100-m08-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893580.992503, "stage": "screen", "key": "lichess100-m08-time100-r0", "seconds": 7.875, "hits": 47}
+{"event": "cell_start", "utc_epoch": 1792893580.992503, "stage": "screen", "key": "zero128-m15-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893590.0670435, "stage": "screen", "key": "zero128-m15-time100-r0", "seconds": 9.077999999999975, "hits": 48}
+{"event": "cell_start", "utc_epoch": 1792893590.0670435, "stage": "screen", "key": "lichess10000-m20-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893598.0913928, "stage": "screen", "key": "lichess10000-m20-time100-r0", "seconds": 8.0150000000001, "hits": 43}
+{"event": "cell_start", "utc_epoch": 1792893598.1070244, "stage": "screen", "key": "lichess100-m05-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893607.275361, "stage": "screen", "key": "lichess100-m05-time100-r0", "seconds": 9.172000000000025, "hits": 42}
+{"event": "cell_start", "utc_epoch": 1792893607.275361, "stage": "screen", "key": "lichess10000-m17-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893615.3782787, "stage": "screen", "key": "lichess10000-m17-time100-r0", "seconds": 8.109000000000151, "hits": 29}
+{"event": "cell_start", "utc_epoch": 1792893615.3939018, "stage": "screen", "key": "lichess10000-m31-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893624.531142, "stage": "screen", "key": "lichess10000-m31-time100-r0", "seconds": 9.141000000000076, "hits": 46}
+{"event": "cell_start", "utc_epoch": 1792893624.5467422, "stage": "screen", "key": "lichess100-m26-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893632.4345553, "stage": "screen", "key": "lichess100-m26-time100-r0", "seconds": 7.875, "hits": 47}
+{"event": "cell_start", "utc_epoch": 1792893632.4345553, "stage": "screen", "key": "lichess1000-m13-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893641.565752, "stage": "screen", "key": "lichess1000-m13-time100-r0", "seconds": 9.140999999999849, "hits": 44}
+{"event": "cell_start", "utc_epoch": 1792893641.5813744, "stage": "screen", "key": "lichess10000-m13-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893650.7169845, "stage": "screen", "key": "lichess10000-m13-time100-r0", "seconds": 9.125, "hits": 45}
+{"event": "cell_start", "utc_epoch": 1792893650.7326107, "stage": "screen", "key": "lichess10000-m28-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893658.727108, "stage": "screen", "key": "lichess10000-m28-time100-r0", "seconds": 8.0, "hits": 63}
+{"event": "cell_start", "utc_epoch": 1792893658.727108, "stage": "screen", "key": "lichess10000-m25-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893667.8779187, "stage": "screen", "key": "lichess10000-m25-time100-r0", "seconds": 9.156000000000176, "hits": 40}
+{"event": "cell_start", "utc_epoch": 1792893667.8779187, "stage": "screen", "key": "lichess1000-m11-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893677.07767, "stage": "screen", "key": "lichess1000-m11-time100-r0", "seconds": 9.202999999999975, "hits": 36}
+{"event": "cell_start", "utc_epoch": 1792893677.07767, "stage": "screen", "key": "lichess100-m02-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893687.167649, "stage": "screen", "key": "lichess100-m02-time100-r0", "seconds": 10.07899999999995, "hits": 26}
+{"event": "cell_start", "utc_epoch": 1792893687.1832502, "stage": "screen", "key": "lichess100-m27-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893696.3525689, "stage": "screen", "key": "lichess100-m27-time100-r0", "seconds": 9.171999999999798, "hits": 36}
+{"event": "cell_start", "utc_epoch": 1792893696.3525689, "stage": "screen", "key": "lichess1000-m05-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893705.4741125, "stage": "screen", "key": "lichess1000-m05-time100-r0", "seconds": 9.125, "hits": 40}
+{"event": "cell_start", "utc_epoch": 1792893705.489678, "stage": "screen", "key": "lichess10000-m09-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893714.6432261, "stage": "screen", "key": "lichess10000-m09-time100-r0", "seconds": 9.155999999999949, "hits": 41}
+{"event": "cell_start", "utc_epoch": 1792893714.6432261, "stage": "screen", "key": "zero128-m29-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893723.8271883, "stage": "screen", "key": "zero128-m29-time100-r0", "seconds": 9.187000000000126, "hits": 43}
+{"event": "cell_start", "utc_epoch": 1792893723.8271883, "stage": "screen", "key": "lichess100-m09-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893732.9819613, "stage": "screen", "key": "lichess100-m09-time100-r0", "seconds": 9.140999999999849, "hits": 36}
+{"event": "cell_start", "utc_epoch": 1792893732.9975688, "stage": "screen", "key": "zero128-m02-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893741.6472707, "stage": "screen", "key": "zero128-m02-time100-r0", "seconds": 8.655999999999949, "hits": 23}
+{"event": "cell_start", "utc_epoch": 1792893741.6628919, "stage": "screen", "key": "lichess1000-m30-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893749.6244578, "stage": "screen", "key": "lichess1000-m30-time100-r0", "seconds": 7.968000000000075, "hits": 62}
+{"event": "cell_start", "utc_epoch": 1792893749.6244578, "stage": "screen", "key": "lichess100-m31-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893758.840906, "stage": "screen", "key": "lichess100-m31-time100-r0", "seconds": 9.187000000000126, "hits": 45}
+{"event": "cell_start", "utc_epoch": 1792893758.840906, "stage": "screen", "key": "zero128-m27-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893767.7884994, "stage": "screen", "key": "zero128-m27-time100-r0", "seconds": 8.95399999999995, "hits": 37}
+{"event": "cell_start", "utc_epoch": 1792893767.8041468, "stage": "screen", "key": "lichess100-m28-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893775.78237, "stage": "screen", "key": "lichess100-m28-time100-r0", "seconds": 7.9849999999999, "hits": 65}
+{"event": "cell_start", "utc_epoch": 1792893775.78237, "stage": "screen", "key": "lichess100-m21-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893784.9668021, "stage": "screen", "key": "lichess100-m21-time100-r0", "seconds": 9.17100000000005, "hits": 41}
+{"event": "cell_start", "utc_epoch": 1792893784.9668021, "stage": "screen", "key": "lichess100-m00-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893795.261052, "stage": "screen", "key": "lichess100-m00-time100-r0", "seconds": 10.297000000000025, "hits": 26}
+{"event": "cell_start", "utc_epoch": 1792893795.261052, "stage": "screen", "key": "zero128-m04-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893803.2052329, "stage": "screen", "key": "zero128-m04-time100-r0", "seconds": 7.9529999999999745, "hits": 47}
+{"event": "cell_start", "utc_epoch": 1792893803.2208643, "stage": "screen", "key": "zero128-m12-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893811.1626394, "stage": "screen", "key": "zero128-m12-time100-r0", "seconds": 7.938000000000102, "hits": 63}
+{"event": "cell_start", "utc_epoch": 1792893811.1626394, "stage": "screen", "key": "zero128-m07-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893820.2214062, "stage": "screen", "key": "zero128-m07-time100-r0", "seconds": 9.061999999999898, "hits": 39}
+{"event": "cell_start", "utc_epoch": 1792893820.2214062, "stage": "screen", "key": "lichess1000-m17-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893828.3206978, "stage": "screen", "key": "lichess1000-m17-time100-r0", "seconds": 8.094000000000051, "hits": 25}
+{"event": "cell_start", "utc_epoch": 1792893828.3362966, "stage": "screen", "key": "lichess1000-m12-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893836.2992024, "stage": "screen", "key": "lichess1000-m12-time100-r0", "seconds": 7.969000000000051, "hits": 61}
+{"event": "cell_start", "utc_epoch": 1792893836.2992024, "stage": "screen", "key": "zero128-m05-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893845.4990432, "stage": "screen", "key": "zero128-m05-time100-r0", "seconds": 9.187999999999874, "hits": 37}
+{"event": "cell_start", "utc_epoch": 1792893845.4990432, "stage": "screen", "key": "lichess10000-m04-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893853.5222385, "stage": "screen", "key": "lichess10000-m04-time100-r0", "seconds": 8.030999999999949, "hits": 41}
+{"event": "cell_start", "utc_epoch": 1792893853.5222385, "stage": "screen", "key": "lichess100-m29-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893862.7250404, "stage": "screen", "key": "lichess100-m29-time100-r0", "seconds": 9.202999999999975, "hits": 43}
+{"event": "cell_start", "utc_epoch": 1792893862.7406678, "stage": "screen", "key": "lichess10000-m14-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893870.7040098, "stage": "screen", "key": "lichess10000-m14-time100-r0", "seconds": 7.968000000000075, "hits": 63}
+{"event": "cell_start", "utc_epoch": 1792893870.7040098, "stage": "screen", "key": "zero128-m10-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893878.381875, "stage": "screen", "key": "zero128-m10-time100-r0", "seconds": 7.6720000000000255, "hits": 45}
+{"event": "cell_start", "utc_epoch": 1792893878.3975017, "stage": "screen", "key": "lichess1000-m15-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893887.5487413, "stage": "screen", "key": "lichess1000-m15-time100-r0", "seconds": 9.156000000000176, "hits": 44}
+{"event": "cell_start", "utc_epoch": 1792893887.5487413, "stage": "screen", "key": "lichess1000-m10-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893895.4326646, "stage": "screen", "key": "lichess1000-m10-time100-r0", "seconds": 7.875, "hits": 51}
+{"event": "cell_start", "utc_epoch": 1792893895.4326646, "stage": "screen", "key": "lichess100-m13-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893904.5849004, "stage": "screen", "key": "lichess100-m13-time100-r0", "seconds": 9.155999999999949, "hits": 44}
+{"event": "cell_start", "utc_epoch": 1792893904.6005354, "stage": "screen", "key": "lichess10000-m21-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893913.7043066, "stage": "screen", "key": "lichess10000-m21-time100-r0", "seconds": 9.109000000000151, "hits": 41}
+{"event": "cell_start", "utc_epoch": 1792893913.7043066, "stage": "screen", "key": "lichess10000-m00-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893923.9823248, "stage": "screen", "key": "lichess10000-m00-time100-r0", "seconds": 10.265999999999849, "hits": 34}
+{"event": "cell_start", "utc_epoch": 1792893923.9823248, "stage": "screen", "key": "lichess1000-m16-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893934.27494, "stage": "screen", "key": "lichess1000-m16-time100-r0", "seconds": 10.297000000000025, "hits": 31}
+{"event": "cell_start", "utc_epoch": 1792893934.27494, "stage": "screen", "key": "lichess100-m17-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893942.377998, "stage": "screen", "key": "lichess100-m17-time100-r0", "seconds": 8.109000000000151, "hits": 25}
+{"event": "cell_start", "utc_epoch": 1792893942.377998, "stage": "screen", "key": "lichess10000-m22-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893950.3845518, "stage": "screen", "key": "lichess10000-m22-time100-r0", "seconds": 8.0, "hits": 44}
+{"event": "cell_start", "utc_epoch": 1792893950.400154, "stage": "screen", "key": "lichess100-m11-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893959.535869, "stage": "screen", "key": "lichess100-m11-time100-r0", "seconds": 9.141000000000076, "hits": 36}
+{"event": "cell_start", "utc_epoch": 1792893959.5514944, "stage": "screen", "key": "zero128-m06-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893967.3050466, "stage": "screen", "key": "zero128-m06-time100-r0", "seconds": 7.75, "hits": 47}
+{"event": "cell_start", "utc_epoch": 1792893967.320645, "stage": "screen", "key": "zero128-m17-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893975.4438562, "stage": "screen", "key": "zero128-m17-time100-r0", "seconds": 8.125, "hits": 25}
+{"event": "cell_start", "utc_epoch": 1792893975.4438562, "stage": "screen", "key": "lichess1000-m24-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893983.3414016, "stage": "screen", "key": "lichess1000-m24-time100-r0", "seconds": 7.8900000000001, "hits": 49}
+{"event": "cell_start", "utc_epoch": 1792893983.3414016, "stage": "screen", "key": "lichess10000-m02-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792893993.6353693, "stage": "screen", "key": "lichess10000-m02-time100-r0", "seconds": 10.297000000000025, "hits": 35}
+{"event": "cell_start", "utc_epoch": 1792893993.6353693, "stage": "screen", "key": "zero128-m18-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894002.317535, "stage": "screen", "key": "zero128-m18-time100-r0", "seconds": 8.687999999999874, "hits": 22}
+{"event": "cell_start", "utc_epoch": 1792894002.317535, "stage": "screen", "key": "lichess100-m14-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894010.2783787, "stage": "screen", "key": "lichess100-m14-time100-r0", "seconds": 7.9529999999999745, "hits": 65}
+{"event": "cell_start", "utc_epoch": 1792894010.2939079, "stage": "screen", "key": "lichess100-m20-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894018.3039675, "stage": "screen", "key": "lichess100-m20-time100-r0", "seconds": 8.0150000000001, "hits": 48}
+{"event": "cell_start", "utc_epoch": 1792894018.3039675, "stage": "screen", "key": "lichess10000-m19-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894026.4060674, "stage": "screen", "key": "lichess10000-m19-time100-r0", "seconds": 8.093999999999824, "hits": 30}
+{"event": "cell_start", "utc_epoch": 1792894026.4060674, "stage": "screen", "key": "lichess10000-m08-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894034.3056056, "stage": "screen", "key": "lichess10000-m08-time100-r0", "seconds": 7.906000000000176, "hits": 48}
+{"event": "cell_start", "utc_epoch": 1792894034.3212411, "stage": "screen", "key": "zero128-m09-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894043.4100733, "stage": "screen", "key": "zero128-m09-time100-r0", "seconds": 9.094000000000051, "hits": 34}
+{"event": "cell_start", "utc_epoch": 1792894043.4100733, "stage": "screen", "key": "lichess100-m24-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894051.2932954, "stage": "screen", "key": "lichess100-m24-time100-r0", "seconds": 7.875, "hits": 46}
+{"event": "cell_start", "utc_epoch": 1792894051.308904, "stage": "screen", "key": "lichess10000-m16-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894061.5866847, "stage": "screen", "key": "lichess10000-m16-time100-r0", "seconds": 10.280999999999949, "hits": 32}
+{"event": "cell_start", "utc_epoch": 1792894061.5866847, "stage": "screen", "key": "lichess1000-m09-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894070.7548535, "stage": "screen", "key": "lichess1000-m09-time100-r0", "seconds": 9.172000000000025, "hits": 37}
+{"event": "cell_start", "utc_epoch": 1792894070.7704499, "stage": "screen", "key": "lichess1000-m28-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894078.7478747, "stage": "screen", "key": "lichess1000-m28-time100-r0", "seconds": 7.969000000000051, "hits": 62}
+{"event": "cell_start", "utc_epoch": 1792894078.7635014, "stage": "screen", "key": "lichess1000-m22-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894086.755589, "stage": "screen", "key": "lichess1000-m22-time100-r0", "seconds": 8.0, "hits": 49}
+{"event": "cell_start", "utc_epoch": 1792894086.755589, "stage": "screen", "key": "zero128-m25-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894095.8581073, "stage": "screen", "key": "zero128-m25-time100-r0", "seconds": 9.093999999999824, "hits": 34}
+{"event": "cell_start", "utc_epoch": 1792894095.8581073, "stage": "screen", "key": "zero128-m28-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894103.8026729, "stage": "screen", "key": "zero128-m28-time100-r0", "seconds": 7.953000000000202, "hits": 62}
+{"event": "cell_start", "utc_epoch": 1792894103.8026729, "stage": "screen", "key": "lichess10000-m03-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894111.8727365, "stage": "screen", "key": "lichess10000-m03-time100-r0", "seconds": 8.062999999999874, "hits": 31}
+{"event": "cell_start", "utc_epoch": 1792894111.8883538, "stage": "screen", "key": "lichess100-m16-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894122.1677148, "stage": "screen", "key": "lichess100-m16-time100-r0", "seconds": 10.281999999999925, "hits": 23}
+{"event": "cell_start", "utc_epoch": 1792894122.1677148, "stage": "screen", "key": "lichess10000-m12-time100-r0", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894130.1453607, "stage": "screen", "key": "lichess10000-m12-time100-r0", "seconds": 7.983999999999924, "hits": 62}
+{"event": "cell_start", "utc_epoch": 1792894130.1603973, "stage": "legacy_proof", "key": "zero128-m00-time100-r0-proof256", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894138.8241615, "stage": "legacy_proof", "key": "zero128-m00-time100-r0-proof256", "seconds": 8.655999999999949, "hits": 23}
+{"event": "cell_start", "utc_epoch": 1792894138.8397624, "stage": "legacy_proof", "key": "lichess100-m00-time100-r0-proof256", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894147.5217838, "stage": "legacy_proof", "key": "lichess100-m00-time100-r0-proof256", "seconds": 8.687999999999874, "hits": 26}
+{"event": "cell_start", "utc_epoch": 1792894147.5217838, "stage": "legacy_proof", "key": "lichess1000-m00-time100-r0-proof256", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894156.209369, "stage": "legacy_proof", "key": "lichess1000-m00-time100-r0-proof256", "seconds": 8.687000000000126, "hits": 31}
+{"event": "cell_start", "utc_epoch": 1792894156.209369, "stage": "legacy_proof", "key": "lichess10000-m00-time100-r0-proof256", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894164.8866172, "stage": "legacy_proof", "key": "lichess10000-m00-time100-r0-proof256", "seconds": 8.672000000000025, "hits": 34}
+{"event": "cell_start", "utc_epoch": 1792894168.4419835, "stage": "anchors", "key": "zero128-m00-time100-r1", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894178.7347887, "stage": "anchors", "key": "zero128-m00-time100-r1", "seconds": 10.280999999999949, "hits": 22}
+{"event": "cell_start", "utc_epoch": 1792894178.7347887, "stage": "anchors", "key": "zero128-m00-time100-r2", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894189.0284023, "stage": "anchors", "key": "zero128-m00-time100-r2", "seconds": 10.297000000000025, "hits": 22}
+{"event": "cell_start", "utc_epoch": 1792894189.0284023, "stage": "anchors", "key": "zero128-m08-time100-r1", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894196.9089522, "stage": "anchors", "key": "zero128-m08-time100-r1", "seconds": 7.891000000000076, "hits": 45}
+{"event": "cell_start", "utc_epoch": 1792894196.924578, "stage": "anchors", "key": "zero128-m08-time100-r2", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894204.7918365, "stage": "anchors", "key": "zero128-m08-time100-r2", "seconds": 7.8599999999999, "hits": 45}
+{"event": "cell_start", "utc_epoch": 1792894204.7918365, "stage": "anchors", "key": "zero128-m14-time100-r1", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894212.5698767, "stage": "anchors", "key": "zero128-m14-time100-r1", "seconds": 7.780999999999949, "hits": 63}
+{"event": "cell_start", "utc_epoch": 1792894212.5698767, "stage": "anchors", "key": "zero128-m14-time100-r2", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894220.3311923, "stage": "anchors", "key": "zero128-m14-time100-r2", "seconds": 7.7650000000001, "hits": 63}
+{"event": "cell_start", "utc_epoch": 1792894220.3311923, "stage": "anchors", "key": "zero128-m15-time100-r1", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894229.4061196, "stage": "anchors", "key": "zero128-m15-time100-r1", "seconds": 9.062999999999874, "hits": 48}
+{"event": "cell_start", "utc_epoch": 1792894229.4061196, "stage": "anchors", "key": "zero128-m15-time100-r2", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894238.4773338, "stage": "anchors", "key": "zero128-m15-time100-r2", "seconds": 9.077999999999975, "hits": 48}
+{"event": "cell_start", "utc_epoch": 1792894238.4773338, "stage": "anchors", "key": "lichess10000-m00-time100-r1", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894248.7542455, "stage": "anchors", "key": "lichess10000-m00-time100-r1", "seconds": 10.281000000000176, "hits": 34}
+{"event": "cell_start", "utc_epoch": 1792894248.7542455, "stage": "anchors", "key": "lichess10000-m00-time100-r2", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894259.0471108, "stage": "anchors", "key": "lichess10000-m00-time100-r2", "seconds": 10.266000000000076, "hits": 34}
+{"event": "cell_start", "utc_epoch": 1792894259.0471108, "stage": "anchors", "key": "lichess10000-m08-time100-r1", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894266.9299705, "stage": "anchors", "key": "lichess10000-m08-time100-r1", "seconds": 7.8900000000001, "hits": 48}
+{"event": "cell_start", "utc_epoch": 1792894266.9299705, "stage": "anchors", "key": "lichess10000-m08-time100-r2", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894274.8487957, "stage": "anchors", "key": "lichess10000-m08-time100-r2", "seconds": 7.921999999999798, "hits": 48}
+{"event": "cell_start", "utc_epoch": 1792894274.8487957, "stage": "anchors", "key": "lichess10000-m12-time100-r1", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894282.8117688, "stage": "anchors", "key": "lichess10000-m12-time100-r1", "seconds": 7.953000000000202, "hits": 62}
+{"event": "cell_start", "utc_epoch": 1792894282.8117688, "stage": "anchors", "key": "lichess10000-m12-time100-r2", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894290.793017, "stage": "anchors", "key": "lichess10000-m12-time100-r2", "seconds": 7.9849999999999, "hits": 62}
+{"event": "cell_start", "utc_epoch": 1792894290.793017, "stage": "anchors", "key": "lichess10000-m15-time100-r1", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894299.9102643, "stage": "anchors", "key": "lichess10000-m15-time100-r1", "seconds": 9.125, "hits": 47}
+{"event": "cell_start", "utc_epoch": 1792894299.9102643, "stage": "anchors", "key": "lichess10000-m15-time100-r2", "remaining": 100}
+{"event": "cell_complete", "utc_epoch": 1792894309.0282216, "stage": "anchors", "key": "lichess10000-m15-time100-r2", "seconds": 9.108999999999924, "hits": 47}
+{"event": "cell_start", "utc_epoch": 1792894309.0282216, "stage": "one_second", "key": "zero128-m00-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894333.1462345, "stage": "one_second", "key": "zero128-m00-time1000-r0", "seconds": 24.125, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792894333.1462345, "stage": "one_second", "key": "zero128-m01-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894351.3190095, "stage": "one_second", "key": "zero128-m01-time1000-r0", "seconds": 18.172000000000025, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792894351.3346117, "stage": "one_second", "key": "zero128-m02-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894372.345925, "stage": "one_second", "key": "zero128-m02-time1000-r0", "seconds": 21.016000000000076, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792894372.345925, "stage": "one_second", "key": "zero128-m04-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894390.4930859, "stage": "one_second", "key": "zero128-m04-time1000-r0", "seconds": 18.141000000000076, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792894390.4930859, "stage": "one_second", "key": "zero128-m08-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894408.6219306, "stage": "one_second", "key": "zero128-m08-time1000-r0", "seconds": 18.125, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792894408.63753, "stage": "one_second", "key": "zero128-m15-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894426.8495486, "stage": "one_second", "key": "zero128-m15-time1000-r0", "seconds": 18.21900000000005, "hits": 14}
+{"event": "cell_start", "utc_epoch": 1792894426.8495486, "stage": "one_second", "key": "zero128-m30-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894444.6684551, "stage": "one_second", "key": "zero128-m30-time1000-r0", "seconds": 17.813000000000102, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792894444.6684551, "stage": "one_second", "key": "zero128-m14-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894462.4996116, "stage": "one_second", "key": "zero128-m14-time1000-r0", "seconds": 17.827999999999975, "hits": 14}
+{"event": "cell_start", "utc_epoch": 1792894462.4996116, "stage": "one_second", "key": "lichess100-m00-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894486.604395, "stage": "one_second", "key": "lichess100-m00-time1000-r0", "seconds": 24.108999999999924, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792894486.61999, "stage": "one_second", "key": "lichess100-m01-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894504.7957208, "stage": "one_second", "key": "lichess100-m01-time1000-r0", "seconds": 18.172000000000025, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792894504.7957208, "stage": "one_second", "key": "lichess100-m02-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894528.6166685, "stage": "one_second", "key": "lichess100-m02-time1000-r0", "seconds": 23.827999999999975, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792894528.6166685, "stage": "one_second", "key": "lichess100-m04-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894546.7950706, "stage": "one_second", "key": "lichess100-m04-time1000-r0", "seconds": 18.172000000000025, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792894546.7950706, "stage": "one_second", "key": "lichess100-m08-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894564.9346716, "stage": "one_second", "key": "lichess100-m08-time1000-r0", "seconds": 18.139999999999873, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792894564.9346716, "stage": "one_second", "key": "lichess100-m15-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894583.5079954, "stage": "one_second", "key": "lichess100-m15-time1000-r0", "seconds": 18.577999999999975, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792894583.5079954, "stage": "one_second", "key": "lichess100-m30-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894601.661476, "stage": "one_second", "key": "lichess100-m30-time1000-r0", "seconds": 18.157000000000153, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792894601.661476, "stage": "one_second", "key": "lichess100-m14-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894619.8265462, "stage": "one_second", "key": "lichess100-m14-time1000-r0", "seconds": 18.15599999999995, "hits": 14}
+{"event": "cell_start", "utc_epoch": 1792894619.8265462, "stage": "one_second", "key": "lichess1000-m00-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894643.931537, "stage": "one_second", "key": "lichess1000-m00-time1000-r0", "seconds": 24.108999999999924, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792894643.947166, "stage": "one_second", "key": "lichess1000-m01-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894662.1259632, "stage": "one_second", "key": "lichess1000-m01-time1000-r0", "seconds": 18.172000000000025, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792894662.1259632, "stage": "one_second", "key": "lichess1000-m02-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894686.233855, "stage": "one_second", "key": "lichess1000-m02-time1000-r0", "seconds": 24.108999999999924, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792894686.2494788, "stage": "one_second", "key": "lichess1000-m04-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894704.4008648, "stage": "one_second", "key": "lichess1000-m04-time1000-r0", "seconds": 18.15599999999995, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792894704.4008648, "stage": "one_second", "key": "lichess1000-m08-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894722.537809, "stage": "one_second", "key": "lichess1000-m08-time1000-r0", "seconds": 18.141000000000076, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792894722.5534635, "stage": "one_second", "key": "lichess1000-m15-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894741.1107104, "stage": "one_second", "key": "lichess1000-m15-time1000-r0", "seconds": 18.547000000000025, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792894741.1107104, "stage": "one_second", "key": "lichess1000-m30-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894759.2635076, "stage": "one_second", "key": "lichess1000-m30-time1000-r0", "seconds": 18.15599999999995, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792894759.2635076, "stage": "one_second", "key": "lichess1000-m14-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894777.4120338, "stage": "one_second", "key": "lichess1000-m14-time1000-r0", "seconds": 18.157000000000153, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792894777.427734, "stage": "one_second", "key": "lichess10000-m00-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894801.5367844, "stage": "one_second", "key": "lichess10000-m00-time1000-r0", "seconds": 24.110000000000127, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792894801.5367844, "stage": "one_second", "key": "lichess10000-m01-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894819.717656, "stage": "one_second", "key": "lichess10000-m01-time1000-r0", "seconds": 18.17099999999982, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792894819.717656, "stage": "one_second", "key": "lichess10000-m02-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894843.8207357, "stage": "one_second", "key": "lichess10000-m02-time1000-r0", "seconds": 24.110000000000127, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792894843.8207357, "stage": "one_second", "key": "lichess10000-m04-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894861.9987097, "stage": "one_second", "key": "lichess10000-m04-time1000-r0", "seconds": 18.172000000000025, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792894861.9987097, "stage": "one_second", "key": "lichess10000-m08-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894880.143158, "stage": "one_second", "key": "lichess10000-m08-time1000-r0", "seconds": 18.139999999999873, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792894880.143158, "stage": "one_second", "key": "lichess10000-m15-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894898.7174911, "stage": "one_second", "key": "lichess10000-m15-time1000-r0", "seconds": 18.577999999999975, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792894898.7174911, "stage": "one_second", "key": "lichess10000-m30-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894916.8794649, "stage": "one_second", "key": "lichess10000-m30-time1000-r0", "seconds": 18.172000000000025, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792894916.8794649, "stage": "one_second", "key": "lichess10000-m14-time1000-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792894935.0406423, "stage": "one_second", "key": "lichess10000-m14-time1000-r0", "seconds": 18.157000000000153, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792894935.0406423, "stage": "five_seconds", "key": "zero128-m00-time5000-r0", "remaining": 16}
+{"event": "cell_complete", "utc_epoch": 1792895015.123758, "stage": "five_seconds", "key": "zero128-m00-time5000-r0", "seconds": 80.07799999999997, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895015.1393585, "stage": "five_seconds", "key": "zero128-m09-time5000-r0", "remaining": 16}
+{"event": "cell_complete", "utc_epoch": 1792895075.475275, "stage": "five_seconds", "key": "zero128-m09-time5000-r0", "seconds": 60.34400000000005, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895075.4911242, "stage": "five_seconds", "key": "zero128-m14-time5000-r0", "remaining": 16}
+{"event": "cell_complete", "utc_epoch": 1792895134.345731, "stage": "five_seconds", "key": "zero128-m14-time5000-r0", "seconds": 58.84299999999985, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895134.345731, "stage": "five_seconds", "key": "zero128-m15-time5000-r0", "remaining": 16}
+{"event": "cell_complete", "utc_epoch": 1792895193.4641373, "stage": "five_seconds", "key": "zero128-m15-time5000-r0", "seconds": 59.125, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895193.4953668, "stage": "ten_seconds", "key": "zero128-m00-time10000-r0", "remaining": 4}
+{"event": "cell_complete", "utc_epoch": 1792895233.539001, "stage": "ten_seconds", "key": "zero128-m00-time10000-r0", "seconds": 40.047000000000025, "hits": 2}
+{"event": "cell_start", "utc_epoch": 1792895233.5546029, "stage": "ten_seconds", "key": "zero128-m14-time10000-r0", "remaining": 4}
+{"event": "cell_complete", "utc_epoch": 1792895262.943619, "stage": "ten_seconds", "key": "zero128-m14-time10000-r0", "seconds": 29.391000000000076, "hits": 2}
+{"event": "cell_start", "utc_epoch": 1792895262.943619, "stage": "ten_seconds", "key": "zero128-m15-time10000-r0", "remaining": 4}
+{"event": "cell_complete", "utc_epoch": 1792895292.3817713, "stage": "ten_seconds", "key": "zero128-m15-time10000-r0", "seconds": 29.436999999999898, "hits": 2}
+{"event": "cell_start", "utc_epoch": 1792895292.3817713, "stage": "five_seconds", "key": "lichess10000-m00-time5000-r0", "remaining": 16}
+{"event": "cell_complete", "utc_epoch": 1792895372.4744766, "stage": "five_seconds", "key": "lichess10000-m00-time5000-r0", "seconds": 80.09400000000005, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895372.4744766, "stage": "five_seconds", "key": "lichess10000-m09-time5000-r0", "remaining": 16}
+{"event": "cell_complete", "utc_epoch": 1792895432.8868363, "stage": "five_seconds", "key": "lichess10000-m09-time5000-r0", "seconds": 60.40599999999995, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895432.8868363, "stage": "five_seconds", "key": "lichess10000-m12-time5000-r0", "remaining": 16}
+{"event": "cell_complete", "utc_epoch": 1792895493.0244508, "stage": "five_seconds", "key": "lichess10000-m12-time5000-r0", "seconds": 60.141000000000076, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895493.0244508, "stage": "five_seconds", "key": "lichess10000-m15-time5000-r0", "remaining": 16}
+{"event": "cell_complete", "utc_epoch": 1792895553.4216757, "stage": "five_seconds", "key": "lichess10000-m15-time5000-r0", "seconds": 60.391000000000076, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895553.453017, "stage": "ten_seconds", "key": "lichess10000-m00-time10000-r0", "remaining": 4}
+{"event": "cell_complete", "utc_epoch": 1792895593.490819, "stage": "ten_seconds", "key": "lichess10000-m00-time10000-r0", "seconds": 40.047000000000025, "hits": 2}
+{"event": "cell_start", "utc_epoch": 1792895593.490819, "stage": "ten_seconds", "key": "lichess10000-m12-time10000-r0", "remaining": 4}
+{"event": "cell_complete", "utc_epoch": 1792895623.5521502, "stage": "ten_seconds", "key": "lichess10000-m12-time10000-r0", "seconds": 30.047000000000025, "hits": 3}
+{"event": "cell_start", "utc_epoch": 1792895623.5521502, "stage": "ten_seconds", "key": "lichess10000-m15-time10000-r0", "remaining": 4}
+{"event": "cell_complete", "utc_epoch": 1792895653.6940038, "stage": "ten_seconds", "key": "lichess10000-m15-time10000-r0", "seconds": 30.15599999999995, "hits": 2}
+{"event": "cell_start", "utc_epoch": 1792895653.6940038, "stage": "fixed_nodes", "key": "zero128-m00-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895654.1005764, "stage": "fixed_nodes", "key": "zero128-m00-nodes512-r0", "seconds": 0.40599999999994907, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895654.1005764, "stage": "fixed_nodes", "key": "zero128-m01-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895654.5704234, "stage": "fixed_nodes", "key": "zero128-m01-nodes512-r0", "seconds": 0.46900000000005093, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895654.5704234, "stage": "fixed_nodes", "key": "zero128-m02-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895654.9767668, "stage": "fixed_nodes", "key": "zero128-m02-nodes512-r0", "seconds": 0.3910000000000764, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895654.9767668, "stage": "fixed_nodes", "key": "zero128-m03-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895655.4615102, "stage": "fixed_nodes", "key": "zero128-m03-nodes512-r0", "seconds": 0.4839999999999236, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895655.4615102, "stage": "fixed_nodes", "key": "zero128-m04-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895655.898603, "stage": "fixed_nodes", "key": "zero128-m04-nodes512-r0", "seconds": 0.43800000000010186, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895655.898603, "stage": "fixed_nodes", "key": "zero128-m05-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895656.712192, "stage": "fixed_nodes", "key": "zero128-m05-nodes512-r0", "seconds": 0.8119999999998981, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895656.712192, "stage": "fixed_nodes", "key": "zero128-m06-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895657.1497319, "stage": "fixed_nodes", "key": "zero128-m06-nodes512-r0", "seconds": 0.43800000000010186, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895657.1497319, "stage": "fixed_nodes", "key": "zero128-m07-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895657.946688, "stage": "fixed_nodes", "key": "zero128-m07-nodes512-r0", "seconds": 0.7970000000000255, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895657.946688, "stage": "fixed_nodes", "key": "zero128-m08-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895658.384421, "stage": "fixed_nodes", "key": "zero128-m08-nodes512-r0", "seconds": 0.43699999999989814, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895658.384421, "stage": "fixed_nodes", "key": "zero128-m09-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895659.1515121, "stage": "fixed_nodes", "key": "zero128-m09-nodes512-r0", "seconds": 0.7660000000000764, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895659.1515121, "stage": "fixed_nodes", "key": "zero128-m10-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895659.5746179, "stage": "fixed_nodes", "key": "zero128-m10-nodes512-r0", "seconds": 0.42200000000002547, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895659.5746179, "stage": "fixed_nodes", "key": "zero128-m11-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895660.3564126, "stage": "fixed_nodes", "key": "zero128-m11-nodes512-r0", "seconds": 0.7809999999999491, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895660.3564126, "stage": "fixed_nodes", "key": "zero128-m12-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895660.7941964, "stage": "fixed_nodes", "key": "zero128-m12-nodes512-r0", "seconds": 0.43800000000010186, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895660.7941964, "stage": "fixed_nodes", "key": "zero128-m13-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895661.638158, "stage": "fixed_nodes", "key": "zero128-m13-nodes512-r0", "seconds": 0.8429999999998472, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895661.638158, "stage": "fixed_nodes", "key": "zero128-m14-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895662.0602949, "stage": "fixed_nodes", "key": "zero128-m14-nodes512-r0", "seconds": 0.42200000000002547, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895662.0758905, "stage": "fixed_nodes", "key": "zero128-m15-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895662.9052706, "stage": "fixed_nodes", "key": "zero128-m15-nodes512-r0", "seconds": 0.8279999999999745, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895662.9052706, "stage": "fixed_nodes", "key": "zero128-m16-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895663.4366415, "stage": "fixed_nodes", "key": "zero128-m16-nodes512-r0", "seconds": 0.5309999999999491, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895663.4521925, "stage": "fixed_nodes", "key": "zero128-m17-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895664.0617394, "stage": "fixed_nodes", "key": "zero128-m17-nodes512-r0", "seconds": 0.6089999999999236, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895664.0617394, "stage": "fixed_nodes", "key": "zero128-m18-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895664.5940819, "stage": "fixed_nodes", "key": "zero128-m18-nodes512-r0", "seconds": 0.5309999999999491, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895664.5940819, "stage": "fixed_nodes", "key": "zero128-m19-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895665.2038605, "stage": "fixed_nodes", "key": "zero128-m19-nodes512-r0", "seconds": 0.6100000000001273, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895665.2038605, "stage": "fixed_nodes", "key": "zero128-m20-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895665.7829363, "stage": "fixed_nodes", "key": "zero128-m20-nodes512-r0", "seconds": 0.5779999999999745, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895665.7829363, "stage": "fixed_nodes", "key": "zero128-m21-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895666.7365692, "stage": "fixed_nodes", "key": "zero128-m21-nodes512-r0", "seconds": 0.9369999999998981, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895666.752168, "stage": "fixed_nodes", "key": "zero128-m22-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895667.331432, "stage": "fixed_nodes", "key": "zero128-m22-nodes512-r0", "seconds": 0.5779999999999745, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895667.331432, "stage": "fixed_nodes", "key": "zero128-m23-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895668.2863793, "stage": "fixed_nodes", "key": "zero128-m23-nodes512-r0", "seconds": 0.9529999999999745, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895668.2863793, "stage": "fixed_nodes", "key": "zero128-m24-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895668.849418, "stage": "fixed_nodes", "key": "zero128-m24-nodes512-r0", "seconds": 0.5619999999998981, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895668.849418, "stage": "fixed_nodes", "key": "zero128-m25-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895669.7727687, "stage": "fixed_nodes", "key": "zero128-m25-nodes512-r0", "seconds": 0.9380000000001019, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895669.7727687, "stage": "fixed_nodes", "key": "zero128-m26-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895670.3199692, "stage": "fixed_nodes", "key": "zero128-m26-nodes512-r0", "seconds": 0.5470000000000255, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895670.335593, "stage": "fixed_nodes", "key": "zero128-m27-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895671.242442, "stage": "fixed_nodes", "key": "zero128-m27-nodes512-r0", "seconds": 0.9070000000001528, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895671.2580404, "stage": "fixed_nodes", "key": "zero128-m28-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895671.8207235, "stage": "fixed_nodes", "key": "zero128-m28-nodes512-r0", "seconds": 0.5630000000001019, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895671.8207235, "stage": "fixed_nodes", "key": "zero128-m29-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895672.8061342, "stage": "fixed_nodes", "key": "zero128-m29-nodes512-r0", "seconds": 0.9839999999999236, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895672.8217986, "stage": "fixed_nodes", "key": "zero128-m30-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895673.384508, "stage": "fixed_nodes", "key": "zero128-m30-nodes512-r0", "seconds": 0.5619999999998981, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895673.4000812, "stage": "fixed_nodes", "key": "zero128-m31-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895674.385705, "stage": "fixed_nodes", "key": "zero128-m31-nodes512-r0", "seconds": 0.9839999999999236, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895674.385705, "stage": "fixed_nodes", "key": "lichess100-m00-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895674.776458, "stage": "fixed_nodes", "key": "lichess100-m00-nodes512-r0", "seconds": 0.3910000000000764, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895674.7920773, "stage": "fixed_nodes", "key": "lichess100-m01-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895675.2777374, "stage": "fixed_nodes", "key": "lichess100-m01-nodes512-r0", "seconds": 0.4839999999999236, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895675.2777374, "stage": "fixed_nodes", "key": "lichess100-m02-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895675.6683078, "stage": "fixed_nodes", "key": "lichess100-m02-nodes512-r0", "seconds": 0.3910000000000764, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895675.6683078, "stage": "fixed_nodes", "key": "lichess100-m03-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895676.1528819, "stage": "fixed_nodes", "key": "lichess100-m03-nodes512-r0", "seconds": 0.4839999999999236, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895676.1528819, "stage": "fixed_nodes", "key": "lichess100-m04-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895676.6217742, "stage": "fixed_nodes", "key": "lichess100-m04-nodes512-r0", "seconds": 0.46900000000005093, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895676.6217742, "stage": "fixed_nodes", "key": "lichess100-m05-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895677.4522524, "stage": "fixed_nodes", "key": "lichess100-m05-nodes512-r0", "seconds": 0.8279999999999745, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895677.4522524, "stage": "fixed_nodes", "key": "lichess100-m06-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895677.9056432, "stage": "fixed_nodes", "key": "lichess100-m06-nodes512-r0", "seconds": 0.45299999999997453, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895677.921244, "stage": "fixed_nodes", "key": "lichess100-m07-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895678.7349024, "stage": "fixed_nodes", "key": "lichess100-m07-nodes512-r0", "seconds": 0.8119999999998981, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895678.750503, "stage": "fixed_nodes", "key": "lichess100-m08-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895679.172942, "stage": "fixed_nodes", "key": "lichess100-m08-nodes512-r0", "seconds": 0.42200000000002547, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895679.1795812, "stage": "fixed_nodes", "key": "lichess100-m09-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895679.9703345, "stage": "fixed_nodes", "key": "lichess100-m09-nodes512-r0", "seconds": 0.7809999999999491, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895679.9859338, "stage": "fixed_nodes", "key": "lichess100-m10-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895680.4083931, "stage": "fixed_nodes", "key": "lichess100-m10-nodes512-r0", "seconds": 0.42200000000002547, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895680.424017, "stage": "fixed_nodes", "key": "lichess100-m11-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895681.2221446, "stage": "fixed_nodes", "key": "lichess100-m11-nodes512-r0", "seconds": 0.7959999999998217, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895681.2221446, "stage": "fixed_nodes", "key": "lichess100-m12-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895681.6752753, "stage": "fixed_nodes", "key": "lichess100-m12-nodes512-r0", "seconds": 0.45400000000017826, "hits": 14}
+{"event": "cell_start", "utc_epoch": 1792895681.6752753, "stage": "fixed_nodes", "key": "lichess100-m13-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895682.520326, "stage": "fixed_nodes", "key": "lichess100-m13-nodes512-r0", "seconds": 0.8429999999998472, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895682.520326, "stage": "fixed_nodes", "key": "lichess100-m14-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895682.973696, "stage": "fixed_nodes", "key": "lichess100-m14-nodes512-r0", "seconds": 0.45299999999997453, "hits": 14}
+{"event": "cell_start", "utc_epoch": 1792895682.973696, "stage": "fixed_nodes", "key": "lichess100-m15-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895683.833477, "stage": "fixed_nodes", "key": "lichess100-m15-nodes512-r0", "seconds": 0.8600000000001273, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895683.833477, "stage": "fixed_nodes", "key": "lichess100-m16-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895684.3648763, "stage": "fixed_nodes", "key": "lichess100-m16-nodes512-r0", "seconds": 0.5309999999999491, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895684.3648763, "stage": "fixed_nodes", "key": "lichess100-m17-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895684.9744813, "stage": "fixed_nodes", "key": "lichess100-m17-nodes512-r0", "seconds": 0.6089999999999236, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895684.9900901, "stage": "fixed_nodes", "key": "lichess100-m18-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895685.522785, "stage": "fixed_nodes", "key": "lichess100-m18-nodes512-r0", "seconds": 0.5470000000000255, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895685.522785, "stage": "fixed_nodes", "key": "lichess100-m19-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895686.147316, "stage": "fixed_nodes", "key": "lichess100-m19-nodes512-r0", "seconds": 0.625, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895686.147316, "stage": "fixed_nodes", "key": "lichess100-m20-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895686.742103, "stage": "fixed_nodes", "key": "lichess100-m20-nodes512-r0", "seconds": 0.5940000000000509, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895686.742103, "stage": "fixed_nodes", "key": "lichess100-m21-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895687.711628, "stage": "fixed_nodes", "key": "lichess100-m21-nodes512-r0", "seconds": 0.9679999999998472, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895687.711628, "stage": "fixed_nodes", "key": "lichess100-m22-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895688.3052197, "stage": "fixed_nodes", "key": "lichess100-m22-nodes512-r0", "seconds": 0.5940000000000509, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895688.3052197, "stage": "fixed_nodes", "key": "lichess100-m23-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895689.2742553, "stage": "fixed_nodes", "key": "lichess100-m23-nodes512-r0", "seconds": 0.9690000000000509, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895689.2898574, "stage": "fixed_nodes", "key": "lichess100-m24-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895689.8369756, "stage": "fixed_nodes", "key": "lichess100-m24-nodes512-r0", "seconds": 0.5459999999998217, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895689.8525736, "stage": "fixed_nodes", "key": "lichess100-m25-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895690.7906172, "stage": "fixed_nodes", "key": "lichess100-m25-nodes512-r0", "seconds": 0.9380000000001019, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895690.7906172, "stage": "fixed_nodes", "key": "lichess100-m26-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895691.3533082, "stage": "fixed_nodes", "key": "lichess100-m26-nodes512-r0", "seconds": 0.5619999999998981, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895691.3689392, "stage": "fixed_nodes", "key": "lichess100-m27-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895692.3228045, "stage": "fixed_nodes", "key": "lichess100-m27-nodes512-r0", "seconds": 0.9529999999999745, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895692.3228045, "stage": "fixed_nodes", "key": "lichess100-m28-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895692.9011862, "stage": "fixed_nodes", "key": "lichess100-m28-nodes512-r0", "seconds": 0.5779999999999745, "hits": 14}
+{"event": "cell_start", "utc_epoch": 1792895692.9011862, "stage": "fixed_nodes", "key": "lichess100-m29-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895693.9010806, "stage": "fixed_nodes", "key": "lichess100-m29-nodes512-r0", "seconds": 1.0, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895693.9010806, "stage": "fixed_nodes", "key": "lichess100-m30-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895694.4815717, "stage": "fixed_nodes", "key": "lichess100-m30-nodes512-r0", "seconds": 0.5779999999999745, "hits": 14}
+{"event": "cell_start", "utc_epoch": 1792895694.4815717, "stage": "fixed_nodes", "key": "lichess100-m31-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895695.4830518, "stage": "fixed_nodes", "key": "lichess100-m31-nodes512-r0", "seconds": 1.0, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895695.4830518, "stage": "fixed_nodes", "key": "lichess1000-m00-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895695.8739398, "stage": "fixed_nodes", "key": "lichess1000-m00-nodes512-r0", "seconds": 0.3910000000000764, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895695.889558, "stage": "fixed_nodes", "key": "lichess1000-m01-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895696.3592703, "stage": "fixed_nodes", "key": "lichess1000-m01-nodes512-r0", "seconds": 0.46900000000005093, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895696.3592703, "stage": "fixed_nodes", "key": "lichess1000-m02-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895696.7499993, "stage": "fixed_nodes", "key": "lichess1000-m02-nodes512-r0", "seconds": 0.3910000000000764, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895696.76562, "stage": "fixed_nodes", "key": "lichess1000-m03-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895697.2346804, "stage": "fixed_nodes", "key": "lichess1000-m03-nodes512-r0", "seconds": 0.46900000000005093, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895697.2346804, "stage": "fixed_nodes", "key": "lichess1000-m04-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895697.673222, "stage": "fixed_nodes", "key": "lichess1000-m04-nodes512-r0", "seconds": 0.43800000000010186, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895697.673222, "stage": "fixed_nodes", "key": "lichess1000-m05-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895698.4705327, "stage": "fixed_nodes", "key": "lichess1000-m05-nodes512-r0", "seconds": 0.7959999999998217, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895698.4861302, "stage": "fixed_nodes", "key": "lichess1000-m06-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895698.9234202, "stage": "fixed_nodes", "key": "lichess1000-m06-nodes512-r0", "seconds": 0.43800000000010186, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895698.93902, "stage": "fixed_nodes", "key": "lichess1000-m07-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895699.7527337, "stage": "fixed_nodes", "key": "lichess1000-m07-nodes512-r0", "seconds": 0.8130000000001019, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895699.7527337, "stage": "fixed_nodes", "key": "lichess1000-m08-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895700.175125, "stage": "fixed_nodes", "key": "lichess1000-m08-nodes512-r0", "seconds": 0.42200000000002547, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895700.187155, "stage": "fixed_nodes", "key": "lichess1000-m09-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895701.0358202, "stage": "fixed_nodes", "key": "lichess1000-m09-nodes512-r0", "seconds": 0.8440000000000509, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895701.0358202, "stage": "fixed_nodes", "key": "lichess1000-m10-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895701.4733868, "stage": "fixed_nodes", "key": "lichess1000-m10-nodes512-r0", "seconds": 0.43699999999989814, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895701.4733868, "stage": "fixed_nodes", "key": "lichess1000-m11-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895702.3339612, "stage": "fixed_nodes", "key": "lichess1000-m11-nodes512-r0", "seconds": 0.8600000000001273, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895702.3339612, "stage": "fixed_nodes", "key": "lichess1000-m12-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895702.7725184, "stage": "fixed_nodes", "key": "lichess1000-m12-nodes512-r0", "seconds": 0.45299999999997453, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895702.7725184, "stage": "fixed_nodes", "key": "lichess1000-m13-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895703.6491234, "stage": "fixed_nodes", "key": "lichess1000-m13-nodes512-r0", "seconds": 0.875, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895703.6491234, "stage": "fixed_nodes", "key": "lichess1000-m14-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895704.0868592, "stage": "fixed_nodes", "key": "lichess1000-m14-nodes512-r0", "seconds": 0.43699999999989814, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895704.0868592, "stage": "fixed_nodes", "key": "lichess1000-m15-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895704.9626296, "stage": "fixed_nodes", "key": "lichess1000-m15-nodes512-r0", "seconds": 0.875, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895704.9626296, "stage": "fixed_nodes", "key": "lichess1000-m16-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895705.4792378, "stage": "fixed_nodes", "key": "lichess1000-m16-nodes512-r0", "seconds": 0.5160000000000764, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895705.4948573, "stage": "fixed_nodes", "key": "lichess1000-m17-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895706.0887268, "stage": "fixed_nodes", "key": "lichess1000-m17-nodes512-r0", "seconds": 0.5929999999998472, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895706.0887268, "stage": "fixed_nodes", "key": "lichess1000-m18-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895706.604894, "stage": "fixed_nodes", "key": "lichess1000-m18-nodes512-r0", "seconds": 0.5160000000000764, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895706.620521, "stage": "fixed_nodes", "key": "lichess1000-m19-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895707.2145638, "stage": "fixed_nodes", "key": "lichess1000-m19-nodes512-r0", "seconds": 0.5929999999998472, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895707.230192, "stage": "fixed_nodes", "key": "lichess1000-m20-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895707.7927656, "stage": "fixed_nodes", "key": "lichess1000-m20-nodes512-r0", "seconds": 0.5630000000001019, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895707.8083978, "stage": "fixed_nodes", "key": "lichess1000-m21-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895708.731206, "stage": "fixed_nodes", "key": "lichess1000-m21-nodes512-r0", "seconds": 0.9220000000000255, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895708.731206, "stage": "fixed_nodes", "key": "lichess1000-m22-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895709.3102684, "stage": "fixed_nodes", "key": "lichess1000-m22-nodes512-r0", "seconds": 0.5619999999998981, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895709.3102684, "stage": "fixed_nodes", "key": "lichess1000-m23-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895710.270998, "stage": "fixed_nodes", "key": "lichess1000-m23-nodes512-r0", "seconds": 0.9529999999999745, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895710.2800295, "stage": "fixed_nodes", "key": "lichess1000-m24-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895710.8267987, "stage": "fixed_nodes", "key": "lichess1000-m24-nodes512-r0", "seconds": 0.5470000000000255, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895710.8267987, "stage": "fixed_nodes", "key": "lichess1000-m25-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895711.8428812, "stage": "fixed_nodes", "key": "lichess1000-m25-nodes512-r0", "seconds": 1.0149999999998727, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895711.8428812, "stage": "fixed_nodes", "key": "lichess1000-m26-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895712.4058971, "stage": "fixed_nodes", "key": "lichess1000-m26-nodes512-r0", "seconds": 0.5630000000001019, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895712.4058971, "stage": "fixed_nodes", "key": "lichess1000-m27-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895713.4219306, "stage": "fixed_nodes", "key": "lichess1000-m27-nodes512-r0", "seconds": 1.0160000000000764, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895713.4219306, "stage": "fixed_nodes", "key": "lichess1000-m28-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895714.0002203, "stage": "fixed_nodes", "key": "lichess1000-m28-nodes512-r0", "seconds": 0.5779999999999745, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895714.0002203, "stage": "fixed_nodes", "key": "lichess1000-m29-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895715.0171695, "stage": "fixed_nodes", "key": "lichess1000-m29-nodes512-r0", "seconds": 1.0149999999998727, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895715.0328016, "stage": "fixed_nodes", "key": "lichess1000-m30-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895715.5967143, "stage": "fixed_nodes", "key": "lichess1000-m30-nodes512-r0", "seconds": 0.5619999999998981, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895715.5967143, "stage": "fixed_nodes", "key": "lichess1000-m31-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895716.6128957, "stage": "fixed_nodes", "key": "lichess1000-m31-nodes512-r0", "seconds": 1.0160000000000764, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895716.6128957, "stage": "fixed_nodes", "key": "lichess10000-m00-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895717.0349953, "stage": "fixed_nodes", "key": "lichess10000-m00-nodes512-r0", "seconds": 0.42200000000002547, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895717.0349953, "stage": "fixed_nodes", "key": "lichess10000-m01-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895717.551653, "stage": "fixed_nodes", "key": "lichess10000-m01-nodes512-r0", "seconds": 0.5160000000000764, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895717.551653, "stage": "fixed_nodes", "key": "lichess10000-m02-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895717.957958, "stage": "fixed_nodes", "key": "lichess10000-m02-nodes512-r0", "seconds": 0.40599999999994907, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895717.973586, "stage": "fixed_nodes", "key": "lichess10000-m03-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895718.4580886, "stage": "fixed_nodes", "key": "lichess10000-m03-nodes512-r0", "seconds": 0.48500000000012733, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895718.4580886, "stage": "fixed_nodes", "key": "lichess10000-m04-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895718.9582396, "stage": "fixed_nodes", "key": "lichess10000-m04-nodes512-r0", "seconds": 0.48500000000012733, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895718.9582396, "stage": "fixed_nodes", "key": "lichess10000-m05-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895719.7882903, "stage": "fixed_nodes", "key": "lichess10000-m05-nodes512-r0", "seconds": 0.8440000000000509, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895719.7882903, "stage": "fixed_nodes", "key": "lichess10000-m06-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895720.2717645, "stage": "fixed_nodes", "key": "lichess10000-m06-nodes512-r0", "seconds": 0.4679999999998472, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895720.2727826, "stage": "fixed_nodes", "key": "lichess10000-m07-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895721.0859432, "stage": "fixed_nodes", "key": "lichess10000-m07-nodes512-r0", "seconds": 0.8119999999998981, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895721.1015644, "stage": "fixed_nodes", "key": "lichess10000-m08-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895721.5556228, "stage": "fixed_nodes", "key": "lichess10000-m08-nodes512-r0", "seconds": 0.45299999999997453, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895721.5556228, "stage": "fixed_nodes", "key": "lichess10000-m09-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895722.4159625, "stage": "fixed_nodes", "key": "lichess10000-m09-nodes512-r0", "seconds": 0.8600000000001273, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895722.4159625, "stage": "fixed_nodes", "key": "lichess10000-m10-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895722.8531475, "stage": "fixed_nodes", "key": "lichess10000-m10-nodes512-r0", "seconds": 0.43699999999989814, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895722.868771, "stage": "fixed_nodes", "key": "lichess10000-m11-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895723.7282088, "stage": "fixed_nodes", "key": "lichess10000-m11-nodes512-r0", "seconds": 0.8589999999999236, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895723.7282088, "stage": "fixed_nodes", "key": "lichess10000-m12-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895724.2131963, "stage": "fixed_nodes", "key": "lichess10000-m12-nodes512-r0", "seconds": 0.4839999999999236, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792895724.2131963, "stage": "fixed_nodes", "key": "lichess10000-m13-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895725.0728192, "stage": "fixed_nodes", "key": "lichess10000-m13-nodes512-r0", "seconds": 0.8600000000001273, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895725.0728192, "stage": "fixed_nodes", "key": "lichess10000-m14-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895725.5417175, "stage": "fixed_nodes", "key": "lichess10000-m14-nodes512-r0", "seconds": 0.46900000000005093, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792895725.5417175, "stage": "fixed_nodes", "key": "lichess10000-m15-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895726.3699293, "stage": "fixed_nodes", "key": "lichess10000-m15-nodes512-r0", "seconds": 0.8279999999999745, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895726.3699293, "stage": "fixed_nodes", "key": "lichess10000-m16-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895726.9173474, "stage": "fixed_nodes", "key": "lichess10000-m16-nodes512-r0", "seconds": 0.5470000000000255, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895726.932972, "stage": "fixed_nodes", "key": "lichess10000-m17-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895727.5741107, "stage": "fixed_nodes", "key": "lichess10000-m17-nodes512-r0", "seconds": 0.6410000000000764, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895727.5741107, "stage": "fixed_nodes", "key": "lichess10000-m18-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895728.1366253, "stage": "fixed_nodes", "key": "lichess10000-m18-nodes512-r0", "seconds": 0.5619999999998981, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895728.1366253, "stage": "fixed_nodes", "key": "lichess10000-m19-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895728.7788658, "stage": "fixed_nodes", "key": "lichess10000-m19-nodes512-r0", "seconds": 0.6410000000000764, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895728.7788658, "stage": "fixed_nodes", "key": "lichess10000-m20-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895729.3904378, "stage": "fixed_nodes", "key": "lichess10000-m20-nodes512-r0", "seconds": 0.6089999999999236, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895729.4060588, "stage": "fixed_nodes", "key": "lichess10000-m21-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895730.3751097, "stage": "fixed_nodes", "key": "lichess10000-m21-nodes512-r0", "seconds": 0.9690000000000509, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895730.3751097, "stage": "fixed_nodes", "key": "lichess10000-m22-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895731.0004494, "stage": "fixed_nodes", "key": "lichess10000-m22-nodes512-r0", "seconds": 0.625, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895731.0004494, "stage": "fixed_nodes", "key": "lichess10000-m23-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895731.9693277, "stage": "fixed_nodes", "key": "lichess10000-m23-nodes512-r0", "seconds": 0.9679999999998472, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895731.9849496, "stage": "fixed_nodes", "key": "lichess10000-m24-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895732.5637083, "stage": "fixed_nodes", "key": "lichess10000-m24-nodes512-r0", "seconds": 0.5779999999999745, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895732.579336, "stage": "fixed_nodes", "key": "lichess10000-m25-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895733.580183, "stage": "fixed_nodes", "key": "lichess10000-m25-nodes512-r0", "seconds": 1.0, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895733.580183, "stage": "fixed_nodes", "key": "lichess10000-m26-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895734.1584458, "stage": "fixed_nodes", "key": "lichess10000-m26-nodes512-r0", "seconds": 0.5779999999999745, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895734.1584458, "stage": "fixed_nodes", "key": "lichess10000-m27-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895735.1759007, "stage": "fixed_nodes", "key": "lichess10000-m27-nodes512-r0", "seconds": 1.0160000000000764, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895735.1759007, "stage": "fixed_nodes", "key": "lichess10000-m28-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895735.770179, "stage": "fixed_nodes", "key": "lichess10000-m28-nodes512-r0", "seconds": 0.5929999999998472, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792895735.7858067, "stage": "fixed_nodes", "key": "lichess10000-m29-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895736.7861266, "stage": "fixed_nodes", "key": "lichess10000-m29-nodes512-r0", "seconds": 1.0, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895736.801756, "stage": "fixed_nodes", "key": "lichess10000-m30-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895737.3981242, "stage": "fixed_nodes", "key": "lichess10000-m30-nodes512-r0", "seconds": 0.6089999999999236, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792895737.4127655, "stage": "fixed_nodes", "key": "lichess10000-m31-nodes512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895738.381627, "stage": "fixed_nodes", "key": "lichess10000-m31-nodes512-r0", "seconds": 0.9839999999999236, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895738.381627, "stage": "fixed_nn", "key": "zero128-m00-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895738.7880301, "stage": "fixed_nn", "key": "zero128-m00-nn512-r0", "seconds": 0.4070000000001528, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895738.8036556, "stage": "fixed_nn", "key": "zero128-m01-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895739.2114687, "stage": "fixed_nn", "key": "zero128-m01-nn512-r0", "seconds": 0.40599999999994907, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895739.2114687, "stage": "fixed_nn", "key": "zero128-m02-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895739.633936, "stage": "fixed_nn", "key": "zero128-m02-nn512-r0", "seconds": 0.42200000000002547, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895739.633936, "stage": "fixed_nn", "key": "zero128-m03-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895740.040224, "stage": "fixed_nn", "key": "zero128-m03-nn512-r0", "seconds": 0.4070000000001528, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895740.0558484, "stage": "fixed_nn", "key": "zero128-m04-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895740.4318533, "stage": "fixed_nn", "key": "zero128-m04-nn512-r0", "seconds": 0.375, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895740.4318533, "stage": "fixed_nn", "key": "zero128-m05-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895740.8539314, "stage": "fixed_nn", "key": "zero128-m05-nn512-r0", "seconds": 0.42200000000002547, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895740.8539314, "stage": "fixed_nn", "key": "zero128-m06-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895741.260223, "stage": "fixed_nn", "key": "zero128-m06-nn512-r0", "seconds": 0.40599999999994907, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895741.260223, "stage": "fixed_nn", "key": "zero128-m07-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895741.682104, "stage": "fixed_nn", "key": "zero128-m07-nn512-r0", "seconds": 0.42200000000002547, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895741.682104, "stage": "fixed_nn", "key": "zero128-m08-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895742.0571864, "stage": "fixed_nn", "key": "zero128-m08-nn512-r0", "seconds": 0.375, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895742.0571864, "stage": "fixed_nn", "key": "zero128-m09-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895742.4795642, "stage": "fixed_nn", "key": "zero128-m09-nn512-r0", "seconds": 0.42200000000002547, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895742.4795642, "stage": "fixed_nn", "key": "zero128-m10-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895742.8548348, "stage": "fixed_nn", "key": "zero128-m10-nn512-r0", "seconds": 0.375, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895742.8548348, "stage": "fixed_nn", "key": "zero128-m11-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895743.2772317, "stage": "fixed_nn", "key": "zero128-m11-nn512-r0", "seconds": 0.42200000000002547, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895743.2772317, "stage": "fixed_nn", "key": "zero128-m12-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895743.6522322, "stage": "fixed_nn", "key": "zero128-m12-nn512-r0", "seconds": 0.375, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895743.6678617, "stage": "fixed_nn", "key": "zero128-m13-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895744.0741668, "stage": "fixed_nn", "key": "zero128-m13-nn512-r0", "seconds": 0.40599999999994907, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895744.0897954, "stage": "fixed_nn", "key": "zero128-m14-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895744.4658368, "stage": "fixed_nn", "key": "zero128-m14-nn512-r0", "seconds": 0.375, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895744.4658368, "stage": "fixed_nn", "key": "zero128-m15-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895744.8878238, "stage": "fixed_nn", "key": "zero128-m15-nn512-r0", "seconds": 0.42200000000002547, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895744.8878238, "stage": "fixed_nn", "key": "zero128-m16-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895745.4817212, "stage": "fixed_nn", "key": "zero128-m16-nn512-r0", "seconds": 0.5940000000000509, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895745.4817212, "stage": "fixed_nn", "key": "zero128-m17-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895746.028762, "stage": "fixed_nn", "key": "zero128-m17-nn512-r0", "seconds": 0.5470000000000255, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895746.028762, "stage": "fixed_nn", "key": "zero128-m18-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895746.622563, "stage": "fixed_nn", "key": "zero128-m18-nn512-r0", "seconds": 0.5779999999999745, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895746.6381924, "stage": "fixed_nn", "key": "zero128-m19-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895747.185392, "stage": "fixed_nn", "key": "zero128-m19-nn512-r0", "seconds": 0.5470000000000255, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895747.185392, "stage": "fixed_nn", "key": "zero128-m20-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895747.702496, "stage": "fixed_nn", "key": "zero128-m20-nn512-r0", "seconds": 0.5160000000000764, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895747.718119, "stage": "fixed_nn", "key": "zero128-m21-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895748.265174, "stage": "fixed_nn", "key": "zero128-m21-nn512-r0", "seconds": 0.5470000000000255, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895748.2808, "stage": "fixed_nn", "key": "zero128-m22-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895748.797157, "stage": "fixed_nn", "key": "zero128-m22-nn512-r0", "seconds": 0.5160000000000764, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895748.797157, "stage": "fixed_nn", "key": "zero128-m23-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895749.3616931, "stage": "fixed_nn", "key": "zero128-m23-nn512-r0", "seconds": 0.5619999999998981, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895749.3616931, "stage": "fixed_nn", "key": "zero128-m24-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895749.8618279, "stage": "fixed_nn", "key": "zero128-m24-nn512-r0", "seconds": 0.5, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792895749.8618279, "stage": "fixed_nn", "key": "zero128-m25-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895750.4239588, "stage": "fixed_nn", "key": "zero128-m25-nn512-r0", "seconds": 0.5630000000001019, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895750.4239588, "stage": "fixed_nn", "key": "zero128-m26-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895750.9242344, "stage": "fixed_nn", "key": "zero128-m26-nn512-r0", "seconds": 0.5, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895750.9242344, "stage": "fixed_nn", "key": "zero128-m27-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895751.487665, "stage": "fixed_nn", "key": "zero128-m27-nn512-r0", "seconds": 0.5619999999998981, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895751.487665, "stage": "fixed_nn", "key": "zero128-m28-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895752.0034428, "stage": "fixed_nn", "key": "zero128-m28-nn512-r0", "seconds": 0.5160000000000764, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792895752.0034428, "stage": "fixed_nn", "key": "zero128-m29-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895752.5678232, "stage": "fixed_nn", "key": "zero128-m29-nn512-r0", "seconds": 0.5619999999998981, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895752.5678232, "stage": "fixed_nn", "key": "zero128-m30-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895753.0845497, "stage": "fixed_nn", "key": "zero128-m30-nn512-r0", "seconds": 0.5160000000000764, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895753.1001763, "stage": "fixed_nn", "key": "zero128-m31-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895753.6479852, "stage": "fixed_nn", "key": "zero128-m31-nn512-r0", "seconds": 0.5630000000001019, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895753.6636157, "stage": "fixed_nn", "key": "lichess100-m00-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895754.0700588, "stage": "fixed_nn", "key": "lichess100-m00-nn512-r0", "seconds": 0.40599999999994907, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895754.0856876, "stage": "fixed_nn", "key": "lichess100-m01-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895754.4934762, "stage": "fixed_nn", "key": "lichess100-m01-nn512-r0", "seconds": 0.4070000000001528, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895754.4934762, "stage": "fixed_nn", "key": "lichess100-m02-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895754.8999038, "stage": "fixed_nn", "key": "lichess100-m02-nn512-r0", "seconds": 0.40599999999994907, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895754.9155333, "stage": "fixed_nn", "key": "lichess100-m03-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895755.322788, "stage": "fixed_nn", "key": "lichess100-m03-nn512-r0", "seconds": 0.40599999999994907, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895755.3384192, "stage": "fixed_nn", "key": "lichess100-m04-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895755.7290397, "stage": "fixed_nn", "key": "lichess100-m04-nn512-r0", "seconds": 0.3910000000000764, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792895755.7290397, "stage": "fixed_nn", "key": "lichess100-m05-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895756.1352944, "stage": "fixed_nn", "key": "lichess100-m05-nn512-r0", "seconds": 0.40599999999994907, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895756.1509202, "stage": "fixed_nn", "key": "lichess100-m06-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895756.541624, "stage": "fixed_nn", "key": "lichess100-m06-nn512-r0", "seconds": 0.3910000000000764, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792895756.541624, "stage": "fixed_nn", "key": "lichess100-m07-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895756.964017, "stage": "fixed_nn", "key": "lichess100-m07-nn512-r0", "seconds": 0.42099999999982174, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895756.964017, "stage": "fixed_nn", "key": "lichess100-m08-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895757.3399196, "stage": "fixed_nn", "key": "lichess100-m08-nn512-r0", "seconds": 0.375, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895757.3399196, "stage": "fixed_nn", "key": "lichess100-m09-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895757.7471356, "stage": "fixed_nn", "key": "lichess100-m09-nn512-r0", "seconds": 0.4070000000001528, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895757.7471356, "stage": "fixed_nn", "key": "lichess100-m10-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895758.1221921, "stage": "fixed_nn", "key": "lichess100-m10-nn512-r0", "seconds": 0.375, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895758.1221921, "stage": "fixed_nn", "key": "lichess100-m11-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895758.5445373, "stage": "fixed_nn", "key": "lichess100-m11-nn512-r0", "seconds": 0.42200000000002547, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895758.5445373, "stage": "fixed_nn", "key": "lichess100-m12-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895758.9360678, "stage": "fixed_nn", "key": "lichess100-m12-nn512-r0", "seconds": 0.38999999999987267, "hits": 14}
+{"event": "cell_start", "utc_epoch": 1792895758.9360678, "stage": "fixed_nn", "key": "lichess100-m13-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895759.344416, "stage": "fixed_nn", "key": "lichess100-m13-nn512-r0", "seconds": 0.40599999999994907, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895759.3599386, "stage": "fixed_nn", "key": "lichess100-m14-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895759.734969, "stage": "fixed_nn", "key": "lichess100-m14-nn512-r0", "seconds": 0.375, "hits": 14}
+{"event": "cell_start", "utc_epoch": 1792895759.750598, "stage": "fixed_nn", "key": "lichess100-m15-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895760.172523, "stage": "fixed_nn", "key": "lichess100-m15-nn512-r0", "seconds": 0.42200000000002547, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895760.172523, "stage": "fixed_nn", "key": "lichess100-m16-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895760.7513833, "stage": "fixed_nn", "key": "lichess100-m16-nn512-r0", "seconds": 0.5779999999999745, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895760.7513833, "stage": "fixed_nn", "key": "lichess100-m17-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895761.2836392, "stage": "fixed_nn", "key": "lichess100-m17-nn512-r0", "seconds": 0.5309999999999491, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895761.2836392, "stage": "fixed_nn", "key": "lichess100-m18-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895761.8619287, "stage": "fixed_nn", "key": "lichess100-m18-nn512-r0", "seconds": 0.5779999999999745, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895761.8619287, "stage": "fixed_nn", "key": "lichess100-m19-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895762.4003515, "stage": "fixed_nn", "key": "lichess100-m19-nn512-r0", "seconds": 0.5470000000000255, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895762.4003515, "stage": "fixed_nn", "key": "lichess100-m20-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895762.9096625, "stage": "fixed_nn", "key": "lichess100-m20-nn512-r0", "seconds": 0.5, "hits": 14}
+{"event": "cell_start", "utc_epoch": 1792895762.9096625, "stage": "fixed_nn", "key": "lichess100-m21-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895763.4569788, "stage": "fixed_nn", "key": "lichess100-m21-nn512-r0", "seconds": 0.5470000000000255, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895763.4725142, "stage": "fixed_nn", "key": "lichess100-m22-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895763.9882784, "stage": "fixed_nn", "key": "lichess100-m22-nn512-r0", "seconds": 0.5160000000000764, "hits": 14}
+{"event": "cell_start", "utc_epoch": 1792895763.9882784, "stage": "fixed_nn", "key": "lichess100-m23-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895764.53617, "stage": "fixed_nn", "key": "lichess100-m23-nn512-r0", "seconds": 0.5470000000000255, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895764.53617, "stage": "fixed_nn", "key": "lichess100-m24-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895765.0207336, "stage": "fixed_nn", "key": "lichess100-m24-nn512-r0", "seconds": 0.4839999999999236, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895765.03636, "stage": "fixed_nn", "key": "lichess100-m25-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895765.5842972, "stage": "fixed_nn", "key": "lichess100-m25-nn512-r0", "seconds": 0.5470000000000255, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895765.5842972, "stage": "fixed_nn", "key": "lichess100-m26-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895766.0687454, "stage": "fixed_nn", "key": "lichess100-m26-nn512-r0", "seconds": 0.4839999999999236, "hits": 12}
+{"event": "cell_start", "utc_epoch": 1792895766.0843756, "stage": "fixed_nn", "key": "lichess100-m27-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895766.6161122, "stage": "fixed_nn", "key": "lichess100-m27-nn512-r0", "seconds": 0.5470000000000255, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895766.6161122, "stage": "fixed_nn", "key": "lichess100-m28-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895767.1162636, "stage": "fixed_nn", "key": "lichess100-m28-nn512-r0", "seconds": 0.5, "hits": 15}
+{"event": "cell_start", "utc_epoch": 1792895767.1162636, "stage": "fixed_nn", "key": "lichess100-m29-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895767.6640816, "stage": "fixed_nn", "key": "lichess100-m29-nn512-r0", "seconds": 0.5320000000001528, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895767.6640816, "stage": "fixed_nn", "key": "lichess100-m30-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895768.179884, "stage": "fixed_nn", "key": "lichess100-m30-nn512-r0", "seconds": 0.5149999999998727, "hits": 15}
+{"event": "cell_start", "utc_epoch": 1792895768.179884, "stage": "fixed_nn", "key": "lichess100-m31-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895768.7123272, "stage": "fixed_nn", "key": "lichess100-m31-nn512-r0", "seconds": 0.5309999999999491, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895768.7123272, "stage": "fixed_nn", "key": "lichess1000-m00-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895769.1348367, "stage": "fixed_nn", "key": "lichess1000-m00-nn512-r0", "seconds": 0.42200000000002547, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895769.1348367, "stage": "fixed_nn", "key": "lichess1000-m01-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895769.5416818, "stage": "fixed_nn", "key": "lichess1000-m01-nn512-r0", "seconds": 0.4070000000001528, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895769.5416818, "stage": "fixed_nn", "key": "lichess1000-m02-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895769.9636178, "stage": "fixed_nn", "key": "lichess1000-m02-nn512-r0", "seconds": 0.42099999999982174, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895769.9636178, "stage": "fixed_nn", "key": "lichess1000-m03-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895770.385106, "stage": "fixed_nn", "key": "lichess1000-m03-nn512-r0", "seconds": 0.42200000000002547, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895770.385106, "stage": "fixed_nn", "key": "lichess1000-m04-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895770.7602372, "stage": "fixed_nn", "key": "lichess1000-m04-nn512-r0", "seconds": 0.375, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895770.7758641, "stage": "fixed_nn", "key": "lichess1000-m05-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895771.1826148, "stage": "fixed_nn", "key": "lichess1000-m05-nn512-r0", "seconds": 0.40599999999994907, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895771.1982396, "stage": "fixed_nn", "key": "lichess1000-m06-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895771.5889208, "stage": "fixed_nn", "key": "lichess1000-m06-nn512-r0", "seconds": 0.38999999999987267, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895771.5889208, "stage": "fixed_nn", "key": "lichess1000-m07-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895772.010918, "stage": "fixed_nn", "key": "lichess1000-m07-nn512-r0", "seconds": 0.42200000000002547, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895772.010918, "stage": "fixed_nn", "key": "lichess1000-m08-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895772.3860033, "stage": "fixed_nn", "key": "lichess1000-m08-nn512-r0", "seconds": 0.375, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895772.3860033, "stage": "fixed_nn", "key": "lichess1000-m09-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895772.807586, "stage": "fixed_nn", "key": "lichess1000-m09-nn512-r0", "seconds": 0.42200000000002547, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895772.807586, "stage": "fixed_nn", "key": "lichess1000-m10-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895773.1826754, "stage": "fixed_nn", "key": "lichess1000-m10-nn512-r0", "seconds": 0.375, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895773.1826754, "stage": "fixed_nn", "key": "lichess1000-m11-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895773.6055107, "stage": "fixed_nn", "key": "lichess1000-m11-nn512-r0", "seconds": 0.42200000000002547, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895773.6055107, "stage": "fixed_nn", "key": "lichess1000-m12-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895773.9805837, "stage": "fixed_nn", "key": "lichess1000-m12-nn512-r0", "seconds": 0.375, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895773.9962113, "stage": "fixed_nn", "key": "lichess1000-m13-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895774.4186888, "stage": "fixed_nn", "key": "lichess1000-m13-nn512-r0", "seconds": 0.42200000000002547, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895774.4186888, "stage": "fixed_nn", "key": "lichess1000-m14-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895774.8093657, "stage": "fixed_nn", "key": "lichess1000-m14-nn512-r0", "seconds": 0.38999999999987267, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895774.8093657, "stage": "fixed_nn", "key": "lichess1000-m15-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895775.2323117, "stage": "fixed_nn", "key": "lichess1000-m15-nn512-r0", "seconds": 0.42200000000002547, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895775.2323117, "stage": "fixed_nn", "key": "lichess1000-m16-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895775.7957225, "stage": "fixed_nn", "key": "lichess1000-m16-nn512-r0", "seconds": 0.5630000000001019, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895775.7957225, "stage": "fixed_nn", "key": "lichess1000-m17-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895776.3271482, "stage": "fixed_nn", "key": "lichess1000-m17-nn512-r0", "seconds": 0.5309999999999491, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895776.3271482, "stage": "fixed_nn", "key": "lichess1000-m18-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895776.9056315, "stage": "fixed_nn", "key": "lichess1000-m18-nn512-r0", "seconds": 0.5779999999999745, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895776.9056315, "stage": "fixed_nn", "key": "lichess1000-m19-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895777.4546068, "stage": "fixed_nn", "key": "lichess1000-m19-nn512-r0", "seconds": 0.5470000000000255, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895777.4701676, "stage": "fixed_nn", "key": "lichess1000-m20-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895777.9547124, "stage": "fixed_nn", "key": "lichess1000-m20-nn512-r0", "seconds": 0.48500000000012733, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895777.9703383, "stage": "fixed_nn", "key": "lichess1000-m21-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895778.5016534, "stage": "fixed_nn", "key": "lichess1000-m21-nn512-r0", "seconds": 0.5320000000001528, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895778.5016534, "stage": "fixed_nn", "key": "lichess1000-m22-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895779.0021486, "stage": "fixed_nn", "key": "lichess1000-m22-nn512-r0", "seconds": 0.5, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895779.0177815, "stage": "fixed_nn", "key": "lichess1000-m23-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895779.5511265, "stage": "fixed_nn", "key": "lichess1000-m23-nn512-r0", "seconds": 0.5320000000001528, "hits": 8}
+{"event": "cell_start", "utc_epoch": 1792895779.5667512, "stage": "fixed_nn", "key": "lichess1000-m24-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895780.0512938, "stage": "fixed_nn", "key": "lichess1000-m24-nn512-r0", "seconds": 0.48500000000012733, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895780.0512938, "stage": "fixed_nn", "key": "lichess1000-m25-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895780.5983005, "stage": "fixed_nn", "key": "lichess1000-m25-nn512-r0", "seconds": 0.5459999999998217, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895780.5983005, "stage": "fixed_nn", "key": "lichess1000-m26-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895781.0828412, "stage": "fixed_nn", "key": "lichess1000-m26-nn512-r0", "seconds": 0.48500000000012733, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895781.0828412, "stage": "fixed_nn", "key": "lichess1000-m27-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895781.6302474, "stage": "fixed_nn", "key": "lichess1000-m27-nn512-r0", "seconds": 0.5470000000000255, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895781.6302474, "stage": "fixed_nn", "key": "lichess1000-m28-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895782.1459794, "stage": "fixed_nn", "key": "lichess1000-m28-nn512-r0", "seconds": 0.5149999999998727, "hits": 11}
+{"event": "cell_start", "utc_epoch": 1792895782.1459794, "stage": "fixed_nn", "key": "lichess1000-m29-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895782.6888373, "stage": "fixed_nn", "key": "lichess1000-m29-nn512-r0", "seconds": 0.5470000000000255, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895782.6888373, "stage": "fixed_nn", "key": "lichess1000-m30-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895783.1938484, "stage": "fixed_nn", "key": "lichess1000-m30-nn512-r0", "seconds": 0.5, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895783.1938484, "stage": "fixed_nn", "key": "lichess1000-m31-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895783.7407787, "stage": "fixed_nn", "key": "lichess1000-m31-nn512-r0", "seconds": 0.5470000000000255, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895783.7407787, "stage": "fixed_nn", "key": "lichess10000-m00-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895784.1783645, "stage": "fixed_nn", "key": "lichess10000-m00-nn512-r0", "seconds": 0.43800000000010186, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895784.1783645, "stage": "fixed_nn", "key": "lichess10000-m01-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895784.6022043, "stage": "fixed_nn", "key": "lichess10000-m01-nn512-r0", "seconds": 0.43699999999989814, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895784.6022043, "stage": "fixed_nn", "key": "lichess10000-m02-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895785.0400906, "stage": "fixed_nn", "key": "lichess10000-m02-nn512-r0", "seconds": 0.43800000000010186, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895785.0400906, "stage": "fixed_nn", "key": "lichess10000-m03-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895785.4626305, "stage": "fixed_nn", "key": "lichess10000-m03-nn512-r0", "seconds": 0.42099999999982174, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895785.4626305, "stage": "fixed_nn", "key": "lichess10000-m04-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895785.868914, "stage": "fixed_nn", "key": "lichess10000-m04-nn512-r0", "seconds": 0.4070000000001528, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895785.868914, "stage": "fixed_nn", "key": "lichess10000-m05-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895786.291712, "stage": "fixed_nn", "key": "lichess10000-m05-nn512-r0", "seconds": 0.42200000000002547, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895786.291712, "stage": "fixed_nn", "key": "lichess10000-m06-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895786.6980102, "stage": "fixed_nn", "key": "lichess10000-m06-nn512-r0", "seconds": 0.40599999999994907, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895786.6980102, "stage": "fixed_nn", "key": "lichess10000-m07-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895787.1200268, "stage": "fixed_nn", "key": "lichess10000-m07-nn512-r0", "seconds": 0.42200000000002547, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895787.135657, "stage": "fixed_nn", "key": "lichess10000-m08-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895787.5172176, "stage": "fixed_nn", "key": "lichess10000-m08-nn512-r0", "seconds": 0.375, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895787.5172176, "stage": "fixed_nn", "key": "lichess10000-m09-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895787.9344459, "stage": "fixed_nn", "key": "lichess10000-m09-nn512-r0", "seconds": 0.42200000000002547, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895787.9344459, "stage": "fixed_nn", "key": "lichess10000-m10-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895788.32561, "stage": "fixed_nn", "key": "lichess10000-m10-nn512-r0", "seconds": 0.3910000000000764, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895788.32561, "stage": "fixed_nn", "key": "lichess10000-m11-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895788.748479, "stage": "fixed_nn", "key": "lichess10000-m11-nn512-r0", "seconds": 0.42200000000002547, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895788.7641072, "stage": "fixed_nn", "key": "lichess10000-m12-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895789.1552193, "stage": "fixed_nn", "key": "lichess10000-m12-nn512-r0", "seconds": 0.3910000000000764, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792895789.1552193, "stage": "fixed_nn", "key": "lichess10000-m13-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895789.5790062, "stage": "fixed_nn", "key": "lichess10000-m13-nn512-r0", "seconds": 0.42200000000002547, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895789.5946338, "stage": "fixed_nn", "key": "lichess10000-m14-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895789.9853191, "stage": "fixed_nn", "key": "lichess10000-m14-nn512-r0", "seconds": 0.3910000000000764, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792895789.9853191, "stage": "fixed_nn", "key": "lichess10000-m15-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895790.422922, "stage": "fixed_nn", "key": "lichess10000-m15-nn512-r0", "seconds": 0.43800000000010186, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895790.422922, "stage": "fixed_nn", "key": "lichess10000-m16-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895791.001266, "stage": "fixed_nn", "key": "lichess10000-m16-nn512-r0", "seconds": 0.5779999999999745, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895791.001266, "stage": "fixed_nn", "key": "lichess10000-m17-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895791.548689, "stage": "fixed_nn", "key": "lichess10000-m17-nn512-r0", "seconds": 0.5470000000000255, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895791.548689, "stage": "fixed_nn", "key": "lichess10000-m18-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895792.126872, "stage": "fixed_nn", "key": "lichess10000-m18-nn512-r0", "seconds": 0.5779999999999745, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895792.126872, "stage": "fixed_nn", "key": "lichess10000-m19-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895792.6591864, "stage": "fixed_nn", "key": "lichess10000-m19-nn512-r0", "seconds": 0.5309999999999491, "hits": 5}
+{"event": "cell_start", "utc_epoch": 1792895792.6748295, "stage": "fixed_nn", "key": "lichess10000-m20-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895793.1905887, "stage": "fixed_nn", "key": "lichess10000-m20-nn512-r0", "seconds": 0.5149999999998727, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895793.2062151, "stage": "fixed_nn", "key": "lichess10000-m21-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895793.753722, "stage": "fixed_nn", "key": "lichess10000-m21-nn512-r0", "seconds": 0.5470000000000255, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895793.753722, "stage": "fixed_nn", "key": "lichess10000-m22-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895794.2852066, "stage": "fixed_nn", "key": "lichess10000-m22-nn512-r0", "seconds": 0.5309999999999491, "hits": 9}
+{"event": "cell_start", "utc_epoch": 1792895794.2852066, "stage": "fixed_nn", "key": "lichess10000-m23-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895794.8340797, "stage": "fixed_nn", "key": "lichess10000-m23-nn512-r0", "seconds": 0.5470000000000255, "hits": 6}
+{"event": "cell_start", "utc_epoch": 1792895794.8340797, "stage": "fixed_nn", "key": "lichess10000-m24-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895795.3504732, "stage": "fixed_nn", "key": "lichess10000-m24-nn512-r0", "seconds": 0.5149999999998727, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895795.3504732, "stage": "fixed_nn", "key": "lichess10000-m25-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895795.913525, "stage": "fixed_nn", "key": "lichess10000-m25-nn512-r0", "seconds": 0.5790000000001783, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895795.913525, "stage": "fixed_nn", "key": "lichess10000-m26-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895796.4301271, "stage": "fixed_nn", "key": "lichess10000-m26-nn512-r0", "seconds": 0.5149999999998727, "hits": 10}
+{"event": "cell_start", "utc_epoch": 1792895796.44575, "stage": "fixed_nn", "key": "lichess10000-m27-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895796.9931178, "stage": "fixed_nn", "key": "lichess10000-m27-nn512-r0", "seconds": 0.5470000000000255, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895796.9931178, "stage": "fixed_nn", "key": "lichess10000-m28-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895797.5102572, "stage": "fixed_nn", "key": "lichess10000-m28-nn512-r0", "seconds": 0.5149999999998727, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792895797.5102572, "stage": "fixed_nn", "key": "lichess10000-m29-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895798.0573192, "stage": "fixed_nn", "key": "lichess10000-m29-nn512-r0", "seconds": 0.5470000000000255, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895798.0573192, "stage": "fixed_nn", "key": "lichess10000-m30-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895798.573018, "stage": "fixed_nn", "key": "lichess10000-m30-nn512-r0", "seconds": 0.5160000000000764, "hits": 13}
+{"event": "cell_start", "utc_epoch": 1792895798.5886436, "stage": "fixed_nn", "key": "lichess10000-m31-nn512-r0", "remaining": 24}
+{"event": "cell_complete", "utc_epoch": 1792895799.1361368, "stage": "fixed_nn", "key": "lichess10000-m31-nn512-r0", "seconds": 0.5470000000000255, "hits": 7}
+{"event": "cell_start", "utc_epoch": 1792895799.1361368, "stage": "holdout", "key": "zero128-m00-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792895819.7105885, "stage": "holdout", "key": "zero128-m00-time100-r0", "seconds": 20.577999999999975, "hits": 48}
+{"event": "cell_start", "utc_epoch": 1792895819.7262137, "stage": "holdout", "key": "zero128-m01-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792895835.9530368, "stage": "holdout", "key": "zero128-m01-time100-r0", "seconds": 16.21900000000005, "hits": 50}
+{"event": "cell_start", "utc_epoch": 1792895835.9530368, "stage": "holdout", "key": "zero128-m04-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792895851.8851147, "stage": "holdout", "key": "zero128-m04-time100-r0", "seconds": 15.936999999999898, "hits": 104}
+{"event": "cell_start", "utc_epoch": 1792895851.8931465, "stage": "holdout", "key": "zero128-m05-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792895870.1526737, "stage": "holdout", "key": "zero128-m05-time100-r0", "seconds": 18.266000000000076, "hits": 87}
+{"event": "cell_start", "utc_epoch": 1792895870.1682942, "stage": "holdout", "key": "zero128-m14-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792895885.7271717, "stage": "holdout", "key": "zero128-m14-time100-r0", "seconds": 15.561999999999898, "hits": 130}
+{"event": "cell_start", "utc_epoch": 1792895885.7271717, "stage": "holdout", "key": "zero128-m15-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792895903.9404373, "stage": "holdout", "key": "zero128-m15-time100-r0", "seconds": 18.202999999999975, "hits": 96}
+{"event": "cell_start", "utc_epoch": 1792895903.9404373, "stage": "holdout", "key": "lichess100-m00-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792895924.552574, "stage": "holdout", "key": "lichess100-m00-time100-r0", "seconds": 20.59400000000005, "hits": 59}
+{"event": "cell_start", "utc_epoch": 1792895924.552574, "stage": "holdout", "key": "lichess100-m01-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792895940.8067777, "stage": "holdout", "key": "lichess100-m01-time100-r0", "seconds": 16.264999999999873, "hits": 52}
+{"event": "cell_start", "utc_epoch": 1792895940.8067777, "stage": "holdout", "key": "lichess100-m04-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792895956.8734446, "stage": "holdout", "key": "lichess100-m04-time100-r0", "seconds": 16.063000000000102, "hits": 98}
+{"event": "cell_start", "utc_epoch": 1792895956.8734446, "stage": "holdout", "key": "lichess100-m05-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792895975.2222617, "stage": "holdout", "key": "lichess100-m05-time100-r0", "seconds": 18.342999999999847, "hits": 87}
+{"event": "cell_start", "utc_epoch": 1792895975.2222617, "stage": "holdout", "key": "lichess100-m12-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792895991.1487043, "stage": "holdout", "key": "lichess100-m12-time100-r0", "seconds": 15.938000000000102, "hits": 126}
+{"event": "cell_start", "utc_epoch": 1792895991.1487043, "stage": "holdout", "key": "lichess100-m15-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792896009.407509, "stage": "holdout", "key": "lichess100-m15-time100-r0", "seconds": 18.25, "hits": 90}
+{"event": "cell_start", "utc_epoch": 1792896009.407509, "stage": "holdout", "key": "lichess1000-m00-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792896029.9464436, "stage": "holdout", "key": "lichess1000-m00-time100-r0", "seconds": 20.547000000000025, "hits": 70}
+{"event": "cell_start", "utc_epoch": 1792896029.9620647, "stage": "holdout", "key": "lichess1000-m01-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792896046.1064062, "stage": "holdout", "key": "lichess1000-m01-time100-r0", "seconds": 16.141000000000076, "hits": 67}
+{"event": "cell_start", "utc_epoch": 1792896046.1064062, "stage": "holdout", "key": "lichess1000-m04-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792896062.045384, "stage": "holdout", "key": "lichess1000-m04-time100-r0", "seconds": 15.938000000000102, "hits": 111}
+{"event": "cell_start", "utc_epoch": 1792896062.045384, "stage": "holdout", "key": "lichess1000-m05-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792896080.3152022, "stage": "holdout", "key": "lichess1000-m05-time100-r0", "seconds": 18.264999999999873, "hits": 100}
+{"event": "cell_start", "utc_epoch": 1792896080.3152022, "stage": "holdout", "key": "lichess1000-m14-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792896096.2287295, "stage": "holdout", "key": "lichess1000-m14-time100-r0", "seconds": 15.922000000000025, "hits": 136}
+{"event": "cell_start", "utc_epoch": 1792896096.2287295, "stage": "holdout", "key": "lichess1000-m15-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792896114.5146418, "stage": "holdout", "key": "lichess1000-m15-time100-r0", "seconds": 18.28099999999995, "hits": 101}
+{"event": "cell_start", "utc_epoch": 1792896114.5146418, "stage": "holdout", "key": "lichess10000-m00-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792896135.052462, "stage": "holdout", "key": "lichess10000-m00-time100-r0", "seconds": 20.532000000000153, "hits": 90}
+{"event": "cell_start", "utc_epoch": 1792896135.052462, "stage": "holdout", "key": "lichess10000-m01-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792896151.1805816, "stage": "holdout", "key": "lichess10000-m01-time100-r0", "seconds": 16.139999999999873, "hits": 83}
+{"event": "cell_start", "utc_epoch": 1792896151.1962097, "stage": "holdout", "key": "lichess10000-m04-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792896167.1983726, "stage": "holdout", "key": "lichess10000-m04-time100-r0", "seconds": 16.0, "hits": 104}
+{"event": "cell_start", "utc_epoch": 1792896167.1983726, "stage": "holdout", "key": "lichess10000-m05-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792896185.4366932, "stage": "holdout", "key": "lichess10000-m05-time100-r0", "seconds": 18.233999999999924, "hits": 98}
+{"event": "cell_start", "utc_epoch": 1792896185.4366932, "stage": "holdout", "key": "lichess10000-m12-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792896201.3617244, "stage": "holdout", "key": "lichess10000-m12-time100-r0", "seconds": 15.922000000000025, "hits": 127}
+{"event": "cell_start", "utc_epoch": 1792896201.3617244, "stage": "holdout", "key": "lichess10000-m15-time100-r0", "remaining": 200}
+{"event": "cell_complete", "utc_epoch": 1792896219.5897727, "stage": "holdout", "key": "lichess10000-m15-time100-r0", "seconds": 18.233999999999924, "hits": 106}
+{"event": "match_complete", "utc_epoch": 1792896223.54763, "model": "zero128", "mask": 14, "pair": 0, "color": true, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896233.2165997, "model": "zero128", "mask": 14, "pair": 0, "color": false, "result": "0-1"}
+{"event": "match_complete", "utc_epoch": 1792896242.5560315, "model": "zero128", "mask": 14, "pair": 1, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896252.2231116, "model": "zero128", "mask": 14, "pair": 1, "color": false, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896264.1597595, "model": "zero128", "mask": 14, "pair": 2, "color": true, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896272.5163229, "model": "zero128", "mask": 14, "pair": 2, "color": false, "result": "0-1"}
+{"event": "match_complete", "utc_epoch": 1792896279.134547, "model": "zero128", "mask": 14, "pair": 3, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896293.2909093, "model": "zero128", "mask": 14, "pair": 3, "color": false, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896294.6984918, "model": "zero128", "mask": 14, "pair": 4, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896301.9267104, "model": "zero128", "mask": 14, "pair": 4, "color": false, "result": "0-1"}
+{"event": "match_complete", "utc_epoch": 1792896309.5447953, "model": "zero128", "mask": 14, "pair": 5, "color": true, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896323.7175791, "model": "zero128", "mask": 14, "pair": 5, "color": false, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896329.3178864, "model": "zero128", "mask": 14, "pair": 6, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896344.6482599, "model": "zero128", "mask": 14, "pair": 6, "color": false, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896350.874327, "model": "zero128", "mask": 14, "pair": 7, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896355.7063844, "model": "zero128", "mask": 14, "pair": 7, "color": false, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896360.525251, "model": "lichess10000", "mask": 12, "pair": 0, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896369.799644, "model": "lichess10000", "mask": 12, "pair": 0, "color": false, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896388.0847044, "model": "lichess10000", "mask": 12, "pair": 1, "color": true, "result": "*"}
+{"event": "match_complete", "utc_epoch": 1792896400.9269829, "model": "lichess10000", "mask": 12, "pair": 1, "color": false, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896417.8200989, "model": "lichess10000", "mask": 12, "pair": 2, "color": true, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896436.2322955, "model": "lichess10000", "mask": 12, "pair": 2, "color": false, "result": "*"}
+{"event": "match_complete", "utc_epoch": 1792896440.378492, "model": "lichess10000", "mask": 12, "pair": 3, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896446.3024974, "model": "lichess10000", "mask": 12, "pair": 3, "color": false, "result": "0-1"}
+{"event": "match_complete", "utc_epoch": 1792896456.3715498, "model": "lichess10000", "mask": 12, "pair": 4, "color": true, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896464.567374, "model": "lichess10000", "mask": 12, "pair": 4, "color": false, "result": "0-1"}
+{"event": "match_complete", "utc_epoch": 1792896469.4163141, "model": "lichess10000", "mask": 12, "pair": 5, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896483.0454016, "model": "lichess10000", "mask": 12, "pair": 5, "color": false, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896488.850877, "model": "lichess10000", "mask": 12, "pair": 6, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896496.2130046, "model": "lichess10000", "mask": 12, "pair": 6, "color": false, "result": "0-1"}
+{"event": "match_complete", "utc_epoch": 1792896501.1705587, "model": "lichess10000", "mask": 12, "pair": 7, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896504.8004763, "model": "lichess10000", "mask": 12, "pair": 7, "color": false, "result": "0-1"}
+{"event": "match_complete", "utc_epoch": 1792896508.1787794, "model": "zero128", "mask": 15, "pair": 0, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896527.181178, "model": "zero128", "mask": 15, "pair": 0, "color": false, "result": "*"}
+{"event": "match_complete", "utc_epoch": 1792896535.8950846, "model": "zero128", "mask": 15, "pair": 1, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896554.743265, "model": "zero128", "mask": 15, "pair": 1, "color": false, "result": "*"}
+{"event": "match_complete", "utc_epoch": 1792896558.2621253, "model": "zero128", "mask": 15, "pair": 2, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896572.3703349, "model": "zero128", "mask": 15, "pair": 2, "color": false, "result": "0-1"}
+{"event": "match_complete", "utc_epoch": 1792896579.1282792, "model": "zero128", "mask": 15, "pair": 3, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896591.3921971, "model": "zero128", "mask": 15, "pair": 3, "color": false, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896596.3658094, "model": "zero128", "mask": 15, "pair": 4, "color": true, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896601.9356782, "model": "zero128", "mask": 15, "pair": 4, "color": false, "result": "0-1"}
+{"event": "match_complete", "utc_epoch": 1792896604.4069965, "model": "zero128", "mask": 15, "pair": 5, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896623.709343, "model": "zero128", "mask": 15, "pair": 5, "color": false, "result": "*"}
+{"event": "match_complete", "utc_epoch": 1792896626.5566792, "model": "zero128", "mask": 15, "pair": 6, "color": true, "result": "1-0"}
+{"event": "match_complete", "utc_epoch": 1792896638.2915077, "model": "zero128", "mask": 15, "pair": 6, "color": false, "result": "0-1"}
+{"event": "match_complete", "utc_epoch": 1792896655.2753193, "model": "zero128", "mask": 15, "pair": 7, "color": true, "result": "1/2-1/2"}
+{"event": "match_complete", "utc_epoch": 1792896674.4205856, "model": "zero128", "mask": 15, "pair": 7, "color": false, "result": "*"}
+{"event": "pipeline_complete", "utc_epoch": 1792896674.4518833}
