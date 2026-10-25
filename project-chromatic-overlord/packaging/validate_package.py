@@ -6,8 +6,8 @@ import chess
 CHAMPION='f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 class Engine:
-    def __init__(self,exe,cwd):
-        self.p=subprocess.Popen([str(exe)],cwd=cwd,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8',errors='strict')
+    def __init__(self,exe,cwd,basename_argv0=False):
+        self.p=subprocess.Popen([exe.name if basename_argv0 else str(exe)],executable=str(exe),cwd=cwd,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8',errors='strict')
         self.q=queue.Queue();self.thread=threading.Thread(target=self.reader,daemon=True);self.thread.start()
     def reader(self):
         try:
@@ -91,6 +91,10 @@ def main():
     for depth,expected in [(3,8902),(4,197281),(5,4865609)]:
         run=subprocess.run([str(exe),'--perft',str(depth)],cwd=outside,text=True,capture_output=True,check=True,timeout=60);assert int(run.stdout.strip())==expected
         record('perft_'+str(depth),nodes=expected)
+    with Engine(exe,outside,basename_argv0=True) as e:
+        e.send('zero model');loaded=json.loads(e.until(lambda s:s.startswith('{'))[-1])
+        assert loaded['loaded'] and loaded['sha256']==CHAMPION and Path(loaded['path']).resolve()==model
+        record('basename_argv0_GUI_style_model_discovery',loaded=loaded)
     comspec=os.environ.get('COMSPEC',r'C:\Windows\System32\cmd.exe')
     def batch(path,stdin=None):
         command=f'"{comspec}" /d /s /c ""{path}""'

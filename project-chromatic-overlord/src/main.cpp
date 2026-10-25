@@ -1,3 +1,12 @@
+#ifdef _WIN32
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+#include <windows.h>
+#endif
 #include "zero/search.hpp"
 #include "zero/telemetry_json.hpp"
 #include <algorithm>
@@ -25,6 +34,18 @@ std::string inspect(const Board& b,const Network& net,bool evaluation,bool legal
     o<<'}';return o.str();
 }
 std::string result_json(const SearchResult& r){return search_result_json(r);}
+std::filesystem::path executable_path(const char* argument) {
+#ifdef _WIN32
+    // argv[0] is supplied by the launcher and may contain only a basename.
+    // The module path identifies the executable even from an unrelated CWD.
+    std::vector<wchar_t> buffer(32768);
+    const DWORD length=GetModuleFileNameW(nullptr,buffer.data(),DWORD(buffer.size()));
+    if(!length||length>=buffer.size())throw std::runtime_error("cannot locate engine executable");
+    return std::filesystem::path(std::wstring(buffer.data(),length));
+#else
+    return std::filesystem::absolute(argument);
+#endif
+}
 
 Board position(std::istringstream& in){
     std::string word;in>>word;Board b;
@@ -37,7 +58,7 @@ Board position(std::istringstream& in){
 int main(int argc,char** argv){
     try {
         std::string model_path;
-        auto adjacent=std::filesystem::absolute(argv[0]).parent_path()/"default.zero";
+        auto adjacent=executable_path(argv[0]).parent_path()/"default.zero";
         if(std::filesystem::exists(adjacent))model_path=adjacent.string();
         if(argc>1){
             if(std::string(argv[1])=="--perft"&&argc>=3){int d=std::stoi(argv[2]);if(d<0||d>8)throw std::runtime_error("perft depth must be 0..8");std::cout<<perft(Board::from_fen(argc>=4?argv[3]:START_FEN),d)<<std::endl;return 0;}
