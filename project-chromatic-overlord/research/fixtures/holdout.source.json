@@ -1,0 +1,18 @@
+{
+  "source": "https://database.lichess.org/lichess_db_puzzle.csv.zst",
+  "license": "CC0-1.0",
+  "license_evidence": "https://database.lichess.org/",
+  "status": 206,
+  "etag": "\"6abf70a1-125007eb\"",
+  "content_range": "bytes 0-1048575/307234795",
+  "compressed_bytes_read": 131075,
+  "compressed_prefix_sha256": "1679b58def5998bc1eb7d6544eb6fd5bb8ffc407ae30cb38e01b7a5f788f79b0",
+  "compressed_limit": 1048576,
+  "decoding_started_at_byte": 0,
+  "frame_checksum": "not established: intentionally bounded prefix, verification was not disabled",
+  "positions": 200,
+  "excluded": 100,
+  "selection": "first 200 valid distinct-game and distinct-position puzzles outside old 100 and available training-input FENs, before any new experiment outcomes",
+  "old_fixture_sha256": "c46a5c5d83a27e4418a4a13aa196b4097c9aa863d76ce18386d61c8e628cecfb",
+  "fixture_sha256": "9dd20e119e6124216c48e5237a7c78e603bb3c04a42e0a31eee5c4627d02a066"
+}
