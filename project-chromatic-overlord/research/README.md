@@ -77,6 +77,7 @@ Use a spare CPU (`taskset -c 3`) and `OPENBLAS_NUM_THREADS=1` if search is activ
 python project-chromatic-overlord/research/analyze.py --run project-chromatic-overlord/reports/factorial/linux/20261025-v1 --run project-chromatic-overlord/reports/factorial/windows/40152066905-1 --out project-chromatic-overlord/reports/factorial/analysis --bootstrap 5000
 python project-chromatic-overlord/research/cross_analysis.py --linux project-chromatic-overlord/reports/factorial/linux/20261025-v1 --windows project-chromatic-overlord/reports/factorial/windows/40152066905-1 --out project-chromatic-overlord/reports/factorial/analysis --bootstrap 5000
 python project-chromatic-overlord/research/match_analysis.py --run project-chromatic-overlord/reports/factorial/linux/20261025-v1 --run project-chromatic-overlord/reports/factorial/windows/40152066905-1 --out project-chromatic-overlord/reports/factorial/analysis
+python project-chromatic-overlord/research/repeat_analysis.py --analysis project-chromatic-overlord/reports/factorial/analysis --bootstrap 5000
 python project-chromatic-overlord/research/plot.py --analysis project-chromatic-overlord/reports/factorial/analysis --plan project-chromatic-overlord/research/selection-plan.json
 python project-chromatic-overlord/research/report.py --analysis project-chromatic-overlord/reports/factorial/analysis --plan project-chromatic-overlord/research/selection-plan.json
 ```

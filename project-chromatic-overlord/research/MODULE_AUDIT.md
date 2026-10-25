@@ -48,6 +48,15 @@ verification options off; it is excluded. Other controls (CPuct, FPU, sparse hea
 backend, depth/node caps) are fixed, not treated as free factors. MateProofNodes
 is held at zero and its historical default256 is a separate control.
 
+Independent switches do not imply independent computation. Any C/F/T switch
+activates the common post-MCTS verifier and 25% reserve; F OR T additionally
+activates shared root admission/mate scanning. F-alone effects include enabling
+that framework, not only the check eligibility predicate. T-alone effects also
+include shared infrastructure. Interactions and Shapley describe these actual
+option packages; they do not identify separately controlled material-only,
+admission-only or reserve-only effects. A bundles root exploration and deadline
+adaptation. Those finer mechanisms need new experiments.
+
 ## Measurements and interpretation
 
 ResearchMetrics is optional instrumentation; ON/OFF fixed-work tests and old
