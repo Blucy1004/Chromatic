@@ -42,17 +42,18 @@ def work(linux,windows):
         l=cells(linux,stage);w=cells(windows,stage)
         for key in sorted(l.keys()&w.keys()):
             lm,lr=l[key];wm,wr=w[key];assert lm['options']==wm['options'];assert lm['ids']==wm['ids'];assert lm['model_sha256']==wm['model_sha256']
-            same_move=same_n=same_q=same_pv=0;maxq=0;gains=losses=0
+            same_move=same_n=same_q=same_pv=0;maxq=maxprior=0;gains=losses=0
             for a,b in zip(lr,wr):
                 x,y=a['result'],b['result'];assert a['id']==b['id'];assert a['fen']==b['fen'] and a['expected']==b['expected']
                 same=x['bestmove']==y['bestmove'];same_move+=same
                 nsame=[(v['uci'],v['n']) for v in x['visits']]==[(v['uci'],v['n']) for v in y['visits']];same_n+=nsame
                 assert [v['uci'] for v in x['visits']]==[v['uci'] for v in y['visits']]
                 dq=max([abs(v['q']-z['q']) for v,z in zip(x['visits'],y['visits'])] or [0]);maxq=max(maxq,dq);same_q+=dq==0
+                dp=max([abs(v['prior']-z['prior']) for v,z in zip(x['visits'],y['visits'])] or [0]);maxprior=max(maxprior,dp)
                 pv=x['research']['pv']==y['research']['pv'];same_pv+=pv;gains+=a['hit'] and not b['hit'];losses+=b['hit'] and not a['hit']
                 differences.append({'stage':stage,'model':key[0],'mask':key[1],'id':a['id'],'linux_move':x['bestmove'],'windows_move':y['bestmove'],
                     'linux_pv':' '.join(x['research']['pv']),'windows_pv':' '.join(y['research']['pv']),'linux_hit':int(a['hit']),'windows_hit':int(b['hit']),
-                    'root_visit_counts_equal':nsame,'root_q_max_abs':dq,'linux_visits':x['research']['depth_samples'],'windows_visits':y['research']['depth_samples'],
+                    'root_visit_counts_equal':nsame,'root_q_max_abs':dq,'root_prior_max_abs':dp,'linux_visits':x['research']['depth_samples'],'windows_visits':y['research']['depth_samples'],
                     'linux_nn':x['neural_evals']+x['verification_evals'],'windows_nn':y['neural_evals']+y['verification_evals'],
                     'linux_search_ms':x['search_ns']/1e6,'windows_search_ms':y['search_ns']/1e6,'linux_wall_ms':a['wall_ns']/1e6,'windows_wall_ms':b['wall_ns']/1e6,
                     'linux_cpu_ms':a['cpu_seconds']*1000,'windows_cpu_ms':b['cpu_seconds']*1000,
@@ -62,7 +63,7 @@ def work(linux,windows):
                     'linux_ties':x['research']['selection_ties'],'windows_ties':y['research']['selection_ties'],
                     'linux_min_gap':x['research']['minimum_positive_gap'],'windows_min_gap':y['research']['minimum_positive_gap']})
             summaries.append({'stage':stage,'model':key[0],'mask':key[1],'factors':label(key[1]),'n':len(lr),'same_move':same_move,'same_root_counts':same_n,
-                'same_root_q_exact':same_q,'max_q_abs':maxq,'same_pv':same_pv,'linux_only_hits':gains,'windows_only_hits':losses,
+                'same_root_q_exact':same_q,'max_q_abs':maxq,'max_prior_abs':maxprior,'same_pv':same_pv,'linux_only_hits':gains,'windows_only_hits':losses,
                 'linux_hits':sum(a['hit'] for a in lr),'windows_hits':sum(a['hit'] for a in wr),
                 'linux_total_wall_ms':sum(a['wall_ns'] for a in lr)/1e6,'windows_total_wall_ms':sum(a['wall_ns'] for a in wr)/1e6,
                 'linux_total_nn':sum(a['result']['neural_evals']+a['result']['verification_evals'] for a in lr),

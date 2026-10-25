@@ -6,6 +6,7 @@ os.environ.setdefault('MPLCONFIGDIR','/tmp/chromatic-mpl')
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import numpy as np
 MODELS=['zero128','lichess100','lichess1000','lichess10000'];OS=['Linux','Windows'];BITS='CAFTP'
 def rows(p):return list(csv.DictReader(p.open()))
@@ -33,7 +34,7 @@ def main():
                 mask=int(r['mask']);ax.scatter(float(r['mean_cpu_ms']),100*float(r['accuracy']),marker='^' if mask&16 else 'o',c='#9ba9b4' if mask&16 else '#2471a3',s=24)
                 if mask in {0,8,15,plan['best_serial'][m]}:ax.annotate(name(mask),(float(r['mean_cpu_ms']),100*float(r['accuracy'])),xytext=(3,3),textcoords='offset points',fontsize=8)
             ax.set(title=f'{o} / {m}',xlabel='Mean process CPU ms / puzzle',ylabel='Exact matches (%)');ax.grid(alpha=.2)
-    fig.suptitle('Equal requested time does not imply equal CPU cost (100 ms discovery set)');fig.tight_layout();export(fig,out,'accuracy-cpu-cost')
+    fig.suptitle('Equal requested time does not imply equal CPU cost (100 ms discovery set)');fig.legend(handles=[Line2D([],[],marker='o',linestyle='',color='#2471a3',label='1 thread'),Line2D([],[],marker='^',linestyle='',color='#9ba9b4',label='2 threads')],loc='lower center',ncol=2);fig.tight_layout(rect=(0,.03,1,.96));export(fig,out,'accuracy-cpu-cost')
     data=rows(a.analysis/'shapley.csv');fig,axes=plt.subplots(2,2,figsize=(10,7),sharex=True)
     colors=['#2e86c1','#d68910','#1e8449','#8e44ad']
     for i,o in enumerate(OS):

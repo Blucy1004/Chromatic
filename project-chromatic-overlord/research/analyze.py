@@ -48,6 +48,9 @@ def ingest(root,case_writer,scope):
         for r in raw:
             z=r['result'];q=z['research'];assert len(q['leaf_depth'])==513
             hist+=q['leaf_depth'];assert sum(q['leaf_depth'])==q['depth_samples']
+            assert q['node_creations']+1-z['nodes_evicted']==z['arena_nodes']
+            if meta['mode']=='nodes':assert z['simulations']==meta['budget']
+            if meta['mode']=='nn':assert z['neural_evals']+z['verification_evals']<=meta['budget']
             b={'scope':scope,'os':osname,'stage':r['stage'],'model':r['model'],'mask':r['mask'],'factors':label(r['mask']),
                'mode':r['mode'],'budget':r['budget'],'repeat':r['repeat'],'cell':r['cell'],'id':r['id'],'game':r['game'],
                'hit':int(r['hit']),'expected':r['expected'],'bestmove':z['bestmove'],'pv':' '.join(q['pv']),
@@ -110,6 +113,10 @@ def estimates(run,repetitions):
                 for metric in ['cpu_ms','wall_ms','completed_visits','nn_total','verification_nodes','node_creations']:
                     old=lookup[0]['summary']['mean_'+metric];new=lookup[m]['summary']['mean_'+metric]
                     costs['delta_'+metric]=new-old;costs['ratio_'+metric]=new/old if old else None
+                base_cases=lookup[0]['cases'];new_cases=lookup[m]['cases']
+                costs['gains_expected_mate1']=sum(a['hit'] and not b['hit'] and a['expected_mate1'] for a,b in zip(new_cases,base_cases))
+                costs['losses_expected_mate1']=sum(b['hit'] and not a['hit'] and a['expected_mate1'] for a,b in zip(new_cases,base_cases))
+                costs['gains_other']=g-costs['gains_expected_mate1'];costs['losses_other']=l-costs['losses_expected_mate1']
                 items.append({**common,'comparison':f'{label(m)}-base','mask':m,'gains':g,'losses':l,'delta_pp':ci['mean'][i]*100,
                               'lo95_pp':ci['ci95'][i][0]*100,'hi95_pp':ci['ci95'][i][1]*100,'p_exact':p,'clusters':ci['clusters'],**costs})
             for item,p in zip(items,st.holm(ps)):item['p_holm_within_model_stage']=p

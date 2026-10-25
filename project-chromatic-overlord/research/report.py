@@ -4,6 +4,7 @@ import argparse,csv,itertools,json,math,statistics
 from collections import defaultdict
 from pathlib import Path
 PROJECT=Path(__file__).resolve().parents[1]
+OUTPUT=PROJECT
 MODELS=['zero128','lichess100','lichess1000','lichess10000'];CORE=['zero128','lichess10000'];BITS='CAFTP';SYSTEMS=['Linux','Windows']
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def rows(p):return list(csv.DictReader(p.open()))
@@ -13,9 +14,10 @@ def interval(r,key='delta_pp',lo='lo95_pp',hi='hi95_pp'):
     return f"{num(r[key])} [{num(r[lo])}, {num(r[hi])}]"
 def table(headers,data):
     return '\n'.join(['| '+' | '.join(headers)+' |','|'+'|'.join('---' for _ in headers)+'|']+['| '+' | '.join(str(x).replace('|','/') for x in row)+' |' for row in data])+'\n'
-def write(name,text):(PROJECT/name).write_text(text.strip()+'\n')
+def write(name,text):(OUTPUT/name).write_text(text.strip()+'\n')
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--analysis',type=Path,required=True);p.add_argument('--plan',type=Path,required=True);a=p.parse_args();d=a.analysis
+    global OUTPUT
+    p=argparse.ArgumentParser();p.add_argument('--analysis',type=Path,required=True);p.add_argument('--plan',type=Path,required=True);p.add_argument('--reports-out',type=Path,default=PROJECT);a=p.parse_args();d=a.analysis;OUTPUT=a.reports_out;OUTPUT.mkdir(parents=True,exist_ok=True)
     plan=read(a.plan);matrix=rows(d/'matrix.csv');contrasts=rows(d/'paired-contrasts.csv');shapley=rows(d/'shapley.csv');interactions=rows(d/'interactions.csv');model_effects=rows(d/'model-effects.csv')
     confirmed=read(d/'holdout-confirmation.json');models=read(PROJECT/'reports/factorial/preflight/models-and-resume.json')['models'];analysis=read(d/'analysis-manifest.json')
     def get(os,stage,model,mask,repeat=0):
@@ -92,6 +94,16 @@ MateProofNodes=0을 고정했고 기존 기본256은 별도 대조군으로 보�
                 repeated.append([os,m,label(mask),'/'.join(r['hits'] for r in rr),'/'.join(num(r['mean_completed_visits'],0) for r in rr)])
     text+=table(['OS','모델','구성','3회 정답/100','3회 평균 방문'],repeated)
     text+='\n1초는 층화24문제, 5초는 층화16문제, 10초는 사전 규칙으로 고른 정답 획득·손실4사례에 한정했다. 분모가 다른 단계의 점수를 직접 비교하지 않는다. 10초 결과는 진단용으로 일반 정답률로 해석하지 않는다. 모든 단계의 [matrix.csv](reports/factorial/analysis/matrix.csv), 문제별 정오답·선택 수·PV·호출/시간/비용의 [per-puzzle.csv](reports/factorial/analysis/per-puzzle.csv), 각 원시 셀 JSONL.gz를 보존했다.\n'
+    text+='\n## 공유된 메이트 한 수 입장 검사의 기여\n\n이 절은 결과 확인 후 추가한 진단이며 주 지표나 구성 선택을 바꾸지 않았다. F/T의 공통 루트 메이트 검사가 깊은 강제 수순 탐색의 효과로 집계되지 않도록 분리했다. `기대 수 M1`은 원래 기대 응수가 즉시 체크메이트인 문제, `공통 M1 증명`은 입장 검사에서 정확히 증명한 횟수다. `동등 M1 허용`은 기대 수도 M1이고 선택 수도 다른 합법 M1일 때만 추가 인정한 민감도 지표다. 다른 장기 승리 수의 정당성은 판정하지 못한다.\n\n'
+    diagnostic=[]
+    for os in SYSTEMS:
+        for stage in ['screen','holdout']:
+            for m in CORE:
+                for mask in sorted({4,8,15,plan['best_serial'][m]}):
+                    r=get(os,stage,m,mask)
+                    if r:diagnostic.append([os,stage,m,label(mask),num(float(r['mean_expected_mate1'])*int(r['n']),0),num(float(r['mean_admission_mate1'])*int(r['n']),0),r['hits'],num(float(r['mean_mate_equivalent_hit'])*int(r['n']),0)])
+    text+=table(['OS','자료','모델','구성','기대 수 M1','공통 M1 증명','정확 응수','동등 M1 허용'],diagnostic)
+    text+='\n[paired-contrasts.csv](reports/factorial/analysis/paired-contrasts.csv)는 새 정답/손실을 기대 수 M1과 기타 문제로 나눈다. 검증기 내부의 재귀 메이트 발견과 공통 루트 스캔은 별개이며, 입장 검사 호출 시간만으로 전체 F/T 인과 비용을 정할 수 없다.\n'
     write('SEARCH_ABLATION.md',text.replace('配置','구성').replace(' उपलब्ध',' 사용 가능한'))
 
     text=f'''# 시너지와 통계적 불확실성
