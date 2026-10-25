@@ -1,0 +1,28 @@
+Internal ctest changing into directory: D:/a/Chromatic/Chromatic/build-windows-portable
+Test project D:/a/Chromatic/Chromatic/build-windows-portable
+      Start  1: core
+ 1/11 Test  #1: core .............................   Passed    1.29 sec
+      Start  2: depth_telemetry
+ 2/11 Test  #2: depth_telemetry ..................   Passed    0.12 sec
+      Start  3: depth_telemetry_model
+ 3/11 Test  #3: depth_telemetry_model ............   Passed    0.57 sec
+      Start  4: memory_recycling
+ 4/11 Test  #4: memory_recycling .................   Passed    0.09 sec
+      Start  5: memory_recycling_model
+ 5/11 Test  #5: memory_recycling_model ...........   Passed    0.57 sec
+      Start  6: overlord
+ 6/11 Test  #6: overlord .........................   Passed    0.11 sec
+      Start  7: overlord_model
+ 7/11 Test  #7: overlord_model ...................   Passed    0.16 sec
+      Start  8: model_identity
+ 8/11 Test  #8: model_identity ...................   Passed    0.01 sec
+      Start  9: model_identity_model
+ 9/11 Test  #9: model_identity_model .............   Passed    0.02 sec
+      Start 10: research
+10/11 Test #10: research .........................   Passed    0.12 sec
+      Start 11: research_model
+11/11 Test #11: research_model ...................   Passed    0.28 sec
+
+100% tests passed, 0 tests failed out of 11
+
+Total Test time (real) =   3.39 sec

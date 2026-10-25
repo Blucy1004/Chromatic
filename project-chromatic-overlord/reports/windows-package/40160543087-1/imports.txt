@@ -1,0 +1,21 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35229.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file build-windows-portable\Release\chromatic_overlord.exe
+
+File Type: EXECUTABLE IMAGE
+
+  Image has the following dependencies:
+
+    KERNEL32.dll
+
+  Summary
+
+        5000 .data
+        1000 .fptable
+        6000 .pdata
+       20000 .rdata
+        1000 .reloc
+        1000 .rsrc
+       73000 .text
