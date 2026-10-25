@@ -1,0 +1,35 @@
+MSBuild version 17.14.60+43b635718 for .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  board.cpp
+  network.cpp
+  search.cpp
+  proof.cpp
+  telemetry_json.cpp
+  verification.cpp
+  sha256.cpp
+  Generating Code...
+  zero_core.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial\Release\zero_core.lib
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  main.cpp
+  research.cpp
+  core.cpp
+  research_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial\Release\research_tests.exe
+  overlord.cpp
+  memory_recycling.cpp
+  chromatic_overlord.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial\Release\chromatic_overlord.exe
+  depth_telemetry.cpp
+  memory_recycling_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial\Release\memory_recycling_tests.exe
+  core_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial\Release\core_tests.exe
+  overlord_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial\Release\overlord_tests.exe
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  model_identity.cpp
+  model_identity_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial\Release\model_identity_tests.exe
+  depth_telemetry_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial\Release\depth_telemetry_tests.exe
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
