@@ -23,7 +23,7 @@ jobs:
     runs-on: windows-2022
     timeout-minutes: 30
     env:
-      CHROMATIC_BUILD: ${{ runner.temp }}/chromatic-overlord-msvc
+      CHROMATIC_BUILD: build-windows-msvc
       WIN_RESULTS: project-chromatic-overlord/reports/windows-native/${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - uses: actions/checkout@v4

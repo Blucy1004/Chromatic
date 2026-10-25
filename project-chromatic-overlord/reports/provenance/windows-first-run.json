@@ -1,0 +1,9 @@
+{
+  "run_id": 40145840154,
+  "url": "https://github.com/Blucy1004/Chromatic/actions/runs/40145840154",
+  "source_commit": "92be68cd735038b066e2f3e5cf450dbf1a8e528b",
+  "conclusion": "failure",
+  "jobs": [],
+  "log_status": "log not found",
+  "correction": "Remove runner.temp from job-level env; use repository-relative build-windows-msvc. No native build was executed by this failed workflow."
+}
