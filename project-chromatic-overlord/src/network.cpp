@@ -1,4 +1,6 @@
 #include "zero/network.hpp"
+#include "zero/sha256.hpp"
+#include <bit>
 #include "zero/profile.hpp"
 #include <algorithm>
 #include <cmath>
@@ -54,6 +56,15 @@ void Network::load(const std::string& path) {
     for(uint32_t i=0;i<blocks;++i)candidate.residual_.push_back(layer(int(width),int(width)));
     candidate.policy_=layer(int(width),ACTIONS);candidate.wdl_=layer(int(width),3);
     if(f.peek()!=std::char_traits<char>::eof())throw std::runtime_error("trailing network bytes");
+    // Identity comes from the actual validated in-memory tensors, not a later
+    // reread of a potentially replaced file. ZERO0001 is little-endian FP32.
+    static_assert(std::endian::native==std::endian::little);
+    Sha256 digest;digest.update("ZERO0001",8);
+    const uint32_t header[]={inputs,width,blocks,actions};digest.update(header,sizeof(header));
+    auto hash_layer=[&](const Layer& l){digest.update(l.weights.data(),l.weights.size()*sizeof(float));digest.update(l.bias.data(),l.bias.size()*sizeof(float));};
+    hash_layer(candidate.input_);for(const auto& l:candidate.residual_)hash_layer(l);
+    hash_layer(candidate.policy_);hash_layer(candidate.wdl_);
+    candidate.loaded_sha256_=digest.hex_digest();
     candidate.loaded_=true;*this=std::move(candidate);
 }
 Evaluation Network::evaluate(const Board& b) const {

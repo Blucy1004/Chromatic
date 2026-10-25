@@ -1,0 +1,91 @@
+name: Overlord native Windows validation
+on:
+  workflow_dispatch:
+  push:
+    branches: [operation-overlord]
+    paths:
+      - .github/workflows/overlord-windows.yml
+      - project-chromatic-overlord/CMakeLists.txt
+      - project-chromatic-overlord/src/**
+      - project-chromatic-overlord/include/**
+      - project-chromatic-overlord/tests/**
+      - project-chromatic-overlord/tools/model_matrix.py
+      - project-chromatic-overlord/tools/platform_validation.py
+      - project-chromatic-overlord/tools/emit_windows_report.py
+permissions:
+  contents: write
+concurrency:
+  group: overlord-windows-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  native:
+    if: github.ref == 'refs/heads/operation-overlord'
+    runs-on: windows-2022
+    timeout-minutes: 30
+    env:
+      CHROMATIC_BUILD: ${{ runner.temp }}/chromatic-overlord-msvc
+      WIN_RESULTS: project-chromatic-overlord/reports/windows-native/${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Install validation dependencies
+        run: python -m pip install python-chess==1.999 chess==1.10.0 psutil==7.2.2
+      - name: MSVC x64 Release build
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force $env:WIN_RESULTS | Out-Null
+          cmake -S project-chromatic-overlord -B "$env:CHROMATIC_BUILD" -G 'Visual Studio 17 2022' -A x64 *> "$env:WIN_RESULTS/configure.log"
+          $configureExit = $LASTEXITCODE
+          $buildExit = -1
+          if ($configureExit -eq 0) {
+            cmake --build "$env:CHROMATIC_BUILD" --config Release --parallel 2 *> "$env:WIN_RESULTS/build.log"
+            $buildExit = $LASTEXITCODE
+          }
+          $compiler = Get-ChildItem "$env:CHROMATIC_BUILD/CMakeFiles" -Recurse -Filter CMakeCXXCompiler.cmake | Select-Object -First 1
+          $compilerText = if ($compiler) { Get-Content $compiler.FullName -Raw } else { '' }
+          @{configure_exit=$configureExit;build_exit=$buildExit;config='Release';generator='Visual Studio 17 2022';architecture='x64';compiler_record=$compilerText} | ConvertTo-Json -Depth 5 | Set-Content "$env:WIN_RESULTS/build.json" -Encoding utf8
+          if ($configureExit -ne 0 -or $buildExit -ne 0) { throw 'MSVC Release build failed' }
+      - name: Native perft and rule/module regression tests
+        if: ${{ !cancelled() }}
+        shell: pwsh
+        run: |
+          ctest --test-dir "$env:CHROMATIC_BUILD" -C Release --output-on-failure *> "$env:WIN_RESULTS/ctest.log"
+          $testExit = $LASTEXITCODE
+          @{exit_code=$testExit} | ConvertTo-Json | Set-Content "$env:WIN_RESULTS/ctest-status.json" -Encoding utf8
+          if ($testExit -ne 0) { throw 'Windows CTest failed' }
+      - name: Native Windows UCI, time controls and memory reclamation
+        if: ${{ !cancelled() }}
+        shell: pwsh
+        run: |
+          python project-chromatic-overlord/tools/platform_validation.py --require-windows --engine "$env:CHROMATIC_BUILD/Release/chromatic_overlord.exe" --out "$env:WIN_RESULTS/platform" *> "$env:WIN_RESULTS/platform.log"
+          if ($LASTEXITCODE -ne 0) { throw 'Native Windows protocol validation failed' }
+      - name: Native Windows model/search cross-validation
+        if: ${{ !cancelled() }}
+        shell: pwsh
+        run: |
+          python project-chromatic-overlord/tools/model_matrix.py --require-windows --engine "$env:CHROMATIC_BUILD/Release/chromatic_overlord.exe" --out "$env:WIN_RESULTS/matrix" --repeats 3 *> "$env:WIN_RESULTS/matrix.log"
+          if ($LASTEXITCODE -ne 0) { throw 'Windows model matrix failed' }
+      - name: Record native evidence and return results through Git
+        if: ${{ !cancelled() }}
+        shell: pwsh
+        run: |
+          python project-chromatic-overlord/tools/emit_windows_report.py --results "$env:WIN_RESULTS" --source '${{ github.sha }}' --run-url '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}'
+          git config user.name 'chromatic-validation[bot]'
+          git config user.email 'chromatic-validation[bot]@users.noreply.github.com'
+          git add -- "$env:WIN_RESULTS" project-chromatic-overlord/WINDOWS_VALIDATION.md
+          git commit -m 'Record native Windows MSVC validation results [skip ci]'
+          git push origin HEAD:operation-overlord
+      - name: Retain logs and Release binaries
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: overlord-windows-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ env.WIN_RESULTS }}
+            ${{ env.CHROMATIC_BUILD }}/Release/*.exe
+            project-chromatic-overlord/WINDOWS_VALIDATION.md

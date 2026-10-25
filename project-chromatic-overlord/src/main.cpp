@@ -106,7 +106,10 @@ int main(int argc,char** argv){
                     worker=std::thread([&,copy,limits](){try {auto start=std::chrono::steady_clock::now();auto r=search(copy,network,limits,stop);auto ms=std::max<int64_t>(1,std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now()-start).count());say("info nodes "+std::to_string(r.simulations)+" time "+std::to_string(ms)+" nps "+std::to_string(r.simulations*1000LL/ms)+" score cp "+std::to_string(int(400*r.value))+" pv "+(r.has_move?r.best.uci():"0000"));say("info string overlord "+result_json(r));if(r.telemetry){std::ostringstream data;write_telemetry_json(data,*r.telemetry);say("info string telemetry "+data.str());}say("bestmove "+(r.has_move?r.best.uci():"0000"));}catch(const std::exception& e){say("info string error "+escape(e.what()));say("bestmove 0000");}});
                 } else if(cmd=="zero") {
                     halt();std::string op;in>>op;
-                    if(op=="inspect"||op=="eval"||op=="evallegal")say(inspect(board,network,op!="inspect",op=="evallegal"));
+                    if(op=="model") {
+                        say("{\"loaded\":"+std::string(network.loaded()?"true":"false")+",\"path\":\""+escape(model_path)+"\",\"sha256\":\""+network.loaded_sha256()+"\",\"format\":\"ZERO0001\",\"inputs\":"+std::to_string(INPUTS)+",\"actions\":"+std::to_string(ACTIONS)+",\"width\":"+std::to_string(network.width())+",\"blocks\":"+std::to_string(network.blocks())+",\"hash_scope\":\"canonical loaded tensors\"}");
+                    }
+                    else if(op=="inspect"||op=="eval"||op=="evallegal")say(inspect(board,network,op!="inspect",op=="evallegal"));
                     else if(op=="search") {SearchLimits limits=defaults;if(!(in>>limits.simulations>>limits.seed>>limits.noise>>limits.temperature)||limits.simulations<1||limits.simulations>10000000||!std::isfinite(limits.noise)||limits.noise<0||limits.noise>1||!std::isfinite(limits.temperature)||limits.temperature<0)throw std::runtime_error("zero search SIMULATIONS SEED NOISE TEMPERATURE");stop.store(false);say(result_json(search(board,network,limits,stop)));}
                     else throw std::runtime_error("unknown zero command");
                 } else if(cmd=="d")say("info string "+board.fen());

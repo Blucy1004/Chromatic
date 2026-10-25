@@ -13,12 +13,16 @@ class Network {
     Layer input_,policy_,wdl_;
     std::vector<Layer> residual_;
     bool loaded_=false;
+    std::string loaded_sha256_;
     InferenceBackend backend_=InferenceBackend::SIMD;
     bool sparse_=true;
 public:
     struct Workspace {std::vector<float> input,a,b,wdl;};
     void load(const std::string& path); // transactional: old model survives invalid files
     bool loaded() const {return loaded_;}
+    const std::string& loaded_sha256() const{return loaded_sha256_;}
+    int width() const{return loaded_?input_.out:0;}
+    size_t blocks() const{return residual_.size();}
     void set_backend(InferenceBackend backend){backend_=backend;}
     InferenceBackend backend() const{return backend_;}
     void set_sparse(bool enabled){sparse_=enabled;}
