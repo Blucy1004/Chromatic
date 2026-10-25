@@ -1,0 +1,35 @@
+MSBuild version 17.14.60+43b635718 for .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  board.cpp
+  network.cpp
+  search.cpp
+  proof.cpp
+  telemetry_json.cpp
+  verification.cpp
+  sha256.cpp
+  Generating Code...
+  zero_core.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-portable\Release\zero_core.lib
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  main.cpp
+  overlord.cpp
+  research.cpp
+  memory_recycling.cpp
+  model_identity.cpp
+  model_identity_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-portable\Release\model_identity_tests.exe
+  overlord_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-portable\Release\overlord_tests.exe
+  core.cpp
+  research_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-portable\Release\research_tests.exe
+  chromatic_overlord.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-portable\Release\chromatic_overlord.exe
+  memory_recycling_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-portable\Release\memory_recycling_tests.exe
+  depth_telemetry.cpp
+  core_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-portable\Release\core_tests.exe
+  depth_telemetry_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-portable\Release\depth_telemetry_tests.exe
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt

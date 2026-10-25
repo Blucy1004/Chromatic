@@ -1,0 +1,176 @@
+{
+  "native_windows": true,
+  "os": "Windows-2022Server-10.0.20348-SP0",
+  "engine_sha256": "2d992efa4fc5b302d5d201d4515fea4f4dde1c43517c80a7746ce8fcf6e78576",
+  "model_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+  "package_path": "D:\\a\\_temp\\CHROMATIC package O'Brien 한글\\CHROMATIC-Windows-x64-Release",
+  "checks": [
+    {
+      "name": "PE_x64_and_original_champion",
+      "passed": true
+    },
+    {
+      "name": "actual_embedded_UTF8_manifest",
+      "passed": true
+    },
+    {
+      "name": "only_windows_system_DLL_imports",
+      "passed": true,
+      "imports": [
+        "KERNEL32.dll"
+      ]
+    },
+    {
+      "name": "automatic_model_from_unicode_path_and_unrelated_CWD",
+      "passed": true,
+      "loaded": {
+        "loaded": true,
+        "path": "D:\\a\\_temp\\CHROMATIC package O'Brien 한글\\CHROMATIC-Windows-x64-Release\\default.zero",
+        "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+        "format": "ZERO0001",
+        "inputs": 1280,
+        "actions": 4672,
+        "width": 64,
+        "blocks": 2,
+        "hash_scope": "canonical loaded tensors"
+      },
+      "experimental_defaults_off": true
+    },
+    {
+      "name": "go_100ms",
+      "passed": true,
+      "requested_ms": 100,
+      "elapsed_ms": 93.00000000001774,
+      "bestmove": "c2c3"
+    },
+    {
+      "name": "go_1000ms",
+      "passed": true,
+      "requested_ms": 1000,
+      "elapsed_ms": 1000.0,
+      "bestmove": "c2c3"
+    },
+    {
+      "name": "go_10000ms",
+      "passed": true,
+      "requested_ms": 10000,
+      "elapsed_ms": 10015.999999999964,
+      "bestmove": "c2c3"
+    },
+    {
+      "name": "CounterexampleVerify_True",
+      "passed": true,
+      "calls": 4
+    },
+    {
+      "name": "CounterexampleVerify_False",
+      "passed": true,
+      "calls": 0
+    },
+    {
+      "name": "AdaptiveBudget_True",
+      "passed": true,
+      "calls": 1
+    },
+    {
+      "name": "AdaptiveBudget_False",
+      "passed": true,
+      "calls": 0
+    },
+    {
+      "name": "ForcingSearch_True",
+      "passed": true,
+      "calls": 80
+    },
+    {
+      "name": "ForcingSearch_False",
+      "passed": true,
+      "calls": 0
+    },
+    {
+      "name": "TacticalVerify_True",
+      "passed": true,
+      "calls": 4
+    },
+    {
+      "name": "TacticalVerify_False",
+      "passed": true,
+      "calls": 0
+    },
+    {
+      "name": "shared_tree_threads_2",
+      "passed": true,
+      "peak_inflight": 2
+    },
+    {
+      "name": "shared_tree_threads_1",
+      "passed": true,
+      "peak_inflight": 0
+    },
+    {
+      "name": "reclamation_preserves_root_statistics",
+      "passed": true,
+      "prunes": 125,
+      "completed_visits": 1024
+    },
+    {
+      "name": "real_tactic_mate1_white",
+      "passed": true,
+      "bestmove": "f7g7",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "real_tactic_mate1_black",
+      "passed": true,
+      "bestmove": "f2e1",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "stalemate",
+      "passed": true
+    },
+    {
+      "name": "checkmate",
+      "passed": true
+    },
+    {
+      "name": "fifty_move",
+      "passed": true
+    },
+    {
+      "name": "threefold_history",
+      "passed": true
+    },
+    {
+      "name": "stop_all_options_parallel",
+      "passed": true,
+      "latency_ms": 0.0
+    },
+    {
+      "name": "quit_during_search",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "perft_3",
+      "passed": true,
+      "nodes": 8902
+    },
+    {
+      "name": "perft_4",
+      "passed": true,
+      "nodes": 197281
+    },
+    {
+      "name": "perft_5",
+      "passed": true,
+      "nodes": 4865609
+    },
+    {
+      "name": "double_click_console_launcher",
+      "passed": true,
+      "exit_code": 0
+    }
+  ],
+  "passed": false
+}

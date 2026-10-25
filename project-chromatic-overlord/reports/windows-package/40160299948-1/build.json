@@ -1,0 +1,7 @@
+{
+  "architecture": "x64",
+  "champion_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+  "source_commit": "cade08fedb0a077680e5a5ae6793ea1793ebb0c4",
+  "configuration": "Release",
+  "runtime": "MultiThreaded /MT"
+}
