@@ -171,7 +171,7 @@ def model_effects(run,repetitions):
     groups=defaultdict(dict)
     for c in run['cells']:
         s=c['summary']
-        if s['repeat']==0 and s['stage'] not in ['legacy_proof','scalar_fixed']:groups[s['stage'],s['mask'],s['mode'],s['budget']][s['model']]=c
+        if s['repeat']==0 and s['stage'] not in ['legacy_proof','scalar_fixed','ten_seconds']:groups[s['stage'],s['mask'],s['mode'],s['budget']][s['model']]=c
     out=[]
     for (stage,mask,mode,budget),models in groups.items():
         if 'zero128' not in models:continue
@@ -308,6 +308,7 @@ def main():
     save(a.out/'selected-holdout.json',selected_holdout(runs,a.bootstrap))
     save(a.out/'analysis-manifest.json',{'analysis_script_sha256':sha(Path(__file__)),'statistics_sha256':sha(Path(__file__).with_name('factorial_stats.py')),
         'bootstrap_repetitions':a.bootstrap,'runs':[{k:v for k,v in r.items() if k!='cells'} for r in runs],
+        'excluded_model_contrasts':{'ten_seconds':'model-specific diagnostic gain/loss positions are not a paired model sample'},
         'inference_limits':'screen interactions exploratory; holdout one primary pair; cluster bootstrap assumes sampled source-game units; fixed corpus is not a random population sample; no Elo promotion'})
     print('wrote',a.out,flush=True)
 if __name__=='__main__':main()

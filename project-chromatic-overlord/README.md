@@ -1,5 +1,9 @@
 # CHROMATIC — Operation Overlord (experimental candidate)
 
+The factorial follow-up is in [FACTORIAL_ABLATION.md](FACTORIAL_ABLATION.md):
+model/search contributions, independent puzzle validation, cost, native OS
+comparisons and paired games. Reproduce it with [research/README.md](research/README.md).
+
 This separate C++20 candidate starts from the memory-recycling engine at commit
 5310949551fd76d8a6702daf2ddeb996fd5f3c9b. Existing engines, deployment binaries,
 champions, trainers and weights are preserved. No training or automatic champion

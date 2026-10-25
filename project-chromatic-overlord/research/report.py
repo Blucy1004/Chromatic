@@ -11,6 +11,7 @@ def rows(p):return list(csv.DictReader(p.open()))
 def label(m):return ''.join(c for i,c in enumerate(BITS) if int(m)>>i&1) or 'base'
 def num(x,d=1):return '미측정' if x is None or x=='' else f'{float(x):.{d}f}'
 def pvalue(x):return '미측정' if x is None or x=='' else f'{float(x):.3g}'
+def elofmt(x):return '∞' if x=='infinity' else '−∞' if x=='-infinity' else num(x)
 def interval(r,key='delta_pp',lo='lo95_pp',hi='hi95_pp'):
     return f"{num(r[key])} [{num(r[lo])}, {num(r[hi])}]"
 def table(headers,data):
@@ -179,6 +180,8 @@ C++/runner/문제 해시, 모델 파일·로딩 텐서, seed1, 옵션, 스레드
                 if r:timing.append([os,m,label(mask),r['hits'],num(r['mean_completed_visits'],0),num(r['mean_nn_total'],0),num(r.get('mean_verification_completed'),2),num(r['mean_search_ms']),num(r['mean_wall_ms']),num(r['mean_mcts_ms']),num(r['mean_verification_ms'])])
     text+=table(['OS','모델','구성','정답/100','방문','NN','검증 완료율','탐색ms','프로토콜ms','MCTS ms','검증ms'],timing)
     text+='\n[cross-platform-puzzles.csv](reports/factorial/analysis/cross-platform-puzzles.csv)에 문제별 선택 수·PV·방문·NN·시간·검증 완료 수·정확 동률 수·최소 양수 선택 간격을 남겼다. PUCT는 엄격한 `>`와 합법 수 생성 순서로 동률을 처리하고, 후보 검증은 1e-5 여유를 둔다. 양 OS 같은 소스다. 작은 추론 오차와 결정 경계의 영향은 관측할 수 있지만, 분기 차이 전부를 부동소수점 한 원인으로 귀속하지 않는다.\n\n[os-search-interactions.csv](reports/factorial/analysis/os-search-interactions.csv)는 같은 문제에서 `(Linux 탐색−Linux 기본)−(Windows 탐색−Windows 기본)`을 계산한다. 하드웨어·컴파일러가 교란된 OS×구성 대조다. 고정 작업량 일치와 고정 시간 불일치가 함께 확인되는 부분은 처리량·완료 여부를 우선 근거로 삼되, CPU/OS/MSVC/GCC 각각의 몫을 분리해 확정하지 않는다. 과거22/45/56과의 차이는 새 계측, 호스트 및 시간 변동도 포함하므로 과거 수치에 소급해 단일 원인을 확정하지 않는다.\n'
+    text+='\n## 관측된 원인 범위\n\nSIMD는400개 모델×입력의 WDL/합법 logits가 모두 일치했고, 고정512방문과 NN512 상한 각각3,072회의 선택 수도 모두 일치했다. 같은 시간에서는 처리한 NN 수와 후보 완료율이 달랐다. 이는 이 검사 범위에서 시간에 따른 처리량·배분 차이를 우선 설명으로 지지한다. CPU 주파수·코어/SMT 배치·컴파일러·OS clock 비용을 각각 분리한 실험은 아니다. 숫자 affinity ID가 같다고 같은 물리 코어 구성을 뜻하지 않는다. Linux 계측 ON/OFF 비용은 측정했으나 Windows의 동일 비용 대조는 별도로 측정하지 않았다.\n'
+    text+='\n## 10초 진단 표본의 제외\n\n10초 사례는 각 모델/OS의 로컬 스크린 획득·손실로 골랐다. Windows는 같은 구성 계획을 사용했지만 이 사례 ID는 일부 달랐다. 분석기가 이를 발견해 중단한 첫 로그를 [analysis-failures](reports/factorial/analysis-failures/)에 보존했다. [excluded-cross-platform-cells.json](reports/factorial/analysis/excluded-cross-platform-cells.json)에 다른 ID와 제외 이유를 명시했으며, 맞지 않는 표본을 OS 차이로 계산하지 않았다. 모델 간10초 대조도 전체 제외했다. 같은 모델/OS 내10초 구성 대조와 원시 결과는 남아 있다. 주 스크린·고정 작업량·독립200문제의 표본 짝은 계속 엄격히 검사했다.\n'
     write('CROSS_PLATFORM_ANALYSIS.md',text)
 
     text=f'''# 계산 비용 및 실행 예산
@@ -236,7 +239,7 @@ Linux 스크리닝에서 선택한 직렬 구성을 각 모델의 기본 MCTS와
 반복/50수 무승부는 python-chess의 claim_draw 규칙을 사용했다.
 
 '''
-    text+=table(['OS','모델','구성','W/D/L','미완료','완료 페어','페어 점수','보수적95%','기술적 Elo','Elo 보수적95%'],[[r['os'],r['model'],label(r['mask']),f"{r['wins']}/{r['draws']}/{r['losses']}",r['unfinished'],r['complete_opening_pairs'],num(r['paired_score'],3),'['+', '.join(num(x,3) for x in r['pair_hoeffding_ci95'])+']',str(r['descriptive_elo']),str(r['elo_hoeffding_ci95'])] for r in matches])
+    text+=table(['OS','모델','구성','W/D/L','미완료','완료 페어','페어 점수','보수적95%','기술적 Elo','Elo 보수적95%'],[[r['os'],r['model'],label(r['mask']),f"{r['wins']}/{r['draws']}/{r['losses']}",r['unfinished'],r['complete_opening_pairs'],num(r['paired_score'],3),'['+', '.join(num(x,3) for x in r['pair_hoeffding_ci95'])+']',elofmt(r['descriptive_elo']),'['+', '.join(elofmt(x) for x in r['elo_hoeffding_ci95'])+']'] for r in matches])
     text+='\n[games.csv](reports/factorial/analysis/games.csv)와 [matches.json](reports/factorial/analysis/matches.json)은 게임/페어별 원시 점수, 페어 부트스트랩 및 Hoeffding 구간을 포함한다. 원래 각 실행 폴더 `matches/`에 PGN·전체 UCI trace·모델/바이너리 해시가 있다. 분석기는 PGN과 전체 합법 수, trace, 실제 terminal/claimable outcome 및 후보 색상의 점수가 일치하는지 재생 검사했다.\n\n## 판정\n\n**실제 Elo 개선은 미확정이다.** 사전 기준64개 독립 오프닝 페어에 미달한다. 8개 고정 오프닝의 재표집 구간은 모집단 대국 분포를 보장하지 않으며, 전승 시 무한 Elo 표시는 추정 경계이지 무한한 기력 개선이 아니다. 미완료 게임은 무승부로 합산하지 않고 완료된 양색 페어를 기준으로 계산했다. 모델을 바꾸는 대국은 하지 않았으므로 모델 효과에 대한 대국 Elo 결론도 없다. 전술 최상 구성과 실전 최상 구성이 같다고 확정하지 않았다.\n'
     write('MATCH_VALIDATION.md',text)
     text=f'''# FACTORIAL ABLATION — 최종 답변
@@ -274,7 +277,7 @@ Linux 스크리닝에서 선택한 직렬 구성을 각 모델의 기본 MCTS와
     text+='\nP를 포함한 5요인 및 병렬 조건부 기여도는 전체 CSV에 있다. 추가 CPU 자원 효과와 네 기능을 구분했다.\n\n## C. 통계적으로 뒷받침되는 긍정적 시너지가 있는가?\n\n'
     nconfirmed=sum(r['positive_synergy_confirmed'] for r in confirmed)
     text+=f"독립200문제의 고정 주 쌍 `{label(plan['primary_pair_mask'])}`에서 사전 동시구간·성분 대비 Holm 기준을 충족한 모델×OS는 **{nconfirmed}/{len(confirmed)}**개다. "+('해당 범위에서만 정확 응수율의 긍정적 상호작용을 확인했다.' if nconfirmed else '이 설계에서 긍정적 시너지를 확인하지 못했다.')+' 다른 쌍/고차항은 탐색 결과이며 대국 기력 시너지를 입증하지 않는다. [SYNERGY_ANALYSIS.md](SYNERGY_ANALYSIS.md).\n\n## D. 모델 규모가 증가하면 탐색의 가치가 달라지는가?\n\n네 모델은 같은 크기다. 추가 학습 체크포인트에 따라 기여도가 달라지고, 데이터 규모에 대해 단조롭게 증가한다고 결론 내릴 수 없다. 아래는 초기→10k 교체의 구성이 고정된 효과다.\n\n'
-    text+=table(['OS','탐색','초기→10k pp [95%]'],[[r['os'],r['factors'],interval(r)] for r in model_effects if r['stage']=='screen' and r['model']=='lichess10000' and int(r['mask']) in [0,8,15]])
+    text+=table(['OS','자료','탐색','초기→10k pp [95%]'],[[r['os'],r['stage'],r['factors'],interval(r)] for r in model_effects if r['model']=='lichess10000' and ((r['stage']=='screen' and int(r['mask']) in [0,8,15]) or (r['stage']=='holdout' and int(r['mask']) in [0,15]))])
     text+='\n모델×탐색의 차이의 차이, 동일 작업량 결과와 다른 후보는 [MODEL_CONTRIBUTION.md](MODEL_CONTRIBUTION.md)를 참조한다. 학습 seed 반복과 데이터 수만의 무작위 개입은 없어 그 인과 효과를 분리하지 못했다.\n\n## E. 동일 시간에서 유리한 구성은 무엇인가?\n\nLinux 스크리닝에서는 F/T 계열을 선택했다. 아래는 선택 이후 새 자료 결과이며, 새 자료를 보고 다시 구성을 고르지 않았다. 보편적 최적 구성이나 모델 승격은 미확정이다.\n\n'
     chosen=[];selection_tests=read(d/'selected-holdout.json') if (d/'selected-holdout.json').exists() else []
     for os in SYSTEMS:
@@ -300,7 +303,10 @@ Linux 스크리닝에서 선택한 직렬 구성을 각 모델의 기본 MCTS와
     text+='\n[PERFORMANCE_COST.md](PERFORMANCE_COST.md)는 Pareto 전선·계측 비용·unused 예산·새 노드/NN과 방문의 차이를 설명한다. 동일 명령 수의 절대 효율 최적은 확립하지 못했다.\n\n## G. Windows에서 낮아지는 원인은 무엇인가?\n\n'
     workrows=[r for r in cross if r['stage']=='fixed_nodes'];total=sum(int(r['n']) for r in workrows);same=sum(int(r['same_move']) for r in workrows)
     text+=f"고정512방문의 선택 수는 전체 {same}/{total}회 일치했다. 수치 출력과 Scalar 대조, 고정NN, 같은 시간의 처리량 및 후보 검증 완료율을 [CROSS_PLATFORM_ANALYSIS.md](CROSS_PLATFORM_ANALYSIS.md)에 나란히 제시했다. 일치하는 고정 작업과 시간에 따른 분기를 구분해야 한다. 두 호스트의 CPU·OS·컴파일러가 함께 달라 순수 OS 원인은 분리되지 않았으며, 과거56 대49–50의 차이를 한 원인으로 확정하지 않는다.\n\n"
+    lr=get('Linux','screen','zero128',15);wr=get('Windows','screen','zero128',15)
+    text+=f"이번 초기 모델 전체15의 100ms 결과는 Linux {lr['hits']}/100, Windows {wr['hits']}/100이다. 평균 NN은 {num(lr['mean_nn_total'],0)} 대 {num(wr['mean_nn_total'],0)}, 검증 완료율은 {num(100*float(lr['mean_verification_completed']))}% 대 {num(100*float(wr['mean_verification_completed']))}%다. 고정 작업의 일치와 이 차이는 처리량·시간 배분 설명을 지지하지만, OS만의 인과 효과와 Windows 계측 비용은 분리하지 못했다.\n\n"
     text+='## H. 실제 Elo 개선이 확인됐는가?\n\n**아니다.** 색상 교대·오프닝 페어링·동일 모델/스레드/시간 대국과 PGN 재생 검사는 수행했으나 사전64개 독립 페어 기준에 미달한다. 승무패·미완료·점 추정·보수적 구간은 [MATCH_VALIDATION.md](MATCH_VALIDATION.md)에 있다. 전술 성능과 실전 Elo는 별개이며 어떤 기능도 기본 활성화하거나 후보를 승격하지 않았다.\n'
+    text+='\n초기 모델의 전체15는 선택14보다 전술 점수가 낮았지만, 이번 기준선 상대 대국 점수의 점 추정은 더 높았다. 서로 직접 대결한 결과가 아니며 미완료·표본 오차가 커서 우열을 확정하지 않는다. 전술 순위만으로 실전 구성을 승격할 수 없음을 보여 주는 진단이다.\n'
     write('FACTORIAL_ABLATION.md',text)
     print('rendered six reports and A-H summary')
 if __name__=='__main__':main()

@@ -37,11 +37,16 @@ def numeric(linux,windows):
     return summaries,case_rows
 
 def work(linux,windows):
-    summaries=[];differences=[]
+    summaries=[];differences=[];excluded=[]
     for stage in ['fixed_nodes','fixed_nn','scalar_fixed','screen','one_second','five_seconds','ten_seconds','holdout']:
         l=cells(linux,stage);w=cells(windows,stage)
         for key in sorted(l.keys()&w.keys()):
-            lm,lr=l[key];wm,wr=w[key];assert lm['options']==wm['options'];assert lm['ids']==wm['ids'];assert lm['model_sha256']==wm['model_sha256']
+            lm,lr=l[key];wm,wr=w[key];assert lm['options']==wm['options'];assert lm['model_sha256']==wm['model_sha256']
+            if lm['ids']!=wm['ids']:
+                assert stage=='ten_seconds','Unexpected unpaired primary/workload corpus'
+                excluded.append({'stage':stage,'model':key[0],'mask':key[1],'linux_ids':lm['ids'],'windows_ids':wm['ids'],
+                    'reason':'local screen gain/loss diagnostics chose different cases; no paired OS contrast is valid'})
+                continue
             same_move=same_n=same_q=same_pv=0;maxq=maxprior=0;gains=losses=0
             for a,b in zip(lr,wr):
                 x,y=a['result'],b['result'];assert a['id']==b['id'];assert a['fen']==b['fen'] and a['expected']==b['expected']
@@ -68,7 +73,7 @@ def work(linux,windows):
                 'linux_total_wall_ms':sum(a['wall_ns'] for a in lr)/1e6,'windows_total_wall_ms':sum(a['wall_ns'] for a in wr)/1e6,
                 'linux_total_nn':sum(a['result']['neural_evals']+a['result']['verification_evals'] for a in lr),
                 'windows_total_nn':sum(a['result']['neural_evals']+a['result']['verification_evals'] for a in wr)})
-    return summaries,differences
+    return summaries,differences,excluded
 
 def interaction(linux,windows,repetitions):
     out=[]
@@ -90,7 +95,7 @@ def main():
     lm,wm=[read(x/'manifest.json') for x in [a.linux,a.windows]]
     for key in ['cpp_sha256','runner_sha256','seed','old_fixture_sha256','holdout_sha256']:assert lm[key]==wm[key],key
     n,details=numeric(a.linux,a.windows);save(a.out/'numeric-comparison.json',n);csvfile(a.out/'numeric-per-puzzle.csv',details)
-    s,d=work(a.linux,a.windows);csvfile(a.out/'cross-platform-cells.csv',s);csvfile(a.out/'cross-platform-puzzles.csv',d)
+    s,d,excluded=work(a.linux,a.windows);csvfile(a.out/'cross-platform-cells.csv',s);csvfile(a.out/'cross-platform-puzzles.csv',d);save(a.out/'excluded-cross-platform-cells.json',excluded)
     csvfile(a.out/'os-search-interactions.csv',interaction(a.linux,a.windows,a.bootstrap))
     save(a.out/'cross-platform-controls.json',{'same_cpp_runner_seed_corpora':True,'same_model_files':all(lm['models'][m]['sha256']==wm['models'][m]['sha256'] for m in MODELS),
         'linux':{k:lm[k] for k in ['os','platform','processor','host','logical_cpus','engine_cpu_affinity','engine_sha256']},

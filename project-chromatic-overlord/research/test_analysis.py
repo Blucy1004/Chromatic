@@ -53,6 +53,13 @@ class IngestTests(unittest.TestCase):
             root=Path(tmp);row,meta=self.fixture(root);meta['complete']=False;self.write(root,row,meta)
             r=analyze.ingest(root,lambda _:self.fail('incomplete included'),'synthetic')
             self.assertEqual(len(r['cells']),0);self.assertEqual(len(r['incomplete_cells']),1)
+    def test_unpaired_diagnostics_are_excluded_but_primary_mismatch_fails(self):
+        def run(stage):
+            return {'scope':'unit','manifest':{'os':'Linux'},'cells':[
+                {'summary':{'stage':stage,'model':model,'mask':0,'mode':'time','budget':10000,'repeat':0},
+                 'cases':[{'id':id,'game':id,'hit':1}]} for model,id in [('zero128','a'),('lichess10000','b')]]}
+        self.assertEqual(analyze.model_effects(run('ten_seconds'),200),[])
+        with self.assertRaises(AssertionError):analyze.model_effects(run('screen'),200)
 class MatchTests(unittest.TestCase):
     def test_terminal_unfinished_and_pair_interval(self):
         with tempfile.TemporaryDirectory() as tmp:
