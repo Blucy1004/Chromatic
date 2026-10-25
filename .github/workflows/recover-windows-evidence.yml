@@ -56,9 +56,12 @@ jobs:
                   if path.is_file():
                       blob=api('git/blobs',{'encoding':'base64','content':base64.b64encode(path.read_bytes()).decode()})
                       entries.append({'path':'project-chromatic-overlord/reports/windows-native/40146054219-1/'+path.relative_to(directory).as_posix(),'mode':'100644','type':'blob','sha':blob['sha']})
-              documents=list(root.rglob('WINDOWS_VALIDATION.md'));assert len(documents)==1
-              blob=api('git/blobs',{'encoding':'base64','content':base64.b64encode(documents[0].read_bytes()).decode()})
-              entries.append({'path':'project-chromatic-overlord/WINDOWS_VALIDATION.md','mode':'100644','type':'blob','sha':blob['sha']})
+              # The original report renderer failed after saving run-summary.
+              # Preserve original native logs/matrix without inventing a missing document.
+              documents=list(root.rglob('WINDOWS_VALIDATION.md'))
+              if len(documents)==1:
+                  blob=api('git/blobs',{'encoding':'base64','content':base64.b64encode(documents[0].read_bytes()).decode()})
+                  entries.append({'path':'project-chromatic-overlord/WINDOWS_VALIDATION.md','mode':'100644','type':'blob','sha':blob['sha']})
               head=api('git/ref/heads/operation-overlord')['object']['sha'];base=api('git/commits/'+head)['tree']['sha']
               tree=api('git/trees',{'base_tree':base,'tree':entries})['sha']
               commit=api('git/commits',{'message':'Preserve verified original Windows native evidence [skip ci]','tree':tree,'parents':[head]})['sha']
