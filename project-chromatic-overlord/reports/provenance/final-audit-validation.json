@@ -336,5 +336,8 @@
     }
   ],
   "defaults_changed": false,
-  "model_promoted": false
+  "model_promoted": false,
+  "current_cpp_source_hashes_match_both_native_matrices": true,
+  "earlier_preserved_files_match": 308,
+  "documentation_links_exist": true
 }
