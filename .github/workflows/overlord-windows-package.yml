@@ -1,0 +1,118 @@
+name: CHROMATIC Windows x64 Release package
+on:
+  push:
+    branches: [operation-overlord]
+    paths:
+      - .github/workflows/overlord-windows-package.yml
+      - project-chromatic-overlord/packaging/**
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: chromatic-windows-package-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  portable:
+    runs-on: windows-2022
+    timeout-minutes: 20
+    env:
+      PACKAGE_BUILD: build-windows-portable
+      PACKAGE_REPORT: project-chromatic-overlord/reports/windows-package/${{ github.run_id }}-${{ github.run_attempt }}
+      PACKAGE_OUTPUT: project-chromatic-overlord/packages/windows-x64/${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - run: python -m pip install chess==1.10.0
+      - name: Build native x64 Release with static MSVC runtime
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force $env:PACKAGE_REPORT | Out-Null
+          $champion=(Get-FileHash chromatic-shard-trainer/champion/default.zero -Algorithm SHA256).Hash.ToLower()
+          if ($champion -ne 'f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9') { throw 'Champion identity mismatch' }
+          cmake -S project-chromatic-overlord -B "$env:PACKAGE_BUILD" -G 'Visual Studio 17 2022' -A x64 -DCHROMATIC_WINDOWS_PORTABLE=ON *> "$env:PACKAGE_REPORT/configure.log"
+          if ($LASTEXITCODE -ne 0) { throw 'Portable configure failed' }
+          cmake --build "$env:PACKAGE_BUILD" --config Release --parallel 2 *> "$env:PACKAGE_REPORT/build.log"
+          if ($LASTEXITCODE -ne 0) { throw 'Portable Release build failed' }
+          foreach ($project in @('zero_core','chromatic_overlord')) {
+            [xml]$vcx=Get-Content "$env:PACKAGE_BUILD/$project.vcxproj" -Raw
+            $groups=@($vcx.Project.ItemDefinitionGroup | Where-Object { $_.Condition -match 'Release\|x64' })
+            if ($groups.Count -ne 1 -or $groups[0].ClCompile.RuntimeLibrary -ne 'MultiThreaded') { throw "Static Release runtime missing: $project" }
+          }
+          $compiler=Get-ChildItem "$env:PACKAGE_BUILD/CMakeFiles" -Recurse -Filter CMakeCXXCompiler.cmake | Select-Object -First 1
+          Get-Content $compiler.FullName | Set-Content "$env:PACKAGE_REPORT/compiler.txt" -Encoding utf8
+          @{source_commit='${{ github.sha }}';configuration='Release';architecture='x64';runtime='MultiThreaded /MT';champion_sha256=$champion} | ConvertTo-Json | Set-Content "$env:PACKAGE_REPORT/build.json" -Encoding utf8
+      - name: Native rule, inference, memory and module regressions
+        shell: pwsh
+        run: |
+          ctest --test-dir "$env:PACKAGE_BUILD" -C Release --output-on-failure *> "$env:PACKAGE_REPORT/ctest.log"
+          if ($LASTEXITCODE -ne 0) { throw 'Portable native regression failed' }
+      - name: Audit actual executable imports and embedded manifest
+        shell: pwsh
+        run: |
+          $vswhere="${env:ProgramFiles(x86)}/Microsoft Visual Studio/Installer/vswhere.exe"
+          $vs=& $vswhere -latest -products '*' -property installationPath
+          $toolset=Get-ChildItem "$vs/VC/Tools/MSVC" -Directory | Sort-Object Name -Descending | Select-Object -First 1
+          & "$($toolset.FullName)/bin/Hostx64/x64/dumpbin.exe" /DEPENDENTS "$env:PACKAGE_BUILD/Release/chromatic_overlord.exe" *> "$env:PACKAGE_REPORT/imports.txt"
+          if ($LASTEXITCODE -ne 0) { throw 'DLL import audit failed' }
+          $mt=Get-ChildItem "${env:ProgramFiles(x86)}/Windows Kits/10/bin/*/x64/mt.exe" | Sort-Object FullName -Descending | Select-Object -First 1
+          $exe=(Resolve-Path "$env:PACKAGE_BUILD/Release/chromatic_overlord.exe").Path
+          & $mt.FullName -nologo "-inputresource:$exe;#1" "-out:$env:PACKAGE_REPORT/embedded-manifest.xml"
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot inspect actual embedded manifest' }
+      - name: Prepare ZIP and execute extracted package in Unicode path
+        shell: pwsh
+        run: |
+          python project-chromatic-overlord/packaging/make_package.py prepare --engine "$env:PACKAGE_BUILD/Release/chromatic_overlord.exe" --model chromatic-shard-trainer/champion/default.zero --out "$env:RUNNER_TEMP/CHROMATIC-Windows-x64-Release" --zip "$env:RUNNER_TEMP/chromatic-candidate.zip" *> "$env:PACKAGE_REPORT/prepare.log"
+          if ($LASTEXITCODE -ne 0) { throw 'Package preparation failed' }
+          $caseRoot=Join-Path $env:RUNNER_TEMP "CHROMATIC package O'Brien 한글"
+          Expand-Archive -LiteralPath "$env:RUNNER_TEMP/chromatic-candidate.zip" -DestinationPath $caseRoot
+          $package=Join-Path $caseRoot 'CHROMATIC-Windows-x64-Release'
+          python project-chromatic-overlord/packaging/validate_package.py --package "$package" --out "$env:PACKAGE_REPORT" --imports "$env:PACKAGE_REPORT/imports.txt" --embedded-manifest "$env:PACKAGE_REPORT/embedded-manifest.xml" *> "$env:PACKAGE_REPORT/package-tests.log"
+          if ($LASTEXITCODE -ne 0) { throw 'Extracted package validation failed' }
+      - name: Finalize validated ZIP and verify final extracted files
+        shell: pwsh
+        run: |
+          $package=Join-Path $env:RUNNER_TEMP "CHROMATIC package O'Brien 한글/CHROMATIC-Windows-x64-Release"
+          $finalZip=Join-Path $env:RUNNER_TEMP 'CHROMATIC-Windows-x64-Release.zip'
+          python project-chromatic-overlord/packaging/make_package.py finalize --package "$package" --validation "$env:PACKAGE_REPORT" --zip "$finalZip" *> "$env:PACKAGE_REPORT/finalize.log"
+          if ($LASTEXITCODE -ne 0) { throw 'Validated package finalization failed' }
+          $finalRoot=Join-Path $env:RUNNER_TEMP "CHROMATIC final O'Brien 한글"
+          Expand-Archive -LiteralPath $finalZip -DestinationPath $finalRoot
+          & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File "$finalRoot/CHROMATIC-Windows-x64-Release/verify-package.ps1" *> "$env:PACKAGE_REPORT/final-extraction-check.log"
+          if ($LASTEXITCODE -ne 0) { throw 'Final ZIP extraction check failed' }
+          $champion=(Get-FileHash chromatic-shard-trainer/champion/default.zero -Algorithm SHA256).Hash.ToLower()
+          if ($champion -ne 'f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9') { throw 'Original champion changed' }
+          New-Item -ItemType Directory -Force $env:PACKAGE_OUTPUT | Out-Null
+          Copy-Item -LiteralPath $finalZip -Destination "$env:PACKAGE_OUTPUT/CHROMATIC-Windows-x64-Release.zip"
+          Copy-Item -LiteralPath "$finalZip.sha256" -Destination "$env:PACKAGE_OUTPUT/CHROMATIC-Windows-x64-Release.zip.sha256"
+      - name: Preserve new package and validation evidence
+        if: ${{ !cancelled() }}
+        shell: pwsh
+        run: |
+          git config user.name 'chromatic-validation[bot]'
+          git config user.email 'chromatic-validation[bot]@users.noreply.github.com'
+          git add -- "$env:PACKAGE_REPORT"
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot stage package evidence' }
+          if (Test-Path "$env:PACKAGE_OUTPUT/CHROMATIC-Windows-x64-Release.zip") {
+            git add -- "$env:PACKAGE_OUTPUT"
+            if ($LASTEXITCODE -ne 0) { throw 'Cannot stage package archive' }
+          }
+          git commit -q -m '[factorial] Preserve native Windows portable package evidence [skip ci]'
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot commit package evidence' }
+          git fetch origin operation-overlord
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot fetch package branch' }
+          git rebase FETCH_HEAD
+          if ($LASTEXITCODE -ne 0) { throw 'Package evidence rebase needs review; artifact retained' }
+          git push origin HEAD:operation-overlord
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot push package evidence' }
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: CHROMATIC-Windows-x64-Release-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ env.PACKAGE_REPORT }}
+            ${{ env.PACKAGE_OUTPUT }}
