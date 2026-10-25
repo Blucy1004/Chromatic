@@ -1,0 +1,28 @@
+name: Freeze independent factorial puzzles
+on:
+  workflow_dispatch:
+  push:
+    branches: [operation-overlord]
+    paths: [.github/workflows/overlord-factorial-data.yml]
+permissions:
+  contents: write
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install python-chess==1.999 chess==1.10.0 zstandard==0.25.0
+      - run: python project-chromatic-overlord/research/collect_holdout.py
+      - name: Preserve fixed test split
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'chromatic-validation[bot]'
+          git config user.email 'chromatic-validation[bot]@users.noreply.github.com'
+          git add project-chromatic-overlord/research/fixtures
+          git commit -m 'Freeze unseen official puzzles before factorial selection [skip ci]'
+          git push origin HEAD:operation-overlord
