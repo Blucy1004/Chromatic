@@ -90,8 +90,12 @@ def estimates(run,repetitions):
             ci=st.cluster_bootstrap(diffs,groups,repetitions) if masks else None;ps=[];items=[]
             for i,m in enumerate(masks):
                 g=int(((values[m]==1)&(values[0]==0)).sum());l=int(((values[m]==0)&(values[0]==1)).sum());p=st.mcnemar(g,l);ps.append(p)
+                lookup={c['summary']['mask']:c for c in cells};costs={}
+                for metric in ['cpu_ms','wall_ms','completed_visits','nn_total','verification_nodes','node_creations']:
+                    old=lookup[0]['summary']['mean_'+metric];new=lookup[m]['summary']['mean_'+metric]
+                    costs['delta_'+metric]=new-old;costs['ratio_'+metric]=new/old if old else None
                 items.append({**common,'comparison':f'{label(m)}-base','mask':m,'gains':g,'losses':l,'delta_pp':ci['mean'][i]*100,
-                              'lo95_pp':ci['ci95'][i][0]*100,'hi95_pp':ci['ci95'][i][1]*100,'p_exact':p,'clusters':ci['clusters']})
+                              'lo95_pp':ci['ci95'][i][0]*100,'hi95_pp':ci['ci95'][i][1]*100,'p_exact':p,'clusters':ci['clusters'],**costs})
             for item,p in zip(items,st.holm(ps)):item['p_holm_within_model_stage']=p
             contrasts.extend(items)
         if len(values)==32:
@@ -99,6 +103,8 @@ def estimates(run,repetitions):
             for name,bits,bg in designs:
                 bits=list(bits);s=st.shapley(values,bits,bg);assert np.allclose(s.sum(axis=1),values[bg|sum(1<<b for b in bits)]-values[bg])
                 ci=st.cluster_bootstrap(s,groups,repetitions)
+                cost_shapley={metric:st.shapley({c['summary']['mask']:np.array([r[metric] for r in c['cases']]) for c in cells},bits,bg).mean(axis=0)
+                              for metric in ['cpu_ms','wall_ms','completed_visits','nn_total']}
                 for i,bit in enumerate(bits):
                     full=bg|sum(1<<b for b in bits);alone=values[bg|1<<bit]-values[bg];removed=values[full]-values[full&~(1<<bit)]
                     aci=st.cluster_bootstrap(np.stack([alone,removed],axis=1),groups,repetitions)
@@ -106,7 +112,8 @@ def estimates(run,repetitions):
                         'lo95_pp':ci['ci95'][i][0]*100,'hi95_pp':ci['ci95'][i][1]*100,
                         'simultaneous_lo95_pp':ci['simultaneous_ci95'][i][0]*100,'simultaneous_hi95_pp':ci['simultaneous_ci95'][i][1]*100,
                         'standalone_pp':float(alone.mean()*100),'standalone_lo95_pp':aci['ci95'][0][0]*100,'standalone_hi95_pp':aci['ci95'][0][1]*100,
-                        'full_remove_pp':float(removed.mean()*100),'remove_lo95_pp':aci['ci95'][1][0]*100,'remove_hi95_pp':aci['ci95'][1][1]*100})
+                        'full_remove_pp':float(removed.mean()*100),'remove_lo95_pp':aci['ci95'][1][0]*100,'remove_hi95_pp':aci['ci95'][1][1]*100,
+                        **{'shapley_'+metric:float(v[i]) for metric,v in cost_shapley.items()}})
             masks=[m for m in range(32) if m.bit_count()>=2];x=np.stack([st.mobius(values,m) for m in masks],axis=1);ci=st.cluster_bootstrap(x,groups,repetitions)
             for i,m in enumerate(masks):
                 interactions.append({**common,'mask':m,'factors':label(m),'order':m.bit_count(),'interaction_pp':ci['mean'][i]*100,
@@ -146,8 +153,25 @@ def model_effects(run,repetitions):
     for item,p in zip(out,st.holm([x['p_exact'] for x in out])):item['p_holm_run']=p
     return out
 
-def holdout_confirmation(runs,repetitions):
+def model_search_interactions(run,repetitions):
     out=[]
+    for stage in ['screen','holdout','fixed_nodes','fixed_nn']:
+        lookup={(c['summary']['model'],c['summary']['mask']):c for c in run['cells'] if c['summary']['stage']==stage and c['summary']['repeat']==0}
+        for model in MODELS[1:]:
+            if ('zero128',0) not in lookup or (model,0) not in lookup:continue
+            masks=sorted(m for mod,m in lookup if mod==model and m and ('zero128',m) in lookup)
+            if not masks:continue
+            base=lookup['zero128',0]['cases'];ids=[r['id'] for r in base];groups=[r['game'] for r in base]
+            def v(mod,mask):
+                rows=lookup[mod,mask]['cases'];assert [r['id'] for r in rows]==ids;return np.array([r['hit'] for r in rows],float)
+            x=np.stack([(v(model,m)-v(model,0))-(v('zero128',m)-v('zero128',0)) for m in masks],axis=1);ci=st.cluster_bootstrap(x,groups,repetitions)
+            for i,m in enumerate(masks):out.append({'scope':run['scope'],'os':run['manifest']['os'],'stage':stage,'model':model,'reference':'zero128','mask':m,'factors':label(m),
+                'interaction_pp':ci['mean'][i]*100,'lo95_pp':ci['ci95'][i][0]*100,'hi95_pp':ci['ci95'][i][1]*100,
+                'simultaneous_lo95_pp':ci['simultaneous_ci95'][i][0]*100,'simultaneous_hi95_pp':ci['simultaneous_ci95'][i][1]*100})
+    return out
+
+def holdout_confirmation(runs,repetitions):
+    out=[];all_vectors=[];all_groups=None;all_ids=None;ps=[]
     for run in runs:
         path=Path(run['root'])/'selection-plan.json'
         if not path.exists():continue
@@ -159,20 +183,27 @@ def holdout_confirmation(runs,repetitions):
         if not models:continue
         first=next(iter(models.values()))[1];names=list(models)
         x=np.stack([models[m][0][a|b]-models[m][0][a]-models[m][0][b]+models[m][0][0] for m in names],axis=1)
-        ci=st.cluster_bootstrap(x,first,repetitions);ps=[];items=[]
+        ids=[r['id'] for c in run['cells'] if c['summary']['stage']=='holdout' and c['summary']['model']==names[0] for r in c['cases']][:len(first)]
+        if all_groups is None:all_groups=first;all_ids=ids
+        else:assert first==all_groups and ids==all_ids
+        all_vectors.extend(x.T)
+        items=[]
         for i,m in enumerate(names):
             v,g=models[m];armtests=[]
             for ref in [a,b]:
                 gain=int(((v[a|b]==1)&(v[ref]==0)).sum());loss=int(((v[a|b]==0)&(v[ref]==1)).sum());p=st.mcnemar(gain,loss);ps.append(p)
                 armtests.append({'reference_mask':ref,'gains':gain,'losses':loss,'delta_pp':float((v[a|b]-v[ref]).mean()*100),'p_exact':p})
             items.append({'scope':run['scope'],'os':run['manifest']['os'],'model':m,'pair':label(a|b),'mask':a|b,'n':len(g),
-                'synergy_pp':ci['mean'][i]*100,'lo95_pp':ci['ci95'][i][0]*100,'hi95_pp':ci['ci95'][i][1]*100,
-                'simultaneous_lo95_pp':ci['simultaneous_ci95'][i][0]*100,'simultaneous_hi95_pp':ci['simultaneous_ci95'][i][1]*100,'component_tests':armtests})
-        adjusted=iter(st.holm(ps))
-        for item in items:
-            for test in item['component_tests']:test['p_holm_8']=next(adjusted)
-            item['positive_synergy_confirmed']=item['simultaneous_lo95_pp']>0 and all(t['delta_pp']>0 and t['p_holm_8']<.05 for t in item['component_tests'])
+                'component_tests':armtests})
         out.extend(items)
+    if out:
+        ci=st.cluster_bootstrap(np.stack(all_vectors,axis=1),all_groups,repetitions);adjusted=iter(st.holm(ps))
+        for i,item in enumerate(out):
+            item.update(synergy_pp=ci['mean'][i]*100,lo95_pp=ci['ci95'][i][0]*100,hi95_pp=ci['ci95'][i][1]*100,
+                simultaneous_lo95_pp=ci['simultaneous_ci95'][i][0]*100,simultaneous_hi95_pp=ci['simultaneous_ci95'][i][1]*100,
+                simultaneous_family_size=len(out),component_test_family_size=len(ps))
+            for test in item['component_tests']:test['p_holm_all_os_models']=next(adjusted)
+            item['positive_synergy_confirmed']=item['simultaneous_lo95_pp']>0 and all(t['delta_pp']>0 and t['p_holm_all_os_models']<.05 for t in item['component_tests'])
     return out
 
 def main():
@@ -192,6 +223,7 @@ def main():
         for target,rows in zip(tables,estimates(run,a.bootstrap)):target.extend(rows)
     for name,table in zip(['paired-contrasts','shapley','interactions','pareto'],tables):csvfile(a.out/(name+'.csv'),table)
     csvfile(a.out/'model-effects.csv',[x for r in runs for x in model_effects(r,a.bootstrap)])
+    csvfile(a.out/'model-search-interactions.csv',[x for r in runs for x in model_search_interactions(r,a.bootstrap)])
     save(a.out/'holdout-confirmation.json',holdout_confirmation(runs,a.bootstrap))
     save(a.out/'analysis-manifest.json',{'analysis_script_sha256':sha(Path(__file__)),'statistics_sha256':sha(Path(__file__).with_name('factorial_stats.py')),
         'bootstrap_repetitions':a.bootstrap,'runs':[{k:v for k,v in r.items() if k!='cells'} for r in runs],
