@@ -75,4 +75,22 @@ class MatchTests(unittest.TestCase):
             self.assertEqual(s['pair_hoeffding_ci95'],[0,1]);self.assertFalse(s['confirmed_elo_gain'])
             records[0]['score']=0;(root/'matches/zero128-m15.json').write_text(json.dumps(records))
             with self.assertRaises(AssertionError):match_analysis.analyze(root)
+    def test_global_holdout_families(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);(root/'selection-plan.json').write_text(json.dumps({'best_serial':{'zero128':4,'lichess100':4},'primary_pair':[0,2]}))
+            cells=[]
+            for model in ['zero128','lichess100']:
+                for mask in [0,1,4,5]:
+                    values=[0,0,1,1] if mask in [0,1] else [1,1,1,1]
+                    cells.append({'summary':{'stage':'holdout','model':model,'mask':mask},
+                        'cases':[{'id':str(i),'game':str(i),'hit':v} for i,v in enumerate(values)]})
+            runs=[{'root':str(root),'scope':os,'manifest':{'os':os},'cells':cells} for os in ['Linux','Windows']]
+            selected=analyze.selected_holdout(runs,200);self.assertEqual(len(selected),4)
+            for r in selected:
+                self.assertEqual(r['family_size'],4);self.assertEqual((r['gains'],r['losses']),(2,0));self.assertEqual(r['delta_pp'],50)
+                self.assertEqual(r['p_holm_family'],1)
+            primary=analyze.holdout_confirmation(runs,200);self.assertEqual(len(primary),4)
+            for r in primary:
+                self.assertEqual(r['synergy_pp'],0);self.assertEqual(r['simultaneous_family_size'],4)
+                self.assertEqual(r['component_test_family_size'],8);self.assertFalse(r['positive_synergy_confirmed'])
 if __name__=='__main__':unittest.main()

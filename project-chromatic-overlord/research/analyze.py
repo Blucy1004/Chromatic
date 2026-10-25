@@ -35,7 +35,7 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def finite(v):return None if isinstance(v,float) and not math.isfinite(v) else v
 
 def ingest(root,case_writer,scope):
-    manifest=read(root/'manifest.json');manifest_sha=sha(root/'manifest.json');osname=manifest['os'];cells=[];skipped=[]
+    manifest=read(root/'manifest.json');manifest_sha=sha(root/'manifest.json');osname=manifest['os'];cells=[];skipped=[];seen=set()
     for meta_path in sorted(root.glob('*/*.meta.json')):
         meta=read(meta_path);path=meta_path.with_name(meta_path.name.replace('.meta.json','.jsonl.gz'))
         if not meta.get('complete') or not path.exists():skipped.append(str(meta_path));continue
@@ -44,13 +44,20 @@ def ingest(root,case_writer,scope):
         loaded=meta['loaded_model'];assert loaded==meta['loaded_model_after'] and loaded['sha256']==meta['model_sha256']==manifest['models'][meta['model']]['sha256']
         raw=[json.loads(x) for x in gzip.decompress(path.read_bytes()).decode().splitlines()]
         assert [x['id'] for x in raw]==meta['ids'];assert len(set(meta['ids']))==len(raw)
+        cell_identity=(meta_path.parent.name,raw[0]['cell']);assert cell_identity not in seen;seen.add(cell_identity)
         simple=[];hist=np.zeros(513,dtype=np.int64)
         for r in raw:
+            assert r['stage']==meta_path.parent.name
+            for field in ['model','mask','mode','budget']:assert r[field]==meta[field]
             z=r['result'];q=z['research'];assert len(q['leaf_depth'])==513
             hist+=q['leaf_depth'];assert sum(q['leaf_depth'])==q['depth_samples']
             assert q['node_creations']+1-z['nodes_evicted']==z['arena_nodes']
             if meta['mode']=='nodes':assert z['simulations']==meta['budget']
             if meta['mode']=='nn':assert z['neural_evals']+z['verification_evals']<=meta['budget']
+            for bit,counter in [(0,'counterexample_calls'),(1,'adaptive_calls'),(2,'forcing_checks'),(3,'material_calls')]:
+                if not (r['mask'] & (1<<bit)):assert q.get(counter,0)==0
+            if not (r['mask'] & 13):assert q.get('verification_calls',0)==0
+            if not (r['mask'] & 12):assert q.get('admission_calls',0)==0
             b={'scope':scope,'os':osname,'stage':r['stage'],'model':r['model'],'mask':r['mask'],'factors':label(r['mask']),
                'mode':r['mode'],'budget':r['budget'],'repeat':r['repeat'],'cell':r['cell'],'id':r['id'],'game':r['game'],
                'seed':manifest.get('seed',1),'threads':meta['options'].get('Threads',1),'run_manifest_sha256':manifest_sha,
@@ -185,17 +192,18 @@ def model_effects(run,repetitions):
 
 def marginal_effects(run,repetitions):
     out=[]
-    for stage in ['screen','fixed_nodes','fixed_nn']:
+    for stage in ['screen','fixed_nodes','fixed_nn','holdout']:
         for model in MODELS:
             cells=[c for c in run['cells'] if c['summary']['stage']==stage and c['summary']['model']==model and c['summary']['repeat']==0]
-            if len(cells)!=32:continue
+            if (len(cells)!=32 and stage!='holdout') or len(cells)<2:continue
             values,groups=vectors(cells);lookup={c['summary']['mask']:c for c in cells}
-            keys=[(bit,bg) for bit in range(5) for bg in range(32) if not bg>>bit&1]
+            keys=[(bit,bg) for bit in range(5) for bg in sorted(values) if not (bg & (1<<bit)) and (bg | (1<<bit)) in values]
+            if not keys:continue
             x=np.stack([values[bg|1<<bit]-values[bg] for bit,bg in keys],axis=1);ci=st.cluster_bootstrap(x,groups,repetitions)
             for i,(bit,bg) in enumerate(keys):
                 a,b=values[bg|1<<bit],values[bg];gain=int(((a==1)&(b==0)).sum());loss=int(((a==0)&(b==1)).sum())
                 out.append({'scope':run['scope'],'os':run['manifest']['os'],'stage':stage,'model':model,'factor':BITS[bit],'background':bg,'background_factors':label(bg),
-                    'gains':gain,'losses':loss,'delta_pp':ci['mean'][i]*100,'lo95_pp':ci['ci95'][i][0]*100,'hi95_pp':ci['ci95'][i][1]*100,
+                    'gains':gain,'losses':loss,'p_exact':st.mcnemar(gain,loss),'delta_pp':ci['mean'][i]*100,'lo95_pp':ci['ci95'][i][0]*100,'hi95_pp':ci['ci95'][i][1]*100,
                     **{'delta_'+metric:lookup[bg|1<<bit]['summary']['mean_'+metric]-lookup[bg]['summary']['mean_'+metric] for metric in ['cpu_ms','wall_ms','completed_visits','nn_total']}})
     return out
 
@@ -291,7 +299,10 @@ def main():
         for target,rows in zip(tables,estimates(run,a.bootstrap)):target.extend(rows)
     for name,table in zip(['paired-contrasts','shapley','interactions','pareto'],tables):csvfile(a.out/(name+'.csv'),table)
     csvfile(a.out/'model-effects.csv',[x for r in runs for x in model_effects(r,a.bootstrap)])
-    csvfile(a.out/'context-marginals.csv',[x for r in runs for x in marginal_effects(r,a.bootstrap)])
+    marginals=[x for r in runs for x in marginal_effects(r,a.bootstrap)]
+    holdout_marginals=[x for x in marginals if x['stage']=='holdout']
+    for x,p in zip(holdout_marginals,st.holm([x['p_exact'] for x in holdout_marginals])):x['p_holm_holdout_edges_all_os_models']=p
+    csvfile(a.out/'context-marginals.csv',marginals)
     csvfile(a.out/'model-search-interactions.csv',[x for r in runs for x in model_search_interactions(r,a.bootstrap)])
     save(a.out/'holdout-confirmation.json',holdout_confirmation(runs,a.bootstrap))
     save(a.out/'selected-holdout.json',selected_holdout(runs,a.bootstrap))

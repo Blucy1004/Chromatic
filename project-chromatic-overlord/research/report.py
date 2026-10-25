@@ -10,6 +10,7 @@ def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def rows(p):return list(csv.DictReader(p.open()))
 def label(m):return ''.join(c for i,c in enumerate(BITS) if int(m)>>i&1) or 'base'
 def num(x,d=1):return '미측정' if x is None or x=='' else f'{float(x):.{d}f}'
+def pvalue(x):return '미측정' if x is None or x=='' else f'{float(x):.3g}'
 def interval(r,key='delta_pp',lo='lo95_pp',hi='hi95_pp'):
     return f"{num(r[key])} [{num(r[lo])}, {num(r[hi])}]"
 def table(headers,data):
@@ -52,7 +53,7 @@ def main():
     text+='\n각 학습 보고서·manifest의 실제 로컬 경로와 SHA, 원래 cursor와 source identity, PT/미러/ZERO의 동일성 검사는 [model-lineage.json](reports/factorial/preflight/model-lineage.json)에 있다. 실제 학습 실행을 다시 한 것은 아니다.\n\n'
     text+='PT 텐서의 표준 재직렬화 해시, C++가 메모리에서 계산한 실제 로딩 텐서 해시, 파일 해시가 네 모델 모두 일치했다. 각 OS의 절대 로딩 경로는 셀 `.meta.json`의 `loaded_model.path`에 보존했다. C++ 호환성은 전수 실험 중 셀 시작/종료마다 확인했다. 최초 모델의 학습 기록과 10k 계보의 상세 근거는 기존 [MODEL_PROVENANCE.md](MODEL_PROVENANCE.md), 100/1k의 체크포인트 검사는 [preflight](reports/factorial/preflight/models-and-resume.json)에 있다. 원래 학습을 다시 수행한 실험은 아니다.\n\n## 탐색을 고정한 모델 교체\n\n'+note+'\n\n'
     selected=[r for r in model_effects if (r['stage']=='screen' and int(r['mask']) in [0,8,15]) or (r['stage']=='holdout' and int(r['mask']) in [0,15])]
-    text+=table(['OS','자료','탐색','후보−초기','교체 효과 pp [95%]','새 정답/손실','Holm p'],[[r['os'],r['stage'],r['factors'],r['model'],interval(r),f"{r['gains']}/{r['losses']}",num(r['p_holm_run'],4)] for r in selected])
+    text+=table(['OS','자료','탐색','후보−초기','교체 효과 pp [95%]','새 정답/손실','Holm p'],[[r['os'],r['stage'],r['factors'],r['model'],interval(r),f"{r['gains']}/{r['losses']}",pvalue(r['p_holm_run'])] for r in selected])
     text+='\n## 모델 × 탐색\n\n동일 모델에서의 탐색 효과 차이 `(후보구성−후보기본)−(초기구성−초기기본)`를 모든 공통 구성에서 계산했다. [model-search-interactions.csv](reports/factorial/analysis/model-search-interactions.csv)에 점별·모델 내 동시 구간을 기록했다. 고정된 탐색 구성별로 모델 효과를 구분해야 하며, 각 모델에서 서로 다른 최적 구성을 선택한 점수 차이를 순수 모델 효과로 해석할 수 없다. 별도 학습 seed 반복이나 무작위 데이터 규모 배정이 없어 학습 과정의 불확실성은 이 퍼즐 부트스트랩 구간에 포함되지 않는다.\n'
     write('MODEL_CONTRIBUTION.md',text)
 
@@ -108,6 +109,9 @@ MateProofNodes=0을 고정했고 기존 기본256은 별도 대조군으로 보�
                     if r:diagnostic.append([os,stage,m,label(mask),num(float(r['mean_expected_mate1'])*int(r['n']),0),num(float(r['mean_admission_mate1'])*int(r['n']),0),r['hits'],num(float(r['mean_mate_equivalent_hit'])*int(r['n']),0)])
     text+=table(['OS','자료','모델','구성','기대 수 M1','공통 M1 증명','정확 응수','동등 M1 허용'],diagnostic)
     text+='\n[paired-contrasts.csv](reports/factorial/analysis/paired-contrasts.csv)는 새 정답/손실을 기대 수 M1과 기타 문제로 나눈다. 검증기 내부의 재귀 메이트 발견과 공통 루트 스캔은 별개이며, 입장 검사 호출 시간만으로 전체 F/T 인과 비용을 정할 수 없다.\n'
+    edges=[r for r in rows(d/'context-marginals.csv') if r['stage']=='holdout']
+    text+='\n## 독립 자료에서 가능한 단일 옵션 추가 대조\n\n고정한 구성 집합에 존재하는 모든 한 비트 차이를 포함했다. 아래의 각 차이는 동일200문제에서 짝지었으며, OS×모델의 모든 가용 edge를 한 보조 가족으로 Holm 보정했다. 이 자료에 없는 구성은 추정해 채우지 않았다. 주 시너지 확인과는 별개인 보조 분석이다.\n\n'
+    text+=table(['OS','모델','배경','추가 기능','변화 pp [점별95%]','획득/손실','보조 edge Holm p'],[[r['os'],r['model'],r['background_factors'],r['factor'],interval(r),f"{r['gains']}/{r['losses']}",pvalue(r.get('p_holm_holdout_edges_all_os_models'))] for r in edges])
     write('SEARCH_ABLATION.md',text)
 
     text=f'''# 시너지와 통계적 불확실성
@@ -127,7 +131,7 @@ MateProofNodes=0을 고정했고 기존 기본256은 별도 대조군으로 보�
 ## 독립 200문제: 주 쌍
 
 '''
-    text+=table(['OS','모델','S pp [점별95%]','동시95%','AB−A / AB−B pp','성분 Holm p','확인'],[[r['os'],r['model'],interval(r,'synergy_pp'),f"[{num(r['simultaneous_lo95_pp'])}, {num(r['simultaneous_hi95_pp'])}]",' / '.join(num(t['delta_pp']) for t in r['component_tests']),' / '.join(num(t['p_holm_all_os_models'],4) for t in r['component_tests']),'예' if r['positive_synergy_confirmed'] else '아니오'] for r in confirmed])
+    text+=table(['OS','모델','S pp [점별95%]','동시95%','AB−A / AB−B pp','성분 Holm p','확인'],[[r['os'],r['model'],interval(r,'synergy_pp'),f"[{num(r['simultaneous_lo95_pp'])}, {num(r['simultaneous_hi95_pp'])}]",' / '.join(num(t['delta_pp']) for t in r['component_tests']),' / '.join(pvalue(t['p_holm_all_os_models']) for t in r['component_tests']),'예' if r['positive_synergy_confirmed'] else '아니오'] for r in confirmed])
     text+='\n[holdout-confirmation.json](reports/factorial/analysis/holdout-confirmation.json)은 새 정답/손실과 가족 크기도 제공한다. 주 쌍 외의 긍정적 상호작용은 독립 자료에서 검증하지 않았으므로 확정하지 않는다.\n\n## 100문제 탐색적 쌍별 상호작용\n\n'
     pairs=[r for r in interactions if r['stage']=='screen' and int(r['order'])==2 and r['model'] in CORE]
     text+=table(['OS','모델','쌍','S pp [점별95%]','같은 모델 모든 차수 동시95%'],[[r['os'],r['model'],r['factors'],interval(r,'interaction_pp'),f"[{num(r['simultaneous_lo95_pp'])}, {num(r['simultaneous_hi95_pp'])}]"] for r in pairs])
@@ -280,7 +284,7 @@ Linux 스크리닝에서 선택한 직렬 구성을 각 모델의 기본 MCTS와
             c=next(x for x in contrasts if x['os']==os and x['stage']=='holdout' and x['model']==m and int(x['mask'])==mask)
             adjusted=next((x for x in selection_tests if x['os']==os and x['model']==m),None)
             chosen.append([os,m,label(mask),hit(os,'holdout',m,0),hit(os,'holdout',m,mask),interval(c),
-                f"[{num(adjusted['simultaneous_lo95_pp'])}, {num(adjusted['simultaneous_hi95_pp'])}]" if adjusted else '미측정',num(adjusted['p_holm_family'],5) if adjusted else '미측정',num(r['mean_cpu_ms']),num(r['mean_wall_ms'])])
+                f"[{num(adjusted['simultaneous_lo95_pp'])}, {num(adjusted['simultaneous_hi95_pp'])}]" if adjusted else '미측정',pvalue(adjusted['p_holm_family']) if adjusted else '미측정',num(r['mean_cpu_ms']),num(r['mean_wall_ms'])])
     text+=table(['OS','모델','고정 후보','기본/200','후보/200','차이 pp [점별95%]','동시95%','후보군 Holm p','CPU ms','실제wall ms'],chosen)
     text+='\n[selected-holdout.json](reports/factorial/analysis/selected-holdout.json)은 고정 후보×모델×OS의 보조 가족으로 동시 구간과 Holm을 적용한다. 주 시너지 가족과 별도인 보조 분석이며, 최적 구성 또는 전체 가설에 대한 통합적 유의성 검증은 아니다.\n'
     text+='\n## F. 동일 작업량에서 효율적인 구성은 무엇인가?\n\n아래는24문제·32조합 중 정답 수, 이후 CPU 비용으로 정렬한 기술적 후보다. 선택 후 독립 검증한 작업량 최적 구성은 아니다. 512방문은 검증 작업을 고정하지 않고 NN512는 상한을 덜 쓸 수 있으므로 실제 NN과 CPU도 함께 읽어야 한다.\n\n'
