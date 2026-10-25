@@ -1,0 +1,1532 @@
+{
+  "base": "ae222e7",
+  "protected_groups": [
+    {
+      "name": "original-source-deployments",
+      "count": 308,
+      "files": [
+        {
+          "path": "/workspace/Chromatic/project-chromatic/CORRECTNESS_AUDIT.md",
+          "sha256": "646578e68c5d85f32096196d80c4948eee4d49be6d27978fcbf910e061142dc6"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/PERFORMANCE.md",
+          "sha256": "e4abc57f8cefb12a016e17abf18023066d257eac667e9c731f7530cf23f2d108"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/requirements.lock.txt",
+          "sha256": "2d55f0eac5a8c699ddd590ea4a2b7d3eedecc6211d108a3497c77360bcee791f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/build.cmd",
+          "sha256": "8126f5f2523f5ffd737cf62d55d50e6f4dbe3aee419f66deb9bd6015224e85fd"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/asan.cmd",
+          "sha256": "30ebe487dc5138f25c1d265894119941e1497900d8efbc6353a0e82ba2be3f75"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/.gitignore",
+          "sha256": "288fae2f175300d02377df8aaa0e26cd053be5b62ad9413c599be783e0fb8684"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/THIRD_PARTY.md",
+          "sha256": "c44114de73a63446dba80bb1962681331d875f490457d6ea8a44db445f350764"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline-to-chromatic.patch",
+          "sha256": "353c1142dfa5e50a8e0e33520f24cae5e17faa573965694052f4a625ebef0fa5"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/LICENSE",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/validate.ps1",
+          "sha256": "aefd08b45e828b4238bb139b8acb69d4377fac1fd395aa54f922db34b7d6edc7"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/run.ps1",
+          "sha256": "c8dca7fda4b3135618cb33bfc99d2f9bf3b4294ec820c4e0ce29a493325eed12"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/ARCHITECTURE.md",
+          "sha256": "65b4772b06e95471ee2421393f82345544f9982eb0527b8fa28d1e27747d08d0"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/requirements.txt",
+          "sha256": "a1a5c9effbda6c99c9723f77ef9fe9a6c4fd8f1024b5f972da2cad5b059c0f3d"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/STRENGTH_REPORT.md",
+          "sha256": "78d1d4d6b4c57702957546dcdc1c55634447f7650d2ea6ffecc4ca33b714fcaf"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/CMakeLists.txt",
+          "sha256": "4e47e68b08d209bf1f79d9f30033d036e93c7102aab056ab9a122ad9035782ba"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/release-manifest.json",
+          "sha256": "6c00f7388c1454bb1fc3d36dab555c9446aa104dd6f0d53cb7435b98b1c76842"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/README.md",
+          "sha256": "64ee581b21b85e32ba8361cec099beac7223aa593a3cb7431d321a905e949c13"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/ROADMAP.md",
+          "sha256": "c03e5672dc58cb04ead7f2171f8b54f761990e5adefcf1b0a6180bd9b8d4bd04"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/validation/trained-parity.json",
+          "sha256": "bcdc0f5ada303a453c47c886da29f96e52b8b925b5b0947c4aae97f5f6282ff4"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/validation/environment.json",
+          "sha256": "1fd3d10461c144cff025be19b0d784cb495784e65bc7d58db8e28d79895448c3"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/validation/integration.json",
+          "sha256": "2682615a9e836d34316b83af38f3a7e84127b9287372b7f037b72ae40fd7a72d"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/validation/pipeline.json",
+          "sha256": "e7641c08e6e192c4b26bfacf5877d2c16f642f30f3db3fa3fcb4d5998dfdb773"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/validation/core.json",
+          "sha256": "1d72ad8fabde26fe3dc18403c10f214c03205529a0485abb5fbf467b6400e8fc"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/benchmarks/tactics.json",
+          "sha256": "280363ea0396afcfbb3eb4d3a76e47b170217c7997dae0fcd2536ffc014717ff"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/benchmarks/openings.json",
+          "sha256": "94e5555b9005f02606155208213398d44a2961f760f4b00ff26e65179f5bd3d4"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/dist/ENGINE_OPTIONS.txt",
+          "sha256": "f395dcaa57abf361f599d1d49a52b5e1df05db0414abf44be21b8357c00f100d"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/dist/chromatic.exe",
+          "sha256": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/dist/default.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/ZERO_VALIDATION.md",
+          "sha256": "6aa5aa8258abfa631e6c9d5169500dcdfe66f01590d3fbc962f619336c673fca"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/project_zero.exe",
+          "sha256": "c6b7bd6700f62bf357483cb055994f3e84316ea6e5572c89576aaa43d209eede"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/ZERO_DESIGN.md",
+          "sha256": "4575ddfc8c2c4822e15bfbd5a2784898a40f6875da4771b1aa749e91761328d2"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/ZERO_README.md",
+          "sha256": "1e9640481f115fd702ea2f91d15ef6d1a4c44e81a18420656e08302f34dfb5e1"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/default.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/project-zero-v0.1.zip",
+          "sha256": "8a645faa146390b1a9af2dbb4a17935553608598bdc516972239b02442620f15"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/train.py",
+          "sha256": "cda86f44a3bb6f4ca798c84ab3248b83ac51bfc8b8047bb34a36b99a97ad574a"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/encoding.py",
+          "sha256": "3f805b2814e360d689f30f47bbe0c81907074befc8fa34136c5f813f0561ef76"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/data.py",
+          "sha256": "91449ce538d8a4c9bba4f48200d3a85471da257800c6070a5b3bc77be4402148"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/checkpoint.py",
+          "sha256": "7478e2742cbb5251b6196ad5c6affb53e55f15b7a1f8707fa30f363411d76fe1"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/arena.py",
+          "sha256": "3e28cdba564eb0e5092be8ddfaec036564837848fa350fc7e296096cf8b3e8d3"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/native.py",
+          "sha256": "f970c96b71e92c1a7cb9d82b8c821ffcf864ca28439562704eb91305631cb9be"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/training.py",
+          "sha256": "6b0616e147f54f14d6a90709d2eed2c9eff5d2cb5c0ec0a5e95855c0e14739d6"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/bootstrap.py",
+          "sha256": "04446f20f8750761a30615dbe76df910c8443d8dfadfc2a3f1943db76decbd9c"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/__init__.py",
+          "sha256": "c9c8dda2a5324abfece952250f13a78cd1f2f123862195b877226d18d64ae7fc"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/model.py",
+          "sha256": "c7e33894b6b96978e3717b713291e8260faa8d2400c0e516189b9f30d0bf78ef"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/loop.py",
+          "sha256": "c2df93b26617b1a5f813af1e71a9afa377e9e19623026d7d8a790406697fae80"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/generate.py",
+          "sha256": "5e51fa72fcd88a25337cd30e6c828515a738862c1635bbec441ad02adfe090e5"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/__main__.py",
+          "sha256": "6ebc025732479c821b443b39250fdc95d89bd096f4294da2f11caadff14dbf9d"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/champion.py",
+          "sha256": "3befbde47763c023efd4c17065c105df73ce7eeeda4d3c10ad0a2d5668d43bce"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/match.py",
+          "sha256": "483b204971891fbdd115c402dd66176e99d9f3f2ebd55968b596a6e9e6bd8901"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/replay.py",
+          "sha256": "a66767df1bc6116eaeba9ac41d18d2b6541655304c88927b745fe3edc9fb4905"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/verify.py",
+          "sha256": "a420e59dc81791bcd9336ef326015e9d1c3c916888d7939bf34ad8252a4f7938"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/zero/selfplay.py",
+          "sha256": "6f78bf6de150d6d0ed36bffb363e0b1f29669a0e8de36b427fe4528cac329af7"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tests/arena_tests.py",
+          "sha256": "dfdfd1e199bf6d0fc7bd1910d528a6e697e24c6a1029b337e0eaa81c81102803"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tests/integration.py",
+          "sha256": "697f96a49ed8d410ef9140798516cf697260ea662ae62be83b6dc9fb558ef320"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tests/core.cpp",
+          "sha256": "cde4329ae236713bc631772c3b58e5d8c01a6dd63377422cdcc5d23ff6b51ad6"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tests/safety.py",
+          "sha256": "10c11052c49c396359270c2ca7ba7f6cae2bc28579ff62b3e279fb48ea07e618"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tests/reliability.py",
+          "sha256": "99b0d760051a7a70831449ea902bdc0d5e2febe27af21014e5d178a5d73a088c"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/src/main.cpp",
+          "sha256": "e3b9da223744bb77191c935d2fb606ef591085d311150588cf825be940c5b87f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/src/search.cpp",
+          "sha256": "8a4a2854dcb5ac8bf3401364e1830e085fff2d683a2d991f27094c85e83631ea"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/src/board.cpp",
+          "sha256": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/src/network.cpp",
+          "sha256": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/src/proof.cpp",
+          "sha256": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/chromatic-tactics-simd.json",
+          "sha256": "29fa673c1dac04a34b657de9b479c66457c572845f2da8fcf86691c03acf3ae8"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/asan-build.log",
+          "sha256": "d33b8ca28fb9efa280559bdd9923abd73e2ca132f3fffb3e2bafd3b7c25f017f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/stage-b-integration.json",
+          "sha256": "df9cbe45285e975538981b4acf138c368a3791154814a2ef1817e5827a83245c"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-tactics.json",
+          "sha256": "96ea568a894d6bcd6286c644c50c348bfcd71a762412a796d1d0bc726ec72a6a"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/sign-mutation.json",
+          "sha256": "8a5bbb91af40de61bd5a9d91d8b10d742f38116dd3f2388f7ae10d2d5eb2c1b7"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/preservation-final.json",
+          "sha256": "a8deabbda009aa4246e87615f48065c660bdae3b19e272c77fad6ce84d72e9e5"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/asan-core.log",
+          "sha256": "13e7b69ca4e4f6fa4d92a67f0e7c30737f764cab43e19141b540f1759200a63c"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/standalone.json",
+          "sha256": "cd70e071206ff42c04b5cbf6ea5d7dab69dd4114f2dcc6ddf24da594968a8660"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/stage-d-native-simd.json",
+          "sha256": "d1d9a790401b33b3128eac7d0e1ab999233da3a2d2f13c7223e01210f490f0c0"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/release-gates.json",
+          "sha256": "06ee891f9d81bb9c4d98165e6bb0a226617e30ec1149c37a319d3f73efeb7d13"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/core.log",
+          "sha256": "939d9a2fe59110dba96039350d22d03851f461f931d9387b041202ad253d5eb5"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/stage-d-integration.json",
+          "sha256": "19f023d160e8b5d3ed46dd91a0e8d09ac8a4a6797c36a66c1c8a2c49fb806cc3"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/stage-e-integration.json",
+          "sha256": "6f42430c047a360c69413b9367b395e2f3fdb6c6ed775fd430d71a2fdbd654f4"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-native.json",
+          "sha256": "c7b44c13b941ca9d234f3162fab97ade16bc3eb97a731ed2b2a4e795542c8b01"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/release-safety.json",
+          "sha256": "79029799dc17c8b9dfa580b3118a8d4edbd213df48b4ea496cae102012301a2d"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/pe-dependencies.txt",
+          "sha256": "6e435ac6f3fe24de029d662f6a08fc88c5e586c38d08fe7d7484f665cc7d26e9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/release-reliability.json",
+          "sha256": "869e7f83553ac299a678d4dad057d2bb72f497cbf9aedf382b368ddc9ea23d31"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/original-inventory.json",
+          "sha256": "86e98444ea52307e8f1768554dce89f0973ac91b590920cffa0528b730e7731f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/stage-c-native.json",
+          "sha256": "b37f756902670b8f11153291d30d6b866c685cd91c69ceb0075a1bebd04c182a"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/asan-safety.json",
+          "sha256": "79029799dc17c8b9dfa580b3118a8d4edbd213df48b4ea496cae102012301a2d"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/stage-e-reliability.json",
+          "sha256": "795109af0a3ceabb73741b1c4336a409655f93223d7d43fdd9823bb6f21987ed"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/validation-all.log",
+          "sha256": "34a7e738c38c204485cb0a1f319d62fe83248e82922258d6a71b2077978955df"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/release-arena_tests.json",
+          "sha256": "85e19f294af71ca972fbb018390cf4a4eebe10d9fdbf7ba298acb7adc17e5699"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-preservation.json",
+          "sha256": "d2f42e835d33220fcb034dd6e76107ae98870e870442845ca9a39868634bc59b"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/stage-d-native-scalar.json",
+          "sha256": "cc267215e6c5af2b921e84492c9e7d493b97e66e80237aa681393fbd7d3a9ae3"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/stage-d-equivalence.json",
+          "sha256": "c0f7bcd5b80ed1e8ed9a10b815e4328954a3c294f5c807c85ea5433df02582d2"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/build-and-core.log",
+          "sha256": "236afa7581afa96bb15497c1a545872650ace87eab7b8a622b5acee6bb14eaaa"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/chromatic-tactics-scalar.json",
+          "sha256": "e9f462081b713df51f247bbc0d0d77df70cb4ee61009cb153a3139bc01c2515a"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-native-pinned.json",
+          "sha256": "7ac6d7e532c46792b84fa2fc76da30c560b6255eec985b42b353d94a22aebdee"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-reconstruction.json",
+          "sha256": "fd03383468f8f0c09a6ad75d87e30143a152bf97b40c8564ef2ab673061e910a"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/summary.json",
+          "sha256": "c4fdd662d51b27905e9e52629a1291a189e4895de4f271aff83d6c366d94b03b"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/release-arena-tests.json",
+          "sha256": "85e19f294af71ca972fbb018390cf4a4eebe10d9fdbf7ba298acb7adc17e5699"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/stage-c-equivalence.json",
+          "sha256": "c0f7bcd5b80ed1e8ed9a10b815e4328954a3c294f5c807c85ea5433df02582d2"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/chromatic-tactics-deep-proof.json",
+          "sha256": "af45948139f707003c63db154e5eff1bea59d9362aaed24b4661b8226350a25c"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/stage-c-integration.json",
+          "sha256": "c60130631faf17831301845004bf3ed610820a6eba11bd479cd52e2f0b0d90ad"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/stage-a-integration.json",
+          "sha256": "df9cbe45285e975538981b4acf138c368a3791154814a2ef1817e5827a83245c"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tools/native_bench.cpp",
+          "sha256": "c88fd6d641757fe3d68bc6ffc2e85f9e2888df654b3752b34fd4552b59fe54e6"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tools/draw_audit.py",
+          "sha256": "84843569f93854d084bd1548df22bfa93dcfa788ff0fa757faa353b3047212a1"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tools/baseline_reconstruct.py",
+          "sha256": "8e467cb5f2ed82fb22075b059f2fd6c5aa88afa83119c66819388d2597e7bce4"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tools/scaling.py",
+          "sha256": "4409d148055e057a80774bc92b37c5ef292d59bd450b3e8ec0b640ca78652871"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tools/tactics.py",
+          "sha256": "9a19d622526533e7cec66dd930c0e5cdbfcbea3bc05377f0fa7a4bcc71a0087c"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tools/bench.py",
+          "sha256": "c6f79804bdb1cc84a51c081fc8364ea6d97627a061cea5a00320329aa79cdc75"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tools/compare_search.py",
+          "sha256": "af6046c45c57ea381f7b8ad75bf6a7c5d0ff7e6b117dfd5d28493b8e82a80b21"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tools/legacy_compat.py",
+          "sha256": "554c5f5ef6d2ea96edf9650bdf99f3b92e9ceb0dd7fe13c85b35b611c606de9e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tools/final_experiments.py",
+          "sha256": "542669f26710ad236fc56d4641bb317253f9def89484ad1dac946bca2a4d8232"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/tools/mutation.py",
+          "sha256": "b9bc5f6b7f44f5c36b0de124494cf4aa5600b3f1513b6ed392de49295b97615f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/include/zero/search.hpp",
+          "sha256": "ec915330802e6b4ac03f0708962a3d13b807687d9141bc4d5d536edb6701f313"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/include/zero/board.hpp",
+          "sha256": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/include/zero/proof.hpp",
+          "sha256": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/include/zero/profile.hpp",
+          "sha256": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/include/zero/network.hpp",
+          "sha256": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/zero/train.py",
+          "sha256": "952da8a60434797196ec4a235d0b64009f5fd8fa8b06075b3c480ac578228981"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/zero/encoding.py",
+          "sha256": "3f805b2814e360d689f30f47bbe0c81907074befc8fa34136c5f813f0561ef76"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/zero/data.py",
+          "sha256": "91449ce538d8a4c9bba4f48200d3a85471da257800c6070a5b3bc77be4402148"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/zero/checkpoint.py",
+          "sha256": "705ce000277ecb2b14ca6e8431626c448b2e313b31c37dd7900c1855c32d26b6"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/zero/arena.py",
+          "sha256": "35ecc23066913ea14799c5e1ab1133830eb6d8e785565defdcb331cdd828e9ba"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/zero/native.py",
+          "sha256": "45faeee608b7ae11658cdaf369d386b7b549ac05c8581b38c61ac5cb3fc6506c"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/zero/bootstrap.py",
+          "sha256": "04446f20f8750761a30615dbe76df910c8443d8dfadfc2a3f1943db76decbd9c"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/zero/__init__.py",
+          "sha256": "c9c8dda2a5324abfece952250f13a78cd1f2f123862195b877226d18d64ae7fc"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/zero/model.py",
+          "sha256": "c7e33894b6b96978e3717b713291e8260faa8d2400c0e516189b9f30d0bf78ef"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/zero/loop.py",
+          "sha256": "61bde0d475647c62d3cacf1236e570613dd5bef188f02647089c04af8f8d5d34"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/zero/__main__.py",
+          "sha256": "47003983afe7f158f8d2ba8bb8d0ff006aa22648a14badda793a37b2069be195"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/zero/verify.py",
+          "sha256": "14b4ea12d9dd0896f5315925ee39d351722bd5e3696a62d0440c048aec318614"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/zero/selfplay.py",
+          "sha256": "a9883fba97fa3e951277679f9fd9134502a6dcff13cea4d1f03b93652178526e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/tests/integration.py",
+          "sha256": "2f2dfcf25640489cecdb9bcd37c9d1b2e980276c0c9a699c813105599093b221"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/tests/core.cpp",
+          "sha256": "b5a6b86dd8b127adfc61f467e2fafcda47a2a9e089aa9632d85a409a59717eb8"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/src/main.cpp",
+          "sha256": "882bae42579ad655840f4580fbafd943c30f40eb879a6801d048e5a0fbd0a644"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/src/search.cpp",
+          "sha256": "e39b12071231c75114541026445b3778abac5fe5882b902e3c023a41c1a87d63"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/src/board.cpp",
+          "sha256": "e5d2541d8e318403c0c26d27d598e5bfe8794557a0763310f9be7c6717fe9163"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/src/network.cpp",
+          "sha256": "e03be79736bbd09a9e3404d4746a7c982883aaa93fbb526b7b0ded0da2c22bc5"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/include/zero/search.hpp",
+          "sha256": "a6311f615d10e8d17dd6c5c14250f28a66423a4ac3607a450de08a8389d2a69f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/include/zero/board.hpp",
+          "sha256": "3f2290283c939191678f9b272f9d1ccd4f696e087feba13f34bb732b72c3ce43"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/source/include/zero/network.hpp",
+          "sha256": "7dac9929cbee3edf018c949d054ea150364eb206003f3b262e3772dac0892c18"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/instrumented/src/main.cpp",
+          "sha256": "882bae42579ad655840f4580fbafd943c30f40eb879a6801d048e5a0fbd0a644"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/instrumented/src/search.cpp",
+          "sha256": "e39b12071231c75114541026445b3778abac5fe5882b902e3c023a41c1a87d63"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/instrumented/src/board.cpp",
+          "sha256": "791a7f5a1a2d6d5102749a9294ad9abed1e3dbf6935b171e1f9969b52f8fa773"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/instrumented/src/network.cpp",
+          "sha256": "f966e34236740099b2fe99839505f1726bdc9fb7cfb098b8b663c54589669cc3"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/instrumented/include/zero/search.hpp",
+          "sha256": "a6311f615d10e8d17dd6c5c14250f28a66423a4ac3607a450de08a8389d2a69f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/instrumented/include/zero/board.hpp",
+          "sha256": "3f2290283c939191678f9b272f9d1ccd4f696e087feba13f34bb732b72c3ce43"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/instrumented/include/zero/network.hpp",
+          "sha256": "7dac9929cbee3edf018c949d054ea150364eb206003f3b262e3772dac0892c18"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/initial.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/initial.pt",
+          "sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/state.json",
+          "sha256": "e6ef20b3f62398bd05279dd53e5de1feb12ca84d3358b69a3834711a2238abd6"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/bootstrap/teacher.meta.json",
+          "sha256": "f5771d2905a1a3fd9b3cbaf0505ae17693ff90f00eaeb8b4d3f0c3be5091d1ca"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/bootstrap/model.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/bootstrap/teacher.jsonl",
+          "sha256": "d3dd6ce286c7c2421ba35dd3163b879e23328b486b251a28a170cfb210f50e77"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/bootstrap/model.train.json",
+          "sha256": "8321c5a22fac74d834162d22dd1895390e2b95e4669b8f99419b6bf047982923"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/bootstrap/model.pt",
+          "sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/release-validation/generation_0000/candidate.pt",
+          "sha256": "17231fdd27b22a2a0dd6f070990d5c8bc26ce435432e6d530470a605b219636b"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/arena.progress.json",
+          "sha256": "599c2490979de5403cded43abc7c36537fff911fa65ab89be04b6bcaa1552bf7"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/candidate.zero",
+          "sha256": "da8a36572caced3167a604841668f96b70e4e296551b3e61860656d538b5f577"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/candidate.pt",
+          "sha256": "e450595a38f7fc66acf0521a3d29190599683bef463aded7e97c6ac16409fc36"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/arena.pgn",
+          "sha256": "e78a14c5007e880d49ab6e276b235110881d88ce021cae73d6a39046a52b8be2"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/arena.json",
+          "sha256": "da9f61c14e6a2e841f2909ba83b054e98e2deee3594fbd0fac1c5317c3932364"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/candidate.replay.json",
+          "sha256": "b7540149791ba1735606e3c6f1b44afed25dee6c3fc72baa849020539cdb2a09"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/source.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/candidate.pt.prev",
+          "sha256": "221441e12fe721b3a64380fb83f1e1cbd2f18e640bf9fe753825c9a4f394ef11"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/candidate.train.json",
+          "sha256": "7d485011fe2897209c1ca6b0ce0620ea4dbcc65f85636069f564352e36db2fff"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/selfplay/game_000000.jsonl",
+          "sha256": "11d883d6132fc5ddba61a6f05a9e83438595259d76dcd4d69d2c07a6001bdf3a"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/selfplay/settings.json",
+          "sha256": "489f78f339c871ec9c6edd27b255110918eead05894d25f1f42747689078ff03"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/selfplay/game_000003.json",
+          "sha256": "cf9f102f7ad14d67db539749c44e93822bda0fcb768ead52cb8c2af7e5540284"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/selfplay/game_000002.jsonl",
+          "sha256": "3a1f6214237cab4e46a141ec8fb43122d0d5a71408468576c3cacfa90310e594"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/selfplay/game_000001.jsonl",
+          "sha256": "63f9b66dd59cf62c54469d2718e9c57acee1c74c7df507311a9359ba343fe496"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/selfplay/game_000000.json",
+          "sha256": "225d51d29ec4ba96b8f01c0846b3e9add742458a8ccaa80b3dc75a0e84211d24"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/selfplay/telemetry.json",
+          "sha256": "8e1125967290036ce8f1041a2c69cbb408c71e361aa1ed3e8965f3dd07f45663"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/selfplay/game_000003.jsonl",
+          "sha256": "42470ac2385450262594648693660f2c519135449e390fcccc8de1e4db3aea26"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/selfplay/game_000002.json",
+          "sha256": "6ce8dd35824fe6b8953c4ffc59fe41e1f9976bcb6d337aae2349136477d72a87"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/selfplay/game_000001.json",
+          "sha256": "8af7495f06302704d862a3cdbb5b5df1cf3e80a5362b787da393394fd9b11dfd"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/selfplay/summary.json",
+          "sha256": "b7a7ff8ca4dba97379008676f9c90059a73245e02b44780769a8cb2ffe8cc74e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/selfplay/pending/game_000001.jsonl",
+          "sha256": "e5d15b9744d2151a907a629920494f41a1151250227c1391605c808318c6e233"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/selfplay/pending/game_000003.jsonl",
+          "sha256": "4b3438e18f475eea9ec373e3fa70474e42e1fe7a8c2a5f2dba35671c3f4dd0e8"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/chromatic-memory.json",
+          "sha256": "532f9e7e43139ec9a9462265cb0e98149d0f5a4caa15642e478d6ea0372c28e8"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/draw-audit.json",
+          "sha256": "b98a7c82b28102691e02f1e4bc1cfe06d61188b87a7959e1f3f0f2a0f2a398a2"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/default-tactics.json",
+          "sha256": "9ce7e1ce22c1a9bd16700ffddcd6d8ddb4e26ae567ce778856bd023a61196d90"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/legal-scalar.json",
+          "sha256": "23ac115a512b7893c6e17487f25e182120160df83deb8212f26b89031cad562a"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/generation-match.json",
+          "sha256": "da9f61c14e6a2e841f2909ba83b054e98e2deee3594fbd0fac1c5317c3932364"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/model-match.json",
+          "sha256": "ed8cb8f559cc475194b5f2222103efa9b5969111d6dfad69c79a2f7668019af5"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/baseline.json",
+          "sha256": "6519f0c64cac3fd84ee0f7dd2f33dfed0455f8367b6ed44cf2512122ae1b947c"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/scalar-search-equivalence.json",
+          "sha256": "c0f7bcd5b80ed1e8ed9a10b815e4328954a3c294f5c807c85ea5433df02582d2"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/baseline-memory.json",
+          "sha256": "5908003277cbc7bc3e8d2f78ba72be11da04984652dbbcf489cf3cfdbdca8f1a"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/full-scalar.json",
+          "sha256": "8cf4205fe4537c3e81c70efa4187e308bddded28bbde663ba0da6e8c5122dbe0"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/engine-match.progress.json",
+          "sha256": "f6ad42f11b1334055507cc8207ccafd8568e86c027c411dcbe4c16712f7d5aa2"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/small-scalar-parity.json",
+          "sha256": "c095b29ee36fb874e041f39a8192335ba612317125a042da4319115be1db81ff"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/engine-match.json",
+          "sha256": "055f05774438ee1798d93b148bce6965ec8c6afbcb8fdb8c50c0b2b38df95c28"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/small-simd-parity.json",
+          "sha256": "10a2c49139ff57e63c3ae8ed477a9c95c7dcda2b7cfb1370c28498dc3f304394"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/engine-match.pgn",
+          "sha256": "421d0bdc98cf617bb5ee89ac15888764b7699e7b88f74f31b2345bfe253c3f2f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/tiny-scalar-parity.json",
+          "sha256": "24e44160b4ae9291190ac3a5f4464f4e165e4c1d3a10b010d4491c75d2f66864"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/execution.json",
+          "sha256": "4ff456fd018c590a5cc49fc0fce48d951b03699d2becd5898fc3937f597c89fb"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/model-match.pgn",
+          "sha256": "99dab685a52fb4d09096ba8655252bf70de40c0e6009d67cc476244dccc3872a"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/baseline-simd-parity.json",
+          "sha256": "5cc7d8cdbf2c44f9aa367b44aedce1fad466cef3e06b494b5b001b25e6856fd0"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/model-match.progress.json",
+          "sha256": "705e12aff7f4af7266069ad21038ebd26babd6ee9da47664f78e8736837d1308"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/fpu-025-tactics.json",
+          "sha256": "fd379e7ab662fb530a7602d2638e97ebdd2234dfc14df9f8b3c7b7e26221c2b4"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/deep-proof-tactics.json",
+          "sha256": "ecdd019f65275dc1448d7243dbac33c3d888f1fb1b583533297a77aeedc304ca"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/tiny-simd-parity.json",
+          "sha256": "c39343c0bfb0ffd1cafb715d4ff21d24d3708bac46fa13e56c5f24f259ec0593"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/baseline-scalar-parity.json",
+          "sha256": "df3fe9e3fc2c233f7c8df829aa4a9639ac9a2296ce026e9c38814df972312aef"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/final/legal-simd.json",
+          "sha256": "e7bb7e3ffaa8f98a7c089b4d6ba2bbea375790c8f5a91ea15828a898ebb7d246"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-games/game_000000.jsonl",
+          "sha256": "164d71a13981c61f9546de2860b0219c1cebe21d342f1ec706936c300d3adc52"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-games/settings.json",
+          "sha256": "4d2e6593d6ee771f24045968760aca14ba96929c7e70178c767fe40987db4451"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-games/game_000003.json",
+          "sha256": "76e2e0f50e43553eaf6af1ae16de7e58504b69cd4e9524380537c7fe9c494962"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-games/game_000002.jsonl",
+          "sha256": "255d6395c0c9d99e0ab94ca457306d4639549769dea4285c17b10f58432bf031"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-games/game_000001.jsonl",
+          "sha256": "86309b06d78819c4cf0a556d460a80bf6214b0e5f7fa60eeca9aad635fd501df"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-games/game_000000.json",
+          "sha256": "1eb408a1395387b8d63ac6db14dd601c1ef54b0685a7915a8dc20fd8dbed318f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-games/game_000003.jsonl",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-games/game_000002.json",
+          "sha256": "8268da48e769422c779fd77ff6d90c0ae6e330d9e61eafe631629e48609c9475"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-games/game_000001.json",
+          "sha256": "288d7ea4509922e1689be31a725857c5efdaedc5fa32237ccdde3972e0637255"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/baseline-games/summary.json",
+          "sha256": "c237de628dc050e7960a6d5e2495196285485aeec49228e19516dacc0c599b87"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/comparison.json",
+          "sha256": "b6e2c5c0750b9681ab1fc25c082bd310e887fd47dde1ebab0b5149735e06936d"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/compatibility/result.json",
+          "sha256": "9f15ce2faac21ec45b03196777d83cd6b9bbcf08683341f0c2bbe70d6b0a2851"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/tiny/scalar-bench.json",
+          "sha256": "b455e4d3846c0f8e7612beca550e07d3aca1d26dd88b975f2c397ed9f5bf8efe"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/tiny/simd-parity.json",
+          "sha256": "883cec56277bb532ff1bc82171f4226e3d2d5e72e16e31673693032071abeab0"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/tiny/model.zero",
+          "sha256": "427276b4446b9521b6147cd074b81939e66bc2cbf30e74478c02bd678690183a"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/tiny/scalar-parity.json",
+          "sha256": "d53f243096c1f412bd229efcddd75b20aca2b63d4a3f738e596a64969f68a6b1"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/tiny/simd-bench.json",
+          "sha256": "a2e49ad8d7589bfe78c7f010784109fd0597ccb441cab16a57d41bd1e5f81bb6"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/tiny/model.train.json",
+          "sha256": "3a3d6bb17697aae9fb89245d3960663b0b1684553cd6bf19de48eb9e239046b7"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/tiny/model.pt",
+          "sha256": "1088abec08db8908b047d5f4b48499b4bf68115329aebaffa059d384cb08b864"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/tiny/model.replay.json",
+          "sha256": "c8455f9ebffe528c37ac923ec5d1942717086fb551ca0a0e20e0cf7db913bf5f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/small/scalar-bench.json",
+          "sha256": "92c5b097116c6755f0152e9bd309f7465ceee2c764be77d1cb48384478b47e6d"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/small/simd-parity.json",
+          "sha256": "2bad132bf314f33e98359c4e28b7fc5afe91136de5dc7925f9153ea12ed5578a"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/small/model.zero",
+          "sha256": "3690c2aa3a4b8e126db0e0bdfa9f69a20bb7ec64e7dd4e666af41081918df93e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/small/scalar-parity.json",
+          "sha256": "c0b6ea7c71079d5b670dbd8ac4fc2443c29dc7d2a664255059962c4010ca3ff9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/small/simd-bench.json",
+          "sha256": "c75ce0ac80e6710148921dc4c8a22ccb070e3b2ed020c3d479f709b80b6709eb"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/small/model.train.json",
+          "sha256": "2fc9ccf5ad28049af36c32ceaa28aca1cc4008a2544debb05a5d4e04cabb9702"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/small/model.pt",
+          "sha256": "759525d4cde43854bf011b756547ced75d16de7d7f271958a73d25f0e7389321"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/small/model.replay.json",
+          "sha256": "c8455f9ebffe528c37ac923ec5d1942717086fb551ca0a0e20e0cf7db913bf5f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/build.cmd",
+          "sha256": "8126f5f2523f5ffd737cf62d55d50e6f4dbe3aee419f66deb9bd6015224e85fd"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/THIRD_PARTY.md",
+          "sha256": "c44114de73a63446dba80bb1962681331d875f490457d6ea8a44db445f350764"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/LICENSE",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/CMakeLists.txt",
+          "sha256": "fda16257bb9e18cb21878a82a1012e9738fe511b8391e14f624fb723012bfe4e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/README.md",
+          "sha256": "ef6463dbe5400c01476e84e2784bf702002547fb1b1654cef2576b53e1db6f9e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/dist/depth_probe.exe",
+          "sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/dist/pristine_probe.exe",
+          "sha256": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/dist/chromatic-depth.exe",
+          "sha256": "0cb44a789a028479ee31b227c8c0f2698ba34c01983eb240adb42ab8333cf288"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/dist/default.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/tests/arena_tests.py",
+          "sha256": "dfdfd1e199bf6d0fc7bd1910d528a6e697e24c6a1029b337e0eaa81c81102803"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/tests/integration.py",
+          "sha256": "697f96a49ed8d410ef9140798516cf697260ea662ae62be83b6dc9fb558ef320"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/tests/core.cpp",
+          "sha256": "cde4329ae236713bc631772c3b58e5d8c01a6dd63377422cdcc5d23ff6b51ad6"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/tests/safety.py",
+          "sha256": "10c11052c49c396359270c2ca7ba7f6cae2bc28579ff62b3e279fb48ea07e618"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/tests/reliability.py",
+          "sha256": "99b0d760051a7a70831449ea902bdc0d5e2febe27af21014e5d178a5d73a088c"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/tests/depth_telemetry.cpp",
+          "sha256": "b450ed240b1d81e8ccf8343ce4c5689c9ae38fe95022a2e398064e34bf2a841d"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/src/main.cpp",
+          "sha256": "4cc008a3abe3634b74bee94c5fa58e2e166985800457c1a552af33c16dbd77f2"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/src/search.cpp",
+          "sha256": "faa86321d3df2216c20e2647b71ad952225d7f0fb4ea3d73d2785c6f24729a36"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/src/board.cpp",
+          "sha256": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/src/telemetry_json.cpp",
+          "sha256": "27cf64072cb7d379b0f428fbcc4bb1ae90ca06f07040e2d7093dccbb3c4cc787"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/src/network.cpp",
+          "sha256": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/src/proof.cpp",
+          "sha256": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/tools/depth_probe.cpp",
+          "sha256": "37ec0f44ce76aa8527692f7c1f012796cc63680913116cadff3c7df96467a01d"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/include/zero/search.hpp",
+          "sha256": "6bf7b23f28ff8fcad4eb24d6f9aa68b6fc9cd06d382edd0dcad3901c9fcdf3a2"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/include/zero/board.hpp",
+          "sha256": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/include/zero/proof.hpp",
+          "sha256": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/include/zero/profile.hpp",
+          "sha256": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/include/zero/network.hpp",
+          "sha256": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/include/zero/telemetry_json.hpp",
+          "sha256": "fe184f046b79940d55c681b5c3edac968c3db3af77762b98f771741ab60aaec8"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/baseline/src/main.cpp",
+          "sha256": "e3b9da223744bb77191c935d2fb606ef591085d311150588cf825be940c5b87f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/baseline/src/search.cpp",
+          "sha256": "8a4a2854dcb5ac8bf3401364e1830e085fff2d683a2d991f27094c85e83631ea"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/baseline/src/board.cpp",
+          "sha256": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/baseline/src/network.cpp",
+          "sha256": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/baseline/src/proof.cpp",
+          "sha256": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/baseline/include/zero/search.hpp",
+          "sha256": "ec915330802e6b4ac03f0708962a3d13b807687d9141bc4d5d536edb6701f313"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/baseline/include/zero/board.hpp",
+          "sha256": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/baseline/include/zero/proof.hpp",
+          "sha256": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/baseline/include/zero/profile.hpp",
+          "sha256": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/baseline/include/zero/network.hpp",
+          "sha256": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/build.cmd",
+          "sha256": "8126f5f2523f5ffd737cf62d55d50e6f4dbe3aee419f66deb9bd6015224e85fd"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/asan.cmd",
+          "sha256": "accf89eb5d02f8507d8a75e9432ea37ec39fa8b98e9a982b7b449a93916e0955"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/THIRD_PARTY.md",
+          "sha256": "c44114de73a63446dba80bb1962681331d875f490457d6ea8a44db445f350764"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/search-memory.patch",
+          "sha256": "295dc0c6c75b601112dca4b3671a69a5a9a659085f1911daf4a6919ff6470630"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/LICENSE",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/CMakeLists.txt",
+          "sha256": "bc1b2f2a154edd846cd46dbe0be0bf3add2c92e5c8fd93f01841a236abd67f64"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/README.md",
+          "sha256": "385ff7d851cfd3b8e18325b586cd5c21e1fc33548e7410e4cd6b70ed92607897"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/dist/chromatic-memory.exe",
+          "sha256": "3dc5aef05ee06452564fdc1939d8f9fa4637d1306a2582a18e47cfb0af118624"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/dist/depth_probe.exe",
+          "sha256": "e9d1fc07b4279604dad54258700b429940592d71a47f7ff26636c17fd0cff432"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/dist/default.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/tests/arena_tests.py",
+          "sha256": "dfdfd1e199bf6d0fc7bd1910d528a6e697e24c6a1029b337e0eaa81c81102803"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/tests/integration.py",
+          "sha256": "697f96a49ed8d410ef9140798516cf697260ea662ae62be83b6dc9fb558ef320"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/tests/core.cpp",
+          "sha256": "9408088d1fc5cbfa777c550404a22d38855922e98cbef52e0c1ebea6d8631fe6"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/tests/safety.py",
+          "sha256": "10c11052c49c396359270c2ca7ba7f6cae2bc28579ff62b3e279fb48ea07e618"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/tests/reliability.py",
+          "sha256": "99b0d760051a7a70831449ea902bdc0d5e2febe27af21014e5d178a5d73a088c"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/tests/memory_recycling.cpp",
+          "sha256": "10ac1c8b8bdb0b5228fd71d0a565b2b3056f670e18650e919a888a90206635b3"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/tests/depth_telemetry.cpp",
+          "sha256": "7b9e9e866effb7499a3cce2526d93e715db6b5b27fe9b9f64a5ba914596f53ae"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/src/main.cpp",
+          "sha256": "860eecb2d295dce90efadd28fce71d807e17f36a927caa7c3c7498a40e25e4a3"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/src/search.cpp",
+          "sha256": "b6c5aff1817587fd9f73698b7e5b1941eb23f68b81b2c3e80c0e699968ed7993"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/src/board.cpp",
+          "sha256": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/src/telemetry_json.cpp",
+          "sha256": "5e14c80f9287442d56bb0611c880ed921ad79077559adb224f637e4af448ce5b"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/src/network.cpp",
+          "sha256": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/src/proof.cpp",
+          "sha256": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/tools/depth_probe.cpp",
+          "sha256": "37ec0f44ce76aa8527692f7c1f012796cc63680913116cadff3c7df96467a01d"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/include/zero/search.hpp",
+          "sha256": "71726f5fff02253f65363ce4800ddde8edebe0e414c63058510d99a31cb66a84"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/include/zero/board.hpp",
+          "sha256": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/include/zero/proof.hpp",
+          "sha256": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/include/zero/profile.hpp",
+          "sha256": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/include/zero/network.hpp",
+          "sha256": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/include/zero/telemetry_json.hpp",
+          "sha256": "fe184f046b79940d55c681b5c3edac968c3db3af77762b98f771741ab60aaec8"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/baseline/src/main.cpp",
+          "sha256": "e3b9da223744bb77191c935d2fb606ef591085d311150588cf825be940c5b87f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/baseline/src/search.cpp",
+          "sha256": "8a4a2854dcb5ac8bf3401364e1830e085fff2d683a2d991f27094c85e83631ea"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/baseline/src/board.cpp",
+          "sha256": "2547859259af98260bddc7bd54552496edd27f24d078e4dd9a8a40d54f71933f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/baseline/src/network.cpp",
+          "sha256": "9478552ccd6b2e7a2d42b54a9b84f347c3cb2b6af262d8571be20fb3f9c31d86"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/baseline/src/proof.cpp",
+          "sha256": "e4ad16e78c81008e7b8bc1e14775dd156c09d93c54c9a3856dd64ed539e0ff7e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/baseline/include/zero/search.hpp",
+          "sha256": "ec915330802e6b4ac03f0708962a3d13b807687d9141bc4d5d536edb6701f313"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/baseline/include/zero/board.hpp",
+          "sha256": "b140f349834902fceb8c3b8aa1c206921b5422f64e974d8c57ecd10696a0d37b"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/baseline/include/zero/proof.hpp",
+          "sha256": "e3a4a6afd0c7ef1ffdff43c5e4056bdf9c1cc38cc5464a89bf9fa90a27d68b2f"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/baseline/include/zero/profile.hpp",
+          "sha256": "8306131ff44f3ff6f018fd04679007cef674e3f944fc9505e0b56875b4613a39"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/baseline/include/zero/network.hpp",
+          "sha256": "5f57729823ff1c874bba77d6958ca7e8f7a961751129ca59cc00f31551a3d498"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-arc-trainer/champion/model.pt",
+          "sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-arc-trainer/champion/default.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-trainer/champion/model.pt",
+          "sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-trainer/champion/default.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        }
+      ]
+    },
+    {
+      "name": "all-preserved-models-and-binaries",
+      "count": 70,
+      "files": [
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/dist/chromatic-memory.exe",
+          "sha256": "3dc5aef05ee06452564fdc1939d8f9fa4637d1306a2582a18e47cfb0af118624"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/dist/depth_probe.exe",
+          "sha256": "e9d1fc07b4279604dad54258700b429940592d71a47f7ff26636c17fd0cff432"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-memory/dist/default.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-memory-analysis/reproduction/legacy-depth_probe.exe",
+          "sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/dist/depth_probe.exe",
+          "sha256": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/dist/pristine_probe.exe",
+          "sha256": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/dist/chromatic-depth.exe",
+          "sha256": "0cb44a789a028479ee31b227c8c0f2698ba34c01983eb240adb42ab8333cf288"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic-depth/dist/default.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-arc-trainer/reports/native-cpu4-selected.zero",
+          "sha256": "a486053ec4888193fa20cd8c39523335d27daa31919f41e371ce23ddaa0525f4"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-arc-trainer/reports/native-xpu-bf16.zero",
+          "sha256": "a10e83c545c7142b9747500b80d96cf5dd7ec9ece07c9840958449039778415a"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-arc-trainer/reports/native-xpu-fp32-selected.zero",
+          "sha256": "093517d547cd2d7a8562734224c5b548ecfacd5ba44bcbec0a47a18f74f64361"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-arc-trainer/candidates/xpu-bf16.zero",
+          "sha256": "a10e83c545c7142b9747500b80d96cf5dd7ec9ece07c9840958449039778415a"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-arc-trainer/candidates/cpu4-selected.pt",
+          "sha256": "e4813a0b8fa78dd45532ccc571e8a2f629bae265892a8e84adf997d026b8340a"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-arc-trainer/candidates/xpu-fp32-selected.pt",
+          "sha256": "0d1b1471a759cb01e0f69e6db1c84c4fb2a9c9f46d088849b89e51de9bacb3d8"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-arc-trainer/candidates/cpu4-selected.zero",
+          "sha256": "a486053ec4888193fa20cd8c39523335d27daa31919f41e371ce23ddaa0525f4"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-arc-trainer/candidates/xpu-fp32-selected.zero",
+          "sha256": "093517d547cd2d7a8562734224c5b548ecfacd5ba44bcbec0a47a18f74f64361"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-arc-trainer/candidates/xpu-bf16.pt",
+          "sha256": "29a8511ad33dde80864347b82baa55cda2d40425ab62a169619e9e97f8acea13"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-arc-trainer/champion/model.pt",
+          "sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-arc-trainer/champion/default.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/dist/chromatic.exe",
+          "sha256": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/dist/default.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/project_zero.exe",
+          "sha256": "c6b7bd6700f62bf357483cb055994f3e84316ea6e5572c89576aaa43d209eede"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/baseline/default.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/initial.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/initial.pt",
+          "sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/bootstrap/model.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/bootstrap/model.pt",
+          "sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/release-validation/generation_0000/candidate.pt",
+          "sha256": "17231fdd27b22a2a0dd6f070990d5c8bc26ce435432e6d530470a605b219636b"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/candidate.zero",
+          "sha256": "da8a36572caced3167a604841668f96b70e4e296551b3e61860656d538b5f577"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/candidate.pt",
+          "sha256": "e450595a38f7fc66acf0521a3d29190599683bef463aded7e97c6ac16409fc36"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/runs/overdrive/generation_0000/source.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/tiny/model.zero",
+          "sha256": "427276b4446b9521b6147cd074b81939e66bc2cbf30e74478c02bd678690183a"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/tiny/model.pt",
+          "sha256": "1088abec08db8908b047d5f4b48499b4bf68115329aebaffa059d384cb08b864"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/small/model.zero",
+          "sha256": "3690c2aa3a4b8e126db0e0bdfa9f69a20bb7ec64e7dd4e666af41081918df93e"
+        },
+        {
+          "path": "/workspace/Chromatic/project-chromatic/reports/model-scaling/small/model.pt",
+          "sha256": "759525d4cde43854bf011b756547ced75d16de7d7f271958a73d25f0e7389321"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-10000.pt",
+          "sha256": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-100.zero",
+          "sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-1000.zero",
+          "sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-1000.pt",
+          "sha256": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-100.pt",
+          "sha256": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-10000.zero",
+          "sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-trainer/champion/model.pt",
+          "sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-trainer/champion/default.zero",
+          "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-735de626cbb244a5b6f6f09609143350.mirror.pt",
+          "sha256": "baca75ca6b42be243e9692bf84d024d0aea8a35dcb55c4d7172329e5e2bb7ed7"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.zero",
+          "sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-d2af69a795a84addaabb497e3b09e4fa.mirror.pt",
+          "sha256": "8e2782a873d934ded5bf0a711b382f5de700dc82e018a4ee7876cba236310d57"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-d2af69a795a84addaabb497e3b09e4fa.pt",
+          "sha256": "8e2782a873d934ded5bf0a711b382f5de700dc82e018a4ee7876cba236310d57"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-735de626cbb244a5b6f6f09609143350.pt",
+          "sha256": "baca75ca6b42be243e9692bf84d024d0aea8a35dcb55c4d7172329e5e2bb7ed7"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-d2af69a795a84addaabb497e3b09e4fa.zero",
+          "sha256": "6512cc87d5efdc66811e3cfa647cf4e82aff636bc90c29034695d7c95d4621fe"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.pt",
+          "sha256": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-735de626cbb244a5b6f6f09609143350.zero",
+          "sha256": "cc82c95407a805a1833edb1d182258a87cf701acc51f4d0d7f1dc64b3071d381"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.mirror.pt",
+          "sha256": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-30929c2f333f49378dbfbd3370aff8cf.zero",
+          "sha256": "a06f84bfc02da832999d88f06a838f5775841cd729570636b4212d1207166108"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.zero",
+          "sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.pt",
+          "sha256": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-30929c2f333f49378dbfbd3370aff8cf.pt",
+          "sha256": "369f1a62d1e4f28ef943514350fab9e8103b455a22474a18d1b1eff205e8d126"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-62688936b83c445992ff056f47a58cc2.mirror.pt",
+          "sha256": "90dd2a5fafd95ffe502b54f0961ddbe64ae557fc7bcd58f0896e780c64bc1388"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-62688936b83c445992ff056f47a58cc2.zero",
+          "sha256": "499df73ffec672de91c6a500e64c0f0eb18daa4aff0c1bd95fcf2047086ee055"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-30929c2f333f49378dbfbd3370aff8cf.mirror.pt",
+          "sha256": "369f1a62d1e4f28ef943514350fab9e8103b455a22474a18d1b1eff205e8d126"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-62688936b83c445992ff056f47a58cc2.pt",
+          "sha256": "90dd2a5fafd95ffe502b54f0961ddbe64ae557fc7bcd58f0896e780c64bc1388"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.mirror.pt",
+          "sha256": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.mirror.pt",
+          "sha256": "f9ca4348f441e5eb3d10179cf0591818c24550abad78d21823c99922fb6842de"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.pt",
+          "sha256": "f9ca4348f441e5eb3d10179cf0591818c24550abad78d21823c99922fb6842de"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-b505031739914d60b00b01125ff773e6.pt",
+          "sha256": "bcffa19980ddf1e9452001ff21673c0c3e3c45e0111443d69925d23ce8b1704e"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.pt",
+          "sha256": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-b505031739914d60b00b01125ff773e6.mirror.pt",
+          "sha256": "bcffa19980ddf1e9452001ff21673c0c3e3c45e0111443d69925d23ce8b1704e"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.zero",
+          "sha256": "f64b38ca6c63d0fb258121dc26e06fb528dd3991fd8b4ddd30cdb950144147ab"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.zero",
+          "sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.mirror.pt",
+          "sha256": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf"
+        },
+        {
+          "path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-b505031739914d60b00b01125ff773e6.zero",
+          "sha256": "f64b38ca6c63d0fb258121dc26e06fb528dd3991fd8b4ddd30cdb950144147ab"
+        }
+      ]
+    }
+  ],
+  "previous_reports_changed": [],
+  "passed": true,
+  "previous_report_files": 214
+}

@@ -1,5 +1,7 @@
 # CHROMATIC — Operation Overlord (experimental candidate)
 
+**[Windows x64 Release package and launch instructions](WINDOWS_RELEASE_PACKAGE.md)**
+
 The factorial follow-up is in [FACTORIAL_ABLATION.md](FACTORIAL_ABLATION.md):
 model/search contributions, independent puzzle validation, cost, native OS
 comparisons and paired games. Reproduce it with [research/README.md](research/README.md).
