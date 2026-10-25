@@ -1,5 +1,6 @@
 #pragma once
 #include "network.hpp"
+#include "research.hpp"
 #include <atomic>
 #include <chrono>
 #include <memory>
@@ -89,6 +90,8 @@ struct SearchLimits {
     int proof_nodes=0,proof_plies=1;
     bool telemetry=false;
     int telemetry_interval=4096;
+    bool research_metrics=false;
+    int neural_limit=0; // research-only total NN cap, root + MCTS + verifier
 };
 struct SearchResult {
     Move best{};bool has_move=false,terminal=false;
@@ -99,6 +102,7 @@ struct SearchResult {
     uint64_t nodes_evicted=0,edges_evicted=0,discarded_neural_evaluations=0;
     bool memory_exhausted=false;
     float value=0;
+    uint64_t search_ns=0;
     int proof_nodes=0,proof_plies=0;
     bool mate_proven=false;
     std::vector<std::pair<Move,int>> visits;
@@ -108,6 +112,7 @@ struct SearchResult {
     bool verification_changed=false;
     float importance=1;
     std::shared_ptr<SearchTelemetry> telemetry;
+    std::shared_ptr<ResearchMetrics> research;
 };
 SearchResult search(const Board& board,const Network& network,const SearchLimits& limits,const std::atomic<bool>& stop);
 }

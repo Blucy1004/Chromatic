@@ -1,0 +1,106 @@
+{
+  "models": {
+    "zero128": {
+      "model_path": "/workspace/Chromatic/chromatic-shard-trainer/champion/default.zero",
+      "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "pt_path": "/workspace/Chromatic/chromatic-shard-trainer/champion/model.pt",
+      "pt_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "architecture": {
+        "width": 64,
+        "blocks": 2
+      },
+      "checkpoint_format": 1,
+      "updates": 200,
+      "training_positions": 128,
+      "initial_checkpoint_sha256": null,
+      "loaded_tensors": {
+        "loaded": true,
+        "path": "/workspace/Chromatic/chromatic-shard-trainer/champion/default.zero",
+        "sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+        "format": "ZERO0001",
+        "inputs": 1280,
+        "actions": 4672,
+        "width": 64,
+        "blocks": 2,
+        "hash_scope": "canonical loaded tensors"
+      }
+    },
+    "lichess100": {
+      "model_path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-100.zero",
+      "sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af",
+      "pt_path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-100.pt",
+      "pt_sha256": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf",
+      "architecture": {
+        "width": 64,
+        "blocks": 2
+      },
+      "checkpoint_format": 2,
+      "updates": 12,
+      "training_positions": 100,
+      "initial_checkpoint_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "loaded_tensors": {
+        "loaded": true,
+        "path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-100.zero",
+        "sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af",
+        "format": "ZERO0001",
+        "inputs": 1280,
+        "actions": 4672,
+        "width": 64,
+        "blocks": 2,
+        "hash_scope": "canonical loaded tensors"
+      }
+    },
+    "lichess1000": {
+      "model_path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-1000.zero",
+      "sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb",
+      "pt_path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-1000.pt",
+      "pt_sha256": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867",
+      "architecture": {
+        "width": 64,
+        "blocks": 2
+      },
+      "checkpoint_format": 2,
+      "updates": 114,
+      "training_positions": 1000,
+      "initial_checkpoint_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "loaded_tensors": {
+        "loaded": true,
+        "path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-1000.zero",
+        "sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb",
+        "format": "ZERO0001",
+        "inputs": 1280,
+        "actions": 4672,
+        "width": 64,
+        "blocks": 2,
+        "hash_scope": "canonical loaded tensors"
+      }
+    },
+    "lichess10000": {
+      "model_path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-10000.zero",
+      "sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a",
+      "pt_path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-10000.pt",
+      "pt_sha256": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+      "architecture": {
+        "width": 64,
+        "blocks": 2
+      },
+      "checkpoint_format": 2,
+      "updates": 1149,
+      "training_positions": 10000,
+      "initial_checkpoint_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "loaded_tensors": {
+        "loaded": true,
+        "path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-10000.zero",
+        "sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a",
+        "format": "ZERO0001",
+        "inputs": 1280,
+        "actions": 4672,
+        "width": 64,
+        "blocks": 2,
+        "hash_scope": "canonical loaded tensors"
+      }
+    }
+  },
+  "resume_test": "partial record recovered, 3 unique records, matching identities, concurrent writer rejected",
+  "holdout_disjoint": true
+}

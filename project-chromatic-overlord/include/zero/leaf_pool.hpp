@@ -5,6 +5,8 @@
 #include <future>
 #include <mutex>
 #include <thread>
+#include <atomic>
+#include <chrono>
 namespace zero {
 // Workers only read immutable boards, legal lists and weights. The coordinator
 // owns all tree state. Destruction drains pending jobs and joins every worker.
@@ -14,8 +16,10 @@ class LeafPool {
     std::deque<std::packaged_task<Evaluation(Network::Workspace&)>> jobs_;
     std::vector<std::thread> workers_;
     bool done_=false;
+    bool timed_=false;
+    std::atomic<uint64_t> neural_ns_{0};
 public:
-    explicit LeafPool(int count) {
+    explicit LeafPool(int count,bool timed=false):timed_(timed) {
         try {
             for(int i=0;i<count;++i)workers_.emplace_back([this] {
                 Network::Workspace workspace;
@@ -32,6 +36,7 @@ public:
             });
         } catch(...) {close();throw;}
     }
+    uint64_t neural_ns() const{return neural_ns_.load(std::memory_order_relaxed);}
     LeafPool(const LeafPool&)=delete;
     ~LeafPool(){close();}
     void close() {
@@ -41,7 +46,12 @@ public:
     }
     std::future<Evaluation> submit(const Network& net,Board board,std::vector<Move> moves) {
         std::packaged_task<Evaluation(Network::Workspace&)> job(
-            [&net,board=std::move(board),moves=std::move(moves)](Network::Workspace& w){return net.evaluate_legal(board,moves,w);});
+            [this,&net,board=std::move(board),moves=std::move(moves)](Network::Workspace& w){
+                const auto start=timed_?std::chrono::steady_clock::now():std::chrono::steady_clock::time_point{};
+                auto result=net.evaluate_legal(board,moves,w);
+                if(timed_)neural_ns_.fetch_add(uint64_t(std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now()-start).count()),std::memory_order_relaxed);
+                return result;
+            });
         auto result=job.get_future();
         {std::lock_guard lock(mutex_);jobs_.push_back(std::move(job));}
         ready_.notify_one();return result;

@@ -99,6 +99,7 @@ public:
             if constexpr(Measured)reserved_cap();
         }
         auto index=uint32_t(nodes.size());nodes.emplace_back();edges[edge].child=index;
+        if(result.research)++result.research->node_creations;
         if constexpr(Measured)++telemetry->counters.node_creations;
         return index;
     }
@@ -125,6 +126,7 @@ public:
         uint32_t first=uint32_t(edges.size());
         for(auto m:moves){float p=std::exp(eval.policy[action(m)]-maximum);sum+=p;edges.push_back({m,p,0,0,NONE});}
         for(size_t i=first;i<edges.size();++i)edges[i].prior/=sum;
+        if(result.research){++result.research->edge_expansions;result.research->stored_edges+=moves.size();}
         nodes[index].first=first;nodes[index].count=uint32_t(moves.size());nodes[index].expanded=true;
         if constexpr(Measured){++telemetry->counters.legal_expansions;if(index==0)++telemetry->counters.root_legal_expansions;}
     }
@@ -132,6 +134,7 @@ public:
     // tree is allocated: only keep flags, an index map and block order scratch.
     // All root edges and the statistics on every retained edge are preserved.
     bool prune() {
+        ResearchTimer timer(result.research?&result.research->prune_ns:nullptr);
         const auto prune_start=std::chrono::steady_clock::now();
         TelemetryPrune record;
         if constexpr(Measured) {
@@ -250,7 +253,9 @@ float evaluate(Arena<Measured>& tree,uint32_t index,const Board& b,const Network
             tree.evaluated[index]=1;
         }
     }
-    ++result.neural_evals;auto eval=net.evaluate_legal(b,moves,workspace);value=eval.wdl[0]-eval.wdl[2];
+    ++result.neural_evals;Evaluation eval;
+    {ResearchTimer timer(result.research?&result.research->nn_mcts_ns:nullptr);eval=net.evaluate_legal(b,moves,workspace);}
+    value=eval.wdl[0]-eval.wdl[2];
     if(index!=NONE){tree.nodes[index].value=value;tree.children(index,moves,eval);}
     return value;
 }
@@ -295,7 +300,9 @@ void parallel_simulations(Arena<Measured>& tree,const Board& board,const Network
     const SearchLimits& limits,SearchResult& result,DepthHistogram& window,Cancelled cancelled) {
     // Threads includes the coordinator. It evaluates one leaf itself while
     // Threads-1 workers process the other reservations; no hidden extra CPU.
-    LeafPool pool(limits.threads-1);
+    const auto pool_start=result.research?std::chrono::steady_clock::now():std::chrono::steady_clock::time_point{};
+    LeafPool pool(limits.threads-1,bool(result.research));
+    if(result.research)result.research->parallel_init_ns=uint64_t(std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now()-pool_start).count());
     Network::Workspace coordinator_workspace;
     struct Pending {
         uint32_t node;std::vector<uint32_t> nodes,edges;
@@ -312,7 +319,7 @@ void parallel_simulations(Arena<Measured>& tree,const Board& board,const Network
             Board b=board;Pending task{};task.node=0;task.nodes.push_back(0);
             bool blocked=false;
             while(tree.nodes[task.node].expanded&&!tree.nodes[task.node].terminal) {
-                auto node=tree.nodes[task.node];double best_score=-1e100;uint32_t best=NONE;
+                auto node=tree.nodes[task.node];double best_score=-1e100,runner_up=-1e100;uint32_t best=NONE;
                 for(uint32_t i=node.first;i<node.first+node.count;++i) {
                     const auto& e=tree.edges[i];
                     if(e.child!=NONE&&pending.count(e.child))continue;
@@ -322,8 +329,10 @@ void parallel_simulations(Arena<Measured>& tree,const Board& board,const Network
                     double q=n?(e.sum-double(in_flight))/n:(limits.fpu_reduction>0?node.value-limits.fpu_reduction:0);
                     double cpuct=limits.cpuct*(task.node==0&&limits.adaptive_budget?result.importance:1.f);
                     double score=q+cpuct*e.prior*std::sqrt(double(node.visits)+1)/(1+n);
-                    if(score>best_score){best_score=score;best=i;}
+                    if(score>best_score){if(result.research)runner_up=best_score;best_score=score;best=i;}
+                    else if(result.research&&score>runner_up)runner_up=score;
                 }
+                if(result.research&&runner_up>-1e90){double gap=best_score-runner_up;if(gap==0)++result.research->selection_ties;else result.research->minimum_positive_gap=std::min(result.research->minimum_positive_gap,gap);}
                 if(best==NONE){blocked=true;break;}
                 task.edges.push_back(best);b.make(tree.edges[best].move);
                 task.node=tree.child(best);
@@ -364,12 +373,12 @@ void parallel_simulations(Arena<Measured>& tree,const Board& board,const Network
         // Run the coordinator's leaf before waiting for worker futures.
         for(auto& task:wave)if(task.deferred) {
             std::promise<Evaluation> ready;task.future=ready.get_future();
-            try {ready.set_value(network.evaluate_legal(*task.deferred,task.moves,coordinator_workspace));}
+            try {Evaluation evaluated;{ResearchTimer timer(result.research?&result.research->nn_mcts_ns:nullptr);evaluated=network.evaluate_legal(*task.deferred,task.moves,coordinator_workspace);}ready.set_value(evaluated);}
             catch(...) {ready.set_exception(std::current_exception());}
         }
         for(auto& task:wave) {
             if(task.neural) {
-                auto eval=task.future.get();task.value=eval.wdl[0]-eval.wdl[2];
+                Evaluation eval;{ResearchTimer timer(result.research?&result.research->parallel_wait_handoff_ns:nullptr);eval=task.future.get();}task.value=eval.wdl[0]-eval.wdl[2];
                 tree.nodes[task.node].value=task.value;
                 const auto node=tree.nodes[task.node];float maximum=-std::numeric_limits<float>::infinity(),sum=0;
                 for(auto m:task.moves)maximum=std::max(maximum,eval.policy[action(m)]);
@@ -381,6 +390,7 @@ void parallel_simulations(Arena<Measured>& tree,const Board& board,const Network
             float value=task.value;
             for(auto it=task.edges.rbegin();it!=task.edges.rend();++it){value=-value;auto& e=tree.edges[*it];++e.visits;e.sum+=value;}
             ++result.simulations;result.max_depth=std::max(result.max_depth,int(task.edges.size()));
+            if(result.research)++result.research->leaf_depth[task.edges.size()];
             if constexpr(Measured) {
                 auto& t=*result.telemetry;size_t d=task.edges.size();++t.leaf_depth[d];++window[d];
                 if(!task.edges.empty())++t.roots[task.edges.front()-tree.nodes[0].first].leaf_depth[d];
@@ -398,6 +408,26 @@ void parallel_simulations(Arena<Measured>& tree,const Board& board,const Network
             if constexpr(Measured)snapshot(tree,*result.telemetry,"recycle",uint64_t(result.simulations),window);
         } else if(wave.empty())break;
     }
+    {ResearchTimer timer(result.research?&result.research->parallel_join_ns:nullptr);pool.close();}
+    if(result.research)result.research->nn_mcts_ns+=pool.neural_ns();
+}
+template<bool Measured>
+void finish_research(Arena<Measured>& tree,SearchResult& result) {
+    if(!result.research)return;
+    auto& m=*result.research;
+    m.algorithm_ns=uint64_t(std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now()-tree.start).count());
+    if(!result.has_move)return;
+    uint32_t current=0;
+    for(int depth=0;depth<32;++depth) {
+        const auto& node=tree.nodes[current];if(!node.expanded||node.terminal||!node.count)break;
+        uint32_t best=node.first;
+        if(depth==0){for(uint32_t i=node.first;i<node.first+node.count;++i)if(tree.edges[i].move==result.best){best=i;break;}}
+        else for(uint32_t i=node.first;i<node.first+node.count;++i) {
+            const auto& a=tree.edges[i];const auto& b=tree.edges[best];
+            if(a.visits>b.visits||(a.visits==b.visits&&a.prior>b.prior))best=i;
+        }
+        m.pv.push_back(tree.edges[best].move);current=tree.edges[best].child;if(current==NONE)break;
+    }
 }
 
 template<bool Measured>
@@ -409,15 +439,20 @@ SearchResult search_impl(const Board& board,const Network& network,const SearchL
     const auto hard_deadline=limits.milliseconds>0?start+std::chrono::milliseconds(limits.milliseconds):std::chrono::steady_clock::time_point::max();
     auto search_deadline=hard_deadline;
     if(verify&&limits.milliseconds>0)search_deadline=start+std::chrono::milliseconds(std::max<int64_t>(1,int64_t(limits.milliseconds)*3/4));
-    auto cancelled=[&](){return stop.load(std::memory_order_relaxed)||std::chrono::steady_clock::now()>=search_deadline;};
     SearchResult result;
+    if(limits.research_metrics)result.research=std::make_shared<ResearchMetrics>();
+    int mcts_neural_cap=limits.neural_limit;
+    if(verify&&mcts_neural_cap>0)mcts_neural_cap=std::max(1,mcts_neural_cap*3/4);
+    auto cancelled=[&](){return stop.load(std::memory_order_relaxed)||std::chrono::steady_clock::now()>=search_deadline||(mcts_neural_cap>0&&result.neural_evals>=mcts_neural_cap);};
     if constexpr(Measured)result.telemetry=std::make_shared<SearchTelemetry>();
     Arena<Measured> tree(limits,result,result.telemetry.get(),start);Network::Workspace workspace;
     DepthHistogram window{};
     bool root_stored=true;
-    result.value=evaluate(tree,0,board,network,result,workspace,nullptr,&root_stored);result.terminal=tree.nodes[0].terminal;
+    {ResearchTimer timer(result.research?&result.research->root_ns:nullptr);result.value=evaluate(tree,0,board,network,result,workspace,nullptr,&root_stored);}
+    if(result.research)result.research->root_nn_ns=result.research->nn_mcts_ns;
+    result.terminal=tree.nodes[0].terminal;
     result.arena_nodes=tree.nodes.size();result.memory_bytes=tree.bytes();
-    if(result.terminal){finish_telemetry(tree,result,window);return result;}
+    if(result.terminal){finish_telemetry(tree,result,window);finish_research(tree,result);return result;}
     if(!root_stored||!tree.nodes[0].expanded)throw std::runtime_error("tree budget cannot hold root");
     std::mt19937_64 rng(limits.seed);
     const uint32_t root_count=tree.nodes[0].count;
@@ -427,6 +462,7 @@ SearchResult search_impl(const Board& board,const Network& network,const SearchL
         if(result.telemetry->first_reserved_cap.occurred)snapshot(tree,*result.telemetry,"root_initialization+first_reserved_cap",0,window);
     }
     if(limits.proof_nodes>0&&!cancelled()) {
+        ResearchTimer timer(result.research?&result.research->proof_ns:nullptr);
         std::vector<Move> moves;for(uint32_t i=0;i<root_count;++i)moves.push_back(tree.edges[i].move);
         int microseconds=limits.milliseconds>0?int(std::max<int64_t>(100, std::min<int64_t>(10000,int64_t(limits.milliseconds)*1000/4))):0;
         auto proof=verify_mate(board,moves,limits.proof_plies,limits.proof_nodes,stop,microseconds);
@@ -437,7 +473,7 @@ SearchResult search_impl(const Board& board,const Network& network,const SearchL
             result.simulations=1;result.proof_plies=proof.plies;result.memory_bytes=tree.bytes();result.arena_nodes=tree.nodes.size();
             for(uint32_t i=0;i<root_count;++i){auto& edge=tree.edges[i];bool best=edge.move==proof.move;result.visits.emplace_back(edge.move,best?1:0);result.q_values.push_back(best?1.f:0.f);result.priors.push_back(edge.prior);}
             if constexpr(Measured){result.telemetry->proof_only=true;result.telemetry->counters.proof_root_updates=1;}
-            finish_telemetry(tree,result,window);
+            finish_telemetry(tree,result,window);finish_research(tree,result);
             return result;
         }
     }
@@ -447,6 +483,8 @@ SearchResult search_impl(const Board& board,const Network& network,const SearchL
         if(sum>0)for(uint32_t i=0;i<root_count;++i)tree.edges[i].prior=(1-limits.noise)*tree.edges[i].prior+limits.noise*noise[i]/sum;
     }
     if(limits.adaptive_budget) {
+        ResearchTimer timer(result.research?&result.research->adaptive_ns:nullptr);
+        if(result.research)++result.research->adaptive_calls;
         std::vector<float> priors;for(uint32_t i=0;i<root_count;++i)priors.push_back(tree.edges[i].prior);
         result.importance=budget_importance(priors,result.value);
         if(limits.milliseconds>0) {
@@ -457,6 +495,7 @@ SearchResult search_impl(const Board& board,const Network& network,const SearchL
             search_deadline=std::min(search_deadline,adaptive);
         }
     }
+    const auto mcts_start=result.research?std::chrono::steady_clock::now():std::chrono::steady_clock::time_point{};
     if(limits.threads>1)parallel_simulations(tree,board,network,limits,result,window,cancelled);
     std::vector<uint32_t> path_nodes,path_edges;path_nodes.reserve(128);path_edges.reserve(128);
     while(limits.threads==1&&!cancelled()&&(limits.simulations<=0||result.simulations<limits.simulations)) {
@@ -466,14 +505,16 @@ SearchResult search_impl(const Board& board,const Network& network,const SearchL
         Board b=board;uint32_t current=0;
         path_nodes.clear();path_edges.clear();path_nodes.push_back(0);
         while(tree.nodes[current].expanded&&!tree.nodes[current].terminal) {
-            const Node node=tree.nodes[current];double best_score=-1e100;
+            const Node node=tree.nodes[current];double best_score=-1e100,runner_up=-1e100;
             uint32_t best=node.first;double exploration=std::sqrt(double(node.visits)+1);
             for(uint32_t i=node.first;i<node.first+node.count;++i) {
                 const auto& e=tree.edges[i];
                 double q=e.visits?e.sum/e.visits:(limits.fpu_reduction>0?node.value-limits.fpu_reduction:0);
                 double score=q+(limits.cpuct*(current==0&&limits.adaptive_budget?result.importance:1.f)*e.prior)*exploration/(1+e.visits);
-                if(score>best_score){best_score=score;best=i;}
+                if(score>best_score){if(result.research)runner_up=best_score;best_score=score;best=i;}
+                else if(result.research&&score>runner_up)runner_up=score;
             }
+            if(result.research&&runner_up>-1e90){double gap=best_score-runner_up;if(gap==0)++result.research->selection_ties;else result.research->minimum_positive_gap=std::min(result.research->minimum_positive_gap,gap);}
             path_edges.push_back(best);b.make(tree.edges[best].move);
             if constexpr(Measured)tree.depth=int(path_edges.size());
             current=tree.child(best);
@@ -502,6 +543,7 @@ SearchResult search_impl(const Board& board,const Network& network,const SearchL
             auto& edge=tree.edges[*it];++edge.visits;edge.sum+=value;
         }
         result.max_depth=std::max(result.max_depth,int(path_edges.size()));++result.simulations;
+        if(result.research)++result.research->leaf_depth[path_edges.size()];
         if constexpr(Measured) {
             auto& t=*result.telemetry;const size_t d=path_edges.size();
             ++t.leaf_depth[d];++window[d];
@@ -524,6 +566,7 @@ SearchResult search_impl(const Board& board,const Network& network,const SearchL
             }
         }
     }
+    if(result.research)result.research->mcts_ns+=uint64_t(std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now()-mcts_start).count());
     uint32_t best=0;double total=0;
     for(uint32_t i=0;i<root_count;++i) {
         const auto& edge=tree.edges[i];total+=edge.sum;
@@ -544,6 +587,7 @@ SearchResult search_impl(const Board& board,const Network& network,const SearchL
     result.arena_nodes=tree.nodes.size();result.memory_bytes=tree.bytes();finish_telemetry(tree,result,window);
     if(verify&&!stop.load(std::memory_order_relaxed)&&std::chrono::steady_clock::now()<hard_deadline)
         verify_candidates(board,network,limits,stop,hard_deadline,result);
+    finish_research(tree,result);
     return result;
 }
 }

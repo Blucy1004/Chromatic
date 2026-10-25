@@ -73,7 +73,7 @@ void write_telemetry_json(std::ostream& out,const SearchTelemetry& d) {
 }
 std::string search_result_json(const SearchResult& r) {
     std::ostringstream out;out<<std::setprecision(12)<<"{\"bestmove\":\""<<(r.has_move?r.best.uci():"0000")<<"\",\"terminal\":"<<(r.terminal?"true":"false")
-       <<",\"simulations\":"<<r.simulations<<",\"value\":"<<r.value<<",\"neural_evals\":"<<r.neural_evals
+       <<",\"search_ns\":"<<r.search_ns<<",\"simulations\":"<<r.simulations<<",\"value\":"<<r.value<<",\"neural_evals\":"<<r.neural_evals
        <<",\"memory_bytes\":"<<r.memory_bytes<<",\"arena_nodes\":"<<r.arena_nodes<<",\"max_depth\":"<<r.max_depth
        <<",\"peak_memory_bytes\":"<<r.peak_memory_bytes<<",\"peak_auxiliary_bytes\":"<<r.peak_auxiliary_bytes
        <<",\"attempted_simulations\":"<<r.attempted_simulations<<",\"aborted_simulations\":"<<r.aborted_simulations
@@ -92,6 +92,45 @@ std::string search_result_json(const SearchResult& r) {
     std::vector<size_t> order(r.visits.size());std::iota(order.begin(),order.end(),0);
     std::stable_sort(order.begin(),order.end(),[&](size_t a,size_t b){return r.visits[a].second!=r.visits[b].second?r.visits[a].second>r.visits[b].second:r.priors[a]>r.priors[b];});
     out<<",\"top5\":[";for(size_t i=0;i<std::min<size_t>(5,order.size());++i){if(i)out<<',';entry(order[i]);}out<<']';
+    out<<",\"research\":";
+    if(!r.research)out<<"null";else {
+        const auto& m=*r.research;
+        out<<"{\"leaf_depth\":";histogram(out,m.leaf_depth);
+        uint64_t count=0,sum=0;for(size_t i=0;i<m.leaf_depth.size();++i){count+=m.leaf_depth[i];sum+=m.leaf_depth[i]*i;}
+        uint64_t cumulative=0;int low=0,high=0;
+        for(size_t i=0;i<m.leaf_depth.size();++i){auto before=cumulative;cumulative+=m.leaf_depth[i];if(count&&before<=(count-1)/2&&cumulative>(count-1)/2)low=int(i);if(count&&before<=count/2&&cumulative>count/2)high=int(i);}
+        out<<",\"depth_samples\":"<<count<<",\"mean_depth\":"<<(count?double(sum)/count:0)<<",\"median_depth\":"<<(low+high)/2.;
+        auto field=[&](const char* key,uint64_t value){out<<",\""<<key<<"\":"<<value;};
+        field("node_creations",m.node_creations);
+        field("edge_expansions",m.edge_expansions);
+        field("stored_edges",m.stored_edges);
+        field("adaptive_calls",m.adaptive_calls);
+        field("verification_calls",m.verification_calls);
+        field("admission_calls",m.admission_calls);
+        field("admission_nodes",m.admission_nodes);
+        field("counterexample_calls",m.counterexample_calls);
+        field("counterexample_replies",m.counterexample_replies);
+        field("quiescence_nodes",m.quiescence_nodes);
+        field("forcing_checks",m.forcing_checks);
+        field("material_calls",m.material_calls);
+        field("root_ns",m.root_ns);
+        field("mcts_ns",m.mcts_ns);
+        field("nn_mcts_ns",m.nn_mcts_ns);
+        field("adaptive_ns",m.adaptive_ns);
+        field("verification_ns",m.verification_ns);
+        field("admission_ns",m.admission_ns);
+        field("counterexample_exclusive_ns",m.counterexample_exclusive_ns);
+        field("quiescence_ns",m.quiescence_ns);
+        field("nn_verification_ns",m.nn_verification_ns);
+        field("forcing_checks_ns",m.forcing_checks_ns);
+        field("material_ns",m.material_ns);
+        field("proof_ns",m.proof_ns);field("prune_ns",m.prune_ns);
+        field("algorithm_ns",m.algorithm_ns);
+        field("call_ns",m.call_ns);
+        field("parallel_init_ns",m.parallel_init_ns);field("parallel_wait_handoff_ns",m.parallel_wait_handoff_ns);field("parallel_join_ns",m.parallel_join_ns);field("root_nn_ns",m.root_nn_ns);
+        field("selection_ties",m.selection_ties);out<<",\"minimum_positive_gap\":"<<(m.minimum_positive_gap<1e90?m.minimum_positive_gap:0);
+        out<<",\"pv\":[";for(size_t i=0;i<m.pv.size();++i){if(i)out<<',';out<<'"'<<m.pv[i].uci()<<'"';}out<<"]}";
+    }
     out<<",\"telemetry_enabled\":"<<(r.telemetry?"true":"false");
     if(r.telemetry){out<<",\"telemetry\":";write_telemetry_json(out,*r.telemetry);}out<<'}';return out.str();
 }

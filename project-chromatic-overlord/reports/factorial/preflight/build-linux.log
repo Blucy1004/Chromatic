@@ -1,0 +1,63 @@
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/chromatic-factorial
+[1/17] Building CXX object CMakeFiles/zero_core.dir/src/telemetry_json.cpp.o
+[2/17] Building CXX object CMakeFiles/chromatic_overlord.dir/src/main.cpp.o
+[3/17] Building CXX object CMakeFiles/zero_core.dir/src/verification.cpp.o
+[4/17] Building CXX object CMakeFiles/core_tests.dir/tests/core.cpp.o
+[5/17] Building CXX object CMakeFiles/memory_recycling_tests.dir/tests/memory_recycling.cpp.o
+[6/17] Building CXX object CMakeFiles/depth_telemetry_tests.dir/tests/depth_telemetry.cpp.o
+[7/17] Building CXX object CMakeFiles/research_tests.dir/tests/research.cpp.o
+[8/17] Building CXX object CMakeFiles/overlord_tests.dir/tests/overlord.cpp.o
+[9/17] Building CXX object CMakeFiles/zero_core.dir/src/search.cpp.o
+[10/17] Linking CXX static library libzero_core.a
+[11/17] Linking CXX executable core_tests
+[12/17] Linking CXX executable memory_recycling_tests
+[13/17] Linking CXX executable chromatic_overlord
+[14/17] Linking CXX executable depth_telemetry_tests
+[15/17] Linking CXX executable model_identity_tests
+[16/17] Linking CXX executable overlord_tests
+[17/17] Linking CXX executable research_tests
+[1/17] Building CXX object CMakeFiles/zero_core.dir/src/telemetry_json.cpp.o
+[2/17] Building CXX object CMakeFiles/zero_core.dir/src/verification.cpp.o
+[3/17] Building CXX object CMakeFiles/chromatic_overlord.dir/src/main.cpp.o
+[4/17] Building CXX object CMakeFiles/core_tests.dir/tests/core.cpp.o
+[5/17] Building CXX object CMakeFiles/depth_telemetry_tests.dir/tests/depth_telemetry.cpp.o
+[6/17] Building CXX object CMakeFiles/memory_recycling_tests.dir/tests/memory_recycling.cpp.o
+[7/17] Building CXX object CMakeFiles/research_tests.dir/tests/research.cpp.o
+[8/17] Building CXX object CMakeFiles/overlord_tests.dir/tests/overlord.cpp.o
+[9/17] Building CXX object CMakeFiles/zero_core.dir/src/search.cpp.o
+[10/17] Linking CXX static library libzero_core.a
+[11/17] Linking CXX executable depth_telemetry_tests
+[12/17] Linking CXX executable chromatic_overlord
+[13/17] Linking CXX executable core_tests
+[14/17] Linking CXX executable memory_recycling_tests
+[15/17] Linking CXX executable overlord_tests
+[16/17] Linking CXX executable model_identity_tests
+[17/17] Linking CXX executable research_tests
+[1/9] Building CXX object CMakeFiles/zero_core.dir/src/search.cpp.o
+[2/9] Linking CXX static library libzero_core.a
+[3/9] Linking CXX executable chromatic_overlord
+[4/9] Linking CXX executable core_tests
+[5/9] Linking CXX executable memory_recycling_tests
+[6/9] Linking CXX executable depth_telemetry_tests
+[7/9] Linking CXX executable model_identity_tests
+[8/9] Linking CXX executable overlord_tests
+[9/9] Linking CXX executable research_tests
+[1/17] Building CXX object CMakeFiles/zero_core.dir/src/telemetry_json.cpp.o
+[2/17] Building CXX object CMakeFiles/chromatic_overlord.dir/src/main.cpp.o
+[3/17] Building CXX object CMakeFiles/zero_core.dir/src/verification.cpp.o
+[4/17] Building CXX object CMakeFiles/core_tests.dir/tests/core.cpp.o
+[5/17] Building CXX object CMakeFiles/memory_recycling_tests.dir/tests/memory_recycling.cpp.o
+[6/17] Building CXX object CMakeFiles/depth_telemetry_tests.dir/tests/depth_telemetry.cpp.o
+[7/17] Building CXX object CMakeFiles/research_tests.dir/tests/research.cpp.o
+[8/17] Building CXX object CMakeFiles/overlord_tests.dir/tests/overlord.cpp.o
+[9/17] Building CXX object CMakeFiles/zero_core.dir/src/search.cpp.o
+[10/17] Linking CXX static library libzero_core.a
+[11/17] Linking CXX executable memory_recycling_tests
+[12/17] Linking CXX executable chromatic_overlord
+[13/17] Linking CXX executable depth_telemetry_tests
+[14/17] Linking CXX executable core_tests
+[15/17] Linking CXX executable overlord_tests
+[16/17] Linking CXX executable model_identity_tests
+[17/17] Linking CXX executable research_tests

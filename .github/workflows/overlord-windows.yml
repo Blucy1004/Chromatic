@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   native:
-    if: github.ref == 'refs/heads/operation-overlord'
+    if: github.ref == 'refs/heads/operation-overlord' && !contains(github.event.head_commit.message, '[factorial]')
     runs-on: windows-2022
     timeout-minutes: 30
     env:

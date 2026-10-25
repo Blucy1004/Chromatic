@@ -1,0 +1,1257 @@
+{
+  "old_engine_sha256": "8d61aaacf530f2940360bb84683e584e493de31b0c4410170dba708f04541414",
+  "research_engine_sha256": "b97bcfc96400e6b7973382bf30234654c82cb97181eb68b86ba79ebe1cbf5428",
+  "fixed_work_parity": [
+    {
+      "model": "zero128",
+      "mask": 0,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 1,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 2,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 3,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 4,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 5,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 6,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 7,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 8,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 9,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 10,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 11,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 12,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 13,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 14,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 17,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 18,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 19,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 20,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 21,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 22,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 23,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 24,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 25,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 26,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 27,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 28,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 29,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 30,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 1,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 2,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 3,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 4,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 5,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 6,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 7,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 8,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 9,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 10,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 11,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 12,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 13,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 14,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 17,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 18,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 19,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 20,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 21,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 22,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 23,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 24,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 25,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 26,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 27,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 28,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 29,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 30,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "positions_checked": 2,
+      "identical_fixed_work": true
+    }
+  ],
+  "observer_effect": [
+    {
+      "model": "zero128",
+      "mask": 0,
+      "puzzle": "00008",
+      "repeat": 0,
+      "off_ns": 10484989,
+      "on_ns": 10385769,
+      "ratio": 0.9905369476305602
+    },
+    {
+      "model": "zero128",
+      "mask": 0,
+      "puzzle": "000o3",
+      "repeat": 0,
+      "off_ns": 9808578,
+      "on_ns": 9772733,
+      "ratio": 0.9963455457049941
+    },
+    {
+      "model": "zero128",
+      "mask": 0,
+      "puzzle": "001uD",
+      "repeat": 0,
+      "off_ns": 10669348,
+      "on_ns": 10929650,
+      "ratio": 1.0243971796589633
+    },
+    {
+      "model": "zero128",
+      "mask": 0,
+      "puzzle": "002vV",
+      "repeat": 0,
+      "off_ns": 451692,
+      "on_ns": 424291,
+      "ratio": 0.9393369818371811
+    },
+    {
+      "model": "zero128",
+      "mask": 0,
+      "puzzle": "00008",
+      "repeat": 1,
+      "off_ns": 10287752,
+      "on_ns": 10380912,
+      "ratio": 1.0090554282412718
+    },
+    {
+      "model": "zero128",
+      "mask": 0,
+      "puzzle": "000o3",
+      "repeat": 1,
+      "off_ns": 9722368,
+      "on_ns": 9815047,
+      "ratio": 1.0095325542090157
+    },
+    {
+      "model": "zero128",
+      "mask": 0,
+      "puzzle": "001uD",
+      "repeat": 1,
+      "off_ns": 10777751,
+      "on_ns": 10638551,
+      "ratio": 0.9870845039934584
+    },
+    {
+      "model": "zero128",
+      "mask": 0,
+      "puzzle": "002vV",
+      "repeat": 1,
+      "off_ns": 418502,
+      "on_ns": 450921,
+      "ratio": 1.0774643848774916
+    },
+    {
+      "model": "zero128",
+      "mask": 0,
+      "puzzle": "00008",
+      "repeat": 2,
+      "off_ns": 10335723,
+      "on_ns": 10380701,
+      "ratio": 1.0043517033109344
+    },
+    {
+      "model": "zero128",
+      "mask": 0,
+      "puzzle": "000o3",
+      "repeat": 2,
+      "off_ns": 9893876,
+      "on_ns": 9906665,
+      "ratio": 1.0012926177768955
+    },
+    {
+      "model": "zero128",
+      "mask": 0,
+      "puzzle": "001uD",
+      "repeat": 2,
+      "off_ns": 10606633,
+      "on_ns": 10685842,
+      "ratio": 1.0074678741123597
+    },
+    {
+      "model": "zero128",
+      "mask": 0,
+      "puzzle": "002vV",
+      "repeat": 2,
+      "off_ns": 428457,
+      "on_ns": 422187,
+      "ratio": 0.9853660927467633
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "puzzle": "00008",
+      "repeat": 0,
+      "off_ns": 21148908,
+      "on_ns": 21069087,
+      "ratio": 0.9962257625783799
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "puzzle": "000o3",
+      "repeat": 0,
+      "off_ns": 10869290,
+      "on_ns": 10865513,
+      "ratio": 0.9996525072014824
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "puzzle": "001uD",
+      "repeat": 0,
+      "off_ns": 25156638,
+      "on_ns": 25794051,
+      "ratio": 1.0253377657221128
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "puzzle": "002vV",
+      "repeat": 0,
+      "off_ns": 541878,
+      "on_ns": 513766,
+      "ratio": 0.9481211638043988
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "puzzle": "00008",
+      "repeat": 1,
+      "off_ns": 20717347,
+      "on_ns": 20961915,
+      "ratio": 1.0118049864203171
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "puzzle": "000o3",
+      "repeat": 1,
+      "off_ns": 10761667,
+      "on_ns": 10979666,
+      "ratio": 1.0202569917838937
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "puzzle": "001uD",
+      "repeat": 1,
+      "off_ns": 25372013,
+      "on_ns": 25370341,
+      "ratio": 0.9999341006170854
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "puzzle": "002vV",
+      "repeat": 1,
+      "off_ns": 506775,
+      "on_ns": 539855,
+      "ratio": 1.0652755167480636
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "puzzle": "00008",
+      "repeat": 2,
+      "off_ns": 20710567,
+      "on_ns": 20915245,
+      "ratio": 1.009882781094308
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "puzzle": "000o3",
+      "repeat": 2,
+      "off_ns": 10940006,
+      "on_ns": 10884632,
+      "ratio": 0.9949383940008808
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "puzzle": "001uD",
+      "repeat": 2,
+      "off_ns": 25458334,
+      "on_ns": 25346786,
+      "ratio": 0.9956184092800416
+    },
+    {
+      "model": "zero128",
+      "mask": 15,
+      "puzzle": "002vV",
+      "repeat": 2,
+      "off_ns": 560175,
+      "on_ns": 510731,
+      "ratio": 0.9117347257553443
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "puzzle": "00008",
+      "repeat": 0,
+      "off_ns": 10646653,
+      "on_ns": 10996641,
+      "ratio": 1.0328730540950288
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "puzzle": "000o3",
+      "repeat": 0,
+      "off_ns": 10017093,
+      "on_ns": 10786294,
+      "ratio": 1.0767888448275362
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "puzzle": "001uD",
+      "repeat": 0,
+      "off_ns": 10266440,
+      "on_ns": 11805542,
+      "ratio": 1.149915842297817
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "puzzle": "002vV",
+      "repeat": 0,
+      "off_ns": 620888,
+      "on_ns": 611913,
+      "ratio": 0.9855448969862519
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "puzzle": "00008",
+      "repeat": 1,
+      "off_ns": 10533733,
+      "on_ns": 12234029,
+      "ratio": 1.1614143817770965
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "puzzle": "000o3",
+      "repeat": 1,
+      "off_ns": 9754406,
+      "on_ns": 11459605,
+      "ratio": 1.1748132074879802
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "puzzle": "001uD",
+      "repeat": 1,
+      "off_ns": 9401454,
+      "on_ns": 9662757,
+      "ratio": 1.0277938923064454
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "puzzle": "002vV",
+      "repeat": 1,
+      "off_ns": 609510,
+      "on_ns": 684724,
+      "ratio": 1.1234007645485717
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "puzzle": "00008",
+      "repeat": 2,
+      "off_ns": 9167350,
+      "on_ns": 11408112,
+      "ratio": 1.2444285425995516
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "puzzle": "000o3",
+      "repeat": 2,
+      "off_ns": 9476447,
+      "on_ns": 9745362,
+      "ratio": 1.0283771966434256
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "puzzle": "001uD",
+      "repeat": 2,
+      "off_ns": 9395874,
+      "on_ns": 20578056,
+      "ratio": 2.1901162148406845
+    },
+    {
+      "model": "zero128",
+      "mask": 16,
+      "puzzle": "002vV",
+      "repeat": 2,
+      "off_ns": 772627,
+      "on_ns": 611943,
+      "ratio": 0.7920290127060017
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "puzzle": "00008",
+      "repeat": 0,
+      "off_ns": 20000214,
+      "on_ns": 19582333,
+      "ratio": 0.9791061735639429
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "puzzle": "000o3",
+      "repeat": 0,
+      "off_ns": 10778512,
+      "on_ns": 10273349,
+      "ratio": 0.9531323989804901
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "puzzle": "001uD",
+      "repeat": 0,
+      "off_ns": 23183149,
+      "on_ns": 23483423,
+      "ratio": 1.0129522525175505
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "puzzle": "002vV",
+      "repeat": 0,
+      "off_ns": 744684,
+      "on_ns": 742921,
+      "ratio": 0.9976325528680622
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "puzzle": "00008",
+      "repeat": 1,
+      "off_ns": 20074356,
+      "on_ns": 20237471,
+      "ratio": 1.0081255408641752
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "puzzle": "000o3",
+      "repeat": 1,
+      "off_ns": 10408995,
+      "on_ns": 10116182,
+      "ratio": 0.9718692342536431
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "puzzle": "001uD",
+      "repeat": 1,
+      "off_ns": 22860102,
+      "on_ns": 23447909,
+      "ratio": 1.025713227351304
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "puzzle": "002vV",
+      "repeat": 1,
+      "off_ns": 719836,
+      "on_ns": 751945,
+      "ratio": 1.0446059935874283
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "puzzle": "00008",
+      "repeat": 2,
+      "off_ns": 20625918,
+      "on_ns": 20295930,
+      "ratio": 0.9840012939060457
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "puzzle": "000o3",
+      "repeat": 2,
+      "off_ns": 10453811,
+      "on_ns": 10061971,
+      "ratio": 0.9625170189130069
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "puzzle": "001uD",
+      "repeat": 2,
+      "off_ns": 23913972,
+      "on_ns": 23048676,
+      "ratio": 0.9638162995256497
+    },
+    {
+      "model": "zero128",
+      "mask": 31,
+      "puzzle": "002vV",
+      "repeat": 2,
+      "off_ns": 789572,
+      "on_ns": 744023,
+      "ratio": 0.9423117841058194
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "puzzle": "00008",
+      "repeat": 0,
+      "off_ns": 12346209,
+      "on_ns": 14336303,
+      "ratio": 1.1611906942446868
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "puzzle": "000o3",
+      "repeat": 0,
+      "off_ns": 9992385,
+      "on_ns": 10048270,
+      "ratio": 1.0055927588858915
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "puzzle": "001uD",
+      "repeat": 0,
+      "off_ns": 11077794,
+      "on_ns": 10524439,
+      "ratio": 0.9500482677327273
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "puzzle": "002vV",
+      "repeat": 0,
+      "off_ns": 601519,
+      "on_ns": 595809,
+      "ratio": 0.9905073655196261
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "puzzle": "00008",
+      "repeat": 1,
+      "off_ns": 11323074,
+      "on_ns": 10999897,
+      "ratio": 0.9714585456210919
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "puzzle": "000o3",
+      "repeat": 1,
+      "off_ns": 10001489,
+      "on_ns": 10095671,
+      "ratio": 1.0094167978388018
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "puzzle": "001uD",
+      "repeat": 1,
+      "off_ns": 10777480,
+      "on_ns": 12162672,
+      "ratio": 1.1285265201141639
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "puzzle": "002vV",
+      "repeat": 1,
+      "off_ns": 608089,
+      "on_ns": 593506,
+      "ratio": 0.976018313108772
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "puzzle": "00008",
+      "repeat": 2,
+      "off_ns": 12217574,
+      "on_ns": 11273859,
+      "ratio": 0.9227575785503734
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "puzzle": "000o3",
+      "repeat": 2,
+      "off_ns": 10023743,
+      "on_ns": 9959195,
+      "ratio": 0.9935604893301834
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "puzzle": "001uD",
+      "repeat": 2,
+      "off_ns": 11155451,
+      "on_ns": 13150023,
+      "ratio": 1.1787979706064775
+    },
+    {
+      "model": "lichess10000",
+      "mask": 0,
+      "puzzle": "002vV",
+      "repeat": 2,
+      "off_ns": 617002,
+      "on_ns": 576590,
+      "ratio": 0.9345026434274118
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "puzzle": "00008",
+      "repeat": 0,
+      "off_ns": 21825059,
+      "on_ns": 22092873,
+      "ratio": 1.0122709404817645
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "puzzle": "000o3",
+      "repeat": 0,
+      "off_ns": 11665191,
+      "on_ns": 11661055,
+      "ratio": 0.9996454408676206
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "puzzle": "001uD",
+      "repeat": 0,
+      "off_ns": 31738996,
+      "on_ns": 31498193,
+      "ratio": 0.9924130240288634
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "puzzle": "002vV",
+      "repeat": 0,
+      "off_ns": 735190,
+      "on_ns": 702952,
+      "ratio": 0.9561501108556971
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "puzzle": "00008",
+      "repeat": 1,
+      "off_ns": 21950187,
+      "on_ns": 22531816,
+      "ratio": 1.0264976785846973
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "puzzle": "000o3",
+      "repeat": 1,
+      "off_ns": 11820485,
+      "on_ns": 12802137,
+      "ratio": 1.0830466770187517
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "puzzle": "001uD",
+      "repeat": 1,
+      "off_ns": 31632194,
+      "on_ns": 33362657,
+      "ratio": 1.0547057532588475
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "puzzle": "002vV",
+      "repeat": 1,
+      "off_ns": 696833,
+      "on_ns": 709712,
+      "ratio": 1.0184821901373786
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "puzzle": "00008",
+      "repeat": 2,
+      "off_ns": 21872871,
+      "on_ns": 23833972,
+      "ratio": 1.0896590575603906
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "puzzle": "000o3",
+      "repeat": 2,
+      "off_ns": 11856260,
+      "on_ns": 14369043,
+      "ratio": 1.2119372382184601
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "puzzle": "001uD",
+      "repeat": 2,
+      "off_ns": 32268505,
+      "on_ns": 31803744,
+      "ratio": 0.9855970705801214
+    },
+    {
+      "model": "lichess10000",
+      "mask": 15,
+      "puzzle": "002vV",
+      "repeat": 2,
+      "off_ns": 703702,
+      "on_ns": 698525,
+      "ratio": 0.9926431927150982
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "puzzle": "00008",
+      "repeat": 0,
+      "off_ns": 9917873,
+      "on_ns": 9830872,
+      "ratio": 0.9912278570213593
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "puzzle": "000o3",
+      "repeat": 0,
+      "off_ns": 10472661,
+      "on_ns": 9821367,
+      "ratio": 0.9378100752043822
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "puzzle": "001uD",
+      "repeat": 0,
+      "off_ns": 9734606,
+      "on_ns": 9871373,
+      "ratio": 1.0140495670805783
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "puzzle": "002vV",
+      "repeat": 0,
+      "off_ns": 781360,
+      "on_ns": 755430,
+      "ratio": 0.9668142725504248
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "puzzle": "00008",
+      "repeat": 1,
+      "off_ns": 10264997,
+      "on_ns": 10365940,
+      "ratio": 1.0098337096445327
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "puzzle": "000o3",
+      "repeat": 1,
+      "off_ns": 9659793,
+      "on_ns": 10209963,
+      "ratio": 1.056954636605567
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "puzzle": "001uD",
+      "repeat": 1,
+      "off_ns": 10292949,
+      "on_ns": 9848118,
+      "ratio": 0.9567829394666193
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "puzzle": "002vV",
+      "repeat": 1,
+      "off_ns": 779617,
+      "on_ns": 774078,
+      "ratio": 0.9928952293241425
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "puzzle": "00008",
+      "repeat": 2,
+      "off_ns": 10274571,
+      "on_ns": 9911985,
+      "ratio": 0.9647103514102925
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "puzzle": "000o3",
+      "repeat": 2,
+      "off_ns": 12133398,
+      "on_ns": 14620732,
+      "ratio": 1.2049989623681676
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "puzzle": "001uD",
+      "repeat": 2,
+      "off_ns": 14409233,
+      "on_ns": 15832291,
+      "ratio": 1.098760149134933
+    },
+    {
+      "model": "lichess10000",
+      "mask": 16,
+      "puzzle": "002vV",
+      "repeat": 2,
+      "off_ns": 1024567,
+      "on_ns": 1042754,
+      "ratio": 1.017750913312648
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "puzzle": "00008",
+      "repeat": 0,
+      "off_ns": 25841313,
+      "on_ns": 25910436,
+      "ratio": 1.0026749027806752
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "puzzle": "000o3",
+      "repeat": 0,
+      "off_ns": 15521512,
+      "on_ns": 16011523,
+      "ratio": 1.0315697980969896
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "puzzle": "001uD",
+      "repeat": 0,
+      "off_ns": 34873858,
+      "on_ns": 35419522,
+      "ratio": 1.015646791932226
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "puzzle": "002vV",
+      "repeat": 0,
+      "off_ns": 1208004,
+      "on_ns": 1114743,
+      "ratio": 0.9227974410680759
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "puzzle": "00008",
+      "repeat": 1,
+      "off_ns": 25269389,
+      "on_ns": 25687280,
+      "ratio": 1.0165374398249203
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "puzzle": "000o3",
+      "repeat": 1,
+      "off_ns": 16572088,
+      "on_ns": 15992754,
+      "ratio": 0.9650415807591657
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "puzzle": "001uD",
+      "repeat": 1,
+      "off_ns": 34953319,
+      "on_ns": 35297127,
+      "ratio": 1.0098362046820217
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "puzzle": "002vV",
+      "repeat": 1,
+      "off_ns": 1118478,
+      "on_ns": 1270628,
+      "ratio": 1.1360330735159745
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "puzzle": "00008",
+      "repeat": 2,
+      "off_ns": 26101195,
+      "on_ns": 25433046,
+      "ratio": 0.9744015934902598
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "puzzle": "000o3",
+      "repeat": 2,
+      "off_ns": 15710618,
+      "on_ns": 16810979,
+      "ratio": 1.0700393199045384
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "puzzle": "001uD",
+      "repeat": 2,
+      "off_ns": 35694347,
+      "on_ns": 36453113,
+      "ratio": 1.021257315619193
+    },
+    {
+      "model": "lichess10000",
+      "mask": 31,
+      "puzzle": "002vV",
+      "repeat": 2,
+      "off_ns": 1201984,
+      "on_ns": 1153401,
+      "ratio": 0.9595809927586391
+    }
+  ],
+  "scope": "512 completed visits, no wall cutoff; search call includes cleanup/PV metrics but excludes JSON serialization"
+}
