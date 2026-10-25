@@ -64,7 +64,8 @@ For the tactical arm with only four complete opening pairs, the conservative 95%
 - Tactical verification is a promising opt-in candidate: stronger published-reply accuracy and favorable small matches. It introduces a bounded material/WDL heuristic, so strategic and sacrifice regressions remain possible.
 - The all-feature combination needs enough time to finish all candidate comparisons; incomplete comparisons preserve the MCTS decision. Its 30ms game arm contained an unfinished game. It stays off.
 - Every directory has PGN plus compressed raw per-game JSON (.json.gz), exact options, binary/model hashes, CSV summaries and per-position benchmark JSON. Run tools/summarize.py on a directory to replay/check its PGNs and regenerate aggregates.
-- Follow-up before any stable promotion: a much larger unique opening suite, longer clock controls, multiple seeds/runs, separate sacrifice/endgame tests and Windows/MSVC runtime validation. Existing binaries and champions remain the default release.
+- Follow-up before any stable promotion: a much larger unique opening suite, longer clock controls, multiple seeds/runs, separate sacrifice/endgame tests and broader deployment validation. Native Windows/MSVC results are now in
+[WINDOWS_VALIDATION.md](WINDOWS_VALIDATION.md). Existing binaries and champions remain the default release.
 
 ## Overall run accounting
 
@@ -75,3 +76,12 @@ raw trace was replayed/validated, with no engine errors or illegal moves. These
 not be pooled into a 144-game independent Elo estimate. The official puzzle
 check made 1,000 searches over the same 100 positions under ten configurations /
 time settings; this is 100 unique puzzles, not 1,000 independent examples.
+
+## Follow-up: native Windows and model identity
+
+[MODEL_PROVENANCE.md](MODEL_PROVENANCE.md) binds the historical 22/45/56 scores
+to the same 128-position ZERO bootstrap champion, not the Lichess 10,000-position
+candidate. The preserved Linux binary reproduced 56/56/55; native Windows/MSVC
+recorded 50/49/50 for that combination. Separate repeated 2-model × 3-arm
+matrices and actual loaded tensor SHA-256 attestations are retained for both
+platforms. The two platforms use different hardware and are never pooled.

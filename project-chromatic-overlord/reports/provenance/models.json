@@ -1,0 +1,435 @@
+{
+  "artifacts": {
+    "zero_initial": {
+      "checkpoint_path": "/workspace/Chromatic/chromatic-shard-trainer/champion/model.pt",
+      "checkpoint_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "model_path": "/workspace/Chromatic/chromatic-shard-trainer/champion/default.zero",
+      "model_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "exported_checkpoint_tensor_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "checkpoint_export_matches_model": true,
+      "architecture": {
+        "format": "ZERO0001",
+        "inputs": 1280,
+        "width": 64,
+        "residual_blocks": 2,
+        "policy_actions": 4672,
+        "wdl_outputs": 3,
+        "parameters": 394179
+      },
+      "checkpoint_format": 1,
+      "step": 200,
+      "seed": 2026,
+      "dataset": [
+        {
+          "sha256": "d3dd6ce286c7c2421ba35dd3163b879e23328b486b251a28a170cfb210f50e77",
+          "bytes": 90804
+        }
+      ],
+      "settings": {
+        "batch_size": 32,
+        "lr": 0.001,
+        "device": "cpu",
+        "decay": 0.999,
+        "torch": "2.14.1+cpu"
+      },
+      "progress": null,
+      "initial_model_sha256": null,
+      "training_positions": 128,
+      "corpus_sha256": "d3dd6ce286c7c2421ba35dd3163b879e23328b486b251a28a170cfb210f50e77",
+      "teacher": {
+        "positions": 128,
+        "teacher_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+        "teacher_id": {
+          "name": "Stockfish 19",
+          "author": "the Stockfish developers (see AUTHORS file)"
+        },
+        "nodes": 2000,
+        "multipv": 4,
+        "seed": 2026,
+        "sha256": "d3dd6ce286c7c2421ba35dd3163b879e23328b486b251a28a170cfb210f50e77"
+      },
+      "training_report": {
+        "records": 128,
+        "start_step": 0,
+        "step": 200,
+        "recovered_from": null,
+        "device": "cpu",
+        "last": {
+          "step": 200,
+          "policy_loss": 0.71860671043396,
+          "wdl_loss": 0.10278409719467163
+        }
+      }
+    },
+    "lichess_10000": {
+      "checkpoint_path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-10000.pt",
+      "checkpoint_sha256": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+      "model_path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-10000.zero",
+      "model_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a",
+      "exported_checkpoint_tensor_sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a",
+      "checkpoint_export_matches_model": true,
+      "architecture": {
+        "format": "ZERO0001",
+        "inputs": 1280,
+        "width": 64,
+        "residual_blocks": 2,
+        "policy_actions": 4672,
+        "wdl_outputs": 3,
+        "parameters": 394179
+      },
+      "checkpoint_format": 2,
+      "step": 1149,
+      "seed": 2026,
+      "dataset": [
+        {
+          "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-trainer\\fixtures\\official-evaluations.jsonl.zst"
+        }
+      ],
+      "settings": {
+        "positions": 10000,
+        "shard_size": 1000,
+        "epochs": 3,
+        "batch_size": 32,
+        "learning_rate": 0.001,
+        "data_directory": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-validation\\positions-10000\\data",
+        "checkpoint_directory": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-validation\\positions-10000\\candidate",
+        "seed": 2026,
+        "source": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-trainer\\fixtures\\official-evaluations.jsonl.zst",
+        "calibration": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-trainer\\fixtures\\calibration.json",
+        "openings_directory": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-trainer\\fixtures",
+        "initial_checkpoint": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-trainer\\champion\\model.pt",
+        "min_depth": 12,
+        "min_knodes": 10,
+        "checkpoint_every": 32,
+        "replay_size": 256,
+        "similarity_cap": 50,
+        "initial_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+        "validation_size": 1000,
+        "test_size": 1000,
+        "trainer_version": 1,
+        "scheduler_spec": {
+          "decay": 0.999,
+          "minimum_multiplier": 0.05
+        },
+        "source_provenance": {
+          "url": "https://database.lichess.org/lichess_db_eval.jsonl.zst",
+          "license": "CC0-1.0",
+          "license_evidence": "https://database.lichess.org/#evals",
+          "version": "\"6ac01121-5388faeef\"",
+          "etag": "\"6ac01121-5388faeef\"",
+          "last_modified": "Fri, 02 Oct 2026 20:16:33 GMT",
+          "http_status": 200,
+          "content_length": 22423777007,
+          "accept_ranges": "bytes",
+          "compressed_start_offset": 0,
+          "compressed_bytes_read": 11506841,
+          "compressed_prefix_sha256": "39b4ac2e1d79d7baebd4e5bbeddaf2576fb6c4db99708afb05d0efb2cfec22bc",
+          "decompressed_bytes_read": 67108864,
+          "stop_reason": "verified_frame_record_budget",
+          "captured_at_utc": "2026-10-24T09:07:29.369307+00:00",
+          "intentionally_partial_original": true,
+          "original_frame_checksum": "verified for every consumed standard frame; unseen full database not checked",
+          "original_frame_integrity": "verified_complete_zstd_frames",
+          "verified_original_frames": 2,
+          "verified_compressed_offset": 11506841,
+          "limits": {
+            "compressed_bytes": 16777216,
+            "decompressed_bytes": 134217728,
+            "fixture_disk_bytes": 268435456
+          },
+          "range_safety": "all decoding began at byte zero; live HTTP retries retain the decoder; no independent middle-offset decoding",
+          "records": 60000,
+          "source_line_start": 1,
+          "source_line_end": 60000,
+          "source_cursor": {
+            "line": 60000,
+            "prefix_sha256": "cbf0a49b304384e3675b64f07bcb4ee04b80bf9d9b31230497b1bd1e2720e685",
+            "last_line_sha256": "049c72711343f0bf83ac0d479d8a7cf6f210a355ea3885debe2a724e11efb159",
+            "source_identity": {
+              "location": "https://database.lichess.org/lichess_db_eval.jsonl.zst",
+              "final_url": "https://database.lichess.org/lichess_db_eval.jsonl.zst",
+              "content_length": 22423777007,
+              "etag": "\"6ac01121-5388faeef\"",
+              "last_modified": "Fri, 02 Oct 2026 20:16:33 GMT",
+              "accept_ranges_advertised": "bytes",
+              "license": "CC0-1.0",
+              "original_url": "https://database.lichess.org/lichess_db_eval.jsonl.zst",
+              "version": "\"6ac01121-5388faeef\""
+            },
+            "compressed_offset_diagnostic": 11506841,
+            "integrity": "verified_complete_zstd_frames",
+            "verified_frames": 2
+          },
+          "selected_jsonl_sha256": "cbf0a49b304384e3675b64f07bcb4ee04b80bf9d9b31230497b1bd1e2720e685",
+          "local_format": "JSONL/Zstandard",
+          "local_recompression_checksum_enabled": true,
+          "local_sha256": "feb08110ffcef588f05c30bb7ca93f5e19897e85c3d84678aff076f51dd84e2b"
+        },
+        "calibration_sha256": "82577601c9e455e9c3b40125260df9bf1541db1cff473fe49702765bc3816798"
+      },
+      "progress": {
+        "completed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "active": null,
+        "epoch": 0,
+        "offset": 0,
+        "permutation": [],
+        "positions_processed": 10000
+      },
+      "initial_model_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "training_positions": 10000,
+      "training_report": {
+        "calibration_status": "accepted",
+        "candidate_manifest": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-validation\\positions-10000\\candidate\\checkpoints\\bundle-a181d36c81b94b22aa786094e626b6b8.manifest.json",
+        "champion_overwritten": false,
+        "completed_shards": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "global_step": 1149,
+        "holdout_digest": "a02b89fc29c6e360fd2b9dcfc401f3a78691210f52e43b2ff4bd39be871faba6",
+        "positions": 10000,
+        "promotion": {
+          "eligible": false,
+          "reason": "candidate only; independent outcome/tactical/match gates required; champion never automatically overwritten"
+        },
+        "quality": {
+          "accepted_test": 1000,
+          "accepted_test_endgame": 333,
+          "accepted_test_middlegame": 333,
+          "accepted_test_opening": 334,
+          "accepted_train": 12384,
+          "accepted_train_endgame": 3337,
+          "accepted_train_middlegame": 4279,
+          "accepted_train_opening": 4768,
+          "accepted_validation": 1000,
+          "accepted_validation_endgame": 333,
+          "accepted_validation_middlegame": 333,
+          "accepted_validation_opening": 334,
+          "anchors_inserted": 1998,
+          "duplicates": 587,
+          "excluded_calibration_or_tactical_family": 10,
+          "queue_overflow_test": 1484,
+          "queue_overflow_train": 7290,
+          "queue_overflow_validation": 1631,
+          "raw_lines": 25728,
+          "rejected_duplicate_pv_first_move": 53,
+          "rejected_illegal_position": 132,
+          "rejected_invalid_knodes": 55,
+          "rejected_low_depth": 30,
+          "rejected_low_nodes": 89,
+          "similarity_capped": 1983
+        },
+        "source_cursor": {
+          "compressed_offset_diagnostic": 8464969,
+          "integrity": "verified_complete_zstd_frames",
+          "last_line_sha256": "7abef95aed2dfe25495404737bda4c33e9208613dfd455cc24f9bd759a6d9624",
+          "line": 25728,
+          "prefix_sha256": "eb48fa8f7721b1bcb74eb771b6251c0b74247b87bd79a59f79b0b85d6b029750",
+          "source_identity": {
+            "content_length": 8464969,
+            "license": "CC0-1.0",
+            "location": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-trainer\\fixtures\\official-evaluations.jsonl.zst",
+            "mtime_ns": 1792832849329531500,
+            "original_url": "https://database.lichess.org/lichess_db_eval.jsonl.zst",
+            "prefix_sha256": "5f5a54f429bc5a1552523442821a17e42891036ad1c0c9a726a2cd206e09ae68",
+            "version": "\"6ac01121-5388faeef\""
+          },
+          "verified_frames": 1
+        },
+        "test": {
+          "policy_loss": 2.816564764772908,
+          "policy_numerator": 526.9016907215118,
+          "policy_weight": 187.07245695590973,
+          "rows": 1000,
+          "value_numerator": 87.0961902141571,
+          "value_rows": 817,
+          "value_weight": 117.84901547431946,
+          "wdl_loss": 0.7390489421028408
+        },
+        "validation": {
+          "policy_loss": 2.8831637669548247,
+          "policy_numerator": 521.3137121200562,
+          "policy_weight": 180.81307697296143,
+          "rows": 1000,
+          "value_numerator": 78.48198860883713,
+          "value_rows": 771,
+          "value_weight": 108.44749468564987,
+          "wdl_loss": 0.7236865068790024
+        }
+      },
+      "source_file_sha256": "feb08110ffcef588f05c30bb7ca93f5e19897e85c3d84678aff076f51dd84e2b",
+      "retained_bundle": {
+        "manifest_path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.manifest.json",
+        "manifest_sha256": "3382c0974443ff960c5f14dd04804e42e10e7b0014726d929a9b81d3c2a8db6b",
+        "files": {
+          "checkpoint": {
+            "path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.pt",
+            "sha256": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+            "manifest_sha256_matches": true
+          },
+          "mirror": {
+            "path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.mirror.pt",
+            "sha256": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+            "manifest_sha256_matches": true
+          },
+          "model": {
+            "path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.zero",
+            "sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a",
+            "manifest_sha256_matches": true
+          }
+        },
+        "step": 1149,
+        "commit_seq": 56
+      }
+    }
+  },
+  "initial_champion_identical_aliases": [
+    "project-chromatic-memory/dist/default.zero",
+    "project-chromatic-depth/dist/default.zero",
+    "chromatic-arc-trainer/champion/default.zero",
+    "project-chromatic/dist/default.zero",
+    "project-chromatic/baseline/default.zero",
+    "project-chromatic/runs/overdrive/initial.zero",
+    "project-chromatic/runs/bootstrap/model.zero",
+    "project-chromatic/runs/overdrive/generation_0000/source.zero",
+    "chromatic-shard-trainer/champion/default.zero"
+  ],
+  "historical_100ms_experiments": [
+    {
+      "config": "disabled",
+      "ms": 100,
+      "hits": 22,
+      "positions": 100,
+      "wilson_95_lower": 0.15001282338296418,
+      "wilson_95_upper": 0.3107035359276738,
+      "model_file_path_source_inferred": "/workspace/Chromatic/project-chromatic-memory/dist/default.zero",
+      "recorded_model_file_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "recorded_engine_sha256": "b2bff565c06df56f9496ceb2186d557f282c66e1c6fb84ecbcbb9c690b810053",
+      "actual_loaded_tensor_sha256_at_historical_run": null,
+      "memory_attestation_status": "not recorded; cannot retroactively attest historical process memory"
+    },
+    {
+      "config": "tactical",
+      "ms": 100,
+      "hits": 45,
+      "positions": 100,
+      "wilson_95_lower": 0.3561453790959721,
+      "wilson_95_upper": 0.5475539707809276,
+      "model_file_path_source_inferred": "/workspace/Chromatic/project-chromatic-memory/dist/default.zero",
+      "recorded_model_file_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "recorded_engine_sha256": "b2bff565c06df56f9496ceb2186d557f282c66e1c6fb84ecbcbb9c690b810053",
+      "actual_loaded_tensor_sha256_at_historical_run": null,
+      "memory_attestation_status": "not recorded; cannot retroactively attest historical process memory"
+    },
+    {
+      "config": "combination",
+      "ms": 100,
+      "hits": 56,
+      "positions": 100,
+      "wilson_95_lower": 0.46228104575723733,
+      "wilson_95_upper": 0.6532797343904831,
+      "model_file_path_source_inferred": "/workspace/Chromatic/project-chromatic-memory/dist/default.zero",
+      "recorded_model_file_sha256": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+      "recorded_engine_sha256": "b2bff565c06df56f9496ceb2186d557f282c66e1c6fb84ecbcbb9c690b810053",
+      "actual_loaded_tensor_sha256_at_historical_run": null,
+      "memory_attestation_status": "not recorded; cannot retroactively attest historical process memory"
+    }
+  ],
+  "historical_fixture_sha256": "c46a5c5d83a27e4418a4a13aa196b4097c9aa863d76ce18386d61c8e628cecfb",
+  "protected_artifact_sha256": {
+    "project-chromatic-memory/dist/chromatic-memory.exe": "3dc5aef05ee06452564fdc1939d8f9fa4637d1306a2582a18e47cfb0af118624",
+    "project-chromatic-memory/dist/depth_probe.exe": "e9d1fc07b4279604dad54258700b429940592d71a47f7ff26636c17fd0cff432",
+    "project-chromatic-memory/dist/default.zero": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "chromatic-memory-analysis/reproduction/legacy-depth_probe.exe": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "project-chromatic-depth/dist/depth_probe.exe": "00cca09226f5413363b58c3f8e8ce205a10e84464d75b049ca4b5fcc357b3f6e",
+    "project-chromatic-depth/dist/pristine_probe.exe": "eb2f44a3e15f81c4e2151170e18cb1f07ac713423f3bc779ad38565fb1ea1001",
+    "project-chromatic-depth/dist/chromatic-depth.exe": "0cb44a789a028479ee31b227c8c0f2698ba34c01983eb240adb42ab8333cf288",
+    "project-chromatic-depth/dist/default.zero": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "chromatic-arc-trainer/reports/native-cpu4-selected.zero": "a486053ec4888193fa20cd8c39523335d27daa31919f41e371ce23ddaa0525f4",
+    "chromatic-arc-trainer/reports/native-xpu-bf16.zero": "a10e83c545c7142b9747500b80d96cf5dd7ec9ece07c9840958449039778415a",
+    "chromatic-arc-trainer/reports/native-xpu-fp32-selected.zero": "093517d547cd2d7a8562734224c5b548ecfacd5ba44bcbec0a47a18f74f64361",
+    "chromatic-arc-trainer/candidates/xpu-bf16.zero": "a10e83c545c7142b9747500b80d96cf5dd7ec9ece07c9840958449039778415a",
+    "chromatic-arc-trainer/candidates/cpu4-selected.pt": "e4813a0b8fa78dd45532ccc571e8a2f629bae265892a8e84adf997d026b8340a",
+    "chromatic-arc-trainer/candidates/xpu-fp32-selected.pt": "0d1b1471a759cb01e0f69e6db1c84c4fb2a9c9f46d088849b89e51de9bacb3d8",
+    "chromatic-arc-trainer/candidates/cpu4-selected.zero": "a486053ec4888193fa20cd8c39523335d27daa31919f41e371ce23ddaa0525f4",
+    "chromatic-arc-trainer/candidates/xpu-fp32-selected.zero": "093517d547cd2d7a8562734224c5b548ecfacd5ba44bcbec0a47a18f74f64361",
+    "chromatic-arc-trainer/candidates/xpu-bf16.pt": "29a8511ad33dde80864347b82baa55cda2d40425ab62a169619e9e97f8acea13",
+    "chromatic-arc-trainer/champion/model.pt": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+    "chromatic-arc-trainer/champion/default.zero": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "project-chromatic/dist/chromatic.exe": "29fd8a67070fa1869caee35f4d32ecd4442ad223a4d10812bccb2942afca3c6d",
+    "project-chromatic/dist/default.zero": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "project-chromatic/baseline/project_zero.exe": "c6b7bd6700f62bf357483cb055994f3e84316ea6e5572c89576aaa43d209eede",
+    "project-chromatic/baseline/default.zero": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "project-chromatic/runs/overdrive/initial.zero": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "project-chromatic/runs/overdrive/initial.pt": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+    "project-chromatic/runs/bootstrap/model.zero": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "project-chromatic/runs/bootstrap/model.pt": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+    "project-chromatic/runs/release-validation/generation_0000/candidate.pt": "17231fdd27b22a2a0dd6f070990d5c8bc26ce435432e6d530470a605b219636b",
+    "project-chromatic/runs/overdrive/generation_0000/candidate.zero": "da8a36572caced3167a604841668f96b70e4e296551b3e61860656d538b5f577",
+    "project-chromatic/runs/overdrive/generation_0000/candidate.pt": "e450595a38f7fc66acf0521a3d29190599683bef463aded7e97c6ac16409fc36",
+    "project-chromatic/runs/overdrive/generation_0000/source.zero": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "project-chromatic/reports/model-scaling/tiny/model.zero": "427276b4446b9521b6147cd074b81939e66bc2cbf30e74478c02bd678690183a",
+    "project-chromatic/reports/model-scaling/tiny/model.pt": "1088abec08db8908b047d5f4b48499b4bf68115329aebaffa059d384cb08b864",
+    "project-chromatic/reports/model-scaling/small/model.zero": "3690c2aa3a4b8e126db0e0bdfa9f69a20bb7ec64e7dd4e666af41081918df93e",
+    "project-chromatic/reports/model-scaling/small/model.pt": "759525d4cde43854bf011b756547ced75d16de7d7f271958a73d25f0e7389321",
+    "chromatic-shard-trainer/candidates/positions-10000.pt": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+    "chromatic-shard-trainer/candidates/positions-100.zero": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af",
+    "chromatic-shard-trainer/candidates/positions-1000.zero": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb",
+    "chromatic-shard-trainer/candidates/positions-1000.pt": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867",
+    "chromatic-shard-trainer/candidates/positions-100.pt": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf",
+    "chromatic-shard-trainer/candidates/positions-10000.zero": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a",
+    "chromatic-shard-trainer/champion/model.pt": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+    "chromatic-shard-trainer/champion/default.zero": "f6a00902c23e7f32f96b028ac36464cc9012cd8774d5e6b0dee5e1c94e1c03c9",
+    "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-735de626cbb244a5b6f6f09609143350.mirror.pt": "baca75ca6b42be243e9692bf84d024d0aea8a35dcb55c4d7172329e5e2bb7ed7",
+    "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.zero": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb",
+    "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-d2af69a795a84addaabb497e3b09e4fa.mirror.pt": "8e2782a873d934ded5bf0a711b382f5de700dc82e018a4ee7876cba236310d57",
+    "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-d2af69a795a84addaabb497e3b09e4fa.pt": "8e2782a873d934ded5bf0a711b382f5de700dc82e018a4ee7876cba236310d57",
+    "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-735de626cbb244a5b6f6f09609143350.pt": "baca75ca6b42be243e9692bf84d024d0aea8a35dcb55c4d7172329e5e2bb7ed7",
+    "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-d2af69a795a84addaabb497e3b09e4fa.zero": "6512cc87d5efdc66811e3cfa647cf4e82aff636bc90c29034695d7c95d4621fe",
+    "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.pt": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867",
+    "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-735de626cbb244a5b6f6f09609143350.zero": "cc82c95407a805a1833edb1d182258a87cf701acc51f4d0d7f1dc64b3071d381",
+    "chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.mirror.pt": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867",
+    "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-30929c2f333f49378dbfbd3370aff8cf.zero": "a06f84bfc02da832999d88f06a838f5775841cd729570636b4212d1207166108",
+    "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.zero": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a",
+    "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.pt": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+    "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-30929c2f333f49378dbfbd3370aff8cf.pt": "369f1a62d1e4f28ef943514350fab9e8103b455a22474a18d1b1eff205e8d126",
+    "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-62688936b83c445992ff056f47a58cc2.mirror.pt": "90dd2a5fafd95ffe502b54f0961ddbe64ae557fc7bcd58f0896e780c64bc1388",
+    "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-62688936b83c445992ff056f47a58cc2.zero": "499df73ffec672de91c6a500e64c0f0eb18daa4aff0c1bd95fcf2047086ee055",
+    "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-30929c2f333f49378dbfbd3370aff8cf.mirror.pt": "369f1a62d1e4f28ef943514350fab9e8103b455a22474a18d1b1eff205e8d126",
+    "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-62688936b83c445992ff056f47a58cc2.pt": "90dd2a5fafd95ffe502b54f0961ddbe64ae557fc7bcd58f0896e780c64bc1388",
+    "chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.mirror.pt": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+    "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.mirror.pt": "f9ca4348f441e5eb3d10179cf0591818c24550abad78d21823c99922fb6842de",
+    "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.pt": "f9ca4348f441e5eb3d10179cf0591818c24550abad78d21823c99922fb6842de",
+    "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-b505031739914d60b00b01125ff773e6.pt": "bcffa19980ddf1e9452001ff21673c0c3e3c45e0111443d69925d23ce8b1704e",
+    "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.pt": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf",
+    "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-b505031739914d60b00b01125ff773e6.mirror.pt": "bcffa19980ddf1e9452001ff21673c0c3e3c45e0111443d69925d23ce8b1704e",
+    "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e3eb2a4c89a043c4ac5f7c5df65f876a.zero": "f64b38ca6c63d0fb258121dc26e06fb528dd3991fd8b4ddd30cdb950144147ab",
+    "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.zero": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af",
+    "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.mirror.pt": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf",
+    "chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-b505031739914d60b00b01125ff773e6.zero": "f64b38ca6c63d0fb258121dc26e06fb528dd3991fd8b4ddd30cdb950144147ab"
+  },
+  "limits": [
+    "Model .pt/.zero and retained training logs/corpus hashes agree. Training was not re-executed by this audit.",
+    "Stockfish teacher identity/hash is historical metadata; availability of that exact teacher binary is not established.",
+    "Historical in-process loaded tensor hashes were not recorded; new matrix runs attest them explicitly."
+  ]
+}

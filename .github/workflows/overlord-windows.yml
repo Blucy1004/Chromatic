@@ -75,11 +75,15 @@ jobs:
         shell: pwsh
         run: |
           python project-chromatic-overlord/tools/emit_windows_report.py --results "$env:WIN_RESULTS" --source '${{ github.sha }}' --run-url '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}'
+          if ($LASTEXITCODE -ne 0) { throw 'Windows report rendering failed' }
           git config user.name 'chromatic-validation[bot]'
           git config user.email 'chromatic-validation[bot]@users.noreply.github.com'
           git add -- "$env:WIN_RESULTS" project-chromatic-overlord/WINDOWS_VALIDATION.md
+          if ($LASTEXITCODE -ne 0) { throw 'Could not stage Windows results' }
           git commit -m 'Record native Windows MSVC validation results [skip ci]'
+          if ($LASTEXITCODE -ne 0) { throw 'Could not commit Windows results' }
           git push origin HEAD:operation-overlord
+          if ($LASTEXITCODE -ne 0) { throw 'Could not push Windows results' }
       - name: Retain logs and Release binaries
         if: ${{ always() }}
         uses: actions/upload-artifact@v4

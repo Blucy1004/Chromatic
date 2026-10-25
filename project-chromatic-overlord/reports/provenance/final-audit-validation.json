@@ -1,0 +1,340 @@
+{
+  "native_windows_passed": true,
+  "native_run_url": "https://github.com/Blucy1004/Chromatic/actions/runs/40146054219",
+  "artifact_id": 12580951939,
+  "artifact_archive_sha256": "129581eac8a9de223df5eebd8286dcb0014e289c98d244431ba30b121d2ae97d",
+  "artifact_files_match_git_copy": 31,
+  "protected_model_and_binary_files": 70,
+  "protected_artifact_hashes_match": true,
+  "matrix_cells_checked": 36,
+  "matrix_searches_checked": 3600,
+  "actual_loaded_hashes_match": true,
+  "matrix_diagnostics": [
+    {
+      "os": "Linux",
+      "model": "lichess_10000",
+      "arm": "combination",
+      "repeat": 0,
+      "correct": 50,
+      "complete_decision_or_verification": 65,
+      "median_simulations": 3508.0
+    },
+    {
+      "os": "Linux",
+      "model": "lichess_10000",
+      "arm": "combination",
+      "repeat": 1,
+      "correct": 51,
+      "complete_decision_or_verification": 66,
+      "median_simulations": 3526.0
+    },
+    {
+      "os": "Linux",
+      "model": "lichess_10000",
+      "arm": "combination",
+      "repeat": 2,
+      "correct": 52,
+      "complete_decision_or_verification": 67,
+      "median_simulations": 3546.0
+    },
+    {
+      "os": "Linux",
+      "model": "lichess_10000",
+      "arm": "disabled",
+      "repeat": 0,
+      "correct": 34,
+      "complete_decision_or_verification": 0,
+      "median_simulations": 4677.5
+    },
+    {
+      "os": "Linux",
+      "model": "lichess_10000",
+      "arm": "disabled",
+      "repeat": 1,
+      "correct": 35,
+      "complete_decision_or_verification": 0,
+      "median_simulations": 4668.0
+    },
+    {
+      "os": "Linux",
+      "model": "lichess_10000",
+      "arm": "disabled",
+      "repeat": 2,
+      "correct": 35,
+      "complete_decision_or_verification": 0,
+      "median_simulations": 4693.5
+    },
+    {
+      "os": "Linux",
+      "model": "lichess_10000",
+      "arm": "tactical",
+      "repeat": 0,
+      "correct": 50,
+      "complete_decision_or_verification": 100,
+      "median_simulations": 3520.0
+    },
+    {
+      "os": "Linux",
+      "model": "lichess_10000",
+      "arm": "tactical",
+      "repeat": 1,
+      "correct": 50,
+      "complete_decision_or_verification": 100,
+      "median_simulations": 3495.0
+    },
+    {
+      "os": "Linux",
+      "model": "lichess_10000",
+      "arm": "tactical",
+      "repeat": 2,
+      "correct": 50,
+      "complete_decision_or_verification": 100,
+      "median_simulations": 3538.0
+    },
+    {
+      "os": "Linux",
+      "model": "zero_initial",
+      "arm": "combination",
+      "repeat": 0,
+      "correct": 56,
+      "complete_decision_or_verification": 78,
+      "median_simulations": 3539.0
+    },
+    {
+      "os": "Linux",
+      "model": "zero_initial",
+      "arm": "combination",
+      "repeat": 1,
+      "correct": 56,
+      "complete_decision_or_verification": 78,
+      "median_simulations": 3480.5
+    },
+    {
+      "os": "Linux",
+      "model": "zero_initial",
+      "arm": "combination",
+      "repeat": 2,
+      "correct": 56,
+      "complete_decision_or_verification": 78,
+      "median_simulations": 3490.0
+    },
+    {
+      "os": "Linux",
+      "model": "zero_initial",
+      "arm": "disabled",
+      "repeat": 0,
+      "correct": 22,
+      "complete_decision_or_verification": 0,
+      "median_simulations": 4814.5
+    },
+    {
+      "os": "Linux",
+      "model": "zero_initial",
+      "arm": "disabled",
+      "repeat": 1,
+      "correct": 22,
+      "complete_decision_or_verification": 0,
+      "median_simulations": 4789.0
+    },
+    {
+      "os": "Linux",
+      "model": "zero_initial",
+      "arm": "disabled",
+      "repeat": 2,
+      "correct": 22,
+      "complete_decision_or_verification": 0,
+      "median_simulations": 4747.5
+    },
+    {
+      "os": "Linux",
+      "model": "zero_initial",
+      "arm": "tactical",
+      "repeat": 0,
+      "correct": 45,
+      "complete_decision_or_verification": 100,
+      "median_simulations": 3536.5
+    },
+    {
+      "os": "Linux",
+      "model": "zero_initial",
+      "arm": "tactical",
+      "repeat": 1,
+      "correct": 45,
+      "complete_decision_or_verification": 100,
+      "median_simulations": 3562.0
+    },
+    {
+      "os": "Linux",
+      "model": "zero_initial",
+      "arm": "tactical",
+      "repeat": 2,
+      "correct": 45,
+      "complete_decision_or_verification": 100,
+      "median_simulations": 3566.5
+    },
+    {
+      "os": "Windows",
+      "model": "lichess_10000",
+      "arm": "combination",
+      "repeat": 0,
+      "correct": 47,
+      "complete_decision_or_verification": 59,
+      "median_simulations": 2659.0
+    },
+    {
+      "os": "Windows",
+      "model": "lichess_10000",
+      "arm": "combination",
+      "repeat": 1,
+      "correct": 47,
+      "complete_decision_or_verification": 59,
+      "median_simulations": 2647.5
+    },
+    {
+      "os": "Windows",
+      "model": "lichess_10000",
+      "arm": "combination",
+      "repeat": 2,
+      "correct": 47,
+      "complete_decision_or_verification": 59,
+      "median_simulations": 2647.5
+    },
+    {
+      "os": "Windows",
+      "model": "lichess_10000",
+      "arm": "disabled",
+      "repeat": 0,
+      "correct": 34,
+      "complete_decision_or_verification": 0,
+      "median_simulations": 3552.0
+    },
+    {
+      "os": "Windows",
+      "model": "lichess_10000",
+      "arm": "disabled",
+      "repeat": 1,
+      "correct": 35,
+      "complete_decision_or_verification": 0,
+      "median_simulations": 3543.0
+    },
+    {
+      "os": "Windows",
+      "model": "lichess_10000",
+      "arm": "disabled",
+      "repeat": 2,
+      "correct": 34,
+      "complete_decision_or_verification": 0,
+      "median_simulations": 3537.5
+    },
+    {
+      "os": "Windows",
+      "model": "lichess_10000",
+      "arm": "tactical",
+      "repeat": 0,
+      "correct": 48,
+      "complete_decision_or_verification": 100,
+      "median_simulations": 2637.0
+    },
+    {
+      "os": "Windows",
+      "model": "lichess_10000",
+      "arm": "tactical",
+      "repeat": 1,
+      "correct": 48,
+      "complete_decision_or_verification": 100,
+      "median_simulations": 2651.0
+    },
+    {
+      "os": "Windows",
+      "model": "lichess_10000",
+      "arm": "tactical",
+      "repeat": 2,
+      "correct": 48,
+      "complete_decision_or_verification": 100,
+      "median_simulations": 2666.0
+    },
+    {
+      "os": "Windows",
+      "model": "zero_initial",
+      "arm": "combination",
+      "repeat": 0,
+      "correct": 50,
+      "complete_decision_or_verification": 70,
+      "median_simulations": 2631.5
+    },
+    {
+      "os": "Windows",
+      "model": "zero_initial",
+      "arm": "combination",
+      "repeat": 1,
+      "correct": 49,
+      "complete_decision_or_verification": 69,
+      "median_simulations": 2621.0
+    },
+    {
+      "os": "Windows",
+      "model": "zero_initial",
+      "arm": "combination",
+      "repeat": 2,
+      "correct": 50,
+      "complete_decision_or_verification": 70,
+      "median_simulations": 2607.0
+    },
+    {
+      "os": "Windows",
+      "model": "zero_initial",
+      "arm": "disabled",
+      "repeat": 0,
+      "correct": 22,
+      "complete_decision_or_verification": 0,
+      "median_simulations": 3583.0
+    },
+    {
+      "os": "Windows",
+      "model": "zero_initial",
+      "arm": "disabled",
+      "repeat": 1,
+      "correct": 22,
+      "complete_decision_or_verification": 0,
+      "median_simulations": 3565.5
+    },
+    {
+      "os": "Windows",
+      "model": "zero_initial",
+      "arm": "disabled",
+      "repeat": 2,
+      "correct": 22,
+      "complete_decision_or_verification": 0,
+      "median_simulations": 3570.5
+    },
+    {
+      "os": "Windows",
+      "model": "zero_initial",
+      "arm": "tactical",
+      "repeat": 0,
+      "correct": 45,
+      "complete_decision_or_verification": 100,
+      "median_simulations": 2678.0
+    },
+    {
+      "os": "Windows",
+      "model": "zero_initial",
+      "arm": "tactical",
+      "repeat": 1,
+      "correct": 45,
+      "complete_decision_or_verification": 100,
+      "median_simulations": 2681.0
+    },
+    {
+      "os": "Windows",
+      "model": "zero_initial",
+      "arm": "tactical",
+      "repeat": 2,
+      "correct": 45,
+      "complete_decision_or_verification": 100,
+      "median_simulations": 2683.5
+    }
+  ],
+  "defaults_changed": false,
+  "model_promoted": false
+}

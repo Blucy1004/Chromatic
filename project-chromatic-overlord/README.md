@@ -16,7 +16,8 @@ ctest --test-dir /tmp/overlord --output-on-failure
 ```
 
 The engine also builds in a Visual Studio C++20 developer shell using the same
-CMake commands. Windows compilation/runtime validation remains outstanding.
+CMake commands. Windows x64/MSVC 19.44 Release and native execution have now passed; see
+[WINDOWS_VALIDATION.md](WINDOWS_VALIDATION.md).
 
 The original `default.zero` stays in its existing location. Pass `--model` or
 set UCI ModelFile explicitly; the candidate has no bundled new model.
@@ -82,7 +83,13 @@ wall times, errors, PGN, CSV and JSON. Openings are color-paired. Two-worker
 parallel games use two independent original-algorithm trees as the reference;
 that reference is not the historical single-worker executable.
 
+The read-only `zero model` command reports the SHA-256 reconstructed from the
+actual loaded ZERO0001 tensors. See [MODEL_PROVENANCE.md](MODEL_PROVENANCE.md)
+for the initial 128-position champion and the separate Lichess 10,000-position
+candidate, including the platform-specific repeated comparison.
+
 See [AUDIT.md](AUDIT.md), [PERFORMANCE.md](PERFORMANCE.md) and
 [VALIDATION.md](VALIDATION.md) for evidence and limits. The preserved deployment
 binaries remain the production release; this branch is an experimental source
-candidate, not a promoted engine or a Windows binary release.
+candidate. The native Windows test binary is retained in the Actions artifact;
+it has not replaced the deployed release or been promoted.

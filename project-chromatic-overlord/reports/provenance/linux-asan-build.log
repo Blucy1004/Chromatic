@@ -1,0 +1,32 @@
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/chromatic-overlord-audit-asan
+[1/20] Building CXX object CMakeFiles/zero_core.dir/src/proof.cpp.o
+[2/20] Building CXX object CMakeFiles/zero_core.dir/src/network.cpp.o
+[3/20] Building CXX object CMakeFiles/zero_core.dir/src/board.cpp.o
+[4/20] Building CXX object CMakeFiles/zero_core.dir/src/sha256.cpp.o
+[5/20] Building CXX object CMakeFiles/zero_core.dir/src/telemetry_json.cpp.o
+[6/20] Building CXX object CMakeFiles/core_tests.dir/tests/core.cpp.o
+[7/20] Building CXX object CMakeFiles/zero_core.dir/src/verification.cpp.o
+[8/20] Building CXX object CMakeFiles/chromatic_overlord.dir/src/main.cpp.o
+[9/20] Building CXX object CMakeFiles/depth_telemetry_tests.dir/tests/depth_telemetry.cpp.o
+[10/20] Building CXX object CMakeFiles/model_identity_tests.dir/tests/model_identity.cpp.o
+[11/20] Building CXX object CMakeFiles/memory_recycling_tests.dir/tests/memory_recycling.cpp.o
+[12/20] Building CXX object CMakeFiles/overlord_tests.dir/tests/overlord.cpp.o
+[13/20] Building CXX object CMakeFiles/zero_core.dir/src/search.cpp.o
+[14/20] Linking CXX static library libzero_core.a
+[15/20] Linking CXX executable core_tests
+[16/20] Linking CXX executable depth_telemetry_tests
+[17/20] Linking CXX executable memory_recycling_tests
+[18/20] Linking CXX executable chromatic_overlord
+[19/20] Linking CXX executable model_identity_tests
+[20/20] Linking CXX executable overlord_tests

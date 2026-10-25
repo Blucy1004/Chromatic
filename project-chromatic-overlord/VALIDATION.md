@@ -1,6 +1,8 @@
 # Validation contracts and evidence
 
-The final source is an experimental branch; existing deployments and champions
+The initial Operation Overlord evidence is retained below. The current native
+Windows and model identity follow-up is documented in [WINDOWS_VALIDATION.md](WINDOWS_VALIDATION.md)
+and [MODEL_PROVENANCE.md](MODEL_PROVENANCE.md). The source is an experimental branch; existing deployments and champions
 are unchanged. Linux GCC 14.2 / C++20 / CMake 4.1.3 / Ninja 1.13.0 were used.
 Python 3.12 / PyTorch 2.9.1+cpu run the existing integration/trainer checks.
 
@@ -76,6 +78,24 @@ standard-library threading. It introduces no POSIX APIs in engine C++ code.
 CMake retains explicit MSVC /W4 /permissive- /fp:precise and an ASan option.
 Use a Visual Studio developer shell with CMake and Ninja, pass the existing
 model explicitly, and run CTest before packaging a Windows candidate. Python
-CPU-affinity use is platform-guarded in experiment scripts. Windows execution,
-MSVC compilation and Windows ASan runtime loading were **not executed here**;
-there is no newly verified Windows binary and no replacement of the old one.
+CPU-affinity use is platform-guarded in experiment scripts. The initial phase did not execute Windows. The follow-up now verifies MSVC
+19.44 x64 Release, 9/9 native CTests, 41 native protocol/timing/recycling checks
+and 18 repeated model/search cells on Windows Server 2022; see the dedicated
+Windows report. Windows ASan remains unrun. The original deployed binary is
+still preserved.
+
+## Model identity follow-up (2026-10-25)
+
+The identity-only C++ addition passes 9/9 Release tests on Linux and Windows,
+9/9 Linux ASan/UBSan tests, SHA-256 empty/abc/million-a vectors and transactional
+load identity checks. Fixed-node outputs match the historical engine across
+3 arms × 2 positions. New matrix cells attest loaded tensor hashes before and
+after every cell. Separate native Linux and Windows matrices each ran 1,800
+100ms searches over 100 unique puzzles; the preserved original Linux binary
+also ran 900 searches. Windows reports 49–50/100 for the initial champion's
+combination; Linux's preserved binary reproduced 56/100 with one run at 55.
+No default or model promotion follows from these diagnostic results.
+
+The Windows document renderer's relative/absolute path failure was fixed and
+has a separate regression test. It is a reporting failure, distinct from the
+successful native tests, and is retained in the Windows failure history.
