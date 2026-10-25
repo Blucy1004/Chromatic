@@ -153,6 +153,22 @@ def model_effects(run,repetitions):
     for item,p in zip(out,st.holm([x['p_exact'] for x in out])):item['p_holm_run']=p
     return out
 
+def marginal_effects(run,repetitions):
+    out=[]
+    for stage in ['screen','fixed_nodes','fixed_nn']:
+        for model in MODELS:
+            cells=[c for c in run['cells'] if c['summary']['stage']==stage and c['summary']['model']==model and c['summary']['repeat']==0]
+            if len(cells)!=32:continue
+            values,groups=vectors(cells);lookup={c['summary']['mask']:c for c in cells}
+            keys=[(bit,bg) for bit in range(5) for bg in range(32) if not bg>>bit&1]
+            x=np.stack([values[bg|1<<bit]-values[bg] for bit,bg in keys],axis=1);ci=st.cluster_bootstrap(x,groups,repetitions)
+            for i,(bit,bg) in enumerate(keys):
+                a,b=values[bg|1<<bit],values[bg];gain=int(((a==1)&(b==0)).sum());loss=int(((a==0)&(b==1)).sum())
+                out.append({'scope':run['scope'],'os':run['manifest']['os'],'stage':stage,'model':model,'factor':BITS[bit],'background':bg,'background_factors':label(bg),
+                    'gains':gain,'losses':loss,'delta_pp':ci['mean'][i]*100,'lo95_pp':ci['ci95'][i][0]*100,'hi95_pp':ci['ci95'][i][1]*100,
+                    **{'delta_'+metric:lookup[bg|1<<bit]['summary']['mean_'+metric]-lookup[bg]['summary']['mean_'+metric] for metric in ['cpu_ms','wall_ms','completed_visits','nn_total']}})
+    return out
+
 def model_search_interactions(run,repetitions):
     out=[]
     for stage in ['screen','holdout','fixed_nodes','fixed_nn']:
@@ -223,6 +239,7 @@ def main():
         for target,rows in zip(tables,estimates(run,a.bootstrap)):target.extend(rows)
     for name,table in zip(['paired-contrasts','shapley','interactions','pareto'],tables):csvfile(a.out/(name+'.csv'),table)
     csvfile(a.out/'model-effects.csv',[x for r in runs for x in model_effects(r,a.bootstrap)])
+    csvfile(a.out/'context-marginals.csv',[x for r in runs for x in marginal_effects(r,a.bootstrap)])
     csvfile(a.out/'model-search-interactions.csv',[x for r in runs for x in model_search_interactions(r,a.bootstrap)])
     save(a.out/'holdout-confirmation.json',holdout_confirmation(runs,a.bootstrap))
     save(a.out/'analysis-manifest.json',{'analysis_script_sha256':sha(Path(__file__)),'statistics_sha256':sha(Path(__file__).with_name('factorial_stats.py')),
