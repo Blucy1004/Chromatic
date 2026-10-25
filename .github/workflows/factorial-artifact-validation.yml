@@ -1,5 +1,8 @@
 name: Validate exact factorial Windows artifact
 on:
+  push:
+    branches: [operation-overlord]
+    paths: [.github/workflows/factorial-artifact-validation.yml]
   workflow_dispatch:
     inputs:
       research_run:
@@ -14,7 +17,7 @@ jobs:
     runs-on: windows-2022
     timeout-minutes: 15
     env:
-      SOURCE_RUN: ${{ inputs.research_run }}
+      SOURCE_RUN: ${{ inputs.research_run || '40152066905' }}
       PROTOCOL_OUT: project-chromatic-overlord/reports/factorial/artifact-validation/${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - uses: actions/checkout@v4
@@ -26,8 +29,8 @@ jobs:
       - run: python -m pip install python-chess==1.999 chess==1.10.0 psutil==7.2.2
       - uses: actions/download-artifact@v4
         with:
-          name: factorial-windows-${{ inputs.research_run }}-1
-          run-id: ${{ inputs.research_run }}
+          name: factorial-windows-${{ env.SOURCE_RUN }}-1
+          run-id: ${{ env.SOURCE_RUN }}
           github-token: ${{ github.token }}
           path: native-artifact
       - name: Verify exact executable and run native UCI checks
