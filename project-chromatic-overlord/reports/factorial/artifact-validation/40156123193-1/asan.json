@@ -1,0 +1,6 @@
+{
+  "ctest_exit": 0,
+  "kind": "native MSVC AddressSanitizer Release, separate safety build",
+  "source_commit": "64c23db67e91a2da09f3cf2e98a72df596a1cf97",
+  "engine_sha256": "f8230cd5397a83875729864859f5c56e9bf6ef9f9da09b2b527141f9ba422171"
+}

@@ -1,0 +1,42 @@
+MSBuild version 17.14.60+43b635718 for .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  board.cpp
+  network.cpp
+  search.cpp
+  proof.cpp
+  telemetry_json.cpp
+  verification.cpp
+  sha256.cpp
+  Generating Code...
+  zero_core.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial-asan\Release\zero_core.lib
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt
+  main.cpp
+  research.cpp
+  overlord.cpp
+  core.cpp
+LINK : warning LNK4302: please add '/DEBUG' to the link command line for better ASAN error reporting [D:\a\Chromatic\Chromatic\build-windows-factorial-asan\research_tests.vcxproj]
+LINK : warning LNK4302: please add '/DEBUG' to the link command line for better ASAN error reporting [D:\a\Chromatic\Chromatic\build-windows-factorial-asan\overlord_tests.vcxproj]
+  research_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial-asan\Release\research_tests.exe
+  overlord_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial-asan\Release\overlord_tests.exe
+LINK : warning LNK4302: please add '/DEBUG' to the link command line for better ASAN error reporting [D:\a\Chromatic\Chromatic\build-windows-factorial-asan\chromatic_overlord.vcxproj]
+  chromatic_overlord.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial-asan\Release\chromatic_overlord.exe
+  model_identity.cpp
+  memory_recycling.cpp
+LINK : warning LNK4302: please add '/DEBUG' to the link command line for better ASAN error reporting [D:\a\Chromatic\Chromatic\build-windows-factorial-asan\model_identity_tests.vcxproj]
+  model_identity_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial-asan\Release\model_identity_tests.exe
+  depth_telemetry.cpp
+LINK : warning LNK4302: please add '/DEBUG' to the link command line for better ASAN error reporting [D:\a\Chromatic\Chromatic\build-windows-factorial-asan\core_tests.vcxproj]
+  core_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial-asan\Release\core_tests.exe
+LINK : warning LNK4302: please add '/DEBUG' to the link command line for better ASAN error reporting [D:\a\Chromatic\Chromatic\build-windows-factorial-asan\memory_recycling_tests.vcxproj]
+  memory_recycling_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial-asan\Release\memory_recycling_tests.exe
+LINK : warning LNK4302: please add '/DEBUG' to the link command line for better ASAN error reporting [D:\a\Chromatic\Chromatic\build-windows-factorial-asan\depth_telemetry_tests.vcxproj]
+  depth_telemetry_tests.vcxproj -> D:\a\Chromatic\Chromatic\build-windows-factorial-asan\Release\depth_telemetry_tests.exe
+  Building Custom Rule D:/a/Chromatic/Chromatic/project-chromatic-overlord/CMakeLists.txt

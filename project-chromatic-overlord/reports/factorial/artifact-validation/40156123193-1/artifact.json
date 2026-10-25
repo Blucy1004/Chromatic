@@ -1,0 +1,7 @@
+{
+  "scope": "same executable on a separate native Windows host; protocol only",
+  "native_os": "Microsoft Windows NT 10.0.20348.0",
+  "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+  "research_run": "40152066905",
+  "engine_sha256": "8eb4dc51c223a74ef18f310950292ff9cfb37341cb1593f9662c50b0f06d3cc8"
+}
