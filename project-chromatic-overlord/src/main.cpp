@@ -69,8 +69,10 @@ int main(int argc,char** argv){
         if(!model_path.empty()){try{network.load(model_path);}catch(const std::exception& e){startup_error=e.what();model_path.clear();}}
         SearchLimits defaults;defaults.proof_nodes=256;std::atomic<bool> stop{false};std::thread worker;
         auto halt=[&](){stop.store(true);if(worker.joinable())worker.join();};
-        std::string line;
+        std::string line;bool first_input_line=true;
         while(std::getline(std::cin,line)) {
+            // Windows text producers may prepend a UTF-8 BOM to redirected input.
+            if(first_input_line){first_input_line=false;if(line.compare(0,3,"\xef\xbb\xbf")==0)line.erase(0,3);}
             std::istringstream in(line);std::string cmd;in>>cmd;
             try {
                 if(cmd=="quit"){halt();break;}

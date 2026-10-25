@@ -1,5 +1,6 @@
 $ErrorActionPreference = 'Stop'
 [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding($false)
+[Console]::InputEncoding = New-Object System.Text.UTF8Encoding($false)
 $OutputEncoding = [Console]::OutputEncoding
 function Get-PackageSha256([string] $Path) {
     $digest = [System.Security.Cryptography.SHA256]::Create()
@@ -35,7 +36,7 @@ $process = New-Object System.Diagnostics.Process
 $process.StartInfo = $start
 try {
     [void]$process.Start()
-    # Write ASCII command bytes directly, without a PowerShell pipeline BOM.
+    # Process.StandardInput uses Console.InputEncoding; keep its preamble empty.
     $commands = [System.Text.Encoding]::ASCII.GetBytes("zero model`nquit`n")
     $process.StandardInput.BaseStream.Write($commands, 0, $commands.Length)
     $process.StandardInput.BaseStream.Flush()

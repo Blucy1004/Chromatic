@@ -95,6 +95,9 @@ def main():
         e.send('zero model');loaded=json.loads(e.until(lambda s:s.startswith('{'))[-1])
         assert loaded['loaded'] and loaded['sha256']==CHAMPION and Path(loaded['path']).resolve()==model
         record('basename_argv0_GUI_style_model_discovery',loaded=loaded)
+    with Engine(exe,outside) as e:
+        e.send('\ufeffzero model');loaded=json.loads(e.until(lambda s:s.startswith('{'))[-1]);assert loaded['loaded'] and loaded['sha256']==CHAMPION
+        record('UTF8_BOM_first_command',loaded_sha256=loaded['sha256'])
     comspec=os.environ.get('COMSPEC',r'C:\Windows\System32\cmd.exe')
     def batch(path,stdin=None):
         command=f'"{comspec}" /d /s /c ""{path}""'
