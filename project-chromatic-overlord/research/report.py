@@ -272,14 +272,17 @@ Linux 스크리닝에서 선택한 직렬 구성을 각 모델의 기본 MCTS와
     text+=f"독립200문제의 고정 주 쌍 `{label(plan['primary_pair_mask'])}`에서 사전 동시구간·성분 대비 Holm 기준을 충족한 모델×OS는 **{nconfirmed}/{len(confirmed)}**개다. "+('해당 범위에서만 정확 응수율의 긍정적 상호작용을 확인했다.' if nconfirmed else '이 설계에서 긍정적 시너지를 확인하지 못했다.')+' 다른 쌍/고차항은 탐색 결과이며 대국 기력 시너지를 입증하지 않는다. [SYNERGY_ANALYSIS.md](SYNERGY_ANALYSIS.md).\n\n## D. 모델 규모가 증가하면 탐색의 가치가 달라지는가?\n\n네 모델은 같은 크기다. 추가 학습 체크포인트에 따라 기여도가 달라지고, 데이터 규모에 대해 단조롭게 증가한다고 결론 내릴 수 없다. 아래는 초기→10k 교체의 구성이 고정된 효과다.\n\n'
     text+=table(['OS','탐색','초기→10k pp [95%]'],[[r['os'],r['factors'],interval(r)] for r in model_effects if r['stage']=='screen' and r['model']=='lichess10000' and int(r['mask']) in [0,8,15]])
     text+='\n모델×탐색의 차이의 차이, 동일 작업량 결과와 다른 후보는 [MODEL_CONTRIBUTION.md](MODEL_CONTRIBUTION.md)를 참조한다. 학습 seed 반복과 데이터 수만의 무작위 개입은 없어 그 인과 효과를 분리하지 못했다.\n\n## E. 동일 시간에서 유리한 구성은 무엇인가?\n\nLinux 스크리닝에서는 F/T 계열을 선택했다. 아래는 선택 이후 새 자료 결과이며, 새 자료를 보고 다시 구성을 고르지 않았다. 보편적 최적 구성이나 모델 승격은 미확정이다.\n\n'
-    chosen=[]
+    chosen=[];selection_tests=read(d/'selected-holdout.json') if (d/'selected-holdout.json').exists() else []
     for os in SYSTEMS:
         for m in MODELS:
             mask=plan['best_serial'][m];r=get(os,'holdout',m,mask)
             if not r:continue
             c=next(x for x in contrasts if x['os']==os and x['stage']=='holdout' and x['model']==m and int(x['mask'])==mask)
-            chosen.append([os,m,label(mask),hit(os,'holdout',m,0),hit(os,'holdout',m,mask),interval(c),num(r['mean_cpu_ms']),num(r['mean_wall_ms'])])
-    text+=table(['OS','모델','고정 후보','기본/200','후보/200','차이 pp [95%]','CPU ms','실제wall ms'],chosen)
+            adjusted=next((x for x in selection_tests if x['os']==os and x['model']==m),None)
+            chosen.append([os,m,label(mask),hit(os,'holdout',m,0),hit(os,'holdout',m,mask),interval(c),
+                f"[{num(adjusted['simultaneous_lo95_pp'])}, {num(adjusted['simultaneous_hi95_pp'])}]" if adjusted else '미측정',num(adjusted['p_holm_family'],5) if adjusted else '미측정',num(r['mean_cpu_ms']),num(r['mean_wall_ms'])])
+    text+=table(['OS','모델','고정 후보','기본/200','후보/200','차이 pp [점별95%]','동시95%','후보군 Holm p','CPU ms','실제wall ms'],chosen)
+    text+='\n[selected-holdout.json](reports/factorial/analysis/selected-holdout.json)은 고정 후보×모델×OS의 보조 가족으로 동시 구간과 Holm을 적용한다. 주 시너지 가족과 별도인 보조 분석이며, 최적 구성 또는 전체 가설에 대한 통합적 유의성 검증은 아니다.\n'
     text+='\n## F. 동일 작업량에서 효율적인 구성은 무엇인가?\n\n아래는24문제·32조합 중 정답 수, 이후 CPU 비용으로 정렬한 기술적 후보다. 선택 후 독립 검증한 작업량 최적 구성은 아니다. 512방문은 검증 작업을 고정하지 않고 NN512는 상한을 덜 쓸 수 있으므로 실제 NN과 CPU도 함께 읽어야 한다.\n\n'
     efficient=[]
     for os in SYSTEMS:

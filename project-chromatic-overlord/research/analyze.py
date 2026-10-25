@@ -252,6 +252,28 @@ def holdout_confirmation(runs,repetitions):
             item['positive_synergy_confirmed']=item['simultaneous_lo95_pp']>0 and all(t['delta_pp']>0 and t['p_holm_all_os_models']<.05 for t in item['component_tests'])
     return out
 
+def selected_holdout(runs,repetitions):
+    items=[];arrays=[];groups=None;ids=None
+    for run in runs:
+        path=Path(run['root'])/'selection-plan.json'
+        if not path.exists():continue
+        plan=read(path)
+        for model,mask in plan['best_serial'].items():
+            cells=[c for c in run['cells'] if c['summary']['stage']=='holdout' and c['summary']['model']==model and c['summary']['mask'] in {0,mask}]
+            if len(cells)!=2:continue
+            v,g=vectors(cells);first=cells[0]['cases'];these_ids=[r['id'] for r in first]
+            if groups is None:groups=g;ids=these_ids
+            else:assert g==groups and these_ids==ids
+            gain=int(((v[mask]==1)&(v[0]==0)).sum());loss=int(((v[mask]==0)&(v[0]==1)).sum());arrays.append(v[mask]-v[0])
+            items.append({'scope':run['scope'],'os':run['manifest']['os'],'model':model,'mask':mask,'n':len(g),
+                          'gains':gain,'losses':loss,'p_exact':st.mcnemar(gain,loss)})
+    if items:
+        ci=st.cluster_bootstrap(np.stack(arrays,axis=1),groups,repetitions);p=st.holm([r['p_exact'] for r in items])
+        for i,r in enumerate(items):r.update(delta_pp=ci['mean'][i]*100,lo95_pp=ci['ci95'][i][0]*100,hi95_pp=ci['ci95'][i][1]*100,
+            simultaneous_lo95_pp=ci['simultaneous_ci95'][i][0]*100,simultaneous_hi95_pp=ci['simultaneous_ci95'][i][1]*100,p_holm_family=p[i],family_size=len(items),
+            scope_note='secondary family: the screen-locked serial candidate per model and OS; no holdout retuning; not a universal optimality test')
+    return items
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--run',type=Path,action='append',required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--bootstrap',type=int,default=5000);a=p.parse_args();a.out.mkdir(parents=True,exist_ok=True)
     # Stream case CSV so root visit lists/depth histograms do not remain in RAM.
@@ -272,6 +294,7 @@ def main():
     csvfile(a.out/'context-marginals.csv',[x for r in runs for x in marginal_effects(r,a.bootstrap)])
     csvfile(a.out/'model-search-interactions.csv',[x for r in runs for x in model_search_interactions(r,a.bootstrap)])
     save(a.out/'holdout-confirmation.json',holdout_confirmation(runs,a.bootstrap))
+    save(a.out/'selected-holdout.json',selected_holdout(runs,a.bootstrap))
     save(a.out/'analysis-manifest.json',{'analysis_script_sha256':sha(Path(__file__)),'statistics_sha256':sha(Path(__file__).with_name('factorial_stats.py')),
         'bootstrap_repetitions':a.bootstrap,'runs':[{k:v for k,v in r.items() if k!='cells'} for r in runs],
         'inference_limits':'screen interactions exploratory; holdout one primary pair; cluster bootstrap assumes sampled source-game units; fixed corpus is not a random population sample; no Elo promotion'})
