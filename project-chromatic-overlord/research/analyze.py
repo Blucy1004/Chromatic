@@ -4,9 +4,24 @@ import argparse,csv,gzip,hashlib,importlib.util,itertools,json,math,statistics,s
 from collections import defaultdict
 from pathlib import Path
 import numpy as np
+import chess
 spec=importlib.util.spec_from_file_location('factorial_statistics',Path(__file__).with_name('factorial_stats.py'))
 st=importlib.util.module_from_spec(spec);spec.loader.exec_module(st)
 BITS='CAFTP';MODELS=['zero128','lichess100','lichess1000','lichess10000']
+MATE_CACHE={}
+def mate_diagnostic(r):
+    key=r['fen']
+    if key not in MATE_CACHE:
+        board=chess.Board(key);mates=[]
+        for move in list(board.legal_moves):
+            board.push(move)
+            if board.is_checkmate():mates.append(move.uci())
+            board.pop()
+        MATE_CACHE[key]=mates
+    mates=MATE_CACHE[key];selected=r['result']['bestmove'] in mates;expected=r['expected'] in mates
+    return {'root_has_mate1':int(bool(mates)),'expected_mate1':int(expected),'selected_mate1':int(selected),
+            'mate_equivalent_hit':int(r['hit'] or (expected and selected)),
+            'admission_mate1':int(r['result']['mate_proven'] and r['result']['proof_nodes']==0)}
 
 def read(p):return json.loads(p.read_text())
 def save(p,x):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n')
@@ -47,6 +62,7 @@ def ingest(root,case_writer,scope):
                'verification_completed':int(bool(z['mate_proven'] or z['verified_candidates']>=min(4,len(z['visits'])))) if r['mask']&13 else '',
                'importance':z['importance'],'discarded_nn':z['discarded_neural_evaluations'],
                'engine_sha256':meta['engine_sha256'],'model_sha256':meta['model_sha256'],'options_sha256':hashlib.sha256(json.dumps(meta['options'],sort_keys=True).encode()).hexdigest()}
+            b.update(mate_diagnostic(r))
             for k,v in q.items():
                 if k not in ['leaf_depth','pv','call_ns','algorithm_ns']:
                     b[k[:-3]+'_ms' if k.endswith('_ns') else k]=v/1e6 if k.endswith('_ns') else v
