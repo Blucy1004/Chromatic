@@ -17,6 +17,7 @@ cmake -S project-chromatic-overlord -B /tmp/chromatic-factorial -DCMAKE_BUILD_TY
 cmake --build /tmp/chromatic-factorial --parallel 2
 ctest --test-dir /tmp/chromatic-factorial --output-on-failure
 python project-chromatic-overlord/research/test_statistics.py
+python project-chromatic-overlord/research/test_analysis.py
 ```
 
 Windows: `overlord-factorial.yml` builds native MSVC x64 Release and executes

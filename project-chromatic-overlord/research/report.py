@@ -47,6 +47,9 @@ def main():
 '''
     for m in MODELS:
         r=models[m];text+=f"### {m}\n\n- 모델: `{r['model_path']}`\n- 체크포인트: `{r['pt_path']}`\n- PT SHA-256: `{r['pt_sha256']}`\n- 시작 PT: `{r['initial_checkpoint_sha256'] or '초기 교사 학습'}`\n\n"
+    lineage=read(PROJECT/'reports/factorial/preflight/model-lineage.json')
+    text+='### 추가 후보의 보존 bundle 연결\n\n'+table(['후보','bundle ID','commit seq','샤드','처리 원본 행','manifest SHA-256'],[[m,r['bundle_id'],r['commit_seq'],len(r['completed_shards']),r['raw_lines'],r['bundle_manifest_sha256']] for m,r in lineage['candidates'].items()])
+    text+='\n각 학습 보고서·manifest의 실제 로컬 경로와 SHA, 원래 cursor와 source identity, PT/미러/ZERO의 동일성 검사는 [model-lineage.json](reports/factorial/preflight/model-lineage.json)에 있다. 실제 학습 실행을 다시 한 것은 아니다.\n\n'
     text+='PT 텐서의 표준 재직렬화 해시, C++가 메모리에서 계산한 실제 로딩 텐서 해시, 파일 해시가 네 모델 모두 일치했다. 각 OS의 절대 로딩 경로는 셀 `.meta.json`의 `loaded_model.path`에 보존했다. C++ 호환성은 전수 실험 중 셀 시작/종료마다 확인했다. 최초 모델의 학습 기록과 10k 계보의 상세 근거는 기존 [MODEL_PROVENANCE.md](MODEL_PROVENANCE.md), 100/1k의 체크포인트 검사는 [preflight](reports/factorial/preflight/models-and-resume.json)에 있다. 원래 학습을 다시 수행한 실험은 아니다.\n\n## 탐색을 고정한 모델 교체\n\n'+note+'\n\n'
     selected=[r for r in model_effects if (r['stage']=='screen' and int(r['mask']) in [0,8,15]) or (r['stage']=='holdout' and int(r['mask']) in [0,15])]
     text+=table(['OS','자료','탐색','후보−초기','교체 효과 pp [95%]','새 정답/손실','Holm p'],[[r['os'],r['stage'],r['factors'],r['model'],interval(r),f"{r['gains']}/{r['losses']}",num(r['p_holm_run'],4)] for r in selected])

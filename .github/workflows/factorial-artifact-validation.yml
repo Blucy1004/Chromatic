@@ -46,6 +46,21 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw 'Native artifact protocol check failed' }
           python project-chromatic-overlord/research/bench_protocol.py --require-windows --engine "$exe" --out "$env:PROTOCOL_OUT/research-protocol.json" *> "$env:PROTOCOL_OUT/research-protocol.log"
           if ($LASTEXITCODE -ne 0) { throw 'Native research protocol check failed' }
+      - name: Native MSVC AddressSanitizer regression build
+        shell: pwsh
+        run: |
+          $vswhere="${env:ProgramFiles(x86)}/Microsoft Visual Studio/Installer/vswhere.exe"
+          $vs=& $vswhere -latest -products '*' -property installationPath
+          $toolset=Get-ChildItem "$vs/VC/Tools/MSVC" -Directory | Sort-Object Name -Descending | Select-Object -First 1
+          $env:PATH="$($toolset.FullName)/bin/Hostx64/x64;$env:PATH"
+          cmake -S project-chromatic-overlord -B build-windows-factorial-asan -G 'Visual Studio 17 2022' -A x64 -DCHROMATIC_ASAN=ON *> "$env:PROTOCOL_OUT/asan-configure.log"
+          if ($LASTEXITCODE -ne 0) { throw 'MSVC ASAN configure failed' }
+          cmake --build build-windows-factorial-asan --config Release --parallel 2 *> "$env:PROTOCOL_OUT/asan-build.log"
+          if ($LASTEXITCODE -ne 0) { throw 'MSVC ASAN build failed' }
+          ctest --test-dir build-windows-factorial-asan -C Release --output-on-failure *> "$env:PROTOCOL_OUT/asan-ctest.log"
+          if ($LASTEXITCODE -ne 0) { throw 'Native MSVC ASAN regression failed' }
+          $asanHash=(Get-FileHash build-windows-factorial-asan/Release/chromatic_overlord.exe -Algorithm SHA256).Hash.ToLower()
+          @{ctest_exit=0;engine_sha256=$asanHash;source_commit='${{ github.sha }}';kind='native MSVC AddressSanitizer Release, separate safety build'} | ConvertTo-Json | Set-Content "$env:PROTOCOL_OUT/asan.json" -Encoding utf8
       - name: Preserve artifact validation
         if: ${{ !cancelled() }}
         shell: pwsh

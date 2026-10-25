@@ -1,0 +1,189 @@
+{
+  "candidate_index_path": "/workspace/Chromatic/chromatic-shard-trainer/candidates/index.json",
+  "candidate_index_sha256": "139c2c1746f1f3bdf9ba25f92fa6596e75e299d229c7646322000a14ac415b40",
+  "candidates": {
+    "lichess100": {
+      "training_report_path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/training-report.json",
+      "training_report_sha256": "e5ceac4b172ba2ac40edf1c7b43aafb2f6147df2c53f9d0da8ee41009ed64023",
+      "bundle_manifest_path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.manifest.json",
+      "bundle_manifest_sha256": "93048fb4b3bd83ecd88ca00b78208f7800cf5226dbd2b934a60c41eebfd32938",
+      "bundle_id": "e4354ee1423f4060ab079a815ee5a6dc",
+      "commit_seq": 9,
+      "positions_processed": 100,
+      "additional_updates": 12,
+      "completed_shards": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "initial_pt_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "architecture": {
+        "blocks": 2,
+        "width": 64
+      },
+      "files": {
+        "checkpoint": {
+          "actual_path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.pt",
+          "sha256": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf",
+          "canonical_equal": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-100.pt"
+        },
+        "mirror": {
+          "actual_path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.mirror.pt",
+          "sha256": "2385321f8917d91e32c836f2d17641f3ddfeeb825befff63bbffabd039c6ffaf",
+          "canonical_equal": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-100.pt"
+        },
+        "model": {
+          "actual_path": "/workspace/Chromatic/chromatic-shard-validation/positions-100/candidate/checkpoints/bundle-e4354ee1423f4060ab079a815ee5a6dc.zero",
+          "sha256": "859a326bf82c02837ef1cbf79538372532412eaee5342db14a539cc1bb3896af",
+          "canonical_equal": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-100.zero"
+        }
+      },
+      "source_cursor": {
+        "compressed_offset_diagnostic": 8464969,
+        "integrity": "verified_complete_zstd_frames",
+        "last_line_sha256": "5afabc0821b70caa4a5c9b361a0c7704cda4b94c1d2e7d2bcffba6eab64b3819",
+        "line": 256,
+        "prefix_sha256": "0d884e9075fd101a413cf9cbd56ce7a5679ed4168581ec8ba53ff6a7e1093a7f",
+        "source_identity": {
+          "content_length": 8464969,
+          "license": "CC0-1.0",
+          "location": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-trainer\\fixtures\\official-evaluations.jsonl.zst",
+          "mtime_ns": 1792832849329531500,
+          "original_url": "https://database.lichess.org/lichess_db_eval.jsonl.zst",
+          "prefix_sha256": "5f5a54f429bc5a1552523442821a17e42891036ad1c0c9a726a2cd206e09ae68",
+          "version": "\"6ac01121-5388faeef\""
+        },
+        "verified_frames": 1
+      },
+      "raw_lines": 256,
+      "training_history_reexecution": false
+    },
+    "lichess1000": {
+      "training_report_path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/training-report.json",
+      "training_report_sha256": "8a505e19df439ef2d06d3051c5166a16b429e726437e986ef5495974b17d196e",
+      "bundle_manifest_path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.manifest.json",
+      "bundle_manifest_sha256": "d32d6656118c17ce214b8b08fda2929385e2d9d36156e6d1444c293eceb2c2b1",
+      "bundle_id": "6bbfd686b2254f12a54b75dc242e1a8a",
+      "commit_seq": 12,
+      "positions_processed": 1000,
+      "additional_updates": 114,
+      "completed_shards": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "initial_pt_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "architecture": {
+        "blocks": 2,
+        "width": 64
+      },
+      "files": {
+        "checkpoint": {
+          "actual_path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.pt",
+          "sha256": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867",
+          "canonical_equal": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-1000.pt"
+        },
+        "mirror": {
+          "actual_path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.mirror.pt",
+          "sha256": "6f5af8b9d0d95b442561bab53de04ae4120922e3b8e5ddd3b7289105c0696867",
+          "canonical_equal": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-1000.pt"
+        },
+        "model": {
+          "actual_path": "/workspace/Chromatic/chromatic-shard-validation/positions-1000/candidate/checkpoints/bundle-6bbfd686b2254f12a54b75dc242e1a8a.zero",
+          "sha256": "fcd12bd9438fdadba78e879719714803516a07c4cf1d605583cb2ff013c16bfb",
+          "canonical_equal": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-1000.zero"
+        }
+      },
+      "source_cursor": {
+        "compressed_offset_diagnostic": 8464969,
+        "integrity": "verified_complete_zstd_frames",
+        "last_line_sha256": "ebb13029c2923b2b9f26e5cf960659f86a062e4284acd94c094787cff89038d7",
+        "line": 1536,
+        "prefix_sha256": "6f03360d035ebf3d8b808f630018d34b9987fcc9da5138290cac12d1c77b824c",
+        "source_identity": {
+          "content_length": 8464969,
+          "license": "CC0-1.0",
+          "location": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-trainer\\fixtures\\official-evaluations.jsonl.zst",
+          "mtime_ns": 1792832849329531500,
+          "original_url": "https://database.lichess.org/lichess_db_eval.jsonl.zst",
+          "prefix_sha256": "5f5a54f429bc5a1552523442821a17e42891036ad1c0c9a726a2cd206e09ae68",
+          "version": "\"6ac01121-5388faeef\""
+        },
+        "verified_frames": 1
+      },
+      "raw_lines": 1536,
+      "training_history_reexecution": false
+    },
+    "lichess10000": {
+      "training_report_path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/training-report.json",
+      "training_report_sha256": "86c31478692cf2a9b306bc8ed73a41802afc6c165241353f075741a9822d3d62",
+      "bundle_manifest_path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.manifest.json",
+      "bundle_manifest_sha256": "3382c0974443ff960c5f14dd04804e42e10e7b0014726d929a9b81d3c2a8db6b",
+      "bundle_id": "a181d36c81b94b22aa786094e626b6b8",
+      "commit_seq": 56,
+      "positions_processed": 10000,
+      "additional_updates": 1149,
+      "completed_shards": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "initial_pt_sha256": "99151f0c57212edd6786e2bbbafc1717bb15bee9a24341e69c5606c478bb4b84",
+      "architecture": {
+        "blocks": 2,
+        "width": 64
+      },
+      "files": {
+        "checkpoint": {
+          "actual_path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.pt",
+          "sha256": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+          "canonical_equal": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-10000.pt"
+        },
+        "mirror": {
+          "actual_path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.mirror.pt",
+          "sha256": "427da59067d8acf1a799ad57ff8dbbceb327d070aeed4fb9fc12bb3911453143",
+          "canonical_equal": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-10000.pt"
+        },
+        "model": {
+          "actual_path": "/workspace/Chromatic/chromatic-shard-validation/positions-10000/candidate/checkpoints/bundle-a181d36c81b94b22aa786094e626b6b8.zero",
+          "sha256": "44957f9a35d534883ec92cf015a380dcb20b2fe6096150f687c3a0aa2f75e16a",
+          "canonical_equal": "/workspace/Chromatic/chromatic-shard-trainer/candidates/positions-10000.zero"
+        }
+      },
+      "source_cursor": {
+        "compressed_offset_diagnostic": 8464969,
+        "integrity": "verified_complete_zstd_frames",
+        "last_line_sha256": "7abef95aed2dfe25495404737bda4c33e9208613dfd455cc24f9bd759a6d9624",
+        "line": 25728,
+        "prefix_sha256": "eb48fa8f7721b1bcb74eb771b6251c0b74247b87bd79a59f79b0b85d6b029750",
+        "source_identity": {
+          "content_length": 8464969,
+          "license": "CC0-1.0",
+          "location": "C:\\Users\\fly_t\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\outputs\\chromatic-shard-trainer\\fixtures\\official-evaluations.jsonl.zst",
+          "mtime_ns": 1792832849329531500,
+          "original_url": "https://database.lichess.org/lichess_db_eval.jsonl.zst",
+          "prefix_sha256": "5f5a54f429bc5a1552523442821a17e42891036ad1c0c9a726a2cd206e09ae68",
+          "version": "\"6ac01121-5388faeef\""
+        },
+        "verified_frames": 1
+      },
+      "raw_lines": 25728,
+      "training_history_reexecution": false
+    }
+  },
+  "current_local_training_input": {
+    "path": "/workspace/Chromatic/chromatic-shard-trainer/fixtures/official-evaluations.jsonl.zst",
+    "sha256": "feb08110ffcef588f05c30bb7ca93f5e19897e85c3d84678aff076f51dd84e2b",
+    "bytes": 8464969,
+    "scope": "preserved official eval local fixture; not a hash of the complete upstream database"
+  }
+}

@@ -35,7 +35,7 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def finite(v):return None if isinstance(v,float) and not math.isfinite(v) else v
 
 def ingest(root,case_writer,scope):
-    manifest=read(root/'manifest.json');osname=manifest['os'];cells=[];skipped=[]
+    manifest=read(root/'manifest.json');manifest_sha=sha(root/'manifest.json');osname=manifest['os'];cells=[];skipped=[]
     for meta_path in sorted(root.glob('*/*.meta.json')):
         meta=read(meta_path);path=meta_path.with_name(meta_path.name.replace('.meta.json','.jsonl.gz'))
         if not meta.get('complete') or not path.exists():skipped.append(str(meta_path));continue
@@ -53,6 +53,7 @@ def ingest(root,case_writer,scope):
             if meta['mode']=='nn':assert z['neural_evals']+z['verification_evals']<=meta['budget']
             b={'scope':scope,'os':osname,'stage':r['stage'],'model':r['model'],'mask':r['mask'],'factors':label(r['mask']),
                'mode':r['mode'],'budget':r['budget'],'repeat':r['repeat'],'cell':r['cell'],'id':r['id'],'game':r['game'],
+               'seed':manifest.get('seed',1),'threads':meta['options'].get('Threads',1),'run_manifest_sha256':manifest_sha,
                'hit':int(r['hit']),'expected':r['expected'],'bestmove':z['bestmove'],'pv':' '.join(q['pv']),
                'wall_ms':r['wall_ns']/1e6,'search_ms':z['search_ns']/1e6,'cpu_ms':r['cpu_seconds']*1000,
                'rss_bytes':r['rss_after_bytes'],'nn_total':z['neural_evals']+z['verification_evals'],
@@ -66,6 +67,9 @@ def ingest(root,case_writer,scope):
                'importance':z['importance'],'discarded_nn':z['discarded_neural_evaluations'],
                'engine_sha256':meta['engine_sha256'],'model_sha256':meta['model_sha256'],'options_sha256':hashlib.sha256(json.dumps(meta['options'],sort_keys=True).encode()).hexdigest()}
             b.update(mate_diagnostic(r))
+            b['nn_completed_leaf_visits']=max(0,z['neural_evals']-(0 if z.get('terminal') else 1)-z['discarded_neural_evaluations'])
+            b['non_nn_completed_endpoints']=q['depth_samples']-b['nn_completed_leaf_visits']
+            assert b['non_nn_completed_endpoints']>=0
             for k,v in q.items():
                 if k not in ['leaf_depth','pv','call_ns','algorithm_ns']:
                     b[k[:-3]+'_ms' if k.endswith('_ns') else k]=v/1e6 if k.endswith('_ns') else v
@@ -74,6 +78,9 @@ def ingest(root,case_writer,scope):
         base={k:simple[0][k] for k in ['scope','os','stage','model','mask','factors','mode','budget','repeat','cell','engine_sha256','model_sha256','options_sha256']}
         base.update(n=len(simple),hits=sum(x['hit'] for x in simple),accuracy=sum(x['hit'] for x in simple)/len(simple),
                     source_games=len(set(x['game'] for x in simple)),complete=True)
+        base['nn_per_search_second']=sum(x['nn_total'] for x in simple)/(sum(x['search_ms'] for x in simple)/1000)
+        base['leaf_visits_per_search_second']=sum(x['completed_visits'] for x in simple)/(sum(x['search_ms'] for x in simple)/1000)
+        cpu=sum(x['cpu_ms'] for x in simple)/1000;base['nn_per_cpu_second']=sum(x['nn_total'] for x in simple)/cpu if cpu else None
         excluded=set(base)|{'id','game','hit','expected','bestmove','pv'}
         for k,v in simple[0].items():
             if k not in excluded and isinstance(v,(float,int)):
