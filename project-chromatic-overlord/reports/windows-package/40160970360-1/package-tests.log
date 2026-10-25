@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\a\Chromatic\Chromatic\project-chromatic-overlord\packaging\validate_package.py", line 107, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\a\Chromatic\Chromatic\project-chromatic-overlord\packaging\validate_package.py", line 105, in main
+    verify=batch(package/'self-check.cmd');assert verify.returncode==0 and 'PASS:' in verify.stdout,(verify.stdout,verify.stderr);record('self_check_launcher_and_file_hashes',exit_code=0)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Press any key to continue . . . \n', 'Bundled model identity mismatch:  \nAt D:\\a\\_temp\\CHROMATIC package O\'Brien \ud55c\uae00\\CHROMATIC-Windows-x64-Release\\verify-package.ps1:47 char:78\n+ ... l.sha256) { throw "Bundled model identity mismatch: $output $errors"  ...\n+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: (Bundled model identity mismatch:  :String) [], RuntimeException\n    + FullyQualifiedErrorId : Bundled model identity mismatch:  \n \n')
